@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://deathscreen1"]
+
+[ext_resource type="Script" uid="uid://ctms44pjmgdae" path="res://src/ui/DeathScreen.gd" id="1_dscr"]
+
+[node name="DeathScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+script = ExtResource("1_dscr")
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.85)
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_top = 0.04
+anchor_bottom = 0.1
+text = "Speaker Inconnu"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 24
+
+[node name="SubTitle" type="Label" parent="."]
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_top = 0.11
+anchor_bottom = 0.17
+text = "Couverture : — | Cause : —"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_top = 0.18
+anchor_bottom = 0.68
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimelineLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+fit_content = true
+text = ""
+
+[node name="GalaxyStateLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+fit_content = true
+text = ""
+
+[node name="LegacyLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+fit_content = true
+text = ""
+
+[node name="SeldonMessage" type="PanelContainer" parent="."]
+anchor_left = 0.05
+anchor_right = 0.95
+anchor_top = 0.7
+anchor_bottom = 0.84
+
+[node name="SeldonText" type="Label" parent="SeldonMessage"]
+layout_mode = 2
+text = "..."
+autowrap_mode = 3
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="."]
+anchor_left = 0.25
+anchor_right = 0.75
+anchor_top = 0.87
+anchor_bottom = 0.95
+text = "Nouveau regne"
