@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://galaxymap1"]
+
+[ext_resource type="Script" uid="uid://ct5n51v0j3l4t" path="res://src/ui/GalaxyMap.gd" id="1_gmap"]
+
+[node name="GalaxyMap" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+script = ExtResource("1_gmap")
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.02, 0.02, 0.08, 1)
+
+[node name="PlanetsContainer" type="Node2D" parent="."]
+
+[node name="Terminus" type="Button" parent="PlanetsContainer"]
+position = Vector2(400, 300)
+size = Vector2(60, 24)
+text = "Terminus"
+
+[node name="Trantor" type="Button" parent="PlanetsContainer"]
+position = Vector2(350, 150)
+size = Vector2(60, 24)
+text = "Trantor"
+
+[node name="Anacreon" type="Button" parent="PlanetsContainer"]
+position = Vector2(200, 200)
+size = Vector2(70, 24)
+text = "Anacreon"
+
+[node name="Santanni" type="Button" parent="PlanetsContainer"]
+position = Vector2(150, 280)
+size = Vector2(70, 24)
+text = "Santanni"
+
+[node name="Smyrno" type="Button" parent="PlanetsContainer"]
+position = Vector2(100, 350)
+size = Vector2(60, 24)
+text = "Smyrno"
+
+[node name="Askone" type="Button" parent="PlanetsContainer"]
+position = Vector2(500, 400)
+size = Vector2(60, 24)
+text = "Askone"
+
+[node name="Korell" type="Button" parent="PlanetsContainer"]
+position = Vector2(600, 300)
+size = Vector2(60, 24)
+text = "Korell"
+
+[node name="Siwenna" type="Button" parent="PlanetsContainer"]
+position = Vector2(300, 100)
+size = Vector2(60, 24)
+text = "Siwenna"
+
+[node name="Kalgan" type="Button" parent="PlanetsContainer"]
+position = Vector2(550, 180)
+size = Vector2(60, 24)
+text = "Kalgan"
+
+[node name="Neotrantor" type="Button" parent="PlanetsContainer"]
+position = Vector2(450, 80)
+size = Vector2(80, 24)
+text = "Neotrantor"
+
+[node name="Rossem" type="Button" parent="PlanetsContainer"]
+position = Vector2(700, 200)
+size = Vector2(60, 24)
+text = "Rossem"
+
+[node name="Sayshell" type="Button" parent="PlanetsContainer"]
+position = Vector2(650, 450)
+size = Vector2(70, 24)
+text = "Sayshell"
+
+[node name="PlanetPopup" type="PanelContainer" parent="."]
+anchor_left = 0.25
+anchor_right = 0.75
+anchor_top = 0.35
+anchor_bottom = 0.65
+visible = false
+
+[node name="PopupName" type="Label" parent="PlanetPopup"]
+layout_mode = 2
+text = "Planete"
+theme_override_font_sizes/font_size = 18
+
+[node name="PopupFaction" type="Label" parent="PlanetPopup"]
+layout_mode = 2
+text = "Faction : ?"
+
+[node name="PopupState" type="Label" parent="PlanetPopup"]
+layout_mode = 2
+text = "Etat : Neutre"
+
+[node name="CloseButton" type="Button" parent="PlanetPopup"]
+layout_mode = 2
+text = "Fermer"
