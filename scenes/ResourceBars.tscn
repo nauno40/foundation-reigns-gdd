@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bw57ijnd1hary"]
+
+[ext_resource type="Script" uid="uid://ybl7iovjoj1c" path="res://src/ui/ResourceBars.gd" id="1_rbars"]
+
+[node name="ResourceBars" type="HBoxContainer"]
+script = ExtResource("1_rbars")
+custom_minimum_size = Vector2(320, 20)
+size_flags_horizontal = 3
+
+[node name="MilitaryBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(70, 20)
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+show_percentage = false
+
+[node name="ReligionBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(70, 20)
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+show_percentage = false
+
+[node name="CommerceBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(70, 20)
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+show_percentage = false
+
+[node name="PoliticsBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(70, 20)
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+value = 50.0
+show_percentage = false
