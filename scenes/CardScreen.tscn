@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df3xrmu0wbtnw" path="res://src/ui/CardScreen.gd" id="1_cscr"]
 [ext_resource type="Script" uid="uid://dgw2lxxfrp2w0" path="res://src/ui/SwipeDetector.gd" id="2_swipe"]
-[ext_resource type="PackedScene" uid="uid://resourcebars1" path="res://scenes/ResourceBars.tscn" id="3_rbars"]
+[ext_resource type="PackedScene" uid="uid://bw57ijnd1hary" path="res://scenes/ResourceBars.tscn" id="3_rbars"]
 
 [node name="CardScreen" type="Control"]
 anchor_right = 1.0
@@ -47,8 +47,7 @@ layout_mode = 2
 text = "? →"
 visible = false
 
-[node name="ResourceBars" type="HBoxContainer" parent="."]
-instance = ExtResource("3_rbars")
+[node name="ResourceBars" parent="." instance=ExtResource("3_rbars")]
 anchor_left = 0.0
 anchor_right = 1.0
 anchor_top = 0.88

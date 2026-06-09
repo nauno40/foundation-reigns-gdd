@@ -1,25 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://main"]
+[gd_scene format=3 uid="uid://main"]
 
 [ext_resource type="Script" uid="uid://b77voxileqxhp" path="res://src/main/Main.gd" id="1_main"]
 [ext_resource type="PackedScene" uid="uid://cardscreen1" path="res://scenes/CardScreen.tscn" id="2_cscr"]
 [ext_resource type="PackedScene" uid="uid://deathscreen1" path="res://scenes/DeathScreen.tscn" id="3_dscr"]
 [ext_resource type="PackedScene" uid="uid://galaxymap1" path="res://scenes/GalaxyMap.tscn" id="4_gmap"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" unique_id=1567878922]
 script = ExtResource("1_main")
 
-[node name="CardScreen" parent="." instance=ExtResource("2_cscr")]
+[node name="CardScreen" parent="." unique_id=944486513 instance=ExtResource("2_cscr")]
+layout_mode = 3
+anchors_preset = 15
 
-[node name="DeathScreen" parent="." instance=ExtResource("3_dscr")]
+[node name="DeathScreen" parent="." unique_id=78236146 instance=ExtResource("3_dscr")]
+layout_mode = 3
+anchors_preset = 15
 
-[node name="GalaxyMap" parent="." instance=ExtResource("4_gmap")]
+[node name="GalaxyMap" parent="." unique_id=805175836 instance=ExtResource("4_gmap")]
+layout_mode = 3
+anchors_preset = 15
 
-[node name="MapButton" type="Button" parent="."]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 140.0
-offset_bottom = 40.0
-text = "Carte Galactique"
+[node name="MapButton" type="Button" parent="." unique_id=628684326]
 z_index = 10
+offset_left = 9.0
+offset_top = 31.0
+offset_right = 146.0
+offset_bottom = 62.0
+text = "Carte Galactique"
