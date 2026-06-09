@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cardscreen1"]
+
+[ext_resource type="Script" uid="uid://df3xrmu0wbtnw" path="res://src/ui/CardScreen.gd" id="1_cscr"]
+[ext_resource type="Script" uid="uid://dgw2lxxfrp2w0" path="res://src/ui/SwipeDetector.gd" id="2_swipe"]
+[ext_resource type="PackedScene" uid="uid://resourcebars1" path="res://scenes/ResourceBars.tscn" id="3_rbars"]
+
+[node name="CardScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_cscr")
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.12, 1)
+
+[node name="Portrait" type="ColorRect" parent="."]
+anchor_left = 0.3
+anchor_right = 0.7
+anchor_top = 0.02
+anchor_bottom = 0.28
+color = Color(0.2, 0.2, 0.3, 1)
+
+[node name="CardPanel" type="PanelContainer" parent="."]
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_top = 0.3
+anchor_bottom = 0.72
+offset_left = 0.0
+offset_right = 0.0
+offset_top = 0.0
+offset_bottom = 0.0
+
+[node name="QuestionLabel" type="RichTextLabel" parent="CardPanel"]
+layout_mode = 2
+text = ""
+fit_content = true
+autowrap_mode = 3
+
+[node name="LeftHint" type="Label" parent="CardPanel"]
+layout_mode = 2
+text = "← ?"
+visible = false
+
+[node name="RightHint" type="Label" parent="CardPanel"]
+layout_mode = 2
+text = "? →"
+visible = false
+
+[node name="ResourceBars" type="HBoxContainer" parent="."]
+instance = ExtResource("3_rbars")
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_top = 0.88
+anchor_bottom = 0.95
+
+[node name="HUDInfo" type="HBoxContainer" parent="."]
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_top = 0.0
+anchor_bottom = 0.06
+offset_left = 10.0
+
+[node name="YearLabel" type="Label" parent="HUDInfo"]
+layout_mode = 2
+text = "An 1"
+
+[node name="AgeLabel" type="Label" parent="HUDInfo"]
+layout_mode = 2
+text = "Age : 35"
+
+[node name="SwipeDetector" type="Node" parent="."]
+script = ExtResource("2_swipe")
