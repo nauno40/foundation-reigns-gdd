@@ -1,0 +1,10 @@
+{
+  "neutral":    {"id": 0, "name": "Neutral",    "FR": "Neutre",     "description": "État normal, aucun effet particulier"},
+  "suspicious": {"id": 1, "name": "Suspicious", "FR": "Méfiant",    "description": "Soupçons — les options trop directes sont masquées"},
+  "afraid":     {"id": 2, "name": "Afraid",     "FR": "Apeuré",     "description": "Sous pression — les options agressives coûtent moins"},
+  "angry":      {"id": 3, "name": "Angry",       "FR": "Furieux",    "description": "Trahison ou perte — la diplomatie est pénalisée"},
+  "flattered":  {"id": 4, "name": "Flattered",  "FR": "Flatté",     "description": "Manipulation douce — une option bonus apparaît"},
+  "curious":    {"id": 5, "name": "Curious",     "FR": "Curieux",    "description": "Surprise ou découverte — aucun malus"},
+  "sad":        {"id": 6, "name": "Sad",         "FR": "Triste",     "description": "Deuil ou défaite — ton des textes plus sombre"},
+  "desperate":  {"id": 7, "name": "Desperate",  "FR": "Désespéré",  "description": "Crise grave — dernière chance, tous les choix ont un coût"}
+}
