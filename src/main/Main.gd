@@ -61,6 +61,7 @@ func _initialize_new_reign(legitimacy_start: int) -> void:
 	_ctx.set_var("year", 1, true)
 	_ctx.set_var("y_start", 1, true)
 	_ctx.set_var("age", 35 + randi() % 6)
+	_ctx.set_var("age_start", _ctx.get_var("age"))
 	_ctx.set_var("speaker_name", _game_data.get_random_name())
 	var cover = _pick_cover(1)
 	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
@@ -99,7 +100,7 @@ func _on_choice_made(is_left: bool) -> void:
 	_card_screen.show_reaction(_current_card, is_left)
 	_model.mark_card_seen(_current_card)
 
-	_ctx.add_var("turns", 1)
+	_ctx.advance_turn()
 	_save.save(_ctx)
 
 	if _ctx.is_game_over():
@@ -165,6 +166,7 @@ func _on_new_reign() -> void:
 
 	var year = _ctx.get_var("year", 1)
 	_ctx.set_var("y_start", year, true)
+	_ctx.set_var("age_start", _ctx.get_var("age"))
 	_ctx.set_var("speaker_name", _game_data.get_random_name())
 
 	var cover = _pick_cover(year)

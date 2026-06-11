@@ -33,6 +33,16 @@ func initialize_new_reign(legitimacy_start: int = LEGITIMACY_DEFAULT) -> void:
 	_vars["turns"] = 0
 	_vars["mood"] = "neutral"
 
+# Une décision = un tour = un an (prototype/Reigns premier du nom).
+# L'âge est dérivé du temps écoulé pour rester cohérent même quand une
+# carte fait sauter des années via outcome.
+func advance_turn() -> void:
+	add_var("turns", 1)
+	_vars["year"] = int(get_var("year", 1)) + 1
+	var age_start: int = int(get_var("age_start", 35))
+	var y_start: int = int(get_var("y_start", 1))
+	_vars["age"] = age_start + (int(_vars["year"]) - y_start)
+
 func apply_cover(cover: Dictionary) -> void:
 	var resource: String = cover.get("bonus_resource", "")
 	var bonus: int = cover.get("bonus_value", 0)

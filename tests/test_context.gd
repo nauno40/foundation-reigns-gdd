@@ -102,3 +102,44 @@ func test_game_over_reason_terminus():
 	ctx.initialize_new_reign()
 	ctx.set_var("planet_terminus_state", -1, true)
 	assert_eq(ctx.get_game_over_reason(), "terminus lost")
+
+# --- advance_turn : le temps avance à chaque décision (1 tour = 1 an) ---
+
+func test_advance_turn_increments_turns_and_year():
+	ctx.initialize_new_reign()
+	ctx.set_var("year", 50, true)
+	ctx.set_var("y_start", 50, true)
+	ctx.set_var("age", 36)
+	ctx.set_var("age_start", 36)
+	ctx.advance_turn()
+	assert_eq(ctx.get_var("turns"), 1)
+	assert_eq(ctx.get_var("year"), 51)
+
+func test_advance_turn_derives_age_from_elapsed_years():
+	ctx.initialize_new_reign()
+	ctx.set_var("year", 50, true)
+	ctx.set_var("y_start", 50, true)
+	ctx.set_var("age_start", 36)
+	for i in range(10):
+		ctx.advance_turn()
+	assert_eq(ctx.get_var("year"), 60)
+	assert_eq(ctx.get_var("age"), 46, "âge = age_start + années écoulées")
+
+func test_advance_turn_age_follows_card_driven_year_jump():
+	ctx.initialize_new_reign()
+	ctx.set_var("year", 50, true)
+	ctx.set_var("y_start", 50, true)
+	ctx.set_var("age_start", 36)
+	ctx.add_var("year", 5)  # une carte fait sauter 5 ans
+	ctx.advance_turn()
+	assert_eq(ctx.get_var("year"), 56)
+	assert_eq(ctx.get_var("age"), 42)
+
+func test_advance_turn_preserves_year_keep_flag():
+	ctx.initialize_new_reign()
+	ctx.set_var("year", 50, true)
+	ctx.set_var("y_start", 50, true)
+	ctx.set_var("age_start", 36)
+	ctx.advance_turn()
+	ctx.empty_non_keep()
+	assert_eq(ctx.get_var("year"), 51, "year reste toKeep après advance_turn")
