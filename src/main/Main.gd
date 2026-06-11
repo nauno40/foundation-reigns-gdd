@@ -88,9 +88,11 @@ func _next_card() -> void:
 	_model.apply_outcomes(load_outcomes)
 	_seldon.resolve_pending()
 
-	# Mood de l'interlocuteur porté par la carte (héritage Reigns)
+	# Mood de l'interlocuteur porté par la carte (héritage Reigns) ;
+	# une légitimité basse rend les interlocuteurs méfiants (GDD §2.5)
 	var moods = _current_card.get("moods", {})
-	_ctx.set_var("mood", moods.get("default", "neutral"))
+	var bias = _legitimacy.get_mood_bias()
+	_ctx.set_var("mood", bias if bias != "" else moods.get("default", "neutral"))
 
 	_card_screen.show_card(_current_card, _ctx)
 	_awaiting_reaction = false
