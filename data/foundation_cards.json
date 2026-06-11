@@ -1,1846 +1,3832 @@
 [
-  {
-	"id": 1001,
-	"label": "rumeur_terminus",
-	"deck": "ambient",
-	"weight": 3,
-	"lockturn": 10,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Une rumeur circule à Terminus : la Fondation serait en danger de l'intérieur."
+	{
+		"id": 1001,
+		"label": "rumeur_terminus",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 10,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une rumeur circule à Terminus : la Fondation serait en danger de l'intérieur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ignorer"
+			},
+			"reaction": {
+				"FR": "Vous faites confiance au Plan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Enquêter"
+			},
+			"reaction": {
+				"FR": "Vous activez votre réseau d'informateurs."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
 	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Ignorer"
-	  },
-	  "reaction": {
-		"FR": "Vous faites confiance au Plan."
-	  }
+	{
+		"id": 1002,
+		"label": "greve_marchands",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les marchands locaux font grève. Ils veulent de meilleures protections commerciales."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Céder à leurs demandes"
+			},
+			"reaction": {
+				"FR": "La grève s'arrête. Coûteux mais efficace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir ferme"
+			},
+			"reaction": {
+				"FR": "La grève dure. Des tensions naissent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "angry"
+		}
 	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Enquêter"
-	  },
-	  "reaction": {
-		"FR": "Vous activez votre réseau d'informateurs."
-	  }
+	{
+		"id": 1003,
+		"label": "etudiant_fondation",
+		"deck": "ambient",
+		"weight": 4,
+		"lockturn": 8,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un étudiant brillant vous demande de l'aide pour accéder aux archives classifiées de la psychohistoire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui ouvrir les archives"
+			},
+			"reaction": {
+				"FR": "Son enthousiasme est contagieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser — trop tôt"
+			},
+			"reaction": {
+				"FR": "Il repart, déçu mais compréhensif."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
 	},
-	"yesOutcome": [],
-	"noOutcome": [
-	  {
-		"variable": "military",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "neutral",
-	  "no": "suspicious"
+	{
+		"id": 1004,
+		"label": "coupure_energie",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une panne d'énergie frappe le secteur ouest de Terminus. Les générateurs nucléaires sont en cause."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réparer en urgence"
+			},
+			"reaction": {
+				"FR": "Les techniciens travaillent jour et nuit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rationaliser l'énergie"
+			},
+			"reaction": {
+				"FR": "Des quotas sont imposés — mécontentement garanti."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1005,
+		"label": "delegation_scientifique",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une délégation de scientifiques demande des fonds supplémentaires pour l'Encyclopédie Galactique."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Allouer les fonds"
+			},
+			"reaction": {
+				"FR": "L'Encyclopédie avance. Le Plan progresse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reporter la décision"
+			},
+			"reaction": {
+				"FR": "Les scientifiques s'impatientent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 1006,
+		"label": "vieil_amiral",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un vieil amiral impérial à la retraite vous propose ses services de renseignement. Il n'est pas fiable, mais ses contacts sont précieux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'engager"
+			},
+			"reaction": {
+				"FR": "Un informateur risqué mais utile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner poliment"
+			},
+			"reaction": {
+				"FR": "Il comprend. Ou feint de comprendre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1007,
+		"label": "festival_terminus",
+		"deck": "ambient",
+		"weight": 4,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le festival annuel de Terminus approche. La population attend de vous un discours public."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre la parole"
+			},
+			"reaction": {
+				"FR": "Votre couverture est parfaite. La foule applaudit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Déléguer à un représentant"
+			},
+			"reaction": {
+				"FR": "Moins visible, mais plus sûr pour votre couverture."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1008,
+		"label": "espion_anacreon",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Vos agents ont capturé un espion anacréonien sur Terminus. Que faire de lui ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'emprisonner"
+			},
+			"reaction": {
+				"FR": "Un signal fort envoyé à Anacréon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le relâcher en échange d'informations"
+			},
+			"reaction": {
+				"FR": "Un échange discret mais pragmatique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 1009,
+		"label": "journaliste_enquete",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un journaliste de Terminus enquête sur vos activités. Il se rapproche dangereusement de la vérité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le discréditer"
+			},
+			"reaction": {
+				"FR": "Risqué, mais il se tait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'inviter à une interview"
+			},
+			"reaction": {
+				"FR": "Vous le manipulez habilement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "afraid",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 1010,
+		"label": "don_anonyme",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un don anonyme de 10 000 crédits est déposé pour la Fondation. L'origine est inconnue."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter sans poser de questions"
+			},
+			"reaction": {
+				"FR": "L'argent est propre, officiellement."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Enquêter sur l'origine"
+			},
+			"reaction": {
+				"FR": "Trois semaines plus tard : c'était un test de loyauté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 1011,
+		"label": "contrebande_tech",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Des contrebandiers vendent de la technologie nucléaire aux royaumes de la frontière. La loi interdit cela — mais les bénéfices sont réels."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": "Votre couverture de marchand local en profite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Saisir la cargaison"
+			},
+			"reaction": {
+				"FR": "Vous appliquez la loi. Vos alliés commerçants sont mécontents."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1012,
+		"label": "famine_secteur",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une famine frappe un secteur de Terminus après une mauvaise récolte. Les gens réclament une aide d'urgence."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Distribuer des vivres"
+			},
+			"reaction": {
+				"FR": "Votre générosité est remarquée. Coûteux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ouvrir les marchés libres"
+			},
+			"reaction": {
+				"FR": "Les prix montent. Certains s'enrichissent sur la misère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1013,
+		"label": "academicien_dissident",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un académicien réputé publie un traité remettant en question les bases de la psychohistoire. Cela sème le doute."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réfuter publiquement"
+			},
+			"reaction": {
+				"FR": "Vous défendez Seldon. Votre légitimité est renforcée — mais vous vous exposez."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer — le Plan se prouve lui-même"
+			},
+			"reaction": {
+				"FR": "Le silence est parfois plus sage que la controverse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1014,
+		"label": "election_locale",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'élection du maire de Terminus City approche. Un candidat ambitieux sollicite discrètement votre appui — il ignore qui vous êtes vraiment."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le soutenir en coulisses"
+			},
+			"reaction": {
+				"FR": "Il gagne du terrain. Il vous devra quelque chose."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester neutre"
+			},
+			"reaction": {
+				"FR": "Votre couverture d'honnête citoyen reste impeccable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1015,
+		"label": "deserteur_militaire",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un officier de la flotte déserte avec son patrouilleur et demande asile. Son ancien commandement exige son extradition."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui accorder l'asile"
+			},
+			"reaction": {
+				"FR": "Un pilote expérimenté de plus. Un incident diplomatique aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le livrer"
+			},
+			"reaction": {
+				"FR": "La discipline est sauve. Les idéalistes murmurent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 1016,
+		"label": "commerce_reliques",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un marchand vend des « reliques de la Terre originelle » — des faux grossiers, mais le peuple y croit et l'Église s'en irrite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Laisser le commerce prospérer"
+			},
+			"reaction": {
+				"FR": "La foi populaire se nourrit de n'importe quoi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confisquer les reliques"
+			},
+			"reaction": {
+				"FR": "L'Église vous remercie. Le marchand vous maudit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1017,
+		"label": "ingenieur_corrompu",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'ingénieur en chef de la centrale détourne des pièces de réacteur vers le marché noir. Le prouver publiquement ébranlerait la confiance."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'écarter discrètement"
+			},
+			"reaction": {
+				"FR": "L'affaire est étouffée. Le problème est réglé — officiellement, il n'a jamais existé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Procès public"
+			},
+			"reaction": {
+				"FR": "La transparence rassure les honnêtes gens et inquiète les autres."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 1018,
+		"label": "rapport_espionnage",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Votre réseau intercepte un message codé : quelqu'un, sur Terminus, renseigne une puissance étrangère. La piste est mince."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Enquêter vous-même"
+			},
+			"reaction": {
+				"FR": "Vous trouvez le traître en trois jours. Trop vite. On s'étonne de votre flair."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confier l'affaire à la Sécurité"
+			},
+			"reaction": {
+				"FR": "L'enquête piétine, mais personne ne vous regarde."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1019,
+		"label": "mariage_diplomatique",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 22,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une grande famille de Terminus propose d'unir sa fille à un prince mineur d'un royaume frontalier. Alliance utile — ou compromission."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Bénir l'union"
+			},
+			"reaction": {
+				"FR": "Les frontières s'adoucissent autour d'un banquet."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'y opposer"
+			},
+			"reaction": {
+				"FR": "La Fondation n'épouse pas ses voisins. Elle les convertit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 1020,
+		"label": "revolte_etudiants",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les étudiants de l'Université bloquent les amphithéâtres : ils exigent l'accès aux archives non censurées de Seldon."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ouvrir une partie des archives"
+			},
+			"reaction": {
+				"FR": "La curiosité est l'âme de la Fondation. Et son danger."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire évacuer"
+			},
+			"reaction": {
+				"FR": "L'ordre règne. Le ressentiment couve."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1021,
+		"label": "mission_nebuleuse",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'Académie veut financer une expédition scientifique vers la nébuleuse du Crabe. Coûteux, lointain, sans profit immédiat."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer l'expédition"
+			},
+			"reaction": {
+				"FR": "La science d'abord. Les comptables grincent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser les crédits"
+			},
+			"reaction": {
+				"FR": "Les chercheurs repartent avec leurs cartons de projets."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 1022,
+		"label": "adjoint_traitre",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Votre adjoint vend des informations sur vos affaires à un concurrent. Rien de grave n'a filtré — pour l'instant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le retourner — l'utiliser pour désinformer"
+			},
+			"reaction": {
+				"FR": "Il croit vous trahir. Il vous sert."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le congédier"
+			},
+			"reaction": {
+				"FR": "Propre et net. Mais il sait des choses."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1023,
+		"label": "ruines_preimperiales",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Des mineurs découvrent des ruines antérieures à l'Empire sous la calotte polaire. Les archéologues s'enflamment, l'Église s'inquiète."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fouilles publiques"
+			},
+			"reaction": {
+				"FR": "Chaque pierre déterrée pose une question à la doctrine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Classer le site"
+			},
+			"reaction": {
+				"FR": "Le passé reste sous la glace. La doctrine reste intacte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 1024,
+		"label": "station_miniere",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une station minière indépendante en bordure du système demande la protection de Terminus contre des pillards."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Envoyer une corvette"
+			},
+			"reaction": {
+				"FR": "La station hisse les couleurs de la Fondation."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vendre des armes — qu'ils se défendent"
+			},
+			"reaction": {
+				"FR": "Le commerce de la sécurité est florissant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1025,
+		"label": "patrouilleur_etranger",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un patrouilleur d'un royaume voisin « dérive » dans l'espace de Terminus depuis trois jours. Il cartographie vos défenses."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'arraisonner"
+			},
+			"reaction": {
+				"FR": "L'équipage proteste. Les cartes sont confisquées."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'escorter poliment dehors"
+			},
+			"reaction": {
+				"FR": "Message reçu des deux côtés."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1026,
+		"label": "chercheur_psychohistoire",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un jeune chercheur affirme avoir reconstitué une équation de Seldon. Ses résultats sont faux — mais dangereusement proches du vrai."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'orienter vers une impasse"
+			},
+			"reaction": {
+				"FR": "Vous corrigez sa trajectoire d'une remarque anodine. Il ne saura jamais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser chercher"
+			},
+			"reaction": {
+				"FR": "S'il trouve, le Plan tremblera."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 1027,
+		"label": "registres_falsifies",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un fonctionnaire des douanes falsifie les registres d'import depuis des années. Le scandale toucherait des familles puissantes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Étouffer et corriger en silence"
+			},
+			"reaction": {
+				"FR": "Les chiffres redeviennent honnêtes. Personne ne saura qu'ils ne l'étaient pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Dénoncer"
+			},
+			"reaction": {
+				"FR": "Trois familles ruinées, une administration assainie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 1028,
+		"label": "artefact_heretique",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un artefact exhumé sur Anacréon montre que la « technologie sacrée » existait avant l'Église de la Science. Les prêtres veulent le détruire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le faire disparaître dans une réserve"
+			},
+			"reaction": {
+				"FR": "Ni détruit, ni exposé. La Fondation a de la mémoire et des caves."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le confier à l'Église"
+			},
+			"reaction": {
+				"FR": "Le marteau du dogme règle la question."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 1029,
+		"label": "delegation_marchande",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une délégation de commerçants étrangers demande à visiter vos chantiers navals « par curiosité technique »."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Visite guidée — soigneusement balisée"
+			},
+			"reaction": {
+				"FR": "Ils voient ce que vous voulez qu'ils voient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refus courtois"
+			},
+			"reaction": {
+				"FR": "Les secrets restent secrets. Les soupçons grandissent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 1030,
+		"label": "cargo_quarantaine",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un cargo en provenance de Smyrno signale une fièvre inconnue à bord. Quarantaine stricte ou aide médicale immédiate ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Envoyer les médecins à bord"
+			},
+			"reaction": {
+				"FR": "Trois soignants contaminés. Quarante marins sauvés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quarantaine totale"
+			},
+			"reaction": {
+				"FR": "Le cargo dérive trente jours. Quatorze morts. Zéro contagion."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 1031,
+		"label": "tribut_imperial",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un émissaire de l'Empereur exige le tribut symbolique annuel — un geste de soumission que plus personne ne croit, mais que tout le monde joue."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 300
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer le tribut"
+			},
+			"reaction": {
+				"FR": "L'Empire sourit de loin. Cela ne coûte presque rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser cette comédie"
+			},
+			"reaction": {
+				"FR": "L'émissaire repart blême. Trantor s'en souviendra peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_empire",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_empire",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1032,
+		"label": "pacte_smyrno",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de Smyrno propose un pacte de non-agression — signé de la main qui arme ses corsaires."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 150
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Signer le pacte"
+			},
+			"reaction": {
+				"FR": "Un papier entre vous et ses canons. C'est mieux que rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exiger des garanties d'abord"
+			},
+			"reaction": {
+				"FR": "Les négociations s'enlisent. Ses corsaires patientent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1033,
+		"label": "licence_guilde",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Guilde des Marchands Indépendants réclame une licence exclusive sur les routes du secteur d'Askone."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 99
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 400
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accorder l'exclusivité"
+			},
+			"reaction": {
+				"FR": "La Guilde prospère et vous le rend bien. Les petits marchands non."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Routes ouvertes à tous"
+			},
+			"reaction": {
+				"FR": "La concurrence est saine. La Guilde est vexée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_merchants",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_merchants",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1034,
+		"label": "canonisation_hardin",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Grand Prêtre veut élever Salvor Hardin au rang de « Prophète de l'Esprit Galactique ». Hardin aurait détesté cela."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 49
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Autoriser le culte"
+			},
+			"reaction": {
+				"FR": "Un mythe de plus au service du Plan. Hardin se retourne quelque part."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'y opposer au nom de l'histoire"
+			},
+			"reaction": {
+				"FR": "La vérité historique a peu d'amis chez les dévots."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_church_of_science",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_church_of_science",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1035,
+		"label": "mecene_oligarque",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un prince marchand propose de financer votre administration — généreusement, et sans rien demander. Pour l'instant."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 199
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 400
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter ses crédits"
+			},
+			"reaction": {
+				"FR": "L'argent coule. La dette est invisible mais réelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner poliment"
+			},
+			"reaction": {
+				"FR": "Votre indépendance n'a pas de prix. Elle a un coût."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_oligarchs",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_oligarchs",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 1036,
+		"label": "ligue_recrutement",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Ligue des Mondes Autonomes recrute des planètes voisines avec un discours simple : « Ni l'Empire, ni la Fondation. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 249
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 350
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Infiltrer la Ligue"
+			},
+			"reaction": {
+				"FR": "Vos agents y sont. Leur slogan aussi vous concerne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La contrer ouvertement"
+			},
+			"reaction": {
+				"FR": "Vous voilà exactement le tyran qu'ils dénoncent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_autonomous_league",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_autonomous_league",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1037,
+		"label": "jeux_kalgan",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 22,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Premier Citoyen de Kalgan vous invite aux Jeux du Centenaire — vitrine de luxe d'un monde qui s'arme en silence."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 349
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 600
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Y aller en personne"
+			},
+			"reaction": {
+				"FR": "Vous comptez ses croiseurs entre deux courses. Lui aussi compte les vôtres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Envoyer un sous-secrétaire"
+			},
+			"reaction": {
+				"FR": "L'affront est calibré au millimètre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_kalgan",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_kalgan",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1038,
+		"label": "archives_neotrantor",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 22,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Neotrantor réclame la restitution des archives impériales « volées » — que vos bibliothécaires ont sauvées du pillage."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 299
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 500
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Restituer des copies"
+			},
+			"reaction": {
+				"FR": "Ils reçoivent le savoir. Vous gardez les originaux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout garder"
+			},
+			"reaction": {
+				"FR": "Les héritiers de l'Empire n'héritent que de votre refus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_neotrantor",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_neotrantor",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 1039,
+		"label": "conseil_terminus",
+		"deck": "ambient",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Conseil de Terminus vous consulte — votre couverture vous donne voix au chapitre sur la politique fiscale."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conseiller la prudence"
+			},
+			"reaction": {
+				"FR": "Un avis raisonnable, sans éclat. Exactement votre rôle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Proposer une réforme audacieuse"
+			},
+			"reaction": {
+				"FR": "On applaudit votre clairvoyance. On se demande d'où elle vient."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_first_foundation",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_first_foundation",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 1040,
+		"label": "general_disgracie",
+		"deck": "ambient",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un général impérial tombé en disgrâce demande refuge sur Terminus. Trantor le réclame mort — discrètement."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 300
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'accueillir"
+			},
+			"reaction": {
+				"FR": "Trente ans de stratégie impériale dans un seul crâne. À vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le refouler"
+			},
+			"reaction": {
+				"FR": "Il disparaît quelque part entre deux sauts. Trantor apprécie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_empire",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_empire",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 2001,
+		"label": "pression_anacreon_debut",
+		"deck": "hardin_era",
+		"weight": 4,
+		"lockturn": 10,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Anacréon exige que Terminus cesse de former des techniciens pour ses rivaux."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter"
+			},
+			"reaction": {
+				"FR": "Anacréon est satisfait. Pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser"
+			},
+			"reaction": {
+				"FR": "La tension monte entre les deux mondes."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2002,
+		"label": "pretre_scientifique",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un prêtre de l'Église de la Science vous propose de présenter la technologie comme un miracle divin aux populations locales."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encourager cette approche"
+			},
+			"reaction": {
+				"FR": "La religion technologique se répand."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maintenir la neutralité"
+			},
+			"reaction": {
+				"FR": "La technologie reste de la science, pas de la magie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2003,
+		"label": "encyclopedie_retard",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le comité de l'Encyclopédie signale un retard de 5 ans. Les ressources manquent."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Injecter des fonds"
+			},
+			"reaction": {
+				"FR": "L'Encyclopédie reprend son rythme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réduire le périmètre"
+			},
+			"reaction": {
+				"FR": "Moins ambitieuse, mais plus réalisable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 2004,
+		"label": "noble_provincial",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un noble de province offre de financer la Fondation en échange d'une place dans le Conseil."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 15
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le deal"
+			},
+			"reaction": {
+				"FR": "Un allié peu scrupuleux, mais des fonds bienvenus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser"
+			},
+			"reaction": {
+				"FR": "Il repart offensé. Ses amis le sauront."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2005,
+		"label": "rumeur_seldon",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "La Crypte de Seldon s'ouvre pour la première fois. Son message est clair : restez calmes. La crise se résoudra d'elle-même."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 45
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "seldon_vault_opened",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre les instructions de Seldon"
+			},
+			"reaction": {
+				"FR": "Vous attendez. La psychohistoire guide vos pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Agir malgré tout"
+			},
+			"reaction": {
+				"FR": "Vous déviez du Plan. Les conséquences restent inconnues."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2006,
+		"label": "traite_hardin",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "Salvor Hardin vous confie que la religion technologique est presque prête à remplacer la dépendance militaire d'Anacréon."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 30
+			},
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accélérer le processus"
+			},
+			"reaction": {
+				"FR": "La stratégie de Hardin se déploie à grande vitesse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Temporiser encore"
+			},
+			"reaction": {
+				"FR": "Hardin s'impatiente mais respecte votre décision."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2007,
+		"label": "attaque_frontier",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une flotte de raiders de la frontière attaque un convoi de ravitaillement de Terminus."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Envoyer la défense spatiale"
+			},
+			"reaction": {
+				"FR": "Coûteux mais le convoi est protégé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier une rançon"
+			},
+			"reaction": {
+				"FR": "Humiliant, mais les raiders le diront à leurs amis."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 2008,
+		"label": "conseil_terminus",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 10,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Conseil de Terminus vote une loi limitant les pouvoirs du maire. C'est une attaque directe contre votre couverture."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 20
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le vote"
+			},
+			"reaction": {
+				"FR": "Vous semblez raisonnable. Votre couverture est renforcée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Dissoudre le Conseil"
+			},
+			"reaction": {
+				"FR": "Efficace, mais vous devenez un autocrate aux yeux de tous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 2009,
+		"label": "missionnaire_frontier",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un missionnaire de l'Église de la Science revient de la frontière avec des nouvelles inquiétantes : Anacréon forme des techniciens sans supervision religieuse."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 25
+			},
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 60
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Envoyer plus de missionnaires"
+			},
+			"reaction": {
+				"FR": "La foi technologique gagne du terrain."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer — c'est prévu dans le Plan"
+			},
+			"reaction": {
+				"FR": "Vous gardez confiance en la psychohistoire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2010,
+		"label": "crise_approche",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "Hardin vous avertit en privé : 'La première crise de Seldon approche. Tout doit être en place.'"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 40
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 55
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Renforcer la religion technologique"
+			},
+			"reaction": {
+				"FR": "Votre atout principal est prêt."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renforcer les défenses militaires"
+			},
+			"reaction": {
+				"FR": "Une erreur de lecture du Plan, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 3001,
+		"label": "nouveau_speaker_debut",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Un nouveau Speaker prend la relève. Seldon murmure depuis la Crypte : 'Le Plan continue. Votre prédécesseur a bien servi.'"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer l'héritage"
+			},
+			"reaction": {
+				"FR": "Vous portez le poids de l'histoire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tracer votre propre voie"
+			},
+			"reaction": {
+				"FR": "Chaque Speaker est unique. Le Plan s'adapte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 3002,
+		"label": "heritage_crisis_reussie",
+		"deck": "new_speaker",
+		"weight": 3,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Votre prédécesseur a traversé la première crise de Seldon dans le couloir. Le Plan avance comme prévu."
+		},
+		"conditions": [
+			{
+				"variable": "seldon_crisis_1",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Construire sur cet acquis"
+			},
+			"reaction": {
+				"FR": "La psychohistoire est de votre côté."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester humble — tout peut basculer"
+			},
+			"reaction": {
+				"FR": "La prudence est la sagesse du Speaker."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 3003,
+		"label": "heritage_crisis_ratee",
+		"deck": "new_speaker",
+		"weight": 3,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Votre prédécesseur n'a pas traversé la première crise dans le couloir. Le Plan dévie. Vous devez corriger."
+		},
+		"conditions": [
+			{
+				"variable": "seldon_crisis_1",
+				"op": "equal",
+				"value": -1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Corriger en urgence"
+			},
+			"reaction": {
+				"FR": "Une correction est possible. Difficile, mais possible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter la déviation et s'adapter"
+			},
+			"reaction": {
+				"FR": "La psychohistoire a des marges de tolérance."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 3004,
+		"label": "heritage_natural_death",
+		"deck": "new_speaker",
+		"weight": 2,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Votre prédécesseur est mort de vieillesse, en pleine sagesse. Son dernier message : 'J'ai servi jusqu'au bout. À vous de continuer.'"
+		},
+		"conditions": [
+			{
+				"variable": "previous_death_type",
+				"op": "equal",
+				"value": "natural"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer sa mémoire"
+			},
+			"reaction": {
+				"FR": "La continuité est la force de la Seconde Fondation."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Regarder vers l'avenir"
+			},
+			"reaction": {
+				"FR": "Chaque règne efface le précédent dans la mémoire des gens."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 3005,
+		"label": "mort_vieillesse_speaker",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vos forces déclinent. Vous sentez que votre règne touche à sa fin naturelle. Il est temps de passer le flambeau."
+		},
+		"conditions": [
+			{
+				"variable": "age",
+				"op": "above",
+				"value": 74
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Transmettre le savoir en paix"
+			},
+			"reaction": {
+				"FR": "Votre dernier acte de Speaker : former votre successeur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Continuer jusqu'à la fin"
+			},
+			"reaction": {
+				"FR": "Quelques semaines de plus. Le Plan attend."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 3006,
+		"label": "contexte_ere_hardin",
+		"deck": "new_speaker",
+		"weight": 3,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Vous prenez vos fonctions à Terminus. Les Royaumes militaristes de la frontière regardent la Fondation avec convoitise."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Évaluer la menace militaire"
+			},
+			"reaction": {
+				"FR": "La frontière est votre premier défi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renforcer la légitimité civile"
+			},
+			"reaction": {
+				"FR": "Mieux vaut une bonne couverture qu'une bonne armée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 3007,
+		"label": "contexte_ere_marchands",
+		"deck": "new_speaker",
+		"weight": 3,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'ère commerciale s'ouvre. Les marchands galactiques font de Terminus un nœud incontournable de l'économie."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter l'essor commercial"
+			},
+			"reaction": {
+				"FR": "Le commerce est une arme plus douce que les canons."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maintenir une distance prudente"
+			},
+			"reaction": {
+				"FR": "Trop de richesse attire les convoitises."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 3008,
+		"label": "contexte_ere_mulet",
+		"deck": "new_speaker",
+		"weight": 3,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Le Mulet est en vie. La psychohistoire est aveugle à lui. Seldon ne peut rien vous dire. Vous êtes seul."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 289
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 380
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher le Mulet"
+			},
+			"reaction": {
+				"FR": "Une quête dangereuse sans la psychohistoire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protéger les structures en place"
+			},
+			"reaction": {
+				"FR": "Résister sans comprendre l'ennemi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 3009,
+		"label": "planetes_heritage",
+		"deck": "new_speaker",
+		"weight": 2,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Votre prédécesseur vous a laissé des planètes alliées. Consolider ou s'étendre ?"
+		},
+		"conditions": [
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider les alliés"
+			},
+			"reaction": {
+				"FR": "Mieux vaut un empire stable qu'un empire grand."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'étendre vers de nouvelles planètes"
+			},
+			"reaction": {
+				"FR": "L'expansion est le moteur du progrès."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 3010,
+		"label": "quete_regn_assignee",
+		"deck": "new_speaker",
+		"weight": 2,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "La Seconde Fondation vous assigne une mission secrète pour ce règne. Elle doit rester ignorée de tous, y compris de la Première Fondation."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_reign_1_active",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la mission"
+			},
+			"reaction": {
+				"FR": "Vous portez un fardeau invisible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander des précisions"
+			},
+			"reaction": {
+				"FR": "La Seconde Fondation ne donne jamais de précisions."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 9001,
+		"label": "mort_naturelle",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Vos mains tremblent sur les rapports du matin. La Crypte s'illumine une dernière fois : 'Vous avez bien servi, Orateur. Le Plan continuera sans vous.'"
+		},
+		"conditions": [
+			{
+				"variable": "dying",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": "Le Plan vous survit. Un autre prendra votre place."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Contempler la galaxie"
+			},
+			"reaction": {
+				"FR": "Mille étoiles, et sur chacune, l'ombre de Seldon."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "neutral"
+		}
 	}
-  },
-  {
-	"id": 1002,
-	"label": "greve_marchands",
-	"deck": "ambient",
-	"weight": 2,
-	"lockturn": 15,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Les marchands locaux font grève. Ils veulent de meilleures protections commerciales."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Céder à leurs demandes"
-	  },
-	  "reaction": {
-		"FR": "La grève s'arrête. Coûteux mais efficace."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Tenir ferme"
-	  },
-	  "reaction": {
-		"FR": "La grève dure. Des tensions naissent."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "angry",
-	  "yes": "neutral",
-	  "no": "angry"
-	}
-  },
-  {
-	"id": 1003,
-	"label": "etudiant_fondation",
-	"deck": "ambient",
-	"weight": 4,
-	"lockturn": 8,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un étudiant brillant vous demande de l'aide pour accéder aux archives classifiées de la psychohistoire."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Lui ouvrir les archives"
-	  },
-	  "reaction": {
-		"FR": "Son enthousiasme est contagieux."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Refuser — trop tôt"
-	  },
-	  "reaction": {
-		"FR": "Il repart, déçu mais compréhensif."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "sad"
-	}
-  },
-  {
-	"id": 1004,
-	"label": "coupure_energie",
-	"deck": "ambient",
-	"weight": 3,
-	"lockturn": 20,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Une panne d'énergie frappe le secteur ouest de Terminus. Les générateurs nucléaires sont en cause."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Réparer en urgence"
-	  },
-	  "reaction": {
-		"FR": "Les techniciens travaillent jour et nuit."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Rationaliser l'énergie"
-	  },
-	  "reaction": {
-		"FR": "Des quotas sont imposés — mécontentement garanti."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": -15,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "commerce",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "afraid",
-	  "yes": "neutral",
-	  "no": "angry"
-	}
-  },
-  {
-	"id": 1005,
-	"label": "delegation_scientifique",
-	"deck": "ambient",
-	"weight": 3,
-	"lockturn": 12,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Une délégation de scientifiques demande des fonds supplémentaires pour l'Encyclopédie Galactique."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Allouer les fonds"
-	  },
-	  "reaction": {
-		"FR": "L'Encyclopédie avance. Le Plan progresse."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Reporter la décision"
-	  },
-	  "reaction": {
-		"FR": "Les scientifiques s'impatientent."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "religion",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "sad"
-	}
-  },
-  {
-	"id": 1006,
-	"label": "vieil_amiral",
-	"deck": "ambient",
-	"weight": 2,
-	"lockturn": 25,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un vieil amiral impérial à la retraite vous propose ses services de renseignement. Il n'est pas fiable, mais ses contacts sont précieux."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "L'engager"
-	  },
-	  "reaction": {
-		"FR": "Un informateur risqué mais utile."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Décliner poliment"
-	  },
-	  "reaction": {
-		"FR": "Il comprend. Ou feint de comprendre."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "military",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [],
-	"moods": {
-	  "default": "suspicious",
-	  "yes": "flattered",
-	  "no": "neutral"
-	}
-  },
-  {
-	"id": 1007,
-	"label": "festival_terminus",
-	"deck": "ambient",
-	"weight": 4,
-	"lockturn": 30,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Le festival annuel de Terminus approche. La population attend de vous un discours public."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Prendre la parole"
-	  },
-	  "reaction": {
-		"FR": "Votre couverture est parfaite. La foule applaudit."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Déléguer à un représentant"
-	  },
-	  "reaction": {
-		"FR": "Moins visible, mais plus sûr pour votre couverture."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "neutral"
-	}
-  },
-  {
-	"id": 1008,
-	"label": "espion_anacreon",
-	"deck": "ambient",
-	"weight": 2,
-	"lockturn": 20,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Vos agents ont capturé un espion anacréonien sur Terminus. Que faire de lui ?"
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "L'emprisonner"
-	  },
-	  "reaction": {
-		"FR": "Un signal fort envoyé à Anacréon."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Le relâcher en échange d'informations"
-	  },
-	  "reaction": {
-		"FR": "Un échange discret mais pragmatique."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "military",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "relation_military_kingdoms",
-		"intValue": -15,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "military",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "afraid",
-	  "yes": "angry",
-	  "no": "suspicious"
-	}
-  },
-  {
-	"id": 1009,
-	"label": "journaliste_enquete",
-	"deck": "ambient",
-	"weight": 3,
-	"lockturn": 15,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un journaliste de Terminus enquête sur vos activités. Il se rapproche dangereusement de la vérité."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Le discréditer"
-	  },
-	  "reaction": {
-		"FR": "Risqué, mais il se tait."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "L'inviter à une interview"
-	  },
-	  "reaction": {
-		"FR": "Vous le manipulez habilement."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "suspicious",
-	  "yes": "afraid",
-	  "no": "flattered"
-	}
-  },
-  {
-	"id": 1010,
-	"label": "don_anonyme",
-	"deck": "ambient",
-	"weight": 2,
-	"lockturn": 30,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un don anonyme de 10 000 crédits est déposé pour la Fondation. L'origine est inconnue."
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Accepter sans poser de questions"
-	  },
-	  "reaction": {
-		"FR": "L'argent est propre, officiellement."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Enquêter sur l'origine"
-	  },
-	  "reaction": {
-		"FR": "Trois semaines plus tard : c'était un test de loyauté."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "military",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "neutral",
-	  "no": "suspicious"
-	}
-  },
-  {
-	"id": 2001,
-	"label": "pression_anacreon_debut",
-	"deck": "hardin_era",
-	"weight": 4,
-	"lockturn": 10,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Anacréon exige que Terminus cesse de former des techniciens pour ses rivaux."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 10
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Accepter"
-	  },
-	  "reaction": {
-		"FR": "Anacréon est satisfait. Pour l'instant."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Refuser"
-	  },
-	  "reaction": {
-		"FR": "La tension monte entre les deux mondes."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "relation_military_kingdoms",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "commerce",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "relation_military_kingdoms",
-		"intValue": -20,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "military",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "angry",
-	  "yes": "neutral",
-	  "no": "angry"
-	}
-  },
-  {
-	"id": 2002,
-	"label": "pretre_scientifique",
-	"deck": "hardin_era",
-	"weight": 3,
-	"lockturn": 12,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un prêtre de l'Église de la Science vous propose de présenter la technologie comme un miracle divin aux populations locales."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 5
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Encourager cette approche"
-	  },
-	  "reaction": {
-		"FR": "La religion technologique se répand."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Maintenir la neutralité"
-	  },
-	  "reaction": {
-		"FR": "La technologie reste de la science, pas de la magie."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "flattered",
-	  "yes": "flattered",
-	  "no": "neutral"
-	}
-  },
-  {
-	"id": 2003,
-	"label": "encyclopedie_retard",
-	"deck": "hardin_era",
-	"weight": 3,
-	"lockturn": 20,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Le comité de l'Encyclopédie signale un retard de 5 ans. Les ressources manquent."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "below",
-		"value": 50
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Injecter des fonds"
-	  },
-	  "reaction": {
-		"FR": "L'Encyclopédie reprend son rythme."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Réduire le périmètre"
-	  },
-	  "reaction": {
-		"FR": "Moins ambitieuse, mais plus réalisable."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": -20,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "religion",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "sad",
-	  "yes": "neutral",
-	  "no": "sad"
-	}
-  },
-  {
-	"id": 2004,
-	"label": "noble_provincial",
-	"deck": "hardin_era",
-	"weight": 2,
-	"lockturn": 15,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un noble de province offre de financer la Fondation en échange d'une place dans le Conseil."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 15
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Accepter le deal"
-	  },
-	  "reaction": {
-		"FR": "Un allié peu scrupuleux, mais des fonds bienvenus."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Refuser"
-	  },
-	  "reaction": {
-		"FR": "Il repart offensé. Ses amis le sauront."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -15,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "flattered",
-	  "yes": "flattered",
-	  "no": "angry"
-	}
-  },
-  {
-	"id": 2005,
-	"label": "rumeur_seldon",
-	"deck": "hardin_era",
-	"weight": 3,
-	"lockturn": 25,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "La Crypte de Seldon s'ouvre pour la première fois. Son message est clair : restez calmes. La crise se résoudra d'elle-même."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 45
-	  }
-	],
-	"loadOutcome": [
-	  {
-		"variable": "seldon_vault_opened",
-		"intValue": 1,
-		"addOperation": false,
-		"toKeep": true
-	  }
-	],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Suivre les instructions de Seldon"
-	  },
-	  "reaction": {
-		"FR": "Vous attendez. La psychohistoire guide vos pas."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Agir malgré tout"
-	  },
-	  "reaction": {
-		"FR": "Vous déviez du Plan. Les conséquences restent inconnues."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 20,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": -15,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "suspicious"
-	}
-  },
-  {
-	"id": 2006,
-	"label": "traite_hardin",
-	"deck": "hardin_era",
-	"weight": 3,
-	"lockturn": 15,
-	"hidden": false,
-	"bearer": "salvor_hardin",
-	"question": {
-	  "FR": "Salvor Hardin vous confie que la religion technologique est presque prête à remplacer la dépendance militaire d'Anacréon."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 30
-	  },
-	  {
-		"variable": "religion",
-		"op": "above",
-		"value": 40
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Accélérer le processus"
-	  },
-	  "reaction": {
-		"FR": "La stratégie de Hardin se déploie à grande vitesse."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Temporiser encore"
-	  },
-	  "reaction": {
-		"FR": "Hardin s'impatiente mais respecte votre décision."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "relation_military_kingdoms",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "neutral"
-	}
-  },
-  {
-	"id": 2007,
-	"label": "attaque_frontier",
-	"deck": "hardin_era",
-	"weight": 2,
-	"lockturn": 20,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Une flotte de raiders de la frontière attaque un convoi de ravitaillement de Terminus."
-	},
-	"conditions": [
-	  {
-		"variable": "military",
-		"op": "below",
-		"value": 40
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Envoyer la défense spatiale"
-	  },
-	  "reaction": {
-		"FR": "Coûteux mais le convoi est protégé."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Négocier une rançon"
-	  },
-	  "reaction": {
-		"FR": "Humiliant, mais les raiders le diront à leurs amis."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "military",
-		"intValue": -20,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "commerce",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": -15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "afraid",
-	  "yes": "neutral",
-	  "no": "desperate"
-	}
-  },
-  {
-	"id": 2008,
-	"label": "conseil_terminus",
-	"deck": "hardin_era",
-	"weight": 3,
-	"lockturn": 10,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Le Conseil de Terminus vote une loi limitant les pouvoirs du maire. C'est une attaque directe contre votre couverture."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 20
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Accepter le vote"
-	  },
-	  "reaction": {
-		"FR": "Vous semblez raisonnable. Votre couverture est renforcée."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Dissoudre le Conseil"
-	  },
-	  "reaction": {
-		"FR": "Efficace, mais vous devenez un autocrate aux yeux de tous."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": -15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 20,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "legitimacy",
-		"intValue": -20,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "angry",
-	  "yes": "neutral",
-	  "no": "afraid"
-	}
-  },
-  {
-	"id": 2009,
-	"label": "missionnaire_frontier",
-	"deck": "hardin_era",
-	"weight": 3,
-	"lockturn": 18,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Un missionnaire de l'Église de la Science revient de la frontière avec des nouvelles inquiétantes : Anacréon forme des techniciens sans supervision religieuse."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 25
-	  },
-	  {
-		"variable": "religion",
-		"op": "below",
-		"value": 60
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Envoyer plus de missionnaires"
-	  },
-	  "reaction": {
-		"FR": "La foi technologique gagne du terrain."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Ignorer — c'est prévu dans le Plan"
-	  },
-	  "reaction": {
-		"FR": "Vous gardez confiance en la psychohistoire."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "commerce",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "relation_military_kingdoms",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "afraid",
-	  "yes": "curious",
-	  "no": "neutral"
-	}
-  },
-  {
-	"id": 2010,
-	"label": "crise_approche",
-	"deck": "hardin_era",
-	"weight": 2,
-	"lockturn": 30,
-	"hidden": false,
-	"bearer": "salvor_hardin",
-	"question": {
-	  "FR": "Hardin vous avertit en privé : 'La première crise de Seldon approche. Tout doit être en place.'"
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 40
-	  },
-	  {
-		"variable": "year",
-		"op": "below",
-		"value": 55
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Renforcer la religion technologique"
-	  },
-	  "reaction": {
-		"FR": "Votre atout principal est prêt."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Renforcer les défenses militaires"
-	  },
-	  "reaction": {
-		"FR": "Une erreur de lecture du Plan, peut-être."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "military",
-		"intValue": 15,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "religion",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "desperate",
-	  "yes": "flattered",
-	  "no": "afraid"
-	}
-  },
-  {
-	"id": 3001,
-	"label": "nouveau_speaker_debut",
-	"deck": "new_speaker",
-	"weight": 1,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "Un nouveau Speaker prend la relève. Seldon murmure depuis la Crypte : 'Le Plan continue. Votre prédécesseur a bien servi.'"
-	},
-	"conditions": [],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Assumer l'héritage"
-	  },
-	  "reaction": {
-		"FR": "Vous portez le poids de l'histoire."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Tracer votre propre voie"
-	  },
-	  "reaction": {
-		"FR": "Chaque Speaker est unique. Le Plan s'adapte."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "legitimacy",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "legitimacy",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "curious"
-	}
-  },
-  {
-	"id": 3002,
-	"label": "heritage_crisis_reussie",
-	"deck": "new_speaker",
-	"weight": 3,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "Votre prédécesseur a traversé la première crise de Seldon dans le couloir. Le Plan avance comme prévu."
-	},
-	"conditions": [
-	  {
-		"variable": "seldon_crisis_1",
-		"op": "equal",
-		"value": 1
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Construire sur cet acquis"
-	  },
-	  "reaction": {
-		"FR": "La psychohistoire est de votre côté."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Rester humble — tout peut basculer"
-	  },
-	  "reaction": {
-		"FR": "La prudence est la sagesse du Speaker."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "religion",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [],
-	"moods": {
-	  "default": "flattered",
-	  "yes": "flattered",
-	  "no": "curious"
-	}
-  },
-  {
-	"id": 3003,
-	"label": "heritage_crisis_ratee",
-	"deck": "new_speaker",
-	"weight": 3,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "Votre prédécesseur n'a pas traversé la première crise dans le couloir. Le Plan dévie. Vous devez corriger."
-	},
-	"conditions": [
-	  {
-		"variable": "seldon_crisis_1",
-		"op": "equal",
-		"value": -1
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Corriger en urgence"
-	  },
-	  "reaction": {
-		"FR": "Une correction est possible. Difficile, mais possible."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Accepter la déviation et s'adapter"
-	  },
-	  "reaction": {
-		"FR": "La psychohistoire a des marges de tolérance."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "military",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [],
-	"moods": {
-	  "default": "desperate",
-	  "yes": "afraid",
-	  "no": "sad"
-	}
-  },
-  {
-	"id": 3004,
-	"label": "heritage_natural_death",
-	"deck": "new_speaker",
-	"weight": 2,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "Votre prédécesseur est mort de vieillesse, en pleine sagesse. Son dernier message : 'J'ai servi jusqu'au bout. À vous de continuer.'"
-	},
-	"conditions": [
-	  {
-		"variable": "previous_death_type",
-		"op": "equal",
-		"value": "natural"
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Honorer sa mémoire"
-	  },
-	  "reaction": {
-		"FR": "La continuité est la force de la Seconde Fondation."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Regarder vers l'avenir"
-	  },
-	  "reaction": {
-		"FR": "Chaque règne efface le précédent dans la mémoire des gens."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "legitimacy",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [],
-	"moods": {
-	  "default": "sad",
-	  "yes": "sad",
-	  "no": "neutral"
-	}
-  },
-  {
-	"id": 3005,
-	"label": "mort_vieillesse_speaker",
-	"deck": "new_speaker",
-	"weight": 1,
-	"lockturn": 0,
-	"hidden": true,
-	"bearer": null,
-	"question": {
-	  "FR": "Vos forces déclinent. Vous sentez que votre règne touche à sa fin naturelle. Il est temps de passer le flambeau."
-	},
-	"conditions": [
-	  {
-		"variable": "age",
-		"op": "above",
-		"value": 74
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Transmettre le savoir en paix"
-	  },
-	  "reaction": {
-		"FR": "Votre dernier acte de Speaker : former votre successeur."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Continuer jusqu'à la fin"
-	  },
-	  "reaction": {
-		"FR": "Quelques semaines de plus. Le Plan attend."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "death_type",
-		"intValue": 0,
-		"addOperation": false,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [],
-	"moods": {
-	  "default": "sad",
-	  "yes": "neutral",
-	  "no": "desperate"
-	}
-  },
-  {
-	"id": 3006,
-	"label": "contexte_ere_hardin",
-	"deck": "new_speaker",
-	"weight": 3,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Vous prenez vos fonctions à Terminus. Les Royaumes militaristes de la frontière regardent la Fondation avec convoitise."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "below",
-		"value": 80
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Évaluer la menace militaire"
-	  },
-	  "reaction": {
-		"FR": "La frontière est votre premier défi."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Renforcer la légitimité civile"
-	  },
-	  "reaction": {
-		"FR": "Mieux vaut une bonne couverture qu'une bonne armée."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "military",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "legitimacy",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "afraid",
-	  "yes": "neutral",
-	  "no": "curious"
-	}
-  },
-  {
-	"id": 3007,
-	"label": "contexte_ere_marchands",
-	"deck": "new_speaker",
-	"weight": 3,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "L'ère commerciale s'ouvre. Les marchands galactiques font de Terminus un nœud incontournable de l'économie."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 79
-	  },
-	  {
-		"variable": "year",
-		"op": "below",
-		"value": 250
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Exploiter l'essor commercial"
-	  },
-	  "reaction": {
-		"FR": "Le commerce est une arme plus douce que les canons."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Maintenir une distance prudente"
-	  },
-	  "reaction": {
-		"FR": "Trop de richesse attire les convoitises."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "commerce",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 5,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "flattered",
-	  "no": "suspicious"
-	}
-  },
-  {
-	"id": 3008,
-	"label": "contexte_ere_mulet",
-	"deck": "new_speaker",
-	"weight": 3,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "Le Mulet est en vie. La psychohistoire est aveugle à lui. Seldon ne peut rien vous dire. Vous êtes seul."
-	},
-	"conditions": [
-	  {
-		"variable": "year",
-		"op": "above",
-		"value": 289
-	  },
-	  {
-		"variable": "year",
-		"op": "below",
-		"value": 380
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Chercher le Mulet"
-	  },
-	  "reaction": {
-		"FR": "Une quête dangereuse sans la psychohistoire."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Protéger les structures en place"
-	  },
-	  "reaction": {
-		"FR": "Résister sans comprendre l'ennemi."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "military",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": -10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "desperate",
-	  "yes": "afraid",
-	  "no": "afraid"
-	}
-  },
-  {
-	"id": 3009,
-	"label": "planetes_heritage",
-	"deck": "new_speaker",
-	"weight": 2,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": null,
-	"question": {
-	  "FR": "Votre prédécesseur vous a laissé des planètes alliées. Consolider ou s'étendre ?"
-	},
-	"conditions": [
-	  {
-		"variable": "planet_askone_state",
-		"op": "equal",
-		"value": 1
-	  }
-	],
-	"loadOutcome": [],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Consolider les alliés"
-	  },
-	  "reaction": {
-		"FR": "Mieux vaut un empire stable qu'un empire grand."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "S'étendre vers de nouvelles planètes"
-	  },
-	  "reaction": {
-		"FR": "L'expansion est le moteur du progrès."
-	  }
-	},
-	"yesOutcome": [
-	  {
-		"variable": "politics",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"noOutcome": [
-	  {
-		"variable": "military",
-		"intValue": -5,
-		"addOperation": true,
-		"toKeep": false
-	  },
-	  {
-		"variable": "commerce",
-		"intValue": 10,
-		"addOperation": true,
-		"toKeep": false
-	  }
-	],
-	"moods": {
-	  "default": "curious",
-	  "yes": "neutral",
-	  "no": "curious"
-	}
-  },
-  {
-	"id": 3010,
-	"label": "quete_regn_assignee",
-	"deck": "new_speaker",
-	"weight": 2,
-	"lockturn": 0,
-	"hidden": false,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "La Seconde Fondation vous assigne une mission secrète pour ce règne. Elle doit rester ignorée de tous, y compris de la Première Fondation."
-	},
-	"conditions": [],
-	"loadOutcome": [
-	  {
-		"variable": "quest_reign_1_active",
-		"intValue": 1,
-		"addOperation": false,
-		"toKeep": false
-	  }
-	],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Accepter la mission"
-	  },
-	  "reaction": {
-		"FR": "Vous portez un fardeau invisible."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Demander des précisions"
-	  },
-	  "reaction": {
-		"FR": "La Seconde Fondation ne donne jamais de précisions."
-	  }
-	},
-	"yesOutcome": [],
-	"noOutcome": [],
-	"moods": {
-	  "default": "suspicious",
-	  "yes": "curious",
-	  "no": "curious"
-	}
-  },
-  {
-	"id": 9001,
-	"label": "mort_naturelle",
-	"deck": "new_speaker",
-	"weight": 1,
-	"lockturn": 0,
-	"hidden": true,
-	"bearer": "hari_seldon",
-	"question": {
-	  "FR": "Vos mains tremblent sur les rapports du matin. La Crypte s'illumine une dernière fois : 'Vous avez bien servi, Orateur. Le Plan continuera sans vous.'"
-	},
-	"conditions": [
-	  {
-		"variable": "dying",
-		"op": "equal",
-		"value": 1
-	  }
-	],
-	"loadOutcome": [
-	  {
-		"variable": "dying",
-		"intValue": 1,
-		"addOperation": false,
-		"toKeep": false
-	  }
-	],
-	"leftAnswer": {
-	  "title": {
-		"FR": "Fermer les yeux"
-	  },
-	  "reaction": {
-		"FR": "Le Plan vous survit. Un autre prendra votre place."
-	  }
-	},
-	"rightAnswer": {
-	  "title": {
-		"FR": "Contempler la galaxie"
-	  },
-	  "reaction": {
-		"FR": "Mille étoiles, et sur chacune, l'ombre de Seldon."
-	  }
-	},
-	"yesOutcome": [],
-	"noOutcome": [],
-	"moods": {
-	  "default": "sad",
-	  "yes": "neutral",
-	  "no": "neutral"
-	}
-  }
 ]
