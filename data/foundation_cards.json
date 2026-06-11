@@ -7442,6 +7442,565 @@
 		}
 	},
 	{
+		"id": 8001,
+		"label": "crise_anacreon_debut",
+		"deck": "crisis_anacreonian_war",
+		"weight": 5,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Anacréon vient d'envoyer un ultimatum : soumission complète de Terminus ou invasion militaire dans 30 jours. La Crypte de Seldon s'est ouverte — mais son message était : « Gardez la tête froide. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 49
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 81
+			},
+			{
+				"variable": "seldon_crisis_1",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "crisis_anacreon_active",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "crisis_anacreon_active",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Négocier — trouver une solution politique"
+			},
+			"reaction": {
+				"FR": "Vous convoquez l'ambassadeur anacréonien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Résister — montrer notre force"
+			},
+			"reaction": {
+				"FR": "Terminus se prépare à la confrontation."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8003,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8004,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 8003,
+		"label": "crise_anacreon_negoc",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'ambassadeur écoutera vos propositions. Mais il veut soit un tribut annuel en technologie, soit la reconnaissance de la souveraineté d'Anacréon sur Terminus."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Offrir le tribut technologique"
+			},
+			"reaction": {
+				"FR": "Vous leur donnez de la technologie — mais sous contrôle religieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Proposer une alliance commerciale"
+			},
+			"reaction": {
+				"FR": "Vous détournez leur attention des armes vers le profit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8007,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8008,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 8004,
+		"label": "crise_anacreon_resist",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Terminus se prépare. Deux stratégies s'affrontent au Conseil : utiliser la religion pour paralyser les techniciens militaires anacréoniens, ou préparer une défense directe."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Stratégie religieuse — priver Anacréon de ses techniciens"
+			},
+			"reaction": {
+				"FR": "Les prêtres-techniciens d'Anacréon refusent d'activer leurs réacteurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Défense militaire directe"
+			},
+			"reaction": {
+				"FR": "Terminus mobilise sa flotte. La confrontation est inévitable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8009,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8010,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 8007,
+		"label": "crise_anacreon_tribut_ok",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "Hardin vous souffle : « Le tribut technologique sous contrôle religieux est parfait. Ils dépendent de nous pour faire fonctionner leurs propres réacteurs. » L'accord est signé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider l'accord"
+			},
+			"reaction": {
+				"FR": "La dépendance d'Anacréon est scellée. Pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester vigilant"
+			},
+			"reaction": {
+				"FR": "La paix est une trêve, pas une victoire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8011,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 8008,
+		"label": "crise_anacreon_alliance_comm",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'alliance commerciale ralentit l'ultimatum — Anacréon hésite entre la guerre et la prospérité. Vous avez 15 jours pour les convaincre définitivement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Offrir des avantages commerciaux immédiats"
+			},
+			"reaction": {
+				"FR": "L'or parle plus fort que les canons."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Menacer de couper la technologie"
+			},
+			"reaction": {
+				"FR": "Un pari risqué — ils peuvent appeler votre bluff."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8011,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 8009,
+		"label": "crise_anacreon_religion_win",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "La stratégie fonctionne : les prêtres-techniciens d'Anacréon refusent de faire la guerre à la « Terre sacrée de la Science ». L'amiral anacréonien est seul."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exiger la capitulation d'Anacréon"
+			},
+			"reaction": {
+				"FR": "Vous poussez l'avantage jusqu'au bout."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Proposer une paix honorable"
+			},
+			"reaction": {
+				"FR": "Une victoire tranquille vaut mieux qu'une humiliation."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8012,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8011,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "angry",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 8010,
+		"label": "crise_anacreon_militaire",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La flotte d'Anacréon approche de Terminus. Vos défenses sont en place — mais insuffisantes. La bataille aura lieu dans 48 heures."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Combattre"
+			},
+			"reaction": {
+				"FR": "Terminus se bat. Pertes des deux côtés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander la médiation de l'Empire"
+			},
+			"reaction": {
+				"FR": "L'Empire est loin et déclinant, mais son nom a encore du poids."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8012,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 8012,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_empire",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 8011,
+		"label": "crise_anacreon_fin_accord",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "La Crypte s'ouvre. Seldon sourit depuis l'enregistrement : « La première crise est passée. Vous avez compris que la violence est le dernier recours de l'incompétent. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "evaluate_seldon_crisis",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "crisis_anacreon_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer la mémoire de Seldon"
+			},
+			"reaction": {
+				"FR": "Le Plan continue. Votre règne restera dans les mémoires."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Regarder vers la prochaine crise"
+			},
+			"reaction": {
+				"FR": "Une crise de résolue. Cinq à venir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 8012,
+		"label": "crise_anacreon_fin_conflit",
+		"deck": "crisis_anacreonian_war",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "La crise est passée — de justesse. Seldon dans la Crypte : « Le couloir était étroit. Vous l'avez traversé, ou pas. La psychohistoire le dira. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "evaluate_seldon_crisis",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "crisis_anacreon_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Analyser ce qui s'est passé"
+			},
+			"reaction": {
+				"FR": "La psychohistoire enregistre. Qu'avez-vous appris ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Passer à autre chose"
+			},
+			"reaction": {
+				"FR": "Le présent appelle. Le passé est le passé."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 9001,
 		"label": "mort_naturelle",
 		"deck": "new_speaker",
