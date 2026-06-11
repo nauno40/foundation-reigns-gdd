@@ -1,11 +1,19 @@
 class_name SwipeDetector
 extends Node
 
+# Drag horizontal de carte façon Reigns : la carte suit le doigt 1:1
+# (delta brut en pixels, non clampé), validation au relâchement au-delà
+# du seuil du prototype (92 px), sinon snap-back. Un relâchement quasi
+# immobile est un tap (sert à balayer la réaction).
+
 signal swiped_left
 signal swiped_right
-signal swipe_progress(ratio: float)
+signal swipe_progress(drag_px: float)
+signal drag_released
+signal tapped
 
-const MIN_SWIPE_DISTANCE = 80.0
+const COMMIT_THRESHOLD = 92.0  # = CardScreen.SWIPE_THRESHOLD (prototype)
+const TAP_MAX_DISTANCE = 12.0
 const MAX_SWIPE_ANGLE = 45.0
 
 var _drag_start: Vector2 = Vector2.ZERO
@@ -38,9 +46,7 @@ func _start_drag(pos: Vector2) -> void:
 	_is_dragging = true
 
 func _update_progress(pos: Vector2) -> void:
-	var delta = pos - _drag_start
-	var ratio = clamp(delta.x / MIN_SWIPE_DISTANCE, -1.0, 1.0)
-	swipe_progress.emit(ratio)
+	swipe_progress.emit(pos.x - _drag_start.x)
 
 func _end_drag(pos: Vector2) -> void:
 	if not _is_dragging:
@@ -48,17 +54,17 @@ func _end_drag(pos: Vector2) -> void:
 	_is_dragging = false
 
 	var delta = pos - _drag_start
-	var distance = abs(delta.x)
-	if distance < MIN_SWIPE_DISTANCE:
-		swipe_progress.emit(0.0)
+	if delta.length() < TAP_MAX_DISTANCE:
+		tapped.emit()
+		drag_released.emit()
 		return
 
 	var angle = abs(rad_to_deg(atan2(delta.y, delta.x)))
-	if angle > MAX_SWIPE_ANGLE and angle < 180.0 - MAX_SWIPE_ANGLE:
-		swipe_progress.emit(0.0)
+	var too_vertical: bool = angle > MAX_SWIPE_ANGLE and angle < 180.0 - MAX_SWIPE_ANGLE
+	if abs(delta.x) < COMMIT_THRESHOLD or too_vertical:
+		drag_released.emit()
 		return
 
-	swipe_progress.emit(0.0)
 	if delta.x < 0:
 		swiped_left.emit()
 	else:

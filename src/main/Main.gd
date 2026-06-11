@@ -18,6 +18,7 @@ var _seldon: SeldonSystem
 
 var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
+var _pending_death: String = ""
 
 func _ready() -> void:
 	_game_data = FoundationGameData.new()
@@ -42,6 +43,7 @@ func _ready() -> void:
 	_galaxy_map.setup(_game_data)
 
 	_card_screen.choice_made.connect(_on_choice_made)
+	_card_screen.reaction_dismissed.connect(_on_reaction_dismissed)
 	_card_screen.map_requested.connect(_on_map_pressed)
 	_death_screen.continue_pressed.connect(_on_new_reign)
 	_galaxy_map.visibility_changed.connect(_on_map_visibility_changed)
@@ -111,27 +113,25 @@ func _on_choice_made(is_left: bool) -> void:
 	_ctx.advance_turn()
 	_save.save(_ctx)
 
+	# La suite (mort ou carte suivante) attend que le joueur balaie la
+	# réaction — rythme du joueur, comme dans Reigns.
+	_pending_death = ""
 	if _ctx.is_game_over():
-		await get_tree().create_timer(1.8).timeout
-		_show_death_screen(_parse_death_type())
+		_pending_death = _parse_death_type()
+	elif _ctx.get_var("dying", 0) == 1:
+		_pending_death = "natural"
+	else:
+		var age = _ctx.get_var("age", 35)
+		if _should_die_naturally(age):
+			# La mort arrive via une carte narrative (deck new_speaker)
+			_ctx.set_var("link", str(NATURAL_DEATH_CARD_ID))
+
+func _on_reaction_dismissed() -> void:
+	if _pending_death != "":
+		var death_type = _pending_death
+		_pending_death = ""
+		_show_death_screen(death_type)
 		return
-
-	if _legitimacy.is_exposed():
-		await get_tree().create_timer(1.5).timeout
-		_show_death_screen("legitimacy")
-		return
-
-	if _ctx.get_var("dying", 0) == 1:
-		await get_tree().create_timer(1.8).timeout
-		_show_death_screen("natural")
-		return
-
-	var age = _ctx.get_var("age", 35)
-	if _should_die_naturally(age):
-		# La mort arrive via une carte narrative (deck new_speaker), pas un écran direct
-		_ctx.set_var("link", str(NATURAL_DEATH_CARD_ID))
-
-	await get_tree().create_timer(1.5).timeout
 	_next_card()
 
 func _parse_death_type() -> String:

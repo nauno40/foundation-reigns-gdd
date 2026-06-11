@@ -12,10 +12,12 @@ const ThemeColors = preload("res://src/ui/ThemeColors.gd")
 
 signal choice_made(is_left: bool)
 signal map_requested
+signal reaction_dismissed
 
-const SWIPE_THRESHOLD := 92.0
+const SWIPE_THRESHOLD := 92.0      # = SwipeDetector.COMMIT_THRESHOLD
 const PREVIEW_THRESHOLD := 24.0
 const CARD_MAX_W := 360.0
+const MIN_REACTION_MS := 400       # anti-balayage accidentel de la réaction
 
 @onready var _era_label: Label = %EraLabel
 @onready var _seal: Button = %Seal
@@ -56,6 +58,9 @@ var _reaction_visible: bool = false
 var _card_base_pos: Vector2 = Vector2.ZERO
 var _flicker_timer: Timer
 var _chip_base_style: StyleBoxFlat
+var _snap_tween: Tween
+var _entry_pending: bool = false
+var _reaction_shown_ms: int = 0
 
 func setup(game_data: FoundationGameData) -> void:
 	_game_data = game_data
@@ -64,6 +69,8 @@ func _ready() -> void:
 	_swipe_detector.swiped_left.connect(_on_swipe_left)
 	_swipe_detector.swiped_right.connect(_on_swipe_right)
 	_swipe_detector.swipe_progress.connect(_on_swipe_progress)
+	_swipe_detector.drag_released.connect(_on_drag_released)
+	_swipe_detector.tapped.connect(_on_tapped)
 	_seal.pressed.connect(func(): map_requested.emit())
 	_chip_base_style = _left_choice.get_theme_stylebox("panel")
 	_setup_bars()
@@ -72,6 +79,11 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not _accepts_input():
+		return
+	if _reaction_visible:
+		if event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right") \
+				or event.is_action_pressed("ui_accept"):
+			_dismiss_reaction()
 		return
 	if event.is_action_pressed("ui_left"):
 		_on_swipe_left()
@@ -138,6 +150,10 @@ func show_card(card: Dictionary, ctx: Context) -> void:
 	_update_whisper(ctx)
 	_reset_choice_styles()
 	_clear_affected()
+
+	# entrée de la nouvelle carte : fondu + léger scale (façon Reigns)
+	_entry_pending = true
+	_card_panel.modulate.a = 0.0
 
 	# le contenu vient de changer : recalcul du layout au prochain frame
 	_layout_card.call_deferred()
@@ -216,6 +232,14 @@ func _layout_card() -> void:
 	if holo_mat:
 		holo_mat.set_shader_parameter("rect_size", Vector2(w, 190.0))
 
+	if _entry_pending:
+		_entry_pending = false
+		_card_panel.scale = Vector2(0.95, 0.95)
+		var entry = create_tween().set_parallel()
+		entry.tween_property(_card_panel, "modulate:a", 1.0, 0.18)
+		entry.tween_property(_card_panel, "scale", Vector2.ONE, 0.22) \
+			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+
 	for edge in [_edge_left, _edge_right]:
 		edge.size = Vector2(area.x * 0.42, 0)
 	_edge_left.position = Vector2(8, (area.y - _edge_left.size.y) / 2.0)
@@ -227,10 +251,29 @@ func _apply_drag() -> void:
 
 # ── Swipe ────────────────────────────────────────────────────────────
 
-func _on_swipe_progress(ratio: float) -> void:
+func _on_swipe_progress(drag_px: float) -> void:
 	if not _can_swipe or _reaction_visible or not _accepts_input():
 		return
-	_current_drag = ratio * SWIPE_THRESHOLD
+	if _snap_tween and _snap_tween.is_valid():
+		_snap_tween.kill()
+	_set_drag(drag_px)
+
+# Relâchement sous le seuil : la carte revient au centre (snap-back Reigns)
+func _on_drag_released() -> void:
+	if not _can_swipe or _reaction_visible or _current_drag == 0.0:
+		return
+	if _snap_tween and _snap_tween.is_valid():
+		_snap_tween.kill()
+	_snap_tween = create_tween()
+	_snap_tween.tween_method(_set_drag, _current_drag, 0.0, 0.18) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+
+func _on_tapped() -> void:
+	if _reaction_visible and _accepts_input():
+		_dismiss_reaction()
+
+func _set_drag(drag_px: float) -> void:
+	_current_drag = drag_px
 	_apply_drag()
 
 	var lean: float = min(1.0, abs(_current_drag) / SWIPE_THRESHOLD)
@@ -271,13 +314,23 @@ func _reset_choice_styles() -> void:
 	_highlight_choice(_right_choice, false)
 
 func _on_swipe_left() -> void:
-	if not _can_swipe or _reaction_visible or not _accepts_input():
+	if not _accepts_input():
+		return
+	if _reaction_visible:
+		_dismiss_reaction()
+		return
+	if not _can_swipe:
 		return
 	_can_swipe = false
 	_animate_fly_out(-1.0)
 
 func _on_swipe_right() -> void:
-	if not _can_swipe or _reaction_visible or not _accepts_input():
+	if not _accepts_input():
+		return
+	if _reaction_visible:
+		_dismiss_reaction()
+		return
+	if not _can_swipe:
 		return
 	_can_swipe = false
 	_animate_fly_out(1.0)
@@ -313,10 +366,21 @@ func show_reaction(card: Dictionary, is_left: bool, ctx: Context) -> void:
 	_current_drag = 0.0
 	_card_panel.rotation = 0.0
 	_card_panel.modulate.a = 1.0
+	_card_panel.scale = Vector2.ONE
 	_choices.visible = false
 	_reaction_toast.visible = true
 	_reaction_toast.modulate.a = 0.0
+	_reaction_shown_ms = Time.get_ticks_msec()
 	_layout_card.call_deferred()
 
 	var rise = create_tween()
 	rise.tween_property(_reaction_toast, "modulate:a", 1.0, 0.5).set_ease(Tween.EASE_OUT)
+
+# La réaction se balaie comme dans Reigns : tap, swipe ou clavier.
+func _dismiss_reaction() -> void:
+	if not _reaction_visible:
+		return
+	if Time.get_ticks_msec() - _reaction_shown_ms < MIN_REACTION_MS:
+		return
+	_reaction_visible = false
+	reaction_dismissed.emit()
