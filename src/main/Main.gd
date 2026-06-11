@@ -35,6 +35,7 @@ func _ready() -> void:
 		_initialize_new_reign(100)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
+	_card_screen.setup(_game_data)
 	_galaxy_map.setup(_game_data)
 
 	_card_screen.choice_made.connect(_on_choice_made)

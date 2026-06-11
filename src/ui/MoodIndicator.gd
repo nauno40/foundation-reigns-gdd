@@ -3,7 +3,7 @@ extends HBoxContainer
 
 const ThemeColors = preload("res://src/ui/ThemeColors.gd")
 
-@onready var _dot: ColorRect = $Dot
+@onready var _dot: Control = $Dot
 @onready var _label: Label = $Label
 @onready var _read_label: Label = $ReadLabel
 

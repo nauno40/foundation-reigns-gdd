@@ -6,7 +6,8 @@
 	"fixed": true,
 	"era_start": 1,
 	"era_end": 1000,
-	"description": "Le fondateur. Apparaît uniquement via les messages enregistrés dans la Crypte."
+	"description": "Le fondateur. Apparaît uniquement via les messages enregistrés dans la Crypte.",
+	"role": "Fondateur — La Crypte"
   },
   "salvor_hardin": {
 	"name": "Salvor Hardin",
@@ -15,7 +16,8 @@
 	"fixed": true,
 	"era_start": 1,
 	"era_end": 80,
-	"description": "Premier maire de Terminus. Maîtrise la politique et la religion comme outils."
+	"description": "Premier maire de Terminus. Maîtrise la politique et la religion comme outils.",
+	"role": "Maire de Terminus"
   },
   "hober_mallow": {
 	"name": "Hober Mallow",
@@ -24,7 +26,8 @@
 	"fixed": true,
 	"era_start": 200,
 	"era_end": 350,
-	"description": "Premier Prince Marchand. Commerce comme arme diplomatique."
+	"description": "Premier Prince Marchand. Commerce comme arme diplomatique.",
+	"role": "Prince Marchand"
   },
   "bayta_darell": {
 	"name": "Bayta Darell",
@@ -33,7 +36,8 @@
 	"fixed": true,
 	"era_start": 290,
 	"era_end": 380,
-	"description": "Héroïne de l'ère du Mulet. La seule à avoir reconnu le Mulet."
+	"description": "Héroïne de l'ère du Mulet. La seule à avoir reconnu le Mulet.",
+	"role": "Héroïne de la Fondation"
   },
   "ducem_barr": {
 	"name": "Ducem Barr",
@@ -42,7 +46,8 @@
 	"fixed": true,
 	"era_start": 200,
 	"era_end": 300,
-	"description": "Érudit siwennien. Témoin de la chute de l'Empire."
+	"description": "Érudit siwennien. Témoin de la chute de l'Empire.",
+	"role": "Patricien de Siwenna"
   },
   "ebling_mis": {
 	"name": "Ebling Mis",
@@ -51,6 +56,7 @@
 	"fixed": true,
 	"era_start": 290,
 	"era_end": 340,
-	"description": "Psychohistorien. A failli localiser la Seconde Fondation."
+	"description": "Psychohistorien. A failli localiser la Seconde Fondation.",
+	"role": "Psychologue"
   }
 }
