@@ -796,13 +796,13 @@ godot --headless -s tests/gut_runner.gd
 | Respawn par ère + pénalités de légitimité (types normalisés) | ✅ |
 | Mort naturelle probabiliste 75–83 ans via carte narrative | ✅ |
 | Sauvegarde auto slot unique (lockturn persisté) | ✅ |
-| UI : carte, swipe, barres, mood, murmure, mort, galaxie | ✅ (🔲 état « affected », mort enrichie) |
+| UI : carte, swipe, barres, mood, murmure, mort, galaxie | ✅ (état « affected » et écran de mort conformes au prototype, 11/06/2026) |
 | Couvertures par ère avec bonus +5 | ✅ |
 | Game over perte de Terminus | ✅ |
 | Effets mécaniques du mood (cartes variantes) | 🔲 |
-| Crises mineures / majeures, 6 Crises de Seldon | 🔲 |
+| Crises mineures / majeures, 6 Crises de Seldon | ✅ moteur (`SeldonSystem`, couloirs data-driven `data/seldon_crises.json`) · Crise 1 jouable · contenu crises 2–6 🔲 |
 | Le Mulet | 🔲 |
-| Quêtes (règne / arc / galactique) | 🔲 |
+| Quêtes (règne / arc / galactique) | ✅ règne (3 quêtes, garde `quest_assigned`) · galactique (couloirs Seldon) · arc 🔲 |
 | Score de règne + 15 rangs méta + méta-sauvegarde | 🔲 |
 | Difficulté ×0.7/×1.0/×1.45 | 🔲 |
 | Pénalité relations -20 après démasquage | 🔲 |
@@ -823,16 +823,19 @@ godot --headless -s tests/gut_runner.gd
 
 ## 6.3 Contenu
 
-**30 / ~1 160 cartes** (3 decks prototype : `ambient` 10, `hardin_era` 10, `new_speaker` 10). Schéma d'enchaînement actuel : `docs/schema_cartes.md`.
+**131 / ~1 160 cartes** (11/06/2026 : `ambient` 49, `hardin_era` 40, `merchant_era` 20, `crisis_anacreonian_war` 9, `new_speaker` 13). Schéma d'enchaînement actuel : `docs/schema_cartes.md`.
+
+Convention moteur (11/06/2026) : les cartes `hidden: true` sont réservées aux enchaînements `link` (séquences de crise/quête) — exclues du tirage aléatoire. Les déclencheurs de séquence sont non-hidden, gardés par conditions.
 
 ## 6.4 Phases restantes
 
-### Phase 4 — Contenu (5–10 j) 🔲
-- 100+ cartes FR (decks `hardin_era`, `merchant_era`, `ambient` complets)
-- Crise majeure Anacréon (séquence link, ~10 cartes) avec couloir §2.8
-- Deck `new_speaker` enrichi (héritage narratif ; la carte de mort naturelle existe, en écrire des variantes)
-- 3 quêtes de règne + 1 quête d'arc sur les gabarits §2.10
-- Cartes variantes de mood (règle §2.6)
+### Phase 4 — Contenu (5–10 j) — **largement réalisée le 11/06/2026**
+- ✅ 100+ cartes FR (131 au total : `ambient` 49, `hardin_era` 40, `merchant_era` 20)
+- ✅ Crise majeure Anacréon (séquence link 8001–8012) avec couloir §2.8 évalué par `SeldonSystem`
+- ✅ 3 quêtes de règne (L'Informateur, Le Manuscrit, La Route Silencieuse — 9101+/9111+/9121+, assignation via `new_speaker` 3010–3012)
+- 🔲 1 quête d'arc sur le gabarit §2.10 (« L'Église s'étend »)
+- 🔲 Deck `new_speaker` : variantes de la carte de mort naturelle
+- 🔲 Cartes variantes de mood (règle §2.6)
 
 ### Phase 5 — Polish (2–3 j) 🔲
 - Calibrage : seuils de danger, mort naturelle, couloirs Seldon, scores et rangs

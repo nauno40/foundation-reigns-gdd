@@ -106,3 +106,21 @@ func test_hidden_card_reachable_via_link():
 	ctx.set_var("link", "99902")
 	var card = model.draw_card()
 	assert_eq(card.get("id"), 99902, "une carte hidden reste accessible via link")
+
+# --- Crise 1 : le déclencheur n'est éligible que dans sa fenêtre (ans 50-80) ---
+
+func test_crisis_trigger_eligible_in_window():
+	ctx.set_var("year", 60)
+	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
+	assert_has(ids, 8001, "8001 doit être éligible à l'an 60")
+
+func test_crisis_trigger_not_eligible_before_window():
+	ctx.set_var("year", 30)
+	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
+	assert_does_not_have(ids, 8001, "8001 ne doit pas être éligible à l'an 30")
+
+func test_crisis_trigger_not_eligible_once_resolved():
+	ctx.set_var("year", 60)
+	ctx.set_var("seldon_crisis_1", 1, true)
+	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
+	assert_does_not_have(ids, 8001, "8001 ne doit pas revenir une fois la crise résolue")
