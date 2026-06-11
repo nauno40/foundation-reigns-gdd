@@ -5914,6 +5914,1534 @@
 		}
 	},
 	{
+		"id": 4001,
+		"label": "route_quatre_royaumes",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les Quatre Royaumes pacifiés s'ouvrent au commerce. Vos cargos peuvent tracer la première route régulière — si quelqu'un paie les balises de saut."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer les balises"
+			},
+			"reaction": {
+				"FR": "La route est à vous. Les péages suivront."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attendre un consortium privé"
+			},
+			"reaction": {
+				"FR": "Plus lent, moins cher. Les marchands se débrouillent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 4002,
+		"label": "contrat_generatrices",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un monde frontalier veut acheter cent générateurs personnels. Il paie en minerai — et exige qu'aucun prêtre n'accompagne la cargaison."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vendre sans le clergé"
+			},
+			"reaction": {
+				"FR": "Le commerce sans la foi. Un précédent que l'Église remarquera."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La foi fait partie du contrat"
+			},
+			"reaction": {
+				"FR": "Pas de prêtres, pas de générateurs. Le client cède en maugréant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 4003,
+		"label": "pirates_corridor",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Des pirates écument le corridor de Smyrno. Les assureurs triplent leurs primes ; les capitaines réclament des escortes."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Armer des escortes"
+			},
+			"reaction": {
+				"FR": "Les convois passent. Les pirates se reportent sur d'autres proies."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Acheter les pirates"
+			},
+			"reaction": {
+				"FR": "Moins cher qu'une flotte. Tant que personne ne le sait."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 4004,
+		"label": "monopole_balise",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 22,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Votre bureau du commerce peut breveter la technologie des balises de saut — et verrouiller toute la navigation frontalière."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Déposer le brevet"
+			},
+			"reaction": {
+				"FR": "Chaque saut paie sa dîme à Terminus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser la technologie libre"
+			},
+			"reaction": {
+				"FR": "La navigation explose. Tout le monde en profite — y compris vos rivaux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_merchants",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 4005,
+		"label": "ambassadeur_marchand",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Guilde propose que ses négociants servent d'ambassadeurs officieux : « Là où passe un contrat, passe Terminus. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Officialiser la pratique"
+			},
+			"reaction": {
+				"FR": "Cent commis voyageurs deviennent cent antennes diplomatiques."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder la diplomatie au Conseil"
+			},
+			"reaction": {
+				"FR": "Les marchands vendront. Les diplomates parleront. Chacun son métier."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 4006,
+		"label": "famine_askone",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 22,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Askone refuse vos « machines impies » mais meurt de faim. Ses émissaires demandent du grain — sans technologie, sans prêtres, sans conditions."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Livrer le grain sans condition"
+			},
+			"reaction": {
+				"FR": "Askone mange. Askone se souviendra."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le grain contre l'ouverture d'un comptoir"
+			},
+			"reaction": {
+				"FR": "Ils signent, le ventre vide. Le comptoir ouvrira."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 4007,
+		"label": "credit_standard",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les royaumes utilisent encore six monnaies. Vos banquiers proposent d'imposer le crédit de la Fondation comme étalon des échanges."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Imposer le crédit-étalon"
+			},
+			"reaction": {
+				"FR": "Qui tient la monnaie tient le marchand."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser flotter les monnaies"
+			},
+			"reaction": {
+				"FR": "Le change enrichit vos courtiers à chaque conversion."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 4008,
+		"label": "technicien_freelance",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "D'anciens prêtres-techniciens vendent leurs services hors de l'Église. Le clergé exige des sanctions ; les marchands les embauchent."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sanctionner les renégats"
+			},
+			"reaction": {
+				"FR": "L'Église garde son monopole. L'innovation attendra."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": "Le marché du savoir s'émancipe. L'Église perd sa première bataille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 4009,
+		"label": "salon_interstellaire",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Terminus accueille sa première Foire Interstellaire. Vingt mondes exposent. Vos services y voient une mine de renseignements."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Infiltrer les délégations"
+			},
+			"reaction": {
+				"FR": "Carnets de commandes et carnets d'espion se remplissent ensemble."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Foire neutre et honnête"
+			},
+			"reaction": {
+				"FR": "La réputation de Terminus vaut tous les rapports."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "suspicious",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 4010,
+		"label": "dumping_glaces",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un cartel de Smyrno casse les prix de l'eau lourde pour étrangler vos raffineries. Riposte commerciale ou patience ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 79
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vendre à perte — tenir le siège"
+			},
+			"reaction": {
+				"FR": "Vos réserves fondent. Les leurs aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Abandonner ce marché"
+			},
+			"reaction": {
+				"FR": "Vous perdez l'eau lourde. Vous gagnez des liquidités pour mieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 4011,
+		"label": "cartel_energie",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Trois compagnies contrôlent désormais toute l'énergie de la frontière. Elles s'entendent sur les prix — et financent vos campagnes politiques."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Démanteler le cartel"
+			},
+			"reaction": {
+				"FR": "Les prix chutent. Vos caisses de campagne aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tolérer l'entente"
+			},
+			"reaction": {
+				"FR": "L'énergie est chère, vos amis sont riches, le peuple paie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_oligarchs",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_oligarchs",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 4012,
+		"label": "officiel_corrompu",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le directeur des douanes de Terminus possède trois villas sur Anacréon. Son salaire n'en paierait pas une."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le faire surveiller puis tomber"
+			},
+			"reaction": {
+				"FR": "Sa chute est exemplaire. Son successeur prend note."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'acheter vous-même"
+			},
+			"reaction": {
+				"FR": "Un corrompu fidèle vaut mieux qu'un honnête imprévisible."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 4013,
+		"label": "guerre_comptoirs",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Deux maisons marchandes de Terminus s'affrontent à coups de sabotages pour un comptoir sur Konom. Les affaires deviennent sales."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Arbitrer et partager le comptoir"
+			},
+			"reaction": {
+				"FR": "Personne n'est content. C'est la définition d'un bon arbitrage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le plus fort gagner"
+			},
+			"reaction": {
+				"FR": "La maison Forell écrase sa rivale. Un géant de plus est né."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_oligarchs",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 4014,
+		"label": "traite_korell",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Korell entrouvre ses ports — officiellement fermés à la Fondation. Le Commdor veut des machines « sans aucun missionnaire »."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Commercer sans l'Église"
+			},
+			"reaction": {
+				"FR": "Les machines entrent à Korell. La foi reste au port."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de dissocier"
+			},
+			"reaction": {
+				"FR": "Korell se referme. Pour combien de temps ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 4015,
+		"label": "dependance_technologique",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Vos rapports le confirment : six royaumes ne savent plus réparer une pompe sans pièces de la Fondation. La dépendance est totale."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Resserrer encore l'étau"
+			},
+			"reaction": {
+				"FR": "Chaque pièce détachée devient un instrument de politique étrangère."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Désamorcer — former des techniciens locaux"
+			},
+			"reaction": {
+				"FR": "La dépendance se relâche. La rancune aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 4016,
+		"label": "bourse_terminus",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Bourse de Terminus cote désormais des compagnies de vingt mondes. Un krach ici ruinerait la moitié de la frontière."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encadrer la spéculation"
+			},
+			"reaction": {
+				"FR": "Les rendements baissent. Les risques aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le marché s'autoréguler"
+			},
+			"reaction": {
+				"FR": "Les fortunes se font en une saison. Elles se déferont de même."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_oligarchs",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 4017,
+		"label": "heritier_guilde",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le vieux maître de la Guilde meurt. Deux héritiers s'affrontent : sa fille, gestionnaire prudente, et son neveu, conquérant brutal."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Appuyer la fille"
+			},
+			"reaction": {
+				"FR": "La Guilde restera prévisible. C'est tout ce que vous demandez."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Appuyer le neveu"
+			},
+			"reaction": {
+				"FR": "La Guilde devient agressive — utile, tant qu'elle mord ailleurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_merchants",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_merchants",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 4018,
+		"label": "embargo_selectif",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un royaume mineur a saisi deux de vos cargos. Vos conseillers proposent l'arme silencieuse : plus aucune pièce détachée."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Décréter l'embargo technique"
+			},
+			"reaction": {
+				"FR": "En six mois, leurs centrales s'éteignent une à une. Ils rendront les cargos."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier le rachat des cargos"
+			},
+			"reaction": {
+				"FR": "Payer est plus rapide. Et crée un marché des otages."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 4019,
+		"label": "syndicat_dockers",
+		"deck": "merchant_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les dockers des ports francs se syndiquent et bloquent trois terminaux. Les maisons marchandes exigent la manière forte."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Négocier avec le syndicat"
+			},
+			"reaction": {
+				"FR": "Les salaires montent, les cargos repartent, les patrons grognent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Briser la grève"
+			},
+			"reaction": {
+				"FR": "Les terminaux rouvrent sous escorte. La haine s'installe sur les quais."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_oligarchs",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 4020,
+		"label": "fondation_riche",
+		"deck": "merchant_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un rapport confidentiel conclut : la Fondation est devenue la première puissance économique de la périphérie. La richesse attire les regards."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 149
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 250
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Minimiser publiquement le rapport"
+			},
+			"reaction": {
+				"FR": "La discrétion est une politique. La plus difficile à financer."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Assumer la puissance"
+			},
+			"reaction": {
+				"FR": "Les ambassades affluent. Les convoitises aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
 		"id": 9001,
 		"label": "mort_naturelle",
 		"deck": "new_speaker",
