@@ -5880,10 +5880,22 @@
 		"question": {
 			"FR": "La Seconde Fondation vous assigne une mission secrète pour ce règne. Elle doit rester ignorée de tous, y compris de la Première Fondation."
 		},
-		"conditions": [],
+		"conditions": [
+			{
+				"variable": "quest_assigned",
+				"op": "equal",
+				"value": 0
+			}
+		],
 		"loadOutcome": [
 			{
 				"variable": "quest_reign_1_active",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_assigned",
 				"intValue": 1,
 				"addOperation": false,
 				"toKeep": false
@@ -5909,6 +5921,118 @@
 		"noOutcome": [],
 		"moods": {
 			"default": "suspicious",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 3011,
+		"label": "quete_regn_assignee_2",
+		"deck": "new_speaker",
+		"weight": 2,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Un courrier scellé de la Seconde Fondation : un document dangereux circule. Votre mission de règne, si elle vous échoit, sera de le retrouver."
+		},
+		"conditions": [
+			{
+				"variable": "quest_assigned",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "quest_reign_2_active",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_assigned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la mission"
+			},
+			"reaction": {
+				"FR": "Le sceau fond entre vos doigts. Ne reste que la mission."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander des précisions"
+			},
+			"reaction": {
+				"FR": "La Seconde Fondation ne donne jamais de précisions."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 3012,
+		"label": "quete_regn_assignee_3",
+		"deck": "new_speaker",
+		"weight": 2,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "hari_seldon",
+		"question": {
+			"FR": "Un courrier scellé de la Seconde Fondation : Trantor a besoin de fonds que personne ne doit pouvoir tracer. Ce règne aura une mission de l'ombre."
+		},
+		"conditions": [
+			{
+				"variable": "quest_assigned",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "quest_reign_3_active",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_assigned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la mission"
+			},
+			"reaction": {
+				"FR": "L'argent est une arme silencieuse. Vous en serez l'armurier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander des précisions"
+			},
+			"reaction": {
+				"FR": "La Seconde Fondation ne donne jamais de précisions."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
 			"yes": "curious",
 			"no": "curious"
 		}
@@ -8047,6 +8171,570 @@
 		"moods": {
 			"default": "sad",
 			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 9101,
+		"label": "quete_informateur_debut",
+		"deck": "ambient",
+		"weight": 4,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un message anonyme arrive : un officier anacréonien veut déserter et vendre des informations. Rencontrer ?"
+		},
+		"conditions": [
+			{
+				"variable": "quest_reign_1_active",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Organiser la rencontre"
+			},
+			"reaction": {
+				"FR": "Vous envoyez un émissaire discret."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est un piège — ignorer"
+			},
+			"reaction": {
+				"FR": "Vous restez prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9102,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "quest_reign_1_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 9102,
+		"label": "quete_informateur_rencontre",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'officier vous révèle que la flotte d'Anacréon sera en manœuvres dans 3 semaines — fenêtre idéale pour négocier. Il demande en échange une identité de couverture sur Terminus."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter"
+			},
+			"reaction": {
+				"FR": "Un allié utile, à garder à distance."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier le prix à la baisse"
+			},
+			"reaction": {
+				"FR": "Il accepte à contrecœur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9103,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9103,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 9103,
+		"label": "quete_informateur_fin",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'information s'est avérée exacte. Pendant les manœuvres, vous avez pu avancer trois négociations diplomatiques. Mission accomplie."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_reign_1_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_reign_1_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder l'informateur actif"
+			},
+			"reaction": {
+				"FR": "Un réseau discret se forme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le mettre en veille — trop risqué"
+			},
+			"reaction": {
+				"FR": "La prudence avant tout."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 9111,
+		"label": "quete_manuscrit_debut",
+		"deck": "ambient",
+		"weight": 4,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Seconde Fondation signale qu'un manuscrit attribué à Seldon circule chez un collectionneur — des notes de travail jamais censées exister. Le récupérer avant qu'un esprit affûté ne les lise."
+		},
+		"conditions": [
+			{
+				"variable": "quest_reign_2_active",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approcher le collectionneur"
+			},
+			"reaction": {
+				"FR": "Vous vous découvrez une passion d'antiquaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop voyant — laisser filer"
+			},
+			"reaction": {
+				"FR": "Le manuscrit disparaît dans une vente privée. La Seconde Fondation s'en souviendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9112,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "quest_reign_2_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 9112,
+		"label": "quete_manuscrit_collectionneur",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le collectionneur flaire votre intérêt et triple son prix. Il reçoit demain un acheteur de Kalgan — un érudit aux questions étrangement précises."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer sans discuter"
+			},
+			"reaction": {
+				"FR": "Une fortune pour des feuillets jaunis. Personne ne comprend — c'est le but."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire authentifier le manuscrit comme faux"
+			},
+			"reaction": {
+				"FR": "Votre expert est convaincant. Le prix s'effondre, l'acheteur de Kalgan se retire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9113,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9113,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 9113,
+		"label": "quete_manuscrit_fin",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le manuscrit brûle dans votre cheminée, page après page. Trois équations de trop n'existeront plus jamais. Mission accomplie."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_reign_2_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_reign_2_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Regarder les flammes"
+			},
+			"reaction": {
+				"FR": "Le savoir le plus précieux est celui qu'on détruit à temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mémoriser avant de brûler"
+			},
+			"reaction": {
+				"FR": "Ce qui est dans votre tête n'appartient qu'au Plan."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 9121,
+		"label": "quete_route_debut",
+		"deck": "ambient",
+		"weight": 4,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Seconde Fondation a besoin de fonds intraçables. Votre couverture permet d'ouvrir une route commerciale discrète dont une part des profits s'évaporera vers Trantor."
+		},
+		"conditions": [
+			{
+				"variable": "quest_reign_3_active",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Monter la route"
+			},
+			"reaction": {
+				"FR": "Trois cargos, deux prête-noms, un comptable muet."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop dangereux ce règne-ci"
+			},
+			"reaction": {
+				"FR": "Trantor devra attendre des jours meilleurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9122,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "quest_reign_3_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 9122,
+		"label": "quete_route_inspection",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un inspecteur des douanes s'intéresse de trop près à vos cargos « statistiquement trop rentables ». Il est honnête — c'est le problème."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le faire muter en le faisant promouvoir"
+			},
+			"reaction": {
+				"FR": "Il part fier et décoré. Loin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rendre la route moins rentable un temps"
+			},
+			"reaction": {
+				"FR": "Vos chiffres redeviennent ennuyeux. L'inspecteur passe à autre chose."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9123,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 9123,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 9123,
+		"label": "quete_route_fin",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La route tourne. Chaque mois, une part invisible des bénéfices finance des bourses d'études, des archives, des voyages — la Seconde Fondation. Mission accomplie."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_reign_3_active",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_reign_3_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pérenniser la route"
+			},
+			"reaction": {
+				"FR": "Elle survivra peut-être à votre règne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Programmer sa dissolution"
+			},
+			"reaction": {
+				"FR": "Dans deux ans, la route n'aura jamais existé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
 			"no": "neutral"
 		}
 	}
