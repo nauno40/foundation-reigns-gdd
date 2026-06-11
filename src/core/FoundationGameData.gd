@@ -9,6 +9,7 @@ var family_names: Array = []
 var characters: Dictionary = {}
 var covers: Dictionary = {}
 var moods: Dictionary = {}
+var seldon_crises: Dictionary = {}
 
 var is_loaded: bool = false
 
@@ -22,6 +23,7 @@ func load_all() -> bool:
 	ok = ok and _load_dict("res://data/characters.json", characters)
 	ok = ok and _load_dict("res://data/covers.json", covers)
 	ok = ok and _load_dict("res://data/moods.json", moods)
+	ok = ok and _load_dict("res://data/seldon_crises.json", seldon_crises)
 	if ok:
 		_index_by_deck()
 		is_loaded = true

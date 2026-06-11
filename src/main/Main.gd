@@ -10,6 +10,7 @@ var _model: NarrativeModel
 var _legitimacy: LegitimacySystem
 var _respawn: RespawnSystem
 var _save: SaveSystem
+var _seldon: SeldonSystem
 
 @onready var _card_screen = %CardScreen
 @onready var _death_screen = %DeathScreen
@@ -28,6 +29,7 @@ func _ready() -> void:
 	_save = SaveSystem.new()
 	_legitimacy = LegitimacySystem.new(_ctx)
 	_respawn = RespawnSystem.new(_ctx)
+	_seldon = SeldonSystem.new(_game_data, _ctx)
 
 	if _save.has_save():
 		_save.load(_ctx)
@@ -80,6 +82,7 @@ func _next_card() -> void:
 
 	var load_outcomes = _current_card.get("loadOutcome", [])
 	_model.apply_outcomes(load_outcomes)
+	_seldon.resolve_pending()
 
 	_card_screen.show_card(_current_card, _ctx)
 	_awaiting_reaction = false

@@ -73,6 +73,20 @@ if covers:
     expected_eras = {"hardin","merchants","mallow","mulet","restoration","late_empire"}
     check(set(covers.keys()) == expected_eras, f"covers.json missing eras: {expected_eras - set(covers.keys())}")
 
+# --- seldon_crises.json ---
+crises = load("seldon_crises.json")
+if crises:
+    check(set(crises.keys()) == {f"crisis_{i}" for i in range(1, 7)},
+          f"seldon_crises.json: expected crisis_1..crisis_6, got {sorted(crises.keys())}")
+    valid_ops = {"equal", "above", "below", "not"}
+    for cid, c in crises.items():
+        missing = {"name", "year_window", "corridor", "description"} - set(c.keys())
+        check(not missing, f"{cid} missing fields: {missing}")
+        for cond in c.get("corridor", []):
+            check(set(cond.keys()) == {"variable", "op", "value"},
+                  f"{cid}: malformed corridor condition {cond}")
+            check(cond.get("op") in valid_ops, f"{cid}: unknown op '{cond.get('op')}'")
+
 # --- foundation_cards.json ---
 cards = load("foundation_cards.json")
 if cards:
