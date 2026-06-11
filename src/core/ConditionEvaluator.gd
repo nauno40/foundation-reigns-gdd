@@ -13,8 +13,12 @@ func evaluate(condition: Dictionary, context: Dictionary) -> bool:
 		else:
 			return op == "not"
 
-	# Type mismatch → treat as not-equal
-	if typeof(current) != typeof(expected):
+	# Numeric coercion: JSON.parse_string yields floats, Context vars are ints
+	if (current is int or current is float) and (expected is int or expected is float):
+		current = float(current)
+		expected = float(expected)
+	elif typeof(current) != typeof(expected):
+		# Type mismatch → treat as not-equal
 		return op == "not"
 
 	match op:
