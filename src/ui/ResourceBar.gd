@@ -104,7 +104,10 @@ func _draw() -> void:
 
 	# conteneur : fond + bordure (couleur selon état), coins arrondis 7
 	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color(1, 1, 1, 0.035)
+	# fond opaque (équiv. rgba(255,255,255,.035) sur --bg) : l'ombre du
+	# StyleBox est peinte derrière le fond, un fond translucide laisserait
+	# le glow crit/affected teinter l'intérieur — contrairement au CSS
+	sb.bg_color = ThemeColors.BG.lerp(Color.WHITE, 0.035)
 	sb.set_corner_radius_all(7)
 	sb.set_border_width_all(1)
 	sb.border_color = ThemeColors.LINE_2

@@ -253,7 +253,7 @@ Each Speaker starts with a random civilian cover identity from their era's pool,
 | `commerce` | Faillite, isolement | Monopole corrupteur |
 | `politics` | Chaos, anarchie | Autoritarisme |
 
-UI danger thresholds (not yet implemented): < 15 = critical low (red blink), 15–25 = orange, 75–85 = orange, > 85 = critical high (red blink).
+UI danger thresholds (implemented in `ResourceBar.gd`): < 15 = critical low (red blink), 15–25 = orange, 75–85 = orange, > 85 = critical high (red blink).
 
 ### Legitimacy (hidden gauge)
 
