@@ -33,6 +33,7 @@ func _ready() -> void:
 		_save.load(_ctx)
 	else:
 		_initialize_new_reign(100)
+		_game_data.seed_planet_states(_ctx)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_card_screen.setup(_game_data)
@@ -41,6 +42,7 @@ func _ready() -> void:
 	_card_screen.choice_made.connect(_on_choice_made)
 	_card_screen.map_requested.connect(_on_map_pressed)
 	_death_screen.continue_pressed.connect(_on_new_reign)
+	_galaxy_map.visibility_changed.connect(_on_map_visibility_changed)
 
 	_generate_equ_watermark()
 	_next_card()
@@ -174,3 +176,8 @@ func _on_new_reign() -> void:
 func _on_map_pressed() -> void:
 	_galaxy_map.update(_ctx)
 	_galaxy_map.show()
+	_card_screen.hide()
+
+func _on_map_visibility_changed() -> void:
+	if not _galaxy_map.visible and not _death_screen.visible:
+		_card_screen.show()

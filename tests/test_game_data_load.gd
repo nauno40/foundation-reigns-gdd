@@ -54,3 +54,16 @@ func test_natural_death_card_exists():
 				and outcome.get("addOperation") == false:
 			sets_dying = true
 	assert_true(sets_dying, "le loadOutcome doit poser dying = 1 (set)")
+
+# --- Semis des états initiaux des planètes dans le Context ---
+
+func test_seed_planet_states():
+	data.load_all()
+	var ctx = Context.new()
+	data.seed_planet_states(ctx)
+	assert_eq(ctx.get_var("planet_terminus_state"), 1, "Terminus alignée au départ")
+	assert_eq(ctx.get_var("planet_anacreon_state"), -1, "Anacréon hostile au départ")
+	assert_eq(ctx.get_var("planet_askone_state"), 0, "Askone neutre au départ")
+	# toKeep : les états de planètes survivent à la mort
+	ctx.empty_non_keep()
+	assert_eq(ctx.get_var("planet_terminus_state"), 1)

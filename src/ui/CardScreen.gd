@@ -71,10 +71,16 @@ func _ready() -> void:
 	_card_area.resized.connect(_layout_card)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not _accepts_input():
+		return
 	if event.is_action_pressed("ui_left"):
 		_on_swipe_left()
 	elif event.is_action_pressed("ui_right"):
 		_on_swipe_right()
+
+# Ignore les entrées quand l'écran est masqué ou recouvert (carte, mort)
+func _accepts_input() -> bool:
+	return is_visible_in_tree() and get_viewport().gui_get_focus_owner() == null
 
 func _setup_bars() -> void:
 	var config = [
@@ -222,7 +228,7 @@ func _apply_drag() -> void:
 # ── Swipe ────────────────────────────────────────────────────────────
 
 func _on_swipe_progress(ratio: float) -> void:
-	if not _can_swipe or _reaction_visible:
+	if not _can_swipe or _reaction_visible or not _accepts_input():
 		return
 	_current_drag = ratio * SWIPE_THRESHOLD
 	_apply_drag()
@@ -265,13 +271,13 @@ func _reset_choice_styles() -> void:
 	_highlight_choice(_right_choice, false)
 
 func _on_swipe_left() -> void:
-	if not _can_swipe or _reaction_visible:
+	if not _can_swipe or _reaction_visible or not _accepts_input():
 		return
 	_can_swipe = false
 	_animate_fly_out(-1.0)
 
 func _on_swipe_right() -> void:
-	if not _can_swipe or _reaction_visible:
+	if not _can_swipe or _reaction_visible or not _accepts_input():
 		return
 	_can_swipe = false
 	_animate_fly_out(1.0)

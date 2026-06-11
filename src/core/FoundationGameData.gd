@@ -82,6 +82,14 @@ func get_planet_by_id(id: String) -> Dictionary:
 			return planet
 	return {}
 
+# Sème planet_<id>_state depuis initial_state ; toKeep car les états
+# diplomatiques survivent à la mort de l'Orateur.
+func seed_planet_states(ctx: Context) -> void:
+	for planet in planets:
+		var id: String = planet.get("id", "")
+		if id != "":
+			ctx.set_var("planet_%s_state" % id, int(planet.get("initial_state", 0)), true)
+
 func get_random_name() -> String:
 	if given_names.is_empty() or family_names.is_empty():
 		return "Inconnu"
