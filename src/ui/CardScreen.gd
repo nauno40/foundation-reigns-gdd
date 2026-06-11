@@ -9,6 +9,7 @@ extends Control
 
 const EraUtils = preload("res://src/ui/EraUtils.gd")
 const ThemeColors = preload("res://src/ui/ThemeColors.gd")
+const FONT_SPECTRAL_ITALIC = preload("res://assets/fonts/Spectral-Italic.ttf")
 
 signal choice_made(is_left: bool)
 signal map_requested
@@ -61,6 +62,7 @@ var _chip_base_style: StyleBoxFlat
 var _snap_tween: Tween
 var _entry_pending: bool = false
 var _reaction_shown_ms: int = 0
+var _question_font_regular: Font
 
 func setup(game_data: FoundationGameData) -> void:
 	_game_data = game_data
@@ -73,6 +75,7 @@ func _ready() -> void:
 	_swipe_detector.tapped.connect(_on_tapped)
 	_seal.pressed.connect(func(): map_requested.emit())
 	_chip_base_style = _left_choice.get_theme_stylebox("panel")
+	_question_font_regular = _question.get_theme_font("font")
 	_setup_bars()
 	_setup_flicker()
 	_card_area.resized.connect(_layout_card)
@@ -130,6 +133,7 @@ func show_card(card: Dictionary, ctx: Context) -> void:
 
 	var question = card.get("question", {})
 	_question.text = question.get("FR", question.get("EN", "???"))
+	_question.add_theme_font_override("font", _question_font_regular)
 
 	var left_answer = card.get("leftAnswer", {})
 	var right_answer = card.get("rightAnswer", {})
@@ -352,29 +356,34 @@ func _animate_fly_out(direction: float) -> void:
 
 # ── Réaction après le choix ──────────────────────────────────────────
 
-func show_reaction(card: Dictionary, is_left: bool, ctx: Context) -> void:
-	_reaction_visible = true
-	var answer = card.get("leftAnswer" if is_left else "rightAnswer", {})
-	var reaction = answer.get("reaction", {})
-	_reaction_toast.text = reaction.get("FR", reaction.get("EN", ""))
-
-	# Les jauges et le mood réagissent immédiatement au choix (Reigns)
+# Narration du jeu de base : le même personnage répond, son texte
+# remplace la question (italique), pas de choix, un balayage continue.
+# Retourne false si la réponse n'a pas de réaction écrite — dans ce cas
+# l'enchaînement est direct (84 % des swipes dans Reigns 3K).
+func show_reaction(card: Dictionary, is_left: bool, ctx: Context) -> bool:
+	# Jauges, mood, date : tout réagit immédiatement au choix (Reigns)
 	_update_bars(ctx)
 	_update_mood(ctx)
 	_update_whisper(ctx)
+	_update_info(ctx)
 
+	var answer = card.get("leftAnswer" if is_left else "rightAnswer", {})
+	var reaction = answer.get("reaction", {})
+	var text: String = str(reaction.get("FR", reaction.get("EN", ""))).strip_edges()
+	if text == "":
+		return false
+
+	_reaction_visible = true
+	_question.text = text
+	_question.add_theme_font_override("font", FONT_SPECTRAL_ITALIC)
 	_current_drag = 0.0
 	_card_panel.rotation = 0.0
-	_card_panel.modulate.a = 1.0
-	_card_panel.scale = Vector2.ONE
 	_choices.visible = false
-	_reaction_toast.visible = true
-	_reaction_toast.modulate.a = 0.0
+	_entry_pending = true
+	_card_panel.modulate.a = 0.0
 	_reaction_shown_ms = Time.get_ticks_msec()
 	_layout_card.call_deferred()
-
-	var rise = create_tween()
-	rise.tween_property(_reaction_toast, "modulate:a", 1.0, 0.5).set_ease(Tween.EASE_OUT)
+	return true
 
 # La réaction se balaie comme dans Reigns : tap, swipe ou clavier.
 func _dismiss_reaction() -> void:

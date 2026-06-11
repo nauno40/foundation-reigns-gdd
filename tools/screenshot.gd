@@ -1,6 +1,6 @@
 # Outil de capture : lance Main.tscn, attend, capture le viewport en PNG.
 # Usage : godot --path . -s tools/screenshot.gd -- <sortie.png> [largeur] [hauteur] [frames] [mode]
-# mode : "card" (défaut) | "death:<type>" | "map" | "states"
+# mode : "card" (défaut) | "death:<type>" | "map" | "states" | "reaction"
 # "states" : force des valeurs warn/crit sur les barres + état affected,
 # pour vérifier visuellement les états du prototype.
 extends SceneTree
@@ -39,6 +39,10 @@ func _capture(out_path: String, wait_frames: int, mode: String) -> void:
 	elif mode == "map":
 		current_scene._on_map_pressed()
 		for i in range(15):
+			await process_frame
+	elif mode == "reaction":
+		current_scene._card_screen._on_swipe_left()
+		for i in range(60):
 			await process_frame
 	elif mode == "states":
 		var ctx: Context = current_scene._ctx

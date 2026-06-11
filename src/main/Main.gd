@@ -110,10 +110,13 @@ func _on_choice_made(is_left: bool) -> void:
 	var moods = _current_card.get("moods", {})
 	_ctx.set_var("mood", moods.get("yes" if is_left else "no", "neutral"))
 
-	_card_screen.show_reaction(_current_card, is_left, _ctx)
 	_model.mark_card_seen(_current_card)
-
 	_ctx.advance_turn()
+
+	# Structure du jeu de base : la narration (réaction) n'existe que si
+	# l'auteur a écrit un texte — sinon enchaînement direct (84 % des
+	# swipes dans Reigns: Three Kingdoms).
+	var has_reaction = _card_screen.show_reaction(_current_card, is_left, _ctx)
 	_save.save(_ctx)
 
 	# La suite (mort ou carte suivante) attend que le joueur balaie la
@@ -128,6 +131,9 @@ func _on_choice_made(is_left: bool) -> void:
 		if _should_die_naturally(age):
 			# La mort arrive via une carte narrative (deck new_speaker)
 			_ctx.set_var("link", str(NATURAL_DEATH_CARD_ID))
+
+	if not has_reaction:
+		_on_reaction_dismissed()
 
 func _on_reaction_dismissed() -> void:
 	if _pending_death != "":
