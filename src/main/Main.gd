@@ -85,6 +85,10 @@ func _next_card() -> void:
 	_model.apply_outcomes(load_outcomes)
 	_seldon.resolve_pending()
 
+	# Mood de l'interlocuteur porté par la carte (héritage Reigns)
+	var moods = _current_card.get("moods", {})
+	_ctx.set_var("mood", moods.get("default", "neutral"))
+
 	_card_screen.show_card(_current_card, _ctx)
 	_awaiting_reaction = false
 
@@ -97,7 +101,11 @@ func _on_choice_made(is_left: bool) -> void:
 	var outcomes = _current_card.get(outcome_key, [])
 	_model.apply_outcomes(outcomes)
 
-	_card_screen.show_reaction(_current_card, is_left)
+	# Réaction émotionnelle de l'interlocuteur au choix (visage Reigns)
+	var moods = _current_card.get("moods", {})
+	_ctx.set_var("mood", moods.get("yes" if is_left else "no", "neutral"))
+
+	_card_screen.show_reaction(_current_card, is_left, _ctx)
 	_model.mark_card_seen(_current_card)
 
 	_ctx.advance_turn()

@@ -299,11 +299,16 @@ func _animate_fly_out(direction: float) -> void:
 
 # ── Réaction après le choix ──────────────────────────────────────────
 
-func show_reaction(card: Dictionary, is_left: bool) -> void:
+func show_reaction(card: Dictionary, is_left: bool, ctx: Context) -> void:
 	_reaction_visible = true
 	var answer = card.get("leftAnswer" if is_left else "rightAnswer", {})
 	var reaction = answer.get("reaction", {})
 	_reaction_toast.text = reaction.get("FR", reaction.get("EN", ""))
+
+	# Les jauges et le mood réagissent immédiatement au choix (Reigns)
+	_update_bars(ctx)
+	_update_mood(ctx)
+	_update_whisper(ctx)
 
 	_current_drag = 0.0
 	_card_panel.rotation = 0.0
