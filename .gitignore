@@ -4,6 +4,10 @@
 export/
 *.tmp
 
+# Workspace de rétro-ingénierie (1,8 Go, hors projet Godot — retiré de
+# l'historique via git filter-repo le 2026-06-11)
+reference/
+
 # Python
 __pycache__/
 *.pyc
