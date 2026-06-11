@@ -83,3 +83,26 @@ func test_lockturn_respected_after_reload():
 		var next_card = model2.draw_card()
 		assert_ne(int(next_card.get("id", 0)), 1001,
 			"une carte vue récemment ne doit pas réapparaître après rechargement")
+
+# --- Cartes hidden : réservées aux enchaînements link (séquences de crise) ---
+
+func test_hidden_cards_excluded_from_random_draw():
+	data.cards.append({
+		"id": 99901, "label": "hidden_test", "deck": "ambient",
+		"weight": 1000, "lockturn": 0, "hidden": true,
+		"question": {"FR": "?"}, "conditions": [],
+	})
+	var eligible = model._get_eligible_cards()
+	for card in eligible:
+		assert_ne(int(card.get("id", 0)), 99901,
+			"une carte hidden ne doit jamais sortir du tirage aléatoire")
+
+func test_hidden_card_reachable_via_link():
+	data.cards.append({
+		"id": 99902, "label": "hidden_link_test", "deck": "ambient",
+		"weight": 1, "lockturn": 0, "hidden": true,
+		"question": {"FR": "?"}, "conditions": [],
+	})
+	ctx.set_var("link", "99902")
+	var card = model.draw_card()
+	assert_eq(card.get("id"), 99902, "une carte hidden reste accessible via link")

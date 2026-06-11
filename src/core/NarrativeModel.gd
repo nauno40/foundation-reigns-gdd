@@ -30,6 +30,10 @@ func _get_eligible_cards() -> Array:
 	var current_turn: int = _ctx.get_var("turns", 0)
 
 	for card in _data.cards:
+		# Hidden cards are link-only (crisis/quest sequences)
+		if card.get("hidden", false):
+			continue
+
 		# Check deck is active
 		var deck: String = card.get("deck", "")
 		if _ctx.get_var("deck_" + deck, 1) == 0:
