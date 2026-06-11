@@ -5,6 +5,7 @@ const EraUtils = preload("res://src/ui/EraUtils.gd")
 const ResourceBar = preload("res://src/ui/ResourceBar.gd")
 
 signal choice_made(is_left: bool)
+signal map_requested
 
 @onready var _topbar_meta_era = $MainVBox/TopBar/MetaRow/EraLabel
 @onready var _topbar_meta_seal = $MainVBox/TopBar/MetaRow/Seal

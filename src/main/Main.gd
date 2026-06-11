@@ -11,10 +11,9 @@ var _legitimacy: LegitimacySystem
 var _respawn: RespawnSystem
 var _save: SaveSystem
 
-@onready var _card_screen = $CardScreen
-@onready var _death_screen = $DeathScreen
-@onready var _galaxy_map = $GalaxyMap
-@onready var _map_button = $MapButton
+@onready var _card_screen = %CardScreen
+@onready var _death_screen = %DeathScreen
+@onready var _galaxy_map = %GalaxyMap
 
 var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
@@ -39,10 +38,18 @@ func _ready() -> void:
 	_galaxy_map.setup(_game_data)
 
 	_card_screen.choice_made.connect(_on_choice_made)
+	_card_screen.map_requested.connect(_on_map_pressed)
 	_death_screen.continue_pressed.connect(_on_new_reign)
-	_map_button.pressed.connect(_on_map_pressed)
 
+	_generate_equ_watermark()
 	_next_card()
+
+func _generate_equ_watermark() -> void:
+	var syms = "∫ ∂ Ψ Σ ∇ λ Φ ε δ → ∞ ± ∮ ≈ √ μ Δ ⟨ ⟩ π τ ω".split(" ")
+	var s = ""
+	for i in range(1400):
+		s += syms[randi() % syms.size()] + ("  " if randf() < 0.15 else " ")
+	%Equ.text = s
 
 func _initialize_new_reign(legitimacy_start: int) -> void:
 	_ctx.initialize_new_reign(legitimacy_start)
