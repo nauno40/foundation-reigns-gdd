@@ -27,7 +27,19 @@ func get_era_start_year(current_year: int) -> int:
 			break
 	return era_start
 
+# Ramène les types de mort détaillés (ex: "military_hi", "legitimacy")
+# vers les 3 catégories canoniques : natural / resource / exposed.
+static func normalize_death_type(death_type: String) -> String:
+	match death_type:
+		"natural", "resource", "exposed":
+			return death_type
+		"legitimacy":
+			return "exposed"
+		_:
+			return "resource"
+
 func respawn(death_type: String) -> void:
+	death_type = normalize_death_type(death_type)
 	var current_year: int = _ctx.get_var("year", 1)
 	var era_start: int = get_era_start_year(current_year)
 

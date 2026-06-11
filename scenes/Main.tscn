@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://cardscreen1" path="res://scenes/CardScreen.tscn" id="2_cscr"]
 [ext_resource type="PackedScene" uid="uid://deathscreen1" path="res://scenes/DeathScreen.tscn" id="3_dscr"]
 [ext_resource type="PackedScene" uid="uid://galaxymap1" path="res://scenes/GalaxyMap.tscn" id="4_gmap"]
+[ext_resource type="Theme" uid="uid://cbbdtswl7xv50" path="res://theme/foundation_theme.tres" id="5_theme"]
 
 [node name="Main" type="Node" unique_id=1567878922]
+theme = ExtResource("5_theme")
 script = ExtResource("1_main")
 
 [node name="CardScreen" parent="." unique_id=944486513 instance=ExtResource("2_cscr")]

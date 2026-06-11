@@ -33,12 +33,20 @@ func initialize_new_reign(legitimacy_start: int = LEGITIMACY_DEFAULT) -> void:
 	_vars["turns"] = 0
 	_vars["mood"] = "neutral"
 
+func apply_cover(cover: Dictionary) -> void:
+	var resource: String = cover.get("bonus_resource", "")
+	var bonus: int = cover.get("bonus_value", 0)
+	if resource in RESOURCES and bonus != 0:
+		add_var(resource, bonus)
+
 func is_game_over() -> bool:
 	for resource in RESOURCES:
 		var val = _vars.get(resource, RESOURCE_DEFAULT)
 		if val <= 0 or val >= 100:
 			return true
 	if _vars.get("legitimacy", LEGITIMACY_DEFAULT) <= 0:
+		return true
+	if _vars.get("planet_terminus_state", 1) <= 0:
 		return true
 	return false
 
@@ -51,4 +59,6 @@ func get_game_over_reason() -> String:
 			return "%s reached 100" % resource
 	if _vars.get("legitimacy", LEGITIMACY_DEFAULT) <= 0:
 		return "legitimacy reached 0"
+	if _vars.get("planet_terminus_state", 1) <= 0:
+		return "terminus lost"
 	return ""

@@ -63,3 +63,42 @@ func test_is_game_over_at_hundred():
 func test_no_game_over_normal():
 	ctx.initialize_new_reign()
 	assert_false(ctx.is_game_over())
+
+# --- Écart #2 : bonus de couverture +5 ---
+
+func test_apply_cover_adds_bonus_to_linked_resource():
+	ctx.initialize_new_reign()
+	ctx.apply_cover({"name": "Prêtre scientifique", "bonus_resource": "religion", "bonus_value": 5})
+	assert_eq(ctx.get_var("religion"), 55)
+
+func test_apply_cover_without_bonus_is_noop():
+	ctx.initialize_new_reign()
+	ctx.apply_cover({"name": "Inconnu"})
+	for resource in Context.RESOURCES:
+		assert_eq(ctx.get_var(resource), 50)
+
+# --- Écart #3 : perte de Terminus = game over ---
+
+func test_terminus_lost_is_game_over():
+	ctx.initialize_new_reign()
+	ctx.set_var("planet_terminus_state", 0, true)
+	assert_true(ctx.is_game_over())
+
+func test_terminus_hostile_is_game_over():
+	ctx.initialize_new_reign()
+	ctx.set_var("planet_terminus_state", -1, true)
+	assert_true(ctx.is_game_over())
+
+func test_terminus_allied_no_game_over():
+	ctx.initialize_new_reign()
+	ctx.set_var("planet_terminus_state", 1, true)
+	assert_false(ctx.is_game_over())
+
+func test_terminus_absent_defaults_to_allied():
+	ctx.initialize_new_reign()
+	assert_false(ctx.is_game_over())
+
+func test_game_over_reason_terminus():
+	ctx.initialize_new_reign()
+	ctx.set_var("planet_terminus_state", -1, true)
+	assert_eq(ctx.get_game_over_reason(), "terminus lost")

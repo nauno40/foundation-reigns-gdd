@@ -1,6 +1,33 @@
 [gd_scene format=3 uid="uid://deathscreen1"]
 
 [ext_resource type="Script" uid="uid://ctms44pjmgdae" path="res://src/ui/DeathScreen.gd" id="1_dscr"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="2_spec_r"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Italic.ttf" id="3_spec_i"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Bold.ttf" id="4_mono_b"]
+
+[sub_resource type="StyleBoxFlat" id="S_1"]
+bg_color = Color(0.91, 0.714, 0.353, 0.07)
+border_color = Color(0.91, 0.714, 0.353, 0.32)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_left = 12
+corner_radius_bottom_right = 12
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="S_2"]
+bg_color = Color(0.31, 0.839, 0.91, 0.08)
+border_color = Color(0.31, 0.839, 0.91, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_radius_bottom_right = 10
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 
 [node name="DeathScreen" type="Control"]
 anchor_right = 1.0
@@ -11,65 +38,231 @@ script = ExtResource("1_dscr")
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 0.85)
+color = Color(0.02, 0.027, 0.051, 0.94)
 
-[node name="Title" type="Label" parent="."]
-anchor_left = 0.05
-anchor_right = 0.95
-anchor_top = 0.04
-anchor_bottom = 0.1
-text = "Speaker Inconnu"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 24
+[node name="Scroll" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="SubTitle" type="Label" parent="."]
-anchor_left = 0.05
-anchor_right = 0.95
-anchor_top = 0.11
-anchor_bottom = 0.17
-text = "Couverture : — | Cause : —"
-horizontal_alignment = 1
-
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-anchor_left = 0.05
-anchor_right = 0.95
-anchor_top = 0.18
-anchor_bottom = 0.68
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="MainVBox" type="VBoxContainer" parent="Scroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TimelineLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+[node name="Padding" type="MarginContainer" parent="Scroll/MainVBox"]
 layout_mode = 2
-fit_content = true
-text = ""
+size_flags_horizontal = 3
 
-[node name="GalaxyStateLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+[node name="InnerVBox" type="VBoxContainer" parent="Scroll/MainVBox/Padding"]
 layout_mode = 2
-fit_content = true
-text = ""
+size_flags_horizontal = 3
 
-[node name="LegacyLabel" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+[node name="CauseLabel" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox"]
 layout_mode = 2
-fit_content = true
-text = ""
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(0.851, 0.416, 0.353, 1)
+text = "ORATEUR DÉMASQUÉ"
 
-[node name="SeldonMessage" type="PanelContainer" parent="."]
-anchor_left = 0.05
-anchor_right = 0.95
-anchor_top = 0.7
-anchor_bottom = 0.84
-
-[node name="SeldonText" type="Label" parent="SeldonMessage"]
+[node name="SpeakerName" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox"]
 layout_mode = 2
-text = "..."
+theme_override_fonts/font = ExtResource("2_spec_r")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+text = "Orateur — Inconnu"
+
+[node name="Subtitle" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
+text = "Couverture · Âge · Règne An 1 → An 1"
+
+[node name="SeldonPanel" type="PanelContainer" parent="Scroll/MainVBox/Padding/InnerVBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("S_1")
+
+[node name="SeldonVBox" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/SeldonPanel"]
+layout_mode = 2
+
+[node name="SeldonHeader" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/SeldonPanel/SeldonVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
+text = "☼ MESSAGE — HARI SELDON"
+
+[node name="SeldonText" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/SeldonPanel/SeldonVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_spec_i")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.949, 0.894, 0.769, 1)
 autowrap_mode = 3
-horizontal_alignment = 1
+text = ""
 
-[node name="ContinueButton" type="Button" parent="."]
-anchor_left = 0.25
-anchor_right = 0.75
-anchor_top = 0.87
-anchor_bottom = 0.95
-text = "Nouveau regne"
+[node name="StatsGrid" type="GridContainer" parent="Scroll/MainVBox/Padding/InnerVBox"]
+layout_mode = 2
+columns = 2
+
+[node name="StatDecisions" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatDecisions"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+text = "DÉCISIONS PRISES"
+
+[node name="StatValue" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatDecisions"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_spec_r")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+text = "0"
+
+[node name="StatYears" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid"]
+layout_mode = 2
+
+[node name="StatLabel2" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatYears"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+text = "ANNÉES COUVERTES"
+
+[node name="StatValue2" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatYears"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_spec_r")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+text = "0"
+
+[node name="StatScore" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid"]
+layout_mode = 2
+
+[node name="StatLabel3" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatScore"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+text = "SCORE DU RÈGNE"
+
+[node name="StatValue3" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatScore"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_spec_r")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+text = "0"
+
+[node name="StatDeviation" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid"]
+layout_mode = 2
+
+[node name="StatLabel4" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatDeviation"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+text = "PLAN DE SELDON"
+
+[node name="StatValue4" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatDeviation"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_spec_r")
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+text = "0%"
+
+[node name="Snapshot" type="HBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox"]
+layout_mode = 2
+
+[node name="SnapMilitary" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SnapLabel" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapMilitary"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+horizontal_alignment = 1
+text = "▲"
+
+[node name="SnapValue" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapMilitary"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+horizontal_alignment = 1
+text = "50"
+
+[node name="SnapBar" type="ColorRect" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapMilitary"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 4)
+color = Color(0.851, 0.478, 0.29, 1)
+
+[node name="SnapReligion" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SnapLabel2" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapReligion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+horizontal_alignment = 1
+text = "✦"
+
+[node name="SnapValue2" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapReligion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+horizontal_alignment = 1
+text = "50"
+
+[node name="SnapBar2" type="ColorRect" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapReligion"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 4)
+color = Color(0.725, 0.541, 0.839, 1)
+
+[node name="SnapCommerce" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SnapLabel3" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapCommerce"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+horizontal_alignment = 1
+text = "●"
+
+[node name="SnapValue3" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapCommerce"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+horizontal_alignment = 1
+text = "50"
+
+[node name="SnapBar3" type="ColorRect" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapCommerce"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 4)
+color = Color(0.373, 0.812, 0.561, 1)
+
+[node name="SnapPolitics" type="VBoxContainer" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SnapLabel4" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapPolitics"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+horizontal_alignment = 1
+text = "■"
+
+[node name="SnapValue4" type="Label" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapPolitics"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+horizontal_alignment = 1
+text = "50"
+
+[node name="SnapBar4" type="ColorRect" parent="Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapPolitics"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 4)
+color = Color(0.561, 0.749, 0.353, 1)
+
+[node name="RespawnButton" type="Button" parent="Scroll/MainVBox/Padding/InnerVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mono_b")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_styles/normal = SubResource("S_2")
+text = "NOUVEAU RÈGNE →"

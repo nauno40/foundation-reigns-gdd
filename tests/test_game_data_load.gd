@@ -37,3 +37,20 @@ func test_random_name_not_empty():
 	var name = data.get_random_name()
 	assert_ne(name, "")
 	assert_ne(name, "Inconnu")
+
+# --- Écart #4 : carte narrative de mort naturelle ---
+
+func test_natural_death_card_exists():
+	data.load_all()
+	var found = {}
+	for card in data.cards:
+		if card.get("label") == "mort_naturelle":
+			found = card
+	assert_false(found.is_empty(), "la carte 'mort_naturelle' doit exister")
+	assert_eq(found.get("deck", ""), "new_speaker")
+	var sets_dying = false
+	for outcome in found.get("loadOutcome", []):
+		if outcome.get("variable") == "dying" and outcome.get("intValue") == 1 \
+				and outcome.get("addOperation") == false:
+			sets_dying = true
+	assert_true(sets_dying, "le loadOutcome doit poser dying = 1 (set)")

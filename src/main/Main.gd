@@ -1,5 +1,9 @@
 extends Node
 
+const EraUtils = preload("res://src/ui/EraUtils.gd")
+
+const NATURAL_DEATH_CARD_ID = 9001
+
 var _game_data: FoundationGameData
 var _ctx: Context
 var _model: NarrativeModel
@@ -7,10 +11,10 @@ var _legitimacy: LegitimacySystem
 var _respawn: RespawnSystem
 var _save: SaveSystem
 
-@onready var _card_screen  = $CardScreen
+@onready var _card_screen = $CardScreen
 @onready var _death_screen = $DeathScreen
-@onready var _galaxy_map   = $GalaxyMap
-@onready var _map_button   = $MapButton
+@onready var _galaxy_map = $GalaxyMap
+@onready var _map_button = $MapButton
 
 var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
@@ -21,19 +25,15 @@ func _ready() -> void:
 		push_error("Main: failed to load game data")
 		return
 
-	_ctx        = Context.new()
-	_save       = SaveSystem.new()
+	_ctx = Context.new()
+	_save = SaveSystem.new()
 	_legitimacy = LegitimacySystem.new(_ctx)
-	_respawn    = RespawnSystem.new(_ctx)
+	_respawn = RespawnSystem.new(_ctx)
 
 	if _save.has_save():
 		_save.load(_ctx)
 	else:
-		_ctx.initialize_new_reign()
-		_ctx.set_var("year", 1, true)
-		_ctx.set_var("age", 35 + randi() % 6)
-		_ctx.set_var("speaker_name", _game_data.get_random_name())
-		_ctx.set_var("cover_name", "Conseiller impérial")
+		_initialize_new_reign(100)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_galaxy_map.setup(_game_data)
@@ -43,6 +43,24 @@ func _ready() -> void:
 	_map_button.pressed.connect(_on_map_pressed)
 
 	_next_card()
+
+func _initialize_new_reign(legitimacy_start: int) -> void:
+	_ctx.initialize_new_reign(legitimacy_start)
+	_ctx.set_var("year", 1, true)
+	_ctx.set_var("y_start", 1, true)
+	_ctx.set_var("age", 35 + randi() % 6)
+	_ctx.set_var("speaker_name", _game_data.get_random_name())
+	var cover = _pick_cover(1)
+	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
+	_ctx.apply_cover(cover)
+
+func _pick_cover(year: int) -> Dictionary:
+	var era_id = EraUtils.get_era_for_year(year)
+	var era_covers = _game_data.covers.get(era_id, {})
+	var list = era_covers.get("covers", [])
+	if list.is_empty():
+		return {"name": "Inconnu", "bonus_resource": "politics", "bonus_value": 0}
+	return list[randi() % list.size()]
 
 func _next_card() -> void:
 	_current_card = _model.draw_card()
@@ -72,23 +90,44 @@ func _on_choice_made(is_left: bool) -> void:
 	_save.save(_ctx)
 
 	if _ctx.is_game_over():
-		await get_tree().create_timer(1.5).timeout
-		_show_death_screen(_ctx.get_game_over_reason())
+		await get_tree().create_timer(1.8).timeout
+		_show_death_screen(_parse_death_type())
 		return
 
 	if _legitimacy.is_exposed():
 		await get_tree().create_timer(1.5).timeout
-		_show_death_screen("exposed")
+		_show_death_screen("legitimacy")
+		return
+
+	if _ctx.get_var("dying", 0) == 1:
+		await get_tree().create_timer(1.8).timeout
+		_show_death_screen("natural")
 		return
 
 	var age = _ctx.get_var("age", 35)
 	if _should_die_naturally(age):
-		await get_tree().create_timer(1.5).timeout
-		_show_death_screen("natural")
-		return
+		# La mort arrive via une carte narrative (deck new_speaker), pas un écran direct
+		_ctx.set_var("link", str(NATURAL_DEATH_CARD_ID))
 
-	await get_tree().create_timer(1.2).timeout
+	await get_tree().create_timer(1.5).timeout
 	_next_card()
+
+func _parse_death_type() -> String:
+	for resource in Context.RESOURCES:
+		var val = _ctx.get_var(resource, 50)
+		if val <= 0:
+			_ctx.set_var("last_death_type", resource, true)
+			return resource
+		if val >= 100:
+			_ctx.set_var("last_death_type", resource + "_hi", true)
+			return resource + "_hi"
+	if _ctx.get_var("legitimacy", 100) <= 0:
+		_ctx.set_var("last_death_type", "legitimacy", true)
+		return "legitimacy"
+	if _ctx.get_var("planet_terminus_state", 1) <= 0:
+		_ctx.set_var("last_death_type", "terminus", true)
+		return "terminus"
+	return "natural"
 
 func _should_die_naturally(age: int) -> bool:
 	var prob = 0.0
@@ -100,16 +139,25 @@ func _should_die_naturally(age: int) -> bool:
 	else: return false
 	return randf() < prob
 
-func _show_death_screen(cause: String) -> void:
+func _show_death_screen(death_type: String) -> void:
 	var cover = _ctx.get_var("cover_name", "Inconnu")
-	_death_screen.show_death(_ctx, cause, cover)
+	_ctx.set_var("last_death_type", death_type, true)
+	_death_screen.show_death(_ctx, death_type, cover)
 	_death_screen.show()
 	_card_screen.hide()
 
 func _on_new_reign() -> void:
 	var death_type = _ctx.get_var("last_death_type", "resource")
 	_respawn.respawn(death_type)
+
+	var year = _ctx.get_var("year", 1)
+	_ctx.set_var("y_start", year, true)
 	_ctx.set_var("speaker_name", _game_data.get_random_name())
+
+	var cover = _pick_cover(year)
+	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
+	_ctx.apply_cover(cover)
+
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_death_screen.hide()
 	_card_screen.show()

@@ -3,7 +3,6 @@ class_name NarrativeModel
 var _data: FoundationGameData
 var _ctx: Context
 var _evaluator: ConditionEvaluator
-var _lockturn_tracker: Dictionary = {}  # card_id -> turn_last_seen
 
 func _init(data: FoundationGameData, ctx: Context) -> void:
 	_data = data
@@ -40,9 +39,9 @@ func _get_eligible_cards() -> Array:
 		if not _evaluator.evaluate_all(card.get("conditions", []), _ctx._vars):
 			continue
 
-		# Check lockturn
+		# Check lockturn — stocké dans Context pour survivre au rechargement
 		var card_id: int = card.get("id", 0)
-		var last_seen: int = _lockturn_tracker.get(card_id, -9999)
+		var last_seen: int = _ctx.get_var("lockturn_" + str(card_id), -9999)
 		var lockturn: int = card.get("lockturn", 0)
 		if current_turn - last_seen < lockturn:
 			continue
@@ -68,7 +67,7 @@ func _weighted_random(cards: Array) -> Dictionary:
 func mark_card_seen(card: Dictionary) -> void:
 	var card_id: int = card.get("id", 0)
 	var turn: int = _ctx.get_var("turns", 0)
-	_lockturn_tracker[card_id] = turn
+	_ctx.set_var("lockturn_" + str(card_id), turn)
 	_ctx.set_var("seen_" + str(card_id), 1)
 
 func apply_outcomes(outcomes: Array) -> void:

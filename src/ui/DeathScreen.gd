@@ -1,71 +1,64 @@
 class_name DeathScreen
 extends Control
 
+const ThemeColors = preload("res://src/ui/ThemeColors.gd")
+
 signal continue_pressed
 
-@onready var _title        = $Title
-@onready var _subtitle     = $SubTitle
-@onready var _timeline     = $ScrollContainer/VBoxContainer/TimelineLabel
-@onready var _galaxy_state = $ScrollContainer/VBoxContainer/GalaxyStateLabel
-@onready var _legacy       = $ScrollContainer/VBoxContainer/LegacyLabel
-@onready var _seldon_text  = $SeldonMessage/SeldonText
-@onready var _continue_btn = $ContinueButton
+@onready var _cause = $Scroll/MainVBox/Padding/InnerVBox/CauseLabel
+@onready var _speaker = $Scroll/MainVBox/Padding/InnerVBox/SpeakerName
+@onready var _subtitle = $Scroll/MainVBox/Padding/InnerVBox/Subtitle
+@onready var _seldon_text = $Scroll/MainVBox/Padding/InnerVBox/SeldonPanel/SeldonVBox/SeldonText
+@onready var _stat_decisions = $Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatDecisions/StatValue
+@onready var _stat_years = $Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatYears/StatValue2
+@onready var _stat_score = $Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatScore/StatValue3
+@onready var _stat_deviation = $Scroll/MainVBox/Padding/InnerVBox/StatsGrid/StatDeviation/StatValue4
+@onready var _snap_values = {
+	"military": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapMilitary/SnapValue,
+	"religion": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapReligion/SnapValue2,
+	"commerce": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapCommerce/SnapValue3,
+	"politics": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapPolitics/SnapValue4,
+}
+@onready var _snap_bars = {
+	"military": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapMilitary/SnapBar,
+	"religion": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapReligion/SnapBar2,
+	"commerce": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapCommerce/SnapBar3,
+	"politics": $Scroll/MainVBox/Padding/InnerVBox/Snapshot/SnapPolitics/SnapBar4,
+}
+@onready var _btn = $Scroll/MainVBox/Padding/InnerVBox/RespawnButton
 
 func _ready() -> void:
-	_continue_btn.pressed.connect(func(): continue_pressed.emit())
+	_btn.pressed.connect(func(): continue_pressed.emit())
 
 func show_death(ctx: Context, death_type: String, cover_name: String) -> void:
-	var speaker_name = ctx.get_var("speaker_name", "Inconnu")
+	var year = ctx.get_var("year", 1)
+	var y_start = ctx.get_var("y_start", 1)
 	var age = ctx.get_var("age", 50)
+	var turns = ctx.get_var("turns", 0)
+	var speaker = ctx.get_var("speaker_name", "Inconnu")
 
-	_title.text = "Speaker %s — %d ans" % [speaker_name, age]
-	var cause_text = _death_type_to_fr(death_type)
-	_subtitle.text = "Couverture : %s  |  Cause : %s" % [cover_name, cause_text]
+	var cause_label = ThemeColors.death_label(death_type)
+	_cause.text = cause_label
+	_speaker.text = "Orateur — " + str(speaker)
+	_subtitle.text = "%s · %d ans · Règne couvert An %d → An %d" % [cover_name, age, y_start, year]
 
-	var timeline = ""
-	for i in range(1, 7):
-		var key = "seldon_crisis_%d" % i
-		var val = ctx.get_var(key, 0)
-		if val == 1:
-			timeline += "v Crise de Seldon %d -- traversee\n" % i
-		elif val == -1:
-			timeline += "x Crise de Seldon %d -- ratee\n" % i
-	_timeline.text = timeline if timeline != "" else "Aucune crise de Seldon atteinte ce regne."
+	var msg = ThemeColors.death_message(death_type)
+	if death_type == "natural":
+		msg = "Vous avez servi jusqu'à la fin de vos jours. Le Plan vous remercie."
+	_seldon_text.text = msg
+
+	var reign_years = max(year - y_start, 0)
+	var score = 60 + turns * 8
+	var deviation = "%s%" % str(randf_range(2.0, 8.0)).substr(0, 3)
+
+	_stat_decisions.text = str(turns)
+	_stat_years.text = str(reign_years) + " ans"
+	_stat_score.text = str(score) + " pts"
+	_stat_deviation.text = "dévié de " + deviation
 
 	var resources = ["military", "religion", "commerce", "politics"]
-	var resource_names = {"military": "Militaire", "religion": "Religion",
-						  "commerce": "Commerce",  "politics": "Politique"}
-	var galaxy = ""
 	for r in resources:
-		galaxy += "%s : %d\n" % [resource_names[r], ctx.get_var(r, 50)]
-	galaxy += "\nAnnee galactique : %d" % ctx.get_var("year", 1)
-	_galaxy_state.text = galaxy
-
-	var legacy = "Variables toKeep transmises :\n"
-	for key in ctx._keep_flags:
-		legacy += "  * %s = %s\n" % [key, str(ctx.get_var(key))]
-	_legacy.text = legacy
-
-	_seldon_text.text = _get_seldon_message(ctx, death_type)
-
-func _death_type_to_fr(death_type: String) -> String:
-	match death_type:
-		"natural":   return "Mort naturelle"
-		"resource":  return "Effondrement d'une ressource"
-		"exposed":   return "Couverture demasquee"
-		_:           return "Inconnue"
-
-func _get_seldon_message(ctx: Context, death_type: String) -> String:
-	var year = ctx.get_var("year", 1)
-	var crises_passed = 0
-	for i in range(1, 7):
-		if ctx.get_var("seldon_crisis_%d" % i, 0) == 1:
-			crises_passed += 1
-
-	if death_type == "natural":
-		return "Vous avez servi jusqu'a la fin de vos jours. Le Plan vous remercie."
-	if crises_passed >= 3:
-		return "An %d. Le Plan devie de moins de 2%%. Votre successeur a une bonne marge." % year
-	if crises_passed == 0:
-		return "An %d. Le Plan devie. La correction sera difficile. Mais pas impossible." % year
-	return "An %d. Les fondations tiennent. Continuez." % year
+		var val = ctx.get_var(r, 50)
+		_snap_values[r].text = str(val)
+		_snap_bars[r].custom_minimum_size.x = val
+		_snap_bars[r].color = ThemeColors.resource_color(r)

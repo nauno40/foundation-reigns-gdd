@@ -18,17 +18,13 @@ func test_draw_returns_card():
 	assert_true(card.has("id"))
 
 func test_lockturn_prevents_repeat():
-	var card = model.draw_card()
-	var id = card.get("id")
+	var card = data.get_card_by_id(1001)  # lockturn 10
 	model.mark_card_seen(card)
-	var lockturn = card.get("lockturn", 0)
-	if lockturn > 0:
-		for i in range(5):
-			ctx.add_var("turns", 1)
-			var next_card = model.draw_card()
-			if ctx.get_var("turns") < lockturn:
-				assert_ne(next_card.get("id"), id,
-					"Card should not repeat within lockturn")
+	for i in range(5):
+		ctx.add_var("turns", 1)
+		var next_card = model.draw_card()
+		assert_ne(int(next_card.get("id", 0)), 1001,
+			"Card should not repeat within lockturn")
 
 func test_link_takes_priority():
 	ctx.set_var("link", "1002")
@@ -68,3 +64,22 @@ func test_apply_tokeep_outcome():
 	model.apply_outcomes(outcomes)
 	ctx.empty_non_keep()
 	assert_eq(ctx.get_var("year"), 6)
+
+# --- Écart #5 : persistance du lockturn via Context ---
+
+func test_mark_card_seen_records_lockturn_in_context():
+	ctx.set_var("turns", 4)
+	var card = data.get_card_by_id(1001)
+	model.mark_card_seen(card)
+	assert_eq(ctx.get_var("lockturn_1001", -1), 4,
+		"lockturn doit être stocké dans Context pour survivre au rechargement")
+
+func test_lockturn_respected_after_reload():
+	var card = data.get_card_by_id(1001)  # lockturn 10
+	model.mark_card_seen(card)
+	var model2 = NarrativeModel.new(data, ctx)  # simule un rechargement de partie
+	ctx.add_var("turns", 1)
+	for i in range(30):
+		var next_card = model2.draw_card()
+		assert_ne(int(next_card.get("id", 0)), 1001,
+			"une carte vue récemment ne doit pas réapparaître après rechargement")

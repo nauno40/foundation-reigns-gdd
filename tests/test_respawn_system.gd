@@ -56,3 +56,31 @@ func test_respawn_preserves_seldon_crises():
 	ctx.set_var("seldon_crisis_1", 1, true)
 	sys.respawn("resource")
 	assert_eq(ctx.get_var("seldon_crisis_1"), 1)
+
+# --- Écart #1 : normalisation des types de mort détaillés ---
+
+func test_normalize_legitimacy_maps_to_exposed():
+	assert_eq(RespawnSystem.normalize_death_type("legitimacy"), "exposed")
+
+func test_normalize_resource_types_map_to_resource():
+	assert_eq(RespawnSystem.normalize_death_type("military"), "resource")
+	assert_eq(RespawnSystem.normalize_death_type("military_hi"), "resource")
+	assert_eq(RespawnSystem.normalize_death_type("commerce_hi"), "resource")
+	assert_eq(RespawnSystem.normalize_death_type("terminus"), "resource")
+
+func test_normalize_natural_unchanged():
+	assert_eq(RespawnSystem.normalize_death_type("natural"), "natural")
+
+func test_normalize_canonical_types_unchanged():
+	assert_eq(RespawnSystem.normalize_death_type("resource"), "resource")
+	assert_eq(RespawnSystem.normalize_death_type("exposed"), "exposed")
+
+func test_respawn_with_legitimacy_death_sets_50():
+	ctx.set_var("year", 1, true)
+	sys.respawn("legitimacy")
+	assert_eq(ctx.get_var("legitimacy"), 50)
+
+func test_respawn_with_resource_hi_death_sets_80():
+	ctx.set_var("year", 1, true)
+	sys.respawn("politics_hi")
+	assert_eq(ctx.get_var("legitimacy"), 80)

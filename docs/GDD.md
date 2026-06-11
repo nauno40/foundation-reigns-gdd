@@ -97,9 +97,7 @@ Le joueur incarne une **succession de Speakers de la Seconde Fondation**, chacun
 | Restauration (350–600) | Administrateur, Juge, Académicien |
 | Late Empire (600–1000) | Archiviste, Sénateur, Philosophe |
 
-Chaque couverture donne un **bonus de départ de +5** sur sa ressource liée et influence le mood de départ de certains interlocuteurs.
-
-⚠️ **Écart** : le bonus +5 n'est jamais appliqué — `Main._pick_cover()` lit `bonus_resource`/`bonus_value` mais ne les ajoute pas aux ressources de départ. À corriger.
+Chaque couverture donne un **bonus de départ de +5** sur sa ressource liée (`Context.apply_cover()`, appliqué au premier règne et à chaque respawn ✅) et influence le mood de départ de certains interlocuteurs 🔲.
 
 ## 2.3 Temps & ères
 
@@ -174,7 +172,7 @@ Jauge **cachée** (0–100), séparée des 4 ressources. Pas de barre, pas de ch
 | Game over ressource | 80 |
 | Démasqué | 50 |
 
-⚠️ **Écart (bug)** : `Main.gd` enregistre des types de mort détaillés (`military`, `military_hi`, `legitimacy`…) mais `RespawnSystem.respawn()` n'accepte que `natural`/`resource`/`exposed` — tout type inconnu retombe sur 80. Conséquence : une mort par démasquage redémarre à **80 au lieu de 50**. À corriger (mapper `legitimacy` → `exposed`, `<ressource>`/`<ressource>_hi` → `resource`).
+Les types de mort détaillés (`military_hi`, `legitimacy`, `terminus`…) sont ramenés aux 3 catégories canoniques par `RespawnSystem.normalize_death_type()` avant application de la pénalité. ✅
 
 ### Dynamique
 
@@ -187,7 +185,7 @@ Les deltas de légitimité sont portés par les outcomes des cartes (variable `l
 | Seuil | État | Signal joueur |
 |-------|------|---------------|
 | ≥ 30 | normal | aucun |
-| < 30 | suspicious | le ton des textes change, mood `suspicious` plus fréquent ; **murmure UI** sous la ligne de mood (§4.6) ✅ (murmure affiché < 35 dans le prototype — valeur à unifier à < 30 ⚠️) |
+| < 30 | suspicious | le ton des textes change, mood `suspicious` plus fréquent ; **murmure UI** sous la ligne de mood (§4.6) ✅ (seuil unifié sur `LegitimacySystem.THRESHOLD_SUSPICIOUS` = 30) |
 | < 15 | critical | carte d'avertissement explicite 🔲 |
 | 0 | démasqué | fin de règne forcée ✅ |
 
@@ -328,7 +326,7 @@ age >= 83 : 100 % — mort garantie
 ```
 
 Vers 65–70 ans, les cartes mentionnent la fatigue ; à 75+, certaines options disparaissent. 🔲
-La mort doit arriver via une **carte narrative spéciale** (deck `new_speaker` âge-gatée). ⚠️ **Écart** : le code déclenche directement l'écran de mort sans carte narrative — à corriger en Phase 4.
+La mort arrive via une **carte narrative spéciale** (carte `mort_naturelle` id 9001, deck `new_speaker`, portée par Hari Seldon) : le déclencheur probabiliste force un `link` vers cette carte, dont le `loadOutcome` pose `dying = 1` ; l'écran de mort suit le swipe. ✅
 
 ### Respawn — retour au début de l'ère en cours ✅
 
@@ -350,9 +348,9 @@ Mort / Game over
       empty_non_keep()        ← vide tout sauf toKeep   ✅
       year → début de l'ère en cours                    ✅
       Ressources → 50                                    ✅
-      Légitimité → 100 / 80 / 50 selon mort             ⚠️ (bug 50, cf. §2.5)
+      Légitimité → 100 / 80 / 50 selon mort             ✅
       age → 35–40                                        ✅
-      Couverture → tirée du pool de l'ère               ✅ (bonus +5 manquant ⚠️)
+      Couverture → tirée du pool de l'ère + bonus +5    ✅
       Deck new_speaker s'active                          ✅
 ```
 
@@ -366,7 +364,7 @@ Mort / Game over
 | `planet_X_state` (états planètes) | Équipage/`party`, variables `custom` temporaires |
 | `seen_<id>` si marqué toKeep | `turns` (→ 0) |
 
-⚠️ **Écart** : la perte de Terminus (`planet_terminus_state ≤ 0`) doit être un game over — non vérifié par `Context.is_game_over()`. À corriger.
+La perte de Terminus (`planet_terminus_state ≤ 0`) est un game over (type de mort `terminus`, catégorie `resource` au respawn). ✅
 
 ## 2.12 Score & progression méta 🔲
 
@@ -619,7 +617,7 @@ Quand la légitimité passe sous le seuil suspicious, texte italique ambre sous 
 
 > *« Vous semblez toujours avoir la bonne réponse, Orateur… »*
 
-C'est le **signal UI principal** de la légitimité basse — pas de barre, pas de chiffre. (Seuil : prototype < 35, design système < 30 — à unifier à 30 ⚠️ mineur.)
+C'est le **signal UI principal** de la légitimité basse — pas de barre, pas de chiffre. Seuil unifié sur `LegitimacySystem.THRESHOLD_SUSPICIOUS` (30). ✅
 
 ## 4.7 Carte galactique ✅
 
@@ -652,8 +650,10 @@ Recouvre tout l'écran (backdrop flouté) :
 | `politics` | Chaos = aucune institution ne survit |
 | `politics_hi` | Autoritarisme = tyrannie |
 | `legitimacy` | L'Orateur exposé met en péril toute la Seconde Fondation |
+| `terminus` | Terminus tombée — le Plan n'a plus d'ancre |
+| `natural` | Vous avez servi jusqu'à la fin. Le Plan vous remercie |
 
-Textes complets dans `reference/ui-prototype/data.jsx` (`SELDON_MESSAGES`). 🔲 message pour la mort naturelle (à écrire — commentaire de bilan du règne).
+Textes complets dans `src/ui/ThemeColors.gd` (`death_message`/`death_label`) ; version longue de référence dans `reference/ui-prototype/data.jsx` (`SELDON_MESSAGES`).
 
 ---
 
@@ -771,7 +771,7 @@ Scènes UI : `CardScreen` (+`SwipeDetector`) · `DeathScreen` · `GalaxyMap` · 
 
 ## 5.6 Sauvegarde ✅
 
-Automatique après chaque carte. Slot unique, JSON local. ⚠️ Écart mineur : le tracker de `lockturn` (`NarrativeModel._lockturn_tracker`) est en mémoire seulement — perdu au rechargement, une carte récente peut réapparaître immédiatement. À persister.
+Automatique après chaque carte. Slot unique, JSON local. Le `lockturn` est stocké dans `Context` (`lockturn_<id>` = tour de dernière vue) et survit donc au rechargement via la sauvegarde normale ; il est purgé au respawn par `empty_non_keep()`, ce qui est le comportement voulu (nouveau règne, `turns` repart à 0). ✅
 
 🔲 Méta-sauvegarde séparée (score cumulé, rang, difficulté, cartes découvertes) — nécessaire pour §2.12 et §2.13.
 
@@ -793,12 +793,12 @@ godot --headless -s tests/gut_runner.gd
 |---------|------|
 | Core loop (tirage, conditions, link, lockturn, weight) | ✅ |
 | Context / toKeep / game over ressources & légitimité | ✅ |
-| Respawn par ère + pénalités de légitimité | ✅ (⚠️ bug démasqué→50) |
-| Mort naturelle probabiliste 75–83 ans | ✅ (⚠️ sans carte narrative) |
-| Sauvegarde auto slot unique | ✅ (⚠️ lockturn non persisté) |
+| Respawn par ère + pénalités de légitimité (types normalisés) | ✅ |
+| Mort naturelle probabiliste 75–83 ans via carte narrative | ✅ |
+| Sauvegarde auto slot unique (lockturn persisté) | ✅ |
 | UI : carte, swipe, barres, mood, murmure, mort, galaxie | ✅ (🔲 état « affected », mort enrichie) |
-| Couvertures par ère | ✅ (⚠️ bonus +5 non appliqué) |
-| Game over perte de Terminus | ⚠️ manquant |
+| Couvertures par ère avec bonus +5 | ✅ |
+| Game over perte de Terminus | ✅ |
 | Effets mécaniques du mood (cartes variantes) | 🔲 |
 | Crises mineures / majeures, 6 Crises de Seldon | 🔲 |
 | Le Mulet | 🔲 |
@@ -809,17 +809,17 @@ godot --headless -s tests/gut_runner.gd
 | `month`/`day`, `location`, `party`, `faction` active | 🔲 |
 | Localisation EN | 🔲 (post-prototype) |
 
-## 6.2 Écarts code↔design — dette à corriger (le design fait foi)
+## 6.2 Écarts code↔design — dette **résolue le 11/06/2026**
 
-| # | Écart | Correctif |
-|---|-------|-----------|
-| 1 | **Bug légitimité au respawn** : `Main.gd` passe `legitimacy`/`military_hi`… à `respawn()` qui n'accepte que `natural`/`resource`/`exposed` → démasqué redémarre à 80 au lieu de 50 | Mapper les types détaillés vers les 3 catégories avant l'appel |
-| 2 | **Bonus de couverture +5 non appliqué** | Ajouter `bonus_value` à la ressource `bonus_resource` à l'initialisation du règne |
-| 3 | **Perte de Terminus ≠ game over** | Ajouter le test `planet_terminus_state` dans `Context.is_game_over()` |
-| 4 | **Mort naturelle sans carte narrative** | Carte spéciale âge-gatée (deck `new_speaker`) qui précède l'écran de mort |
-| 5 | **Lockturn non persisté** | Sérialiser `_lockturn_tracker` dans la sauvegarde |
-| 6 | **Seuil du murmure** : 35 (prototype) vs 30 (design système) | Unifier à 30 (= `THRESHOLD_SUSPICIOUS`) |
-| 7 | **Mood en chaînes** vs enum 0–7 du design | Convention chaîne acceptée dans les données ; garder l'enum comme référence documentaire |
+| # | Écart | Résolution |
+|---|-------|------------|
+| 1 | Bug légitimité au respawn (démasqué redémarrait à 80 au lieu de 50) | ✅ `RespawnSystem.normalize_death_type()` ramène les types détaillés aux 3 catégories canoniques |
+| 2 | Bonus de couverture +5 non appliqué | ✅ `Context.apply_cover()`, appelé au premier règne et à chaque respawn |
+| 3 | Perte de Terminus ≠ game over | ✅ Testé dans `Context.is_game_over()` (défaut +1 si variable absente) ; type de mort `terminus` avec label et message Seldon dédiés |
+| 4 | Mort naturelle sans carte narrative | ✅ Carte `mort_naturelle` (id 9001, deck `new_speaker`) forcée par `link` ; son `loadOutcome` pose `dying = 1`, l'écran de mort suit le swipe |
+| 5 | Lockturn non persisté | ✅ Stocké dans `Context` (`lockturn_<id>`) — sauvegardé avec le reste, purgé au respawn |
+| 6 | Seuil du murmure : 35 (prototype) vs 30 (design) | ✅ Unifié sur `LegitimacySystem.THRESHOLD_SUSPICIOUS` |
+| 7 | Mood en chaînes vs enum 0–7 du design | ✅ Convention chaîne actée dans les données ; l'enum reste la référence documentaire (aucun changement de code) |
 
 ## 6.3 Contenu
 
@@ -830,12 +830,11 @@ godot --headless -s tests/gut_runner.gd
 ### Phase 4 — Contenu (5–10 j) 🔲
 - 100+ cartes FR (decks `hardin_era`, `merchant_era`, `ambient` complets)
 - Crise majeure Anacréon (séquence link, ~10 cartes) avec couloir §2.8
-- Deck `new_speaker` enrichi (héritage narratif, carte de mort naturelle — corrige écart #4)
+- Deck `new_speaker` enrichi (héritage narratif ; la carte de mort naturelle existe, en écrire des variantes)
 - 3 quêtes de règne + 1 quête d'arc sur les gabarits §2.10
 - Cartes variantes de mood (règle §2.6)
 
 ### Phase 5 — Polish (2–3 j) 🔲
-- Correction des écarts §6.2
 - Calibrage : seuils de danger, mort naturelle, couloirs Seldon, scores et rangs
 - Difficulté (§2.13) + méta-sauvegarde
 - Musique / SFX
