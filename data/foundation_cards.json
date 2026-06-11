@@ -3229,6 +3229,2140 @@
 		}
 	},
 	{
+		"id": 2011,
+		"label": "pretres_techniciens",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le séminaire forme sa première promotion de prêtres-techniciens destinés à Anacréon. Ils sauront faire fonctionner les réacteurs — pas les comprendre."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Les envoyer tels quels"
+			},
+			"reaction": {
+				"FR": "L'ignorance pieuse est le verrou du système."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Former une élite qui comprend"
+			},
+			"reaction": {
+				"FR": "Des prêtres qui comprennent finiront par questionner."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2012,
+		"label": "miracle_eclairage",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "Hardin suggère d'illuminer le palais du roi d'Anacréon d'une aura sacrée pendant son couronnement — un transformateur et quelques projecteurs."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Orchestrer le miracle"
+			},
+			"reaction": {
+				"FR": "Le roi flotte dans la lumière divine. La foule s'agenouille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop grossier — s'abstenir"
+			},
+			"reaction": {
+				"FR": "Hardin hausse les épaules : « La foule voulait croire. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2013,
+		"label": "scientifique_scandalise",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un physicien de l'Encyclopédie démissionne avec fracas : « Nous déguisons la science en sorcellerie ! » Il n'a pas tort. Il n'a pas raison non plus."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser partir en paix"
+			},
+			"reaction": {
+				"FR": "Sa colère s'éteint dans l'indifférence générale."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le convaincre en privé"
+			},
+			"reaction": {
+				"FR": "Vous trouvez les mots justes. Trop justes — il vous regarde étrangement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2014,
+		"label": "reacteur_panne",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le réacteur sacré d'une cité d'Anacréon tombe en panne. Leurs prêtres prient. Le vrai problème est un circuit de refroidissement."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réparer sous couvert de rituel"
+			},
+			"reaction": {
+				"FR": "Trois jours de cérémonie, dix minutes de soudure. La foi sort renforcée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exiger un paiement d'abord"
+			},
+			"reaction": {
+				"FR": "La lumière sacrée se monnaye. Les fidèles paient."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2015,
+		"label": "evangile_galactique",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'Église veut rédiger un « Évangile de l'Esprit Galactique » unifiant ses rites. Un texte fondateur fige — et contrôle."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Superviser discrètement la rédaction"
+			},
+			"reaction": {
+				"FR": "Chaque verset sert le Plan. Personne ne sait qui tient la plume."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser l'Église écrire seule"
+			},
+			"reaction": {
+				"FR": "Le texte leur appartient. Un jour, ils s'en serviront contre vous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 2016,
+		"label": "pelerinage_terminus",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Des pèlerins anacréoniens demandent à visiter Terminus, « berceau de l'Esprit Galactique ». Des fidèles — et sûrement des espions."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ouvrir un circuit de pèlerinage"
+			},
+			"reaction": {
+				"FR": "Ils voient des temples, des jardins, et rien d'autre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fermer la planète"
+			},
+			"reaction": {
+				"FR": "Le mystère nourrit la foi. Et les rancœurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 2017,
+		"label": "maire_contre_encyclopedistes",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "Les Encyclopédistes contestent encore l'autorité du maire : « Terminus est une fondation scientifique, pas un État. » Hardin sourit."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir le pouvoir civil"
+			},
+			"reaction": {
+				"FR": "« La violence est le dernier recours de l'incompétent », répète Hardin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ménager les Encyclopédistes"
+			},
+			"reaction": {
+				"FR": "Le vieux rêve de l'Encyclopédie mérite des égards. Et une mise sous tutelle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2018,
+		"label": "novice_doute",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un novice du séminaire vous confie ses doutes : « Et si l'Esprit Galactique n'était qu'un transformateur électrique ? »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Nourrir sa foi"
+			},
+			"reaction": {
+				"FR": "Vous trouvez la parabole exacte qui apaise. Un talent suspect chez un laïc."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'orienter vers la technique"
+			},
+			"reaction": {
+				"FR": "Un bon ingénieur vaut mieux qu'un mauvais prêtre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2019,
+		"label": "subvention_temples",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le clergé demande des fonds pour bâtir trois temples sur les mondes frontaliers. La foi coûte cher avant de rapporter."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer les temples"
+			},
+			"reaction": {
+				"FR": "Trois phares de l'Esprit Galactique s'allument aux frontières."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Qu'ils se financent par la dîme"
+			},
+			"reaction": {
+				"FR": "La dîme tombe. Les fidèles paient leur propre laisse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2020,
+		"label": "heretiques_locaux",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une secte de Terminus prêche que la technologie doit rester profane — « pas de prêtres entre l'homme et la machine »."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tolérer la secte"
+			},
+			"reaction": {
+				"FR": "Sur Terminus, la vérité circule librement. C'est ailleurs qu'elle est sacrée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La faire taire"
+			},
+			"reaction": {
+				"FR": "On ne débranche pas une idée. On la rend clandestine."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2021,
+		"label": "officier_visite",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un officier anacréonien « en visite culturelle » photographie vos installations portuaires depuis trois jours."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser faire — et le suivre"
+			},
+			"reaction": {
+				"FR": "Ses rapports diront ce que vous laissez voir. Les vôtres diront tout."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'expulser"
+			},
+			"reaction": {
+				"FR": "L'incident fait le tour des cours royales."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2022,
+		"label": "ultimatum_commercial",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 15,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Anacréon impose des « droits de passage » sur la route de Terminus. Payer, contourner, ou contester."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer sans discuter"
+			},
+			"reaction": {
+				"FR": "Le commerce continue. Le précédent est créé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Contourner par Smyrno"
+			},
+			"reaction": {
+				"FR": "Plus long, plus cher, plus libre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2023,
+		"label": "espion_capture",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 22,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Sécurité capture un espion anacréonien dans la centrale énergétique. Son réseau ignore encore sa chute."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le retourner"
+			},
+			"reaction": {
+				"FR": "Il émettra désormais vos vérités, soigneusement fausses."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Procès public et expulsion"
+			},
+			"reaction": {
+				"FR": "Anacréon nie tout. Le peuple gronde."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2024,
+		"label": "marche_force",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Anacréon exige un « accord commercial préférentiel » : vos générateurs contre leur blé, au tiers du prix."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le marché de dupes"
+			},
+			"reaction": {
+				"FR": "Vous perdez des crédits. Vous gagnez du temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser net"
+			},
+			"reaction": {
+				"FR": "Leur ambassadeur quitte la salle sans saluer."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2025,
+		"label": "flotte_parade",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La flotte anacréonienne parade aux confins de votre système — dix croiseurs hérités de l'Empire, mal entretenus mais armés."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Observer sans réagir"
+			},
+			"reaction": {
+				"FR": "Vos télescopes comptent leurs tourelles. Leur rouille aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mobiliser la défense"
+			},
+			"reaction": {
+				"FR": "Vos trois corvettes prennent position. Le ridicule ne tue pas — pas encore."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 2026,
+		"label": "prince_otage",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le neveu du roi d'Anacréon étudie à l'Université de Terminus. Sa famille le rappelle — il refuse de partir."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le garder comme étudiant"
+			},
+			"reaction": {
+				"FR": "Un otage de luxe qui s'ignore. Anacréon enrage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le renvoyer chez lui"
+			},
+			"reaction": {
+				"FR": "Le garçon part en larmes. Le roi vous doit une faveur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "suspicious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 2027,
+		"label": "deserteurs_anacreon",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Vingt techniciens anacréoniens fuient leur royaume et demandent asile : chez eux, toucher un réacteur sans être prêtre est un crime."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Les accueillir"
+			},
+			"reaction": {
+				"FR": "Vingt cerveaux de plus. Anacréon proteste pour la forme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Les renvoyer"
+			},
+			"reaction": {
+				"FR": "Ils seront jugés là-bas. L'Église locale applaudit votre piété."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 2028,
+		"label": "sabotage_port",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une explosion endommage le port spatial. Le sabotage porte une signature anacréonienne — un peu trop visible pour être honnête."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accuser Anacréon publiquement"
+			},
+			"reaction": {
+				"FR": "La foule réclame des représailles que vous n'avez pas les moyens d'offrir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Enquêter en silence"
+			},
+			"reaction": {
+				"FR": "La piste mène à un groupuscule local payé en couronnes anacréoniennes. Intéressant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2029,
+		"label": "blocus_partiel",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Anacréon ferme « temporairement » deux corridors de saut aux cargos de Terminus. Le mot embargo n'est pas prononcé."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protester par voie diplomatique"
+			},
+			"reaction": {
+				"FR": "Vos notes s'empilent dans un tiroir royal."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Couper la maintenance sacrée"
+			},
+			"reaction": {
+				"FR": "Sans vos prêtres, leurs centrales toussent. Le corridor rouvre en dix jours."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 2030,
+		"label": "conseil_guerre",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Au Conseil, les faucons réclament un programme d'armement d'urgence : « Anacréon attaquera. La question est quand. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 29
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer le programme"
+			},
+			"reaction": {
+				"FR": "Les chantiers s'activent. Les budgets scientifiques fondent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La religion est notre bouclier"
+			},
+			"reaction": {
+				"FR": "Hardin approuve : un Anacréonien ne tire pas sur son dieu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 2031,
+		"label": "crypte_entretien",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La Crypte de Seldon attend, scellée, sur la grand-place. Le Conseil veut la déplacer dans un musée. Vous savez qu'elle s'ouvrira bientôt."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Qu'elle reste où elle est"
+			},
+			"reaction": {
+				"FR": "Une intuition, dites-vous. La Crypte reste au centre de tout."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser faire le Conseil"
+			},
+			"reaction": {
+				"FR": "Le déménagement prendra des années. Vous comptez dessus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2032,
+		"label": "recrutement_mentalique",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une enfant de Terminus montre des aptitudes empathiques anormales. La Seconde Fondation voudrait la former — son père est conseiller municipal."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Organiser une « bourse d'études » sur Trantor"
+			},
+			"reaction": {
+				"FR": "Elle partira étudier « la statistique ». Personne ne saura quoi d'autre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop risqué — l'écarter du programme"
+			},
+			"reaction": {
+				"FR": "Un talent perdu. Un secret préservé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 2033,
+		"label": "infiltration_anacreon",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Votre réseau peut placer un agent au palais royal d'Anacréon — valet de chambre du régent Wienis lui-même."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le placer"
+			},
+			"reaction": {
+				"FR": "Chaque colère du régent vous parviendra avant ses ordres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop exposé"
+			},
+			"reaction": {
+				"FR": "Le valet restera valet. Le régent restera opaque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2034,
+		"label": "renforcement_crypte",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Des ingénieurs proposent de renforcer la salle de la Crypte « contre les séismes ». Vous savez qu'elle accueillera bientôt une foule sous tension."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer les travaux"
+			},
+			"reaction": {
+				"FR": "Personne ne comprend votre insistance sur la capacité d'accueil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Inutile"
+			},
+			"reaction": {
+				"FR": "La salle restera telle quelle. Advienne que pourra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 2035,
+		"label": "wienis_regent",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le régent Wienis concentre tous les pouvoirs à Anacréon pendant la minorité du roi. Ses discours parlent de « destin galactique »."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Flatter son ambition"
+			},
+			"reaction": {
+				"FR": "Un ambitieux flatté se découvre. Wienis parade — et se dévoile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le snober officiellement"
+			},
+			"reaction": {
+				"FR": "Wienis vous classe parmi ses ennemis. La liste est longue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "relation_military_kingdoms",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2036,
+		"label": "consultations_secretes",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "salvor_hardin",
+		"question": {
+			"FR": "Hardin vous invite — vous, simple notable — à une consultation privée sur la crise qui vient. Il choisit étrangement bien ses conseillers."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conseiller la patience calculée"
+			},
+			"reaction": {
+				"FR": "« Laisser la crise mûrir », approuve Hardin. Vous parlez sa langue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester évasif"
+			},
+			"reaction": {
+				"FR": "Hardin n'insiste pas. Son regard, si."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2037,
+		"label": "croiseur_imperial",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Anacréon a remis en service un croiseur impérial abandonné. Vos prêtres-techniciens ont participé à la remise en état — sur votre ordre discret."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Y cacher un dispositif de coupure"
+			},
+			"reaction": {
+				"FR": "Le croiseur obéira à ses prêtres avant d'obéir à son amiral."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ne pas toucher au navire"
+			},
+			"reaction": {
+				"FR": "Un croiseur de plus dans des mains hostiles. La foi devra suffire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 2038,
+		"label": "opinion_terminus",
+		"deck": "hardin_era",
+		"weight": 3,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Terminus, deux partis s'affrontent : céder à Anacréon pour gagner du temps, ou défier le royaume au nom de la dignité."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encourager le parti du temps"
+			},
+			"reaction": {
+				"FR": "Le temps travaille pour le Plan. Vous le savez mieux que personne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le débat s'envenimer"
+			},
+			"reaction": {
+				"FR": "La division affaiblit Terminus au pire moment."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legitimacy",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 2039,
+		"label": "messager_seconde_fondation",
+		"deck": "hardin_era",
+		"weight": 1,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un messager de Trantor vous transmet les calculs actualisés : la première Crise de Seldon atteindra son point critique d'ici quelques années."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accuser réception et tout brûler"
+			},
+			"reaction": {
+				"FR": "Les chiffres sont dans votre tête. Nulle part ailleurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder les documents chiffrés"
+			},
+			"reaction": {
+				"FR": "Des équations psychohistoriques dorment dans votre coffre. Un risque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legitimacy",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 2040,
+		"label": "veille_crise",
+		"deck": "hardin_era",
+		"weight": 2,
+		"lockturn": 25,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Tout converge : Wienis arme, le roi grandit, la Crypte attend. Terminus vit ses derniers mois d'avant-crise sans le savoir."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 44
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Renforcer vos appuis religieux"
+			},
+			"reaction": {
+				"FR": "Les temples bourdonnent. Le bouclier invisible se tisse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renforcer vos appuis politiques"
+			},
+			"reaction": {
+				"FR": "Le Conseil vous écoute. La cité se soude."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 3001,
 		"label": "nouveau_speaker_debut",
 		"deck": "new_speaker",
