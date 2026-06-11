@@ -67,3 +67,16 @@ func test_seed_planet_states():
 	# toKeep : les états de planètes survivent à la mort
 	ctx.empty_non_keep()
 	assert_eq(ctx.get_var("planet_terminus_state"), 1)
+
+# --- Semis des relations de factions initiales ---
+
+func test_seed_faction_relations():
+	data.load_all()
+	var ctx = Context.new()
+	data.seed_faction_relations(ctx)
+	assert_eq(ctx.get_var("relation_military_kingdoms"), -20,
+		"les royaumes militaristes démarrent hostiles")
+	assert_eq(ctx.get_var("relation_empire"), 0)
+	# état galactique : survit à la mort comme les planètes
+	ctx.empty_non_keep()
+	assert_eq(ctx.get_var("relation_military_kingdoms"), -20)

@@ -92,6 +92,14 @@ func seed_planet_states(ctx: Context) -> void:
 		if id != "":
 			ctx.set_var("planet_%s_state" % id, int(planet.get("initial_state", 0)), true)
 
+# Sème relation_<faction_id> depuis starting_relation ; toKeep car les
+# relations diplomatiques sont un état galactique, comme les planètes.
+func seed_faction_relations(ctx: Context) -> void:
+	for faction in factions:
+		var id: String = faction.get("id", "")
+		if id != "":
+			ctx.set_var("relation_%s" % id, int(faction.get("starting_relation", 0)), true)
+
 func get_random_name() -> String:
 	if given_names.is_empty() or family_names.is_empty():
 		return "Inconnu"
