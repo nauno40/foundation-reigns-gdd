@@ -62,8 +62,15 @@ func _get_eligible_cards() -> Array:
 		if int(card.get("weight", 1)) < 0:
 			continue
 
-		# Check deck is active
 		var deck: String = card.get("deck", "")
+
+		# Decks planétaires : uniquement sur la planète courante
+		if deck.begins_with("planet_"):
+			var here: String = str(_ctx.get_var("location", "terminus"))
+			if deck.trim_prefix("planet_") != here:
+				continue
+
+		# Check deck is active
 		if _ctx.get_var("deck_" + deck, 1) == 0:
 			continue
 

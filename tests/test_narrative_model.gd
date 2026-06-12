@@ -168,3 +168,28 @@ func test_negative_weight_excluded_from_random_draw():
 	for card in eligible:
 		assert_ne(int(card.get("id", 0)), 99903,
 			"weight -1 : jamais dans le tirage aléatoire")
+
+# --- Decks planétaires : actifs seulement sur la planète courante ---
+
+func test_planet_deck_filtered_by_location():
+	data.cards.append({
+		"id": 99904, "label": "p_anac", "deck": "planet_anacreon",
+		"weight": 5, "lockturn": 0, "hidden": false,
+		"question": {"FR": "?"}, "conditions": [],
+	})
+	ctx.set_var("location", "terminus", true)
+	for card in model._get_eligible_cards():
+		assert_ne(int(card.get("id", 0)), 99904,
+			"deck planet_anacreon inactif depuis terminus")
+	ctx.set_var("location", "anacreon", true)
+	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
+	assert_has(ids, 99904, "deck planet_anacreon actif sur anacreon")
+
+func test_location_defaults_to_terminus_for_planet_decks():
+	data.cards.append({
+		"id": 99905, "label": "p_term", "deck": "planet_terminus",
+		"weight": 5, "lockturn": 0, "hidden": false,
+		"question": {"FR": "?"}, "conditions": [],
+	})
+	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
+	assert_has(ids, 99905, "sans location posée, on est sur terminus")

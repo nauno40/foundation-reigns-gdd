@@ -38,6 +38,7 @@ func _ready() -> void:
 		_initialize_new_reign(100)
 		_game_data.seed_planet_states(_ctx)
 		_game_data.seed_faction_relations(_ctx)
+		_ctx.set_var("location", "terminus", true)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_card_screen.setup(_game_data)
