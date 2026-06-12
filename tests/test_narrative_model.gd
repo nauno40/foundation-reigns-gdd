@@ -201,3 +201,15 @@ func test_link_alias_jump_random_changes_location():
 	var loc = str(ctx.get_var("location", ""))
 	assert_ne(loc, "terminus", "destination aléatoire différente de la planète courante")
 	assert_false(card.is_empty())
+
+# --- Deck hyperjumps : le voyage passe par une carte narrative payante ---
+
+func test_jump_alias_resolves_to_travel_card():
+	ctx.set_var("link", "_jump_kalgan")
+	var card = model.draw_card()
+	assert_eq(int(card.get("id", 0)), 25613, "_jump_kalgan mène à la carte du capitaine")
+	model.apply_outcomes(card.get("yesOutcome", []))
+	assert_eq(str(ctx.get_var("location", "")), "kalgan", "embarquer pose la destination")
+	assert_eq(ctx.get_var("commerce", 50), 45, "le voyage coûte 5 de commerce")
+	ctx.empty_non_keep()
+	assert_eq(str(ctx.get_var("location", "")), "kalgan", "location survit à la mort (toKeep)")

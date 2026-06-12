@@ -8737,5 +8737,2290 @@
 			"yes": "flattered",
 			"no": "neutral"
 		}
+	},
+	{
+		"id": 25600,
+		"label": "hj_25600",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Rossem. Un caillou gelé où les fermiers comptent leurs chèvres pour s'endormir. On m'y paie une cargaison de fourrures — embarquement dans l'heure, habillez-vous chaud."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": "Trois jours de saut. Le chauffage est en option, la compagnie des chèvres aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester ici"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "rossem",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25601,
+		"label": "hj_25601",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Smyrno, mon bon monsieur. Là-bas, même les douaniers ont des canons. Mais j'ai une cale pleine et un trou dans mon équipage qui a exactement votre silhouette."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": "Le saut vous retourne l'estomac. Le tarif aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "smyrno",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25602,
+		"label": "hj_25602",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Santanni ? C'est la saison des moussons académiques : tous les savants de la périphérie migrent vers leurs congrès. J'ai deux couchettes de libres et l'une fuit moins que l'autre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre la couchette"
+			},
+			"reaction": {
+				"FR": "Vous héritez de celle qui fuit, évidemment."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une autre fois"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25603,
+		"label": "hj_25603",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Askone. Monde charmant, si on aime être fouillé trois fois par des prêtres qui reniflent la technologie comme d'autres flairent la contrebande. Cachez votre rasoir sonique, croyez-moi."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": "Vous enterrez votre rasoir au fond du sac, sous les chaussettes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renoncer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "askone",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25604,
+		"label": "hj_25604",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Siwenna, l'ancienne perle impériale. La moitié de la ville est en ruine, l'autre moitié vous racontera pourquoi pendant des heures. Départ à l'aube."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "siwenna",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25605,
+		"label": "hj_25605",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Trantor. LA Trantor, oui. Quarante milliards d'habitants, et pas un pour vous tenir la porte. Mon cargo pue le poisson séché mais il a survécu à six contrôles impériaux — c'est une référence."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": "Le poisson séché, on s'y fait. Au bout d'un an."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "trantor",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25606,
+		"label": "hj_25606",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Un convoi de pèlerins part pour Santanni. Ils chantent des hymnes en boucle pendant tout le voyage, mais leur vaisseau est le plus sûr du secteur — l'Esprit Galactique fait office d'assurance."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Voyager avec eux"
+			},
+			"reaction": {
+				"FR": "Au troisième jour, vous connaissez tous les couplets. Au quatrième, vous les chantez."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plutôt mourir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25607,
+		"label": "hj_25607",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Korell. Le Commdor dit que c'est une république. Les statues géantes du Commdor disent autre chose. On y vend bien, on y parle peu — votre genre de destination, non ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25608,
+		"label": "hj_25608",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Sayshell, l'odeur d'encens vous prend à la descente de passerelle et ne vous lâche plus. J'y livre des cierges électriques par tonnes. Ne riez pas : meilleure marge de la périphérie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": "Vous aidez à charger les cierges. Il y en a quarante mille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "sayshell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25609,
+		"label": "hj_25609",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Retour à Terminus, patron. La bonne vieille capitale du bout du monde. On dit qu'il y fait toujours un temps de bibliothèque — ça tombe bien, c'en est une."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rentrer"
+			},
+			"reaction": {
+				"FR": "L'odeur du papier et de l'océan. Presque chez vous. Presque."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pas encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "terminus",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25610,
+		"label": "hj_25610",
+		"deck": "hyperjumps",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Un sénateur de Neotrantor affrète tout mon vaisseau pour fuir ses créanciers — pardon, pour « raisons d'État ». Il paie le passage de tous les voyageurs pour noyer sa trace. Gratuit, donc."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Profiter du sénateur"
+			},
+			"reaction": {
+				"FR": "Le sénateur passe le voyage caché dans une caisse. Vous, dans un fauteuil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Méfiance — rester"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "neotrantor",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25611,
+		"label": "hj_25611",
+		"deck": "hyperjumps",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Par la grande route du gel ? C'est plus long, mais on évite les patrouilles askoniennes. Mon ancien associé disait qu'on n'y croise que des icebergs et des regrets."
+		},
+		"conditions": [
+			{
+				"variable": "route_askone_gel",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Va pour la route du gel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hors de question"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "visite_askone",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25612,
+		"label": "hj_25612",
+		"deck": "hyperjumps",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Par la ceinture d'astéroïdes ? Plus court, plus secoué. La dernière fois, un passager a vomi son petit-déjeuner en apesanteur. On en parle encore au mess."
+		},
+		"conditions": [
+			{
+				"variable": "route_askone_ceinture",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Va pour la ceinture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plutôt pas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "visite_askone",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25613,
+		"label": "hj_25613",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Kalgan, monde du plaisir ! Casinos orbitaux, plages chauffées, et le taux de disparitions inexpliquées le plus élevé de la périphérie. Je fais l'aller-retour chaque mois. Enfin, l'aller, surtout."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": "Le capitaine sifflote. C'est mauvais signe ou bon signe, vous n'avez jamais su."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "kalgan",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25614,
+		"label": "hj_25614",
+		"deck": "hyperjumps",
+		"weight": 2000,
+		"lockturn": 90,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un message glissé dans votre manche au marché : « Trop de regards ici. Le Plan a besoin de vous ailleurs. N'importe où. Maintenant. » Pas de signature. Vous reconnaissez l'écriture."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_ailleurs",
+				"op": "above",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Disparaître"
+			},
+			"reaction": {
+				"FR": "Vous prenez le premier cargo venu sans regarder la destination."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer l'ordre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 25615,
+		"label": "hj_25615",
+		"deck": "hyperjumps",
+		"weight": 2000,
+		"lockturn": 90,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Mon réseau dit que votre visage commence à revenir un peu trop souvent dans les rapports locaux. J'ai un conteneur de fret aménagé — literie correcte, hublot en option. Destination surprise."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_ailleurs",
+				"op": "above",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Entrer dans le conteneur"
+			},
+			"reaction": {
+				"FR": "Le hublot était en option. Vous n'aviez pas pris l'option."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester à découvert"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25616,
+		"label": "hj_25616",
+		"deck": "hyperjumps",
+		"weight": 2000,
+		"lockturn": 90,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La Guilde organise sa tournée annuelle des comptoirs ! Buffets, contrats, poignées de main moites. J'ai une place dans la délégation — vous verrez du pays, et le pays vous verra."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_ailleurs",
+				"op": "above",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Joindre la tournée"
+			},
+			"reaction": {
+				"FR": "Quatorze banquets en douze jours. Votre foie déposera plainte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25617,
+		"label": "hj_25617",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Tenez, votre permis de circulation galactique tamponné. Trois mois d'attente pour un tampon. L'Empire s'effondre peut-être, mais sa bureaucratie nous enterrera tous."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre le permis"
+			},
+			"reaction": {
+				"FR": "Le tampon est de travers. Personne ne le remarquera jamais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le faire encadrer"
+			},
+			"reaction": {
+				"FR": "Le capitaine rit si fort qu'il en réveille le chat du bord."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "trigger_droit_voyage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 25618,
+		"label": "hj_25618",
+		"deck": "hyperjumps",
+		"weight": 10000,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Kalgan s'embrase et tout mon réseau avec. J'ai besoin de vous là-bas hier. Un intercepteur vous attend au dock 7 — ne discutez pas, pour une fois."
+		},
+		"conditions": [
+			{
+				"variable": "deck_kalgan_campaign",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "kalgan"
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Foncer au dock 7"
+			},
+			"reaction": {
+				"FR": "L'intercepteur décolle avant que la passerelle soit remontée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Discuter, pour une fois"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "kalgan",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 25619,
+		"label": "hj_25619",
+		"deck": "hyperjumps",
+		"weight": 300,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "« Un vieil ami de Siwenna aimerait vous parler de l'avenir de l'Empire. Il reçoit peu, et jamais deux fois. » Le messager attend votre réponse, raide comme un protocole."
+		},
+		"conditions": [
+			{
+				"variable": "rencontre_barr",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "siwenna"
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir pour Siwenna"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner l'audience"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25620,
+		"label": "hj_25620",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Une amie à moi — enfin, une relation — enfin, quelqu'un que je ne peux rien refuser — cherche un compagnon de voyage présentable pour Siwenna. Vous êtes la personne la plus présentable que je connaisse."
+		},
+		"conditions": [
+			{
+				"variable": "recette_distillerie",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "siwenna"
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rencontrer cette personne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Flairer le piège"
+			},
+			"reaction": {
+				"FR": "Vous flairez le piège. Le piège porte du parfum hors de prix."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25621,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25621,
+		"label": "hj_25621",
+		"deck": "hyperjumps",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Vous tombez bien. Mon yacht part pour Siwenna ce soir et je déteste voyager sans conversation digne de ce nom. Mes gardes du corps ne parlent que calibre et musculation."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'invitation"
+			},
+			"reaction": {
+				"FR": "Le champagne est servi avant même le décollage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser poliment"
+			},
+			"reaction": {
+				"FR": "Elle vous embarque quand même. On ne refuse pas deux fois à Dame Callia."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 25622,
+		"label": "hj_25622",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "On murmure qu'un alchimiste de Siwenna vend un sérum qui rend dix ans de jeunesse. C'est évidemment une arnaque. Évidemment. Mais si ça ne l'était pas ? J'affrète un vaisseau."
+		},
+		"conditions": [
+			{
+				"variable": "serum_jouvence",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "siwenna"
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'accompagner"
+			},
+			"reaction": {
+				"FR": "Il a déjà acheté trois fioles « en avance ». Pour analyse, dit-il."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser tomber"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25623,
+		"label": "hj_25623",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Psst. Les archivistes de Santanni paient en lingots ceux qui leur apportent des documents d'avant l'Empire. Et moi, j'ai une caisse de vieux papiers et aucune envie de lire. Associés ?"
+		},
+		"conditions": [
+			{
+				"variable": "rencontre_archivistes",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Monter l'affaire"
+			},
+			"reaction": {
+				"FR": "Sa « caisse de vieux papiers » sent la cale humide et le faux grossier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop louche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_santanni",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 25624,
+		"label": "hj_25624",
+		"deck": "hyperjumps",
+		"weight": 7500,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "C'est la foire de printemps de Korell ! Le seul moment de l'année où le Commdor sourit sur les affiches. Toute la Guilde y sera. Les absents perdent leurs parts de marché, c'est la coutume."
+		},
+		"conditions": [
+			{
+				"variable": "saison_korell",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "korell"
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 5
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir pour la foire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Perdre ses parts"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25625,
+		"label": "hj_25625",
+		"deck": "hyperjumps",
+		"weight": 4000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La foire d'automne de Korell approche. Moins de monde qu'au printemps, mais les meilleures affaires se font quand les concurrents restent au chaud. Vieux proverbe de guilde. De moi, en fait."
+		},
+		"conditions": [
+			{
+				"variable": "saison_korell",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "korell"
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir pour la foire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester au chaud"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25626,
+		"label": "hj_25626",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Je charge de l'encens pour Sayshell. Toute la soute embaume déjà — mes papiers de bord sentent la cathédrale. Une place à bord ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_neotrantor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "sayshell",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25627,
+		"label": "hj_25627",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Kalgan me réclame : ils manquent de tout, sauf de croupiers. Si vous avez des affaires à y faire, c'est le moment."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_neotrantor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "kalgan",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25628,
+		"label": "hj_25628",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Cap sur Askone. Pensez à laisser vos gadgets au port — la dernière fois, un client a voulu passer une lampe de poche. Il écrit encore à sa famille depuis leur prison."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_sayshell",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "askone",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25629,
+		"label": "hj_25629",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Je rentre sur Terminus livrer des pièces détachées. Le voyage est sans histoire, c'est mon argument de vente."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_terminus",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "terminus",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25630,
+		"label": "hj_25630",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Smyrno, départ ce soir. Je connais un douanier qui dort à son poste entre minuit et deux heures. C'est notre fenêtre."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_smyrno",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "smyrno"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "smyrno",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25631,
+		"label": "hj_25631",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "On m'envoie chercher des fourrures sur Rossem. Trois semaines de gel et de silence. Certains paient cher pour du silence, remarquez."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_trantor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "rossem",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25632,
+		"label": "hj_25632",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Santanni, monde des études. J'y conduis deux professeurs qui se détestent. Montez donc, vous arbitrerez."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_santanni",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25633,
+		"label": "hj_25633",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Trantor. J'ai un créneau d'atterrissage — un vrai, tamponné. Ça m'a coûté un rein, alors je remplis le vaisseau."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_trantor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "trantor",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25634,
+		"label": "hj_25634",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Korell demande des machines-outils et ne pose pas de questions. J'aime les clients qui ne posent pas de questions. Embarquement demain."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_korell",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25635,
+		"label": "hj_25635",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Siwenna la déchue. Mon meilleur client là-bas est un vieux patricien qui paie en livres anciens. Mon comptable pleure, moi je relie."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_siwenna",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "siwenna"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "siwenna",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25636,
+		"label": "hj_25636",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Neotrantor, la cour aux mille courtisans et trois idées. Ils paient les nouvelles fraîches au poids. Vous avez bonne mine, vous ferez l'affaire."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_askone",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "neotrantor",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25637,
+		"label": "hj_25637",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Un détour par Santanni — la grande bibliothèque rachète des doublons. Oui, on peut vivre de vendre des livres en double. Drôle d'époque."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_kalgan",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25638,
+		"label": "hj_25638",
+		"deck": "hyperjumps",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Anacréon. Royaume fier, douanes pointilleuses, et la meilleure bière d'orge de la périphérie. On y va pour la bière, officiellement."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 80
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_anacreon",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "anacreon"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
 	}
 ]

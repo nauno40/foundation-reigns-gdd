@@ -3,52 +3,41 @@
 		"action": "enddispatch"
 	},
 	"_jump_terminus": {
-		"action": "jump",
-		"planet": "terminus"
+		"node": 25609
 	},
 	"_jump_trantor": {
-		"action": "jump",
-		"planet": "trantor"
+		"node": 25605
 	},
 	"_jump_anacreon": {
 		"action": "jump",
 		"planet": "anacreon"
 	},
 	"_jump_santanni": {
-		"action": "jump",
-		"planet": "santanni"
+		"node": 25602
 	},
 	"_jump_smyrno": {
-		"action": "jump",
-		"planet": "smyrno"
+		"node": 25601
 	},
 	"_jump_askone": {
-		"action": "jump",
-		"planet": "askone"
+		"node": 25603
 	},
 	"_jump_korell": {
-		"action": "jump",
-		"planet": "korell"
+		"node": 25607
 	},
 	"_jump_siwenna": {
-		"action": "jump",
-		"planet": "siwenna"
+		"node": 25604
 	},
 	"_jump_kalgan": {
-		"action": "jump",
-		"planet": "kalgan"
+		"node": 25613
 	},
 	"_jump_neotrantor": {
-		"action": "jump",
-		"planet": "neotrantor"
+		"node": 25610
 	},
 	"_jump_rossem": {
-		"action": "jump",
-		"planet": "rossem"
+		"node": 25600
 	},
 	"_jump_sayshell": {
-		"action": "jump",
-		"planet": "sayshell"
+		"node": 25608
 	},
 	"_jump_somewhere": {
 		"action": "jump_random"
