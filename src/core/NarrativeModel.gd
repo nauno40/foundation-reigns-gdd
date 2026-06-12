@@ -14,9 +14,15 @@ func draw_card() -> Dictionary:
 	var link = str(_ctx.get_var("link", ""))
 	if link != "" and link != "0":
 		_ctx.set_var("link", "")
-		var linked = _data.get_card_by_id(int(link))
-		if not linked.is_empty():
-			return linked
+		if link.begins_with("_"):
+			var resolved = _resolve_alias(link)
+			if not resolved.is_empty():
+				return resolved
+			# alias d'action ou inconnu : retombe sur le tirage aléatoire
+		else:
+			var linked = _data.get_card_by_id(int(link))
+			if not linked.is_empty():
+				return linked
 
 	var eligible = _get_eligible_cards()
 	if eligible.is_empty():
@@ -24,6 +30,24 @@ func draw_card() -> Dictionary:
 		return {}
 
 	return _weighted_random(eligible)
+
+# Alias système du jeu de base : {"node": id} force une carte,
+# {"action": ...} déclenche un effet moteur puis rend la main au tirage.
+func _resolve_alias(alias: String) -> Dictionary:
+	var entry: Dictionary = _data.link_aliases.get(alias, {})
+	if entry.is_empty():
+		push_warning("NarrativeModel: alias de link inconnu '%s'" % alias)
+		return {}
+	if entry.has("node"):
+		return _data.get_card_by_id(int(entry["node"]))
+	match entry.get("action", ""):
+		"enddispatch":
+			pass  # rien : retour au tirage aléatoire
+		"jump":
+			_ctx.set_var("location", str(entry.get("planet", "terminus")), true)
+		_:
+			push_warning("NarrativeModel: action d'alias inconnue '%s'" % str(entry.get("action")))
+	return {}
 
 func _get_eligible_cards() -> Array:
 	var eligible: Array = []
@@ -77,11 +101,17 @@ func mark_card_seen(card: Dictionary) -> void:
 func apply_outcomes(outcomes: Array) -> void:
 	for outcome in outcomes:
 		var variable: String = outcome.get("variable", "")
-		var int_value: int = outcome.get("intValue", 0)
+		var int_value = outcome.get("intValue", 0)
 		var add_op: bool = outcome.get("addOperation", true)
 		var to_keep: bool = outcome.get("toKeep", false)
 
 		if variable == "":
+			continue
+
+		# stringValue (format du jeu de base) — force le mode "set"
+		var sv = str(outcome.get("stringValue", ""))
+		if sv != "":
+			_ctx.set_var(variable, sv, to_keep)
 			continue
 
 		if add_op:

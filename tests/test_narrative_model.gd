@@ -124,3 +124,34 @@ func test_crisis_trigger_not_eligible_once_resolved():
 	ctx.set_var("seldon_crisis_1", 1, true)
 	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
 	assert_does_not_have(ids, 8001, "8001 ne doit pas revenir une fois la crise résolue")
+
+# --- Aliases de link (structure du jeu de base) ---
+
+func test_link_alias_node_resolves():
+	data.link_aliases["_test_alias"] = {"node": 1002}
+	ctx.set_var("link", "_test_alias")
+	var card = model.draw_card()
+	assert_eq(card.get("id"), 1002, "un alias {node} force la carte cible")
+
+func test_link_alias_enddispatch_returns_to_pool():
+	ctx.set_var("link", "_enddispatch")
+	var card = model.draw_card()
+	assert_false(card.is_empty(), "_enddispatch retombe sur le tirage aléatoire")
+	assert_eq(str(ctx.get_var("link", "")), "", "link consommé")
+
+func test_link_alias_jump_changes_location():
+	ctx.set_var("link", "_jump_anacreon")
+	var card = model.draw_card()
+	assert_eq(ctx.get_var("location", ""), "anacreon", "le saut change la planète")
+	assert_false(card.is_empty(), "après le saut, tirage normal")
+
+func test_link_unknown_alias_falls_back():
+	ctx.set_var("link", "_alias_inconnu")
+	var card = model.draw_card()
+	assert_false(card.is_empty(), "alias inconnu : avertissement + tirage normal")
+
+func test_outcome_string_value_sets_link_alias():
+	# les cartes posent les aliases via stringValue (format du jeu de base)
+	model.apply_outcomes([{"variable": "link", "stringValue": "_enddispatch",
+		"intValue": 0, "addOperation": false, "toKeep": false}])
+	assert_eq(str(ctx.get_var("link", "")), "_enddispatch")

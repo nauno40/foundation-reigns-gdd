@@ -1,0 +1,15 @@
+{
+	"_enddispatch": {"action": "enddispatch"},
+	"_jump_terminus":   {"action": "jump", "planet": "terminus"},
+	"_jump_trantor":    {"action": "jump", "planet": "trantor"},
+	"_jump_anacreon":   {"action": "jump", "planet": "anacreon"},
+	"_jump_santanni":   {"action": "jump", "planet": "santanni"},
+	"_jump_smyrno":     {"action": "jump", "planet": "smyrno"},
+	"_jump_askone":     {"action": "jump", "planet": "askone"},
+	"_jump_korell":     {"action": "jump", "planet": "korell"},
+	"_jump_siwenna":    {"action": "jump", "planet": "siwenna"},
+	"_jump_kalgan":     {"action": "jump", "planet": "kalgan"},
+	"_jump_neotrantor": {"action": "jump", "planet": "neotrantor"},
+	"_jump_rossem":     {"action": "jump", "planet": "rossem"},
+	"_jump_sayshell":   {"action": "jump", "planet": "sayshell"}
+}
