@@ -49,6 +49,7 @@ func _ready() -> void:
 	_card_screen.map_requested.connect(_on_map_pressed)
 	_death_screen.continue_pressed.connect(_on_new_reign)
 	_galaxy_map.visibility_changed.connect(_on_map_visibility_changed)
+	_galaxy_map.jump_requested.connect(_on_jump_requested)
 
 	_generate_equ_watermark()
 	_next_card()
@@ -200,6 +201,11 @@ func _on_map_pressed() -> void:
 	_galaxy_map.update(_ctx)
 	_galaxy_map.show()
 	_card_screen.hide()
+
+func _on_jump_requested(planet_id: String) -> void:
+	_ctx.set_var("link", "_jump_" + planet_id)
+	_save.save(_ctx)
+	_next_card()
 
 func _on_map_visibility_changed() -> void:
 	if not _galaxy_map.visible and not _death_screen.visible:

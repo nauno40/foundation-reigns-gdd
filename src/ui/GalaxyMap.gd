@@ -1,9 +1,12 @@
 class_name GalaxyMap
 extends Control
 
-# Carte galactique statique : 12 points lumineux colorés par l'état de la
+# Carte galactique interactive : 12 points lumineux colorés par l'état de la
 # planète (vert alignée / gris neutre / rouge hostile), clic → popup
-# (nom, faction, état). Fermeture via ✕.
+# (nom, faction, état, bouton VOYAGER si planète ≠ position actuelle).
+# Fermeture via ✕. Voyage : émet jump_requested(planet_id).
+
+signal jump_requested(planet_id: String)
 
 const ThemeColors = preload("res://src/ui/ThemeColors.gd")
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
@@ -39,6 +42,8 @@ const PLANET_POS = {
 var _game_data: FoundationGameData
 var _ctx_ref: Context
 var _buttons: Dictionary = {}
+var _travel_btn: Button
+var _popup_planet: String = ""
 
 func _ready() -> void:
 	_close_btn.pressed.connect(_on_close)
@@ -46,6 +51,15 @@ func _ready() -> void:
 	_popup.hide()
 	_build_planets()
 	_map_area.resized.connect(_position_planets)
+
+	# Bouton de voyage ajouté dynamiquement dans la VBox du popup
+	_travel_btn = Button.new()
+	_travel_btn.text = "VOYAGER →"
+	_travel_btn.focus_mode = Control.FOCUS_NONE
+	_travel_btn.add_theme_font_override("font", FONT_MONO)
+	_travel_btn.add_theme_font_size_override("font_size", 10)
+	_travel_btn.pressed.connect(_on_travel_pressed)
+	%PopupState.get_parent().add_child(_travel_btn)
 
 func _on_close() -> void:
 	_popup.hide()
@@ -93,6 +107,11 @@ func update(ctx: Context) -> void:
 		var state: int = ctx.get_var("planet_%s_state" % planet_id, 0)
 		_style_planet(_buttons[planet_id], state)
 
+func _on_travel_pressed() -> void:
+	_popup.hide()
+	hide()
+	jump_requested.emit(_popup_planet)
+
 func _style_planet(btn: Button, state: int) -> void:
 	var color := COLOR_NEUTRAL
 	match state:
@@ -122,3 +141,9 @@ func _on_planet_pressed(planet_id: String) -> void:
 	_popup_state.text = "État : " + state_text.get(state, "?")
 	_popup_state.add_theme_color_override("font_color", state_color.get(state, ThemeColors.INK_DIM))
 	_popup.show()
+
+	# Mémoriser la planète et afficher le bouton VOYAGER si ce n'est pas
+	# la planète actuelle du Speaker
+	_popup_planet = planet_id
+	var here: String = str(_ctx_ref.get_var("location", "terminus"))
+	_travel_btn.visible = planet_id != here
