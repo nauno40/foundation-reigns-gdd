@@ -118,6 +118,15 @@ if aliases:
             check(entry.get("planet") in {p["id"] for p in planets},
                   f"alias '{name}': planète inconnue '{entry.get('planet')}'")
 
+# Références d'aliases dans les cartes : tout link "_xxx" doit être enregistré
+if aliases and cards:
+    for c in cards:
+        for outcome in c.get("yesOutcome",[]) + c.get("noOutcome",[]) + c.get("loadOutcome",[]):
+            sv = str(outcome.get("stringValue", ""))
+            if outcome.get("variable") == "link" and sv.startswith("_"):
+                check(sv in aliases,
+                      f"card {c.get('id','?')}: alias de link non enregistré '{sv}'")
+
 # --- roles.json ---
 roles = load("roles.json")
 if roles:
