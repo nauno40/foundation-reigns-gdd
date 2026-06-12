@@ -49,6 +49,13 @@ Each card is a Dictionary with these keys:
 - `loadOutcome[]`, `yesOutcome[]`, `noOutcome[]` — each outcome: `{variable, intValue, addOperation (+=|set), toKeep}`
 - `question`, `leftAnswer.title`, `leftAnswer.reaction`, `rightAnswer.title`, `rightAnswer.reaction` — localized dicts with `"FR"` key (fallback to `"EN"`)
 - `moods` — `{default, yes, no}` strings
+- `link` outcomes accept node IDs or string aliases (`_enddispatch`, `_jump_<planet>`,
+  see `data/link_aliases.json`); `weight: -1` = link-only card; `bearer` accepts
+  `"role:<id>"` (persistent institutional roles, `data/roles.json`); `planet_<id>`
+  decks are gated by the `location` context variable.
+- Production pipeline: `tools/extract_skeletons.py` → fill `data/skeletons/<deck>.json`
+  → `tools/check_structure.py` (structural 1:1 clone of the base game, see
+  `docs/superpowers/specs/2026-06-12-clone-structurel-reigns-design.md`).
 
 ## Context Variables
 

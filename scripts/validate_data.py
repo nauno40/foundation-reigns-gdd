@@ -107,6 +107,23 @@ if cards:
                     fid = var[len("relation_"):]
                     check(fid in faction_ids, f"card {c.get('id','?')}: unknown faction '{fid}' in outcome")
 
+# --- link_aliases.json ---
+aliases = load("link_aliases.json")
+if aliases:
+    for name, entry in aliases.items():
+        check(name.startswith("_"), f"alias '{name}' doit commencer par _")
+        check(("node" in entry) != ("action" in entry),
+              f"alias '{name}': exactement un de node/action requis")
+        if entry.get("action") == "jump" and planets:
+            check(entry.get("planet") in {p["id"] for p in planets},
+                  f"alias '{name}': planète inconnue '{entry.get('planet')}'")
+
+# --- roles.json ---
+roles = load("roles.json")
+if roles:
+    for rid, r in roles.items():
+        check("title" in r, f"role '{rid}' sans title")
+
 # --- Report ---
 if errors:
     print(f"VALIDATION FAILED — {len(errors)} error(s):")

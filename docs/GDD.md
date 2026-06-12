@@ -837,6 +837,13 @@ Convention moteur (11/06/2026) : les cartes `hidden: true` sont réservées aux 
 - 🔲 Deck `new_speaker` : variantes de la carte de mort naturelle
 - 🔲 Cartes variantes de mood (règle §2.6)
 
+### 🆕 Refonte contenu (12/06/2026) — clone structurel 1:1 du jeu de base
+Le plan de contenu ci-dessus est remplacé par le clone structurel des 67 decks du
+jeu de base (voir `docs/superpowers/specs/2026-06-12-clone-structurel-reigns-design.md`).
+Moteur prêt (aliases de link, location/voyage, rôles persistants, weight -1) ; phases
+de contenu 1–5 à venir, deck par deck, avec diff structurel automatique
+(`tools/check_structure.py`).
+
 ### Phase 5 — Polish (2–3 j) 🔲
 - Calibrage : seuils de danger, mort naturelle, couloirs Seldon, scores et rangs
 - Difficulté (§2.13) + méta-sauvegarde
