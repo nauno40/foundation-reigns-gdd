@@ -96,16 +96,29 @@ func _get_eligible_cards() -> Array:
 
 	return eligible
 
+# Intermède de renaissance (deck new_speaker, jeu de base) : les cartes
+# w=-1 visibles sont dispatchées par conditions au début du règne, la
+# plus spécifique d'abord — même règle que les cartes de mort.
+func find_interlude_card() -> Dictionary:
+	return _find_dispatched_card("new_speaker")
+
 # Mort narrative (deck deaths, jeu de base) : carte déclencheur dont les
 # conditions correspondent à l'état fatal. La plus spécifique (plus de
 # conditions) l'emporte — la variante de rang prime sur la générique.
 func find_death_card() -> Dictionary:
+	return _find_dispatched_card("deaths")
+
+func _find_dispatched_card(deck: String) -> Dictionary:
 	var best: Dictionary = {}
 	var best_count := -1
-	for card in _data.cards_by_deck.get("deaths", []):
-		if card.get("hidden", false):
+	for card in _data.cards:
+		if str(card.get("deck", "")) != deck:
+			continue
+		if card.get("hidden", false) or int(card.get("weight", 1)) >= 0:
 			continue
 		var conditions: Array = card.get("conditions", [])
+		if conditions.is_empty():
+			continue
 		if not _evaluator.evaluate_all(conditions, _ctx._vars):
 			continue
 		if conditions.size() > best_count:

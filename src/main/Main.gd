@@ -219,10 +219,14 @@ func _on_new_reign() -> void:
 	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
 	_ctx.apply_cover(cover)
 
-	# Le pont entre règnes s'ouvre (structure du jeu de base : after_death)
+	# Le pont entre règnes s'ouvre (structure du jeu de base : after_death) ;
+	# un intermède conditionnel peut être dispatché en première carte
 	_ctx.set_var("deck_new_speaker", 1)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
+	var interlude = _model.find_interlude_card()
+	if not interlude.is_empty():
+		_ctx.set_var("link", str(int(interlude.get("id", 0))))
 	_death_screen.hide()
 	_card_screen.show()
 	_next_card()

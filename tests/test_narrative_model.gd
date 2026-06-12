@@ -232,3 +232,23 @@ func test_find_death_card_prefers_rank_variant():
 func test_find_death_card_empty_when_alive():
 	var card = model.find_death_card()
 	assert_true(card.is_empty(), "pas de carte de mort quand tout va bien")
+
+# --- Intermède : dispatch des cartes w=-1 de new_speaker à la renaissance ---
+
+func test_find_interlude_card_matches_conditions():
+	data.cards.append({
+		"id": 99906, "label": "interlude_test", "deck": "new_speaker",
+		"weight": -1, "lockturn": 0, "hidden": false,
+		"question": {"FR": "?"},
+		"conditions": [{"variable": "turns", "op": "equal", "value": 0},
+			{"variable": "times_died", "op": "above", "value": 3}],
+	})
+	ctx.set_var("turns", 0)
+	ctx.set_var("times_died", 5)
+	var card = model.find_interlude_card()
+	assert_eq(int(card.get("id", 0)), 99906, "l'intermède conditionnel est dispatché")
+
+func test_find_interlude_card_empty_when_no_match():
+	ctx.set_var("turns", 0)
+	var card = model.find_interlude_card()
+	assert_true(card.is_empty(), "aucun intermède sans conditions remplies")
