@@ -22,21 +22,21 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "boat"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_askone"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_askone"
 				}
 			],
 			"question": "",
@@ -60,16 +60,16 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.items_overboard_river"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "boat"
 				}
 			],
 			"yesOutcome": [
@@ -120,7 +120,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou_river"
 				}
 			],
 			"yesOutcome": [
@@ -182,7 +182,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "boat"
 				},
 				{
 					"variable": "military",
@@ -233,10 +233,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.paddling_hard"
 				}
 			],
 			"yesOutcome": [
@@ -261,7 +261,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "boat"
 				},
 				{
 					"variable": "link",
@@ -290,10 +290,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.man_overboard"
 				}
 			],
 			"yesOutcome": [
@@ -345,7 +345,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -7,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "boat"
 				},
 				{
 					"variable": "link",
@@ -382,15 +382,16 @@
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 1
+					"value": 1,
+					"custom_name": "boat"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.upturnedboat_river"
 				}
 			],
 			"yesOutcome": [
@@ -429,7 +430,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "boat"
 				}
 			],
 			"loadOutcome": [
@@ -437,14 +439,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou_river"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "military",
@@ -461,7 +463,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "military",
@@ -498,7 +500,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stamina"
 				}
 			],
 			"yesOutcome": [
@@ -512,7 +514,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_askone"
 				},
 				{
 					"variable": "military",
@@ -544,7 +546,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stamina"
 				}
 			],
 			"yesOutcome": [
@@ -596,7 +598,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou_mountain"
 				}
 			],
 			"yesOutcome": [
@@ -621,7 +623,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stamina"
 				}
 			],
 			"question": "",
@@ -654,7 +656,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou_mountain"
 				}
 			],
 			"yesOutcome": [
@@ -684,7 +686,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stamina"
 				}
 			],
 			"question": "",
@@ -768,7 +770,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -8,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stamina"
 				},
 				{
 					"variable": "link",
@@ -810,7 +812,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hallucinated"
 				}
 			],
 			"yesOutcome": [
@@ -859,7 +861,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stamina"
 				},
 				{
 					"variable": "link",
@@ -891,7 +893,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "animal"
 				}
 			],
 			"yesOutcome": [
@@ -932,7 +934,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "animal"
 				}
 			],
 			"yesOutcome": [
@@ -971,7 +973,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "hallucinated"
 				},
 				{
 					"variable": "commerce",
@@ -1016,12 +1019,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "hallucinated"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "stamina"
 				}
 			],
 			"loadOutcome": [],
@@ -1143,14 +1148,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou_mountain"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "politics",
@@ -1162,7 +1167,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "politics",
@@ -1192,7 +1197,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 5
+					"value": "neotrantor"
 				}
 			],
 			"loadOutcome": [],
@@ -1232,7 +1237,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "visit_yizhou_river"
 				}
 			],
 			"loadOutcome": [],
@@ -1241,7 +1247,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bring_silk_to_jingzhou"
 				},
 				{
 					"variable": "commerce",
@@ -1275,7 +1281,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bring_silk_to_hanzhong"
 				},
 				{
 					"variable": "commerce",
@@ -1306,12 +1312,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "weaver"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 5
+					"value": "neotrantor"
 				}
 			],
 			"loadOutcome": [],
@@ -1325,7 +1332,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "weaver"
 				},
 				{
 					"variable": "politics",
@@ -1743,7 +1750,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "weaver"
 				}
 			],
 			"yesOutcome": [
@@ -1818,7 +1825,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "weaver"
 				}
 			],
 			"yesOutcome": [
@@ -1851,17 +1858,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "weaver"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "weaver"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 5
+					"value": "neotrantor"
 				}
 			],
 			"loadOutcome": [],
@@ -1906,12 +1915,13 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "weaver"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "deck",
@@ -1974,7 +1984,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "trade_secret"
 				},
 				{
 					"variable": "deck",
@@ -1984,7 +1994,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_askone"
 				},
 				{
 					"variable": "religion",
@@ -2026,17 +2036,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "visit_yizhou_river"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "bring_silk_to_jingzhou"
 				}
 			],
 			"loadOutcome": [],
@@ -2045,7 +2057,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bring_silk_to_jingzhou"
 				},
 				{
 					"variable": "commerce",
@@ -2076,17 +2088,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 5
+					"value": "neotrantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "visit_yizhou_mountain"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "bring_silk_to_hanzhong"
 				}
 			],
 			"loadOutcome": [],
@@ -2095,7 +2109,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bring_silk_to_hanzhong"
 				},
 				{
 					"variable": "commerce",
@@ -2126,12 +2140,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "bring_silk_to_jingzhou"
 				}
 			],
 			"loadOutcome": [
@@ -2139,7 +2154,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bring_silk_to_jingzhou"
 				}
 			],
 			"yesOutcome": [
@@ -2178,12 +2193,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 4
+					"value": "askone"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "bring_silk_to_hanzhong"
 				}
 			],
 			"loadOutcome": [
@@ -2191,7 +2207,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bring_silk_to_hanzhong"
 				}
 			],
 			"yesOutcome": [

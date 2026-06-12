@@ -60,12 +60,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "macaques"
 				}
 			],
 			"loadOutcome": [],
@@ -84,7 +85,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_macaque_home"
 				}
 			],
 			"noOutcome": [
@@ -123,7 +124,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "macaques"
 				}
 			],
 			"yesOutcome": [
@@ -165,7 +166,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				}
@@ -583,13 +584,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_macaque_home"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "macaques"
 				}
 			],
 			"yesOutcome": [
@@ -627,10 +628,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.simple_chime"
 				}
 			],
 			"yesOutcome": [
@@ -873,7 +874,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate_peach_blossoms"
 				},
 				{
 					"variable": "military",

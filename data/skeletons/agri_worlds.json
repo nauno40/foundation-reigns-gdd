@@ -20,12 +20,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [],
@@ -34,13 +35,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "eaten_raw_fish"
 				},
 				{
 					"variable": "politics",
@@ -58,7 +59,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "politics",
@@ -93,12 +94,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -106,7 +108,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -114,7 +116,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "eaten_raw_fish"
 				},
 				{
 					"variable": "politics",
@@ -161,17 +163,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "eaten_raw_fish"
 				}
 			],
 			"loadOutcome": [
@@ -179,7 +183,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -228,17 +232,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "eaten_raw_fish"
 				}
 			],
 			"loadOutcome": [
@@ -246,7 +252,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -266,7 +272,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "eaten_raw_fish"
 				},
 				{
 					"variable": "politics",
@@ -301,12 +307,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -314,7 +321,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -322,7 +329,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "eaten_raw_fish"
 				},
 				{
 					"variable": "politics",
@@ -374,12 +381,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -387,7 +395,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -402,7 +410,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "eaten_raw_fish"
 				},
 				{
 					"variable": "politics",
@@ -436,10 +444,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.knife_sharpening"
 				}
 			],
 			"yesOutcome": [
@@ -478,17 +486,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -496,7 +506,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -545,17 +555,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -563,7 +575,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -612,17 +624,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -630,7 +644,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -669,17 +683,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [
@@ -687,7 +703,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -770,17 +786,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 6
+					"value": 6,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "eaten_raw_fish"
 				}
 			],
 			"loadOutcome": [],
@@ -860,22 +879,25 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 6
+					"value": 6,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 10
+					"value": 10,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "eaten_raw_fish"
 				}
 			],
 			"loadOutcome": [
@@ -883,7 +905,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fish_diplomacy"
 				}
 			],
 			"yesOutcome": [
@@ -932,12 +954,13 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 9
+					"value": 9,
+					"custom_name": "fish_diplomacy"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [],
@@ -1055,7 +1078,8 @@
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 2
+					"value": 2,
+					"custom_name": "eaten_raw_fish"
 				}
 			],
 			"loadOutcome": [],
@@ -1064,7 +1088,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "raw_fish"
 				},
 				{
 					"variable": "deck",
@@ -1082,7 +1106,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "raw_fish"
 				},
 				{
 					"variable": "deck",
@@ -1117,7 +1141,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "eaten_raw_fish"
 				}
 			],
 			"loadOutcome": [],
@@ -1126,7 +1151,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "raw_fish"
 				},
 				{
 					"variable": "deck",
@@ -1144,7 +1169,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "raw_fish"
 				},
 				{
 					"variable": "deck",

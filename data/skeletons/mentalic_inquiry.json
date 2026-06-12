@@ -20,17 +20,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -38,7 +40,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_neotrantor"
 				},
 				{
 					"variable": "religion",
@@ -75,17 +77,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [
@@ -93,7 +97,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -134,19 +138,19 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_front"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				}
 			],
 			"yesOutcome": [],
@@ -175,19 +179,19 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_front"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				}
 			],
 			"yesOutcome": [],
@@ -216,19 +220,19 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_front"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				}
 			],
 			"yesOutcome": [],
@@ -257,19 +261,19 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_front"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				}
 			],
 			"yesOutcome": [],
@@ -296,7 +300,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "seen",
@@ -518,7 +523,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				}
 			],
 			"yesOutcome": [],
@@ -545,12 +550,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [
@@ -558,7 +564,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -612,12 +618,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "seen",
@@ -630,7 +637,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -669,21 +676,22 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.faint_bell"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -722,7 +730,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -750,12 +759,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -783,12 +794,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -816,7 +829,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -844,7 +858,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -872,12 +887,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "seen",
@@ -890,7 +906,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -929,7 +945,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [
@@ -937,7 +954,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -976,7 +993,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1004,12 +1022,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -1037,12 +1057,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -1070,7 +1092,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1098,7 +1121,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1126,12 +1150,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "seen",
@@ -1178,7 +1203,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_answer_fox"
 				},
 				{
 					"variable": "link",
@@ -1191,7 +1216,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_answer_fox"
 				},
 				{
 					"variable": "link",
@@ -1291,7 +1316,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"yesOutcome": [
@@ -1330,7 +1355,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [
@@ -1338,7 +1364,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_winterborn"
 				}
 			],
 			"yesOutcome": [
@@ -1377,7 +1403,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [
@@ -1385,7 +1412,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_winterborn"
 				}
 			],
 			"yesOutcome": [
@@ -1424,7 +1451,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1452,7 +1480,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [
@@ -1460,7 +1489,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "$ghost_winterborn"
 				}
 			],
 			"yesOutcome": [
@@ -1499,7 +1528,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [
@@ -1507,7 +1537,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_winterborn"
 				}
 			],
 			"yesOutcome": [
@@ -1546,7 +1576,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1574,7 +1605,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1624,7 +1656,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_front"
 				}
 			],
 			"loadOutcome": [],
@@ -1673,10 +1706,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.spooky_sound"
 				}
 			],
 			"yesOutcome": [
@@ -1817,7 +1850,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -1857,7 +1891,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -1951,17 +1986,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2001,17 +2039,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2051,17 +2092,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2077,7 +2121,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"question": "",
@@ -2102,17 +2146,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2128,7 +2175,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"question": "",
@@ -2153,17 +2200,20 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2203,17 +2253,20 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2253,17 +2306,20 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2279,7 +2335,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"question": "",
@@ -2304,17 +2360,20 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_fox"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_winterborn"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_answer_fox"
 				}
 			],
 			"loadOutcome": [],
@@ -2330,7 +2389,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow_sanity"
 				}
 			],
 			"question": "",
@@ -2357,19 +2416,19 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				}
 			],
 			"yesOutcome": [
@@ -2566,7 +2625,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "deck",
@@ -2736,22 +2795,25 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "widow_sanity"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [
@@ -2759,7 +2821,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "deck",
@@ -2791,12 +2853,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -2836,12 +2899,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -2881,12 +2945,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -2928,7 +2993,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghosthunting"
 				},
 				{
 					"variable": "deck",

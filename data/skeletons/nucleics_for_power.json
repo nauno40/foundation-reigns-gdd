@@ -20,17 +20,19 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -38,7 +40,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"noOutcome": [],
@@ -64,12 +66,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "wine_for_power"
 				}
 			],
 			"loadOutcome": [],
@@ -121,13 +124,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_wei_hong"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_for_power"
 				}
 			],
 			"yesOutcome": [
@@ -165,12 +168,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"loadOutcome": [],
@@ -179,7 +183,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_recipe"
 				}
 			],
 			"noOutcome": [],
@@ -210,7 +214,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "wine_for_power"
 				}
 			],
 			"loadOutcome": [],
@@ -219,13 +224,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_making"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "politics",
@@ -267,17 +272,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "made_wine"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 4
+					"value": 4,
+					"custom_name": "wine_for_power"
 				}
 			],
 			"loadOutcome": [],
@@ -313,13 +321,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_making"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "deck",
@@ -337,7 +345,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				}
 			],
 			"noOutcome": [
@@ -529,13 +537,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "party",
@@ -558,13 +566,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "commerce",
@@ -597,7 +605,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				},
 				{
 					"variable": "politics",
@@ -610,7 +618,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				},
 				{
 					"variable": "religion",
@@ -773,7 +781,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "deck",
@@ -783,7 +791,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "wine_recipe"
 				}
 			],
 			"loadOutcome": [],
@@ -1000,7 +1009,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_recipe"
 				}
 			],
 			"noOutcome": [
@@ -1008,7 +1017,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_recipe"
 				},
 				{
 					"variable": "politics",

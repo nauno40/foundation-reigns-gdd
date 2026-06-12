@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [],
@@ -106,7 +106,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mi_zhu"
 				}
 			],
 			"yesOutcome": [],
@@ -133,17 +133,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_tao_qian"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "mi_zhu"
 				}
 			],
 			"loadOutcome": [],
@@ -159,7 +161,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mi_zhu"
 				},
 				{
 					"variable": "religion",
@@ -194,12 +196,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_tao_qian"
 				}
 			],
 			"loadOutcome": [],
@@ -322,7 +325,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [],
@@ -416,17 +419,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "pagoda"
 				}
 			],
 			"loadOutcome": [],
@@ -479,7 +484,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "pagoda"
 				},
 				{
 					"variable": "politics",
@@ -575,7 +580,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "politics",
@@ -585,7 +590,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_tao_qian"
 				},
 				{
 					"variable": "seen",
@@ -637,7 +643,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_tao_qian"
 				}
 			],
 			"yesOutcome": [
@@ -645,7 +651,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "religion",
@@ -658,7 +664,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "commerce",
@@ -688,17 +694,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "cede_xuzhou"
 				}
 			],
 			"loadOutcome": [
@@ -706,7 +714,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cede_xuzhou"
 				}
 			],
 			"yesOutcome": [
@@ -812,7 +820,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "military",
@@ -849,17 +857,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "cede_xuzhou"
 				}
 			],
 			"loadOutcome": [
@@ -867,7 +877,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cede_xuzhou"
 				}
 			],
 			"yesOutcome": [
@@ -926,7 +936,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [],
@@ -935,7 +946,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -1025,17 +1036,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "cede_xuzhou"
 				}
 			],
 			"loadOutcome": [
@@ -1043,13 +1056,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cede_xuzhou"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mi_zhu"
 				}
 			],
 			"yesOutcome": [
@@ -1062,7 +1075,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_successor"
 				},
 				{
 					"variable": "politics",

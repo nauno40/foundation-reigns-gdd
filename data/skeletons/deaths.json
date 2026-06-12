@@ -25,7 +25,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -67,23 +68,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -150,23 +151,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -196,7 +197,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -238,23 +240,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -321,23 +323,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -367,7 +369,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -409,23 +412,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -492,23 +495,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -538,7 +541,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -580,23 +584,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -663,23 +667,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -709,7 +713,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -751,23 +756,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -834,23 +839,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -880,7 +885,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -922,23 +928,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1005,23 +1011,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1051,7 +1057,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -1093,23 +1100,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1176,23 +1183,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1222,7 +1229,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -1264,23 +1272,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1347,23 +1355,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1390,23 +1398,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1433,23 +1441,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1476,23 +1484,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1519,23 +1527,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1562,23 +1570,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1605,23 +1613,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1648,23 +1656,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1691,23 +1699,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1734,23 +1742,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1777,23 +1785,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1820,23 +1828,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1863,23 +1871,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1906,23 +1914,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1949,23 +1957,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -1992,23 +2000,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -2035,23 +2043,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -2078,23 +2086,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -2121,23 +2129,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -2164,23 +2172,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -2207,23 +2215,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -2250,23 +2258,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",

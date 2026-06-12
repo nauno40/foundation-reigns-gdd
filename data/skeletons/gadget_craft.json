@@ -20,22 +20,24 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "made_wine"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 6
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 9
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [],
@@ -80,22 +82,24 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "made_wine"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 1
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 5
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [],
@@ -140,7 +144,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "made_wine"
 				},
 				{
 					"variable": "commerce",
@@ -150,7 +155,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [],
@@ -197,7 +203,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"yesOutcome": [
@@ -236,16 +242,16 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_ricepour"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				},
 				{
 					"variable": "link",
@@ -260,16 +266,16 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_winefilter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"question": "",
@@ -294,22 +300,23 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_ricepour"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				},
 				{
 					"variable": "link",
@@ -324,16 +331,16 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_winefilter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"question": "",
@@ -358,22 +365,23 @@
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 6
+					"value": 6,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_ricepour"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				},
 				{
 					"variable": "link",
@@ -388,16 +396,16 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_winefilter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"question": "",
@@ -422,22 +430,23 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 5
+					"value": 5,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_ricepour"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				},
 				{
 					"variable": "link",
@@ -452,10 +461,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.winemaker_winefilter"
 				},
 				{
 					"variable": "link",
@@ -485,7 +494,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 9
+					"value": 9,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [
@@ -493,13 +503,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "made_wine"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"yesOutcome": [],
@@ -526,7 +536,8 @@
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 9
+					"value": 9,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [
@@ -534,7 +545,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"yesOutcome": [
@@ -567,7 +578,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 9
+					"value": 9,
+					"custom_name": "rice_batch"
 				}
 			],
 			"loadOutcome": [
@@ -575,7 +587,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_batch"
 				}
 			],
 			"yesOutcome": [

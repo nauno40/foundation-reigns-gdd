@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "year",
@@ -72,7 +72,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_kong_rong"
 				}
 			],
 			"yesOutcome": [
@@ -113,13 +113,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_kong_rong"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "kong_rong"
 				}
 			],
 			"yesOutcome": [
@@ -158,12 +158,13 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "save_beihai"
 				},
 				{
 					"variable": "year",
@@ -171,14 +172,15 @@
 					"value": 192
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 6
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "kong_rong"
 				}
 			],
 			"loadOutcome": [],
@@ -187,12 +189,12 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "save_beihai"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				},
 				{
 					"variable": "military",
@@ -234,7 +236,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "year",
@@ -242,14 +244,15 @@
 					"value": 192
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 6
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "kong_rong"
 				}
 			],
 			"loadOutcome": [
@@ -257,7 +260,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "save_beihai"
 				}
 			],
 			"yesOutcome": [
@@ -303,23 +306,23 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.taishi_ci"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.taishi_ci"
 				}
 			],
 			"question": "",
@@ -346,7 +349,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "save_beihai"
 				}
 			],
 			"yesOutcome": [
@@ -409,13 +412,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "save_beihai"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "kong_rong"
 				},
 				{
 					"variable": "planet_state",
@@ -487,12 +490,13 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "battle_yuan_tan"
 				},
 				{
 					"variable": "year",
@@ -502,7 +506,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "kong_rong"
 				}
 			],
 			"loadOutcome": [],
@@ -511,12 +516,12 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle_yuan_tan"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				}
 			],
 			"noOutcome": [],
@@ -542,7 +547,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "year",
@@ -552,7 +557,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "kong_rong"
 				}
 			],
 			"loadOutcome": [
@@ -560,7 +566,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle_yuan_tan"
 				}
 			],
 			"yesOutcome": [
@@ -601,7 +607,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				}
 			],
 			"yesOutcome": [
@@ -660,10 +666,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yuan_tan"
 				},
 				{
 					"variable": "military",
@@ -673,10 +679,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yuan_tan"
 				},
 				{
 					"variable": "military",
@@ -708,7 +714,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle_yuan_tan"
 				},
 				{
 					"variable": "planet_state",
@@ -790,7 +796,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "governor_beihai"
 				},
 				{
 					"variable": "deck",
@@ -850,7 +856,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "governor_beihai"
 				},
 				{
 					"variable": "deck",
@@ -958,7 +964,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"noOutcome": [
@@ -970,7 +976,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"question": "",
@@ -1000,7 +1006,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "governor_beihai"
 				}
 			],
 			"loadOutcome": [
@@ -1008,7 +1015,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -1072,7 +1079,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "governor_beihai"
 				}
 			],
 			"loadOutcome": [

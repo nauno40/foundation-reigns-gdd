@@ -23,12 +23,12 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_korell"
 				},
 				{
 					"variable": "military",
@@ -65,12 +65,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "marry_shangxiang"
 				}
 			],
 			"loadOutcome": [],
@@ -79,7 +80,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "religion",
@@ -121,10 +122,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.sword_fight"
 				}
 			],
 			"noOutcome": [
@@ -132,7 +133,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "military",
@@ -170,7 +171,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "military",
@@ -207,17 +208,19 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [
@@ -225,7 +228,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				}
 			],
 			"yesOutcome": [
@@ -233,7 +236,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -246,7 +249,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -276,26 +279,28 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.sword_fight"
 				}
 			],
 			"noOutcome": [
@@ -303,7 +308,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				}
 			],
 			"question": "",
@@ -328,17 +333,19 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -400,13 +407,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marry_shangxiang"
 				}
 			],
 			"yesOutcome": [
@@ -414,7 +421,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				}
 			],
 			"noOutcome": [
@@ -449,7 +456,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				}
 			],
 			"noOutcome": [
@@ -517,7 +524,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "deck",
@@ -528,13 +535,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 11,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "spouse"
 				},
 				{
 					"variable": "deck",
@@ -552,7 +559,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "link",
@@ -575,7 +582,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "link",
@@ -613,14 +620,15 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [],
@@ -629,13 +637,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -648,13 +656,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				}
 			],
 			"question": "",
@@ -679,7 +687,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "mister_qiao"
 				},
 				{
 					"variable": "year",
@@ -687,7 +696,7 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				}
@@ -705,7 +714,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "politics",
@@ -743,14 +752,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "seen",
@@ -837,14 +846,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -853,7 +862,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -884,12 +893,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "year",
@@ -897,14 +908,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -913,7 +924,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "religion",
@@ -926,7 +937,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "politics",
@@ -956,12 +967,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "year",
@@ -969,14 +982,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -1026,7 +1039,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "marry_shangxiang"
 				},
 				{
 					"variable": "year",
@@ -1034,14 +1048,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [
@@ -1063,13 +1077,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",

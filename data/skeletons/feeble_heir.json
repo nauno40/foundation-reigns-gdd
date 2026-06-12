@@ -57,7 +57,7 @@
 					"value": 223
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 4
 				}
@@ -112,7 +112,7 @@
 					"value": 223
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 4
 				},
@@ -172,7 +172,7 @@
 					"value": 223
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 4
 				},

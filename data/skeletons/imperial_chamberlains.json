@@ -20,12 +20,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "try_for_a_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "castrated"
 				}
 			],
 			"loadOutcome": [],
@@ -73,7 +75,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "commerce",
@@ -110,7 +112,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "virility_cure"
 				}
 			],
 			"loadOutcome": [],
@@ -119,7 +122,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "commerce",
@@ -132,7 +135,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "religion",
@@ -162,7 +165,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "virility_cure"
 				}
 			],
 			"loadOutcome": [],
@@ -171,7 +175,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "commerce",
@@ -184,7 +188,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "religion",
@@ -214,12 +218,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "castrated"
 				}
 			],
 			"loadOutcome": [],
@@ -259,12 +265,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				}
 			],
 			"loadOutcome": [],
@@ -292,12 +300,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "virility_cure"
 				}
 			],
 			"loadOutcome": [],
@@ -325,12 +335,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "virility_cure"
 				}
 			],
 			"loadOutcome": [],
@@ -339,7 +351,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "commerce",
@@ -352,7 +364,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "virility_cure"
 				},
 				{
 					"variable": "religion",
@@ -382,7 +394,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "virility_cure"
 				}
 			],
 			"loadOutcome": [],
@@ -416,7 +429,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "virility_cure"
 				}
 			],
 			"loadOutcome": [],

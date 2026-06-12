@@ -22,7 +22,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "commerce",
@@ -55,7 +55,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 2
+					"value": "smyrno"
 				},
 				{
 					"variable": "commerce",
@@ -88,7 +88,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "commerce",
@@ -121,7 +121,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 4
+					"value": "askone"
 				},
 				{
 					"variable": "commerce",
@@ -154,7 +154,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "commerce",
@@ -187,7 +187,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "commerce",
@@ -220,7 +220,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 14
+					"value": "santanni"
 				},
 				{
 					"variable": "commerce",
@@ -253,7 +253,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "commerce",
@@ -286,7 +286,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "commerce",
@@ -319,7 +319,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "commerce",
@@ -352,7 +352,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 5
+					"value": "neotrantor"
 				}
 			],
 			"noOutcome": [],
@@ -378,7 +378,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "visit_yizhou_river"
 				}
 			],
 			"loadOutcome": [],
@@ -387,7 +388,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou"
 				}
 			],
 			"noOutcome": [],
@@ -413,7 +414,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "visit_yizhou_mountain"
 				}
 			],
 			"loadOutcome": [],
@@ -422,7 +424,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yizhou"
 				}
 			],
 			"noOutcome": [],
@@ -450,7 +452,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 3
+					"value": "kalgan"
 				},
 				{
 					"variable": "commerce",
@@ -486,12 +488,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "nb_region_quest"
 				}
 			],
 			"loadOutcome": [],
@@ -530,12 +534,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "nb_region_quest"
 				}
 			],
 			"loadOutcome": [],
@@ -574,12 +580,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "nb_region_quest"
 				}
 			],
 			"loadOutcome": [],
@@ -613,10 +621,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "travelright"
 				}
 			],
 			"noOutcome": [],
@@ -647,12 +655,13 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 3
+					"value": "kalgan"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -660,7 +669,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 3
+					"value": "kalgan"
 				}
 			],
 			"noOutcome": [],
@@ -686,17 +695,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_wei_hong"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -704,7 +715,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"noOutcome": [],
@@ -730,17 +741,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "wine_recipe"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -776,14 +789,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"question": "",
@@ -808,17 +821,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "elixir_of_power"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -826,7 +841,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"noOutcome": [],
@@ -852,17 +867,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_kong_rong"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -870,7 +887,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				}
 			],
 			"noOutcome": [],
@@ -896,27 +913,29 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "visit_yangzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 7
+					"value": "korell"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 2
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 5
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -924,7 +943,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_korell"
 				}
 			],
 			"noOutcome": [],
@@ -950,22 +969,24 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "visit_yangzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 7
+					"value": "korell"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 9
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -973,7 +994,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_korell"
 				}
 			],
 			"noOutcome": [],
@@ -1004,17 +1025,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_jizhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -1022,7 +1045,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"noOutcome": [],
@@ -1053,17 +1076,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_changan"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 3
+					"value": "kalgan"
 				}
 			],
 			"loadOutcome": [],
@@ -1071,7 +1096,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 3
+					"value": "kalgan"
 				}
 			],
 			"noOutcome": [],
@@ -1102,17 +1127,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_hanzhong"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 4
+					"value": "askone"
 				}
 			],
 			"loadOutcome": [],
@@ -1120,7 +1147,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 4
+					"value": "askone"
 				}
 			],
 			"noOutcome": [],
@@ -1151,17 +1178,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_jingzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -1169,7 +1198,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"noOutcome": [],
@@ -1200,17 +1229,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_liangzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"loadOutcome": [],
@@ -1218,7 +1249,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"noOutcome": [],
@@ -1249,17 +1280,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_luoyang"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -1267,7 +1300,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"noOutcome": [],
@@ -1298,17 +1331,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_qingzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [],
@@ -1316,7 +1351,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"noOutcome": [],
@@ -1347,17 +1382,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_xuzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"loadOutcome": [],
@@ -1365,7 +1402,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 8
+					"value": "trantor"
 				}
 			],
 			"noOutcome": [],
@@ -1396,17 +1433,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_yangzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -1414,7 +1453,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"noOutcome": [],
@@ -1445,17 +1484,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_yanzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"loadOutcome": [],
@@ -1463,7 +1504,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"noOutcome": [],
@@ -1494,17 +1535,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_yizhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 5
+					"value": "neotrantor"
 				}
 			],
 			"loadOutcome": [],
@@ -1512,7 +1555,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 5
+					"value": "neotrantor"
 				}
 			],
 			"noOutcome": [],
@@ -1543,17 +1586,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_youzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 14
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [],
@@ -1561,7 +1606,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 14
+					"value": "santanni"
 				}
 			],
 			"noOutcome": [],
@@ -1592,17 +1637,19 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_yuzhou"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"loadOutcome": [],
@@ -1610,7 +1657,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"noOutcome": [],

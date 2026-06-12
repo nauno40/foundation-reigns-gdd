@@ -66,7 +66,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				}
 			],
 			"yesOutcome": [
@@ -138,14 +138,15 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 8
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "magic_buster"
 				}
 			],
 			"loadOutcome": [],
@@ -192,7 +193,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magic_buster"
 				}
 			],
 			"yesOutcome": [
@@ -385,7 +386,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magic_buster"
 				},
 				{
 					"variable": "military",
@@ -398,13 +399,13 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "time_traveller"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hogwart"
 				},
 				{
 					"variable": "military",
@@ -434,7 +435,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "magic_buster"
 				},
 				{
 					"variable": "seen",
@@ -479,7 +481,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "battle_zhang_jiao_1"
 				},
 				{
 					"variable": "year",
@@ -487,7 +490,7 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 9
 				}
@@ -549,10 +552,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.defender"
 				},
 				{
 					"variable": "military",
@@ -562,10 +565,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.defender"
 				},
 				{
 					"variable": "military",
@@ -597,7 +600,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle_zhang_jiao_1"
 				}
 			],
 			"yesOutcome": [
@@ -699,12 +702,12 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 8
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 12
 				}
@@ -759,7 +762,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				},
 				{
 					"variable": "religion",
@@ -777,7 +780,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				},
 				{
 					"variable": "military",
@@ -814,14 +817,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "help_commander_huangfu"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				},
 				{
 					"variable": "religion",
@@ -868,7 +871,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 9
+					"value": "anacreon"
 				},
 				{
 					"variable": "year",
@@ -876,12 +879,12 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 8
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 12
 				}
@@ -891,7 +894,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				},
 				{
 					"variable": "religion",
@@ -943,7 +946,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "battle_zhang_jiao_2"
 				}
 			],
 			"loadOutcome": [],
@@ -995,7 +999,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "dong_zhuo"
 				}
 			],
 			"yesOutcome": [
@@ -1015,7 +1019,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "dong_zhuo"
 				},
 				{
 					"variable": "link",
@@ -1145,7 +1149,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "dong_zhuo"
 				}
 			],
 			"yesOutcome": [
@@ -1235,7 +1239,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				}
 			],
 			"yesOutcome": [
@@ -1281,23 +1285,23 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "guan_yu"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.brothers"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.brothers"
 				}
 			],
 			"question": "",
@@ -1324,13 +1328,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle_zhang_jiao_2"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				}
 			],
 			"yesOutcome": [
@@ -1394,7 +1398,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "dong_zhuo"
 				},
 				{
 					"variable": "link",
@@ -1436,7 +1440,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhang_fei"
 				}
 			],
 			"yesOutcome": [
@@ -1523,7 +1527,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 9
+					"value": "anacreon"
 				},
 				{
 					"variable": "year",
@@ -1531,12 +1535,12 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 8
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 12
 				},
@@ -1557,7 +1561,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "help_commander_huangfu"
 				},
 				{
 					"variable": "military",
@@ -1580,7 +1584,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "help_commander_huangfu"
 				},
 				{
 					"variable": "religion",
@@ -1612,7 +1616,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "observe_yellow_turbans"
 				}
 			],
 			"yesOutcome": [],
@@ -1647,7 +1651,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"yesOutcome": [
@@ -1662,7 +1666,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "politics",
@@ -1891,7 +1895,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "observe_yellow_turbans"
 				}
 			],
 			"yesOutcome": [
@@ -1935,16 +1939,16 @@
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.arrow_flame"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "observe_yellow_turbans"
 				}
 			],
 			"yesOutcome": [
@@ -1995,7 +1999,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "observe_yellow_turbans"
 				}
 			],
 			"yesOutcome": [
@@ -2038,10 +2042,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.arrow_flame"
 				}
 			],
 			"yesOutcome": [
@@ -2092,7 +2096,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fire_arrow_archers"
 				}
 			],
 			"yesOutcome": [
@@ -2176,7 +2180,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "fire_arrow_archers"
 				},
 				{
 					"variable": "seen",
@@ -2190,7 +2195,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "link",
@@ -2208,7 +2213,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "link",
@@ -2248,7 +2253,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "fire_arrow_archers"
 				},
 				{
 					"variable": "seen",
@@ -2267,7 +2273,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "military",
@@ -2280,7 +2286,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "link",
@@ -2359,7 +2365,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "magic_buster"
 				},
 				{
 					"variable": "year",
@@ -2367,7 +2374,7 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 8
 				}
@@ -2412,7 +2419,7 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				}
@@ -2469,7 +2476,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lead_defenders"
 				},
 				{
 					"variable": "military",
@@ -2502,7 +2509,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lead_defenders"
 				},
 				{
 					"variable": "military",
@@ -2520,7 +2527,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lead_defenders"
 				},
 				{
 					"variable": "military",
@@ -2555,12 +2562,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "lead_defenders"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "become_a_magistrate"
 				}
 			],
 			"loadOutcome": [],
@@ -2569,13 +2578,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bribe"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "politics",
@@ -2620,13 +2629,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bribe"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "religion",
@@ -2671,13 +2680,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bribe"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "military",
@@ -2695,7 +2704,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				}
 			],
 			"question": "",
@@ -2720,12 +2729,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "referral_letter"
 				}
 			],
 			"loadOutcome": [],
@@ -2779,10 +2790,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.magistrate_pen"
 				}
 			],
 			"yesOutcome": [
@@ -2833,7 +2844,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "referral_letter"
 				}
 			],
 			"yesOutcome": [],
@@ -2842,7 +2853,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bribe"
 				},
 				{
 					"variable": "religion",
@@ -2872,17 +2883,20 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "referral_letter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bribe"
 				}
 			],
 			"loadOutcome": [
@@ -2890,19 +2904,19 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "golden_donkey"
 				},
 				{
 					"variable": "deck",
@@ -2914,14 +2928,14 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"question": "",
@@ -2946,43 +2960,46 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "referral_letter"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "bribe"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.eagle_noise_wind"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "stone_ridge"
 				},
 				{
 					"variable": "deck",
@@ -2994,20 +3011,20 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.eagle_noise_wind"
 				},
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"question": "",
@@ -3032,7 +3049,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "banditism"
 				},
 				{
 					"variable": "party",

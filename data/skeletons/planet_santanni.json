@@ -22,7 +22,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -69,7 +69,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 10
 				}
@@ -119,7 +119,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "locals_work_permit"
 				},
 				{
 					"variable": "politics",
@@ -155,17 +155,18 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "locals_work_permit"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 14
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [],
@@ -173,7 +174,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				}
 			],
 			"noOutcome": [
@@ -205,12 +206,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "locals_work_permit"
 				}
 			],
 			"loadOutcome": [],
@@ -264,7 +266,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "locals_work_permit"
 				},
 				{
 					"variable": "politics",
@@ -299,12 +301,13 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "locals_work_permit"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [],
@@ -313,7 +316,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "locals_work_permit"
 				},
 				{
 					"variable": "politics",

@@ -20,12 +20,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "xinye_refugees"
 				}
 			],
 			"loadOutcome": [
@@ -38,7 +39,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_su"
 				}
 			],
 			"yesOutcome": [
@@ -46,7 +47,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "protect_refugees"
 				},
 				{
 					"variable": "politics",
@@ -59,7 +60,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "protect_refugees"
 				},
 				{
 					"variable": "military",
@@ -94,7 +95,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [
@@ -102,7 +103,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "deck",
@@ -149,7 +150,7 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				},
@@ -204,37 +205,37 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_su"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "politics",
@@ -252,37 +253,37 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_su"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "religion",
@@ -315,19 +316,21 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 4
+					"value": 4,
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "party",
@@ -341,7 +344,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				}
 			],
 			"noOutcome": [
@@ -349,7 +352,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				}
 			],
 			"question": "",
@@ -377,19 +380,21 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 4
+					"value": 4,
+					"custom_name": "zhou_yu"
 				}
 			],
 			"loadOutcome": [],
@@ -432,7 +437,7 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				},
@@ -487,7 +492,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				}
 			],
 			"noOutcome": [
@@ -495,7 +500,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -528,7 +533,7 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				},
@@ -540,7 +545,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "red_cliffs_allies"
 				}
 			],
 			"loadOutcome": [],
@@ -589,10 +595,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.redcliff_boats_arriving"
 				}
 			],
 			"yesOutcome": [
@@ -719,12 +725,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "year",
@@ -732,7 +739,7 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				}
@@ -742,7 +749,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_korell"
 				},
 				{
 					"variable": "commerce",
@@ -755,13 +762,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "military",
@@ -791,7 +798,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "year",
@@ -799,14 +807,14 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -1009,7 +1017,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "year",
@@ -1017,14 +1026,14 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -1256,18 +1265,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.after_red_cliffs"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.after_red_cliffs"
 				}
 			],
 			"question": "",
@@ -1360,7 +1369,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				}
 			],
 			"yesOutcome": [],
@@ -1395,7 +1404,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				}
 			],
 			"yesOutcome": [
@@ -1441,7 +1450,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				}
 			],
 			"yesOutcome": [
@@ -1480,7 +1489,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "year",
@@ -1488,14 +1498,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "party",
@@ -1508,7 +1518,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "planet_state",
@@ -1562,7 +1572,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "year",
@@ -1570,14 +1581,14 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 3
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "party",
@@ -1590,7 +1601,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "planet_state",

@@ -20,12 +20,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_pang_tong"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"loadOutcome": [],
@@ -65,7 +67,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [
@@ -73,14 +75,14 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_terminus"
 				}
 			],
 			"noOutcome": [
@@ -112,7 +114,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [
@@ -120,14 +122,14 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_terminus"
 				}
 			],
 			"noOutcome": [
@@ -159,12 +161,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_pang_tong"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -263,7 +267,8 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "pang_tong"
 				}
 			],
 			"loadOutcome": [],
@@ -359,7 +364,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "pang_tong"
 				}
 			],
 			"yesOutcome": [
@@ -367,13 +372,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "pang_tong"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				},
 				{
 					"variable": "commerce",
@@ -413,7 +418,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				},
 				{
 					"variable": "commerce",
@@ -426,7 +431,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"question": "",
@@ -454,7 +459,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				},
 				{
 					"variable": "commerce",
@@ -467,7 +472,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"question": "",
@@ -492,12 +497,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_pang_tong"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"loadOutcome": [
@@ -505,7 +512,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"yesOutcome": [
@@ -549,12 +556,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_pang_tong"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "fledgling_phoenix"
 				}
 			],
 			"loadOutcome": [],
@@ -580,7 +589,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				},
 				{
 					"variable": "deck",
@@ -684,7 +693,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				},
 				{
 					"variable": "deck",
@@ -695,7 +704,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_pang_tong"
 				},
 				{
 					"variable": "religion",
@@ -727,7 +736,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fledgling_phoenix"
 				},
 				{
 					"variable": "deck",
@@ -740,7 +749,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_pang_tong"
 				}
 			],
 			"noOutcome": [
@@ -748,7 +757,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_pang_tong"
 				}
 			],
 			"question": "",

@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"loadOutcome": [],
@@ -28,7 +28,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"noOutcome": [
@@ -65,12 +65,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 9
+					"value": "anacreon"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghost_in_the_palace"
 				}
 			],
 			"loadOutcome": [],
@@ -298,7 +299,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_in_the_palace"
 				}
 			],
 			"question": "",
@@ -323,12 +324,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 9
+					"value": "anacreon"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "ghost_in_the_palace"
 				}
 			],
 			"loadOutcome": [],
@@ -540,7 +542,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_in_the_palace"
 				}
 			],
 			"yesOutcome": [
@@ -622,24 +624,24 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.brawl"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.ghost_cao_cao"
 				},
 				{
 					"variable": "politics",
@@ -649,10 +651,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.ghost_cao_cao"
 				},
 				{
 					"variable": "military",
@@ -739,7 +741,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_no_yuzhou"
 				}
 			],
 			"yesOutcome": [

@@ -186,7 +186,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "giant_horns_troubles"
 				}
 			],
 			"yesOutcome": [

@@ -22,7 +22,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -69,7 +69,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 10
 				}
@@ -114,7 +114,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 3
 				}
@@ -159,7 +159,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 6
 				}

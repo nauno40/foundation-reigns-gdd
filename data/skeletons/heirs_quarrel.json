@@ -62,7 +62,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				}
 			],
 			"noOutcome": [
@@ -70,7 +70,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				},
 				{
 					"variable": "politics",
@@ -105,7 +105,8 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "cao_zhi"
 				}
 			],
 			"loadOutcome": [],
@@ -114,7 +115,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				}
 			],
 			"noOutcome": [
@@ -122,7 +123,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				}
 			],
 			"question": "",
@@ -147,12 +148,14 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "cao_zhi"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "affaire"
 				}
 			],
 			"loadOutcome": [],
@@ -200,7 +203,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "affaire"
 				}
 			],
 			"noOutcome": [
@@ -208,7 +211,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				},
 				{
 					"variable": "politics",
@@ -238,12 +241,14 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 4
+					"value": 4,
+					"custom_name": "cao_zhi"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_zhi"
 				}
 			],
 			"loadOutcome": [],
@@ -280,7 +285,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				},
 				{
 					"variable": "religion",
@@ -293,7 +298,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_zhi"
 				},
 				{
 					"variable": "religion",
@@ -323,7 +328,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "affaire"
 				},
 				{
 					"variable": "year",
@@ -374,7 +380,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "affaire"
 				}
 			],
 			"loadOutcome": [
@@ -414,7 +421,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "affaire"
 				}
 			],
 			"loadOutcome": [

@@ -18,7 +18,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 4
 				}
@@ -67,7 +67,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -114,7 +114,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				}
@@ -169,14 +169,15 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 7
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_cao_no_jingzhou"
 				}
 			],
 			"loadOutcome": [],
@@ -185,7 +186,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "religion",
@@ -198,7 +199,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -231,7 +232,7 @@
 					"value": 209
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				}
@@ -241,13 +242,13 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "take_nanjun"
 				},
 				{
 					"variable": "link",
@@ -324,18 +325,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.nanjun_unplanned"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.nanjun_unplanned"
 				}
 			],
 			"question": "",
@@ -400,10 +401,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.nanjun_planned"
 				}
 			],
 			"noOutcome": [
@@ -444,7 +445,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "take_nanjun"
 				}
 			],
 			"noOutcome": [
@@ -544,10 +545,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.nanjun_cao_ren_out"
 				},
 				{
 					"variable": "religion",
@@ -560,13 +561,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "take_nanjun"
 				},
 				{
 					"variable": "religion",
@@ -598,7 +599,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "take_nanjun"
 				},
 				{
 					"variable": "planet_state",
@@ -611,19 +612,19 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_su"
 				}
 			],
 			"noOutcome": [
@@ -631,25 +632,25 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_su"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "nanjun"
 				}
 			],
 			"question": "",
@@ -674,7 +675,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "lu_su"
 				},
 				{
 					"variable": "planet_state",
@@ -724,7 +726,8 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "lu_su"
 				},
 				{
 					"variable": "planet_state",
@@ -739,7 +742,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "nanjun"
 				}
 			],
 			"loadOutcome": [],
@@ -781,7 +785,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "take_nanjun"
 				}
 			],
 			"yesOutcome": [
@@ -789,7 +793,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -802,7 +806,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -832,7 +836,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate_peach_blossoms"
 				}
 			],
 			"loadOutcome": [],
@@ -887,7 +892,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate_peach_blossoms"
 				}
 			],
 			"loadOutcome": [],
@@ -947,7 +953,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate_peach_blossoms"
 				}
 			],
 			"loadOutcome": [],
@@ -987,7 +994,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "party",
@@ -1010,7 +1017,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "huang_zhong"
 				}
 			],
 			"yesOutcome": [
@@ -1141,7 +1148,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "guan_yu"
 				}
 			],
 			"yesOutcome": [
@@ -1251,7 +1258,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "huang_zhong"
 				}
 			],
 			"yesOutcome": [
@@ -1286,7 +1293,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "huang_zhong"
 				}
 			],
 			"yesOutcome": [
@@ -1485,7 +1492,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "seen",
@@ -1631,7 +1638,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "take_nanjun"
 				},
 				{
 					"variable": "year",
@@ -1639,7 +1647,7 @@
 					"value": 210
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				}
@@ -1649,7 +1657,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "take_nanjun"
 				}
 			],
 			"yesOutcome": [
@@ -1657,7 +1665,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -1670,7 +1678,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",

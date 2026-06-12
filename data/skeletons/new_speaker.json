@@ -25,7 +25,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -70,12 +71,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ending"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -165,7 +168,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 60
+					"value": 60,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "seen",
@@ -220,7 +224,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "corruptai"
 				}
 			],
 			"loadOutcome": [],
@@ -265,7 +270,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "times_died"
 				}
 			],
 			"loadOutcome": [],
@@ -446,10 +452,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -459,10 +465,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -492,7 +498,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [
@@ -500,7 +507,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -609,7 +616,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 20,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -619,10 +626,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -632,10 +639,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -665,12 +672,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "times_died"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 50
+					"value": 50,
+					"custom_name": "synaptic"
 				}
 			],
 			"loadOutcome": [],
@@ -681,10 +690,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -694,10 +703,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -733,10 +742,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -746,10 +755,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -785,10 +794,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -798,10 +807,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -837,10 +846,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -850,10 +859,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -889,10 +898,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -902,10 +911,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -941,10 +950,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -954,10 +963,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -993,10 +1002,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1006,10 +1015,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1045,10 +1054,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1058,10 +1067,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1097,10 +1106,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1110,10 +1119,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1143,7 +1152,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 6
+					"value": 6,
+					"custom_name": "times_died"
 				}
 			],
 			"loadOutcome": [],
@@ -1154,10 +1164,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1200,10 +1210,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1274,10 +1284,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1314,10 +1324,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1327,10 +1337,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1368,7 +1378,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				}
 			],
 			"yesOutcome": [
@@ -1378,10 +1388,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1391,10 +1401,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1424,7 +1434,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [
@@ -1441,10 +1452,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1454,10 +1465,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1487,7 +1498,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 8
+					"value": 8,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -1498,10 +1510,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1511,10 +1523,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1555,16 +1567,16 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rating"
 				}
 			],
 			"noOutcome": [
@@ -1574,10 +1586,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1607,7 +1619,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 29
+					"value": 29,
+					"custom_name": "time_died"
 				}
 			],
 			"loadOutcome": [],
@@ -1652,7 +1665,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 20
+					"value": 20,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "year",
@@ -1665,7 +1679,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 30,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -1675,10 +1689,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1715,10 +1729,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1728,10 +1742,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1767,10 +1781,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1780,10 +1794,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1813,7 +1827,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 30
+					"value": 30,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "year",
@@ -1826,7 +1841,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 40,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -1938,10 +1953,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -1951,10 +1966,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -1984,7 +1999,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 40
+					"value": 40,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "year",
@@ -1997,7 +2013,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 50,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -2245,10 +2261,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2258,10 +2274,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -2291,7 +2307,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 40
+					"value": 40,
+					"custom_name": "synaptic"
 				}
 			],
 			"loadOutcome": [],
@@ -2302,10 +2319,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2376,10 +2393,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2389,10 +2406,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -2422,12 +2439,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 10
+					"value": 10,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 40
+					"value": 40,
+					"custom_name": "synaptic"
 				}
 			],
 			"loadOutcome": [],
@@ -2506,10 +2525,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2519,10 +2538,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -2552,7 +2571,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 40
+					"value": 40,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "year",
@@ -2706,7 +2726,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 60,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -2716,10 +2736,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2756,10 +2776,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2769,10 +2789,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -2802,7 +2822,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 60
+					"value": 60,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "seen",
@@ -2815,7 +2836,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 70,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -2825,10 +2846,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2865,10 +2886,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"noOutcome": [
@@ -2878,10 +2899,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -2914,15 +2935,15 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 70,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "selectai"
 				},
 				{
 					"variable": "link",
@@ -2961,7 +2982,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 70,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "synaptic"
 				}
 			],
 			"yesOutcome": [
@@ -3102,10 +3123,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "selectai"
 				},
 				{
 					"variable": "link",
@@ -3148,10 +3169,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "selectai"
 				},
 				{
 					"variable": "link",
@@ -3161,10 +3182,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "selectai"
 				},
 				{
 					"variable": "link",
@@ -3194,10 +3215,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "selectai"
 				},
 				{
 					"variable": "link",
@@ -3212,10 +3233,10 @@
 					"target": "_new_speaker_greeting"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "effect.wrap.strong"
 				}
 			],
 			"question": "",
@@ -3240,21 +3261,22 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "corruptai"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer_boot_fail"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "corruptcount"
 				}
 			],
 			"yesOutcome": [
@@ -3395,18 +3417,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"question": "",
@@ -3431,21 +3453,22 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer_boot_chime"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "strategistcount"
 				}
 			],
 			"yesOutcome": [
@@ -3518,7 +3541,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "tyranny"
 				}
 			],
 			"loadOutcome": [],
@@ -3558,7 +3582,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "restored_han"
 				}
 			],
 			"loadOutcome": [],
@@ -3598,7 +3623,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "restored_han"
 				}
 			],
 			"loadOutcome": [],
@@ -3774,18 +3800,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"question": "",
@@ -3810,21 +3836,22 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "taoistai"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer_boot_chime"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taoistcount"
 				}
 			],
 			"yesOutcome": [
@@ -4067,18 +4094,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"question": "",
@@ -4103,21 +4130,22 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "starai"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer_boot_chime"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "starcount"
 				}
 			],
 			"yesOutcome": [
@@ -4394,18 +4422,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"question": "",
@@ -4429,16 +4457,16 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer_boot_chime"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "foolcount"
 				}
 			],
 			"yesOutcome": [
@@ -4715,18 +4743,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "end"
 				}
 			],
 			"question": "",
@@ -4751,17 +4779,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -4769,49 +4800,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				}
 			],
 			"yesOutcome": [
@@ -4860,17 +4891,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -4878,49 +4912,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				}
 			],
 			"yesOutcome": [
@@ -4969,17 +5003,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -4987,49 +5024,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -5078,17 +5115,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5096,49 +5136,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -5187,17 +5227,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5205,55 +5248,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_child"
 				}
 			],
 			"yesOutcome": [
@@ -5302,17 +5345,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5320,55 +5366,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_child"
 				}
 			],
 			"yesOutcome": [
@@ -5417,17 +5463,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5435,55 +5484,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_child"
 				}
 			],
 			"yesOutcome": [
@@ -5532,17 +5581,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5550,55 +5602,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_child"
 				}
 			],
 			"yesOutcome": [
@@ -5647,22 +5699,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_husband"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5670,55 +5726,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_husband"
 				}
 			],
 			"yesOutcome": [
@@ -5772,22 +5828,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_wife"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5795,49 +5855,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				}
 			],
 			"yesOutcome": [
@@ -5891,22 +5951,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_wife"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -5914,49 +5978,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				}
 			],
 			"yesOutcome": [
@@ -6010,22 +6074,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_husband"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6033,55 +6101,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_husband"
 				}
 			],
 			"yesOutcome": [
@@ -6135,22 +6203,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_husband"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6158,55 +6230,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_husband"
 				}
 			],
 			"yesOutcome": [
@@ -6260,22 +6332,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_wife"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6283,49 +6359,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				}
 			],
 			"yesOutcome": [
@@ -6374,22 +6450,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_wife"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6397,49 +6477,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				}
 			],
 			"yesOutcome": [
@@ -6488,17 +6568,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_husband"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6506,55 +6589,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_husband"
 				}
 			],
 			"yesOutcome": [
@@ -6608,17 +6691,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_husband"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6626,55 +6712,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_husband"
 				}
 			],
 			"yesOutcome": [
@@ -6728,17 +6814,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_wife"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6746,55 +6835,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_wife"
 				}
 			],
 			"yesOutcome": [
@@ -6848,17 +6937,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_wife"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6866,55 +6958,55 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_wife"
 				}
 			],
 			"yesOutcome": [
@@ -6968,17 +7060,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -6986,43 +7081,43 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				}
 			],
 			"yesOutcome": [
@@ -7030,7 +7125,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "military",
@@ -7048,7 +7143,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "politics",
@@ -7083,17 +7178,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7101,43 +7199,43 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				}
 			],
 			"yesOutcome": [
@@ -7145,7 +7243,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "military",
@@ -7163,7 +7261,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "politics",
@@ -7198,17 +7296,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7216,49 +7317,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -7307,17 +7408,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7325,49 +7429,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -7416,7 +7520,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7424,49 +7529,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -7505,7 +7610,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7513,49 +7619,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -7614,7 +7720,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7622,49 +7729,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -7708,7 +7815,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
@@ -7716,49 +7824,49 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bastard_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_baby"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_child"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "heir_adult"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_son"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "has_daughter"
 				}
 			],
 			"yesOutcome": [
@@ -7972,13 +8080,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_for_power"
 				},
 				{
 					"variable": "party",
@@ -8032,7 +8140,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				},
 				{
 					"variable": "age",
@@ -8050,7 +8159,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "emperor"
 				},
 				{
 					"variable": "planet_state",
@@ -8099,7 +8208,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "grand_commander_yangzhou"
 				},
 				{
 					"variable": "year",
@@ -8117,13 +8227,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_yangzhou"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				}
 			],
 			"yesOutcome": [
@@ -8162,7 +8272,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "protect_refugees"
 				},
 				{
 					"variable": "age",
@@ -8175,7 +8286,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "protect_refugees"
 				}
 			],
 			"yesOutcome": [
@@ -8208,7 +8319,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate_peach_blossoms"
 				},
 				{
 					"variable": "age",
@@ -8221,7 +8333,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate_peach_blossoms"
 				}
 			],
 			"yesOutcome": [
@@ -8275,7 +8387,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "red_cliffs_allies"
 				},
 				{
 					"variable": "planet_state",
@@ -8285,7 +8398,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "age",
@@ -8295,7 +8408,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "remove"
 				}
 			],
 			"loadOutcome": [
@@ -8303,7 +8417,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				}
 			],
 			"yesOutcome": [
@@ -8311,7 +8425,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "planet_state",
@@ -8353,7 +8467,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "fishing_village"
 				},
 				{
 					"variable": "age",
@@ -8366,7 +8481,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "fishing_village"
 				}
 			],
 			"yesOutcome": [
@@ -8641,7 +8756,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [
@@ -8659,7 +8775,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"yesOutcome": [],
@@ -8744,7 +8860,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "animal"
 				}
 			],
 			"yesOutcome": [
@@ -8783,7 +8899,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "golden_donkey"
 				},
 				{
 					"variable": "age",
@@ -8828,7 +8945,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "stone_ridge"
 				},
 				{
 					"variable": "age",
@@ -8849,7 +8967,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "commerce",
@@ -8944,7 +9062,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_military"
 				}
 			],
 			"loadOutcome": [],
@@ -9064,12 +9183,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_military"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9077,7 +9198,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_military"
 				}
 			],
 			"yesOutcome": [
@@ -9121,12 +9242,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_people"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9134,7 +9257,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_people"
 				}
 			],
 			"yesOutcome": [
@@ -9178,12 +9301,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_morality"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9191,7 +9316,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_morality"
 				}
 			],
 			"yesOutcome": [
@@ -9235,12 +9360,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_supply"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9248,7 +9375,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_supply"
 				}
 			],
 			"yesOutcome": [
@@ -9292,7 +9419,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "heir_baby"
 				}
 			],
 			"loadOutcome": [
@@ -9300,7 +9428,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "child_age"
 				},
 				{
 					"variable": "deck",
@@ -9313,7 +9441,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "politics",
@@ -9331,13 +9459,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "politics",
@@ -9377,12 +9505,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_military"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9390,7 +9520,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_military"
 				}
 			],
 			"yesOutcome": [
@@ -9449,12 +9579,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_people"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9462,7 +9594,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_people"
 				}
 			],
 			"yesOutcome": [
@@ -9506,12 +9638,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_morality"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9519,7 +9653,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_morality"
 				}
 			],
 			"yesOutcome": [
@@ -9563,12 +9697,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bonus_supply"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [
@@ -9576,7 +9712,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bonus_supply"
 				}
 			],
 			"yesOutcome": [
@@ -9584,7 +9720,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wealth_management"
 				}
 			],
 			"noOutcome": [

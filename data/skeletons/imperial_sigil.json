@@ -20,12 +20,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "luoyang_on_fire"
 				}
 			],
 			"loadOutcome": [],
@@ -65,32 +66,33 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "luoyang_on_fire"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.dog_bark"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "search_luoyang"
 				},
 				{
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "animal"
 				}
 			],
 			"yesOutcome": [
@@ -279,10 +281,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.dog_bark_distant"
 				}
 			],
 			"yesOutcome": [
@@ -379,7 +381,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "luoyang_on_fire"
 				}
 			],
 			"yesOutcome": [
@@ -418,12 +420,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "search_luoyang"
 				}
 			],
 			"loadOutcome": [
@@ -431,7 +434,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "search_luoyang"
 				}
 			],
 			"yesOutcome": [
@@ -469,12 +472,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "search_luoyang"
 				}
 			],
 			"loadOutcome": [
@@ -482,14 +486,14 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "search_luoyang"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 3
+					"value": "kalgan"
 				}
 			],
 			"noOutcome": [
@@ -521,26 +525,27 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "search_luoyang"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.dog_bark"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "search_luoyang"
 				}
 			],
 			"yesOutcome": [
@@ -578,12 +583,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "search_luoyang"
 				}
 			],
 			"loadOutcome": [
@@ -591,14 +597,14 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "search_luoyang"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 3
+					"value": "kalgan"
 				}
 			],
 			"noOutcome": [
@@ -934,14 +940,14 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 3
+					"value": "kalgan"
 				}
 			],
 			"question": "",

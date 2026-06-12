@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [
@@ -28,14 +28,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_korell"
 				}
 			],
 			"noOutcome": [],
@@ -61,7 +61,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [
@@ -69,7 +69,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"yesOutcome": [
@@ -113,17 +113,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "qiao_sisters"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"loadOutcome": [],
@@ -175,7 +177,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"yesOutcome": [
@@ -208,12 +210,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"loadOutcome": [],
@@ -252,10 +255,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qiaosisters_carriage_distant"
 				}
 			],
 			"yesOutcome": [
@@ -290,13 +293,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mister_qiao"
 				}
 			],
 			"yesOutcome": [
@@ -335,7 +338,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "religion",
@@ -368,7 +372,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "religion",
@@ -401,7 +406,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [],
@@ -446,15 +452,16 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qiaosisters_carriage_distant"
 				}
 			],
 			"yesOutcome": [
@@ -493,7 +500,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"loadOutcome": [],
@@ -566,10 +574,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -607,10 +615,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_tuned"
 				}
 			],
 			"yesOutcome": [
@@ -618,7 +626,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qin_tuned"
 				},
 				{
 					"variable": "link",
@@ -654,10 +662,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -672,7 +680,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qin_tuned"
 				},
 				{
 					"variable": "link",
@@ -736,7 +744,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "qin_tuned"
 				}
 			],
 			"loadOutcome": [
@@ -744,7 +753,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"yesOutcome": [
@@ -783,7 +792,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "qin_tuned"
 				}
 			],
 			"loadOutcome": [
@@ -791,7 +801,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"yesOutcome": [
@@ -925,12 +935,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"loadOutcome": [],
@@ -970,12 +981,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				}
 			],
 			"loadOutcome": [],
@@ -984,7 +997,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"noOutcome": [
@@ -992,7 +1005,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"question": "",
@@ -1089,12 +1102,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "qiao_sisters"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -1110,7 +1124,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				},
 				{
 					"variable": "deck",
@@ -1181,13 +1195,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 12,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "spouse"
 				},
 				{
 					"variable": "deck",
@@ -1233,13 +1247,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 12,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "spouse"
 				},
 				{
 					"variable": "deck",
@@ -1368,7 +1382,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				},
 				{
 					"variable": "deck",

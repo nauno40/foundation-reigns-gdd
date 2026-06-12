@@ -20,12 +20,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "family_affair"
 				}
 			],
 			"loadOutcome": [
@@ -33,7 +34,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [],
@@ -60,12 +61,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "family_affair"
 				}
 			],
 			"loadOutcome": [
@@ -73,7 +75,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [],
@@ -106,12 +108,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "family_affair"
 				}
 			],
 			"loadOutcome": [
@@ -119,7 +122,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [
@@ -158,12 +161,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "family_affair"
 				}
 			],
 			"loadOutcome": [],
@@ -679,7 +683,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [
@@ -759,7 +763,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 6,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [
@@ -808,12 +812,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 6
+					"value": 6,
+					"custom_name": "family_affair"
 				}
 			],
 			"loadOutcome": [],
@@ -1045,7 +1050,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 7,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [
@@ -1134,12 +1139,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 7
+					"value": 7,
+					"custom_name": "family_affair"
 				}
 			],
 			"loadOutcome": [],
@@ -1186,7 +1192,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				}
 			],
 			"yesOutcome": [

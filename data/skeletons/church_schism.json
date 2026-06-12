@@ -108,7 +108,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "decode_magic"
 				}
 			],
 			"loadOutcome": [
@@ -116,7 +117,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "decode_magic"
 				}
 			],
 			"yesOutcome": [
@@ -290,7 +291,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "decode_magic"
 				}
 			],
 			"noOutcome": [
@@ -298,13 +299,13 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "time_traveller"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hogwart"
 				}
 			],
 			"question": "",
@@ -459,7 +460,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_the_camp"
 				}
 			],
 			"yesOutcome": [
@@ -500,7 +501,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_the_camp"
 				}
 			],
 			"yesOutcome": [
@@ -622,10 +623,10 @@
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.findthecamp_goat"
 				}
 			],
 			"yesOutcome": [
@@ -663,10 +664,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.findthecamp_goat"
 				}
 			],
 			"yesOutcome": [
@@ -722,7 +723,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bandit"
 				}
 			],
 			"yesOutcome": [
@@ -866,10 +867,10 @@
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.findthecamp_bushrustle"
 				}
 			],
 			"yesOutcome": [
@@ -925,7 +926,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bandit"
 				}
 			],
 			"yesOutcome": [
@@ -989,10 +990,10 @@
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.findthecamp_boar_squealing"
 				}
 			],
 			"yesOutcome": [
@@ -1211,7 +1212,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_the_camp"
 				}
 			],
 			"yesOutcome": [
@@ -1263,7 +1264,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bandit"
 				}
 			],
 			"yesOutcome": [
@@ -1335,7 +1336,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_the_camp"
 				}
 			],
 			"yesOutcome": [
@@ -1429,10 +1430,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yellow"
 				},
 				{
 					"variable": "military",
@@ -1474,10 +1475,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yellow"
 				},
 				{
 					"variable": "military",
@@ -1487,10 +1488,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yellow"
 				},
 				{
 					"variable": "military",
@@ -1610,7 +1611,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "decode_magic"
 				},
 				{
 					"variable": "seen",
@@ -1618,7 +1620,7 @@
 					"value": 193
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 8
 				}
@@ -1663,7 +1665,7 @@
 					"value": 184
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				}
@@ -1705,7 +1707,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "essential_art_of_peace"
 				}
 			],
 			"loadOutcome": [],
@@ -1714,7 +1717,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "link",
@@ -1737,7 +1740,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "link",
@@ -1884,7 +1887,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "essential_art_of_peace"
 				}
 			],
 			"loadOutcome": [],
@@ -1905,7 +1909,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "time_traveller"
 				},
 				{
 					"variable": "link",
@@ -2015,21 +2019,21 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_a_base"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.defendertown"
 				},
 				{
 					"variable": "politics",
@@ -2080,10 +2084,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.base_collapse"
 				},
 				{
 					"variable": "deck",
@@ -2094,13 +2098,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_a_base"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "planet_state",
@@ -2194,7 +2198,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				}
 			],
 			"loadOutcome": [],
@@ -2244,12 +2249,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "essential_art_of_peace"
 				}
 			],
 			"loadOutcome": [
@@ -2295,7 +2302,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				}
 			],
 			"loadOutcome": [],
@@ -2363,17 +2371,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -2407,17 +2418,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -2426,7 +2440,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -2439,13 +2453,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "religion",
@@ -2475,7 +2489,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "deck",
@@ -2581,7 +2596,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "planet_state",
@@ -2594,7 +2609,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_a_base"
 				},
 				{
 					"variable": "religion",
@@ -2612,7 +2627,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_a_base"
 				},
 				{
 					"variable": "military",
@@ -2657,7 +2672,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "deck",
@@ -2668,18 +2684,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yellow_cao_cao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yellow_cao_cao"
 				}
 			],
 			"question": "",
@@ -2707,7 +2723,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "deck",
@@ -2759,7 +2775,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "year",
@@ -2797,7 +2814,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yellow_turban_lead"
 				}
 			],
 			"loadOutcome": [],
@@ -2855,7 +2873,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "deck",
@@ -2883,7 +2901,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yellow_turban_lead"
 				},
 				{
 					"variable": "deck",

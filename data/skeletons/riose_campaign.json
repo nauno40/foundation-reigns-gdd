@@ -20,7 +20,8 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "yuan_shao"
 				}
 			],
 			"loadOutcome": [],
@@ -29,7 +30,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",
@@ -42,7 +43,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "commerce",
@@ -75,7 +76,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				},
@@ -91,19 +92,19 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "first_guandu_battle"
 				},
 				{
 					"variable": "religion",
@@ -144,12 +145,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "first_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -157,7 +159,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_neotrantor"
 				},
 				{
 					"variable": "military",
@@ -199,21 +201,22 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "first_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.trap_guandu"
 				},
 				{
 					"variable": "military",
@@ -223,10 +226,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.trap_guandu"
 				},
 				{
 					"variable": "religion",
@@ -255,18 +258,18 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.warofjust_retreating_troops"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.first_guandu"
 				},
 				{
 					"variable": "military",
@@ -347,16 +350,16 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.warofjust_blade_air"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "first_guandu_battle"
 				}
 			],
 			"yesOutcome": [
@@ -466,7 +469,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_liu_bei"
 				},
 				{
 					"variable": "deck",
@@ -476,7 +479,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_kalgan"
 				}
 			],
 			"noOutcome": [
@@ -507,16 +510,16 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.warofjust_horse_disperse_crowd"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "first_guandu_battle"
 				},
 				{
 					"variable": "planet_state",
@@ -529,7 +532,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "link",
@@ -552,7 +555,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -624,7 +627,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 8
 				}
@@ -635,24 +638,24 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "military",
@@ -694,12 +697,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -808,7 +812,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",
@@ -841,19 +845,20 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 10
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -916,7 +921,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",
@@ -953,12 +958,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "seen",
@@ -1006,7 +1012,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "steal_xudu"
 				},
 				{
 					"variable": "party",
@@ -1101,7 +1107,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "steal_xudu"
 				},
 				{
 					"variable": "military",
@@ -1132,7 +1138,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"yesOutcome": [
@@ -1220,18 +1226,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.xun_yu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.xun_yu"
 				}
 			],
 			"question": "",
@@ -1268,7 +1274,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "steal_xudu"
 				}
 			],
 			"yesOutcome": [
@@ -1309,13 +1315,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "steal_xudu"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "military0"
 				}
 			],
 			"yesOutcome": [
@@ -1354,12 +1360,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "seen",
@@ -1408,26 +1415,26 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.secondact_horse_stampede"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.traitor"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.traitor"
 				},
 				{
 					"variable": "military",
@@ -1459,7 +1466,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "second_guandu_battle"
 				}
 			],
 			"yesOutcome": [
@@ -1500,7 +1507,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "planet_state",
@@ -1549,7 +1556,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "second_guandu_battle"
 				},
 				{
 					"variable": "year",
@@ -1557,7 +1565,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				}
@@ -1568,7 +1576,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "military",
@@ -1581,7 +1589,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",

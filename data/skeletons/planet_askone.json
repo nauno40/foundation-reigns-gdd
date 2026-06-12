@@ -18,7 +18,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 4
 				}
@@ -67,7 +67,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -150,12 +150,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 4
+					"value": "askone"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "panda"
 				}
 			],
 			"loadOutcome": [],
@@ -319,7 +320,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "panda"
 				}
 			],
 			"yesOutcome": [],
@@ -348,7 +349,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "panda"
 				}
 			],
 			"yesOutcome": [],
@@ -375,12 +376,13 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "panda"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 4
+					"value": "askone"
 				}
 			],
 			"loadOutcome": [],
@@ -401,7 +403,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "panda"
 				},
 				{
 					"variable": "politics",
@@ -431,12 +433,13 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "panda"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 4
+					"value": "askone"
 				}
 			],
 			"loadOutcome": [],
@@ -486,7 +489,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "panda"
 				},
 				{
 					"variable": "politics",

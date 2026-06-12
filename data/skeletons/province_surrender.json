@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -145,10 +145,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.wei_revenge"
 				}
 			],
 			"question": "",

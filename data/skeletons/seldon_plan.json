@@ -76,10 +76,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.first"
 				},
 				{
 					"variable": "military",
@@ -89,10 +89,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.first"
 				},
 				{
 					"variable": "politics",
@@ -122,7 +122,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "take_nanjun"
 				},
 				{
 					"variable": "year",
@@ -130,14 +131,15 @@
 					"value": 210
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_cao_no_jingzhou"
 				}
 			],
 			"loadOutcome": [],
@@ -146,7 +148,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -159,7 +161,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -199,7 +201,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "deck",
@@ -218,7 +220,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				}
 			],
 			"noOutcome": [
@@ -260,12 +262,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "meet_wei_hong"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [
@@ -273,7 +277,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_wei_hong"
 				},
 				{
 					"variable": "deck",
@@ -285,14 +289,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				},
 				{
 					"variable": "religion",
@@ -322,7 +326,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "meet_kong_rong"
 				},
 				{
 					"variable": "year",
@@ -337,7 +342,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [
@@ -350,14 +356,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_kong_rong"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				},
 				{
 					"variable": "religion",
@@ -396,7 +402,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				},
 				{
 					"variable": "religion",
@@ -448,12 +454,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "yuan_shao"
 				}
 			],
 			"loadOutcome": [
@@ -475,7 +483,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -534,12 +542,12 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_tao_qian"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				},
 				{
 					"variable": "religion",
@@ -583,14 +591,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_tao_qian"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				}
 			],
 			"noOutcome": [
@@ -627,7 +635,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "lu_zhi"
 				}
 			],
 			"loadOutcome": [
@@ -640,7 +649,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_lu_zhi"
 				}
 			],
 			"yesOutcome": [
@@ -682,7 +691,7 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				}
@@ -745,12 +754,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "join_the_assembly"
 				}
 			],
 			"loadOutcome": [
@@ -763,7 +773,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "join_the_assembly"
 				}
 			],
 			"yesOutcome": [
@@ -807,12 +817,13 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "join_the_assembly"
 				}
 			],
 			"loadOutcome": [
@@ -825,14 +836,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "join_the_assembly"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				},
 				{
 					"variable": "military",
@@ -876,7 +887,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "luoyang_on_fire"
 				},
 				{
 					"variable": "deck",
@@ -932,7 +943,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "luoyang_on_fire"
 				},
 				{
 					"variable": "deck",
@@ -991,7 +1002,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -999,7 +1010,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				},
 				{
 					"variable": "politics",
@@ -1041,7 +1052,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -1096,7 +1107,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [
@@ -1109,14 +1120,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "talent_in_jizhou"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "commerce",
@@ -1157,7 +1168,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [
@@ -1170,7 +1181,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "talent_in_jizhou"
 				}
 			],
 			"yesOutcome": [
@@ -1227,14 +1238,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_changan"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_neotrantor"
 				},
 				{
 					"variable": "commerce",
@@ -1284,14 +1295,15 @@
 					"value": 193
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 9
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [
@@ -1304,14 +1316,14 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yangzhou"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_korell"
 				}
 			],
 			"noOutcome": [],
@@ -1340,14 +1352,15 @@
 					"value": 192
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 6
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "honey_trap"
 				}
 			],
 			"loadOutcome": [],
@@ -1400,14 +1413,15 @@
 					"value": 192
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 6
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 5
+					"value": 5,
+					"custom_name": "honey_trap"
 				}
 			],
 			"loadOutcome": [],
@@ -1440,7 +1454,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "planet_state",
@@ -1460,7 +1475,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "commerce",
@@ -1548,12 +1563,13 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"loadOutcome": [
@@ -1566,7 +1582,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"yesOutcome": [
@@ -1607,7 +1623,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_terminus"
 				},
 				{
 					"variable": "religion",
@@ -1619,7 +1635,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_terminus"
 				},
 				{
 					"variable": "politics",
@@ -1654,12 +1670,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"loadOutcome": [
@@ -1672,7 +1689,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"yesOutcome": [
@@ -1714,7 +1731,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 2
 				}
@@ -1731,7 +1748,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",
@@ -1744,7 +1761,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",
@@ -1777,7 +1794,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				}
@@ -1827,7 +1844,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				},
@@ -1892,7 +1909,7 @@
 					"value": 200
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				}
@@ -1907,7 +1924,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "qiao_sisters"
 				}
 			],
 			"yesOutcome": [
@@ -1946,7 +1963,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "grand_commander_yangzhou"
 				},
 				{
 					"variable": "seen",
@@ -1959,13 +1977,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_yangzhou"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				}
 			],
 			"yesOutcome": [
@@ -2014,7 +2032,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "meet_liu_biao"
 				}
 			],
 			"loadOutcome": [
@@ -2080,7 +2099,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "sleeping_dragon"
 				}
 			],
 			"loadOutcome": [],
@@ -2130,7 +2150,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "sleeping_dragon"
 				}
 			],
 			"loadOutcome": [],
@@ -2139,12 +2160,12 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "giant_horns_invitation"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_smyrno"
 				},
 				{
 					"variable": "religion",
@@ -2191,12 +2212,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "horns_troubles"
 				},
 				{
 					"variable": "deck",
@@ -2206,7 +2228,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "giant_horns_troubles"
 				}
 			],
 			"loadOutcome": [
@@ -2214,13 +2237,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "giant_horns_invitation"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "horns_troubles"
 				}
 			],
 			"yesOutcome": [
@@ -2264,12 +2287,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "horns_troubles"
 				},
 				{
 					"variable": "deck",
@@ -2365,7 +2389,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "giant_horns_troubles"
 				},
 				{
 					"variable": "deck",
@@ -2412,7 +2436,7 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				}
@@ -2459,7 +2483,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "meet_pang_tong"
 				}
 			],
 			"loadOutcome": [],
@@ -2499,7 +2524,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "year",
@@ -2514,7 +2539,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -2523,7 +2549,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "raw_fish"
 				},
 				{
 					"variable": "deck",
@@ -2533,7 +2559,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				},
 				{
 					"variable": "politics",
@@ -2551,7 +2577,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "raw_fish"
 				},
 				{
 					"variable": "deck",
@@ -2586,7 +2612,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 8
+					"value": "trantor"
 				},
 				{
 					"variable": "year",
@@ -2606,7 +2632,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "planet_state",
@@ -2616,7 +2643,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "ghost_in_the_palace"
 				}
 			],
 			"loadOutcome": [
@@ -2624,7 +2652,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghost_in_the_palace"
 				},
 				{
 					"variable": "deck",
@@ -2636,7 +2664,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"noOutcome": [
@@ -2678,7 +2706,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 14
+					"value": "santanni"
 				},
 				{
 					"variable": "planet_state",
@@ -2723,7 +2751,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 14
+					"value": "santanni"
 				},
 				{
 					"variable": "planet_state",
@@ -2743,7 +2771,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -2788,7 +2817,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 14
+					"value": "santanni"
 				},
 				{
 					"variable": "planet_state",
@@ -2803,7 +2832,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -2848,17 +2878,20 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "year",
@@ -2868,7 +2901,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "marry_shangxiang"
 				}
 			],
 			"loadOutcome": [
@@ -2881,7 +2915,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				}
 			],
 			"yesOutcome": [
@@ -2920,12 +2954,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "year",
@@ -2935,7 +2971,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "marry_shangxiang"
 				}
 			],
 			"loadOutcome": [
@@ -2948,7 +2985,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_shangxiang"
 				}
 			],
 			"yesOutcome": [
@@ -2992,7 +3029,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "year",
@@ -3002,7 +3040,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "marry_shangxiang"
 				}
 			],
 			"loadOutcome": [
@@ -3010,7 +3049,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_quan"
 				}
 			],
 			"yesOutcome": [
@@ -3052,14 +3091,15 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 7
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "rice_fever"
 				}
 			],
 			"loadOutcome": [
@@ -3072,7 +3112,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rice_fever"
 				}
 			],
 			"yesOutcome": [
@@ -3129,7 +3169,7 @@
 					"value": 211
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				}
@@ -3146,7 +3186,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "politics",
@@ -3196,7 +3236,7 @@
 					"value": 212
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				},
@@ -3246,7 +3286,7 @@
 					"value": 213
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 1
 				}
@@ -3291,7 +3331,7 @@
 					"value": 214
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				}
@@ -3336,7 +3376,7 @@
 					"value": 214
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 8
 				}
@@ -3347,7 +3387,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				}
 			],
 			"noOutcome": [
@@ -3355,7 +3395,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -3385,7 +3425,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhang_lu_no_hanzhong"
 				},
 				{
 					"variable": "year",
@@ -3497,12 +3538,12 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cult_leader"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_sayshell"
 				}
 			],
 			"noOutcome": [],
@@ -3531,7 +3572,7 @@
 					"value": 216
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 2
 				}
@@ -3576,7 +3617,7 @@
 					"value": 216
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				},
@@ -3592,7 +3633,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -3605,7 +3646,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -3635,12 +3676,14 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "year",
@@ -3654,7 +3697,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -3667,7 +3710,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -3760,7 +3803,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lv_meng"
 				}
 			],
 			"yesOutcome": [
@@ -3772,10 +3815,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.lv_meng"
 				}
 			],
 			"question": "",
@@ -3818,7 +3861,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_xun"
 				}
 			],
 			"yesOutcome": [
@@ -3831,21 +3874,21 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_xun"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.lu_xun"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_xun"
 				}
 			],
 			"question": "",
@@ -3873,7 +3916,7 @@
 					"value": 219
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				}
@@ -3912,7 +3955,7 @@
 					"value": 219
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 10
 				}
@@ -3967,7 +4010,7 @@
 					"value": 219
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				},
@@ -3982,7 +4025,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lv_meng"
 				}
 			],
 			"yesOutcome": [
@@ -4112,7 +4155,7 @@
 					"value": 220
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 1
 				}
@@ -4167,7 +4210,7 @@
 					"value": 220
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 2
 				}
@@ -4227,7 +4270,7 @@
 					"value": 220
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				}
@@ -4237,7 +4280,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "caocao_dead"
 				}
 			],
 			"yesOutcome": [
@@ -4245,7 +4288,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_pi"
 				},
 				{
 					"variable": "link",
@@ -4273,7 +4316,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_pi"
 				},
 				{
 					"variable": "link",
@@ -4350,7 +4393,7 @@
 					"value": 220
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 10
 				},
@@ -4400,14 +4443,15 @@
 					"value": 221
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "seen",
@@ -4421,7 +4465,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -4434,7 +4478,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -4467,7 +4511,7 @@
 					"value": 221
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 7
 				},
@@ -4532,14 +4576,15 @@
 					"value": 221
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 7
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [],
@@ -4592,7 +4637,7 @@
 					"value": 221
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 8
 				},
@@ -4642,14 +4687,15 @@
 					"value": 221
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [],
@@ -4697,14 +4743,15 @@
 					"value": 222
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [],
@@ -4752,14 +4799,15 @@
 					"value": 222
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 6
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [],
@@ -4787,7 +4835,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				},
 				{
 					"variable": "year",
@@ -4795,7 +4844,7 @@
 					"value": 223
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				},
@@ -4815,7 +4864,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"yesOutcome": [],
@@ -4923,17 +4972,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 99
+					"value": 99,
+					"custom_name": "synaptic"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 1
+					"value": 1,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "year",
@@ -4943,7 +4995,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -4986,7 +5038,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -5080,7 +5133,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [],
@@ -5140,7 +5194,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [],
@@ -5198,7 +5253,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "family_affair"
 				},
 				{
 					"variable": "deck",
@@ -5208,7 +5263,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_siwenna"
 				}
 			],
 			"noOutcome": [],
@@ -5244,7 +5299,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "year",
@@ -5522,7 +5577,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_macaque_son"
 				},
 				{
 					"variable": "deck",
@@ -5532,7 +5587,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_terminus"
 				}
 			],
 			"noOutcome": [
@@ -5540,7 +5595,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_macaque_son"
 				},
 				{
 					"variable": "deck",
@@ -5550,7 +5605,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_terminus"
 				}
 			],
 			"question": "",
@@ -5580,7 +5635,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "new_trade_route"
 				}
 			],
 			"loadOutcome": [],
@@ -5594,13 +5650,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "new_trade_route"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sea_trading"
 				},
 				{
 					"variable": "commerce",
@@ -5642,12 +5698,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "new_trade_route"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				}
 			],
 			"loadOutcome": [],
@@ -5661,13 +5719,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "new_trade_route"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sea_trading"
 				},
 				{
 					"variable": "commerce",
@@ -5709,12 +5767,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "year",
@@ -5727,7 +5787,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ghostbuster"
 				},
 				{
 					"variable": "deck",
@@ -5739,7 +5799,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_neotrantor"
 				},
 				{
 					"variable": "religion",
@@ -5779,12 +5839,12 @@
 					"value": 52
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 5
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 10
 				},
@@ -5800,7 +5860,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master"
 				},
 				{
 					"variable": "deck",
@@ -5810,7 +5870,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_santanni"
 				},
 				{
 					"variable": "religion",
@@ -5823,7 +5883,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master"
 				},
 				{
 					"variable": "deck",
@@ -5875,7 +5935,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_successor"
 				}
 			],
 			"yesOutcome": [
@@ -5890,7 +5950,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -5925,18 +5985,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "autoresolve"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "autoresolve"
 				}
 			],
 			"question": "",
@@ -5963,13 +6023,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_of_wu"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"yesOutcome": [
@@ -5977,7 +6037,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "military",
@@ -6000,7 +6060,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				}
 			],
 			"question": "",
@@ -6075,7 +6135,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "deck",
@@ -6136,7 +6197,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "deck",
@@ -6154,7 +6216,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -6203,12 +6265,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [
@@ -6216,7 +6280,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -6270,12 +6334,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [
@@ -6283,7 +6349,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [],
@@ -6316,22 +6382,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 6
+					"value": 6,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				}
 			],
 			"loadOutcome": [],
@@ -6367,7 +6437,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -6415,12 +6485,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [
@@ -6428,7 +6500,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -6477,12 +6549,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -6529,7 +6603,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -6578,17 +6652,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "building_a_palace"
 				}
 			],
 			"loadOutcome": [],
@@ -6597,7 +6674,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "building_a_palace"
 				},
 				{
 					"variable": "military",
@@ -6659,7 +6736,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "building_a_palace"
 				}
 			],
 			"loadOutcome": [
@@ -6667,7 +6745,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "building_a_palace"
 				}
 			],
 			"yesOutcome": [
@@ -6711,7 +6789,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "building_a_palace"
 				}
 			],
 			"loadOutcome": [
@@ -6719,7 +6798,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "building_a_palace"
 				}
 			],
 			"yesOutcome": [
@@ -6768,7 +6847,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "building_a_palace"
 				}
 			],
 			"loadOutcome": [
@@ -6776,7 +6856,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "building_a_palace"
 				}
 			],
 			"yesOutcome": [
@@ -6835,7 +6915,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "building_a_palace"
 				}
 			],
 			"loadOutcome": [
@@ -6843,7 +6924,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "building_a_palace"
 				}
 			],
 			"yesOutcome": [
@@ -6897,7 +6978,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "building_a_palace"
 				},
 				{
 					"variable": "commerce",
@@ -6911,7 +6993,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "building_a_palace"
 				},
 				{
 					"variable": "military",
@@ -6952,12 +7034,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "building_a_palace"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -6966,7 +7050,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				},
 				{
 					"variable": "military",
@@ -7013,7 +7097,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "seen",
@@ -7032,7 +7117,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				},
 				{
 					"variable": "military",
@@ -7079,7 +7164,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "seen",
@@ -7098,7 +7184,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				},
 				{
 					"variable": "military",
@@ -7145,7 +7231,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "building_a_palace"
 				},
 				{
 					"variable": "seen",
@@ -7155,7 +7242,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
@@ -7164,7 +7252,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				},
 				{
 					"variable": "military",
@@ -7211,7 +7299,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "caocao_dead"
 				},
 				{
 					"variable": "year",
@@ -7221,7 +7310,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 8
+					"value": 8,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "planet_state",
@@ -7231,24 +7321,25 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.changan_cao_cao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.changan_cao_cao"
 				}
 			],
 			"question": "",
@@ -7273,7 +7364,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "caocao_dead"
 				},
 				{
 					"variable": "year",
@@ -7288,7 +7380,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 8
+					"value": 8,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "planet_state",
@@ -7298,24 +7391,25 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.changan_cao_pi"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.changan_cao_pi"
 				}
 			],
 			"question": "",
@@ -7345,7 +7439,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 8
+					"value": 8,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "planet_state",
@@ -7355,24 +7450,25 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.changan_sima_yi"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.changan_sima_yi"
 				}
 			],
 			"question": "",
@@ -7459,10 +7555,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.luoyang_duel"
 				},
 				{
 					"variable": "military",
@@ -7514,7 +7610,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "year",
@@ -7530,10 +7627,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.luoyang_duel"
 				},
 				{
 					"variable": "military",
@@ -7605,16 +7702,17 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "rank"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.luoyang_duel"
 				},
 				{
 					"variable": "military",
@@ -7673,7 +7771,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				},
 				{
 					"variable": "planet_state",
@@ -7774,19 +7872,19 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "victory"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ending"
 				}
 			],
 			"yesOutcome": [
@@ -7794,7 +7892,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "restored_han"
 				},
 				{
 					"variable": "religion",
@@ -7807,7 +7905,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				},
 				{
 					"variable": "military",
@@ -7837,22 +7935,26 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "restored_han"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -7861,13 +7963,13 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.liu_bei_duel"
 				}
 			],
 			"noOutcome": [
@@ -7875,13 +7977,13 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.liu_bei_duel"
 				}
 			],
 			"question": "",
@@ -7906,22 +8008,26 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "restored_han"
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -7930,7 +8036,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "victory"
 				},
 				{
 					"variable": "link",
@@ -7943,13 +8049,13 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.liu_bei_duel"
 				}
 			],
 			"question": "",
@@ -8004,7 +8110,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "victory"
 				}
 			],
 			"yesOutcome": [
@@ -8043,17 +8149,20 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_shan"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "restored_han"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -8063,7 +8172,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				}
 			],
 			"question": "",
@@ -8088,17 +8197,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "restored_han"
 				},
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "liu_shan"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -8108,7 +8220,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				}
 			],
 			"question": "",
@@ -8133,12 +8245,14 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 7
+					"value": 7,
+					"custom_name": "sun_quan"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -8148,7 +8262,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "tyranny"
 				}
 			],
 			"question": "",
@@ -8173,7 +8287,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -8213,12 +8328,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ending"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "victory"
 				}
 			],
 			"loadOutcome": [],
@@ -8260,23 +8377,23 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "times_died"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "death"
 				}
 			],
 			"question": "",
@@ -8308,25 +8425,25 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_wei_hong"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_recipe"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "wine_making"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "elixir_of_power"
 				}
 			],
 			"yesOutcome": [
@@ -8341,7 +8458,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "military",
@@ -8378,7 +8495,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "second_guandu_battle"
 				}
 			],
 			"yesOutcome": [
@@ -8386,7 +8503,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "military",
@@ -8399,7 +8516,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "religion",
@@ -8431,7 +8548,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "steal_xudu"
 				}
 			],
 			"yesOutcome": [
@@ -8439,7 +8556,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_you"
 				},
 				{
 					"variable": "religion",
@@ -8457,7 +8574,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_you"
 				}
 			],
 			"question": "",
@@ -8501,13 +8618,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_mom"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "deck",
@@ -8525,7 +8642,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "religion",
@@ -8558,14 +8675,15 @@
 					"value": 208
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 10
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_cao_no_jingzhou"
 				}
 			],
 			"loadOutcome": [
@@ -8578,7 +8696,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "garrison_xinye"
 				}
 			],
 			"yesOutcome": [
@@ -8586,7 +8704,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -8625,7 +8743,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "protect_refugees"
 				}
 			],
 			"yesOutcome": [
@@ -8638,7 +8756,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xinye_refugees"
 				},
 				{
 					"variable": "politics",
@@ -8661,7 +8779,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xinye_refugees"
 				},
 				{
 					"variable": "politics",
@@ -8691,7 +8809,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"loadOutcome": [
@@ -8699,7 +8818,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"yesOutcome": [],
@@ -8728,7 +8847,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sleeping_dragon"
 				}
 			],
 			"yesOutcome": [
@@ -8764,7 +8883,7 @@
 					"value": 191
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 2
 				}
@@ -8807,7 +8926,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "where_is_cao_cao"
 				}
 			],
 			"yesOutcome": [
@@ -8815,7 +8934,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "military",
@@ -8908,7 +9027,7 @@
 					"value": 211
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 7
 				}
@@ -8958,7 +9077,7 @@
 					"value": 211
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				}
@@ -9109,12 +9228,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "nb_quest_here"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "ma_chao_revenge"
 				}
 			],
 			"loadOutcome": [],
@@ -9156,7 +9277,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao"
 				}
 			],
 			"yesOutcome": [
@@ -9207,7 +9328,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao_revenge"
 				},
 				{
 					"variable": "deck",
@@ -9220,18 +9341,18 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_smyrno"
 				}
 			],
 			"noOutcome": [
@@ -9239,13 +9360,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"question": "",
@@ -9270,7 +9391,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhang_lu_no_hanzhong"
 				}
 			],
 			"loadOutcome": [
@@ -9278,7 +9400,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao_revenge"
 				}
 			],
 			"yesOutcome": [
@@ -9319,7 +9441,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao_revenge"
 				}
 			],
 			"yesOutcome": [
@@ -9358,7 +9480,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "ghostbuster"
 				}
 			],
 			"loadOutcome": [],
@@ -9420,7 +9543,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marry_shangxiang"
 				}
 			],
 			"yesOutcome": [
@@ -9435,7 +9558,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "military",
@@ -9470,24 +9593,25 @@
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 55
+					"value": 55,
+					"custom_name": "battle_odd"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "startbattle"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "autoresolve"
 				}
 			],
 			"question": "",
@@ -9512,24 +9636,25 @@
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 80
+					"value": 80,
+					"custom_name": "battle_odd"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "startbattle"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "autoresolve"
 				}
 			],
 			"question": "",
@@ -9554,18 +9679,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "startbattle"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "autoresolve"
 				}
 			],
 			"question": "",
@@ -9592,7 +9717,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "find_liu_bei"
 				}
 			],
 			"yesOutcome": [
@@ -9631,7 +9756,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "never"
 				}
 			],
 			"loadOutcome": [

@@ -20,12 +20,14 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "sleeping_dragon"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhuge_liang"
 				}
 			],
 			"loadOutcome": [],
@@ -34,7 +36,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "link",
@@ -47,7 +49,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "link",
@@ -87,7 +89,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "commerce",
@@ -118,7 +120,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"yesOutcome": [
@@ -126,7 +128,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "commerce",
@@ -139,7 +141,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "religion",
@@ -169,17 +171,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "sleeping_dragon"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "zhuge_liang"
 				}
 			],
 			"loadOutcome": [],
@@ -224,10 +228,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.move_go_piece_variation"
 				},
 				{
 					"variable": "link",
@@ -237,10 +241,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.move_go_piece_variation"
 				},
 				{
 					"variable": "link",
@@ -272,7 +276,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				}
 			],
 			"yesOutcome": [],
@@ -321,22 +325,24 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "sleeping_dragon"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 7
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -352,7 +358,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "religion",
@@ -385,7 +391,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "religion",
@@ -430,7 +436,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "politics",
@@ -448,7 +454,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "religion",
@@ -477,10 +483,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.curtain_draw"
 				}
 			],
 			"yesOutcome": [
@@ -519,22 +525,24 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "sleeping_dragon"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "zhuge_liang"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 4
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -550,7 +558,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				},
 				{
 					"variable": "religion",
@@ -588,7 +596,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				}
 			],
 			"noOutcome": [
@@ -596,7 +604,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhuge_liang"
 				}
 			],
 			"question": "",
@@ -623,7 +631,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sleeping_dragon"
 				}
 			],
 			"yesOutcome": [

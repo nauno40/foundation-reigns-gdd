@@ -25,12 +25,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -126,7 +127,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "commerce",
@@ -175,10 +176,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.xu_shu"
 				},
 				{
 					"variable": "military",
@@ -188,10 +189,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.xu_shu"
 				},
 				{
 					"variable": "military",
@@ -223,15 +224,15 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				}
 			],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.against_xu_shu"
 				},
 				{
 					"variable": "religion",
@@ -241,10 +242,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.against_xu_shu"
 				},
 				{
 					"variable": "politics",
@@ -274,7 +275,8 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -302,7 +304,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -330,7 +333,8 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -358,7 +362,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -386,17 +391,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_xu_shu"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -516,7 +523,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_xu_shu"
 				}
 			],
 			"yesOutcome": [
@@ -529,7 +536,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "military",
@@ -547,7 +554,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "politics",
@@ -582,12 +589,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "sleeping_dragon"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				}
 			],
 			"loadOutcome": [],
@@ -615,12 +623,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -629,7 +638,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "politics",
@@ -647,7 +656,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "military",
@@ -687,12 +696,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -701,7 +711,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "politics",
@@ -748,17 +758,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 6
+					"value": "terminus"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "meet_xu_shu"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "xu_shu"
 				}
 			],
 			"loadOutcome": [],
@@ -767,7 +779,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "xu_shu"
 				},
 				{
 					"variable": "military",
@@ -803,7 +815,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "meet_xu_shu"
 				},
 				{
 					"variable": "year",

@@ -25,17 +25,19 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -44,7 +46,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -109,7 +111,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -159,7 +161,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "liu_bei"
 				}
 			],
 			"loadOutcome": [
@@ -167,13 +170,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "gongsun_zan"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "invited"
 				}
 			],
 			"yesOutcome": [
@@ -259,7 +262,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "religion",
@@ -272,7 +275,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "link",
@@ -283,7 +286,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "join_the_assembly"
 				},
 				{
 					"variable": "religion",
@@ -316,13 +319,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "invited"
 				},
 				{
 					"variable": "commerce",
@@ -335,7 +338,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "invited"
 				},
 				{
 					"variable": "religion",
@@ -365,17 +368,19 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "invited"
 				}
 			],
 			"loadOutcome": [],
@@ -391,7 +396,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -421,17 +426,19 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "invited"
 				}
 			],
 			"loadOutcome": [],
@@ -440,7 +447,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "military",
@@ -458,7 +465,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -488,12 +495,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "invited"
 				}
 			],
 			"loadOutcome": [],
@@ -555,13 +563,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "dong_zhuo"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "join_the_assembly"
 				}
 			],
 			"yesOutcome": [
@@ -608,7 +616,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_jian"
 				},
 				{
 					"variable": "link",
@@ -626,7 +634,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_jian"
 				},
 				{
 					"variable": "link",
@@ -692,7 +700,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				}
 			],
 			"yesOutcome": [
@@ -972,7 +980,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "luoyang_on_fire"
 				},
 				{
 					"variable": "deck",
@@ -1078,7 +1086,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_jian"
 				},
 				{
 					"variable": "link",
@@ -1125,18 +1133,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.stop_dong_zhuo"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.stop_dong_zhuo"
 				}
 			],
 			"question": "",
@@ -1215,7 +1223,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				}
 			],
 			"noOutcome": [],

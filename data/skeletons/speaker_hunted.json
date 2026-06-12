@@ -140,7 +140,7 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				}
@@ -163,7 +163,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				}
 			],
 			"question": "",
@@ -188,7 +188,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "caocao_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -265,7 +266,7 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				}
@@ -388,7 +389,7 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 10
 				}
@@ -432,13 +433,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted_start"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted"
 				}
 			],
 			"yesOutcome": [
@@ -526,7 +527,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_cao_wanted_start"
 				}
 			],
 			"loadOutcome": [],
@@ -644,7 +646,7 @@
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"loadOutcome": [
@@ -652,13 +654,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted_start"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted"
 				}
 			],
 			"yesOutcome": [
@@ -671,7 +673,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "where_is_cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -689,7 +691,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "where_is_cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -721,7 +723,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"noOutcome": [],
@@ -747,7 +749,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"loadOutcome": [
@@ -755,13 +757,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted_start"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted"
 				}
 			],
 			"yesOutcome": [
@@ -769,7 +771,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "where_is_cao_cao"
 				}
 			],
 			"noOutcome": [
@@ -777,7 +779,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "where_is_cao_cao"
 				}
 			],
 			"question": "",
@@ -805,19 +807,20 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 11
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "cao_cao_wanted"
 				}
 			],
 			"loadOutcome": [],
@@ -932,13 +935,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "where_is_cao_cao"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao_wanted"
 				}
 			],
 			"yesOutcome": [
@@ -1097,7 +1100,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "military",
@@ -1141,14 +1144,14 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"yesOutcome": [
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "link",
@@ -1160,7 +1163,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "link",
@@ -1212,7 +1215,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "cao_cao_wanted"
 				},
 				{
 					"variable": "year",
@@ -1220,7 +1224,7 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				}

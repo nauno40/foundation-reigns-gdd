@@ -20,12 +20,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ma_chao_revenge"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"loadOutcome": [],
@@ -70,17 +71,19 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ma_chao_revenge"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 5
+					"value": 5,
+					"custom_name": "ma_chao"
 				},
 				{
 					"variable": "year",
@@ -94,13 +97,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"noOutcome": [
@@ -108,7 +111,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"question": "",
@@ -133,7 +136,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ma_chao_revenge"
 				},
 				{
 					"variable": "year",
@@ -141,7 +145,7 @@
 					"value": 213
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 1
 				}
@@ -152,13 +156,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"noOutcome": [
@@ -190,7 +194,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ma_chao_revenge"
 				},
 				{
 					"variable": "year",
@@ -198,19 +203,20 @@
 					"value": 213
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 1
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 11
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 5
+					"value": 5,
+					"custom_name": "ma_chao"
 				}
 			],
 			"loadOutcome": [],
@@ -219,13 +225,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -262,7 +268,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "ma_chao_revenge"
 				},
 				{
 					"variable": "year",
@@ -270,19 +277,20 @@
 					"value": 213
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 1
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 11
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "ma_chao"
 				}
 			],
 			"loadOutcome": [],
@@ -290,7 +298,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 2
+					"value": "smyrno"
 				},
 				{
 					"variable": "link",
@@ -327,18 +335,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.jicheng"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.jicheng"
 				}
 			],
 			"question": "",
@@ -458,7 +466,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao_revenge"
 				}
 			],
 			"yesOutcome": [
@@ -514,7 +522,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "ma_chao_revenge"
 				}
 			],
 			"yesOutcome": [
@@ -568,7 +576,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhang_lu_no_hanzhong"
 				},
 				{
 					"variable": "year",
@@ -576,7 +585,7 @@
 					"value": 215
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				}

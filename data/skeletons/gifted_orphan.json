@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -60,7 +60,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				}
 			],
 			"loadOutcome": [],
@@ -98,12 +98,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "visit_yangzhou"
 				},
 				{
 					"variable": "seen",
@@ -150,13 +151,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yangzhou"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"yesOutcome": [
@@ -164,7 +165,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"noOutcome": [
@@ -172,7 +173,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"question": "",
@@ -199,13 +200,13 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "visit_yangzhou"
 				},
 				{
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"yesOutcome": [
@@ -213,7 +214,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"noOutcome": [
@@ -221,7 +222,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"question": "",
@@ -256,12 +257,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"loadOutcome": [],
@@ -282,7 +284,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"question": "",
@@ -309,7 +311,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"yesOutcome": [
@@ -402,7 +404,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "seen",
@@ -504,7 +506,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "link",
@@ -517,7 +519,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "link",
@@ -585,17 +587,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "befriend_sun_ce"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "sun_ce"
 				}
 			],
 			"loadOutcome": [],
@@ -604,7 +608,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "military",
@@ -622,7 +626,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "military",
@@ -667,17 +671,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "befriend_sun_ce"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "sun_ce"
 				}
 			],
 			"loadOutcome": [],
@@ -720,7 +726,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"noOutcome": [],
@@ -749,7 +755,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"noOutcome": [],
@@ -785,17 +791,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "befriend_sun_ce"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "sun_ce"
 				}
 			],
 			"loadOutcome": [],
@@ -805,7 +813,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"question": "",
@@ -840,12 +848,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "seen",
@@ -922,12 +931,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "seen",
@@ -948,7 +958,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "religion",
@@ -988,12 +998,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "seen",
@@ -1012,7 +1023,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				}
 			],
 			"noOutcome": [
@@ -1025,13 +1036,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhou_yu"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				}
 			],
 			"question": "",
@@ -1058,7 +1069,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_of_wu"
 				}
 			],
 			"yesOutcome": [],
@@ -1095,17 +1106,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "befriend_sun_ce"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "sun_ce"
 				}
 			],
 			"loadOutcome": [
@@ -1113,7 +1126,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "befriend_sun_ce"
 				}
 			],
 			"yesOutcome": [],
@@ -1150,12 +1163,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "zhou_yu"
 				}
 			],
 			"loadOutcome": [],
@@ -1215,12 +1229,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "zhou_yu"
 				}
 			],
 			"loadOutcome": [],
@@ -1248,12 +1263,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 7
+					"value": "korell"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "grand_commander_of_wu"
 				}
 			],
 			"loadOutcome": [],
@@ -1298,10 +1314,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.lujiang"
 				}
 			],
 			"noOutcome": [
@@ -1338,10 +1354,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.lujiang"
 				}
 			],
 			"noOutcome": [
@@ -1349,7 +1365,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sun_ce"
 				},
 				{
 					"variable": "military",
@@ -1420,7 +1436,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_of_wu"
 				}
 			],
 			"yesOutcome": [
@@ -1433,7 +1449,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_yangzhou"
 				},
 				{
 					"variable": "link",
@@ -1578,7 +1594,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "grand_commander_of_wu"
 				},
 				{
 					"variable": "deck",

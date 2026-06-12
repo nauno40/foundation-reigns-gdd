@@ -34,7 +34,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "religion",
@@ -81,7 +81,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "year",
@@ -96,7 +97,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "attack_the_brother"
 				}
 			],
 			"loadOutcome": [],
@@ -144,13 +146,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "attack_the_brother"
 				},
 				{
 					"variable": "military",
@@ -163,7 +165,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "military",
@@ -201,13 +203,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "attack_the_brother"
 				},
 				{
 					"variable": "military",
@@ -220,7 +222,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "politics",
@@ -257,7 +259,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				}
 			],
 			"yesOutcome": [
@@ -301,18 +303,18 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.betrayal_yuan_shu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.betrayal_yuan_shu"
 				}
 			],
 			"question": "",
@@ -347,13 +349,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "attack_the_brother"
 				},
 				{
 					"variable": "military",
@@ -403,13 +405,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "attack_the_brother"
 				},
 				{
 					"variable": "military",
@@ -441,7 +443,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "attack_the_brother"
 				}
 			],
 			"yesOutcome": [
@@ -505,12 +507,14 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 7
+					"value": 7,
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "year",
@@ -524,13 +528,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.betrayal_yuan_shu2"
 				},
 				{
 					"variable": "military",
@@ -543,7 +547,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "deck",
@@ -588,12 +592,14 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 7
+					"value": 7,
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 5
+					"value": 5,
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "year",
@@ -607,13 +613,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.betrayal_yuan_shu2"
 				},
 				{
 					"variable": "military",
@@ -631,7 +637,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "deck",
@@ -715,7 +721,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shu"
 				},
 				{
 					"variable": "military",

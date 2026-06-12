@@ -23,13 +23,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "planet_state",
@@ -110,7 +110,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "submit_to_yuan_shao"
 				}
 			],
 			"loadOutcome": [],
@@ -136,7 +137,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "governor_beihai"
 				},
 				{
 					"variable": "deck",
@@ -147,13 +148,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -206,7 +207,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "governor_beihai"
 				},
 				{
 					"variable": "deck",
@@ -217,13 +218,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -256,7 +257,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "governor_beihai"
 				},
 				{
 					"variable": "deck",
@@ -267,13 +268,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -328,12 +329,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "yuan_shao"
 				}
 			],
 			"loadOutcome": [],
@@ -341,13 +344,13 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "skip_command_yuan_tan_battle"
 				},
 				{
 					"variable": "link",
@@ -392,7 +395,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "skip_command_yuan_tan_battle"
 				},
 				{
 					"variable": "link",
@@ -409,13 +412,13 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "skip_command_yuan_tan_battle"
 				},
 				{
 					"variable": "link",
@@ -453,13 +456,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				}
 			],
 			"noOutcome": [
@@ -472,7 +475,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				}
 			],
 			"question": "",
@@ -497,16 +500,17 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "skip_command_yuan_tan_battle"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.defend_qingzhou"
 				},
 				{
 					"variable": "military",
@@ -516,10 +520,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.defend_qingzhou"
 				},
 				{
 					"variable": "military",
@@ -549,7 +553,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "skip_command_yuan_tan_battle"
 				},
 				{
 					"variable": "military",
@@ -620,7 +625,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "skip_command_yuan_tan_battle"
 				},
 				{
 					"variable": "military",
@@ -717,13 +723,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "relation",
 					"operation": "add",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -741,7 +747,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "governor_beihai"
 				},
 				{
 					"variable": "deck",
@@ -752,13 +758,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "submit_to_yuan_shao"
 				},
 				{
 					"variable": "politics",

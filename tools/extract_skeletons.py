@@ -18,11 +18,38 @@ OUT_DIR = ROOT / "data/skeletons"
 VAR_MAP = {
     4: "military", 5: "politics", 6: "religion", 7: "commerce",
     8: "turns", 10: "year", 11: "link", 13: "quest", 15: "age",
+    9: "month", 12: "trigger", 14: "moon",
     16: "seen", 17: "objective", 18: "location", 19: "planet_state",
     21: "party", 22: "relation", 24: "mood", 0: "custom", 2: "deck",
 }
 OP_MAP = {0: "equal", 1: "below", 2: "above", 3: "not", "==": "equal",
           "<": "below", ">": "above", "!=": "not"}
+
+# Régions du jeu de base (ints) → planètes Fondation
+REGION_MAP = {
+    2: "smyrno", 3: "kalgan", 4: "askone", 5: "neotrantor", 6: "terminus",
+    7: "korell", 8: "trantor", 9: "anacreon", 10: "rossem", 11: "siwenna",
+    12: "santanni", 13: "sayshell", 14: "santanni",
+}
+TRAVEL_MAP = {
+    "_travel_to_jingzhou": "_jump_terminus",
+    "_travel_to_liangzhou": "_jump_smyrno",
+    "_travel_to_qingzhou": "_jump_santanni",
+    "_travel_to_xuzhou": "_jump_trantor",
+    "_travel_to_yangzhou": "_jump_korell",
+    "_travel_to_yanzhou": "_jump_siwenna",
+    "_travel_to_yizhou": "_jump_askone",
+    "_travel_to_yizhou_mountain": "_jump_askone",
+    "_travel_to_yizhou_mountain_alt": "_jump_askone",
+    "_travel_to_yizhou_river": "_jump_askone",
+    "_travel_to_yizhou_river_hard": "_jump_askone",
+    "_travel_to_yuzhou": "_jump_anacreon",
+    "_travel_to_jizhou": "_jump_neotrantor",
+    "_travel_to_youzhou": "_jump_kalgan",
+    "_travel_to_luoyang": "_jump_trantor",
+    "_travel_to_changan_guarded": "_jump_neotrantor",
+    "_travel_to_hanzhong": "_jump_sayshell",
+}
 
 # Aliases systémiques du jeu de base → aliases Fondation
 ALIAS_MAP = {
@@ -37,8 +64,8 @@ def map_link(string_value, id_map, unknown_aliases):
     sv = str(string_value)
     if sv.isdigit():
         return id_map.get(int(sv), f"EXTERNE:{sv}")
-    if sv.startswith("_travel_to_"):
-        return "_jump_PLANETE"  # à résoudre au remplissage
+    if sv in TRAVEL_MAP:
+        return TRAVEL_MAP[sv]
     mapped = ALIAS_MAP.get(sv)
     if mapped is None:
         unknown_aliases.add(sv)
@@ -53,21 +80,45 @@ def map_outcomes(outcomes, id_map, unknown_aliases):
         if var == "link":
             entry["target"] = map_link(o.get("stringValue", ""), id_map, unknown_aliases)
         else:
-            entry["value"] = o.get("value")
-            # stringValue d'outcome non-link : nom de variable custom — gardé
+            value = o.get("value")
+            if var == "location" and value in REGION_MAP:
+                value = REGION_MAP[value]
+            entry["value"] = value
+            # stringValue d'outcome non-link : nom de la variable custom
+            # du jeu de base, gardé comme indice de transposition
             if o.get("stringValue"):
-                entry["custom_name"] = "A_TRANSPOSER"
+                entry["custom_name"] = str(o.get("stringValue"))
         result.append(entry)
     return result
 
-def map_conditions(conds, unknown_aliases):
+def map_conditions(node, unknown_aliases):
+    raw = node.get("conditions_raw")
     result = []
-    for c in conds or []:
+    if raw:
+        for c in raw:
+            el = c.get("conditionElement", {})
+            var = VAR_MAP.get(el.get("variable"), f"VAR_{el.get('variable')}")
+            value = el.get("intValue")
+            if var == "location" and value in REGION_MAP:
+                value = REGION_MAP[value]
+            entry = {
+                "variable": var,
+                "op": OP_MAP.get(c.get("operation"), str(c.get("operation"))),
+                "value": value,
+            }
+            if el.get("stringValue"):
+                entry["custom_name"] = str(el.get("stringValue"))
+            result.append(entry)
+        return result
+    for c in node.get("conditions") or []:
         var = VAR_MAP.get(c.get("variable"), f"VAR_{c.get('variable')}")
+        value = c.get("value")
+        if var == "location" and value in REGION_MAP:
+            value = REGION_MAP[value]
         result.append({
             "variable": var,
             "op": OP_MAP.get(c.get("op"), str(c.get("op"))),
-            "value": c.get("value"),
+            "value": value,
         })
     return result
 
@@ -108,7 +159,7 @@ def main():
                 "bearer_slot": (f"B{bearer}(x{bearer_freq[bearer]})"
                                  if bearer is not None else None),
                 "mood_hint": n.get("moods"),
-                "conditions": map_conditions(n.get("conditions"), unknown_aliases),
+                "conditions": map_conditions(n, unknown_aliases),
                 "loadOutcome": map_outcomes(n.get("loadOutcome"), id_map, unknown_aliases),
                 "yesOutcome": map_outcomes(n.get("yesOutcome"), id_map, unknown_aliases),
                 "noOutcome": map_outcomes(n.get("noOutcome"), id_map, unknown_aliases),

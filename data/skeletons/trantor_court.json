@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -127,7 +127,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -267,7 +267,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "party",
@@ -452,7 +452,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "party",
@@ -496,7 +496,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "year",
@@ -515,7 +515,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				},
 				{
 					"variable": "link",
@@ -567,7 +567,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				},
 				{
 					"variable": "religion",
@@ -597,7 +597,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				},
 				{
 					"variable": "year",
@@ -649,7 +649,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				}
 			],
 			"yesOutcome": [
@@ -657,7 +657,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				},
 				{
 					"variable": "religion",
@@ -769,7 +769,7 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 7
 				}
@@ -779,7 +779,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				},
 				{
 					"variable": "religion",
@@ -818,7 +818,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_jump_PLANETE"
+					"target": "_jump_trantor"
 				}
 			],
 			"noOutcome": [
@@ -853,14 +853,14 @@
 					"value": 189
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 8
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 10
+					"value": "rossem"
 				}
 			],
 			"loadOutcome": [],
@@ -902,7 +902,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "animal"
 				}
 			],
 			"yesOutcome": [

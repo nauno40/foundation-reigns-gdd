@@ -20,7 +20,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "planet_state",
@@ -33,7 +34,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "become_a_magistrate"
 				},
 				{
 					"variable": "planet_state",
@@ -46,7 +47,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "outside_loo"
 				},
 				{
 					"variable": "military",
@@ -102,7 +103,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "outside_loo"
 				},
 				{
 					"variable": "military",
@@ -154,7 +155,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "outside_loo"
 				}
 			],
 			"loadOutcome": [
@@ -162,7 +164,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "outside_loo"
 				}
 			],
 			"yesOutcome": [
@@ -262,7 +264,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "curtain_loo"
 				}
 			],
 			"yesOutcome": [
@@ -399,15 +401,17 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "golden_donkey"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				},
@@ -465,7 +469,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "north"
 				}
 			],
 			"loadOutcome": [],
@@ -608,7 +613,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "plague"
 				}
 			],
 			"loadOutcome": [],
@@ -773,7 +779,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -912,7 +918,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"yesOutcome": [],
@@ -989,12 +995,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "rainmaking_yu_ji"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "taoism"
 				}
 			],
 			"loadOutcome": [],
@@ -1085,7 +1093,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"yesOutcome": [
@@ -1129,7 +1137,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"loadOutcome": [
@@ -1137,7 +1146,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"yesOutcome": [
@@ -1176,7 +1185,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"loadOutcome": [
@@ -1184,7 +1194,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"yesOutcome": [
@@ -1228,7 +1238,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"loadOutcome": [
@@ -1236,7 +1247,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"yesOutcome": [
@@ -1280,12 +1291,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"loadOutcome": [
@@ -1293,7 +1306,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rainmaking_yu_ji"
 				}
 			],
 			"yesOutcome": [
@@ -1335,7 +1348,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "channel"
 				},
 				{
 					"variable": "commerce",
@@ -1377,7 +1390,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "watermill"
 				}
 			],
 			"loadOutcome": [],
@@ -1386,7 +1400,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "watermill"
 				},
 				{
 					"variable": "religion",
@@ -1428,7 +1442,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "papermill"
 				}
 			],
 			"loadOutcome": [],
@@ -1481,7 +1496,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "papermill"
 				},
 				{
 					"variable": "commerce",
@@ -1539,7 +1554,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "papermill"
 				},
 				{
 					"variable": "religion",
@@ -1579,7 +1594,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "papermill"
 				},
 				{
 					"variable": "religion",
@@ -1625,7 +1640,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "papermill"
 				},
 				{
 					"variable": "religion",
@@ -1676,7 +1691,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "papermill"
 				},
 				{
 					"variable": "religion",
@@ -1706,7 +1721,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "porcelain"
 				}
 			],
 			"loadOutcome": [],
@@ -1754,7 +1770,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "porcelain"
 				},
 				{
 					"variable": "commerce",
@@ -1785,7 +1801,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "porcelain"
 				}
 			],
 			"loadOutcome": [
@@ -1819,7 +1836,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "porcelain"
 				}
 			],
 			"loadOutcome": [],
@@ -1869,7 +1887,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "porcelain"
 				}
 			],
 			"loadOutcome": [],
@@ -1944,7 +1963,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "porcelain"
 				},
 				{
 					"variable": "politics",
@@ -2033,7 +2052,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "silk_business"
 				}
 			],
 			"loadOutcome": [],
@@ -2326,7 +2346,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				}
 			],
 			"noOutcome": [
@@ -2334,7 +2354,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				},
 				{
 					"variable": "politics",
@@ -2364,7 +2384,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "haunted"
 				}
 			],
 			"loadOutcome": [],
@@ -2380,7 +2401,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				},
 				{
 					"variable": "politics",
@@ -2409,10 +2430,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer"
 				}
 			],
 			"yesOutcome": [
@@ -2420,7 +2441,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				},
 				{
 					"variable": "religion",
@@ -2433,7 +2454,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				},
 				{
 					"variable": "politics",
@@ -2463,15 +2484,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "haunted"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.computer"
 				}
 			],
 			"yesOutcome": [
@@ -2479,7 +2501,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				},
 				{
 					"variable": "religion",
@@ -2492,7 +2514,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "haunted"
 				},
 				{
 					"variable": "politics",
@@ -2522,7 +2544,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "haunted"
 				}
 			],
 			"loadOutcome": [],
@@ -2560,12 +2583,12 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 7
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 10
 				}
@@ -2767,7 +2790,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "taoism"
 				}
 			],
 			"loadOutcome": [],
@@ -2827,7 +2851,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				}
 			],
 			"loadOutcome": [],
@@ -2882,7 +2907,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "confucianism"
 				}
 			],
 			"loadOutcome": [],
@@ -2903,7 +2929,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "confucianism"
 				},
 				{
 					"variable": "politics",
@@ -2992,7 +3018,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -3208,7 +3235,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "banditism"
 				},
 				{
 					"variable": "military",
@@ -3259,7 +3286,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "banditism"
 				},
 				{
 					"variable": "military",
@@ -3295,7 +3322,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "bandit"
 				},
 				{
 					"variable": "commerce",
@@ -3345,7 +3373,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -3354,7 +3383,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "religion",
@@ -3391,7 +3420,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -3407,7 +3437,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "politics",
@@ -3437,7 +3467,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "bail"
 				}
 			],
 			"loadOutcome": [],
@@ -3446,7 +3477,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bail"
 				},
 				{
 					"variable": "religion",
@@ -3488,7 +3519,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "bail"
 				}
 			],
 			"loadOutcome": [],
@@ -3497,7 +3529,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "bail"
 				},
 				{
 					"variable": "religion",
@@ -3539,7 +3571,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "metal_as_tax"
 				}
 			],
 			"loadOutcome": [],
@@ -3548,7 +3581,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "metal_as_tax"
 				},
 				{
 					"variable": "military",
@@ -3590,7 +3623,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "metal_as_tax"
 				}
 			],
 			"loadOutcome": [],
@@ -3599,7 +3633,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "metal_as_tax"
 				},
 				{
 					"variable": "commerce",
@@ -3641,7 +3675,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "draft_one_in_three"
 				}
 			],
 			"loadOutcome": [],
@@ -3650,7 +3685,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "draft_one_in_three"
 				},
 				{
 					"variable": "military",
@@ -3692,7 +3727,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "draft_one_in_three"
 				}
 			],
 			"loadOutcome": [],
@@ -3729,7 +3765,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "draft_one_in_three"
 				},
 				{
 					"variable": "military",
@@ -3765,7 +3801,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [],
@@ -3824,10 +3861,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.happy_baby"
 				}
 			],
 			"yesOutcome": [
@@ -3894,12 +3931,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "marriage"
 				}
 			],
 			"loadOutcome": [
@@ -3914,13 +3953,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "marriage"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 13,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "spouse"
 				},
 				{
 					"variable": "link",
@@ -4034,12 +4073,14 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "military_service_tax_discount"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -4048,7 +4089,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "military_service_tax_discount"
 				},
 				{
 					"variable": "military",
@@ -4129,7 +4170,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "expensive_salt"
 				}
 			],
 			"loadOutcome": [],
@@ -4138,7 +4180,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "expensive_salt"
 				},
 				{
 					"variable": "politics",
@@ -4198,7 +4240,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "expensive_salt"
 				},
 				{
 					"variable": "military",
@@ -4250,7 +4292,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "expensive_salt"
 				}
 			],
 			"loadOutcome": [],
@@ -4259,7 +4302,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "expensive_salt"
 				},
 				{
 					"variable": "politics",
@@ -4369,7 +4412,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "legitimate_brothels"
 				}
 			],
 			"loadOutcome": [],
@@ -4378,7 +4422,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legitimate_brothels"
 				},
 				{
 					"variable": "politics",
@@ -4414,7 +4458,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legitimate_brothels"
 				}
 			],
 			"loadOutcome": [],
@@ -4423,7 +4468,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legitimate_brothels"
 				},
 				{
 					"variable": "religion",
@@ -4460,7 +4505,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legitimate_brothels"
 				}
 			],
 			"loadOutcome": [],
@@ -4559,7 +4605,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "food_rationing"
 				}
 			],
 			"loadOutcome": [],
@@ -4568,7 +4615,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "food_rationing"
 				},
 				{
 					"variable": "politics",
@@ -4610,7 +4657,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "food_rationing"
 				}
 			],
 			"loadOutcome": [],
@@ -4631,7 +4679,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "food_rationing"
 				},
 				{
 					"variable": "politics",
@@ -4666,7 +4714,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "food_rationing"
 				}
 			],
 			"loadOutcome": [],
@@ -4682,7 +4731,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "food_rationing"
 				},
 				{
 					"variable": "politics",
@@ -4717,7 +4766,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "food_rationing"
 				}
 			],
 			"loadOutcome": [],
@@ -4733,7 +4783,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "food_rationing"
 				},
 				{
 					"variable": "politics",
@@ -4768,7 +4818,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "food_rationing"
 				}
 			],
 			"loadOutcome": [],
@@ -4777,7 +4828,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "food_rationing"
 				},
 				{
 					"variable": "politics",
@@ -4907,7 +4958,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "mencius"
 				}
 			],
 			"loadOutcome": [],
@@ -5004,7 +5056,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mencius"
 				},
 				{
 					"variable": "religion",
@@ -5046,7 +5098,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "mencius"
 				}
 			],
 			"loadOutcome": [],
@@ -5062,7 +5115,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mencius"
 				},
 				{
 					"variable": "religion",
@@ -5097,15 +5150,16 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "mencius"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.angry_distant_crowd"
 				}
 			],
 			"yesOutcome": [
@@ -5120,7 +5174,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "mencius"
 				},
 				{
 					"variable": "religion",
@@ -5150,7 +5204,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "mencius"
 				}
 			],
 			"loadOutcome": [],
@@ -5613,10 +5668,10 @@
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.relaxed_horses"
 				}
 			],
 			"yesOutcome": [
@@ -6094,7 +6149,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "erotic_art"
 				}
 			],
 			"loadOutcome": [],
@@ -6108,7 +6164,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "erotic_art"
 				},
 				{
 					"variable": "religion",
@@ -6293,7 +6349,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"loadOutcome": [],
@@ -6336,12 +6392,12 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 4
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 10
 				}
@@ -6432,7 +6488,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"loadOutcome": [],
@@ -6472,7 +6528,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "south"
 				}
 			],
 			"loadOutcome": [],
@@ -6556,7 +6613,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"loadOutcome": [],
@@ -6605,10 +6662,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.camel_sheep_marketplace"
 				}
 			],
 			"yesOutcome": [
@@ -6641,15 +6698,15 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 2
+					"value": "smyrno"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.sandstorm"
 				}
 			],
 			"yesOutcome": [
@@ -6802,7 +6859,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "debt"
 				},
 				{
 					"variable": "religion",
@@ -6838,7 +6895,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "debt"
 				}
 			],
 			"loadOutcome": [],
@@ -6981,7 +7039,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -7031,15 +7090,16 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 3
+					"value": 3,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.distant_crowd_chanting"
 				}
 			],
 			"yesOutcome": [
@@ -7210,10 +7270,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.horse_colliding_man"
 				}
 			],
 			"yesOutcome": [
@@ -7249,19 +7309,20 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 5
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 9
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "seaside"
 				}
 			],
 			"loadOutcome": [],
@@ -7490,7 +7551,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hearsay_agent"
 				},
 				{
 					"variable": "link",
@@ -7540,7 +7601,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hearsay_agent"
 				}
 			],
 			"noOutcome": [
@@ -7548,7 +7609,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hearsay_agent"
 				}
 			],
 			"question": "",
@@ -7573,7 +7634,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "hearsay_agent"
 				}
 			],
 			"loadOutcome": [],
@@ -7623,7 +7685,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "hearsay_agent"
 				},
 				{
 					"variable": "politics",
@@ -7673,7 +7736,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "hearsay_agent"
 				},
 				{
 					"variable": "politics",
@@ -7718,7 +7782,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "hearsay_agent"
 				},
 				{
 					"variable": "religion",
@@ -7778,7 +7843,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "hearsay_agent"
 				},
 				{
 					"variable": "religion",
@@ -7833,7 +7899,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "hearsay_agent"
 				}
 			],
 			"loadOutcome": [
@@ -7841,7 +7908,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "hearsay_agent"
 				}
 			],
 			"yesOutcome": [
@@ -7929,7 +7996,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "hearsay_agent"
 				}
 			],
 			"loadOutcome": [],
@@ -8102,12 +8170,12 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 4
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 10
 				},
@@ -8301,7 +8369,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "food_preservation"
 				},
 				{
 					"variable": "politics",
@@ -8348,10 +8416,11 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "food_preservation"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 10
 				}
@@ -8437,7 +8506,8 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "rank"
 				},
 				{
 					"variable": "year",
@@ -8445,7 +8515,7 @@
 					"value": 216
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 5
 				},
@@ -8460,7 +8530,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "rank"
 				}
 			],
 			"yesOutcome": [
@@ -8509,7 +8579,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhang_fei"
 				}
 			],
 			"loadOutcome": [],
@@ -8649,7 +8720,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				}
 			],
 			"loadOutcome": [],
@@ -8658,7 +8730,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "politics",
@@ -8676,7 +8748,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "politics",
@@ -8711,7 +8783,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				}
 			],
 			"loadOutcome": [],
@@ -8720,7 +8793,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "link",
@@ -8748,7 +8821,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8778,7 +8851,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				}
 			],
 			"loadOutcome": [],
@@ -8787,7 +8861,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "link",
@@ -8815,7 +8889,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8848,7 +8922,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "military",
@@ -8876,7 +8950,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8911,7 +8985,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8925,7 +9000,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8943,7 +9018,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8978,7 +9053,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -8992,7 +9068,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9010,7 +9086,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9040,7 +9116,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9054,7 +9131,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "link",
@@ -9104,7 +9181,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9122,7 +9199,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9152,7 +9229,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9166,7 +9244,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "link",
@@ -9207,7 +9285,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "commerce",
@@ -9221,7 +9300,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "politics",
@@ -9244,7 +9323,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "buddhism"
 				},
 				{
 					"variable": "religion",
@@ -9314,7 +9393,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				}
 			],
 			"loadOutcome": [],
@@ -9354,7 +9434,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [],
@@ -9363,7 +9444,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 10,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "link",
@@ -9381,7 +9462,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 20,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "military",
@@ -9431,7 +9512,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "military",
@@ -9471,12 +9552,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 10
+					"value": 10,
+					"custom_name": "regent"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [],
@@ -9485,7 +9568,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 15,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "religion",
@@ -9498,7 +9581,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "religion",
@@ -9528,12 +9611,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 20
+					"value": 20,
+					"custom_name": "regent"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				}
 			],
 			"loadOutcome": [],
@@ -9542,7 +9627,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 25,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "military",
@@ -9555,7 +9640,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				},
 				{
 					"variable": "military",
@@ -9585,12 +9670,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 25
+					"value": 25,
+					"custom_name": "regent"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				},
 				{
 					"variable": "military",
@@ -9603,7 +9690,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				}
 			],
 			"yesOutcome": [
@@ -9647,12 +9734,14 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 15
+					"value": 15,
+					"custom_name": "regent"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_child"
 				},
 				{
 					"variable": "religion",
@@ -9665,7 +9754,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "regent"
 				}
 			],
 			"yesOutcome": [
@@ -9709,12 +9798,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "married"
 				}
 			],
 			"loadOutcome": [],
@@ -9764,12 +9855,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "is_woman"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -9936,7 +10029,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "alcohol_ban"
 				}
 			],
 			"loadOutcome": [],
@@ -9945,7 +10039,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "alcohol_ban"
 				},
 				{
 					"variable": "politics",
@@ -10010,7 +10104,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "alcohol_ban"
 				}
 			],
 			"loadOutcome": [
@@ -10037,7 +10132,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "alcohol_ban"
 				},
 				{
 					"variable": "politics",
@@ -10072,7 +10167,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "alcohol_ban"
 				}
 			],
 			"loadOutcome": [
@@ -10099,7 +10195,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "alcohol_ban"
 				},
 				{
 					"variable": "politics",
@@ -10134,7 +10230,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -10150,7 +10247,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "politics",
@@ -10180,7 +10277,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -10189,7 +10287,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legalism"
 				}
 			],
 			"noOutcome": [
@@ -10221,7 +10319,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -10271,7 +10370,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -10287,7 +10387,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "politics",
@@ -10361,7 +10461,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "military",
@@ -10405,7 +10506,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "military",
@@ -10460,7 +10562,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "military",
@@ -10515,7 +10618,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "taoist_drug"
 				},
 				{
 					"variable": "military",
@@ -10554,17 +10658,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "strength"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "snobby_capital"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				}
 			],
 			"loadOutcome": [],
@@ -10573,7 +10680,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "snobby_capital"
 				},
 				{
 					"variable": "politics",
@@ -10613,19 +10720,20 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 4
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 7
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "snobby_capital"
 				}
 			],
 			"loadOutcome": [],
@@ -10634,7 +10742,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "snobby_capital"
 				},
 				{
 					"variable": "politics",
@@ -10719,10 +10827,11 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "snobby_capital"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 9
 				}
@@ -10733,7 +10842,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "snobby_capital"
 				},
 				{
 					"variable": "politics",
@@ -10780,7 +10889,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "snobby_capital"
 				}
 			],
 			"loadOutcome": [],
@@ -10789,7 +10899,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "snobby_capital"
 				},
 				{
 					"variable": "politics",
@@ -10826,7 +10936,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "snobby_capital"
 				}
 			],
 			"loadOutcome": [],
@@ -10835,7 +10946,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "snobby_capital"
 				},
 				{
 					"variable": "politics",
@@ -10887,17 +10998,20 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "legalism"
 				},
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "where_is_cao_cao"
 				},
 				{
 					"variable": "year",
@@ -10912,13 +11026,13 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "legalism"
 				}
 			],
 			"question": "",
@@ -10943,12 +11057,14 @@
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 3
+					"value": 3,
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "where_is_cao_cao"
 				},
 				{
 					"variable": "year",
@@ -10974,7 +11090,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "religion",
@@ -11009,12 +11125,14 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "find_liu_bei"
 				},
 				{
 					"variable": "year",
@@ -11040,7 +11158,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "politics",
@@ -11075,12 +11193,14 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "find_liu_bei"
 				},
 				{
 					"variable": "year",
@@ -11101,7 +11221,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "liu_bei"
 				},
 				{
 					"variable": "religion",
@@ -11136,7 +11256,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "find_liu_bei"
 				},
 				{
 					"variable": "year",
@@ -11186,7 +11307,8 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": -10
+					"value": -10,
+					"custom_name": "find_liu_bei"
 				},
 				{
 					"variable": "year",
@@ -11229,7 +11351,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				},
@@ -11289,7 +11411,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 4
 				},
@@ -11522,7 +11644,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "zhang_fei"
 				},
 				{
 					"variable": "year",
@@ -11592,7 +11715,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "sick"
 				}
 			],
 			"loadOutcome": [
@@ -11600,7 +11724,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sick"
 				}
 			],
 			"yesOutcome": [
@@ -11608,7 +11732,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sick"
 				},
 				{
 					"variable": "military",
@@ -11660,7 +11784,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "sick"
 				}
 			],
 			"loadOutcome": [],
@@ -11669,7 +11794,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sick"
 				},
 				{
 					"variable": "military",
@@ -11729,7 +11854,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sick"
 				},
 				{
 					"variable": "military",
@@ -11820,36 +11945,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 8
+					"value": 8,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_bei"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -11874,36 +12000,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 6
+					"value": 6,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_biao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -11928,36 +12055,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 9
+					"value": 9,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_lv_bu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -11982,36 +12110,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 11
+					"value": 11,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_ma_teng"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12036,36 +12165,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 12
+					"value": 12,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_zhang_lu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12090,36 +12220,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 14
+					"value": 14,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_zhang"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12144,36 +12275,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 16
+					"value": 16,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_yuan_shao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12198,36 +12330,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 17
+					"value": 17,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_yuan_shu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12252,36 +12385,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 18
+					"value": 18,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_gongsun_zan"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12306,36 +12440,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 20
+					"value": 20,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_cao_cao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12360,36 +12495,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 21
+					"value": 21,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_cao_pi"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12414,36 +12550,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 22
+					"value": 22,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_cao_rui"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12468,36 +12605,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 23
+					"value": 23,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_sima_yi"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12522,36 +12660,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 25
+					"value": 25,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_sun_ce"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12576,36 +12715,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 26
+					"value": 26,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_sun_quan"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12630,36 +12770,37 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 27
+					"value": 27,
+					"custom_name": "player:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_shan"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				},
 				{
 					"variable": "planet_state",
 					"operation": "set",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "region_contest"
 				}
 			],
 			"question": "",
@@ -12684,30 +12825,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "liu_bei:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_bei"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -12732,30 +12874,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "liu_biao:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_biao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -12780,30 +12923,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "lv_bu:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_lv_bu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -12828,30 +12972,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "ma_teng:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_ma_teng"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -12876,30 +13021,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "zhang_lu:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_zhang_lu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -12924,30 +13070,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "liu_zhang:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_zhang"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -12972,30 +13119,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "yuan_shao:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_yuan_shao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13020,30 +13168,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "yuan_shu:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_yuan_shu"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13068,30 +13217,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "gongsun_zan:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_gongsun_zan"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13116,30 +13266,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "cao_cao:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_cao_cao"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13164,30 +13315,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "cao_pi:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_cao_pi"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13212,30 +13364,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "cao_rui:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_cao_rui"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13260,30 +13413,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "sima_yi:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_sima_yi"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13308,30 +13462,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "sun_ce:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_sun_ce"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13356,30 +13511,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "sun_quan:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_sun_quan"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13404,30 +13560,31 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "liu_shan:threat"
 				}
 			],
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestleft"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.generic_liu_shan"
 				}
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "contestright"
 				}
 			],
 			"question": "",
@@ -13530,7 +13687,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 2
+					"value": 2,
+					"custom_name": "cao_pi"
 				},
 				{
 					"variable": "year",
@@ -13580,7 +13738,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 1
+					"value": 1,
+					"custom_name": "cao_cao"
 				},
 				{
 					"variable": "year",
@@ -13593,7 +13752,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sima_yi"
 				}
 			],
 			"yesOutcome": [
@@ -13601,7 +13760,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sima_yi"
 				},
 				{
 					"variable": "military",
@@ -13619,7 +13778,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "sima_yi"
 				},
 				{
 					"variable": "military",

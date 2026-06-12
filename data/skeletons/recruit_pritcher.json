@@ -25,12 +25,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "talent_in_jizhou"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -75,12 +76,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "talent_in_jizhou"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [
@@ -88,7 +90,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao_rules_jizhou"
 				}
 			],
 			"yesOutcome": [
@@ -174,13 +176,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yuan_shao_jizhou"
 				},
 				{
 					"variable": "religion",
@@ -193,7 +195,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -267,13 +269,13 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.yuan_shao_contest"
 				}
 			],
 			"question": "",
@@ -392,17 +394,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yuan_shao_rules_jizhou"
 				},
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				}
 			],
 			"loadOutcome": [],
@@ -411,7 +415,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "military",
@@ -453,12 +457,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yuan_shao_rules_jizhou"
 				},
 				{
 					"variable": "relation",
 					"op": "below",
-					"value": 4
+					"value": 4,
+					"custom_name": "yuan_shao"
 				},
 				{
 					"variable": "seen",
@@ -468,7 +474,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "party",
@@ -479,10 +485,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.gongsun_revenge"
 				},
 				{
 					"variable": "military",
@@ -529,12 +535,13 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "yuan_shao_rules_jizhou"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 13
+					"value": "sayshell"
 				},
 				{
 					"variable": "party",
@@ -591,7 +598,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "zhao_yun"
 				}
 			],
 			"yesOutcome": [
@@ -637,7 +644,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "talent_in_jizhou"
 				}
 			],
 			"yesOutcome": [

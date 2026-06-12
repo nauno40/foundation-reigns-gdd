@@ -20,12 +20,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "golden_donkey"
 				},
 				{
 					"variable": "commerce",
@@ -33,7 +35,7 @@
 					"value": 30
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 3
 				}
@@ -80,15 +82,17 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "stone_ridge"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 6
 				}
@@ -151,15 +155,17 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "stone_ridge"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 6
 				}
@@ -206,15 +212,17 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "stone_ridge"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				}
@@ -272,15 +280,17 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "stone_ridge"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				}
@@ -327,17 +337,19 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "channel"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 9
 				},
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "strength"
 				}
 			],
 			"loadOutcome": [],
@@ -377,10 +389,11 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				},
@@ -408,7 +421,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "time_traveller"
 				},
 				{
 					"variable": "politics",
@@ -438,10 +451,11 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "magistrate"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 12
 				},
@@ -469,7 +483,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "time_traveller"
 				},
 				{
 					"variable": "military",
@@ -501,7 +515,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -548,7 +562,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 10
 				}
@@ -593,7 +607,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 6
 				}
@@ -739,12 +753,13 @@
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "steal_xudu"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 9
+					"value": "anacreon"
 				}
 			],
 			"loadOutcome": [],
@@ -835,13 +850,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "emperor"
 				},
 				{
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "steal_xudu"
 				}
 			],
 			"yesOutcome": [
@@ -900,7 +915,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				},
 				{
 					"variable": "year",
@@ -950,12 +966,14 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				},
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -989,10 +1007,11 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 10
 				}
@@ -1034,15 +1053,16 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 5
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 9
 				}
@@ -1084,7 +1104,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				},
 				{
 					"variable": "seen",
@@ -1094,7 +1115,8 @@
 				{
 					"variable": "custom",
 					"op": "not",
-					"value": 0
+					"value": 0,
+					"custom_name": "liu_bei_dead"
 				}
 			],
 			"loadOutcome": [],
@@ -1128,7 +1150,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				}
 			],
 			"loadOutcome": [],
@@ -1173,7 +1196,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				}
 			],
 			"loadOutcome": [],
@@ -1218,7 +1242,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				}
 			],
 			"loadOutcome": [],
@@ -1263,7 +1288,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "emperor"
 				}
 			],
 			"loadOutcome": [],
@@ -1308,7 +1334,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_cao_no_yuzhou"
 				},
 				{
 					"variable": "planet_state",
@@ -1326,7 +1353,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cao_cao"
 				}
 			],
 			"yesOutcome": [
@@ -1370,7 +1397,8 @@
 				{
 					"variable": "custom",
 					"op": "above",
-					"value": 0
+					"value": 0,
+					"custom_name": "cao_cao_no_yuzhou"
 				},
 				{
 					"variable": "planet_state",
@@ -1380,7 +1408,8 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": -1
+					"value": -1,
+					"custom_name": "cao_cao:neighbour"
 				},
 				{
 					"variable": "year",
@@ -1445,10 +1474,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.cao_cao_yuzhou"
 				},
 				{
 					"variable": "military",
@@ -1490,7 +1519,8 @@
 				{
 					"variable": "VAR_25",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "cao_cao:threat"
 				},
 				{
 					"variable": "planet_state",
@@ -1506,10 +1536,10 @@
 			"loadOutcome": [],
 			"yesOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.cao_cao_yuzhou"
 				},
 				{
 					"variable": "military",

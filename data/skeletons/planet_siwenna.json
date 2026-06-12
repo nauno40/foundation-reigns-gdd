@@ -22,7 +22,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "plague"
 				}
 			],
 			"yesOutcome": [
@@ -69,7 +69,7 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 6
 				}
@@ -119,12 +119,12 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 5
 				},
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "below",
 					"value": 9
 				},
@@ -136,7 +136,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 11
+					"value": "siwenna"
 				}
 			],
 			"loadOutcome": [],
@@ -193,7 +193,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow"
 				}
 			],
 			"yesOutcome": [
@@ -201,7 +201,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 4,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow"
 				},
 				{
 					"variable": "politics",
@@ -243,7 +243,8 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 4
+					"value": 4,
+					"custom_name": "widow"
 				},
 				{
 					"variable": "year",
@@ -296,7 +297,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 5,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow"
 				},
 				{
 					"variable": "politics",
@@ -314,7 +315,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow"
 				},
 				{
 					"variable": "politics",
@@ -349,7 +350,8 @@
 				{
 					"variable": "relation",
 					"op": "equal",
-					"value": 5
+					"value": 5,
+					"custom_name": "widow"
 				},
 				{
 					"variable": "year",
@@ -363,7 +365,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "widow"
 				},
 				{
 					"variable": "politics",
@@ -428,10 +430,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.zhang_miao"
 				}
 			],
 			"question": "",
@@ -479,10 +481,10 @@
 			],
 			"noOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "battle.zhang_miao"
 				}
 			],
 			"question": "",

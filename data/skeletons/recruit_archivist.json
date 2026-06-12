@@ -20,12 +20,13 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 14
+					"value": "santanni"
 				},
 				{
 					"variable": "quest",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "meet_lu_zhi"
 				}
 			],
 			"loadOutcome": [],
@@ -58,10 +59,10 @@
 			"conditions": [],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.fishing_line_01"
 				}
 			],
 			"yesOutcome": [
@@ -129,7 +130,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_lu_zhi"
 				},
 				{
 					"variable": "commerce",
@@ -142,7 +143,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_lu_zhi"
 				},
 				{
 					"variable": "commerce",
@@ -252,7 +253,7 @@
 					"variable": "relation",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "lu_zhi"
 				},
 				{
 					"variable": "deck",
@@ -265,7 +266,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_lu_zhi"
 				},
 				{
 					"variable": "religion",
@@ -278,7 +279,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_lu_zhi"
 				},
 				{
 					"variable": "religion",
@@ -310,7 +311,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "meet_lu_zhi"
 				},
 				{
 					"variable": "planet_state",

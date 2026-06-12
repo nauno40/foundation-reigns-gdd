@@ -18,14 +18,14 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 7
 				},
 				{
 					"variable": "location",
 					"op": "not",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [],
@@ -33,7 +33,7 @@
 				{
 					"variable": "location",
 					"operation": "set",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "commerce",
@@ -73,24 +73,26 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "equal",
 					"value": 8
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_grand_master_go"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_grand_master_qin"
 				}
 			],
 			"loadOutcome": [
@@ -98,13 +100,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_go"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_qin"
 				}
 			],
 			"yesOutcome": [
@@ -161,24 +163,26 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 9
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_grand_master_go"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_grand_master_qin"
 				}
 			],
 			"loadOutcome": [
@@ -227,24 +231,26 @@
 			},
 			"conditions": [
 				{
-					"variable": "VAR_9",
+					"variable": "month",
 					"op": "above",
 					"value": 9
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 2
+					"value": 2,
+					"custom_name": "the_grand_master_go"
 				},
 				{
 					"variable": "custom",
 					"op": "below",
-					"value": 2
+					"value": 2,
+					"custom_name": "the_grand_master_qin"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [
@@ -402,20 +408,21 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "the_grand_master_go"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.move_go_piece_variation"
 				}
 			],
 			"yesOutcome": [
@@ -762,7 +769,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_go"
 				}
 			],
 			"yesOutcome": [],
@@ -791,7 +798,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_go"
 				}
 			],
 			"yesOutcome": [
@@ -830,12 +837,13 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "the_grand_master_qin"
 				},
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				}
 			],
 			"loadOutcome": [
@@ -843,13 +851,13 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				}
 			],
 			"yesOutcome": [
@@ -893,15 +901,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_grand_master_string_1"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -909,7 +918,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -922,7 +931,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -952,15 +961,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "the_grand_master_string_1"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -968,7 +978,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -981,7 +991,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -1011,15 +1021,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "the_grand_master_string_1"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_tuned"
 				}
 			],
 			"yesOutcome": [
@@ -1027,7 +1038,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -1064,15 +1075,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "the_grand_master_string_1"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -1080,7 +1092,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -1093,7 +1105,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_1"
 				},
 				{
 					"variable": "link",
@@ -1123,15 +1135,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 0
+					"value": 0,
+					"custom_name": "the_grand_master_string_2"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -1139,7 +1152,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1152,7 +1165,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1182,15 +1195,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 1
+					"value": 1,
+					"custom_name": "the_grand_master_string_2"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_untuned"
 				}
 			],
 			"yesOutcome": [
@@ -1198,7 +1212,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1211,7 +1225,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1241,15 +1255,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 2
+					"value": 2,
+					"custom_name": "the_grand_master_string_2"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_tuned"
 				}
 			],
 			"yesOutcome": [
@@ -1257,7 +1272,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1294,15 +1309,16 @@
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "the_grand_master_string_2"
 				}
 			],
 			"loadOutcome": [
 				{
-					"variable": "VAR_12",
+					"variable": "trigger",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "jukebox.qin_string_chord_tuned"
 				}
 			],
 			"yesOutcome": [
@@ -1310,7 +1326,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1323,7 +1339,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_string_2"
 				},
 				{
 					"variable": "link",
@@ -1355,7 +1371,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 3,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_qin"
 				}
 			],
 			"yesOutcome": [
@@ -1396,7 +1412,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_qin"
 				}
 			],
 			"yesOutcome": [],
@@ -1429,17 +1445,19 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 12
+					"value": "santanni"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "the_grand_master_go"
 				},
 				{
 					"variable": "custom",
 					"op": "equal",
-					"value": 3
+					"value": 3,
+					"custom_name": "the_grand_master_qin"
 				}
 			],
 			"loadOutcome": [
@@ -1447,7 +1465,7 @@
 					"variable": "custom",
 					"operation": "set",
 					"value": 0,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_poem"
 				}
 			],
 			"yesOutcome": [
@@ -1601,7 +1619,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_poem"
 				},
 				{
 					"variable": "link",
@@ -1648,7 +1666,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_poem"
 				},
 				{
 					"variable": "link",
@@ -1681,7 +1699,7 @@
 					"variable": "custom",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master_poem"
 				},
 				{
 					"variable": "link",
@@ -1754,7 +1772,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "the_grand_master"
 				}
 			],
 			"yesOutcome": [

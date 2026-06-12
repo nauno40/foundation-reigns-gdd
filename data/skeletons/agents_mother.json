@@ -23,7 +23,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "politics",
@@ -41,7 +41,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "religion",
@@ -74,7 +74,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "politics",
@@ -92,7 +92,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "religion",
@@ -125,7 +125,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": 1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "politics",
@@ -143,7 +143,7 @@
 					"variable": "relation",
 					"operation": "add",
 					"value": -1,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_ci"
 				},
 				{
 					"variable": "religion",
@@ -173,7 +173,8 @@
 				{
 					"variable": "relation",
 					"op": "above",
-					"value": 4
+					"value": 4,
+					"custom_name": "taishi_ci"
 				}
 			],
 			"loadOutcome": [
@@ -186,7 +187,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "taishi_mom"
 				}
 			],
 			"yesOutcome": [

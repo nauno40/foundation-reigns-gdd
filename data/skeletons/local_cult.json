@@ -20,7 +20,7 @@
 				{
 					"variable": "location",
 					"op": "equal",
-					"value": 4
+					"value": "askone"
 				}
 			],
 			"loadOutcome": [],
@@ -213,7 +213,7 @@
 					"variable": "quest",
 					"operation": "set",
 					"value": 2,
-					"custom_name": "A_TRANSPOSER"
+					"custom_name": "cult_leader"
 				},
 				{
 					"variable": "deck",
