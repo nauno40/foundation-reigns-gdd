@@ -15,5 +15,6 @@
 	"B115": "role:high_priest",
 	"B206": "role:plutocrat",
 	"B138": "role:creditor",
-	"B125": "role:dock_foreman"
+	"B125": "role:dock_foreman",
+	"B196": "role:watcher"
 }

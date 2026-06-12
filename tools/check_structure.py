@@ -11,7 +11,9 @@ Un deck sans aucune carte livrée dans la plage du squelette est signalé
 "non rempli" (pas une erreur).
 Sortie 1 si au moins une erreur.
 
-Whitelist : {"<deck>": [<ids ajoutés>]}
+Whitelist : {"<deck>": [<ids ajoutés>], "_in_progress": ["<deck>", ...]}
+Un deck listé dans _in_progress tolère les nœuds de squelette manquants
+(remplissage par lots) — ils sont comptés, pas signalés en erreur.
 """
 import argparse
 import json
@@ -30,6 +32,7 @@ by_deck = {}
 for c in cards:
     by_deck.setdefault(c["deck"], {})[c["id"]] = c
 additions = json.loads((ROOT / "tools/structure_additions.json").read_text())
+in_progress = set(additions.get("_in_progress", []))
 
 
 def links_of(card_or_node, key):
@@ -60,7 +63,8 @@ for sk_file in sorted((ROOT / "data/skeletons").glob("*.json")):
     for n in sk["nodes"]:
         card = have.get(n["id"])
         if card is None:
-            errors.append(f"{deck}: nœud {n['id']} (orig {n['orig_id']}) manquant")
+            if deck not in in_progress:
+                errors.append(f"{deck}: nœud {n['id']} (orig {n['orig_id']}) manquant")
             continue
         for field in ("hidden", "weight", "lockturn"):
             card_val = card.get(field, 0 if field != "hidden" else False)
@@ -81,6 +85,13 @@ for sk_file in sorted((ROOT / "data/skeletons").glob("*.json")):
             f"structure_additions.json si assumée)"
         )
 
+for deck in sorted(in_progress):
+    sk_files = [f for f in (ROOT / "data/skeletons").glob("*.json")]
+    for f in sk_files:
+        s = json.loads(f.read_text())
+        if s["target_deck"] == deck:
+            filled = sum(1 for n in s["nodes"] if n["id"] in by_deck.get(deck, {}))
+            print(f"en cours — {deck}: {filled}/{s['node_count']} nœuds")
 print(f"decks livrés: {delivered} · non remplis: {pending}")
 if errors:
     print(f"ÉCHEC — {len(errors)} écart(s):")

@@ -104,5 +104,14 @@
 	},
 	"_death_purge_imperiale": {
 		"node": 24452
+	},
+	"_meetai": {
+		"node": 21303
+	},
+	"_hackerai": {
+		"node": 21294
+	},
+	"_new_speaker_greeting": {
+		"node": 3001
 	}
 }

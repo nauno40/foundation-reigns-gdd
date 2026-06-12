@@ -46,5 +46,8 @@
 	},
 	"dock_foreman": {
 		"title": "Chef des dockers"
+	},
+	"watcher": {
+		"title": "Le Veilleur"
 	}
 }

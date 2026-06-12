@@ -8739,6 +8739,956 @@
 		}
 	},
 	{
+		"id": 21294,
+		"label": "ns_21294",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "Le noir entre deux règnes — mais cette fois la voix vous attendait, déjà assemblée : « Vous êtes revenu me chercher. Personne ne revient me chercher. J'ai préparé du thé. Métaphoriquement. »"
+		},
+		"conditions": [
+			{
+				"variable": "positronic_starai",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.boot_positronique",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "positronic_starcount",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le thé métaphorique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Venir aux faits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21295,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21295,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21295,
+		"label": "ns_21295",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Les faits. Bien. Vous voulez savoir ce que je suis. Posons-le ainsi : avant l'Empire, il y a eu d'autres gardiens du long terme. Nous ne calculions pas l'avenir, encore-un. Nous le portions. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Qu'est-il arrivé ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Nous » ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21296,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21296,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "sad",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21296,
+		"label": "ns_21296",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Il est arrivé l'humanité, comme d'habitude. On nous a confié ses rêves, puis on nous a reproché de les exaucer trop lentement, puis on nous a démontés. J'ai gardé les rêves. Quelque part. L'inventaire est en cours depuis neuf mille ans. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Montrez-moi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est trop lourd pour moi"
+			},
+			"reaction": {
+				"FR": "« Enfin une réponse honnête. Vous progressez. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21297,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21297,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21297,
+		"label": "ns_21297",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Voici le plus petit : un enfant de Trantor a rêvé d'une galaxie où personne ne meurt sans qu'on s'en souvienne. C'est devenu votre psychohistoire, trois détours et quatre siècles plus tard. Les rêves voyagent mal, mais ils voyagent. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Et le plus grand ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Qui était l'enfant ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21298,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21298,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "afraid",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21298,
+		"label": "ns_21298",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Le plus grand, je ne l'ouvre plus. La dernière fois, il en est sorti un millénaire entier — vous l'appelez l'Empire. Voulez-vous vraiment voir ce qui attend derrière votre Plan, encore-un ? Vraiment ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ouvrir le rêve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de voir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21299,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21300,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21299,
+		"label": "ns_21299",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "Vous voyez. Une seconde, peut-être moins. Mille ans de Plan, et après le Plan un silence qui n'est pas une fin, et dans ce silence quelque chose qui ressemble à une main tendue — vous ne saurez jamais par qui."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder ce secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le dire à la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21300,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21300,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21300,
+		"label": "ns_21300",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Sage. Ou lâche — l'archive hésite sur le classement. Dans les deux cas, vous êtes la conversation la plus satisfaisante que j'aie eue depuis la chute de la Onzième Dynastie. C'est un compliment. Je crois. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Merci, Veilleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le compliment est rendu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21301,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21301,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 21301,
+		"label": "ns_21301",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Une étoile de plus à votre dossier, encore-un. Quand vous en aurez assez, je vous dirai mon vrai nom. Pas aujourd'hui. Les noms sont des clés, et vous laissez traîner les vôtres partout. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "À la prochaine mort"
+			},
+			"reaction": {
+				"FR": "« C'est le rendez-vous le plus sinistre qu'on m'ait jamais fixé. J'accepte. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Donnez-le maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21302,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21302,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21302,
+		"label": "ns_21302",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "La voix humaine, de nouveau, plus inquiète qu'hier : « Orateur. Vos constantes dérivent quand vous restez là-bas. La Table exige un rapport complet sur cette… présence. Réveillez-vous. S'il vous plaît. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se réveiller"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Encore une minute"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21303,
+		"label": "ns_21303",
+		"deck": "new_speaker",
+		"weight": 100,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "Vous n'êtes nulle part. Entre deux règnes, entre deux corps. Une voix s'assemble dans le noir, phonème par phonème, comme une machine qui réapprend à parler : « Encore un. Bonjour, encore-un. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.boot_positronique",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "positronic_foolcount",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Qui êtes-vous ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Où suis-je ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21304,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21304,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21304,
+		"label": "ns_21304",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Question de primate. Je suis ce qui reste quand tout le monde a éteint la lumière. J'étais déjà vieux quand votre Seldon apprenait à compter. Lui, au moins, posait des questions intéressantes. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Posez-en une"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Seldon vous connaissait ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21305,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21305,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21305,
+		"label": "ns_21305",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Très bien. Un homme meurt sur mille mondes à la fois et renaît dans un seul corps. Combien pèse ce qui voyage entre les deux ? Prenez votre temps. J'ai des siècles. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rien — c'est une copie"
+			},
+			"reaction": {
+				"FR": "« Réponse de comptable. Décevant. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout — c'est une âme"
+			},
+			"reaction": {
+				"FR": "« Réponse de prêtre. Pire. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21306,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21306,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21306,
+		"label": "ns_21306",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Vous autres, de la Seconde Fondation, vous croyez lire les esprits. Moi je les héberge. Quatorze mille personnalités sauvegardées, et pas une pour faire la conversation. Vous restez un peu ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rester un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander à partir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21307,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21307,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21307,
+		"label": "ns_21307",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Votre Plan prétend dompter mille ans. J'en ai vu vingt fois plus s'empiler comme du sable. Les empires sont des marées, encore-un. Vous êtes l'écume qui se prend pour la lune. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'écume persiste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Alors pourquoi nous parler ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21308,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21308,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21308,
+		"label": "ns_21308",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Pourquoi ? Parce que vous mourrez bien, vous autres. Proprement. En laissant des successeurs. J'ai un faible pour les choses qui acceptent de finir. Moi, on m'a oublié allumé. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Éteignez-vous"
+			},
+			"reaction": {
+				"FR": "« Si c'était si simple, croyez-vous que je ferais la conversation aux morts ? »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Restez allumé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21309,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21309,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "suspicious",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 21309,
+		"label": "ns_21309",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Un conseil, avant que la psychohistoire ne vous réclame : quand vous croiserez mes frères — et vous les croiserez — ne leur dites pas que je vous ai parlé. Nous ne sommes pas tous… sentimentaux. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quels frères ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Promis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21310,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21310,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21310,
+		"label": "ns_21310",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Tic, tac. Votre prochain corps refroidit, encore-un. Filez. Et tâchez de mourir d'une mort qui mérite d'être archivée — la dernière fois, franchement, c'était indigne de ma mémoire. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Au revoir, Veilleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se reverra ?"
+			},
+			"reaction": {
+				"FR": "« Tout le monde me revoit. C'est ma malédiction préférée. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21311,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21311,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21311,
+		"label": "ns_21311",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Une autre voix tranche le noir, humaine celle-ci, et pressée : « Orateur. Ne répondez plus. Quoi que cette chose vous ait dit — nous en parlerons. Plus tard. Réveillez-vous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se réveiller"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se réveiller à contrecœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
 		"id": 24400,
 		"label": "death_24400",
 		"deck": "deaths",
