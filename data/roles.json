@@ -1,0 +1,8 @@
+{
+	"sf_contact":    {"title": "Contact de la Seconde Fondation"},
+	"high_priest":   {"title": "Grand Prêtre de l'Esprit Galactique"},
+	"guild_master":  {"title": "Maître de la Guilde Marchande"},
+	"terminus_mayor":{"title": "Maire de Terminus"},
+	"spy_handler":   {"title": "Maître-espion du réseau"},
+	"imperial_envoy":{"title": "Émissaire impérial"}
+}

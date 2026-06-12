@@ -3,8 +3,18 @@ class_name CardUtils
 # Résolution du porteur d'une carte pour l'affichage du portrait.
 # bearer = id canonique (characters.json) → nom/rôle officiels + badge Figure du Plan
 # bearer = null → PNJ au nom généré, stable par carte (seed = id de carte)
-static func resolve_bearer(card: Dictionary, data: FoundationGameData) -> Dictionary:
+static func resolve_bearer(card: Dictionary, data: FoundationGameData, ctx: Context = null) -> Dictionary:
 	var bearer = card.get("bearer")
+	# Rôle institutionnel persistant : bearer = "role:<id>"
+	if bearer is String and bearer.begins_with("role:") and ctx != null:
+		var role_id: String = bearer.trim_prefix("role:")
+		var role: Dictionary = data.roles.get(role_id, {})
+		var name_key := "role_%s_name" % role_id
+		var name: String = str(ctx.get_var(name_key, ""))
+		if name == "":
+			name = data.get_random_name()
+			ctx.set_var(name_key, name, true)
+		return {"name": name, "role": role.get("title", role_id), "key": false}
 	if bearer is String and bearer != "":
 		var ch: Dictionary = data.characters.get(bearer, {})
 		if not ch.is_empty():

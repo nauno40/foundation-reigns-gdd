@@ -11,6 +11,7 @@ var covers: Dictionary = {}
 var moods: Dictionary = {}
 var seldon_crises: Dictionary = {}
 var link_aliases: Dictionary = {}
+var roles: Dictionary = {}
 
 var is_loaded: bool = false
 
@@ -26,6 +27,7 @@ func load_all() -> bool:
 	ok = ok and _load_dict("res://data/moods.json", moods)
 	ok = ok and _load_dict("res://data/seldon_crises.json", seldon_crises)
 	ok = ok and _load_dict("res://data/link_aliases.json", link_aliases)
+	ok = ok and _load_dict("res://data/roles.json", roles)
 	if ok:
 		_index_by_deck()
 		is_loaded = true

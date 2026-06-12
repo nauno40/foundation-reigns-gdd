@@ -52,6 +52,7 @@ const MIN_REACTION_MS := 400       # anti-balayage accidentel de la réaction
 @onready var _swipe_detector = $SwipeDetector
 
 var _game_data: FoundationGameData
+var _ctx_ref: Context
 var _current_card: Dictionary = {}
 var _can_swipe: bool = true
 var _current_drag: float = 0.0
@@ -127,6 +128,7 @@ func _do_flicker() -> void:
 
 func show_card(card: Dictionary, ctx: Context) -> void:
 	_current_card = card
+	_ctx_ref = ctx
 	_can_swipe = true
 	_current_drag = 0.0
 	_reaction_visible = false
@@ -165,7 +167,7 @@ func show_card(card: Dictionary, ctx: Context) -> void:
 func _update_portrait(card: Dictionary) -> void:
 	var info := {"name": "", "role": "", "key": false}
 	if _game_data:
-		info = CardUtils.resolve_bearer(card, _game_data)
+		info = CardUtils.resolve_bearer(card, _game_data, _ctx_ref)
 	else:
 		var bearer = card.get("bearer")
 		info["name"] = bearer if bearer is String else ""

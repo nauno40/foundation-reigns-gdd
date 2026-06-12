@@ -49,3 +49,25 @@ func test_affected_resources_left_outcome():
 func test_affected_resources_ignores_zero_delta():
 	var card = {"yesOutcome": [{"variable": "religion", "intValue": 0}], "noOutcome": []}
 	assert_eq(CardUtils.affected_resources(card, true), [])
+
+# --- Rôles institutionnels persistants (bearer "role:<id>") ---
+
+func test_role_bearer_generates_and_persists_name():
+	var ctx = Context.new()
+	var card = {"bearer": "role:high_priest"}
+	var info1 = CardUtils.resolve_bearer(card, data, ctx)
+	assert_ne(info1["name"], "", "un nom est généré")
+	assert_eq(info1["role"], "Grand Prêtre de l'Esprit Galactique")
+	var info2 = CardUtils.resolve_bearer(card, data, ctx)
+	assert_eq(info2["name"], info1["name"], "le nom persiste entre les cartes")
+	ctx.empty_non_keep()
+	var info3 = CardUtils.resolve_bearer(card, data, ctx)
+	assert_eq(info3["name"], info1["name"], "le visage du rôle survit à la mort (toKeep)")
+
+func test_role_name_reset_regenerates():
+	var ctx = Context.new()
+	var card = {"bearer": "role:high_priest"}
+	var info1 = CardUtils.resolve_bearer(card, data, ctx)
+	ctx.set_var("role_high_priest_name", "")
+	var info2 = CardUtils.resolve_bearer(card, data, ctx)
+	assert_ne(info2["name"], "", "nom régénéré après reset")
