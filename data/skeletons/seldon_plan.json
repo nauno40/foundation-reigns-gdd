@@ -1,0 +1,9659 @@
+{
+	"source_deck": "mainline",
+	"target_deck": "seldon_plan",
+	"node_count": 172,
+	"hidden_count": 56,
+	"nodes": [
+		{
+			"id": 20800,
+			"orig_id": 163,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B125(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 184
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 6
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20801
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20801
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20801,
+			"orig_id": 880,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B101(x2)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 1
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20802,
+			"orig_id": 1776,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 210
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20803,
+			"orig_id": 346,
+			"hidden": false,
+			"weight": 750,
+			"lockturn": -1,
+			"bearer_slot": "B124(x23)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 185
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 189
+				},
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 10
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 40
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 40
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20804,
+			"orig_id": 480,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 184
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 189
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 24
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20805,
+			"orig_id": 146,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B145(x71)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 192
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 185
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 26
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 2
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20806
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20806,
+			"orig_id": 147,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B145(x71)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20807,
+			"orig_id": 997,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 36,
+			"bearer_slot": "B189(x25)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 6
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 201
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 1
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 27
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_yuan_shao_propose_qingzhou_inspector"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20808,
+			"orig_id": 588,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 60
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 186
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 192
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 60
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20809
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20809,
+			"orig_id": 589,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 60
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20810,
+			"orig_id": 973,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B130(x21)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 189
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 41
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20811,
+			"orig_id": 283,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B112(x25)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 189
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 42
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cao_cao_wanted_start"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cao_cao_wanted_start"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20812,
+			"orig_id": 834,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 190
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 10
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 38
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20813,
+			"orig_id": 281,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 190
+				},
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 10
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 38
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20814,
+			"orig_id": 652,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 39
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -40
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_luoyang_on_fire_real"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_luoyang_on_fire_real"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20815,
+			"orig_id": 1251,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 39
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -40
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_luoyang_on_fire_real"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20816,
+			"orig_id": 653,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20817,
+			"orig_id": 815,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20818,
+			"orig_id": 816,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B112(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 190
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 657
+				},
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 13
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 37
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "location",
+					"operation": "set",
+					"value": 13
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20819,
+			"orig_id": 2167,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B112(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 190
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 657
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 13
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 37
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20820,
+			"orig_id": 703,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 191
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 61
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 61
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20821,
+			"orig_id": 1143,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 190
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 193
+				},
+				{
+					"variable": "VAR_9",
+					"op": "above",
+					"value": 9
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 64
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20822,
+			"orig_id": 1120,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 4
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20823
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20823
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20823,
+			"orig_id": 1121,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20824,
+			"orig_id": 944,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B190(x19)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 8
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 62
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20825,
+			"orig_id": 1252,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B145(x71)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 196
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 65
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_two_sisters"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_two_sisters"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20826,
+			"orig_id": 1472,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B112(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 197
+				},
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 6
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 35
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20827
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20827
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20827,
+			"orig_id": 1493,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20828,
+			"orig_id": 1527,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B112(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 197
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 35
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20829,
+			"orig_id": 1025,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B189(x25)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 28
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20830,
+			"orig_id": 3011,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B117(x2)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 4
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20831,
+			"orig_id": 3013,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B192(x32)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 3011
+				},
+				{
+					"variable": "party",
+					"op": "equal",
+					"value": 192
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": -192
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": -192
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20832,
+			"orig_id": 3012,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B181(x11)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -65
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20833,
+			"orig_id": 3014,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B192(x32)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 3012
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20834,
+			"orig_id": 1256,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": 120,
+			"bearer_slot": "B137(x34)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 192
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 33
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_celeb"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_celeb"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20835,
+			"orig_id": 1574,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": 120,
+			"bearer_slot": "B143(x39)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 201
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 206
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_nursery_rhymes"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20836,
+			"orig_id": 1913,
+			"hidden": false,
+			"weight": 120,
+			"lockturn": 212,
+			"bearer_slot": "B228(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 201
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 206
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20837,
+			"orig_id": 2114,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": 212,
+			"bearer_slot": "B228(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 32
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20838,
+			"orig_id": 2115,
+			"hidden": false,
+			"weight": 12000,
+			"lockturn": 120,
+			"bearer_slot": "B228(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 32
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20839
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20839,
+			"orig_id": 2116,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B228(x12)",
+			"mood_hint": {
+				"mood_no": 5,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20840
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20840
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20840,
+			"orig_id": 2117,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B228(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 32
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20841,
+			"orig_id": 1666,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 208
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 9
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20842,
+			"orig_id": 1815,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": 120,
+			"bearer_slot": "B143(x39)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 207
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_nursery_rhymes"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20843,
+			"orig_id": 2122,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": 72,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 8
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 202
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 44
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 44
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 44
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -8
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20844,
+			"orig_id": 2432,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 8
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 196
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 220
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 43
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 11
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 43
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "location",
+					"operation": "set",
+					"value": 9
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20845,
+			"orig_id": 2307,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 207
+				},
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 14
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 12
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_complaints_about_immigrants"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20846,
+			"orig_id": 2529,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 14
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 2307
+				},
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 14
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_complaints_about_immigrants"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20847,
+			"orig_id": 2533,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 14
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 2307
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_complaints_about_immigrants"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20848,
+			"orig_id": 1737,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": -1,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 209
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 59
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_about_shangxiang"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_about_shangxiang"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20849,
+			"orig_id": 1738,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": -1,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 209
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 59
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -8
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20850,
+			"orig_id": 1739,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": -1,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 209
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20851,
+			"orig_id": 1854,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 208
+				},
+				{
+					"variable": "VAR_9",
+					"op": "above",
+					"value": 7
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 58
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20852,
+			"orig_id": 1931,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B114(x55)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 211
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 46
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_where_is_liangzhou"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20853,
+			"orig_id": 1953,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B114(x55)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 212
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "party",
+					"op": "not",
+					"value": 169
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20854,
+			"orig_id": 1954,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B114(x55)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 213
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20855,
+			"orig_id": 1955,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B181(x11)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 214
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20856,
+			"orig_id": 1956,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 214
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 8
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20857,
+			"orig_id": 1957,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 215
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 1870
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20858,
+			"orig_id": 2958,
+			"hidden": false,
+			"weight": 2000,
+			"lockturn": 500,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 215
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 4
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 47
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20859
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20859,
+			"orig_id": 2959,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 47
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20860,
+			"orig_id": 1958,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 216
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20861,
+			"orig_id": 1959,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 216
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "party",
+					"op": "not",
+					"value": 169
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20862,
+			"orig_id": 1960,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 219
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20863,
+			"orig_id": 1963,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B181(x11)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 219
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20864,
+			"orig_id": 3145,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B172(x3)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 219
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": -6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20865,
+			"orig_id": 3146,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 300,
+			"bearer_slot": "B171(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 219
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": -6
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20866,
+			"orig_id": 1964,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 219
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20867,
+			"orig_id": 3155,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 219
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20868,
+			"orig_id": 1965,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B172(x3)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 219
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "party",
+					"op": "not",
+					"value": 109
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20869,
+			"orig_id": 3156,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20870,
+			"orig_id": 3157,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B181(x11)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20871,
+			"orig_id": 1966,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B179(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 220
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20872,
+			"orig_id": 1967,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B114(x55)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 220
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20873,
+			"orig_id": 1968,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 220
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20874
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20874
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20874,
+			"orig_id": 1969,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B159(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20875,
+			"orig_id": 1970,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B179(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 220
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 10
+				},
+				{
+					"variable": "party",
+					"op": "not",
+					"value": 169
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20876,
+			"orig_id": 1971,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 221
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 1970
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20877,
+			"orig_id": 1972,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 221
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 7
+				},
+				{
+					"variable": "party",
+					"op": "not",
+					"value": 110
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20878,
+			"orig_id": 1974,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 221
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 7
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20879,
+			"orig_id": 3038,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B171(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 221
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 8
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 1974
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20880,
+			"orig_id": 1975,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 221
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20881,
+			"orig_id": 1976,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B171(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 222
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20882,
+			"orig_id": 1977,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B171(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 222
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20883,
+			"orig_id": 1978,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 223
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 5
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 57
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20884,
+			"orig_id": 2462,
+			"hidden": false,
+			"weight": 20000,
+			"lockturn": 72,
+			"bearer_slot": "B174(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 224
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 5
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 48
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 174
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 48
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -12
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20885,
+			"orig_id": 2079,
+			"hidden": false,
+			"weight": 300,
+			"lockturn": 72,
+			"bearer_slot": "B193(x18)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 99
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 1
+				},
+				{
+					"variable": "relation",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 207
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 6
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20886,
+			"orig_id": 2056,
+			"hidden": false,
+			"weight": 1000,
+			"lockturn": 400,
+			"bearer_slot": "B168(x26)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 11
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 204
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 49
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20887
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20887,
+			"orig_id": 2057,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B168(x26)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 12
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_liu_dai_hair_problem"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_liu_dai_hair_problem"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20888,
+			"orig_id": 2058,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B168(x26)",
+			"mood_hint": {
+				"mood_no": 12,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_liu_dai_invite"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20889,
+			"orig_id": 2169,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B168(x26)",
+			"mood_hint": {
+				"mood_no": 12,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_liu_dai_invite"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20890,
+			"orig_id": 2059,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B168(x26)",
+			"mood_hint": {
+				"mood_no": 12,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 49
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20891,
+			"orig_id": 2501,
+			"hidden": false,
+			"weight": 1000,
+			"lockturn": 212,
+			"bearer_slot": "B126(x32)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 3,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 55
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 56
+				},
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 6
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 190
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_monkey_performer"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20892,
+			"orig_id": 2502,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20893
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20893
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20893,
+			"orig_id": 2503,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B226(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20894
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20894
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -4
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20894,
+			"orig_id": 2504,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 4,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20895
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20895
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20895,
+			"orig_id": 2505,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20896
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20896,
+			"orig_id": 2506,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 226
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20897
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20897,
+			"orig_id": 2507,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B226(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 55
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 55
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20898,
+			"orig_id": 2556,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 72,
+			"bearer_slot": "B236(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 54
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20899,
+			"orig_id": 2557,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 72,
+			"bearer_slot": "B236(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 8
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 54
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20900,
+			"orig_id": 2581,
+			"hidden": false,
+			"weight": 5000,
+			"lockturn": 400,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 53
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 187
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 53
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20901,
+			"orig_id": 2653,
+			"hidden": false,
+			"weight": 2000,
+			"lockturn": 212,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 52
+				},
+				{
+					"variable": "VAR_9",
+					"op": "above",
+					"value": 5
+				},
+				{
+					"variable": "VAR_9",
+					"op": "below",
+					"value": 10
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 193
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 52
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 52
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20902,
+			"orig_id": 591,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -60
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20903,
+			"orig_id": 2794,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B210(x54)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20904,
+			"orig_id": 1168,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B192(x32)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20905,
+			"orig_id": 1218,
+			"hidden": false,
+			"weight": 200,
+			"lockturn": 0,
+			"bearer_slot": "B192(x32)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "party",
+					"op": "equal",
+					"value": 187
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 7
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 207
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 192
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 192
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20906,
+			"orig_id": 3064,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": 212,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "deck",
+					"op": "equal",
+					"value": 9
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -9
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 16
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20907,
+			"orig_id": 3065,
+			"hidden": false,
+			"weight": 100000,
+			"lockturn": 40,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 9
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 9
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 11
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20908,
+			"orig_id": 3066,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 120,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20909,
+			"orig_id": 3067,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 120,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20910,
+			"orig_id": 3068,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 1
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 6
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20911
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20911,
+			"orig_id": 3069,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20912,
+			"orig_id": 3070,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 1
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20913,
+			"orig_id": 3071,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20914
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20914,
+			"orig_id": 3072,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20915,
+			"orig_id": 3073,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 350,
+			"bearer_slot": "B21(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20916,
+			"orig_id": 3074,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B21(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20917,
+			"orig_id": 3075,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B21(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -6
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20918,
+			"orig_id": 3076,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B21(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -7
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20919,
+			"orig_id": 3077,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B21(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20920,
+			"orig_id": 3078,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "commerce",
+					"op": "below",
+					"value": 30
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20921,
+			"orig_id": 3079,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20922,
+			"orig_id": 3119,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 1959
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 221
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20923,
+			"orig_id": 3120,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 1969
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 220
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20924,
+			"orig_id": 3080,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 120,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 1970
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 10,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20925,
+			"orig_id": 3121,
+			"hidden": false,
+			"weight": 800,
+			"lockturn": 120,
+			"bearer_slot": "B114(x55)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 221
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 8
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20926,
+			"orig_id": 3122,
+			"hidden": false,
+			"weight": 800,
+			"lockturn": 120,
+			"bearer_slot": "B159(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 219
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 227
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 8
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20927,
+			"orig_id": 3123,
+			"hidden": false,
+			"weight": 800,
+			"lockturn": 120,
+			"bearer_slot": "B179(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 226
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 8
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20928,
+			"orig_id": 3127,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 3
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20929,
+			"orig_id": 3128,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_no_escape"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_no_escape"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20930,
+			"orig_id": 3129,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20931,
+			"orig_id": 3130,
+			"hidden": false,
+			"weight": 200,
+			"lockturn": 350,
+			"bearer_slot": "B159(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 10
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 220
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 227
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": -3
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20932,
+			"orig_id": 3131,
+			"hidden": false,
+			"weight": 350,
+			"lockturn": 350,
+			"bearer_slot": "B179(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 226
+				},
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "planet_state",
+					"op": "not",
+					"value": 10
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": -3
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20933,
+			"orig_id": 3132,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 10
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 2
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 4
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 5
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 8
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 9
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 11
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 13
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 14
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 6
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 7
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 12
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20934
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20934
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20934,
+			"orig_id": 3134,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 10,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20935,
+			"orig_id": 3133,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20936,
+			"orig_id": 3135,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_retired"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20937,
+			"orig_id": 3140,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20938,
+			"orig_id": 3141,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_fumbled_escape"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_fumbled_escape"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20939,
+			"orig_id": 3136,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B246(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20940,
+			"orig_id": 3137,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B246(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20941,
+			"orig_id": 3138,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B181(x11)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "VAR_25",
+					"op": "equal",
+					"value": 7
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20942,
+			"orig_id": 3139,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B210(x54)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_lucy"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_lucy"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20943,
+			"orig_id": 3198,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B210(x54)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_lucy"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_lucy"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20944,
+			"orig_id": 3248,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B198(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20945,
+			"orig_id": 479,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B153(x13)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -24
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20946,
+			"orig_id": 1082,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20947,
+			"orig_id": 1083,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B224(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": -224
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20948,
+			"orig_id": 154,
+			"hidden": false,
+			"weight": 1000,
+			"lockturn": -1,
+			"bearer_slot": "B202(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "deck",
+					"op": "not",
+					"value": 30
+				},
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 192
+				},
+				{
+					"variable": "party",
+					"op": "not",
+					"value": 202
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 30
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20949,
+			"orig_id": 1696,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B193(x18)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 208
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 10
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 45
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20950,
+			"orig_id": 1814,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 45
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -16
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 45
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20951,
+			"orig_id": 1522,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20952,
+			"orig_id": 2792,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20953,
+			"orig_id": 680,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 191
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -39
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20954,
+			"orig_id": 620,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B153(x13)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -42
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20955,
+			"orig_id": 1932,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20956,
+			"orig_id": 1933,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 211
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 7
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20957,
+			"orig_id": 1934,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 211
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 9
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20958
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20959
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -4
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20958,
+			"orig_id": 1935,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20959,
+			"orig_id": 1936,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20960,
+			"orig_id": 1937,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 211
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20961
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20961
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20961,
+			"orig_id": 1938,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B173(x8)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20962
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -8
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 8
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 20962
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20962,
+			"orig_id": 1939,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B173(x8)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 46
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20963,
+			"orig_id": 1950,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20964,
+			"orig_id": 1951,
+			"hidden": true,
+			"weight": 100,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_ma_chao_joins_party_defeat"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20965,
+			"orig_id": 2594,
+			"hidden": false,
+			"weight": 1200,
+			"lockturn": -1,
+			"bearer_slot": "B195(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 195
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20966,
+			"orig_id": 1813,
+			"hidden": true,
+			"weight": 300,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -59
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 2
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": -1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20967,
+			"orig_id": 1809,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 55
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20968,
+			"orig_id": 1810,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 80
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20969,
+			"orig_id": 1811,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20970,
+			"orig_id": 1043,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 20971,
+			"orig_id": 1526,
+			"hidden": false,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B210(x54)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 9
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

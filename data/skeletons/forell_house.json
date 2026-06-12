@@ -1,0 +1,1070 @@
+{
+	"source_deck": "jingzhou_machome",
+	"target_deck": "forell_house",
+	"node_count": 26,
+	"hidden_count": 24,
+	"nodes": [
+		{
+			"id": 30000,
+			"orig_id": 2512,
+			"hidden": false,
+			"weight": 80,
+			"lockturn": 212,
+			"bearer_slot": "B226(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "party",
+					"op": "equal",
+					"value": 226
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30001,
+			"orig_id": 2513,
+			"hidden": false,
+			"weight": 800,
+			"lockturn": 60,
+			"bearer_slot": "B205(x21)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 6
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_macaque_home"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 56
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30002,
+			"orig_id": 2514,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B125(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_peach_maze"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30003,
+			"orig_id": 2515,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_b"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_c"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30004,
+			"orig_id": 2516,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_b"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_c"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30005,
+			"orig_id": 2517,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_b_2"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_e"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30006,
+			"orig_id": 2518,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_staring_point"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_c"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30007,
+			"orig_id": 2519,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_d"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_c_2"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30008,
+			"orig_id": 2520,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_staring_point"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_b"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30009,
+			"orig_id": 2521,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_e_2"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_exit"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30010,
+			"orig_id": 2522,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_exit"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_c_2"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30011,
+			"orig_id": 2523,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_e"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_d_2"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30012,
+			"orig_id": 2524,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B235(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_b_2"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_maze_e"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30013,
+			"orig_id": 2525,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30014,
+			"orig_id": 2526,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B226(x7)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 3,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30015
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30015
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30015,
+			"orig_id": 2527,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B19(x81)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_isolated_village_enter"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30016,
+			"orig_id": 2530,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B143(x39)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_isolated_village_discover"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_isolated_village_discover"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30017,
+			"orig_id": 2537,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B125(x35)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30018
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30018
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 7
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30018,
+			"orig_id": 2543,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B204(x33)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30019
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30019
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -2
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30019,
+			"orig_id": 2544,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30020
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 4
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_secret_base"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30020,
+			"orig_id": 2545,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B132(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30021
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30021
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30021,
+			"orig_id": 2548,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B132(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 6
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -56
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 8
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -56
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30022,
+			"orig_id": 2538,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B175(x44)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 10,
+				"mood_yes": 1
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30023
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 30023
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30023,
+			"orig_id": 2539,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B175(x44)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_followup"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_followup"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30024,
+			"orig_id": 2540,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B175(x44)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "seen",
+					"op": "not",
+					"value": 2168
+				},
+				{
+					"variable": "seen",
+					"op": "not",
+					"value": 2179
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -56
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "EXTERNE:2179"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "EXTERNE:2179"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 30025,
+			"orig_id": 2542,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B175(x44)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -56
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

@@ -1,0 +1,1111 @@
+{
+	"source_deck": "beihai_kong_rong",
+	"target_deck": "askone_elders",
+	"node_count": 21,
+	"hidden_count": 14,
+	"nodes": [
+		{
+			"id": 32000,
+			"orig_id": 148,
+			"hidden": false,
+			"weight": 1300,
+			"lockturn": -1,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "year",
+					"op": "below",
+					"value": 192
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_kong_rong_impressed"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32001
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32001,
+			"orig_id": 149,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 2
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32002,
+			"orig_id": 150,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 119
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 119
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32003,
+			"orig_id": 586,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": 28,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 10,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 12
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "VAR_9",
+					"op": "below",
+					"value": 6
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32004,
+			"orig_id": 151,
+			"hidden": false,
+			"weight": 1000000,
+			"lockturn": -1,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 10,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "VAR_9",
+					"op": "below",
+					"value": 6
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32005
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_beihai_lost"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32005,
+			"orig_id": 866,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B202(x5)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32006,
+			"orig_id": 974,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32007
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32007
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32007,
+			"orig_id": 975,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32008,
+			"orig_id": 152,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B202(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 12
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32009
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": -202
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32009,
+			"orig_id": 153,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B202(x5)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "taishi_ci_help"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32010,
+			"orig_id": 867,
+			"hidden": false,
+			"weight": 30000,
+			"lockturn": 26,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 12,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "not",
+					"value": 12
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": -10
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 196
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_jump_PLANETE"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32011,
+			"orig_id": 976,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 2,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 196
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32012
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32012
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32012,
+			"orig_id": 1022,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32013
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32013
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 13
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32013,
+			"orig_id": 1023,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B247(x2)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 5
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32014,
+			"orig_id": 160,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 12
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 100
+				},
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 144
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32015
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 100
+				},
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 144
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32015
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 17
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32015,
+			"orig_id": 161,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 12
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 9
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32016
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32016,
+			"orig_id": 968,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "planet_state",
+					"operation": "set",
+					"value": 12
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": 9
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32017,
+			"orig_id": 868,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32018
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 15
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32018
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32018,
+			"orig_id": 162,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B119(x12)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -26
+				},
+				{
+					"variable": "location",
+					"operation": "set",
+					"value": 8
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -26
+				},
+				{
+					"variable": "location",
+					"operation": "set",
+					"value": 8
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32019,
+			"orig_id": 994,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32020
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 32020
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 32020,
+			"orig_id": 995,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "planet_state",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -26
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

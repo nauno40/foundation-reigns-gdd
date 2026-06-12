@@ -1,0 +1,2924 @@
+{
+	"source_deck": "honey_trap",
+	"target_deck": "infiltration",
+	"node_count": 66,
+	"hidden_count": 53,
+	"nodes": [
+		{
+			"id": 22400,
+			"orig_id": 708,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22401
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22401
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22401,
+			"orig_id": 710,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_farmer"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_stable"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22402,
+			"orig_id": 712,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 2,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 1
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_stable"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_entertainment"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22403,
+			"orig_id": 713,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 2,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_entertainment"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_fabric"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22404,
+			"orig_id": 714,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 2,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_fabric"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_farmer"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22405,
+			"orig_id": 715,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 2,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_farmer"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_stable"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22406,
+			"orig_id": 711,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": 2,
+			"bearer_slot": "B138(x35)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 6,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_entertainment"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22401
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22407,
+			"orig_id": 721,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B141(x24)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22408
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_stable"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -4
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22408,
+			"orig_id": 722,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B141(x24)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 1
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22409,
+			"orig_id": 723,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B141(x24)",
+			"mood_hint": {
+				"mood_no": 5,
+				"mood_default": 6,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -4
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22410,
+			"orig_id": 724,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B149(x43)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_1"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22411,
+			"orig_id": 725,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B149(x43)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 6,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_1"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22412,
+			"orig_id": 726,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B221(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_2"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22413,
+			"orig_id": 727,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B221(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22414
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_3"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22414,
+			"orig_id": 728,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B149(x43)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_3"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22415,
+			"orig_id": 729,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B221(x4)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_4"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22416,
+			"orig_id": 730,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B149(x43)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_horse_market_1"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22417,
+			"orig_id": 731,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 6,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -13
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_not_for_fun"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 9
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22418,
+			"orig_id": 1429,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_market_fabric"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -15
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22419,
+			"orig_id": 732,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 9,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 1
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22420,
+			"orig_id": 733,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22421
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22421
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22421,
+			"orig_id": 734,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22422
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22422
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22422,
+			"orig_id": 739,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22423
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22423
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22423,
+			"orig_id": 740,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B214(x10)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22424,
+			"orig_id": 741,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B137(x34)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_ask_about_yangzhou"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22425,
+			"orig_id": 742,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B137(x34)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 5
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -6
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22426,
+			"orig_id": 3017,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B137(x34)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -7
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_ask_about_yangzhou"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22427,
+			"orig_id": 743,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B137(x34)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22428,
+			"orig_id": 748,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B203(x46)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22429,
+			"orig_id": 749,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B126(x32)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 9,
+				"mood_yes": 5
+			},
+			"conditions": [
+				{
+					"variable": "relation",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22430
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22430,
+			"orig_id": 750,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22431,
+			"orig_id": 745,
+			"hidden": false,
+			"weight": 10000,
+			"lockturn": -1,
+			"bearer_slot": "B133(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "seen",
+					"op": "equal",
+					"value": 749
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_meet_lv_bu"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_meet_lv_bu"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22432,
+			"orig_id": 751,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B111(x14)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "VAR_12",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_lv_bu_the_unrivaled"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22433,
+			"orig_id": 752,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B111(x14)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_who_is_lv_bu"
+				},
+				{
+					"variable": "relation",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_who_is_lv_bu"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22434,
+			"orig_id": 753,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B111(x14)",
+			"mood_hint": {
+				"mood_no": 5,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22435
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22435
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22435,
+			"orig_id": 755,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22436,
+			"orig_id": 783,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 3,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22437
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22437
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22437,
+			"orig_id": 786,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22438
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22438
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22438,
+			"orig_id": 788,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22439
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 4
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22439
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22439,
+			"orig_id": 789,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22440
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bad_dancer"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22440,
+			"orig_id": 829,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22441
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bad_dancer"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22441,
+			"orig_id": 791,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22442
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bad_dancer"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22442,
+			"orig_id": 792,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bad_dancer"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22443
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22443,
+			"orig_id": 793,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22444
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bad_dancer"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22444,
+			"orig_id": 830,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_what_weakness"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22445
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22445,
+			"orig_id": 831,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 10
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_what_weakness"
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22446,
+			"orig_id": 832,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22447
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_what_weakness"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22447,
+			"orig_id": 833,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_what_weakness"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22448,
+			"orig_id": 794,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22449
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_dong_zhuo_lust"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22449,
+			"orig_id": 795,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22450
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22450,
+			"orig_id": 797,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22451
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22451,
+			"orig_id": 798,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22452
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_diaochan_volunteer"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22452,
+			"orig_id": 799,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 4
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22453
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22453
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22453,
+			"orig_id": 800,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_diaochan_met_lv_bu"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_diaochan_met_lv_bu"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22454,
+			"orig_id": 801,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22455
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22455,
+			"orig_id": 803,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22456
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22456,
+			"orig_id": 804,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_who_can_set_honey_trap"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_diaochan_volunteer"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22457,
+			"orig_id": 805,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 4,
+				"mood_yes": 5
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_diaochan_into_palace"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_diaochan_into_palace"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22458,
+			"orig_id": 806,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 6,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22459
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22459
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22459,
+			"orig_id": 807,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 12,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_clash_dong_zhuo_lv_bu"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 4
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_clash_dong_zhuo_lv_bu"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22460,
+			"orig_id": 809,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 3,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22461,
+			"orig_id": 812,
+			"hidden": false,
+			"weight": 4000,
+			"lockturn": -1,
+			"bearer_slot": "B20(x189)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 6,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22462,
+			"orig_id": 810,
+			"hidden": false,
+			"weight": 5000,
+			"lockturn": -1,
+			"bearer_slot": "B213(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 9,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 6
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 9,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -61
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22463
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22463,
+			"orig_id": 811,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B212(x9)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -61
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22464,
+			"orig_id": 813,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 192
+				},
+				{
+					"variable": "VAR_9",
+					"op": "equal",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 6
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22465
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 22465
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 22465,
+			"orig_id": 988,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B18(x134)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -61
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

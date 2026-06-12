@@ -1,0 +1,444 @@
+{
+	"source_deck": "castration",
+	"target_deck": "imperial_chamberlains",
+	"node_count": 10,
+	"hidden_count": 1,
+	"nodes": [
+		{
+			"id": 40000,
+			"orig_id": 957,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": -1,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 4,
+				"mood_yes": 10
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 40001
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40001,
+			"orig_id": 958,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 1,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40002,
+			"orig_id": 959,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": -1,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 1
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40003,
+			"orig_id": 960,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": -1,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40004,
+			"orig_id": 961,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 36,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40005,
+			"orig_id": 962,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": -1,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 3,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40006,
+			"orig_id": 963,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": -1,
+			"bearer_slot": "B203(x46)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 1,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40007,
+			"orig_id": 964,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 18,
+			"bearer_slot": "B136(x25)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40008,
+			"orig_id": 965,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 6,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 40009,
+			"orig_id": 993,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 6,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_castration"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_castration"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

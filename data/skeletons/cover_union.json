@@ -1,0 +1,4037 @@
+{
+	"source_deck": "marriage",
+	"target_deck": "cover_union",
+	"node_count": 64,
+	"hidden_count": 36,
+	"nodes": [
+		{
+			"id": 23200,
+			"orig_id": 119,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23201,
+			"orig_id": 458,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23202,
+			"orig_id": 486,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23203,
+			"orig_id": 487,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 6,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23204,
+			"orig_id": 1353,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 7,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23205,
+			"orig_id": 1354,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 8,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23206,
+			"orig_id": 1355,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 9,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -3
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23207,
+			"orig_id": 1356,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 212,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 10,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_meet"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23208,
+			"orig_id": 120,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 4,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_date"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_matchmaker_date"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23209,
+			"orig_id": 121,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23210,
+			"orig_id": 488,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23211,
+			"orig_id": 990,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23212,
+			"orig_id": 489,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 6
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23213,
+			"orig_id": 1357,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 7
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23214,
+			"orig_id": 1358,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 8
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23215,
+			"orig_id": 1359,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 9
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 8
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23216,
+			"orig_id": 1360,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 10,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 10
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_cover_union"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23217,
+			"orig_id": 459,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_after_wedding"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_after_wedding"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23218,
+			"orig_id": 1361,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B116(x23)",
+			"mood_hint": {
+				"mood_no": 2,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_after_wedding"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_after_wedding"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23219,
+			"orig_id": 992,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23220,
+			"orig_id": 460,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23221,
+			"orig_id": 122,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 4
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23222,
+			"orig_id": 490,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 5
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23223,
+			"orig_id": 491,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 6
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23224,
+			"orig_id": 1362,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 7
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23225,
+			"orig_id": 1363,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 8
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23226,
+			"orig_id": 1364,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 9
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23227,
+			"orig_id": 1365,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 10
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -9
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23228,
+			"orig_id": 3207,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B165(x4)",
+			"mood_hint": {
+				"mood_no": 3,
+				"mood_default": 0,
+				"mood_yes": 3
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 14
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 165
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "party",
+					"operation": "set",
+					"value": 165
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23229,
+			"orig_id": 1366,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23230,
+			"orig_id": 3208,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_heir"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23231,
+			"orig_id": 3206,
+			"hidden": true,
+			"weight": -1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 6,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 4
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23232,
+			"orig_id": 461,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_2"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_2"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23233,
+			"orig_id": 1367,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_2"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_2"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23234,
+			"orig_id": 1369,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B203(x46)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_3"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_3"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23235,
+			"orig_id": 1536,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "not",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_baby"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -9
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_baby"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23236,
+			"orig_id": 1537,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_4"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -9
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_baby"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23237,
+			"orig_id": 3188,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B233(x8)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_baby"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_pregnaunt_5"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23238,
+			"orig_id": 3189,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B233(x8)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_baby"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_difficult_labor"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23239,
+			"orig_id": 3190,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_child_birth"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_child_birth"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23240,
+			"orig_id": 3191,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_child_birth"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_death_child_birth"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23241,
+			"orig_id": 462,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23242,
+			"orig_id": 463,
+			"hidden": true,
+			"weight": 10,
+			"lockturn": 0,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23243,
+			"orig_id": 2764,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23244,
+			"orig_id": 2765,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 4
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23245,
+			"orig_id": 2766,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 9
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23246,
+			"orig_id": 2767,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B146(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 4
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 12
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23247,
+			"orig_id": 2770,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B203(x46)",
+			"mood_hint": {
+				"mood_no": 10,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23248,
+			"orig_id": 2771,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B203(x46)",
+			"mood_hint": {
+				"mood_no": 10,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 2
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 3,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23249,
+			"orig_id": 464,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23250,
+			"orig_id": 465,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 5,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23251,
+			"orig_id": 2772,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23252,
+			"orig_id": 2773,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23253,
+			"orig_id": 2774,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23254,
+			"orig_id": 2775,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 3
+				},
+				{
+					"variable": "custom",
+					"op": "below",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "add",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -6
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23255,
+			"orig_id": 2776,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 16,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 20,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -10
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 4
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23256,
+			"orig_id": 2777,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 16,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 20,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 5
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23257,
+			"orig_id": 2778,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 16,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 20,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23258,
+			"orig_id": 2779,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "equal",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 0,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 16,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 20,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": -10
+				}
+			],
+			"noOutcome": [],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23259,
+			"orig_id": 2780,
+			"hidden": false,
+			"weight": 500,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 15
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": -8
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23260,
+			"orig_id": 2781,
+			"hidden": false,
+			"weight": 600,
+			"lockturn": 200,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 18
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": 23261
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23261,
+			"orig_id": 2784,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": -8
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "military",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23262,
+			"orig_id": 2782,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 144,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 18
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				},
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "religion",
+					"operation": "add",
+					"value": -5
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 23263,
+			"orig_id": 2783,
+			"hidden": false,
+			"weight": 100,
+			"lockturn": 144,
+			"bearer_slot": "B207(x17)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 18
+				},
+				{
+					"variable": "custom",
+					"op": "above",
+					"value": 0
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 5
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "politics",
+					"operation": "add",
+					"value": 3
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

@@ -1,0 +1,268 @@
+{
+	"source_deck": "find_liu_bei",
+	"target_deck": "find_the_contact",
+	"node_count": 4,
+	"hidden_count": 1,
+	"nodes": [
+		{
+			"id": 44000,
+			"orig_id": 1044,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 10,
+				"mood_default": 0,
+				"mood_yes": 12
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "above",
+					"value": 2
+				},
+				{
+					"variable": "VAR_9",
+					"op": "below",
+					"value": 7
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 14
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_find_liu_bei_complete"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 44001,
+			"orig_id": 1045,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 10,
+				"mood_default": 0,
+				"mood_yes": 12
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "above",
+					"value": 2
+				},
+				{
+					"variable": "VAR_9",
+					"op": "below",
+					"value": 7
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 12
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_find_liu_bei_complete"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 44002,
+			"orig_id": 1046,
+			"hidden": false,
+			"weight": -1,
+			"lockturn": -1,
+			"bearer_slot": "B108(x38)",
+			"mood_hint": {
+				"mood_no": 10,
+				"mood_default": 0,
+				"mood_yes": 12
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "equal",
+					"value": 200
+				},
+				{
+					"variable": "VAR_9",
+					"op": "above",
+					"value": 2
+				},
+				{
+					"variable": "VAR_9",
+					"op": "below",
+					"value": 7
+				},
+				{
+					"variable": "location",
+					"op": "equal",
+					"value": 7
+				},
+				{
+					"variable": "quest",
+					"op": "equal",
+					"value": 0
+				},
+				{
+					"variable": "relation",
+					"op": "above",
+					"value": 2
+				}
+			],
+			"loadOutcome": [],
+			"yesOutcome": [],
+			"noOutcome": [
+				{
+					"variable": "quest",
+					"operation": "set",
+					"value": 2,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_find_liu_bei_complete"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		},
+		{
+			"id": 44003,
+			"orig_id": 1047,
+			"hidden": true,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B109(x11)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [],
+			"loadOutcome": [
+				{
+					"variable": "relation",
+					"operation": "set",
+					"value": 4,
+					"custom_name": "A_TRANSPOSER"
+				},
+				{
+					"variable": "deck",
+					"operation": "set",
+					"value": -29
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "commerce",
+					"operation": "add",
+					"value": 7
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "custom",
+					"operation": "set",
+					"value": 1,
+					"custom_name": "A_TRANSPOSER"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}

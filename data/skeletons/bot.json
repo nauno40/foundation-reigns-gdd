@@ -1,0 +1,69 @@
+{
+	"source_deck": "bot",
+	"target_deck": "bot",
+	"node_count": 1,
+	"hidden_count": 0,
+	"nodes": [
+		{
+			"id": 45700,
+			"orig_id": 170,
+			"hidden": false,
+			"weight": 1,
+			"lockturn": 0,
+			"bearer_slot": "B196(x37)",
+			"mood_hint": {
+				"mood_no": 0,
+				"mood_default": 0,
+				"mood_yes": 0
+			},
+			"conditions": [
+				{
+					"variable": "year",
+					"op": "above",
+					"value": 184
+				}
+			],
+			"loadOutcome": [
+				{
+					"variable": "military",
+					"operation": "set",
+					"value": 50
+				},
+				{
+					"variable": "politics",
+					"operation": "set",
+					"value": 50
+				},
+				{
+					"variable": "religion",
+					"operation": "set",
+					"value": 50
+				},
+				{
+					"variable": "commerce",
+					"operation": "set",
+					"value": 50
+				}
+			],
+			"yesOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bot_quest"
+				}
+			],
+			"noOutcome": [
+				{
+					"variable": "link",
+					"operation": "set",
+					"target": "_bot_quest"
+				}
+			],
+			"question": "",
+			"leftAnswer": "",
+			"rightAnswer": "",
+			"reactionLeft": "",
+			"reactionRight": ""
+		}
+	]
+}
