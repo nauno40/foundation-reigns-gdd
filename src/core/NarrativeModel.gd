@@ -58,6 +58,10 @@ func _get_eligible_cards() -> Array:
 		if card.get("hidden", false):
 			continue
 
+		# weight négatif : carte atteignable uniquement par link (jeu de base)
+		if int(card.get("weight", 1)) < 0:
+			continue
+
 		# Check deck is active
 		var deck: String = card.get("deck", "")
 		if _ctx.get_var("deck_" + deck, 1) == 0:

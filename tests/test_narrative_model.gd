@@ -131,7 +131,7 @@ func test_link_alias_node_resolves():
 	data.link_aliases["_test_alias"] = {"node": 1002}
 	ctx.set_var("link", "_test_alias")
 	var card = model.draw_card()
-	assert_eq(card.get("id"), 1002, "un alias {node} force la carte cible")
+	assert_eq(int(card.get("id", 0)), 1002, "un alias {node} force la carte cible")
 
 func test_link_alias_enddispatch_returns_to_pool():
 	ctx.set_var("link", "_enddispatch")
@@ -155,3 +155,16 @@ func test_outcome_string_value_sets_link_alias():
 	model.apply_outcomes([{"variable": "link", "stringValue": "_enddispatch",
 		"intValue": 0, "addOperation": false, "toKeep": false}])
 	assert_eq(str(ctx.get_var("link", "")), "_enddispatch")
+
+# --- weight -1 : carte atteignable par link, jamais dans le tirage aléatoire ---
+
+func test_negative_weight_excluded_from_random_draw():
+	data.cards.append({
+		"id": 99903, "label": "w_neg", "deck": "ambient",
+		"weight": -1, "lockturn": 0, "hidden": false,
+		"question": {"FR": "?"}, "conditions": [],
+	})
+	var eligible = model._get_eligible_cards()
+	for card in eligible:
+		assert_ne(int(card.get("id", 0)), 99903,
+			"weight -1 : jamais dans le tirage aléatoire")
