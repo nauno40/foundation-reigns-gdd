@@ -364,6 +364,37 @@ Deck `new_speaker` bridges reigns: activated at reign start, reads `toKeep` to i
 
 15 meta-ranks (5 Initié → 5 Speaker → 5 Psychohistorien), persistent across all runs. Score per reign: crisis traversed in corridor (+200), no resource death (+100), reign quest (+150), arc quest advance (+100), natural death → ×1.5 multiplier. Reign duration alone scores nothing.
 
+## Dev Tools
+
+### Mode `--deck` (filtrage CLI)
+
+Lance le jeu en ne tirant que les cartes d'un deck spécifique. Ignore `hidden`, `weight`, `conditions` et `lockturn` pour les tests.
+
+```bash
+godot --deck hyperjumps
+godot --deck ambient
+godot --deck hardin_era
+godot --deck crisis_anacreonian_war
+```
+
+Implementé dans `Main.gd:77` (parse les arguments CLI, stocke `dev_deck` dans Context) et `NarrativeModel.gd:63` (filtre les cartes éligibles si `dev_deck` est défini).
+
+### Narrative Explorer (`tools/narrative_explorer.py`)
+
+Outil web de visualisation et d'édition des cartes et decks.
+
+```bash
+python3 tools/narrative_explorer.py
+```
+
+Ouvre `http://localhost:8080` avec une interface à 3 panneaux :
+- **Sidebar** — liste des decks avec compteurs et flags (cachées, weight négatif)
+- **Liste de cartes** — cartes du deck sélectionné avec flags visibles
+- **Éditeur de carte** — modifie tous les champs (ID, label, deck, weight, lockturn, hidden, bearer, question FR/EN, réponses, conditions, outcomes, moods)
+- **Graphe narratif** — force-directed graph des liens entre cartes (load/yes/no outcomes avec `variable: "link"`)
+
+Auto-save 500ms après chaque modification + backup automatique de `foundation_cards.json` avant la première sauvegarde. Ctrl+S pour sauvegarde globale.
+
 ### Full Variable Namespace
 
 ```

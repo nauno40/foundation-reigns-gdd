@@ -2553,14 +2553,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_haunted"
+					"target": "_death_hante"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_haunted"
+					"target": "_death_hante"
 				}
 			],
 			"question": "",
@@ -7002,14 +7002,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_debt"
+					"target": "_death_dettes"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_debt"
+					"target": "_death_dettes"
 				}
 			],
 			"question": "",
@@ -11913,14 +11913,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_while_asleep"
+					"target": "_death_dans_son_sommeil"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_while_asleep"
+					"target": "_death_dans_son_sommeil"
 				}
 			],
 			"question": "",

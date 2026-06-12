@@ -2588,14 +2588,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_child_birth"
+					"target": "_death_en_couches"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_child_birth"
+					"target": "_death_en_couches"
 				}
 			],
 			"question": "",
@@ -2641,14 +2641,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_child_birth"
+					"target": "_death_en_couches"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_child_birth"
+					"target": "_death_en_couches"
 				}
 			],
 			"question": "",

@@ -8739,6 +8739,3398 @@
 		}
 	},
 	{
+		"id": 24400,
+		"label": "death_24400",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "Vos flottes ont défilé une fois de trop. Ce matin, mes capitaines ont voté : la Fondation n'a plus besoin de civils pour décider de ses guerres. Vous comprendrez — vous nous avez tout appris."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 99
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Saluer une dernière fois"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de comprendre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24401,
+		"label": "death_24401",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Votre dernière transmission mentale nous parvient, hachée par les sirènes. La psychohistoire avait prévu le putsch à trois ans près. Vous, à trois mètres. Reposez-vous, Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24402,
+		"label": "death_24402",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'armée que vous avez tant engraissée a fini par avoir faim de pouvoir. Mes hommes encerclent le bâtiment. Ne rendez pas ça plus pénible."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 99
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se rendre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Résister"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24403,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24403,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24403,
+		"label": "death_24403",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Mourir renversé par l'armée qu'on a soi-même armée : les équations appellent cela une « boucle de rétroaction ». Nous appellerons cela une leçon. Au suivant."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24404,
+		"label": "death_24404",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:invader",
+		"question": {
+			"FR": "Vos défenses orbitales ? Vendues. Vos garnisons ? Dissoutes. Votre monde se rend sans un coup de feu — c'est presque décevant. J'avais préparé un discours de vainqueur."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 1
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter le discours"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tourner le dos"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24405,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24405,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24405,
+		"label": "death_24405",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Un monde qui se rend sans combattre épargne ses villes et perd ses Orateurs. Le Plan retient la première moitié. Nous pleurons la seconde."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24406,
+		"label": "death_24406",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Les pillards sont dans le port, mon ami. Plus un seul croiseur pour les arrêter — vous les avez tous désarmés pour « la paix ». La paix est d'accord. Pas eux."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter l'inévitable"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fuir vers le port"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24407,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24407,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24407,
+		"label": "death_24407",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Les pillards n'ont pas fait le tri entre les civils et les Mentaliques infiltrés. C'est le problème des pillards : aucun respect pour la psychohistoire."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24408,
+		"label": "death_24408",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'Empire a connu mille tyrans, et je les reconnais de loin, désormais. Vous avez construit un trône si haut qu'on ne voit plus le peuple d'en bas. Eux, en revanche, vous voient très bien."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 99
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Regarder en bas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Monter encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24409,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24409,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24409,
+		"label": "death_24409",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous êtes mort en tyran, ce qui arrange tout le monde : personne n'enquête jamais sur la mort d'un tyran. Votre couverture est intacte. C'est notre seul réconfort."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24410,
+		"label": "death_24410",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:terminus_mayor",
+		"question": {
+			"FR": "Au nom du Conseil que vous avez dissous, des libertés que vous avez suspendues et des élections que vous avez « reportées » : la foule est dehors, et je ne lui ai pas demandé de venir."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 99
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sortir leur parler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Barricader la porte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24411,
+		"label": "death_24411",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "La foule a renversé votre statue — érigée la semaine dernière, par vous. Les équations s'amusent de ces symétries. Pas nous. Enfin, un peu."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24412,
+		"label": "death_24412",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:mob_leader",
+		"question": {
+			"FR": "Plus de lois ! Plus de juges ! Plus de maître ! La rue décide, et la rue a décidé que les notables de votre espèce avaient assez décidé. Rien de personnel — c'est le chaos, justement."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 1
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Plaider sa cause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Disparaître dans la foule"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24413,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24413,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24413,
+		"label": "death_24413",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "L'anarchie est le seul régime que la psychohistoire modélise avec un dé. Le dé vous a été défavorable. Condoléances de toute la Table."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24414,
+		"label": "death_24414",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "Tu entends, citoyen ? Ce silence ? C'est l'État qui n'existe plus. Plus personne ne répond nulle part. On s'est servi dans les arsenaux. Donne tes bottes."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Donner ses bottes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir à ses bottes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24415,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24415,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24415,
+		"label": "death_24415",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Votre dernière pensée fut pour vos bottes, nous l'avons captée distinctement. L'esprit humain est insondable. C'est pour cela que nous l'étudions."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24416,
+		"label": "death_24416",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "La théocratie que vous avez laissée croître brûle des « esprits déviants » sur trois mondes. La Seconde Fondation ne peut plus se permettre votre couverture. Le Plan vous remercie. Moi aussi."
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 99
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le rappel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Implorer un délai"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24417,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24417,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24417,
+		"label": "death_24417",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous avez laissé la foi dévorer la science qu'elle devait protéger. Le rappel d'un Orateur est notre échec autant que le vôtre. La Table en délibérera. Longtemps."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24418,
+		"label": "death_24418",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "L'Esprit Galactique m'est apparu et m'a confié votre nom. Il dit que vous êtes un saint. Les saints, voyez-vous, nous les vénérons mieux une fois morts. C'est un grand honneur."
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 99
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser la sainteté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier la date"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24419,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24419,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24419,
+		"label": "death_24419",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Canonisé de votre vivant, béatifié dans l'heure, enterré avant le dîner. L'efficacité de cette Église aurait presque quelque chose d'admirable."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24420,
+		"label": "death_24420",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Sans l'Église pour bénir nos machines, plus personne n'y croit, plus personne n'en achète, plus personne ne les répare. Un réacteur sans foi est un réacteur sans maintenance. Le vôtre, par exemple. Derrière vous."
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 1
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se retourner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ne pas se retourner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24421,
+		"label": "death_24421",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Le réacteur n'avait plus été entretenu depuis le schisme. Vous l'aviez noté dans votre propre rapport. Nous l'avons relu. Deux fois. Ah, Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24422,
+		"label": "death_24422",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Psst. Les fidèles ont mis ta tête à prix — il paraît que c'est toi qui as tué leur Église. Moi je dis : on s'en fiche, embarque, on file. Petit détail : ils tiennent le port."
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter le port"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se cacher en ville"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24423,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24423,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24423,
+		"label": "death_24423",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Le contrebandier s'en est sorti, lui. Il nous a même présenté sa facture — « transport d'un passager, interrompu ». Nous l'avons payée. Question de principe."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24424,
+		"label": "death_24424",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Votre monopole est si parfait qu'il ne reste plus qu'un seul acheteur, un seul vendeur et un seul prix : vous, vous, et trop cher. La Bourse vous félicite. Les émeutiers aussi, à leur manière."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 99
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recompter sa fortune"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Brûler les registres"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24425,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24425,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24425,
+		"label": "death_24425",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Posséder tout, c'est n'avoir plus rien à échanger — et un marché mort tue ses marchands. Première leçon d'économie psychohistorique. Posthume, hélas."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24426,
+		"label": "death_24426",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "Même Trantor n'a jamais osé posséder TOUT le commerce d'un secteur. L'Empire salue l'exploit et saisit l'ensemble, pour cause de précédent dangereux. Veuillez signer ici."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 99
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Signer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ne pas signer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24427,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24427,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24427,
+		"label": "death_24427",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "L'Empire a saisi votre monopole et, par excès de zèle administratif, votre existence légale. Vous êtes mort par décret. C'est une première dans nos annales."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24428,
+		"label": "death_24428",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Par décision de la chambre de commerce : vos hangars, saisis. Vos cargos, saisis. Votre bureau, saisi. Cette conversation, facturée. Vous noterez que je suis le dernier à vous parler encore."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 1
+			},
+			{
+				"variable": "rank",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Régler la facture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Contester la facture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24429,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24429,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24429,
+		"label": "death_24429",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "L'huissier a tout saisi, y compris, par erreur, le rapport qui devait nous parvenir. Nous l'avons racheté aux enchères. Votre mort, lot numéro 47."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24430,
+		"label": "death_24430",
+		"deck": "deaths",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Plus un cargo en orbite depuis des semaines, patron. Les gars ont brûlé les entrepôts vides pour se chauffer. Ce soir ils cherchent qui a coulé le port. Les regards convergent."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer face aux dockers"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Nier face aux dockers"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24431,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24431,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24431,
+		"label": "death_24431",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Les dockers n'ont rien contre vous personnellement, nous a dit leur chef. Nous lui avons répondu que la psychohistoire non plus. Il n'a pas compris. Vous non plus, sans doute."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une dernière pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24432,
+		"label": "death_24432",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "L'aiguille était fine, le poison patient, le tueur professionnel. Nous saurons qui l'a payé avant la fin du mois. Vous, hélas, êtes une donnée close depuis ce matin."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "assassine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "assassine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24433,
+		"label": "death_24433",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Un Orateur n'a rien à faire sur un champ de bataille. Vous le saviez, vous y êtes allé quand même. Les équations ont un terme pour cela. La Table préfère « courage »."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "champ_de_bataille",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "champ_de_bataille",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24434,
+		"label": "death_24434",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vos créanciers ont saisi vos biens, puis votre liberté, puis — la législation de ce monde est créative — votre personne. Nous avons racheté votre dette. Trop tard, mais le geste compte."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "dettes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "dettes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24435,
+		"label": "death_24435",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Ils vous ont interrogé pendant onze jours. Vous n'avez rien dit. Nous le savons — nous écoutions. Onze jours de silence : la Seconde Fondation se souviendra de chacun d'eux."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "interrogatoire",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "interrogatoire",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24436,
+		"label": "death_24436",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Quarante milliards de mondes habités, des océans sur une fraction d'entre eux, et il a fallu que vous tombiez dans celui-là. La probabilité était infime. Vous l'avez réalisée. Bravo, en un sens."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "noyade",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "noyade",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24437,
+		"label": "death_24437",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous êtes mort pour quelqu'un que vous n'aviez pas le droit d'aimer, dans une vie qui n'était pas la vôtre. La psychohistoire n'a pas de variable pour cela. Nous refusons d'en créer une."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "par_amour",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "par_amour",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24438,
+		"label": "death_24438",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Un robot de maintenance déclassé, persuadé que vous étiez un déchet encombrant. Il vous a trié, compacté et étiqueté. Nous avons récupéré l'étiquette. Elle dit « divers ». Ah, Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24439,
+		"label": "death_24439",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous êtes mort dans votre sommeil, en rêvant — nos capteurs sont formels — de tableaux statistiques. Mourir en travaillant : la Table a observé une minute de silence. Puis elle a repris les tableaux."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "dans_son_sommeil",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "dans_son_sommeil",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24440,
+		"label": "death_24440",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Le conduit d'aération était cartographié, la sentinelle soudoyée, la navette prête. Restait la gravité, que personne n'avait soudoyée. Trois étages. Ah, Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "evasion_ratee",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "evasion_ratee",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24441,
+		"label": "death_24441",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous avez touché un autre esprit d'un peu trop près, un peu trop longtemps. Deux consciences qui s'emmêlent ne se démêlent pas toujours. Vous êtes morts heureux. « Vous », au pluriel — c'est bien le problème."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "amour_mentalique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "amour_mentalique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24442,
+		"label": "death_24442",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous juriez qu'une présence vous suivait depuis Siwenna. Nous avons vérifié : c'était vrai. Nous présentons nos excuses à votre successeur, qui hérite du dossier. Et de la présence."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "hante",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "hante",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24443,
+		"label": "death_24443",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "L'arme de collection a fonctionné parfaitement, pour la première fois en quatre siècles, au pire moment possible. Le collectionneur est effondré. La pièce a pris de la valeur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "blaster_ancestral",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "blaster_ancestral",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24444,
+		"label": "death_24444",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Un duel mentalique au sommet. Votre adversaire était plus rapide d'une demi-pensée. Une demi-pensée, Orateur. La Table a ajourné toutes ses autres affaires."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24445,
+		"label": "death_24445",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Le canon était braqué sur quelqu'un d'autre. L'artilleur a éternué. La psychohistoire prédit les empires, pas les éternuements. Nous l'écrirons sur votre stèle, si vous permettez."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "canon_neutronique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "canon_neutronique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24446,
+		"label": "death_24446",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Le chat du cargo dormait sur la commande de sas. Personne ne déplace le chat du cargo — c'est une loi plus vieille que l'Empire. Vous avez voulu le déplacer. Le sas s'est ouvert. Le chat va bien."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "chat_du_cargo",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "chat_du_cargo",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24447,
+		"label": "death_24447",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Toutes les sorties étaient gardées, tous les esprits trop nombreux pour être influencés à la fois. Il y a des nuits où les équations ne laissent aucun couloir. Celle-ci en était une. Reposez-vous."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "sans_issue",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "sans_issue",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24448,
+		"label": "death_24448",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Vous avez pris votre retraite — un Orateur, une retraite ! — dans une ferme, sous un faux nom, avec des abeilles. Vous êtes mort vieux, heureux et inutile au Plan. La Table vous envie en secret."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "retraite",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "retraite",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24449,
+		"label": "death_24449",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Une « salamandre » — c'est le nom que les techniciens donnent aux plasmas erratiques des vieux réacteurs. La vôtre vous a suivi dans trois compartiments. Les techniciens disent n'avoir jamais vu ça. Ils ont l'air admiratifs. Nous, moins."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "salamandre",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "salamandre",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24450,
+		"label": "death_24450",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Le saut hyperspatial s'est mal calibré : la moitié de vous est arrivée à bon port avec une seconde d'avance sur l'autre. L'assureur parle d'« incident de désynchronisation ». Nous parlons d'un ami perdu deux fois."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "ecartele",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "ecartele",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24451,
+		"label": "death_24451",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Votre couverture exigeait une famille ; la famille a exigé son dû. Mourir en donnant la vie — la psychohistoire y voit un transfert net positif. La Table y voit autre chose, qu'elle ne mettra pas en équation."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "en_couches",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "en_couches",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24452,
+		"label": "death_24452",
+		"deck": "deaths",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Les chambellans de Trantor purgent plus vite que nous ne prédisons. Votre nom était sur la mauvaise liste — l'encre était sèche avant notre alerte. L'Empire meurt, mais ses listes fonctionnent admirablement."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "times_died",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ainsi finit ce règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester, pour la forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "purge_imperiale",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dying",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "death_type",
+				"intValue": 0,
+				"stringValue": "purge_imperiale",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 25600,
 		"label": "hj_25600",
 		"deck": "hyperjumps",

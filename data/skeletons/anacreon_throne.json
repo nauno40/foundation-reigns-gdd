@@ -2479,14 +2479,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_assassinated"
+					"target": "_death_assassine"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_assassinated"
+					"target": "_death_assassine"
 				}
 			],
 			"question": "",
@@ -3141,14 +3141,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_battleground"
+					"target": "_death_champ_de_bataille"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_battleground"
+					"target": "_death_champ_de_bataille"
 				}
 			],
 			"question": "",

@@ -434,14 +434,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_green_dragon_blade"
+					"target": "_death_blaster_ancestral"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_green_dragon_blade"
+					"target": "_death_blaster_ancestral"
 				}
 			],
 			"question": "",
@@ -1328,14 +1328,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_torture"
+					"target": "_death_interrogatoire"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_torture"
+					"target": "_death_interrogatoire"
 				}
 			],
 			"question": "",
@@ -1473,14 +1473,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_heavenly_sword"
+					"target": "_death_lame_psychique"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_heavenly_sword"
+					"target": "_death_lame_psychique"
 				}
 			],
 			"question": "",

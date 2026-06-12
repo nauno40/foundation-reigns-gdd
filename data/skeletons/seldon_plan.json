@@ -7523,14 +7523,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_no_escape"
+					"target": "_death_sans_issue"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_no_escape"
+					"target": "_death_sans_issue"
 				}
 			],
 			"question": "",
@@ -8041,7 +8041,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_retired"
+					"target": "_death_retraite"
 				}
 			],
 			"noOutcome": [
@@ -8117,14 +8117,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_fumbled_escape"
+					"target": "_death_evasion_ratee"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_fumbled_escape"
+					"target": "_death_evasion_ratee"
 				}
 			],
 			"question": "",
@@ -8296,14 +8296,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_lucy"
+					"target": "_death_chat_du_cargo"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_lucy"
+					"target": "_death_chat_du_cargo"
 				}
 			],
 			"question": "",
@@ -8343,14 +8343,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_lucy"
+					"target": "_death_chat_du_cargo"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_lucy"
+					"target": "_death_chat_du_cargo"
 				}
 			],
 			"question": "",

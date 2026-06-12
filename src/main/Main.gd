@@ -40,6 +40,8 @@ func _ready() -> void:
 		_game_data.seed_faction_relations(_ctx)
 		_ctx.set_var("location", "terminus", true)
 
+	_dev_parse_args()
+
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_card_screen.setup(_game_data)
 	_galaxy_map.setup(_game_data)
@@ -71,6 +73,16 @@ func _initialize_new_reign(legitimacy_start: int) -> void:
 	var cover = _pick_cover(1)
 	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
 	_ctx.apply_cover(cover)
+
+func _dev_parse_args() -> void:
+	var args = OS.get_cmdline_args()
+	for i in range(args.size()):
+		match args[i]:
+			"--deck":
+				if i + 1 < args.size():
+					var deck = args[i + 1]
+					_ctx.set_var("dev_deck", deck)
+					print("DEV: deck filtré sur '%s'" % deck)
 
 func _pick_cover(year: int) -> Dictionary:
 	var era_id = EraUtils.get_era_for_year(year)
@@ -125,9 +137,19 @@ func _on_choice_made(is_left: bool) -> void:
 	# réaction — rythme du joueur, comme dans Reigns.
 	_pending_death = ""
 	if _ctx.is_game_over():
-		_pending_death = _parse_death_type()
+		if _ctx.get_var("dying", 0) == 1:
+			_pending_death = _parse_death_type()
+		else:
+			# Mort par ressource : la scène narrative du deck deaths joue
+			# d'abord (jeu de base) ; son épilogue posera dying = 1.
+			var death_card = _model.find_death_card()
+			if death_card.is_empty():
+				_pending_death = _parse_death_type()
+			else:
+				_ctx.set_var("link", str(int(death_card.get("id", 0))))
 	elif _ctx.get_var("dying", 0) == 1:
-		_pending_death = "natural"
+		# Morts hors ressources : la carte porte son type (défaut : naturelle)
+		_pending_death = str(_ctx.get_var("death_type", "natural"))
 	else:
 		var age = _ctx.get_var("age", 35)
 		if _should_die_naturally(age):

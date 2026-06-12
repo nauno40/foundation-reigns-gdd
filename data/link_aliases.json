@@ -41,5 +41,68 @@
 	},
 	"_jump_somewhere": {
 		"action": "jump_random"
+	},
+	"_death_assassine": {
+		"node": 24432
+	},
+	"_death_champ_de_bataille": {
+		"node": 24433
+	},
+	"_death_dettes": {
+		"node": 24434
+	},
+	"_death_interrogatoire": {
+		"node": 24435
+	},
+	"_death_noyade": {
+		"node": 24436
+	},
+	"_death_par_amour": {
+		"node": 24437
+	},
+	"_death_emporte_par_robot": {
+		"node": 24438
+	},
+	"_death_dans_son_sommeil": {
+		"node": 24439
+	},
+	"_death_evasion_ratee": {
+		"node": 24440
+	},
+	"_death_amour_mentalique": {
+		"node": 24441
+	},
+	"_death_hante": {
+		"node": 24442
+	},
+	"_death_blaster_ancestral": {
+		"node": 24443
+	},
+	"_death_lame_psychique": {
+		"node": 24444
+	},
+	"_death_canon_neutronique": {
+		"node": 24445
+	},
+	"_death_chat_du_cargo": {
+		"node": 24446
+	},
+	"_death_sans_issue": {
+		"node": 24447
+	},
+	"_death_retraite": {
+		"node": 24448
+	},
+	"_death_salamandre": {
+		"node": 24449
+	},
+	"_death_ecartele": {
+		"node": 24450
+	},
+	"_death_en_couches": {
+		"node": 24451
+	},
+	"_death_purge_imperiale": {
+		"node": 24452
 	}
 }

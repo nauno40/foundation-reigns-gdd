@@ -213,3 +213,22 @@ func test_jump_alias_resolves_to_travel_card():
 	assert_eq(ctx.get_var("commerce", 50), 45, "le voyage coûte 5 de commerce")
 	ctx.empty_non_keep()
 	assert_eq(str(ctx.get_var("location", "")), "kalgan", "location survit à la mort (toKeep)")
+
+# --- Deck deaths : la mort par ressource passe par une carte narrative ---
+
+func test_find_death_card_matches_resource_state():
+	ctx.set_var("military", 100)
+	var card = model.find_death_card()
+	assert_eq(int(card.get("id", 0)), 24402,
+		"militaire à 100 → carte de mort correspondante (variante de base)")
+
+func test_find_death_card_prefers_rank_variant():
+	ctx.set_var("military", 100)
+	ctx.set_var("rank", 3)
+	var card = model.find_death_card()
+	assert_eq(int(card.get("id", 0)), 24400,
+		"avec rank > 2, la variante la plus spécifique gagne")
+
+func test_find_death_card_empty_when_alive():
+	var card = model.find_death_card()
+	assert_true(card.is_empty(), "pas de carte de mort quand tout va bien")

@@ -398,14 +398,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_drown"
+					"target": "_death_noyade"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_drown"
+					"target": "_death_noyade"
 				}
 			],
 			"question": "",
@@ -987,14 +987,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"question": "",
@@ -1034,14 +1034,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"question": "",
@@ -1074,14 +1074,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"question": "",
@@ -1114,14 +1114,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_death_abducted_by_panda"
+					"target": "_death_emporte_par_robot"
 				}
 			],
 			"question": "",

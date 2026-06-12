@@ -22,5 +22,29 @@
 	},
 	"smuggler": {
 		"title": "Contrebandier notoire"
+	},
+	"first_speaker": {
+		"title": "L'Orateur Premier"
+	},
+	"fleet_admiral": {
+		"title": "Amirale de la Flotte"
+	},
+	"invader": {
+		"title": "Général envahisseur"
+	},
+	"mob_leader": {
+		"title": "Meneur de foule"
+	},
+	"agitator": {
+		"title": "Agitateur public"
+	},
+	"plutocrat": {
+		"title": "Ploutocrate de la Bourse"
+	},
+	"creditor": {
+		"title": "Huissier de la Guilde"
+	},
+	"dock_foreman": {
+		"title": "Chef des dockers"
 	}
 }

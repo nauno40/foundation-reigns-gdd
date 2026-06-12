@@ -60,42 +60,58 @@ func _resolve_alias(alias: String) -> Dictionary:
 func _get_eligible_cards() -> Array:
 	var eligible: Array = []
 	var current_turn: int = _ctx.get_var("turns", 0)
+	var dev_deck: String = str(_ctx.get_var("dev_deck", ""))
 
 	for card in _data.cards:
-		# Hidden cards are link-only (crisis/quest sequences)
-		if card.get("hidden", false):
-			continue
-
-		# weight négatif : carte atteignable uniquement par link (jeu de base)
-		if int(card.get("weight", 1)) < 0:
-			continue
-
 		var deck: String = card.get("deck", "")
 
-		# Decks planétaires : uniquement sur la planète courante
-		if deck.begins_with("planet_"):
-			var here: String = str(_ctx.get_var("location", "terminus"))
-			if deck.trim_prefix("planet_") != here:
+		if dev_deck != "":
+			if deck != dev_deck:
+				continue
+		else:
+			if card.get("hidden", false):
 				continue
 
-		# Check deck is active
-		if _ctx.get_var("deck_" + deck, 1) == 0:
-			continue
+			if int(card.get("weight", 1)) < 0:
+				continue
 
-		# Check conditions
-		if not _evaluator.evaluate_all(card.get("conditions", []), _ctx._vars):
-			continue
+			if deck.begins_with("planet_"):
+				var here: String = str(_ctx.get_var("location", "terminus"))
+				if deck.trim_prefix("planet_") != here:
+					continue
 
-		# Check lockturn — stocké dans Context pour survivre au rechargement
-		var card_id: int = card.get("id", 0)
-		var last_seen: int = _ctx.get_var("lockturn_" + str(card_id), -9999)
-		var lockturn: int = card.get("lockturn", 0)
-		if current_turn - last_seen < lockturn:
-			continue
+			if _ctx.get_var("deck_" + deck, 1) == 0:
+				continue
+
+			if not _evaluator.evaluate_all(card.get("conditions", []), _ctx._vars):
+				continue
+
+			var card_id: int = card.get("id", 0)
+			var last_seen: int = _ctx.get_var("lockturn_" + str(card_id), -9999)
+			var lockturn: int = card.get("lockturn", 0)
+			if current_turn - last_seen < lockturn:
+				continue
 
 		eligible.append(card)
 
 	return eligible
+
+# Mort narrative (deck deaths, jeu de base) : carte déclencheur dont les
+# conditions correspondent à l'état fatal. La plus spécifique (plus de
+# conditions) l'emporte — la variante de rang prime sur la générique.
+func find_death_card() -> Dictionary:
+	var best: Dictionary = {}
+	var best_count := -1
+	for card in _data.cards_by_deck.get("deaths", []):
+		if card.get("hidden", false):
+			continue
+		var conditions: Array = card.get("conditions", [])
+		if not _evaluator.evaluate_all(conditions, _ctx._vars):
+			continue
+		if conditions.size() > best_count:
+			best = card
+			best_count = conditions.size()
+	return best
 
 func _weighted_random(cards: Array) -> Dictionary:
 	var total_weight: int = 0
