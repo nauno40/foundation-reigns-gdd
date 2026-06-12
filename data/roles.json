@@ -49,5 +49,11 @@
 	},
 	"watcher": {
 		"title": "Le Veilleur"
+	},
+	"tutor": {
+		"title": "Précepteur de la couverture"
+	},
+	"matchmaker": {
+		"title": "Marieuse de la cour"
 	}
 }

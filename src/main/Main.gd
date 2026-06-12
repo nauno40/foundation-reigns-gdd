@@ -127,6 +127,11 @@ func _on_choice_made(is_left: bool) -> void:
 	_model.mark_card_seen(_current_card)
 	_ctx.advance_turn()
 
+	# L'intermède new_speaker ne dure que les premiers tours du règne
+	# (provisoire : la carte d'accueil définitive fermera le deck elle-même)
+	if int(_ctx.get_var("turns", 0)) >= 4:
+		_ctx.set_var("deck_new_speaker", 0)
+
 	# Structure du jeu de base : la narration (réaction) n'existe que si
 	# l'auteur a écrit un texte — sinon enchaînement direct (84 % des
 	# swipes dans Reigns: Three Kingdoms).
@@ -213,6 +218,9 @@ func _on_new_reign() -> void:
 	var cover = _pick_cover(year)
 	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
 	_ctx.apply_cover(cover)
+
+	# Le pont entre règnes s'ouvre (structure du jeu de base : after_death)
+	_ctx.set_var("deck_new_speaker", 1)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_death_screen.hide()
