@@ -113,5 +113,29 @@
 	},
 	"_new_speaker_greeting": {
 		"node": 3001
+	},
+	"_affaire_barr_tache_1": {
+		"node": 28406
+	},
+	"_affaire_barr_tache_2": {
+		"node": 28411
+	},
+	"_affaire_barr_bon_plan": {
+		"node": 28418
+	},
+	"_affaire_barr_partage": {
+		"node": 28422
+	},
+	"_affaire_barr_accord": {
+		"node": 28425
+	},
+	"_affaire_barr_remboursement": {
+		"node": 28426
+	},
+	"_affaire_barr_patriarche": {
+		"node": 28426
+	},
+	"_affaire_barr_echec": {
+		"node": 28426
 	}
 }

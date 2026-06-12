@@ -19190,5 +19190,1849 @@
 			"yes": "curious",
 			"no": "neutral"
 		}
+	},
+	{
+		"id": 28400,
+		"label": "barr_28400",
+		"deck": "siwenna_affair",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un gamin essoufflé vous tend un pli scellé aux armes d'une vieille famille : « Le patriarche Barr demande l'intermédiaire discret dont toute la ville parle. C'est vous, l'intermédiaire discret ? Toute la ville en parle. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "family_affair",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre le pli"
+			},
+			"reaction": {
+				"FR": "Si toute la ville en parle, la discrétion est déjà un échec. Vous y allez quand même."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renvoyer le gamin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28401,
+		"label": "barr_28401",
+		"deck": "siwenna_affair",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Asseyez-vous. Le thé est froid, comme l'Empire. » Onum Barr a la voix de quelqu'un qui a survécu à trop de gouverneurs. « On a saisi les archives de ma famille — six siècles de titres et de lettres. Le gouverneur les appelle « biens vacants ». Je l'appelle voleur. Vous m'aiderez. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "family_affair",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'aider"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est trop dangereux"
+			},
+			"reaction": {
+				"FR": "« La prudence. Bien sûr. C'est ce qu'a dit mon fils aîné. Le gouverneur l'a fait exécuter prudent. »"
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28402,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28402,
+		"label": "barr_28402",
+		"deck": "siwenna_affair",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Première chose : le notaire Vask détient le seul inventaire authentique de nos biens. Il le vendrait à sa propre mère, si sa mère payait comptant. Heureusement, vous avez l'air plus riche que sa mère. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "family_affair",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Aller voir Vask"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher un autre angle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28403,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28403,
+		"label": "barr_28403",
+		"deck": "siwenna_affair",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Le plan complet, donc : l'inventaire chez Vask, puis les archives elles-mêmes, au palais du gouverneur. Deux serrures, une seule clé : vous. » Le vieux Barr vous regarde longtemps. « Pourquoi un étranger m'aiderait-il ? Ne répondez pas. Les bonnes réponses me décevraient. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "family_affair",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le plan entier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se retirer de l'affaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28404,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_patriarche",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28404,
+		"label": "barr_28404",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "« L'affaire Barr ? » Le maître de guilde baisse la voix d'un étage. « La Guilde financera vos frais — discrètement. Un patriciat restauré, c'est un client solvable. Et le gouverneur taxe trop nos comptoirs. Deux pierres, un coup. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre l'argent de la Guilde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester indépendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28405,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_tache_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28405,
+		"label": "barr_28405",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« On me dit que la Guilde met son nez dans MON affaire. » Le vieux Barr ne crie pas ; c'est pire. « Mon père disait : qui accepte l'or des marchands leur vend l'histoire de sa maison. Vous avez une journée pour choisir vos créanciers. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rendre l'or de la Guilde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder les deux alliances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_tache_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28406,
+		"label": "barr_28406",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Vask vous recevra demain, » dit Barr. « Précaution : il enregistre toutes ses conversations. Toutes. Son perroquet mécanique, sur le perchoir — c'est le micro. Offrez-lui des graines, ça brouille le son. Ne demandez pas comment je le sais. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Des graines pour le perroquet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Improviser sur place"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28407,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28407,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28407,
+		"label": "barr_28407",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Le notaire Vask a le sourire d'un coffre-fort. « L'inventaire Barr ? Pièce rarissime. J'en connais trois acheteurs, dont un gouverneur. Mais je suis sentimental : je préfère vendre à qui me garantit de... survivre à la transaction. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garantir sa survie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le menacer un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28408,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28408,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28408,
+		"label": "barr_28408",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Le prix, maintenant. » Vask griffonne un chiffre. Le perroquet mécanique picore ses graines en grésillant. « Notez que je vends aussi mon silence. C'est le même prix, mais c'est un autre reçu. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer prix et silence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Payer l'inventaire seul"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28409,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_tache_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28409,
+		"label": "barr_28409",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Dans l'escalier du notaire, un commis vous rattrape : « Monsieur ! Maître Vask s'est trompé de liasse. » Il vous tend un second dossier — les lettres privées du GOUVERNEUR. Ses yeux disent qu'il sait exactement ce qu'il fait."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre aussi les lettres"
+			},
+			"reaction": {
+				"FR": "Le commis disparaît avant le merci. Sur Siwenna, la haine du gouverneur est un service public."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rendre la liasse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28410,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_remboursement",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28410,
+		"label": "barr_28410",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« L'inventaire. Enfin. » Les mains du vieux Barr tremblent en tournant les pages. « Six siècles. Mon grand-père a écrit cette ligne. » Il referme le registre. « La suite renversera peut-être un gouverneur. Vous pouvez encore partir en héros modeste. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_siwenna_affair",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Aller jusqu'au bout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Partir en héros modeste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28411,
+		"label": "barr_28411",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Les archives dorment au sous-sol du palais, » murmure Barr. « Mon plan tient en trois mots : le bal annuel. Le gouverneur invite tout ce que Siwenna compte de notables. Il vous manque une invitation et des manières. Les manières, je m'en charge. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Apprendre les manières"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Entrer sans invitation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28412,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28412,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28412,
+		"label": "barr_28412",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Leçon de maintien chez les Barr : « Le baisemain impérial, PAS la version marchande. L'inclinaison à douze degrés — quinze, c'est de la servilité. » Le vieux corrige votre nuque du bout de sa canne. « Douze. Ma maison a tenu six siècles sur trois degrés. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Douze degrés exactement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quinze, par sécurité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28413,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28413,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28413,
+		"label": "barr_28413",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Le bal. Lustres impériaux, musique fatiguée, et le gouverneur qui pérore sur « l'âge d'or de Siwenna » — le sien. Une domestique vous frôle : « Sous-sol, troisième porte. La sentinelle s'appelle Drev. Il dort debout à minuit moins le quart, réglé comme une horloge. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Minuit moins le quart, donc"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier la domestique d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28414,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28414,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28414,
+		"label": "barr_28414",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Minuit moins le quart. Drev dort debout, conformément à sa réputation. La troisième porte s'ouvre sur six siècles d'archives Barr — et sur un détail : quelqu'un a déjà forcé la serrure. Récemment. De l'intérieur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Entrer quand même"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir prévenir Barr"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28415,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28415,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28415,
+		"label": "barr_28415",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Entre les rayonnages, une silhouette : le SECRÉTAIRE du gouverneur, des dossiers Barr plein les bras. « Vous n'êtes pas censé être ici, » dit-il. « Moi non plus, » admet-il. « Proposition : chacun oublie l'autre. Mes dossiers sont des preuves contre lui. Les vôtres sont à vous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Marché conclu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exiger ses dossiers aussi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28416,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_tache_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 28416,
+		"label": "barr_28416",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Les archives Barr pèsent leur poids d'histoire et de poussière. Restent dix minutes avant la relève de Drev. Par la fenêtre du sous-sol, la berline des Barr attend — et une patrouille tourne au coin, en avance sur l'horaire."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Charger la berline maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attendre le passage de la patrouille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28417,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_bon_plan",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28417,
+		"label": "barr_28417",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Six siècles rentrés à la maison. » Onum Barr touche les caisses comme on touche un front d'enfant malade. « Le gouverneur saura demain. Il ne fera rien : ses propres lettres sont dans le lot, et il le sait. Voilà ce qu'on appelle, en patricien, un équilibre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_siwenna_affair",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer l'équilibre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réclamer votre part"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28418,
+		"label": "barr_28418",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Un bon plan vaut mieux qu'une bonne épée, disait mon père — il a fini par l'épée, notez. » Barr déplie une carte de Siwenna. « Reste à rendre l'affaire OFFICIELLE : un acte de restitution, signé. Pour ça, il faut la famille au complet. Y compris mon frère. Hélas. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 6,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Convoquer le frère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en passer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28419,
+		"label": "barr_28419",
+		"deck": "siwenna_affair",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "« Ainsi c'est vous, l'étranger qui rend sa mémoire à ma famille. » Lewin Barr a vingt ans de moins que son frère et deux fois son sourire. « Onum vous a-t-il dit que la moitié de ces archives me revient ? Non ? Comme c'est lui. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "family_affair",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter le cadet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester loyal à Onum"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28420,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28420,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28420,
+		"label": "barr_28420",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "« Comprenez-moi, » poursuit Lewin. « Lui veut un musée ; moi, un avenir. Vendre un tiers des pièces financerait le retour politique des Barr. Mon frère préfère régner sur la poussière. Aidez-moi à le convaincre — ou aidez-le à m'enterrer. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Plaider le partage devant Onum"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rapporter la manœuvre à Onum"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_partage",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28421,
+		"label": "barr_28421",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "Les deux frères face à face, et vous au milieu — exactement là où il ne faut jamais être entre deux Barr. « Choisis, l'étranger, » dit Onum sans vous regarder. « La mémoire ou l'avenir. L'un de nous deux se trompe depuis quarante ans. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "La mémoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'avenir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_echec",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_echec",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28422,
+		"label": "barr_28422",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "Lewin vous rattrape sous le porche : « Dernière offre. Un partage équitable, acté devant notaire — pas le véreux, un vrai. Onum signera si VOUS le lui demandez. Il vous écoute plus que moi. C'est vexant, d'ailleurs. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Demander le partage à Onum"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de s'en mêler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_accord",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28423,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28423,
+		"label": "barr_28423",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "« Un partage. » Onum Barr regarde longtemps le feu. « Mon frère vous a montré son sourire. Il a aussi des dettes de jeu sur Kalgan — il vous l'a dit ? Le tiers qu'il veut vendre finirait sur un tapis vert. Demandez-lui donc QUEL avenir il finance. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Confronter Lewin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaider quand même le partage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28424,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28424,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28424,
+		"label": "barr_28424",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "Lewin ne nie pas. « Kalgan, oui. On a les ancêtres qu'on peut et les vices qu'on a. » Il remet ses gants. « Sans partage, je vends ce que je sais : que les archives ont quitté le palais dans VOTRE berline. Le gouverneur paiera bien ça. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Céder au chantage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser parler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_echec",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_affaire_barr_echec",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 28425,
+		"label": "barr_28425",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lewin_barr",
+		"question": {
+			"FR": "L'acte de partage est signé devant un notaire honnête — il en restait un. Onum garde la mémoire, Lewin reçoit sa part en rentes plutôt qu'en pièces : « Pour que Kalgan n'hérite pas de mes ancêtres, » a dit l'aîné. Personne n'a ri, mais tout le monde a signé."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 7,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Féliciter les deux frères"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester en retrait"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28426,
+		"label": "barr_28426",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "L'affaire Barr se referme sans bruit, comme se referment les grandes maisons : un domestique éteint les lampes une à une, et personne ne commente. Sur Siwenna, on n'enterre pas les espoirs — on les range."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_siwenna_affair",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tourner la page"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder un œil sur les Barr"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28427,
+		"label": "barr_28427",
+		"deck": "siwenna_affair",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Une dernière chose. » Onum Barr vous attend dans le jardin d'hiver, l'acte de restitution à la main. « Ma famille doit un siècle de gratitude à un étranger sans passé vérifiable. J'ai cessé de chercher le vôtre, par politesse. Que la maison Barr vous doive une dette, cela me va. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "family_affair",
+				"op": "equal",
+				"value": 7
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la dette d'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "N'être passé que par hasard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28428,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28428,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 28428,
+		"label": "barr_28428",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "« Siwenna se souviendra, » dit le patriarche devant la famille assemblée. « Quand votre Fondation aura besoin d'amis dans l'ancien Empire — et elle en aura besoin — il y aura de la lumière chez les Barr. » Le cadet lui-même incline la tête. De douze degrés, exactement."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "family_affair",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller l'alliance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander plutôt un service"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_siwenna_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_siwenna_affair",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28429,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 28429,
+		"label": "barr_28429",
+		"deck": "siwenna_affair",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "onum_barr",
+		"question": {
+			"FR": "Au moment du départ, Onum Barr vous glisse un objet : le sceau de bronze de sa maison. « Montrez-le à n'importe quel patricien de Siwenna. Six siècles d'amis et d'ennemis sauront que vous êtes des nôtres. Tâchez de vérifier lesquels avant de le montrer. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre le sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser un tel honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_siwenna_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_siwenna_affair",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_siwenna_affair",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 99999,
+		"label": "hot_reload_test",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "[dev] Carte de test hot-reload — invisible en jeu normal."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "OK"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "OK"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
 	}
 ]

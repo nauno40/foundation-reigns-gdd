@@ -19,5 +19,7 @@
 	"B196": "role:watcher",
 	"B21": "role:tutor",
 	"B116": "role:matchmaker",
-	"B203": "role:terminus_mayor"
+	"B203": "role:terminus_mayor",
+	"B168": "onum_barr",
+	"B238": "lewin_barr"
 }

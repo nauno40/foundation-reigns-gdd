@@ -182,7 +182,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_dad"
+					"target": "_affaire_barr_patriarche"
 				},
 				{
 					"variable": "politics",
@@ -226,7 +226,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_1st_task"
+					"target": "_affaire_barr_tache_1"
 				}
 			],
 			"question": "",
@@ -270,7 +270,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_1st_task"
+					"target": "_affaire_barr_tache_1"
 				}
 			],
 			"question": "",
@@ -377,7 +377,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_1st_task"
+					"target": "_affaire_barr_tache_1"
 				}
 			],
 			"question": "",
@@ -411,7 +411,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_liu_dai_money_back"
+					"target": "_affaire_barr_remboursement"
 				}
 			],
 			"question": "",
@@ -656,7 +656,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_2nd_task"
+					"target": "_affaire_barr_tache_2"
 				}
 			],
 			"question": "",
@@ -697,7 +697,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_good_plan"
+					"target": "_affaire_barr_bon_plan"
 				}
 			],
 			"question": "",
@@ -867,7 +867,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_fair_cut"
+					"target": "_affaire_barr_partage"
 				}
 			],
 			"question": "",
@@ -894,14 +894,14 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_fail"
+					"target": "_affaire_barr_echec"
 				}
 			],
 			"noOutcome": [
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_fail"
+					"target": "_affaire_barr_echec"
 				},
 				{
 					"variable": "politics",
@@ -938,7 +938,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_fair_share"
+					"target": "_affaire_barr_accord"
 				}
 			],
 			"noOutcome": [
@@ -1006,7 +1006,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_fail"
+					"target": "_affaire_barr_echec"
 				},
 				{
 					"variable": "politics",
@@ -1018,7 +1018,7 @@
 				{
 					"variable": "link",
 					"operation": "set",
-					"target": "_family_affair_fail"
+					"target": "_affaire_barr_echec"
 				},
 				{
 					"variable": "politics",

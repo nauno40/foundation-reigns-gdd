@@ -65,5 +65,18 @@
 		"fixed": true,
 		"role": "Favorite de Kalgan",
 		"key": true
+	},
+	"onum_barr": {
+		"name": "Onum Barr",
+		"deck": "siwenna_affair",
+		"fixed": true,
+		"role": "Patricien de Siwenna",
+		"key": true
+	},
+	"lewin_barr": {
+		"name": "Lewin Barr",
+		"deck": "siwenna_affair",
+		"fixed": true,
+		"role": "Cadet de la famille Barr"
 	}
 }

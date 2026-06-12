@@ -53,6 +53,14 @@ TRAVEL_MAP = {
 
 # Aliases systémiques du jeu de base → aliases Fondation
 ALIAS_MAP = {
+    "_family_affair_dad": "_affaire_barr_patriarche",
+    "_family_affair_1st_task": "_affaire_barr_tache_1",
+    "_family_affair_2nd_task": "_affaire_barr_tache_2",
+    "_family_affair_good_plan": "_affaire_barr_bon_plan",
+    "_family_affair_fair_cut": "_affaire_barr_partage",
+    "_family_affair_fair_share": "_affaire_barr_accord",
+    "_family_affair_fail": "_affaire_barr_echec",
+    "_liu_dai_money_back": "_affaire_barr_remboursement",
     "_death_abducted_by_panda": "_death_emporte_par_robot",
     "_death_assassinated": "_death_assassine",
     "_death_battleground": "_death_champ_de_bataille",
