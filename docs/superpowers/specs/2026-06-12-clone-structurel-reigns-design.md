@@ -158,6 +158,22 @@ ne fonctionne pas à l'écriture — la **structure**, elle, ne bouge pas.
 5. **`weight: -1`** — supporté comme « jamais tiré au hasard » (équivalent hidden
    pour le tirage, mais visible aux conditions/links).
 
+## 3 bis. Ton & voix (directive d'écriture — 12/06/2026)
+
+Conserver le ton narratif de Reigns, pas seulement ses structures :
+
+- **Pas de narrateur unique.** La majorité des cartes sont la *parole directe* de
+  l'interlocuteur (première personne, registre propre au personnage : bureaucrate
+  tatillon, contrebandier gouailleur, prêtre pompeux, enfant, droïde de protocole
+  vétuste…). Le narrateur omniscient existe mais reste minoritaire.
+- **Humour assumé** dans les decks d'ambiance, de voyage et de personnages
+  secondaires (l'équivalent des pandas et coqs de bagarre du jeu de base) — absurde
+  léger, personnages hauts en couleur, situations cocasses, sans casser l'univers.
+- **Gravité préservée** sur la colonne vertébrale (`seldon_plan`, crises, Crypte) :
+  l'humour y est rare et sec, façon Hardin.
+- Le « vous » reste le Speaker sous couverture ; l'ironie dramatique (le joueur en
+  sait plus que son interlocuteur) est un ressort comique récurrent.
+
 ## 4. Pipeline de production
 
 1. `tools/extract_skeletons.py` — pour chaque deck original : graphe anonyme →
