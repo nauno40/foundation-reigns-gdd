@@ -173,6 +173,10 @@ Conserver le ton narratif de Reigns, pas seulement ses structures :
   l'humour y est rare et sec, façon Hardin.
 - Le « vous » reste le Speaker sous couverture ; l'ironie dramatique (le joueur en
   sait plus que son interlocuteur) est un ressort comique récurrent.
+- **Taux de réactions calibré par deck source** (constat 12/06/2026) : la moyenne
+  globale de 16 % cache un gradient — arcs narratifs 27–58 %, decks systémiques
+  0–6 % (`movement` 1 %, `deaths` 0 %). Au remplissage, suivre le taux du deck
+  original, pas la moyenne.
 
 ## 4. Pipeline de production
 

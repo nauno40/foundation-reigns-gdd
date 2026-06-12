@@ -8756,7 +8756,7 @@
 				"FR": "Embarquer"
 			},
 			"reaction": {
-				"FR": "Trois jours de saut. Le chauffage est en option, la compagnie des chèvres aussi."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -8807,7 +8807,7 @@
 				"FR": "Embarquer"
 			},
 			"reaction": {
-				"FR": "Le saut vous retourne l'estomac. Le tarif aussi."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -8858,7 +8858,7 @@
 				"FR": "Prendre la couchette"
 			},
 			"reaction": {
-				"FR": "Vous héritez de celle qui fuit, évidemment."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -8909,7 +8909,7 @@
 				"FR": "Embarquer"
 			},
 			"reaction": {
-				"FR": "Vous enterrez votre rasoir au fond du sac, sous les chaussettes."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9011,7 +9011,7 @@
 				"FR": "Embarquer"
 			},
 			"reaction": {
-				"FR": "Le poisson séché, on s'y fait. Au bout d'un an."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9164,7 +9164,7 @@
 				"FR": "Embarquer"
 			},
 			"reaction": {
-				"FR": "Vous aidez à charger les cierges. Il y en a quarante mille."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9215,7 +9215,7 @@
 				"FR": "Rentrer"
 			},
 			"reaction": {
-				"FR": "L'odeur du papier et de l'océan. Presque chez vous. Presque."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9266,7 +9266,7 @@
 				"FR": "Profiter du sénateur"
 			},
 			"reaction": {
-				"FR": "Le sénateur passe le voyage caché dans une caisse. Vous, dans un fauteuil."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9411,7 +9411,7 @@
 				"FR": "Embarquer"
 			},
 			"reaction": {
-				"FR": "Le capitaine sifflote. C'est mauvais signe ou bon signe, vous n'avez jamais su."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9478,7 +9478,7 @@
 				"FR": "Disparaître"
 			},
 			"reaction": {
-				"FR": "Vous prenez le premier cargo venu sans regarder la destination."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9600,7 +9600,7 @@
 				"FR": "Joindre la tournée"
 			},
 			"reaction": {
-				"FR": "Quatorze banquets en douze jours. Votre foie déposera plainte."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9645,7 +9645,7 @@
 				"FR": "Prendre le permis"
 			},
 			"reaction": {
-				"FR": "Le tampon est de travers. Personne ne le remarquera jamais."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9653,7 +9653,7 @@
 				"FR": "Le faire encadrer"
 			},
 			"reaction": {
-				"FR": "Le capitaine rit si fort qu'il en réveille le chat du bord."
+				"FR": ""
 			}
 		},
 		"yesOutcome": [
@@ -9705,7 +9705,7 @@
 				"FR": "Foncer au dock 7"
 			},
 			"reaction": {
-				"FR": "L'intercepteur décolle avant que la passerelle soit remontée."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9835,7 +9835,7 @@
 				"FR": "Flairer le piège"
 			},
 			"reaction": {
-				"FR": "Vous flairez le piège. Le piège porte du parfum hors de prix."
+				"FR": ""
 			}
 		},
 		"yesOutcome": [
@@ -9871,7 +9871,7 @@
 				"FR": "Accepter l'invitation"
 			},
 			"reaction": {
-				"FR": "Le champagne est servi avant même le décollage."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -9940,7 +9940,7 @@
 				"FR": "L'accompagner"
 			},
 			"reaction": {
-				"FR": "Il a déjà acheté trois fioles « en avance ». Pour analyse, dit-il."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
@@ -10001,7 +10001,7 @@
 				"FR": "Monter l'affaire"
 			},
 			"reaction": {
-				"FR": "Sa « caisse de vieux papiers » sent la cale humide et le faux grossier."
+				"FR": ""
 			}
 		},
 		"rightAnswer": {
