@@ -59,6 +59,20 @@ func _ready() -> void:
 	_travel_btn.add_theme_font_override("font", FONT_MONO)
 	_travel_btn.add_theme_font_size_override("font_size", 10)
 	_travel_btn.pressed.connect(_on_travel_pressed)
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color(0.31, 0.839, 0.91, 0.08)
+	sb.set_border_width_all(1)
+	sb.border_color = ThemeColors.ACCENT
+	sb.set_corner_radius_all(8)
+	sb.content_margin_left = 10.0
+	sb.content_margin_right = 10.0
+	sb.content_margin_top = 7.0
+	sb.content_margin_bottom = 7.0
+	_travel_btn.add_theme_stylebox_override("normal", sb)
+	var sb_hover := sb.duplicate()
+	sb_hover.bg_color = Color(0.31, 0.839, 0.91, 0.16)
+	_travel_btn.add_theme_stylebox_override("hover", sb_hover)
+	_travel_btn.add_theme_color_override("font_color", ThemeColors.ACCENT)
 	%PopupState.get_parent().add_child(_travel_btn)
 
 func _on_close() -> void:
@@ -109,8 +123,8 @@ func update(ctx: Context) -> void:
 
 func _on_travel_pressed() -> void:
 	_popup.hide()
-	hide()
 	jump_requested.emit(_popup_planet)
+	hide()
 
 func _style_planet(btn: Button, state: int) -> void:
 	var color := COLOR_NEUTRAL
