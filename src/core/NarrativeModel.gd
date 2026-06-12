@@ -45,6 +45,14 @@ func _resolve_alias(alias: String) -> Dictionary:
 			pass  # rien : retour au tirage aléatoire
 		"jump":
 			_ctx.set_var("location", str(entry.get("planet", "terminus")), true)
+		"jump_random":
+			var here: String = str(_ctx.get_var("location", "terminus"))
+			var others: Array = []
+			for planet in _data.planets:
+				if str(planet.get("id", "")) != here:
+					others.append(str(planet["id"]))
+			if not others.is_empty():
+				_ctx.set_var("location", others[randi() % others.size()], true)
 		_:
 			push_warning("NarrativeModel: action d'alias inconnue '%s'" % str(entry.get("action")))
 	return {}

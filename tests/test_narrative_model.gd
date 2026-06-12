@@ -193,3 +193,11 @@ func test_location_defaults_to_terminus_for_planet_decks():
 	})
 	var ids = model._get_eligible_cards().map(func(c): return int(c.get("id", 0)))
 	assert_has(ids, 99905, "sans location posée, on est sur terminus")
+
+func test_link_alias_jump_random_changes_location():
+	ctx.set_var("location", "terminus", true)
+	ctx.set_var("link", "_jump_somewhere")
+	var card = model.draw_card()
+	var loc = str(ctx.get_var("location", ""))
+	assert_ne(loc, "terminus", "destination aléatoire différente de la planète courante")
+	assert_false(card.is_empty())
