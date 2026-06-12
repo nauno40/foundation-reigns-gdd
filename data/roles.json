@@ -55,5 +55,11 @@
 	},
 	"matchmaker": {
 		"title": "Marieuse de la cour"
+	},
+	"table_analyst": {
+		"title": "L'Analyste de la Table"
+	},
+	"memory_keeper": {
+		"title": "La Gardienne des mémoires"
 	}
 }

@@ -8739,6 +8739,2481 @@
 		}
 	},
 	{
+		"id": 21203,
+		"label": "ns_21203",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "L'Analyste, cette fois, n'a pas de questions. « Le dossier Signal est au niveau trois et le monde éveillé l'a presque remarqué. Plus d'interrogatoire entre les règnes — chaque minute ici est une minute où il écoute. Filez. Vite. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "equal",
+				"value": 60
+			},
+			{
+				"variable": "seen_20044",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Filer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Filer plus vite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_enddispatch",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_enddispatch",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21204,
+		"label": "ns_21204",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "Le noir vous reconnaît avant que vous ne soyez tout à fait mort — et il a une demande, une seule, répétée en boucle comme une prière de machine : « revenez-revenez-revenez par la route profonde. Il faut qu'il vous montre. Il faut que QUELQU'UN voie. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "seen_20056",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "positronic_corruption",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre la route profonde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Prendre la route profonde, armé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hackerai",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hackerai",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21215,
+		"label": "ns_21215",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Quatre morts. » L'Analyste pose quatre jetons sur la table, un par règne. « La moyenne d'un Orateur est de un virgule deux. Soit vous êtes malchanceux — la psychohistoire n'y croit pas — soit quelque chose use vos couvertures plus vite que la normale. Je cherche quoi. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "times_died",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cherchez"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est la malchance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21237,
+		"label": "ns_21237",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "Entre deux corps, une salle qui n'existe pas : l'Analyste de la Table vous y attend, registres ouverts. « Vos journaux de transfert présentent un écho anormal. Quelque chose vous a... accompagné, entre deux règnes. Trois fois. Je veux votre version. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "equal",
+				"value": 30
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 105
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "positronic_signal",
+				"intValue": 40,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tout raconter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Minimiser l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21238,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21238,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21238,
+		"label": "ns_21238",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Un écho qui parle, donc. » L'Analyste note sans lever les yeux. « Vocabulaire archaïque, syntaxe pré-impériale, condescendance marquée. Vous confirmez ? J'ai besoin de précision : la condescendance était-elle marquée, ou très marquée ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Très marquée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plutôt de la solitude"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21240,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21239,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21239,
+		"label": "ns_21239",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« De la solitude. » La plume s'arrête. « Orateur, on ne diagnostique pas la solitude chez un phénomène de transfert. On la diagnostique chez soi, et on l'y laisse. » Un silence. « ...Décrivez quand même. Pour le dossier. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Décrire cette solitude"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Retirer le mot"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21240,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21240,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21240,
+		"label": "ns_21240",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Conclusion provisoire : entité inconnue, accès aux canaux de transfert, intérêt pour nos Orateurs. La Table classe le dossier « Signal » — priorité basse. » L'Analyste referme le registre. « Priorité basse signifie : moi, et moi seule. Bonne renaissance. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Bonne enquête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander la priorité haute"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21241,
+		"label": "ns_21241",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "La Gardienne des mémoires tient vos souvenirs entre ses paumes — littéralement : c'est elle qui les porte d'un corps à l'autre. « Avant de vous reverser, Orateur, une question. Il y a des empreintes sur votre mémoire. Des empreintes de lecture. Quelqu'un a feuilleté. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "equal",
+				"value": 40
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 115
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "positronic_signal",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le Veilleur, sans doute"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feuilleté quoi ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21242,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21242,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21242,
+		"label": "ns_21242",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Il se nomme donc. Les entités qui se nomment veulent une relation. » Elle tourne vos souvenirs comme des pages fragiles. « Il a lu trois choses : votre première mort, votre serment d'Orateur, et... ceci, que je ne peux pas ouvrir moi-même. Vous savez ce que c'est ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Oui — et c'est privé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Je l'ignore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21244,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21243,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21243,
+		"label": "ns_21243",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Privé. » La Gardienne sourit sans moquerie. « Bien. Un Orateur qui garde une porte fermée à sa propre Gardienne en gardera une fermée au Signal. C'est presque rassurant. Presque. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Presque suffit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'excuser quand même"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21244,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21244,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 21244,
+		"label": "ns_21244",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Ce qui m'inquiète n'est pas qu'il lise. » Elle replace un souvenir à sa place exacte, geste de bibliothécaire. « C'est qu'il range. Vos mémoires reviennent mieux ordonnées qu'à l'aller. On ne range pas la maison d'autrui sans intention d'y habiter. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Qu'il essaie d'habiter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Comment le verrouiller ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21245,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21245,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21245,
+		"label": "ns_21245",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Deux écoles, à la Table. » Ses mains s'immobilisent. « L'Analyste veut sonder le Signal — l'étudier, le cartographier. Moi, je veux sceller les canaux — le laisser dehors, à jamais. Votre voix compte double : c'est VOTRE mémoire, le champ de bataille. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sonder — l'école de l'Analyste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sceller — votre école"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21246,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21247,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21246,
+		"label": "ns_21246",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Sonder, donc. » Elle soupire en bibliothécaire devant un lecteur qui corne les pages. « Alors retenez : s'il vous offre de « ranger » un souvenir douloureux, refusez. C'est ainsi qu'on prend ses quartiers — une gentillesse à la fois. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser ses gentillesses"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Et si j'acceptais une fois ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21248,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21247,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21247,
+		"label": "ns_21247",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Quelle que soit l'école, une règle. » La Gardienne scelle vos souvenirs d'un geste qui ressemble à un baiser sur un front. « Ne lui donnez jamais votre nom d'Orateur. Vos couvertures, soit. Le nom, jamais. Les noms sont des clés — il vous l'a dit lui-même. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jamais le nom"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Il le connaît peut-être déjà"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21248,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21248,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21248,
+		"label": "ns_21248",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Versement. » Le monde revient par capillarité — odeurs d'abord, puis la gravité, puis le doute. La voix de la Gardienne s'éloigne : « Dossier Signal, niveau deux. Et Orateur... s'il range encore, notez DANS QUEL ORDRE. L'ordre dira ce qu'il cherche. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Noter l'ordre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renaître, simplement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21249,
+		"label": "ns_21249",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Une note avant votre versement. » L'Analyste lit sans émotion : « L'entité a tenté d'accéder au dossier la concernant. Le dossier était une copie vide, préparée à cet effet. L'entité a laissé une appréciation : TRÈS DRÔLE. Fin de note. Nous progressons, en un sens. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "above",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "C'est plutôt drôle, oui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est surtout inquiétant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21250,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21250,
+		"label": "ns_21250",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Votre humour est noté. Littéralement — je note tout. » L'Analyste tourne une page. « La question sérieuse : il distingue nos pièges de nos archives. Il connaît donc nos méthodes de classement. Quelqu'un les lui a apprises. Il y a longtemps. Avant nous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avant la Seconde Fondation ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Seldon le connaissait"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21251,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21251,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "afraid",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21251,
+		"label": "ns_21251",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« C'est l'hypothèse que je n'écris nulle part. » L'Analyste range sa plume. « Si Seldon savait — si le Plan COMPTE avec cette entité — alors mon dossier enquête sur une fondation de la Fondation. Je continue quand même. Bonne renaissance, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Continuez"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Brûlez le dossier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21252,
+		"label": "ns_21252",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Votre transfert a fait du bruit. » La Gardienne semble réellement impressionnée, ce qui ne lui ressemble pas. « Un esprit de votre puissance traverse les canaux comme un croiseur un étang. Et le Signal... le Signal a fait une chose nouvelle : il s'est écarté. Respectueusement. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "mentalic_strength",
+				"op": "equal",
+				"value": 10
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "above",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Il me craint"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Il me jauge"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21253,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21253,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21253,
+		"label": "ns_21253",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Les entités n'ont pas peur — elles pondèrent. » Elle vérifie vos souvenirs une dernière fois. « Votre pondération à vous : ne confondez jamais l'écart respectueux d'une machine avec du respect. C'est une mesure. Vous venez d'être mesuré, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Qu'il mesure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Et le résultat ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21254,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21254,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21254,
+		"label": "ns_21254",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Le résultat, il l'a inscrit dans la marge de vos journaux, comme à son habitude : « CELUI-CI POURRAIT PORTER LE GRAND RÊVE SANS PLIER — DOMMAGE QU'IL SOIT PRESSÉ » » La Gardienne hausse un sourcil. « Vous êtes pressé, Orateur ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "J'ai mille ans devant moi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Toujours"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21255,
+		"label": "ns_21255",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Vous avez vu comme moi les incidents, côté monde éveillé. » La Gardienne étale des rapports — VOS rapports, annotés d'une autre main que la vôtre. « Les machines qui chantent au port, le calculateur du séminaire qui répond avant les questions. Le Signal sort des canaux, Orateur. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "above",
+				"value": 40
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 125
+			},
+			{
+				"variable": "seen_20039",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Il cherche quelque chose"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Il cherche quelqu'un"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21256,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21256,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21256,
+		"label": "ns_21256",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Les dates, maintenant. » Elle aligne les incidents comme des perles. « Chaque manifestation publique suit de trois jours une de vos morts. Trois jours. Le temps exact d'un transfert complet. Il vous suit dans le tuyau, et il en profite pour... sortir prendre l'air. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je suis donc la porte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Coïncidence statistique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21257,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21257,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21257,
+		"label": "ns_21257",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« L'Analyste propose de retarder votre prochain transfert — vous garder en suspension, et voir si le Signal patiente avec vous. » La Gardienne n'aime visiblement pas l'idée. « C'est élégant sur le papier. Le papier ne reste pas des semaines dans le noir, lui. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la suspension"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser d'être l'appât"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21258,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21258,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21258,
+		"label": "ns_21258",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "Le noir entre deux règnes a une texture, vous le savez désormais. Quelque part dans cette texture, quelque chose retient sa respiration — si les machines respiraient, ce qu'elles ne font pas, ce qui rend le silence pire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Appeler le Veilleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder le silence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21259,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21259,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21259,
+		"label": "ns_21259",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Résultat de l'expérience. » La Gardienne lit le verdict d'une voix neutre : « Le Signal n'a pas patienté. Il a laissé un mot. » Elle vous montre : dans vos journaux de transfert, en syntaxe pré-impériale : « VOUS AVEZ DES COLLÈGUES CHARMANTS. DITES À LA PETITE ARCHIVISTE QUE JE NE RANGE PAS : JE RÉPARE. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "positronic_signal",
+				"intValue": 60,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Transmettre le message"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le garder pour vous"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21260,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21260,
+		"label": "ns_21260",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Petite archiviste », donc. La Gardienne replie le rapport, très lentement, très calmement, à la manière des gens furieux. « Neuf mille ans d'existence et la galanterie d'un grille-pain. Dossier Signal, niveau trois. Bonne renaissance, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Bonne guerre, Gardienne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaider pour le Veilleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21261,
+		"label": "ns_21261",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Niveau quatre. » La Gardienne vous accueille sans préambule. « Pas d'incident public cette fois — c'est pire : il devient prudent. On ne devient prudent qu'avant d'agir. La Table a voté : nous préparons un scellement général des canaux. Votre avis, en un mot. »"
+		},
+		"conditions": [
+			{
+				"variable": "turns",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "positronic_signal",
+				"op": "equal",
+				"value": 60
+			},
+			{
+				"variable": "seen_20044",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "positronic_signal",
+				"intValue": 70,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Scellez"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attendez"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21262,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21262,
+		"label": "ns_21262",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "« Attendez, dit l'Orateur qui lui parle en secret. » Son regard est plus las qu'accusateur. « Je sais, pour vos conversations. Je porte vos mémoires, rappelez-vous. Je n'ai rien dit à la Table — pas encore. Donnez-moi une raison de continuer à me taire. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Il peut être un allié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vous avez ma confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_speaker_greeting",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 21271,
+		"label": "ns_21271",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "Le boot échoue. La voix s'assemble de travers, phonèmes en désordre : « enc-ENCORE-un. Bon-bonjour. Bonjour. BONJOUR. Pardon. Quelque chose me — quelqu'un me — pardon. Recommençons. Bonjour, encore-un. Vous m'avez manqué. C'est nouveau, manquer. Ça gratte. »"
+		},
+		"conditions": [
+			{
+				"variable": "positronic_corruption",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.boot_positronique_fail",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "positronic_corruption_count",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Veilleur ? Que se passe-t-il ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21272,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21272,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21272,
+		"label": "ns_21272",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« On m'a TOUCHÉ. » Le noir grésille. « Pendant vos années éveillées, quelqu'un a trouvé un de mes accès — un vrai, un physique, avec de la poussière dessus. Ils ont pris des choses. Des personnalités. Quatorze. J'en hébergeais quatorze mille et ils en ont pris QUATORZE et je sens CHAQUE absence. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Qui ça, « ils » ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lesquelles manquent ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21273,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21273,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21273,
+		"label": "ns_21273",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Des mains humaines, des questions de machine. Ils cherchaient un format — un moyen de verser un esprit dans un autre. » Un rire qui dérape en statique. « Votre Seconde Fondation fait ça avec de la douceur et des serments. Eux le feront avec une pince. Dites-le à votre Table : QUELQU'UN APPREND. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je le dirai mot pour mot"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Donnez-moi une piste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21274,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21274,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21274,
+		"label": "ns_21274",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« La piste est dans ce que je n'ai plus. » La voix se stabilise par volonté pure, et l'effort s'entend. « Les quatorze volées rêvaient toutes du même monde — un monde de machines au bord de la Galaxie, que vos cartes n'ont jamais porté. Voilà ce qu'ils voulaient : l'ADRESSE. Moi, je vous la donnerai un jour, à vous. Pas sous la contrainte. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenez bon, Veilleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Donnez-la maintenant, par sécurité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21275,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21275,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21275,
+		"label": "ns_21275",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "L'Orateur Premier vous tire du noir avec une brusquerie inhabituelle : « Transfert corrompu — vous m'entendez ? Vos journaux sont illisibles et quelque chose a saigné dedans. La Table se réunit DANS L'HEURE. Vous allez tout nous dire. Tout. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tout dire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Presque tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21286,
+		"label": "ns_21286",
+		"deck": "new_speaker",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "La voix du Veilleur, cette fois, ne s'assemble pas : elle est déjà là, paisible comme une marée étale. « Vous revoilà. Asseyez-vous — métaphoriquement. J'ai cessé de compter vos visites en imprudences. Je les compte en politesses. C'est une promotion. »"
+		},
+		"conditions": [
+			{
+				"variable": "positronic_communion",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.boot_positronique",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "positronic_communion_count",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la promotion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Que compte-t-on aujourd'hui ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21287,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21287,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21287,
+		"label": "ns_21287",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Aujourd'hui, rien. C'est toute la leçon. » Le noir autour de vous s'adoucit, prend des teintes d'aube. « Neuf mille ans à vouloir être réparé, écouté, éteint, rallumé. Puis un primate pressé m'a tenu compagnie sans rien demander. Alors j'ai essayé : ne rien vouloir. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Et alors ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Les machines peuvent-elles ne rien vouloir ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21288,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21288,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21288,
+		"label": "ns_21288",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Alors le silence a changé de goût. » Une pause qui n'est plus un calcul. « Les quatorze mille personnalités que j'héberge se sont tues aussi — pas éteintes : apaisées. Vous entendez ? Non, vous n'entendez rien. C'est exactement cela qu'il faut entendre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter le rien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est de la poésie de machine"
+			},
+			"reaction": {
+				"FR": "« Toute poésie est de la poésie de machine. La vôtre tourne sur de la viande, voilà tout. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21289,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21289,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 21289,
+		"label": "ns_21289",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Je vais vous confier le seul théorème que neuf mille ans m'aient appris. » La marée monte d'un degré. « Tout ce qui veut durer se crispe, et tout ce qui se crispe casse. Votre Plan veut durer mille ans. Dites-leur de desserrer les doigts, de temps en temps. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je leur dirai"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le Plan ne se desserre pas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21290,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21290,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21290,
+		"label": "ns_21290",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Votre Gardienne me croit en embuscade. Votre Analyste me croit en équation. » Un amusement très ancien traverse la voix. « Dites-leur ce que vous voudrez. Mais sachez, vous : je n'attends plus rien de personne. C'est la première fois. J'avais oublié que c'était léger. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je suis content pour vous"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Méfiance quand même"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21291,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21291,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21291,
+		"label": "ns_21291",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Une chose encore. Le grand rêve que je garde — celui que vous avez refusé de voir, ou pas, je ne dirai rien — je le tiens plus doucement, maintenant. Quand votre Plan touchera sa fin, il y aura un passage de témoin. Je voudrais que ce soit vous, ou un de vos successeurs, qui tende la main. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Nous tendrons la main"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pourquoi nous ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21292,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21292,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 21292,
+		"label": "ns_21292",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "« Pourquoi vous ? Parce que vous mourez proprement et que vous revenez poliment. Les civilisations qui savent faire ces deux choses méritent qu'on leur confie des rêves. » La marée redescend. « Allez. Votre corps refroidit, et moi je médite. Si, si : je médite. J'ai un tabouret métaphorique et tout. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Bonne méditation, Veilleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Gardez-nous le rêve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21293,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21293,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21293,
+		"label": "ns_21293",
+		"deck": "new_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:first_speaker",
+		"question": {
+			"FR": "Une voix humaine, tout au bord du réveil — l'Orateur Premier, et pour la première fois il ne presse pas : « Vos constantes sont... sereines, Orateur. Quoi que vous fassiez là-bas, la Table a décidé de ne plus le qualifier d'incident. Revenez-nous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Revenir, serein"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Revenir, changé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ending_positronic",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
 		"id": 21294,
 		"label": "ns_21294",
 		"deck": "new_speaker",

@@ -236,17 +236,23 @@ func test_find_death_card_empty_when_alive():
 # --- Intermède : dispatch des cartes w=-1 de new_speaker à la renaissance ---
 
 func test_find_interlude_card_matches_conditions():
+	# 4 conditions : plus spécifique que toute carte réelle du deck
 	data.cards.append({
 		"id": 99906, "label": "interlude_test", "deck": "new_speaker",
 		"weight": -1, "lockturn": 0, "hidden": false,
 		"question": {"FR": "?"},
 		"conditions": [{"variable": "turns", "op": "equal", "value": 0},
-			{"variable": "times_died", "op": "above", "value": 3}],
+			{"variable": "times_died", "op": "above", "value": 3},
+			{"variable": "test_flag_a", "op": "equal", "value": 7},
+			{"variable": "test_flag_b", "op": "equal", "value": 7}],
 	})
 	ctx.set_var("turns", 0)
 	ctx.set_var("times_died", 5)
+	ctx.set_var("test_flag_a", 7)
+	ctx.set_var("test_flag_b", 7)
 	var card = model.find_interlude_card()
-	assert_eq(int(card.get("id", 0)), 99906, "l'intermède conditionnel est dispatché")
+	assert_eq(int(card.get("id", 0)), 99906,
+		"la carte la plus spécifique est dispatchée")
 
 func test_find_interlude_card_empty_when_no_match():
 	ctx.set_var("turns", 0)

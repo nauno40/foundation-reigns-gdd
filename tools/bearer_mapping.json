@@ -21,5 +21,7 @@
 	"B116": "role:matchmaker",
 	"B203": "role:terminus_mayor",
 	"B168": "onum_barr",
-	"B238": "lewin_barr"
+	"B238": "lewin_barr",
+	"B210": "role:table_analyst",
+	"B232": "role:memory_keeper"
 }
