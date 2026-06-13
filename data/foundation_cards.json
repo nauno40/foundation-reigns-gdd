@@ -35688,6 +35688,2173 @@
 		}
 	},
 	{
+		"id": 27600,
+		"label": "riose_campaign_27600",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "Une nouvelle glaçante parvient à la Fondation : le dernier grand général de l'Empire, Bel Riose, tourne ses yeux vers la périphérie. « Un soldat de génie au service d'un trône pourri, » résume le maître-espion. « La pire combinaison. Il vaut à lui seul dix flottes ordinaires. »"
+		},
+		"conditions": [
+			{
+				"variable": "riose_stage",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Évaluer la menace Riose"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Espérer qu'il regarde ailleurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27601,
+		"label": "riose_campaign_27601",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "An 200 : Bel Riose lance sa campagne contre la Fondation, depuis Siwenna. Le vieux Ducem Barr, jadis votre legs, sert désormais d'otage-conseiller au général. L'Histoire se referme en boucle : le fils du monde que vous aviez sauvé conseille l'homme qui veut vous détruire."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "planet_siwenna_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mesurer l'ironie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Y voir une ouverture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "emperor_suspicion",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "riose_first_front",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27602,
+		"label": "riose_campaign_27602",
+		"deck": "riose_campaign",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion propose d'esquiver le premier choc — replier les flottes, laisser Riose s'étirer dans le vide. « On ne bat pas Bel Riose, » dit-il. « On le laisse VAINCRE jusqu'à ce que son propre Empereur le craigne. C'est ça, le couloir de Seldon pour cette crise : l'inaction calculée. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_1029",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 202
+			},
+			{
+				"variable": "riose_first_front",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Esquiver le premier choc"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter Riose de front"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_neotrantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_guandu_battle_skip",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27603,
+		"label": "riose_campaign_27603",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "Vous ne pouvez éviter la première bataille : Riose vous coince à Sayshell. Son génie tactique est réel — vos flottes plient. « Cet homme ne fait pas d'erreurs, » constate l'amirale, livide. « On ne peut pas le battre par les armes. Il faut que l'EMPIRE le batte pour nous. »"
+		},
+		"conditions": [
+			{
+				"variable": "riose_first_front",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Résister pour gagner du temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Battre en retraite ordonnée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.trap_guandu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.trap_guandu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27604,
+		"label": "riose_campaign_27604",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "La première bataille fait rage. Riose perce vos lignes avec une aisance terrifiante. Chaque manœuvre que vous tentez, il l'a anticipée. « Un général comme on en voit un par siècle, » souffle l'amirale. Le contenir assez longtemps pour que la politique impériale joue : voilà la seule stratégie."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.warofjust_retreating_troops",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir la ligne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sacrifier l'arrière-garde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.first_guandu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_guandu_battle_end",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27605,
+		"label": "riose_campaign_27605",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La première bataille se solde par un repli coûteux. Riose avance, mais vous existez encore. « Chaque jour où nous survivons rapproche sa chute, » rappelle le maître-espion. « Car plus il gagne, plus Trantor le craint. Un général trop victorieux est un général condamné. Patience. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir bon dans la durée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter de la stratégie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27606,
+		"label": "riose_campaign_27606",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un officier loyaliste, jadis frère d'armes égaré, vous revient — perdu, cherchant les siens dans le chaos de la guerre. Sa fidélité vaut une flotte. Mais le retrouver l'expose : les agents de Riose traquent les ralliements à la Fondation. Protéger un homme bon en pleine guerre : risque et devoir."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.warofjust_blade_air",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "riose_first_front",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le rallier malgré le risque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser caché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27607,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27607,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27607,
+		"label": "riose_campaign_27607",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'officier loyaliste hésite entre vous rejoindre et continuer sa quête personnelle. « Je cherche mon frère perdu depuis la chute de Terminus, » dit-il. Le devoir contre le cœur, en pleine guerre. Vous reconnaissez son déchirement — un Orateur le connaît, lui qui abandonne une vie à chaque mort."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Comprendre sa quête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exiger sa loyauté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27608,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_guan_yu_look_for_brother",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 27608,
+		"label": "riose_campaign_27608",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'officier loyaliste tombe au combat, fidèle jusqu'au bout, une arme de collection à la main — un blaster ancestral qui a fonctionné une fois de trop. Sa mort vous serre le cœur dans une guerre déjà trop pleine de morts. Les hommes bons sont la première monnaie des grandes crises."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer sa mémoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maudire cette guerre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_blaster_ancestral",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_blaster_ancestral",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27609,
+		"label": "riose_campaign_27609",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'officier, lui, choisit sa quête : il part chercher son frère vers Kalgan, vous laissant à la guerre. « Pardonnez-moi. Certaines fidélités passent avant les causes. » Vous le laissez aller — un Orateur sait qu'on ne retient pas un cœur. La cause perd un bras ; un homme garde son âme."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser partir libre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter de le retenir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "quest_find_contact",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_kalgan",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_guan_yu_angry_guandu",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27610,
+		"label": "riose_campaign_27610",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "La première grande bataille tourne mal : Riose vous écrase sur un front-clé. Sayshell vacille. Mais dans la défaite, une graine : Riose, trop victorieux, fait déjà jaser la cour de Trantor. « L'Empereur n'aime pas les héros, » sourit amèrement le maître-espion. « Notre défaite est sa condamnation. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.warofjust_horse_disperse_crowd",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "riose_first_front",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Endurer la défaite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la suite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "emperor_suspicion",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_guandu_battle_lost",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "emperor_suspicion",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27611,
+		"label": "riose_campaign_27611",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Vous évitez la première grande bataille par la ruse, préservant vos forces. Riose s'enfonce dans le vide, ses lignes s'étirent, sa gloire enfle — et avec elle, la peur de l'Empereur. « Parfait, » dit le maître-espion. « Laissons-le gagner du terrain. Chaque parsec conquis est un clou dans son cercueil. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Poursuivre l'esquive"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Frapper une cible faible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 27612,
+		"label": "riose_campaign_27612",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "An 200, mois 8 : Riose lance sa seconde offensive, plus puissante encore. La Fondation est aux abois. Mais à Trantor, un courtisan jaloux murmure déjà à l'oreille de l'Empereur : « Un général qui gagne tant de mondes... à qui les gardera-t-il, Sire ? » Le poison agit. Lentement."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 8
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir face à la seconde offensive"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Alimenter les soupçons de la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "emperor_suspicion",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "riose_second_front",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "sayshell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27613,
+		"label": "riose_campaign_27613",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "La seconde campagne de Riose vous étrille. Ducem Barr, son conseiller-otage, vous fait parvenir un message secret : « Le général est noble — trop noble pour voir le couteau dans le dos de son maître. Tenez encore. La cour fera le travail que vos flottes ne peuvent faire. »"
+		},
+		"conditions": [
+			{
+				"variable": "riose_second_front",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir sur le conseil de Barr"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter du vieux Barr"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27614,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27614,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27614,
+		"label": "riose_campaign_27614",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un émissaire de Riose vous propose, étrangement, une trêve : « Le général respecte un adversaire courageux. Il offre une paix honorable. » Piège, ou vraie noblesse d'un grand soldat ? Accepter calmerait la guerre — mais ralentirait la chute que vous attendez de la cour impériale."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Décliner pour gagner du temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sonder la sincérité de Riose"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27615,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27615,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27615,
+		"label": "riose_campaign_27615",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "Riose remporte une victoire éclatante — et c'est exactement ce qui le perd. À Trantor, l'Empereur paranoïaque y voit la preuve d'une ambition. « Un général invaincu est un futur usurpateur, » tranche la cour. L'ordre de rappel se prépare. La logique pourrie de l'Empire travaille pour vous."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Attendre le rappel impérial"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Précipiter les choses"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 27616,
+		"label": "riose_campaign_27616",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La cour de Trantor s'agite : faut-il rappeler Riose au faîte de sa gloire ? Vos agents y soufflent le doute avec art. « Un mot bien placé vaut une flotte, » murmure le maître-espion. Détruire le plus grand général de l'Empire non par les armes, mais par la peur de son propre maître. Crise de Seldon dans toute sa cruauté."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 10
+			},
+			{
+				"variable": "riose_second_front",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Faire jouer la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser l'Empire se trahir seul"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27617,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27617,
+		"label": "riose_campaign_27617",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "Riose, sentant le vent tourner à Trantor, hâte sa campagne pour présenter une victoire totale avant qu'on ne le rappelle. La guerre s'intensifie, désespérée des deux côtés. « Il court contre sa propre cour autant que contre nous, » réalisez-vous. Le drame d'un grand homme servant un trône indigne."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir face à l'urgence de Riose"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaindre le général"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27618,
+		"label": "riose_campaign_27618",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un transfuge de l'état-major de Riose vous offre les plans du général — désespéré de servir un Empire qui s'apprête à trahir son meilleur soldat. « Même ses hommes voient venir le couteau, » dit-il. Les renseignements valent de l'or. Mais accepter, c'est précipiter une chute déjà inéluctable. Cruauté nécessaire ?"
+		},
+		"conditions": [
+			{
+				"variable": "riose_second_front",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "seen_1070",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter les plans"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de salir la chute"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27619,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27619,
+		"label": "riose_campaign_27619",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le transfuge vous révèle le génie ET la noblesse de Riose : un homme qui se bat loyalement pour un maître qui le hait. « Il MÉRITAIT mieux que cet Empire, » avoue le transfuge. Vous combattez peut-être le dernier homme bon de l'ordre ancien. La crise de Seldon a le goût amer des tragédies justes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Respecter l'adversaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester concentré sur la survie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "anacreon_strike",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 224,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 27620,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27620,
+		"label": "riose_campaign_27620",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous montez une opération risquée vers Anacréon pour exploiter une faille dans le dispositif de Riose. Le coup pourrait ralentir le général — ou révéler vos agents. « Une frappe de précision pendant qu'il regarde Trantor par-dessus son épaule, » résume le maître-espion. Le moment de la double pression."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer l'opération"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop risqué maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_xudu",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27621,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27621,
+		"label": "riose_campaign_27621",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'opération vers Anacréon vacille — un agent capturé, un secret menacé. Il faut décider vite : pousser l'attaque malgré le risque, ou sacrifier l'agent pour protéger le réseau. La guerre contre Riose se gagne dans l'ombre autant que dans l'espace. Chaque choix coûte une vie ou un secret."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pousser malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protéger le réseau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_xudu",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": -224,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "anacreon_strike",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27622,
+		"label": "riose_campaign_27622",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'affaire bascule sur Anacréon. Au cœur du dispositif de Riose, vous touchez à un point névralgique. Un succès ici, combiné aux intrigues de Trantor, pourrait sceller le sort de la campagne. « Esprit et ombre contre génie militaire, » songez-vous. « Voilà nos seules armes. Faisons qu'elles suffisent. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Frapper le point névralgique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Coordonner avec la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27623,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27623,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27623,
+		"label": "riose_campaign_27623",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un officier loyal à Riose, capturé, refuse de trahir son général malgré tout : « Vous le détruirez par la politique, pas par les armes. Sachez-le : vous abattez un lion avec des rumeurs de courtisans. Honteux pour vous, déshonorant pour l'Empire. » Sa fidélité vous frappe. Il n'a pas tort."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encaisser le reproche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Justifier la nécessité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27624,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27624,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27624,
+		"label": "riose_campaign_27624",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La confrontation décisive s'engage sur Anacréon — bataille mêlée d'intrigue. Pendant que vos flottes contiennent Riose, vos agents portent à Trantor la preuve de sa « trahison » fabriquée. Le génie militaire et la machination de cour se heurtent. L'issue scellera la Crise de Bel Riose."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conclure par la ruse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Conclure par les armes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.xun_yu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.xun_yu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 27625,
+		"label": "riose_campaign_27625",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le coup porte : Anacréon rallié, le dispositif de Riose ébranlé, et surtout — un courrier impérial scellé qui change tout. L'Empereur a tranché. Bel Riose est rappelé à Trantor « pour consultation ». Le général le plus brillant de l'Empire est convoqué vers sa fin. Vous avez gagné. Sans honneur, mais vous avez gagné."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_anacreon_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "anacreon_strike",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recevoir la nouvelle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Songer au destin de Riose"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27626,
+		"label": "riose_campaign_27626",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un de vos agents, capturé par les hommes de Riose, est interrogé sans relâche. Il tient bon, protégeant le réseau jusqu'à la mort. Son sacrifice scelle votre victoire dans l'ombre. La crise de Seldon se traverse, comme toujours, sur le dos d'hommes dont l'Histoire ne retiendra pas le nom. Comme vous."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "anacreon_strike",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "agent_lost",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer l'agent tombé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Porter ce poids en silence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_interrogatoire",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_interrogatoire",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27627,
+		"label": "riose_campaign_27627",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bel_riose",
+		"question": {
+			"FR": "Une trahison rôde dans vos propres rangs au pire moment — un seigneur tenté de livrer la Fondation à Riose pour sauver son monde. Le démasquer maintenant pourrait briser le fragile front. « La peur fait plus de traîtres que l'or, » soupire le maître-espion. La crise éprouve les loyautés jusqu'à l'os."
+		},
+		"conditions": [
+			{
+				"variable": "riose_second_front",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "seen_1061",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_1072",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Démasquer le traître"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le retourner discrètement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27628,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27628,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 27628,
+		"label": "riose_campaign_27628",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La trahison interne manque de tout faire basculer — mais vous la déjouez à temps, esprit contre esprit. Le traître, lu à jour, s'effondre : « Comment avez-vous su ? » Vous ne répondez pas. Un Orateur ne révèle jamais comment il lit les cœurs. Le front tient. La crise approche de son terme."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.secondact_horse_stampede",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sécuriser le front"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Punir ou pardonner le traître"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.traitor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.traitor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 27629,
+		"label": "riose_campaign_27629",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "Au paroxysme, un duel mental vous oppose à un agent psychique de l'Empire — rare, dangereux. La lame de l'esprit cherche la vôtre. Mais vous avez tenu la digue contre le Mulet ; un agent impérial, si doué soit-il, n'est pas le Mulet. Vous l'emportez, épuisé. La dernière menace tombe."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "riose_second_front",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vaincre le duel mental"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Épargner l'agent vaincu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27630,
+		"label": "riose_campaign_27630",
+		"deck": "riose_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "La campagne de Riose s'effondre — non sous vos coups, mais sous le rappel impérial. Le général, loyal jusqu'à l'absurde, obéit et rentre vers Trantor, vers sa disgrâce et sa mort. « L'Empire a tué son meilleur fils par peur, » murmure Barr. « Nous n'avons fait qu'attendre. » Crise 2, traversée. À quel prix d'âme."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "riose_second_front",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mesurer la victoire amère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pleurer un noble adversaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27631,
+		"label": "riose_campaign_27631",
+		"deck": "riose_campaign",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Épilogue de la crise Bel Riose : le général exécuté par un Empereur ingrat, la Fondation sauvée par la pourriture même de son ennemi. Le maître-espion résume la leçon de Seldon : « Un empire en déclin se détruit lui-même. Notre force fut de le laisser faire. La plus dure des victoires : celle qu'on remporte en ne frappant pas. »"
+		},
+		"conditions": [
+			{
+				"variable": "riose_second_front",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Graver la leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer Bel Riose en secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "emperor_suspicion",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "riose_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
 		"id": 28400,
 		"label": "barr_28400",
 		"deck": "siwenna_affair",
@@ -37492,6 +39659,1778 @@
 			"default": "flattered",
 			"yes": "flattered",
 			"no": "neutral"
+		}
+	},
+	{
+		"id": 28800,
+		"label": "speaker_hunted_28800",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un message codé de la Table vous parvient, urgent : un Orateur a été démasqué — son visage circule, sa tête est mise à prix. « Il faut l'exfiltrer avant que l'Empire ne le capture et ne le fasse PARLER, » insiste le Contact. « Un Orateur sous la torture, c'est la Seconde Fondation à nu. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la mission d'exfiltration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Juger l'Orateur perdu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28801,
+		"label": "speaker_hunted_28801",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'Orateur traqué se terre, paranoïaque à juste titre : tous les chasseurs de primes de la périphérie cherchent son visage. « Il ne fait plus confiance à personne, » prévient le Contact. « Y compris à vous. Approchez-le mal, et il fuit — droit dans les bras de ses traqueurs. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'approcher avec mille précautions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter un contact direct"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28802,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28802,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28802,
+		"label": "speaker_hunted_28802",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Vous établissez un premier contact fragile avec l'Orateur en fuite. Il vous teste par des codes de la Table — vérifiant que vous êtes bien des siens et non un appât. « Un mot de travers et il disparaît, » songez-vous. La confiance entre traqués est la denrée la plus rare et la plus vitale."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Donner les bons codes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Improviser la reconnaissance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28803,
+		"label": "speaker_hunted_28803",
+		"deck": "speaker_hunted",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un ancien instructeur — celui qui forma jadis cet Orateur — vous aide à le retrouver : « Je connais ses cachettes, ses réflexes. Je l'ai entraîné à disparaître ; je peux le débusquer. » L'ironie d'utiliser le maître pour trouver l'élève traqué. La Table protège les siens par tous les moyens."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre l'instructeur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher seul"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28804,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "instructor_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28804,
+		"label": "speaker_hunted_28804",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "Un général impérial dirige personnellement la traque de l'Orateur — preuve que Trantor mesure l'enjeu. « S'ils savent ce qu'est vraiment leur proie, ils ne lâcheront jamais, » s'inquiète le maître-espion. La chasse devient une course : qui atteindra l'Orateur le premier, vous ou l'Empire ?"
+		},
+		"conditions": [
+			{
+				"variable": "fugitive_caught",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Devancer le général"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Brouiller la piste impériale"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28805,
+		"label": "speaker_hunted_28805",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion organise une fausse piste pour égarer les traqueurs impériaux — un leurre, un faux Orateur, un sacrifice calculé. « Cruel mais nécessaire, » dit-il. « Pendant qu'ils courent après l'ombre, nous sortons l'homme. » La guerre de l'ombre exige parfois qu'on jette un pion pour sauver le roi."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Monter le leurre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser le sacrifice"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28806,
+		"label": "speaker_hunted_28806",
+		"deck": "speaker_hunted",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact vous presse : la fenêtre d'exfiltration se referme. « Chaque jour, le filet se resserre. Il faut le sortir MAINTENANT, par n'importe quel moyen. » L'urgence absolue. Un Orateur capturé, c'est mille ans de secret en péril. Tout repose sur votre vitesse et votre ruse."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Précipiter l'exfiltration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attendre une meilleure ouverture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28807,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28807,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28807,
+		"label": "speaker_hunted_28807",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Vous atteignez enfin l'Orateur traqué — épuisé, méfiant, à bout. « Pourquoi vous croirais-je ? » demande-t-il. « Les meilleurs pièges portent un visage ami. » Le convaincre de se livrer à vous, lui qui ne croit plus personne : un défi mentalique autant qu'humain. Deux esprits entraînés à la méfiance."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui ouvrir votre esprit en preuve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le convaincre par les faits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28808,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28808,
+		"label": "speaker_hunted_28808",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'Orateur, à demi convaincu, accepte de vous suivre — mais le doute le ronge encore. « Si vous me trahissez, » murmure-t-il, « la Table vous traquera comme on me traque. » Vous le savez. Vous portez désormais une vie de Speaker entre vos mains, et le poids de sa confiance arrachée."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jurer de le protéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter sa méfiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28809,
+		"label": "speaker_hunted_28809",
+		"deck": "speaker_hunted",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amirale met une corvette rapide à votre disposition pour l'exfiltration — discrète, déniable. « Officiellement, ce vaisseau n'existe pas, » dit-elle. « Comme votre passager. Sortez-le, et oubliez que je vous ai aidés. » La Fondation protège la Table sans même savoir tout à fait pourquoi."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embarquer l'Orateur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier l'itinéraire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28810,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28810,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28810,
+		"label": "speaker_hunted_28810",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "La traque s'intensifie : l'Empire a lancé un avis de recherche galactique. Le visage de l'Orateur s'affiche sur tous les mondes. « Cao... — le fugitif est désormais l'homme le plus recherché de la périphérie, » note le maître-espion. Le sortir devient un exploit de chaque heure. Mais vous avez commencé. Il faut finir."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "hunt_started",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "hunt_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Poursuivre l'exfiltration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Changer de plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28811,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28811,
+		"label": "speaker_hunted_28811",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact coordonne la fuite à travers les mondes : sauts hyperspatiaux, fausses identités, relais d'agents. « Comme une course de relais où le témoin est une vie humaine, » résume-t-il. Chaque planète franchie est un répit ; chaque douane, un risque mortel. L'Orateur s'accroche à vous, son seul fil."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mener la course de relais"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reprendre souffle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28812,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28812,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28812,
+		"label": "speaker_hunted_28812",
+		"deck": "speaker_hunted",
+		"weight": 1600,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un agent demande où se cache exactement le fugitif pour mieux le protéger — mais est-il fiable ? Dans une traque, chaque allié peut être un traître retourné. « La paranoïa tue plus d'agents que les ennemis, » disait Palver. « Mais la confiance aveugle, encore plus. » Doser. Toujours doser."
+		},
+		"conditions": [
+			{
+				"variable": "hunt_started",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui confier la position"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tester sa fiabilité d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28813,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_where_is_cao_cao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28813,
+		"label": "speaker_hunted_28813",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'agent se révèle loyal — il aide à brouiller les pistes impériales avec un dévouement total. « La Table m'a tout donné, » dit-il. « Je lui dois bien un Orateur sauvé. » Dans la noirceur de la traque, ces loyautés inattendues sont la lumière qui permet de continuer. Vous avancez d'un cran vers Rossem."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avancer vers le refuge"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renforcer l'escorte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28814,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_where_is_cao_cao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28814,
+		"label": "speaker_hunted_28814",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La cache du fugitif est presque éventée — un chasseur de primes flaire la piste. Il faut déplacer l'Orateur en urgence, vers Siwenna, monde du déclin impérial où l'on se cache bien. « Les ruines font les meilleures planques, » murmure le Contact. « Personne ne cherche un trésor dans les décombres. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Filer vers Siwenna"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir la cache actuelle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28815,
+		"label": "speaker_hunted_28815",
+		"deck": "speaker_hunted",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous égarez les chasseurs en redirigeant la traque — fausses apparitions de l'Orateur sur des mondes lointains. La confusion gagne les rangs impériaux. « Où est donc passé notre homme ? » enrage le général. Pendant qu'il court après des fantômes, vous gagnez Siwenna. La ruse, encore la ruse."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "siwenna"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "hunt_started",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "hunt_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter la confusion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maintenir le cap sur Siwenna"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28816,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fugitive_location",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28816,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fugitive_location",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28816,
+		"label": "speaker_hunted_28816",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion redirige l'opération vers Siwenna en personne : « C'est là que nous le mettrons à l'abri, puis vers Rossem, hors de portée. » Les ruines de l'ancienne perle impériale s'étendent, refuge parfait pour un homme qui ne doit pas exister. Le bout du tunnel approche. Peut-être."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Atteindre Siwenna"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur ses gardes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "siwenna",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28817,
+		"label": "speaker_hunted_28817",
+		"deck": "speaker_hunted",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Siwenna, l'Orateur traqué reprend son souffle dans une cache sûre — un palais en ruine, parmi d'autres fantômes. « Je croyais ne jamais revoir un visage ami, » avoue-t-il, brisé. « Vous m'avez rendu autre chose que la peur. » La traque n'est pas finie, mais pour la première fois, il dort."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "hunt_started",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "hunt_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser récupérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la dernière étape"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fugitive_location",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "fugitive_location",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28818,
+		"label": "speaker_hunted_28818",
+		"deck": "speaker_hunted",
+		"weight": 1200,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Un créancier louche, sur Siwenna, flaire de l'argent dans votre affaire et menace de vendre l'information. « Tout se monnaie, dans les ruines, » sourit-il. « Y compris le silence. » Le payer vous coûte ; le refuser vous expose. Les vautours rôdent toujours autour des proies blessées."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "hunt_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Acheter son silence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le faire taire autrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28819,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28819,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 28819,
+		"label": "speaker_hunted_28819",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le silence du créancier acheté, vous sécurisez la dernière étape : Rossem, monde glacé et oublié, refuge final. « Là-bas, même l'Empire ne va pas, » dit le Contact. « Trop froid, trop pauvre, trop loin. Parfait pour disparaître. » L'Orateur sauvé y refera une vie, anonyme. Si vous l'y menez."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Préparer le saut vers Rossem"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier une dernière fois"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28820,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28820,
+		"label": "speaker_hunted_28820",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Un dernier obstacle : le général impérial, devinant la destination, place un cordon autour des routes de Rossem. « Il a compris, » s'inquiète le maître-espion. « Il faut passer entre les mailles, ou créer une diversion massive. » Si près du but, tout pourrait encore basculer. L'Orateur le sent et tremble."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter de passer le cordon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Monter une diversion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28821,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 28821,
+		"label": "speaker_hunted_28821",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le moment décisif : escorter l'Orateur à travers le cordon impérial vers Rossem. Chaque seconde compte, chaque pensée doit rester verrouillée — un général habile pourrait avoir des sondeurs. « Esprit calme, cœur de glace, » vous répétez-vous. La liberté d'un Speaker tient à votre sang-froid."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "fugitive_location",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "hunt_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Forcer le passage vers Rossem"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attendre la faille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_escort_cao_cao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28822,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28822,
+		"label": "speaker_hunted_28822",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "L'escorte vers Rossem tourne à la course-poursuite : les vaisseaux impériaux vous serrent. L'Orateur, à vos côtés, projette malgré lui sa terreur — un risque, car la peur d'un Mentalique peut être SENTIE. « Maîtrisez-vous, » lui soufflez-vous, tenant vous-même votre propre angoisse en laisse de fer."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Calmer l'Orateur et fuir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter les poursuivants"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_escort_cao_cao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28823,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28823,
+		"label": "speaker_hunted_28823",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "La poursuite vers Rossem atteint son comble. Une manœuvre audacieuse — un saut à l'aveugle dans un champ d'astéroïdes — pourrait semer l'Empire ou vous tuer tous. « Les fous et les désespérés font les mêmes choix, » songez-vous, la main sur les commandes. « Espérons que le désespoir suffise. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter le saut à l'aveugle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher une issue plus sûre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28824,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28824,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28824,
+		"label": "speaker_hunted_28824",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "Le saut réussit — de justesse. Les vaisseaux impériaux, eux, n'osent pas suivre dans les astéroïdes. Vous émergez, criblés mais vivants, en vue de Rossem. L'Orateur, hagard, rit et pleure à la fois. « On a réussi ? » — « Presque, » répondez-vous. « Le presque, c'est le plus dur. Tenez bon. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approcher Rossem"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier les avaries"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_escort_cao_cao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28825,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28825,
+		"label": "speaker_hunted_28825",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "L'Orateur, sur le point d'être sauvé, vous offre sa pleine confiance enfin : « Si nous nous en sortons, je n'oublierai jamais. Un Orateur en doit une à un autre — c'est rare, dans notre métier de solitudes. » Sa gratitude vous touche. Sauver l'un des vôtres : la plus pure des missions."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recevoir sa gratitude"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester concentré sur l'arrivée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fugitive_trust",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_escort_cao_cao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28826,
+		"label": "speaker_hunted_28826",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "Rossem, enfin. Vous posez l'Orateur traqué sur le monde glacé qui sera son refuge — anonyme, vivant, libre. Preem Palver, peut-être son voisin un jour, l'accueillera entre deux rangs de navets. « L'Empire a perdu sa proie, » sourit le Contact. « Et la Table a sauvé un fils. Bon travail, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "fugitive_trust",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Confier l'Orateur à Rossem"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lui faire ses adieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "rossem",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 28827,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "rossem",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 28827,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28827,
+		"label": "speaker_hunted_28827",
+		"deck": "speaker_hunted",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Rossem, un vieux fermier — Palver, sans doute — accueille le fugitif sans poser de questions : « Encore un qui vient se réchauffer au froid de Rossem. Entrez, l'ami. Ici, personne n'a de passé. C'est tout l'intérêt. » L'Orateur sauvé trouve enfin un endroit où n'être personne. Le plus grand des luxes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Saluer le vieux fermier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir discrètement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28828,
+		"label": "speaker_hunted_28828",
+		"deck": "speaker_hunted",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "jealous_emperor",
+		"question": {
+			"FR": "La traque s'achève : l'Orateur est sauf, l'Empire bredouille, le secret de la Table préservé. Vous repartez, vidé mais accompli. « Sauver l'un des nôtres, » résume le Contact, « c'est sauver un peu de tous les nôtres. La solidarité des invisibles. Sans elle, le Plan ne serait qu'une équation froide. »"
+		},
+		"conditions": [
+			{
+				"variable": "hunt_stage",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore la mission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Penser aux prochains traqués"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_returned_home",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_returned_home",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
 		}
 	},
 	{

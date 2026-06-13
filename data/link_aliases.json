@@ -461,5 +461,32 @@
 	},
 	"_zhou_yu_jealous": {
 		"node": 27232
+	},
+	"_first_guandu_battle_skip": {
+		"node": 27611
+	},
+	"_first_guandu_battle_end": {
+		"node": 27605
+	},
+	"_first_guandu_battle_lost": {
+		"node": 27611
+	},
+	"_guan_yu_look_for_brother": {
+		"node": 27609
+	},
+	"_guan_yu_angry_guandu": {
+		"node": 27610
+	},
+	"_battle_xudu": {
+		"node": 27624
+	},
+	"_where_is_cao_cao": {
+		"node": 28815
+	},
+	"_escort_cao_cao": {
+		"node": 28826
+	},
+	"_cao_cao_returned_home": {
+		"node": 28828
 	}
 }
