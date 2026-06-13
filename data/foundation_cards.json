@@ -38111,6 +38111,3432 @@
 		}
 	},
 	{
+		"id": 34800,
+		"label": "bayta_darell_34800",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde vous glisse, goguenard : « Sur Korell, une certaine Bayta Darell fait tourner les têtes — y compris celles qui devraient rester froides. On dit qu'aucun prétendant ne lui survit longtemps. Elle a une épée et un caractère assortis. Bonne chance. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mettre le cap sur Korell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Éviter cette histoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bayta_marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34801,
+		"label": "bayta_darell_34801",
+		"deck": "bayta_darell",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Bayta Darell vous toise, main sur le pommeau : « Encore un soupirant que la Guilde m'envoie ? Je préviens : le dernier m'a ennuyée, je l'ai provoqué en duel, il a perdu. Vous comptez m'ennuyer aussi, ou vous avez de la conversation ? »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Relever le défi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Battre en retraite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sword_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34802,
+		"label": "bayta_darell_34802",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Bayta dégaine, rieuse et redoutable : « Voyons ce que vaut votre poignet ! » Le duel n'est pas mortel — c'est sa façon de jauger un homme. Croiser le fer avec elle, c'est passer un entretien où l'on risque quelques bleus et beaucoup d'orgueil."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Croiser le fer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de se battre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.sword_fight",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bayta_marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34803,
+		"label": "bayta_darell_34803",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Le duel tourne au jeu : Bayta rit, pare, taquine. « Pas mauvais ! La plupart tremblent ou fanfaronnent. Vous, vous... observez. C'est nouveau. » Sous l'acier, une curiosité s'allume. Les âmes vives reconnaissent leurs semblables au bout d'une lame."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir son regard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Baisser la garde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34804,
+		"label": "bayta_darell_34804",
+		"deck": "bayta_darell",
+		"weight": 800,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Bayta vous accorde sa rare estime : « Vous m'intéressez, étranger. C'est dangereux pour vous — les choses qui m'intéressent, je les garde. » Son sourire est une menace charmante. Un Mentalique sait lire les cœurs ; le sien est un livre écrit à la pointe de l'épée."
+		},
+		"conditions": [
+			{
+				"variable": "bayta_courtship",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se laisser intriguer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder ses distances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34805,
+		"label": "bayta_darell_34805",
+		"deck": "bayta_darell",
+		"weight": 800,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Bayta vous met à l'épreuve une dernière fois — un duel plus sérieux, pour voir si l'intérêt résiste à l'adversité. « Si vous reculez maintenant, vous n'étiez qu'un de plus. Si vous tenez... » Elle ne finit pas. Certaines phrases se terminent à l'épée, ou au cœur."
+		},
+		"conditions": [
+			{
+				"variable": "bayta_courtship",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir bon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Céder du terrain"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.sword_fight",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34806,
+		"label": "bayta_darell_34806",
+		"deck": "bayta_darell",
+		"weight": 899,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Bayta baisse son épée, pour de bon cette fois : « Assez joué. Vous voulez de moi ? Alors écoutez : je n'épouse pas un homme, j'épouse une CAUSE qui en vaut la peine. La vôtre en vaut-elle la peine, étranger qui cache si bien son jeu ? »"
+		},
+		"conditions": [
+			{
+				"variable": "bayta_courtship",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui offrir une cause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer devant l'engagement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_shangxiang_agrees_marriage",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34807,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34807,
+		"label": "bayta_darell_34807",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Bayta médite votre proposition, l'œil pénétrant : « Vous mentez sur ce que vous êtes. Non — vous TAISEZ. Différent. » Elle pose une main sur la vôtre. « J'ai épousé des silences plus creux. Le vôtre, au moins, a du poids. Continuez. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "bayta_marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approfondir le lien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hésiter encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 34808,
+		"label": "bayta_darell_34808",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'attachement grandit, réel et dangereux : aimer, pour un Orateur sous couverture, c'est confier sa vraie nature à un cœur qui pourrait la trahir — ou la protéger jusqu'à la mort. Bayta vous regarde comme on regarde quelqu'un qu'on a décidé de garder."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'attacher vraiment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protéger son secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34809,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34809,
+		"label": "bayta_darell_34809",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "L'amour de Bayta devient un gouffre tendre où votre mission menace de se dissoudre. Un Orateur qui aime trop oublie qu'il doit mourir et renaître ailleurs. La Gardienne des mémoires vous l'a dit : « le milieu tue. » Et vous voilà en plein milieu."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'arracher à temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout abandonner pour elle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_par_amour",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_par_amour",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 34810,
+		"label": "bayta_darell_34810",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Vous épousez Bayta Darell — couverture parfaite et bonheur véritable, mélange enivrant et périlleux. « Mon mari le mystérieux, » sourit-elle au seuil. Elle ne saura jamais tout de vous. Mais elle saura l'essentiel : que vous êtes resté. Pour cette vie, du moins."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "bayta_marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_bayta_darell",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "married",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 11,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller l'union"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sceller l'union, le cœur lourd"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 182,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 182,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34811,
+		"label": "bayta_darell_34811",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le noble déchu que vous aviez aidé reparaît, jaloux de votre bonheur avec Bayta : « Elle aurait dû être à MOI. » Sa rancune couve. Gérer un soupirant éconduit qui connaît trop bien Korell : une épine de plus dans un mariage déjà compliqué."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Désamorcer sa jalousie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'ignorer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34812,
+		"label": "bayta_darell_34812",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un vieux prétendant de Bayta — un dénommé Qiao — conteste votre union et réclame réparation. Bayta lève les yeux au ciel : « Encore lui. Je l'ai éconduit trois fois. À l'épée, deux. » Le passé d'une femme aussi vive est peuplé de soupirants tenaces."
+		},
+		"conditions": [
+			{
+				"variable": "rival_qiao",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Régler l'affaire Qiao"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser Bayta s'en charger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34813,
+		"label": "bayta_darell_34813",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Korell bruisse de rumeurs sur votre couple — trop visible, trop aimé. Le maître-espion s'inquiète : « Un Orateur célèbre est un Orateur mort. Votre mariage vous expose. Discrétion, ou il faudra bientôt fuir ce bonheur trop voyant. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "seen_1760",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver la discrétion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Assumer le bonheur visible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34814,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34814,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 34814,
+		"label": "bayta_darell_34814",
+		"deck": "bayta_darell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous tempérez les rumeurs autour de votre couple. Bayta, lucide, le remarque : « Tu te caches, même de moi, même heureux. » Elle ne pose pas de questions — c'est sa forme d'amour. « Je sais que tu pars parfois loin dans ta tête. Reviens, c'est tout. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Promettre de revenir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester évasif"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34815,
+		"label": "bayta_darell_34815",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le noble jaloux passe à l'acte : il tente de révéler à Korell ce qu'il soupçonne de vous — un homme « trop habile pour être honnête ». Sa dénonciation est confuse mais dangereuse. Bayta, sans tout savoir, vous défend bec et ongles. Un rempart inattendu."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Profiter de la défense de Bayta"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter seul l'accusation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34816,
+		"label": "bayta_darell_34816",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Si vous n'épousez pas Bayta, son estime se mue lentement en distance : « J'ai cru que vous étiez différent. Vous l'êtes — différemment lâche. » Le reproche pique d'autant plus qu'il est mérité. Certaines portes, refermées, ne se rouvrent jamais."
+		},
+		"conditions": [
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "bayta_courtship",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter de la reconquérir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter la distance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34817,
+		"label": "bayta_darell_34817",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "bayta_darell",
+		"question": {
+			"FR": "Bayta, lasse d'attendre un engagement qui ne vient pas, choisit de partir à l'aventure seule : « Je ne suis pas faite pour languir, étranger. Si un jour vous savez ce que vous voulez, vous saurez où me trouver — probablement au cœur des ennuis. »"
+		},
+		"conditions": [
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "bayta_courtship",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "La laisser libre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La rappeler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 182,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_bayta_darell",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34818,
+		"label": "bayta_darell_34818",
+		"deck": "bayta_darell",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'histoire avec Bayta Darell se referme sans mariage — une étincelle qui s'éteint faute d'avoir osé. Vous gardez le souvenir d'une épée rieuse et d'un regard trop lucide. Parfois, protéger sa mission coûte exactement ce qui valait la peine d'être vécu."
+		},
+		"conditions": [
+			{
+				"variable": "bayta_marriage",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_bayta_darell",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tourner la page"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder le regret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bayta_courtship",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 35600,
+		"label": "ebling_mis_35600",
+		"deck": "ebling_mis",
+		"weight": 2000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "On murmure l'existence d'un savant prodige — « le Phénix », un cerveau capable de déchiffrer ce que nul autre ne peut. La Seconde Fondation rêverait d'un tel esprit. Encore faut-il le trouver : le Phénix se cache, et les génies cachés détestent qu'on les déniche."
+		},
+		"conditions": [
+			{
+				"variable": "quest_ebling",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "ebling_search",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir à sa recherche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le mythe dormir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_where_to_find_phoenix",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_where_to_find_phoenix",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35601,
+		"label": "ebling_mis_35601",
+		"deck": "ebling_mis",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La piste du Phénix mène à Terminus, dans les sous-sols poussiéreux des archives. Il y vivrait reclus, dévorant des données que personne d'autre ne sait lire. « Un génie qui se terre dans une cave : soit il fuit le monde, soit le monde l'a déçu, » songez-vous."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rejoindre Terminus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plus tard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35602,
+		"label": "ebling_mis_35602",
+		"deck": "ebling_mis",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous êtes déjà sur Terminus — et le Phénix y serait, quelque part dans le labyrinthe des archives. Le trouver dans cette montagne de savoir poussiéreux relève de l'aiguille dans la botte de foin. Heureusement, un Mentalique sent les esprits brillants à distance."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fouiller les archives"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Remettre à plus tard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35603,
+		"label": "ebling_mis_35603",
+		"deck": "ebling_mis",
+		"weight": 2000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact vous oriente : « Le Phénix se nomme Ebling Mis. Brillant, désordonné, alcoolique de génie. Il vous testera par des énigmes et vous insultera par affection. Ne vous vexez pas — c'est sa façon de dire bonjour. »"
+		},
+		"conditions": [
+			{
+				"variable": "quest_ebling",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "mentalic_strength",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Aller voir Ebling Mis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hésiter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_interview_pang_tong",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35604,
+		"label": "ebling_mis_35604",
+		"deck": "ebling_mis",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Pour trouver Ebling Mis, un astrologue de quartier prétend pouvoir vous guider — contre paiement, naturellement. « Les étoiles me disent où est votre Phénix, » roucoule-t-il en agitant des cartes. Charlatan évident, mais les charlatans connaissent parfois les bonnes adresses."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer l'astrologue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher une autre piste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_astrologer_magistrate",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35605,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35605,
+		"label": "ebling_mis_35605",
+		"deck": "ebling_mis",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "ebling_mis",
+		"question": {
+			"FR": "Un intermédiaire propose de vous présenter Ebling Mis « dans les règles » — avec lettres de recommandation et protocole. Pour un génie anarchique qui méprise les protocoles, c'est peut-être la pire approche. Ou la seule qui le fasse rire assez pour vous écouter."
+		},
+		"conditions": [
+			{
+				"variable": "ebling_won",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre le protocole"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher l'approche directe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pang_tong_introduction",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35606,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35606,
+		"label": "ebling_mis_35606",
+		"deck": "ebling_mis",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Un « magistrat » véreux affirme détenir Ebling Mis dans ses geôles pour dettes : « Votre Phénix moisit dans ma prison. Payez sa caution, il est à vous. » Marchander la liberté d'un génie endetté : sordide, mais efficace. Les savants ont rarement le sens de l'argent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer la caution"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce chantage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bandit_magistrate",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35604,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 35607,
+		"label": "ebling_mis_35607",
+		"deck": "ebling_mis",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "ebling_mis",
+		"question": {
+			"FR": "Vous voici devant Ebling Mis — débraillé, l'œil vif, une bouteille à portée de main et trois théories en cours. « Encore un qui veut mon cerveau ! » beugle-t-il. « Tous pareils. Asseyez-vous, payez la tournée, et prouvez que vous valez mieux que les autres voleurs d'idées. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "ebling_won",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer la tournée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Aller droit au but"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ebling_won",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "ebling_search",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_interview_pang_tong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35608,
+		"label": "ebling_mis_35608",
+		"deck": "ebling_mis",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'astrologue vous a bien mené — jusqu'au seuil d'Ebling Mis, qui éclate de rire en vous voyant : « Vous avez payé un CHARLATAN pour me trouver ? Génial ! Au moins vous savez investir dans l'absurde. Ça me plaît. Entrez, payeur d'étoiles. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Entrer en riant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder son sérieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35609,
+		"label": "ebling_mis_35609",
+		"deck": "ebling_mis",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "La caution payée, Ebling Mis sort de sa geôle en titubant, libre et furieux : « Trois mois pour une ardoise de taverne ! Ce monde emprisonne les penseurs et décore les banquiers ! » Il vous toise. « Vous m'avez sorti de là. Bon. Que voulez-vous, sauveur intéressé ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avouer vouloir son génie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre la générosité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35610,
+		"label": "ebling_mis_35610",
+		"deck": "ebling_mis",
+		"weight": 2000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Ebling Mis vous jauge par une énigme tordue, sur un coin de table tachée de vin. La résoudre l'impressionnerait ; échouer le ferait rire — et un Ebling Mis qui rit est un Ebling Mis qui écoute. Avec lui, même l'échec peut être une bonne stratégie."
+		},
+		"conditions": [
+			{
+				"variable": "quest_ebling",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "ebling_search",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Résoudre l'énigme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Échouer avec panache"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35611,
+		"label": "ebling_mis_35611",
+		"deck": "ebling_mis",
+		"weight": 2000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "« Pas mauvais, pour un amateur, » concède Ebling Mis, ce qui de sa part équivaut à un éloge dithyrambique. « Vous avez quelque chose dans le crâne, et quelque chose DERRIÈRE le crâne que je n'arrive pas à lire. Ça m'intrigue. Continuez de m'intriguer. »"
+		},
+		"conditions": [
+			{
+				"variable": "quest_ebling",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "ebling_search",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Entretenir son intérêt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner sa curiosité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35612,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_ebling_mis",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35612,
+		"label": "ebling_mis_35612",
+		"deck": "ebling_mis",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "ebling_mis",
+		"question": {
+			"FR": "Ebling Mis pose enfin sa bouteille — signe rarissime de sérieux : « Je sais que vous me cachez l'essentiel. Et vous savez quoi ? Je m'en FICHE. Personne ne m'a donné de vraie énigme depuis des années. Si votre cause cachée en est une, je marche. Pour l'énigme. Pas pour vous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui offrir l'énigme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le mettre en garde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35613,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35613,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35613,
+		"label": "ebling_mis_35613",
+		"deck": "ebling_mis",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "« Une dernière chose, » dit Ebling Mis en plissant les yeux. « Le jour où votre cause m'ennuiera, je partirai. Le jour où elle me ment, je le saurai. Et le jour où elle touche à quelque chose de VRAIMENT grand — » son regard s'allume — « ce jour-là, ne m'arrêtez surtout pas. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter ses termes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Redouter ce dernier point"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35614,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 178,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_ebling_mis",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_ebling",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 35614,
+		"label": "ebling_mis_35614",
+		"deck": "ebling_mis",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "ebling_mis",
+		"question": {
+			"FR": "Ebling Mis vous rejoint, génie chaotique et bouteille comprise. « Au travail, recruteur ! Montrez-moi vos plus beaux mystères ! » Vous gagnez l'un des esprits les plus aigus de la Galaxie — et une bombe à retardement intellectuelle, car certains mystères ne devraient jamais être résolus."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "ebling_search",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_ebling_mis",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir le Phénix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surveiller sa fougue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "quest_ebling",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "quest_ebling",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 36000,
+		"label": "recruit_pritcher_36000",
+		"deck": "recruit_pritcher",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 190, sur Sayshell : le maître-espion vous signale un officier rare. « Han Pritcher. Loyal jusqu'à l'os, incorruptible jusqu'à l'absurde. Le genre d'homme qu'on rêve d'avoir, et qu'on ne peut pas acheter. Il faudra le MÉRITER. Ennuyeux, n'est-ce pas ? »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 190
+			},
+			{
+				"variable": "quest_pritcher",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher à le rencontrer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop de travail"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36001,
+		"label": "recruit_pritcher_36001",
+		"deck": "recruit_pritcher",
+		"weight": 2000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Un seigneur de guerre régional courtise déjà Pritcher : « Ralliez-vous à moi, et ma région est à vous, » vous propose-t-il, croyant vous acheter. « Pritcher me suivra si vous me suivez. » Servir un seigneur pour atteindre un homme : le détour est tentant et sale."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 190
+			},
+			{
+				"variable": "quest_pritcher",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "warlord_rules",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre le seigneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce marché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36002,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yuan_shao_promises_jizhou",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36002,
+		"label": "recruit_pritcher_36002",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Le seigneur de guerre vous met à l'épreuve : une campagne sale contre un rival. Pritcher observe de loin comment vous vous y prenez — car un homme loyal juge d'abord la loyauté des autres. Chaque choix devant lui est un entretien d'embauche déguisé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mener proprement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Gagner à tout prix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36003,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36003,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36003,
+		"label": "recruit_pritcher_36003",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "La campagne du seigneur tourne à l'affrontement ouvert. Pritcher, fidèle à son maître actuel, se bat en face de vous — magnifique de droiture, agaçant de constance. « On ne recrute pas un tel homme en le battant, » songez-vous. « On le recrute en le méritant. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Épargner Pritcher"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vaincre sans pitié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_favor",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.yuan_shao_jizhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "warlord_favor",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 36004,
+		"label": "recruit_pritcher_36004",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Le seigneur de guerre, victorieux grâce à vous, se montre généreux — et révèle sa vraie nature : avide, brutal, indigne de la loyauté de Pritcher. Vous comprenez pourquoi l'officier ronge son frein. Un homme droit servant un tyran : tragédie ordinaire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Détourner Pritcher du seigneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Profiter de la victoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 16,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36005,
+		"label": "recruit_pritcher_36005",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Le seigneur soupçonne vos manœuvres autour de Pritcher : « Vous me VOLEZ mon meilleur officier ? » Sa colère gronde. Nier maladroitement le braquerait ; assumer pourrait précipiter une rupture utile. Avec les tyrans, la franchise est parfois la meilleure ruse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer franchement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Nier en bloc"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 17,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "warlord_favor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.yuan_shao_contest",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36006,
+		"label": "recruit_pritcher_36006",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "La rupture avec le seigneur de guerre coûte cher — relations, crédits, sécurité. Mais Pritcher, témoin de votre intégrité face au tyran, commence à vous regarder autrement. « Vous avez perdu gros pour une question de principe, » note-t-il. « Intéressant. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir vos principes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Regretter le coût"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 36007,
+		"label": "recruit_pritcher_36007",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Sayshell penche vers vous au fil de l'affaire — un monde de plus rallié par votre conduite plutôt que par vos armes. Pritcher y est pour quelque chose : on suit volontiers qui un homme droit a fini par respecter. La réputation précède le recrutement."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver cette réputation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester modeste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36008,
+		"label": "recruit_pritcher_36008",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "L'affaire du seigneur de guerre se referme. Pritcher, libéré de son maître indigne, hésite désormais entre la retraite et un nouveau service. La porte est entrouverte. Il ne reste qu'à lui donner une raison de la franchir — la BONNE raison."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui présenter votre cause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser décider seul"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36009,
+		"label": "recruit_pritcher_36009",
+		"deck": "recruit_pritcher",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de guerre, devenu votre ennemi, lance une dernière manœuvre pour reprendre Pritcher. « Il est À MOI ! » Mais on ne possède pas un homme libre. Pritcher tranche lui-même : « Je sers une cause, pas un propriétaire. » Le seigneur l'a appris trop tard."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_rules",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_favor",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir le choix de Pritcher"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier avec le seigneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_favor",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 36010,
+		"label": "recruit_pritcher_36010",
+		"deck": "recruit_pritcher",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un vieux rival de Pritcher resurgit, cherchant vengeance — et l'officier, par honneur, veut l'affronter seul. L'aider serait l'insulter ; le laisser faire, le risquer. Les hommes droits ont une fierté qui complique terriblement leur protection."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_rules",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_favor",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "seen_823",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 191
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Respecter son honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'aider malgré lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.gongsun_revenge",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36011,
+		"label": "recruit_pritcher_36011",
+		"deck": "recruit_pritcher",
+		"weight": 900,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion organise enfin la vraie rencontre : « Pritcher vous recevra. Une seule chance. Cet homme jauge une âme en trois phrases. Soyez sincère — paradoxal conseil pour un espion, mais avec lui, la sincérité est la seule monnaie qui ne sonne pas faux. »"
+		},
+		"conditions": [
+			{
+				"variable": "warlord_rules",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 191
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le rencontrer sincèrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer un discours"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_zhao_yun",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_zhao_yun",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 36012,
+		"label": "recruit_pritcher_36012",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "han_pritcher",
+		"question": {
+			"FR": "Han Pritcher vous fait face, regard d'acier : « On me dit que vous servez une cause cachée. Je sers les causes que je peux VOIR. Convainquez-moi que la vôtre vaut une loyauté aveugle — moi qui n'ai jamais rien servi aveuglément. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "pritcher_won",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui montrer la cause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avouer ne pas tout pouvoir dire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36013,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36013,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 36013,
+		"label": "recruit_pritcher_36013",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "han_pritcher",
+		"question": {
+			"FR": "Pritcher médite longtemps. « Vous ne m'avez pas tout dit. Mais vous ne m'avez pas menti non plus — j'aurais senti le mensonge. Un homme qui cache sans tromper, c'est rare. » Il tend une main calleuse. « Je sers les hommes droits, pas les drapeaux. Va pour vous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_pritcher",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller le pacte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le prévenir des risques"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36014,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36014,
+		"label": "recruit_pritcher_36014",
+		"deck": "recruit_pritcher",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "han_pritcher",
+		"question": {
+			"FR": "Han Pritcher rejoint votre réseau — épée loyale et conscience exigeante. « Je vous servirai tant que vous resterez digne d'être servi, » prévient-il. « Le jour où vous cesserez de l'être, je serai le premier à le voir. » Un allié et un garde-fou. Précieux. Inconfortable."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_recruit_pritcher",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir Pritcher"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter sa condition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 191,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 191,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
 		"id": 36400,
 		"label": "planet_kalgan_36400",
 		"deck": "planet_kalgan",

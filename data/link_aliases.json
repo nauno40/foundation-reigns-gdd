@@ -308,5 +308,38 @@
 	},
 	"_accepted_koi": {
 		"action": "enddispatch"
+	},
+	"_yuan_shao_promises_jizhou": {
+		"node": 36004
+	},
+	"_meet_zhao_yun": {
+		"node": 36012
+	},
+	"_where_to_find_phoenix": {
+		"nodes": [
+			35601,
+			35602
+		]
+	},
+	"_interview_pang_tong": {
+		"node": 35612
+	},
+	"_astrologer_magistrate": {
+		"node": 35608
+	},
+	"_pang_tong_introduction": {
+		"node": 35607
+	},
+	"_bandit_magistrate": {
+		"node": 35609
+	},
+	"_sword_fight": {
+		"node": 34802
+	},
+	"_shangxiang_agrees_marriage": {
+		"node": 34807
+	},
+	"_cover_union": {
+		"action": "enddispatch"
 	}
 }
