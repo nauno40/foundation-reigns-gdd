@@ -241,5 +241,14 @@
 	},
 	"_become_a_ghost": {
 		"node": 22069
+	},
+	"_bot_quest": {
+		"action": "enddispatch"
+	},
+	"_rain_maker": {
+		"action": "enddispatch"
+	},
+	"_complaints_about_immigrants": {
+		"action": "enddispatch"
 	}
 }

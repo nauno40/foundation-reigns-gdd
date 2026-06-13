@@ -33036,6 +33036,2481 @@
 		}
 	},
 	{
+		"id": 36400,
+		"label": "planet_kalgan_36400",
+		"deck": "planet_kalgan",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Fin d'année sur Kalgan, monde du plaisir : la saison des Jeux approche, et tout l'argent du monde y passe. « Sans les Jeux, Kalgan n'est qu'un caillou orbital, » roucoule un organisateur. « Avec les Jeux, c'est le caillou le plus riche de la périphérie. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer les Jeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Modérer la dépense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36401,
+		"label": "planet_kalgan_36401",
+		"deck": "planet_kalgan",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année, et les casinos orbitaux de Kalgan veulent une « licence de jeu illimitée ». La maison gagne toujours — et la maison aimerait gagner sans plafond. Le vice paie bien, tant qu'on ne compte pas les ruines."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Plafonner le jeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Licence illimitée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -16,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 36402,
+		"label": "planet_kalgan_36402",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sécheresse sur les domaines de loisir de Kalgan : les fontaines des palais tarissent, scandale mondain. « Que diront les touristes ? » se lamente un hôtelier. Faire pleuvoir sur un monde de plaisir, voilà une priorité galactique."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Restaurer les réseaux d'eau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire venir un faiseur de pluie"
+			},
+			"reaction": {
+				"FR": "Un technicien-charlatan s'exécute. La pluie tombe pile pour la haute saison. Kalgan applaudit le miracle, et la facture."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rain_maker",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 36403,
+		"label": "planet_kalgan_36403",
+		"deck": "planet_kalgan",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Premier Citoyen de Kalgan vous jauge entre deux coupes : « On me dit que vous venez de Terminus. On me dit beaucoup de choses. Ce que je retiens : votre monde est riche et mal gardé. Trinquons à cette... vulnérabilité. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trinquer prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner le toast"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36404,
+		"label": "planet_kalgan_36404",
+		"deck": "planet_kalgan",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un seigneur de guerre kalganien, riche de mercenaires, propose ses services à la Fondation — au plus offrant, et il sait que vous offrez. « Les principes, c'est pour les pauvres. Vous avez l'air d'avoir les moyens d'être souple. »"
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 55
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Engager les mercenaires"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser par principe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36405,
+		"label": "planet_kalgan_36405",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un croupier vedette de Kalgan vous glisse un tuyau : « La table de psychohistoire — oui, ils ont fait un JEU de votre Plan sacré — est truquée en faveur de la maison. Ça vous amuse, ou ça vous offense ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cela vous offense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Cela vous amuse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "angry",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 36406,
+		"label": "planet_kalgan_36406",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le même croupier, devenu bavard, vous confie que les paris de Kalgan portent désormais sur « la date de chute de l'Empire ». La cote la plus jouée : dans vingt ans. « Les joueurs ont un meilleur flair que vos savants, parfois. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Noter la cote populaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trouver cela morbide"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 36407,
+		"label": "planet_kalgan_36407",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une troupe de gladiateurs kalganiens cherche un mécène pour sa tournée galactique. « Du sang, des paillettes, et une cut pour le sponsor. » Investir dans le spectacle de violence : rentable, et moralement boiteux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sponsoriser la tournée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser le sang-spectacle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36408,
+		"label": "planet_kalgan_36408",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un trafiquant de luxe kalganien propose à la Fondation des « biens d'exception » sans poser de questions sur leur provenance. « Le goût n'a pas de douane, l'ami. Votre élite raffole de ce qu'elle ne doit pas connaître. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ouvrir ce marché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fermer la porte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36409,
+		"label": "planet_kalgan_36409",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une maison de jeu kalganienne veut s'implanter sur Terminus — « pour civiliser un peu votre monde de rats de bibliothèque ». Le permis rapporterait gros. Il corromprait aussi, lentement, sûrement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accorder le permis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder Kalgan à distance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36410,
+		"label": "planet_kalgan_36410",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les bookmakers de Kalgan ouvrent des paris sur VOUS — « l'étranger mystérieux de Terminus ». Cote sur votre durée de vie, votre vraie identité, vos intentions. Flatteur et glaçant à parts égales."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'en amuser publiquement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire fermer ces paris"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36411,
+		"label": "planet_kalgan_36411",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un impresario kalganien veut faire de vous une « attraction » : « Le devin de Terminus, en spectacle ! Vous prédisez, les gens paient, on partage. Votre don ferait un malheur sur scène. » Si seulement il savait."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Décliner fermement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer le faux devin"
+			},
+			"reaction": {
+				"FR": "Vous débitez des banalités cosmiques. La foule adore. Personne ne soupçonne que le charlatan dit parfois vrai."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 36412,
+		"label": "planet_kalgan_36412",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La favorite d'un magnat kalganien vous prend en affection — dangereuse affection, dans un monde où les magnats sont jaloux et armés. « Restez près de moi, l'étranger. Mon protecteur s'ennuie de moi, et un homme qui s'ennuie cherche un duel. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jouer les confidents"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'éloigner prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 36413,
+		"label": "planet_kalgan_36413",
+		"deck": "planet_kalgan",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Premier Citoyen organise une chasse — au gibier, dit-il, mais le gibier de Kalgan a parfois deux jambes et des dettes. « Venez chasser avec moi. On apprend beaucoup d'un homme à la façon dont il vise. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la chasse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trouver un prétexte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 41600,
+		"label": "planet_smyrno_41600",
+		"deck": "planet_smyrno",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année sur Smyrno, monde de garnison : les capitaines réclament une revue d'armes en grande pompe. « Un royaume militaire qui ne défile pas s'endort, et un royaume endormi se fait envahir. » Le raisonnement est circulaire et armé."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réduire la revue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Grande revue d'armes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -17,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 41601,
+		"label": "planet_smyrno_41601",
+		"deck": "planet_smyrno",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La sécheresse frappe les domaines d'orge de Smyrno — et sans orge, pas de bière, et sans bière, un royaume militaire devient franchement désagréable. L'intendant transpire : « Faites pleuvoir, ou faites des stocks. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Constituer des stocks"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Invoquer la pluie"
+			},
+			"reaction": {
+				"FR": "Un « ingénieur météorologique » s'agite trois jours. La pluie tombe le quatrième. Personne ne saura que c'était la saison."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rain_maker",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 41602,
+		"label": "planet_smyrno_41602",
+		"deck": "planet_smyrno",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le seigneur de Smyrno vous reçoit, sabre au flanc et méfiance au front : « Un envoyé de Terminus, chez moi ? Votre Fondation vend des miracles en boîte. Prouvez que vous valez mieux qu'un colporteur, et nous causerons. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Faire ses preuves"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir vexé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 41603,
+		"label": "planet_smyrno_41603",
+		"deck": "planet_smyrno",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une querelle de préséance entre deux maisons d'armes de Smyrno dégénère en duel public. Quoi que vous décidiez, une moitié de la noblesse vous haïra. L'autre moitié vous haïra de ne pas avoir choisi son camp."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trancher malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trancher malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 41604,
+		"label": "planet_smyrno_41604",
+		"deck": "planet_smyrno",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia, en villégiature sur Smyrno, vous trouve fort à propos : « Tant de soldats ici, et si peu de conversation. Votre flotte impressionne le seigneur — un peu trop, peut-être. Les forts attirent les forts, et les forts s'entretuent. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Calmer le jeu martial"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser parler la force"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 41605,
+		"label": "planet_smyrno_41605",
+		"deck": "planet_smyrno",
+		"weight": 200,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un missionnaire de l'Église de la Science débarque sur Smyrno, ce monde de brutes pieuses : « Apportons-leur la foi technologique ! Ils vénèrent déjà leurs armes — il suffit de bénir la gâchette. » L'idée est aussi efficace que cynique."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "buddhist_liangzhou",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir la mission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La trouver imprudente"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "buddhist_liangzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 41606,
+		"label": "planet_smyrno_41606",
+		"deck": "planet_smyrno",
+		"weight": 200,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La foi technologique a pris sur Smyrno — un peu trop : les prêtres bénissent désormais chaque canon, et les canons bénis se vendent une fortune. « La piété est devenue notre meilleure exportation, » se félicite l'évêque local, comptant ses crédits."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "buddhist_liangzhou",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encadrer ce négoce"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser prospérer la foi-marché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "buddhist_liangzhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 41607,
+		"label": "planet_smyrno_41607",
+		"deck": "planet_smyrno",
+		"weight": 200,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un négociant de Smyrno conteste la dîme technologique : « Je paie l'Église pour bénir mes générateurs, et ils tombent en panne quand même ! La foi, ça ne répare pas un circuit, l'étranger. » Il a raison, ce qui est gênant."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "buddhist_liangzhou",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui donner raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Défendre la dîme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 42400,
+		"label": "planet_santanni_42400",
+		"deck": "planet_santanni",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une fièvre frappe les campus de Santanni, monde des études : les savants tombent malades par amphithéâtres entiers. « Fermez les universités ? » s'indigne un recteur. « Autant fermer le cerveau de la périphérie ! »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soigner sans fermer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fermer les campus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 42401,
+		"label": "planet_santanni_42401",
+		"deck": "planet_santanni",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Fin d'année universitaire : Santanni réclame des fonds pour son grand Colloque Galactique. « Le savoir n'a pas de prix, » déclame le doyen — juste avant de vous présenter une facture qui, elle, en a un, et salé."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer le colloque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réduire la voilure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 42402,
+		"label": "planet_santanni_42402",
+		"deck": "planet_santanni",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Les travailleurs immigrés de Santanni — ceux qui font tourner les labos pendant que les savants pensent — demandent des permis de séjour. Les universitaires hésitent : « De la main-d'œuvre, oui ; des citoyens, est-ce bien nécessaire ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accorder les permis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Statu quo"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "santanni_work_permits",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 42403,
+		"label": "planet_santanni_42403",
+		"deck": "planet_santanni",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "La question des permis de travail vous suit hors de Santanni : où que vous alliez, des délégations vous rattrapent. « Réglez ça là-bas, ou ça vous poursuivra partout. » Les questions sociales ont de longues jambes."
+		},
+		"conditions": [
+			{
+				"variable": "santanni_work_permits",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Retourner régler à Santanni"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter les plaintes ici"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_santanni",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_complaints_about_immigrants",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 42404,
+		"label": "planet_santanni_42404",
+		"deck": "planet_santanni",
+		"weight": 80,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "Avec les permis accordés, l'émissaire impérial de passage fronce le sourcil : « Vous donnez des droits à des manœuvres ? L'Empire bâtit sur des hiérarchies, l'étranger, pas sur de la sentimentalité. Mais après tout, votre Fondation aime jouer les rebelles. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "santanni_work_permits",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer la réforme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tempérer devant l'Empire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42405,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 42405,
+		"label": "planet_santanni_42405",
+		"deck": "planet_santanni",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Les permis créent des remous : les savants de souche se plaignent que « le campus change ». Vous pouvez révoquer la réforme et acheter la paix, ou tenir bon et laisser Santanni s'habituer à sa nouvelle diversité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Révoquer pour la paix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir bon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "santanni_work_permits",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 42406,
+		"label": "planet_santanni_42406",
+		"deck": "planet_santanni",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia, en cure thermale studieuse à Santanni, observe vos réformes avec un sourire en coin : « Vous donnez des droits, charmeur. C'est mignon. Mon protecteur, lui, donne des ordres. Devinez lequel de vous deux dort tranquille la nuit. »"
+		},
+		"conditions": [
+			{
+				"variable": "santanni_work_permits",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Défendre votre méthode"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Encaisser la pique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "santanni_work_permits",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 44400,
+		"label": "planet_neotrantor_44400",
+		"deck": "planet_neotrantor",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une fièvre court les bas-quartiers de Neotrantor — la cour, elle, banquette à l'étage. « Une épidémie ? » bâille un courtisan. « Faites donc fermer les fenêtres des pauvres, qu'on n'entende plus tousser. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soigner les bas-quartiers"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Suivre l'avis de la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 44401,
+		"label": "planet_neotrantor_44401",
+		"deck": "planet_neotrantor",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Fin d'année à Neotrantor : la cour réclame des festivités dignes de « l'héritière de Trantor ». Les caisses sont vides, l'orgueil plein. « Un empire sans bals n'est qu'une province, » tranche le chambellan."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Offrir les festivités"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser le faste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 44402,
+		"label": "planet_neotrantor_44402",
+		"deck": "planet_neotrantor",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année, et les généraux de Neotrantor veulent « rappeler à la Galaxie que l'Empire vit encore » par une parade militaire. Le trésor grince. La fierté impériale, elle, ne grince jamais — elle exige."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réduire la parade"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout pour la parade"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 44403,
+		"label": "planet_neotrantor_44403",
+		"deck": "planet_neotrantor",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La sécheresse menace les jardins suspendus de Neotrantor, gloire fanée d'un empire fané. Le jardinier impérial vous supplie : « Sauvez les jardins, et l'Empereur croira que VOUS faites pleuvoir. C'est ainsi qu'on se rend indispensable. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer l'irrigation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Invoquer un faiseur de pluie"
+			},
+			"reaction": {
+				"FR": "Vous engagez un charlatan en blouse de technicien. Il danse, agite des tubes — et la mousson arrive, par chance. Indispensable, en effet."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rain_maker",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 45200,
+		"label": "gas_miners_45200",
+		"deck": "gas_miners",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les mineurs de gaz de la ceinture refusent net votre médiation : « On creuse le vide depuis six générations, l'étranger. On n'a pas besoin d'un costume pour nous dire comment respirer du méthane. » Le ton monte."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 174
+			},
+			{
+				"variable": "planet_neotrantor_state",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Imposer la médiation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Les laisser à leur vide"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.gas_miners",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fight_gas_miners",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 45201,
+		"label": "gas_miners_45201",
+		"deck": "gas_miners",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les mineurs reviennent, plus remontés encore — une fuite a tué trois des leurs et ils vous tiennent pour responsable de n'être pas intervenu. « Vous vouliez la paix ? La voilà, votre paix : trois cercueils sous vide. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 174
+			},
+			{
+				"variable": "seen_2464",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_neotrantor_state",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter leur colère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Battre en retraite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.gas_miners",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fight_gas_miners",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 45202,
+		"label": "gas_miners_45202",
+		"deck": "gas_miners",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Troisième visite des mineurs de gaz, et cette fois ils ont apporté leurs foreuses. « On vote avec ce qu'on a, et on a des foreuses. Dégagez du gisement, ou devenez partie du gisement. » L'humour minier a toujours été lourd."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 174
+			},
+			{
+				"variable": "seen_2465",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_neotrantor_state",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir bon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Dégager du gisement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.gas_miners",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fight_gas_miners",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 45600,
+		"label": "duel_45600",
+		"deck": "duel",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "[duel] Amorce de duel mentalique — réservée au système de confrontation."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Engager"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 45700,
+		"label": "bot_45700",
+		"deck": "bot",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:watcher",
+		"question": {
+			"FR": "[Simulation] Un hologramme d'entraînement de la Table : « Scénario réinitialisé. Quatre ressources à l'équilibre. C'est un exercice, Orateur — personne ne meurt pour de vrai. Enfin, pas dans CELUI-ci. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 184
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Commencer l'exercice"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter la simulation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bot_quest",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bot_quest",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 45800,
+		"label": "dev_45800",
+		"deck": "dev",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "[dev] Carte de diagnostic interne. Invisible en partie normale."
+		},
+		"conditions": [
+			{
+				"variable": "deck",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "OK"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "OK"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 99999,
 		"label": "hot_reload_test",
 		"deck": "ambient",
