@@ -341,5 +341,44 @@
 	},
 	"_cover_union": {
 		"action": "enddispatch"
+	},
+	"_first_visit": {
+		"node": 36802
+	},
+	"_go_crash_course": {
+		"node": 36805
+	},
+	"_go_lost": {
+		"node": 36805
+	},
+	"_go_won": {
+		"node": 36806
+	},
+	"_yuan_shu_brother_relationship": {
+		"node": 37202
+	},
+	"_invade_jizhou_yuan_shao": {
+		"node": 37204
+	},
+	"_invade_jizhou_yuan_shao_lost": {
+		"node": 37205
+	},
+	"_invade_jizhou_yuan_shao_battle": {
+		"node": 37208
+	},
+	"_defend_qingzhou_prologue": {
+		"node": 38405
+	},
+	"_city_defence_yuan_tan_confirmation": {
+		"node": 38406
+	},
+	"_defend_qingzhou": {
+		"node": 38407
+	},
+	"_defend_qingzhou_won": {
+		"node": 38410
+	},
+	"_defend_qingzhou_lost": {
+		"node": 38411
 	}
 }

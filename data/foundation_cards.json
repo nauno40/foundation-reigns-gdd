@@ -42334,6 +42334,1879 @@
 		}
 	},
 	{
+		"id": 36800,
+		"label": "hidden_speaker_36800",
+		"deck": "hidden_speaker",
+		"weight": 800,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact vous confie une mission rare : « Sur Rossem, un fermier nommé Preem Palver. Apparence d'un péquenaud jovial. Réalité : l'un des esprits les plus puissants que la Seconde Fondation ait jamais détectés. Recrutez-le. S'il veut bien. Il ne veut jamais du premier coup. »"
+		},
+		"conditions": [
+			{
+				"variable": "quest_palver",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "palver_trust",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Première visite à Palver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plus tard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_visit",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 36801,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36801,
+		"label": "hidden_speaker_36801",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Preem Palver vous accueille en s'essuyant les mains sur son tablier de fermier : « Un visiteur de loin pour un vieux planteur de Rossem ? Mes navets ne valent pas le voyage, l'ami. À moins que vous ne veniez pour autre chose que les navets. » Son œil pétille. Il SAIT."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avouer la vraie raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Parler navets d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_visit",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36802,
+		"label": "hidden_speaker_36802",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "« Vous me croyez puissant, » sourit Palver en versant du thé. « Peut-être. Mais un esprit puissant qui plante des navets sur Rossem, c'est un esprit qui a CHOISI la tranquillité. Donnez-moi une raison d'y renoncer. Une bonne. J'en ai entendu beaucoup de mauvaises. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "terminus",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Plaider la cause du Plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Respecter son choix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 36803,
+		"label": "hidden_speaker_36803",
+		"deck": "hidden_speaker",
+		"weight": 300,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "« Vous voulez jauger mon esprit ? » Palver sort un plateau de stratégie usé. « Jouons. Pas pour gagner — pour que je voie comment vous PENSEZ. Un homme se révèle dans sa façon de perdre. Et croyez-moi, contre moi, vous allez perdre. La question est : comment. »"
+		},
+		"conditions": [
+			{
+				"variable": "quest_palver",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "palver_trust",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la partie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander un cours d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36804,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_crash_course",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36804,
+		"label": "hidden_speaker_36804",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La partie commence. Palver joue comme il parle : simple en surface, abyssal en dessous. Chaque coup anodin cache trois intentions. Vous comprenez vite que ce vieux fermier pourrait diriger la Seconde Fondation entière — et qu'il le sait, et qu'il s'en cache exprès."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jouer l'audace"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer la prudence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "jukebox.move_go_piece_variation",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_lost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "jukebox.move_go_piece_variation",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_won",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 36805,
+		"label": "hidden_speaker_36805",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Palver vous donne un cours improvisé, patient comme avec un enfant doué : « Là, vous avez voulu TOUT contrôler. Erreur de jeune. Le bon stratège laisse de l'espace à l'adversaire — c'est dans cet espace qu'il l'attrape. Le Plan de Seldon, c'est ça. Du vide bien placé. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Méditer la leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Redemander à jouer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36806,
+		"label": "hidden_speaker_36806",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "« Vous avez perdu, » constate Palver sans méchanceté, « mais vous avez perdu INTELLIGEMMENT. C'est rare. La plupart perdent bêtement et croient avoir eu de la malchance. » Il range le plateau. « Revenez. J'ai peut-être à apprendre de vous, finalement. Peut-être. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Promettre de revenir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Savourer le compliment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36807,
+		"label": "hidden_speaker_36807",
+		"deck": "hidden_speaker",
+		"weight": 1000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Vos visites à Palver se multiplient. Le vieux fermier vous teste autrement : il vous laisse seul avec ses voisins, observe comment vous traitez des gens sans importance. « On juge un Orateur à sa conduite envers ceux qui ne peuvent rien pour lui, » dira-t-il plus tard."
+		},
+		"conditions": [
+			{
+				"variable": "quest_palver",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 7
+			},
+			{
+				"variable": "palver_trust",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Traiter les humbles avec soin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Aller à l'essentiel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 36808,
+		"label": "hidden_speaker_36808",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amirale, impatiente, presse Palver de répondre. Le fermier la rembarre avec une douceur d'acier : « La précipitation, jeune femme, est le contraire de la psychohistoire. Votre Plan compte en siècles. Laissez un vieil homme compter en saisons. » L'amirale fulmine. Palver replante ses navets."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Calmer l'amirale"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Soutenir son impatience"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36809,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 36809,
+		"label": "hidden_speaker_36809",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Palver vous éprouve une dernière fois, par une question simple : « Pourquoi voulez-vous VRAIMENT de moi ? Pour le Plan, ou pour vous flatter d'avoir recruté le grand Palver ? » Mentir à cet homme est impossible. La vérité, elle, pourrait tout gâcher. Ou tout sceller."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Répondre en vérité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Esquiver la question"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36810,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "palver_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36810,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "palver_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 36810,
+		"label": "hidden_speaker_36810",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "« Bonne réponse, » dit Palver — vous ne saviez même pas qu'il y en avait une. Il ferme le rideau de sa ferme. « Le vieux planteur de navets va donc redevenir ce qu'il a toujours été en secret. Mais à MES conditions, et à mon rythme. Le génie ne se commande pas. Il s'invite. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.curtain_draw",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter ses conditions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier le rythme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36811,
+		"label": "hidden_speaker_36811",
+		"deck": "hidden_speaker",
+		"weight": 10000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année : Palver, désormais rallié, prépare sa transition. « Je laisse mes navets à mon voisin. Il les ratera, mais c'est la vie. » Sous la légèreté, une gravité immense : cet homme pourrait un jour présider la Table. Vous venez de changer l'avenir du Plan, peut-être."
+		},
+		"conditions": [
+			{
+				"variable": "quest_palver",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "palver_trust",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mesurer la portée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester modeste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36812,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 36812,
+		"label": "hidden_speaker_36812",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Palver vous confie une dernière pensée avant de vous suivre : « Vous m'avez recruté, oui. Mais souvenez-vous : un esprit comme le mien ne sert jamais tout à fait. Il CONSEILLE. Le jour où la Table croira me commander, je redeviendrai fermier. On s'est compris ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'est compris"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le trouver présomptueux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 36813,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "palver_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "palver_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 36813,
+		"label": "hidden_speaker_36813",
+		"deck": "hidden_speaker",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "Preem Palver rejoint la Seconde Fondation — fermier de Rossem en surface, géant psychohistorien en vérité. La Table tient peut-être là son futur Orateur Premier. « Au travail, jeune recruteur, » sourit-il. « Et tâchez de mériter le mal que vous vous êtes donné pour un vieux planteur de navets. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_palver",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir Palver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'incliner devant le maître"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 193,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_hidden_speaker",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 193,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_hidden_speaker",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 37200,
+		"label": "usurper_betrayal_37200",
+		"deck": "usurper_betrayal",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Sur Siwenna, un prétendant impérial mineur courtise votre appui : « Mon frère et moi revendiquons tous deux le trône fantôme de Neotrantor. Soutenez-moi, et l'Empire renaissant n'oubliera pas ses amis. » Deux frères, un trône imaginaire, et déjà du sang en perspective."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 197
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter le prétendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner cette folie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 37201,
+		"label": "usurper_betrayal_37201",
+		"deck": "usurper_betrayal",
+		"weight": 3000,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant veut frapper son frère le premier — fratricide préventif maquillé en stratégie. « Dans ma famille, attendre, c'est mourir, » justifie-t-il. La rivalité des héritiers impériaux est une vieille gangrène. Vous pouvez l'attiser, la freiner, ou vous en tenir loin."
+		},
+		"conditions": [
+			{
+				"variable": "seen_945",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_siwenna_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "pretender_stage",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 197
+			},
+			{
+				"variable": "fratricide",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Examiner son plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sonder la relation fraternelle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37202,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yuan_shu_brother_relationship",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37202,
+		"label": "usurper_betrayal_37202",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Vous creusez la relation des deux frères : haine ancienne, blessures d'enfance, un trône comme prétexte à un règlement de comptes intime. « Il a toujours été le préféré, » crache le prétendant. Les guerres de succession naissent rarement de l'ambition. Plutôt de la jalousie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter une réconciliation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exploiter la rancune"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_invade_jizhou_yuan_shao",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "pretender_stage",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fratricide",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 37203,
+		"label": "usurper_betrayal_37203",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant insiste pour la guerre fratricide. Le raisonner échoue — la blessure est trop vieille. « Vous ne comprenez pas ce que c'est, grandir dans son ombre, » siffle-t-il. Reste à choisir : armer ce conflit pour vos fins, ou refuser de salir vos mains."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser de l'armer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'armer à vos conditions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_invade_jizhou_yuan_shao",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "pretender_stage",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fratricide",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 37204,
+		"label": "usurper_betrayal_37204",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le prétendant attaque son frère — et perd, mal préparé, trop pressé. Sa déroute l'humilie et le rend dangereux : un usurpateur vaincu n'a plus rien à perdre. « Vous auriez dû m'aider DAVANTAGE, » vous reproche-t-il, oubliant qu'il a ignoré toute prudence."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "yuan_shao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gérer sa rancœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le lâcher"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_invade_jizhou_yuan_shao_lost",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37205,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 37205,
+		"label": "usurper_betrayal_37205",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "La défaite du prétendant tourne au désastre régional : son frère, vainqueur, soupçonne votre implication. Vous voilà mêlé à une querelle impériale dont aucun camp ne sortira grandi. Les guerres de succession éclaboussent toujours les conseillers."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se disculper"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Disparaître discrètement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.betrayal_yuan_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.betrayal_yuan_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37206,
+		"label": "usurper_betrayal_37206",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant, acculé, prépare une trahison de la dernière chance — retourner ses propres alliés contre son frère par la ruse. « La loyauté est un luxe que les perdants ne peuvent plus s'offrir, » philosophe-t-il, amer. La désespérance rend les hommes inventifs et infréquentables."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cautionner la ruse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en désolidariser"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37207,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fratricide",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 37207,
+		"label": "usurper_betrayal_37207",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "La trahison du prétendant se mue en bataille rangée : frère contre frère, alliés retournés, le trône fantôme noyé sous le sang réel. Votre influence pourrait décider de l'issue — mais s'impliquer dans un fratricide impérial est exactement le genre d'ingérence qui démasque un Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Peser sur la bataille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester à l'écart"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_invade_jizhou_yuan_shao_battle",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "fratricide",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 37208,
+		"label": "usurper_betrayal_37208",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "La poussière retombe sur la guerre fratricide : un frère mort, l'autre régnant sur des cendres. Le « trône de Neotrantor » n'aura jamais été qu'une illusion partagée par deux orgueils. Vous repartez avec une leçon sur la vanité des restaurations impériales."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "fratricide",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tirer la leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaindre les deux frères"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 37209,
+		"label": "usurper_betrayal_37209",
+		"deck": "usurper_betrayal",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le frère vainqueur, devenu paranoïaque, vous traque comme complice présumé de l'usurpateur. « Tous ceux qui ont parlé à mon frère sont mes ennemis, » décrète-t-il. La victoire l'a rendu fou — comme souvent les couronnes, même fantômes. Il faut le neutraliser ou fuir."
+		},
+		"conditions": [
+			{
+				"variable": "seen_966",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "pretender_stage",
+				"op": "equal",
+				"value": 7
+			},
+			{
+				"variable": "pretender_stage",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 199
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le neutraliser par la ruse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fuir Neotrantor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.betrayal_yuan_shu2",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_usurper_betrayal",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37210,
+		"label": "usurper_betrayal_37210",
+		"deck": "usurper_betrayal",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le frère vainqueur vous coince enfin. Sans soutien — l'usurpateur est mort, ses alliés dispersés — vous êtes seul face à un homme rendu cruel par sa victoire. La diplomatie ou la disparition : il n'y a plus d'autre carte à jouer dans cette partie perdue."
+		},
+		"conditions": [
+			{
+				"variable": "seen_966",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "pretender_stage",
+				"op": "equal",
+				"value": 7
+			},
+			{
+				"variable": "pretender_stage",
+				"op": "below",
+				"value": 5
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 199
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter la diplomatie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Disparaître à jamais"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.betrayal_yuan_shu2",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_usurper_betrayal",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37211,
+		"label": "usurper_betrayal_37211",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Vous vous tirez de l'affaire des frères — appauvri en relations, enrichi en méfiance. Le maître-espion fait le bilan : « Une querelle de succession de plus, un Orateur de plus qui a failli y laisser sa couverture. L'Empire meurt mal, et il nous entraîne dans sa chute. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_usurper_betrayal",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encaisser le bilan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jurer d'éviter les trônes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 37212,
+		"label": "usurper_betrayal_37212",
+		"deck": "usurper_betrayal",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'usurpateur, contre toute attente, survit — diminué, exilé, mais vivant. Il vous trouve des années plus tard : « Vous ne m'avez pas trahi, vous. Le seul. » Sa gratitude de paria vaut peu, mais elle est sincère. Les vaincus font parfois les alliés les plus loyaux. Faute de mieux."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_usurper_betrayal",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir le paria"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner ce fardeau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 37600,
 		"label": "planet_askone_37600",
 		"deck": "planet_askone",
@@ -43887,6 +45760,1021 @@
 		"moods": {
 			"default": "neutral",
 			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38400,
+		"label": "kalgan_campaign_38400",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Le seigneur de guerre de Kalgan exige votre soumission : « Tous les mondes de la périphérie plient devant moi, tôt ou tard. Pliez tôt, on reste amis. Pliez tard, on reste... moins amis. » Sa flotte mercenaire campe à la frontière. La menace n'est pas voilée."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Feindre la soumission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser tout net"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "submit_kalgan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 38401,
+		"label": "kalgan_campaign_38401",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact vous conseille la prudence face à Kalgan : « Ce seigneur de guerre est une force de la nature et un esprit médiocre — combinaison dangereuse. On ne le bat pas de front. On l'use, on le divise, on le laisse trébucher sur sa propre démesure. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre la stratégie d'usure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préférer la confrontation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38402,
+		"label": "kalgan_campaign_38402",
+		"deck": "kalgan_campaign",
+		"weight": 500,
+		"lockturn": 9,
+		"hidden": false,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Vous avez feint la soumission à Kalgan — et le seigneur l'exploite : il exige tribut sur tribut, traitant votre monde de couverture en vache à lait. « Un vassal qui rechigne n'est plus un vassal, » menace-t-il. La fausse allégeance a un prix qui monte vite."
+		},
+		"conditions": [
+			{
+				"variable": "submit_kalgan",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Continuer la comédie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rompre maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38403,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "keyworld_governor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_kalgan_campaign",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "submit_kalgan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -25,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 38403,
+		"label": "kalgan_campaign_38403",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "La rupture avec Kalgan est brutale : le seigneur de guerre, vexé d'avoir été berné, jure votre perte. Son armée se met en marche. « Personne ne se MOQUE de moi, » rugit-il. Vous avez gagné du temps par la ruse ; il faut maintenant payer l'addition par les armes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Organiser la défense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Évacuer le monde menacé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "keyworld_governor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_kalgan_campaign",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "submit_kalgan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -25,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "keyworld_governor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_kalgan_campaign",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "submit_kalgan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -25,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38404,
+		"label": "kalgan_campaign_38404",
+		"deck": "kalgan_campaign",
+		"weight": 100,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La guerre avec Kalgan est inévitable. L'amirale propose de prendre vous-même le commandement de la défense d'un monde-clé. « Un civil qui commande une flotte, c'est irrégulier, » admet-elle. « Mais vous voyez les choses que les militaires ratent. Alors ? Vous commandez ? »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 201
+			},
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "submit_kalgan",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre le commandement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser faire l'amirale"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "skip_command",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_prologue",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_city_defence_yuan_tan_confirmation",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38405,
+		"label": "kalgan_campaign_38405",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Vous voilà à la tête de la défense, contre toute logique de couverture. Les officiers vous jaugent — un inconnu aux ordres. Votre don mentalique lit leurs doutes, leurs forces, leurs peurs. Diriger une bataille en lisant chaque esprit : avantage immense, légitimité en péril."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Commander par l'intuition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Déléguer aux experts"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "skip_command",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_prologue",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "skip_command",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_prologue",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38406,
+		"label": "kalgan_campaign_38406",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Confirmation du plan de bataille : le seigneur de Kalgan attaquera le monde-clé sous trois jours. Tout est en place — défenses, flottes, pièges. L'amirale vous regarde : « C'est votre première vraie guerre, conseiller. Beaucoup en meurent. Tâchez de ne pas en être. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Confirmer le dispositif"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Revoir les défenses"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "submit_kalgan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38407,
+		"label": "kalgan_campaign_38407",
+		"deck": "kalgan_campaign",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La bataille pour le monde-clé s'engage. La flotte mercenaire de Kalgan est nombreuse mais désordonnée — reflet de son maître. Votre lecture des esprits ennemis vous offre une longueur d'avance. Reste à transformer cet avantage en victoire sans trop vous exposer."
+		},
+		"conditions": [
+			{
+				"variable": "skip_command",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter le désordre ennemi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer la défense pure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.defend_qingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.defend_qingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38408,
+		"label": "kalgan_campaign_38408",
+		"deck": "kalgan_campaign",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Vos défenses tiennent, l'ennemi flanche ! La flotte de Kalgan, mal commandée, se brise contre votre dispositif. La victoire est à portée — coûteuse en hommes et en matériel, mais éclatante. Le seigneur de guerre apprend qu'on peut le battre. La périphérie le remarquera."
+		},
+		"conditions": [
+			{
+				"variable": "skip_command",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 79
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": -50,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -30,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Achever la victoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Épargner les vaincus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_won",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_won",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38409,
+		"label": "kalgan_campaign_38409",
+		"deck": "kalgan_campaign",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La défense vacille — vos forces étaient trop maigres face à la masse mercenaire. Le monde-clé tombe ou survit de justesse, au prix fort. « On a sous-estimé sa flotte, » concède l'amirale, sombre. Une défaite n'est pas une fin, mais Kalgan, lui, jubile. Pour l'instant."
+		},
+		"conditions": [
+			{
+				"variable": "skip_command",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sauver ce qui peut l'être"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la revanche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_lost",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_defend_qingzhou_lost",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38410,
+		"label": "kalgan_campaign_38410",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "Le seigneur de Kalgan, battu sur le monde-clé, recule en grondant — sa démesure a trébuché, exactement comme prévu. La périphérie respire. « Bien commandé, conseiller, » reconnaît l'amirale. « Pour un civil. » De sa part, c'est presque une décoration."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer la victoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester vigilant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38411,
+		"label": "kalgan_campaign_38411",
+		"deck": "kalgan_campaign",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "regional_warlord",
+		"question": {
+			"FR": "La campagne de Kalgan s'achève, le seigneur de guerre repoussé mais non détruit — on n'anéantit pas une force de la nature, on la contient. « Il reviendra, » prévient le Contact. « Les seigneurs de guerre reviennent toujours. Mais vous avez gagné une génération de répit. C'est déjà beaucoup. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider le répit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Anticiper son retour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "submit_kalgan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "keyworld_governor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_kalgan_campaign",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "kalgan_warlord_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "submit_kalgan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
 			"no": "suspicious"
 		}
 	},
