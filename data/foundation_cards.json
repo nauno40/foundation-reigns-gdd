@@ -33833,6 +33833,1141 @@
 		}
 	},
 	{
+		"id": 40400,
+		"label": "feeble_heir_40400",
+		"deck": "feeble_heir",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre couverture actuelle vient avec un fardeau : un héritier décevant. « Père ! » lance le jeune homme mou, vautré. « J'ai eu une IDÉE de génie ! » Il en a une par jour. Aucune n'a jamais survécu au déjeuner."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encourager l'idée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tempérer ses ardeurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40401,
+		"label": "feeble_heir_40401",
+		"deck": "feeble_heir",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "L'héritier décevant s'est mis en tête de « moderniser les affaires familiales ». Traduction : il a signé trois contrats ruineux avant midi. Le gérant accourt, livide. Sauver la maison, ou laisser le fiston apprendre par la chute ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 223
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Annuler les contrats"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser apprendre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "politics",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 40402,
+		"label": "feeble_heir_40402",
+		"deck": "feeble_heir",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "Le fiston récidive : cette fois il a « investi » la dot familiale dans une mine de Kalgan qui n'existe pas. « Mais le prospectus était si BEAU, père ! » Le prospectus, oui. La mine, non. L'éducation d'un nigaud coûte cher."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 223
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "seen_1979",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Éponger la perte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le confronter durement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 40403,
+		"label": "feeble_heir_40403",
+		"deck": "feeble_heir",
+		"weight": 10000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "Contre toute attente, l'héritier décevant a UNE bonne idée — une vraie, profitable, presque brillante. Il en est le premier surpris : « J'ai... réussi quelque chose, père ? » Son regard quête une approbation que personne ne lui a jamais donnée."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 223
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			},
+			{
+				"variable": "seen_1980",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le féliciter sincèrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 40404,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_neotrantor_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 40404,
+		"label": "feeble_heir_40404",
+		"deck": "feeble_heir",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Encouragé pour la première fois, le fiston se redresse. Pas un génie, non — mais loyal, et soudain utile. « Je veux vous servir, père. Pour de vrai. » Un allié inattendu, né d'un mot gentil. Les Mentaliques savent le prix d'un mot gentil."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'enrôler à vos côtés"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le ménager encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 246,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 40405,
+		"label": "feeble_heir_40405",
+		"deck": "feeble_heir",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "Votre héritier, désormais zélé, dépense sans compter pour « être à la hauteur ». Sa loyauté coûte en crédits ce qu'elle rapporte en dévouement. « Tout pour la maison, père ! » Oui, eh bien, la maison aimerait garder un peu de trésorerie."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 246
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Modérer ses dépenses"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser faire le zèle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "commerce",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40406,
+		"label": "feeble_heir_40406",
+		"deck": "feeble_heir",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "Le fiston, voulant bien faire, offense un partenaire commercial par excès d'enthousiasme. « Je croyais bien faire, père ! » Il croit toujours bien faire. C'est à la fois sa qualité la plus touchante et son défaut le plus coûteux."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 246
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réparer l'offense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le sermonner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 40407,
+		"label": "feeble_heir_40407",
+		"deck": "feeble_heir",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "Votre héritier propose de financer un projet personnel — modeste, sincère, probablement voué à l'échec. « Juste une fois, père. Que ce soit MON idée à moi. » Le coût est réel. Le besoin de reconnaissance aussi."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 246
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer son projet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser, raisonnablement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40408,
+		"label": "feeble_heir_40408",
+		"deck": "feeble_heir",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "feeble_heir_char",
+		"question": {
+			"FR": "Le fiston, mûri par vos soins, vous remercie maladroitement : « Vous êtes le seul à avoir cru que je valais mieux que ma réputation, père. » Il ne saura jamais que « père » est un Mentalique sous couverture. Mais sa gratitude, elle, est vraie."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 246
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir sa gratitude"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner l'émotion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 41200,
+		"label": "recruit_archivist_41200",
+		"deck": "recruit_archivist",
+		"weight": 1000,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Santanni, on murmure qu'un archiviste légendaire vit reclus — mémoire vivante de l'Empire, capable de réciter des registres perdus depuis trois siècles. La Seconde Fondation tuerait pour un tel atout. Façon de parler. Quoique."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "quest_archivist",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le débusquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le mythe tranquille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 41201,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 41201,
+		"label": "recruit_archivist_41201",
+		"deck": "recruit_archivist",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'archiviste reclus vous jauge par-dessus ses lunettes poussiéreuses : « Encore un qui veut ma tête comme une bibliothèque. On vient toujours pour ce que je SAIS, jamais pour ce que je suis. Prouvez-moi le contraire, ou pêchez ailleurs. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.fishing_line_01",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'intéresser à l'homme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Aller droit au savoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 41202,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 41203,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 41202,
+		"label": "recruit_archivist_41202",
+		"deck": "recruit_archivist",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "« Tiens. De la curiosité sincère. C'est rare. » Le vieil archiviste range sa canne à pêche — car oui, il pêche, dans un monde sans mer, par pure provocation. « Posez vos questions, jeune homme. Mais une à la fois. La mémoire déteste la précipitation. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_recruit_archivist",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le questionner posément"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le presser un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "quest_archivist",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "quest_archivist",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 41203,
+		"label": "recruit_archivist_41203",
+		"deck": "recruit_archivist",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "« Vous me prenez pour un moteur de recherche, » soupire l'archiviste. « Tous pareils. L'Empire aussi me pressait. Regardez où il en est. » Il vous tourne le dos. Le brusquer l'a braqué — il faudra le reconquérir autrement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'excuser et patienter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Insister malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 41204,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 41204,
+		"label": "recruit_archivist_41204",
+		"deck": "recruit_archivist",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'archiviste teste votre patience par une énigme de trois jours. Au bout, il sourit : « Vous êtes resté. Les pressés partent au premier « demain ». » Il hésite. « Ma loyauté ne s'achète pas. Mais elle se mérite. Vous y êtes presque. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mériter sa loyauté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renoncer à le recruter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 41205,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_lu_zhi_recruited",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 41205,
+		"label": "recruit_archivist_41205",
+		"deck": "recruit_archivist",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "« Une condition, » dit l'archiviste. « Je viendrai — mais ma mémoire n'est PAS au service d'une foi. Ni la vôtre, ni l'Église, ni Seldon. Le savoir sert la vérité ou il ne sert rien. Jurez-le, et je suis à vous. » Un serment lourd pour un Mentalique."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "archivist_won",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_recruit_archivist",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le jurer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce serment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "quest_archivist",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "quest_archivist",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 41206,
+		"label": "recruit_archivist_41206",
+		"deck": "recruit_archivist",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'archiviste vous rejoint enfin, ses trois siècles de registres dans le crâne et sa canne à pêche sous le bras. « Au travail, donc. Et sachez : je vois bien que vous cachez quelque chose, jeune homme. Je ne demanderai pas. Les bons archivistes savent quoi ne pas archiver. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_archivist",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir l'archiviste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre l'étonnement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 130,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_recruit_archivist",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 41207,
+		"label": "recruit_archivist_41207",
+		"deck": "recruit_archivist",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'archiviste, des années plus tard, sent sa fin venir : « Ma mémoire va se taire, et avec elle trois siècles. J'ai tout consigné pour vous — sauf ce que vous êtes. Ça, je l'emporte. Un dernier secret bien gardé. Adieu, jeune homme qui n'a jamais été jeune. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_recruit_archivist",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": -130,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recueillir son héritage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller le vieil homme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 41600,
 		"label": "planet_smyrno_41600",
 		"deck": "planet_smyrno",
@@ -34387,6 +35522,394 @@
 		}
 	},
 	{
+		"id": 42000,
+		"label": "outer_barbarians_42000",
+		"deck": "outer_barbarians",
+		"weight": 3500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Aux confins de la carte, un « marchand » barbare vous propose un troc : ses pierres-feu contre vos générateurs. Le sourire est large, les dents pointues, et l'arnaque palpable. « Affaire d'ami ! » insiste-t-il. Les affaires d'ami sont les pires."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Marchander prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Couper court"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42001,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 42001,
+		"label": "outer_barbarians_42001",
+		"deck": "outer_barbarians",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le barbare baisse d'un cran : « Bon, bon. Moins de générateurs. Mais vous ajoutez le secret des piles atomiques, hein ? Petit secret entre amis. » Il vous vendrait sa mère et la rachèterait au double. Du grand art frontalier."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser le secret atomique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout arrêter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_foreign_merchant_bad_deal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42002,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 42002,
+		"label": "outer_barbarians_42002",
+		"deck": "outer_barbarians",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "« Dernière offre, dernière ! » Le barbare transpire l'avidité. « Mes pierres-feu valent une fortune sur Trantor, vous le savez. Donnez-moi juste de quoi armer trois clans et on est quittes. » Armer des clans : voilà le vrai prix."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser d'armer les clans"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mettre fin au marché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_foreign_merchant_bad_deal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42003,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 42003,
+		"label": "outer_barbarians_42003",
+		"deck": "outer_barbarians",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le marchand barbare abat enfin un jeu honnête — ce qui le rend presque sympathique : « D'accord. Prix juste, pierres contre vivres, pas d'armes, pas de secrets. Ma horde a faim, l'étranger, et la faim rend même un barbare raisonnable. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conclure le marché honnête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se méfier encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_foreign_merchant_bad_deal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_foreign_merchant_deal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 42004,
+		"label": "outer_barbarians_42004",
+		"deck": "outer_barbarians",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous avez cédé au marché de dupes : les clans barbares, soudain armés et nourris, se découvrent des ambitions. Une horde rassasiée est une horde qui veut davantage. La frontière gronde, et c'est un peu votre œuvre."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_outer_barbarians",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer l'erreur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réparer en urgence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 42005,
+		"label": "outer_barbarians_42005",
+		"deck": "outer_barbarians",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le marché honnête porte ses fruits : les clans nourris deviennent une zone tampon loyale, gardienne improbable de la frontière. Le chef barbare vous envoie même un cadeau — une pierre-feu, « pour l'ami qui n'a pas menti »."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "barbarian_clans",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller l'alliance frontalière"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_outer_barbarians",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42006,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 42006,
+		"label": "outer_barbarians_42006",
+		"deck": "outer_barbarians",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'affaire barbare se referme : ni guerre ni grande alliance, juste un commerce qui tient tant que la faim tient. Vous repartez vers le centre, laissant la frontière à ses pierres-feu et à ses dents pointues."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_outer_barbarians",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Repartir vers le centre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir vers le centre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 42400,
 		"label": "planet_santanni_42400",
 		"deck": "planet_santanni",
@@ -34867,6 +36390,1359 @@
 		}
 	},
 	{
+		"id": 42800,
+		"label": "local_cult_42800",
+		"deck": "local_cult",
+		"weight": -1,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Askone, un culte dévoyé de l'Esprit Galactique vous inquiète : ils ont remplacé les générateurs par des « autels vivants » et brûlent quiconque répare une machine. « La panne est sacrée ! » psalmodient-ils devant un réacteur mourant."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Enquêter sur le culte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser couver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 42801,
+		"label": "local_cult_42801",
+		"deck": "local_cult",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le chef du culte vous accueille, illuminé : « Vos prêtres-ingénieurs ont menti ! La vraie foi ne RÉPARE pas, elle ACCEPTE ! Quand la machine meurt, l'Esprit nous parle dans le silence revenu ! » Derrière lui, Askone retourne lentement au Moyen Âge."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le contredire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre l'intérêt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42802,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42802,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 42802,
+		"label": "local_cult_42802",
+		"deck": "local_cult",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le culte gagne du terrain — par la peur. Démasquer leur chef comme un charlatan briserait son emprise, mais provoquerait des émeutes. Le laisser faire, c'est regarder un monde s'éteindre, autel après autel."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Démasquer le chef"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Manœuvrer en coulisse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42803,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 42803,
+		"label": "local_cult_42803",
+		"deck": "local_cult",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous infiltrez le sanctuaire : le « chef inspiré » cache des générateurs de secours dans sa crypte. Il prêche la panne sacrée et s'éclaire à l'électricité volée. L'hypocrisie a toujours eu bon dos sur les mondes pieux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter l'hypocrisie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La révéler au grand jour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42804,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 42804,
+		"label": "local_cult_42804",
+		"deck": "local_cult",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Un docker repenti du culte vous supplie : « Aidez-nous à revenir à la raison ! Mes enfants grelottent dans le noir au nom de l'Esprit. Une foi qui gèle les enfants n'est pas une foi, c'est une prison. » Il a tout risqué pour vous parler."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Organiser un retour à la raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop dangereux maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 42805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 42805,
+		"label": "local_cult_42805",
+		"deck": "local_cult",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le culte tombe — le chef démasqué, Askone rebranché, les autels redevenus des machines. Le monde vous tient pour un libérateur, l'Église pour un rival, et le chef déchu pour un ennemi mortel. On ne sauve jamais un monde gratuitement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter Askone réchauffé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surveiller les braises"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "planet_askone_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "askone_cult_leader",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_local_cult",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 43200,
+		"label": "province_surrender_43200",
+		"deck": "province_surrender",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "Un monde frontalier propose sa reddition à la Fondation — spontanément, drapeau blanc et fanfare. L'amirale flaire le piège : « Personne ne se rend AVANT la bataille, l'ami. Sauf pour mieux nous ouvrir les portes... de l'intérieur. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la reddition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en méfier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43201,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43201,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 43201,
+		"label": "province_surrender_43201",
+		"deck": "province_surrender",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'envoyé du monde candidat jure sa bonne foi avec trop d'insistance. L'amirale vous glisse : « Soit il est sincère et terrifié, soit il joue très bien. Dans les deux cas, on l'observe avant de l'embrasser. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Observer encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Conclure vite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43202,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_suspicious_surrender",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 43202,
+		"label": "province_surrender_43202",
+		"deck": "province_surrender",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "Le piège se referme : la « délégation de paix » dégaine. Un assassin vous vise — l'amirale s'interpose. La reddition était un cheval de Troie, et vous avez failli ouvrir vous-même la porte de la citadelle."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Riposter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Riposter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_assassine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_assassine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 43203,
+		"label": "province_surrender_43203",
+		"deck": "province_surrender",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "Les soupçons confirmés : le monde candidat préparait une trahison. Mais l'amirale tempère : « Démasqués trop tôt, ils nieront tout et nous passerons pour des paranoïaques agresseurs. Frappons, ou laissons-les croire qu'on a mordu ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Frapper les premiers"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre la naïveté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_not_suspicious_surrender",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.wei_revenge",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 43204,
+		"label": "province_surrender_43204",
+		"deck": "province_surrender",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La reddition était sincère, finalement — un monde épuisé qui choisit la Fondation plutôt que la conquête de Kalgan. L'amirale s'excuse à demi : « Ma méfiance vous a fait gagner du temps, au moins. Un allié prudent vaut mieux qu'un dupe content. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_terminus_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_province_surrender",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir le nouvel allié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur ses gardes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 43205,
+		"label": "province_surrender_43205",
+		"deck": "province_surrender",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'affaire de la reddition se solde sans gloire ni désastre : le monde reste neutre, ni allié ni ennemi, et vous repartez vers d'autres feux. Tous les coups de dés galactiques ne donnent pas un six."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_province_surrender",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Repartir ailleurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir ailleurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 43600,
+		"label": "forell_son_43600",
+		"deck": "forell_son",
+		"weight": 500,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "forell_son_char",
+		"question": {
+			"FR": "Une dépêche de la maison Forell — la grande dynastie marchande, héritière de Mallow — vous trouve loin de Terminus : « Le fils du patriarche a fugué. Encore. Le vieux Forell vous paie une fortune pour le ramener. Discrètement. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rentrer sur Terminus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer la dépêche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 43601,
+		"label": "forell_son_43601",
+		"deck": "forell_son",
+		"weight": 800,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "forell_patriarch",
+		"question": {
+			"FR": "Le patriarche Forell vous reçoit, accablé : « Mon fils unique court les bas-fonds avec un singe-robot de compagnie et des idées d'anarchiste. Ramenez-le-moi avant qu'il ne dilapide six générations de commerce en slogans. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "forell_runaway",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la traque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sermonner le père"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43602,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43602,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 43602,
+		"label": "forell_son_43602",
+		"deck": "forell_son",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "forell_son_char",
+		"question": {
+			"FR": "Vous pistez le fils Forell jusqu'à un tripot, son singe-robot perché sur l'épaule, déclamant aux ivrognes : « La propriété, c'est du vol ! » Le robot répète : « Du vol ! Du vol ! » L'effet est moins révolutionnaire qu'absurde."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.macaque_monkey_long",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Raisonner le fils"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer son jeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43603,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43603,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 43603,
+		"label": "forell_son_43603",
+		"deck": "forell_son",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "« Vous ! Père vous envoie ! » Le fils Forell recule, le singe-robot couinant. « Je ne rentrerai pas pour gérer des cargaisons et épouser une dot ! Je veux VIVRE, comprenez-vous ça, vous qui obéissez ? » La question, étrangement, vous pique."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.macaque_monkey_short",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le comprendre vraiment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire votre travail"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43604,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 43604,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 43604,
+		"label": "forell_son_43604",
+		"deck": "forell_son",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "forell_patriarch",
+		"question": {
+			"FR": "Vous ramenez le fils Forell — ou un compromis : il rentrera, mais gardera son singe et une part de liberté. Le patriarche grogne mais paie. Le fils vous glisse : « Vous aussi vous obéissez à un père invisible, non ? Ça se voit. » Petit malin."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_forell_son",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_forell_son",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "forell_runaway",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encaisser la remarque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Nier en bloc"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_macaque_home",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "forell_returned",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "forell_returned",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 44000,
+		"label": "find_the_contact_44000",
+		"deck": "find_the_contact",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Contact de la Seconde Fondation s'est tu depuis six mois. Un courtier de Santanni jure l'avoir vu, terré, méconnaissable : « Il répète qu'on l'a « lu ». Qu'on a fouillé sa tête. Il a peur de tout le monde. Même de vous, sans doute. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 7
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "quest_find_contact",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "contact_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le retrouver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le croire perdu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "quest_find_contact",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "contact_trust",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_find_liu_bei_complete",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 44001,
+		"label": "find_the_contact_44001",
+		"deck": "find_the_contact",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une seconde piste mène au même homme, plus bas encore : le Contact dort dans les soutes d'un cargo, change de nom chaque nuit. « Il dit qu'un esprit froid l'a effleuré entre deux sauts. Vous voyez de quoi il parle, vous ? » Oui. Vous voyez."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 7
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "quest_find_contact",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "contact_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Descendre dans les soutes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renoncer à la traque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "quest_find_contact",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "contact_trust",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_find_liu_bei_complete",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 44002,
+		"label": "find_the_contact_44002",
+		"deck": "find_the_contact",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Korell, enfin, vous le coincez : votre Contact, hagard, la main sur un blaster qu'il braque sur vous. « Prouvez que vous êtes vous ! Prouvez qu'on ne vous a pas REMPLACÉ ! » Comment prouver son âme à un homme qui a perdu la sienne ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 7
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "quest_find_contact",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "contact_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui parler doucement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Désarmer de force"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "quest_find_contact",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "contact_trust",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_find_liu_bei_complete",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 44003,
+		"label": "find_the_contact_44003",
+		"deck": "find_the_contact",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le Contact retrouvé se calme enfin, reconnaît un allié. « Pardon. J'ai cru... peu importe. J'ai des informations, et un cheval rapide pour les porter — un courrier, je veux dire. La Seconde Fondation respire grâce à vous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "agent_loyal",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_find_the_contact",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Récupérer les informations"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le mettre d'abord à l'abri"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "fast_courier",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 44400,
 		"label": "planet_neotrantor_44400",
 		"deck": "planet_neotrantor",
@@ -35130,6 +38006,283 @@
 			"default": "neutral",
 			"yes": "neutral",
 			"no": "curious"
+		}
+	},
+	{
+		"id": 44800,
+		"label": "agents_mother_44800",
+		"deck": "agents_mother",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une vieille dame frappe à votre porte de couverture, panier au bras : « Mon fils vous admire, monsieur. Il parle de vous à table. Je suis venue voir si vous méritiez l'admiration de mon garçon, ou s'il faut que je le détrompe. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se montrer digne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'éconduire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "agent_loyalty",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "agent_loyalty",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 44801,
+		"label": "agents_mother_44801",
+		"deck": "agents_mother",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La mère revient, plus directe : « Mon fils veut entrer à votre service. Je m'y oppose. C'est dangereux, ce que vous faites — non, ne niez rien, une mère sent ces choses. Convainquez-moi, ou je le garde aux champs. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "La convaincre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lui donner raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "agent_loyalty",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "agent_loyalty",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 44802,
+		"label": "agents_mother_44802",
+		"deck": "agents_mother",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "« Une dernière épreuve, » dit la mère en plissant les yeux. « Mon défunt mari jugeait un homme à la façon dont il refuse. Refusez-moi quelque chose, là, maintenant, avec élégance. Allez. » Test piégeux d'une matriarche rusée."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser avec élégance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout accepter d'elle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "agent_loyalty",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "agent_loyalty",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 44803,
+		"label": "agents_mother_44803",
+		"deck": "agents_mother",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "« C'est bon. » La mère vous confie son fils d'un signe de tête. « Il est brave et loyal — trop, peut-être. Gardez-le en vie, monsieur, ou je vous retrouverai. Une vieille femme avec un panier va partout. On ne la soupçonne jamais. »"
+		},
+		"conditions": [
+			{
+				"variable": "agent_loyalty",
+				"op": "above",
+				"value": 4
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_agents_mother",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "quest_agents_mother",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir l'agent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Promettre de le protéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 202,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
 		}
 	},
 	{

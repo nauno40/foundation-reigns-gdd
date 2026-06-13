@@ -250,5 +250,26 @@
 	},
 	"_complaints_about_immigrants": {
 		"action": "enddispatch"
+	},
+	"_find_liu_bei_complete": {
+		"node": 44003
+	},
+	"_macaque_home": {
+		"action": "enddispatch"
+	},
+	"_foreign_merchant_bad_deal": {
+		"node": 42004
+	},
+	"_foreign_merchant_deal": {
+		"node": 42005
+	},
+	"_lu_zhi_recruited": {
+		"node": 41206
+	},
+	"_suspicious_surrender": {
+		"node": 43203
+	},
+	"_not_suspicious_surrender": {
+		"node": 43204
 	}
 }
