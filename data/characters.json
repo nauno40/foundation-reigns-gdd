@@ -78,5 +78,18 @@
 		"deck": "siwenna_affair",
 		"fixed": true,
 		"role": "Cadet de la famille Barr"
+	},
+	"the_widow_velm": {
+		"name": "Veuve Velm",
+		"deck": "mentalic_inquiry",
+		"fixed": true,
+		"role": "Veuve de Sayshell"
+	},
+	"the_echo": {
+		"name": "L'Écho",
+		"deck": "mentalic_inquiry",
+		"fixed": true,
+		"role": "Voyageur égaré",
+		"key": true
 	}
 }

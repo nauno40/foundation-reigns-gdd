@@ -9,7 +9,7 @@
 	"B118": "role:fleet_admiral",
 	"B144": "role:invader",
 	"B141": "role:imperial_envoy",
-	"B123": "role:terminus_mayor",
+	"B123": "role:exorcist",
 	"B244": "role:mob_leader",
 	"B133": "role:agitator",
 	"B115": "role:high_priest",
@@ -21,7 +21,8 @@
 	"B116": "role:matchmaker",
 	"B203": "role:terminus_mayor",
 	"B168": "onum_barr",
-	"B238": "lewin_barr",
+	"B238": "the_echo",
 	"B210": "role:table_analyst",
-	"B232": "role:memory_keeper"
+	"B232": "role:memory_keeper",
+	"B195": "the_widow_velm"
 }

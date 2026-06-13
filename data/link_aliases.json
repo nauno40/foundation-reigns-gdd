@@ -159,5 +159,87 @@
 	},
 	"_xu_shu_when_back": {
 		"action": "enddispatch"
+	},
+	"_define_ghost": {
+		"node": 22041
+	},
+	"_zuo_ci_guidance": {
+		"nodes": [
+			22017,
+			22024,
+			22023,
+			22018,
+			22026,
+			22027,
+			22015,
+			22016,
+			22019,
+			22020,
+			22022,
+			22025
+		]
+	},
+	"_front_bell": {
+		"node": 22002
+	},
+	"_front_pear": {
+		"node": 22003
+	},
+	"_rear_bell": {
+		"node": 22004
+	},
+	"_rear_pear": {
+		"node": 22005
+	},
+	"_jar_front": {
+		"nodes": [
+			22034,
+			22033
+		]
+	},
+	"_jar_rear": {
+		"nodes": [
+			22037,
+			22036
+		]
+	},
+	"_meet_the_ghost": {
+		"nodes": [
+			22038,
+			22035
+		]
+	},
+	"_the_ghost_appears": {
+		"nodes": [
+			22039,
+			22040
+		]
+	},
+	"_be_human_again": {
+		"nodes": [
+			22045,
+			22046
+		]
+	},
+	"_ghost_true_form": {
+		"node": 22047
+	},
+	"_ghost_freed": {
+		"node": 22056
+	},
+	"_ghost_trapped": {
+		"node": 22062
+	},
+	"_ghost_lady_revenge": {
+		"node": 22063
+	},
+	"_free_the_ghost_instructions": {
+		"nodes": [
+			22063,
+			22064
+		]
+	},
+	"_become_a_ghost": {
+		"node": 22069
 	}
 }

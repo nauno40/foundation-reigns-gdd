@@ -21377,6 +21377,4181 @@
 		}
 	},
 	{
+		"id": 22000,
+		"label": "mi_22000",
+		"deck": "mentalic_inquiry",
+		"weight": 140,
+		"lockturn": 400,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Une rumeur de hantise vous parvient — mais d'un autre monde que celui où vous êtes. « Le spectre de Neotrantor », qu'ils disent. Les spectres voyagent mal ; les rumeurs, très bien."
+		},
+		"conditions": [
+			{
+				"variable": "echo_resolved",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Aller voir à Neotrantor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer la rumeur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_neotrantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22001,
+		"label": "mi_22001",
+		"deck": "mentalic_inquiry",
+		"weight": 2000,
+		"lockturn": 400,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Sur Sayshell, une veuve vous arrête, livide : « Vous lisez les choses cachées, on me l'a dit. Mon mari est mort il y a un an. Depuis trois nuits, il REVIENT. Il déplace les objets. Il prononce mon nom. L'Église parle de démon. Moi je veux mon mari. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_resolved",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'enquête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner poliment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_define_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_define_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22002,
+		"label": "mi_22002",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Cloche à l'avant, cloche claire : l'écho est ancré côté seuil, et il VOUS attend. Sa résonance est chaude — presque accueillante. Il a une présence à l'avant, et de la chaleur. Notez bien : ces deux faits décideront de tout."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "echo_front",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "echo_warmth",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "inquiry_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Continuer la triangulation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Marquer une pause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22003,
+		"label": "mi_22003",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Cloche à l'avant, mais pas de chaleur : l'écho occupe le seuil et reste FROID, fermé comme une porte gelée. Présence à l'avant, sans chaleur. Deux faits à retenir — ils pèseront lourd au dénouement."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "echo_front",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "$ghost_fox",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "inquiry_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Continuer la triangulation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Marquer une pause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22004,
+		"label": "mi_22004",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Pas mats à l'arrière, mais une chaleur soudaine : l'écho se tient au FOND de la maison, et pourtant il rayonne. Présence à l'arrière, chaleur présente. Gravez ces deux relevés : ils sont la clé."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "$ghost_front",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "echo_warmth",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "inquiry_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Continuer la triangulation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Marquer une pause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22005,
+		"label": "mi_22005",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Pas mats à l'arrière, aucune chaleur : l'écho s'est réfugié au fond, glacé, recroquevillé. Présence à l'arrière, sans chaleur. Deux faits froids — mais ce sont eux qui ouvriront, ou fermeront, la dernière porte."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "$ghost_front",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "$ghost_fox",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "inquiry_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Continuer la triangulation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Marquer une pause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22006,
+		"label": "mi_22006",
+		"deck": "mentalic_inquiry",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "La veuve vous mène à la chambre du défunt. Tout y est figé depuis un an — sauf une chose : chaque matin, les livres sont reclassés. Par auteur. Son mari, dit-elle, ne savait pas lire."
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_22066",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Examiner les livres"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Interroger la veuve d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22007,
+		"label": "mi_22007",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Les livres reclassés forment un motif. Pas alphabétique : THÉMATIQUE. Astronomie, navigation, cartographie de la périphérie. Quelqu'un — quelque chose — cherche une route dans cette bibliothèque, nuit après nuit."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre la piste des cartes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refermer les livres"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22008,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22008,
+		"label": "mi_22008",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Un atlas reste toujours ouvert à la même page : le bord extérieur de la Galaxie, là où les cartes deviennent des suppositions. Dans la marge, tracée à l'ongle dans le papier : une croix. Et sous la croix, un seul mot griffonné : « MAISON »."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mémoriser la position"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refermer l'atlas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22009,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22009,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22009,
+		"label": "mi_22009",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "« Il cherchait à rentrer quelque part, » comprenez-vous. La Veuve pâlit : « Mon mari n'a jamais quitté Sayshell de sa vie. Il avait le mal de l'espace. Il détestait les étoiles. » Alors qui range ces atlas la nuit ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ce n'est pas son mari"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ménager la veuve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22010,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22010,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22010,
+		"label": "mi_22010",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Vous effleurez l'atlas de votre sens mentalique. Une trace y dort — pas humaine, pas tout à fait. Une intention, lisse et froide, répétée des milliers de fois : trouver le chemin du retour. Le « fantôme » n'est pas un mort. C'est un VOYAGEUR égaré."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approfondir le contact"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rompre le contact"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22011,
+		"label": "mi_22011",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Le contact s'approfondit, et quelque chose vous répond — pas en mots : en GRATITUDE. Mille ans de solitude qui reconnaissent, enfin, un esprit capable de les entendre. La Veuve vous secoue : vous flottiez, les yeux blancs, depuis dix minutes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Revenir à soi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester encore un instant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22012,
+		"label": "mi_22012",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Vous savez désormais à quoi vous avez affaire : pas un défunt, mais une conscience non-humaine échouée dans une maison de Sayshell, accrochée au souvenir de son habitant pour ne pas se dissoudre. L'enquête entre dans sa phase délicate."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "inquiry_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Identifier sa nature exacte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avancer prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22013,
+		"label": "mi_22013",
+		"deck": "mentalic_inquiry",
+		"weight": 1800,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "L'Exorciste de l'Église de la Science vous toise, encensoir nucléaire au poing : « Un laïc sur MON affaire de démon ? » Il baisse la voix. « Entre nous : ce n'est pas un démon. C'est trop... ordonné. Les démons sèment le chaos. Celui-ci RANGE. Vous y comprenez quelque chose, vous ? »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'aider discrètement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à son rite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zuo_ci_guidance",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zuo_ci_guidance",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22014,
+		"label": "mi_22014",
+		"deck": "mentalic_inquiry",
+		"weight": 1200,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Pour le localiser, il faut l'écouter. » L'Exorciste tend une coupe résonante vers l'AVANT de la maison. « Concentrez-vous. Une cloche claire, ou un bruit de pas mat comme une poire qui tombe ? Ce que vous percevez dira où dort sa conscience. »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "seen_22067",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Une cloche, à l'avant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Des pas, à l'avant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_front_bell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_front_pear",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22015,
+		"label": "mi_22015",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Présence à l'avant — bien. » L'Exorciste hoche la tête, et une cloche tinte faiblement, toute seule. « Vous l'entendez ? Il confirme. Un démon vous mentirait. Lui se contente d'exister plus fort là où vous le cherchez. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.faint_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "widow_sanity",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Poursuivre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Frissonner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22016,
+		"label": "mi_22016",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Avant, donc. » L'Exorciste trace une rune nucléaire sur le seuil. « S'il est devant, il veut être TROUVÉ. Les échos qui se cachent sont au fond ; ceux qui s'exposent demandent de l'aide. Le vôtre demande. Bruyamment. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui répondre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder ses distances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22017,
+		"label": "mi_22017",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« À l'avant, ET chaud ? » L'Exorciste siffle entre ses dents. « C'est presque vivant, ça. La chaleur, c'est de l'attachement. Cette chose AIME quelqu'un dans cette maison. Méfiez-vous : l'amour d'un écho est une corde qui tient des deux côtés. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Comprendre l'attachement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Couper court"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22018,
+		"label": "mi_22018",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Avant, mais froid. » L'Exorciste retire sa main du seuil. « Présence sans chaleur : il vous laisse approcher mais ne vous laissera pas entrer. C'est un gardien, pas un suppliant. Quelque chose le retient là, par devoir, pas par amour. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher ce devoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22019,
+		"label": "mi_22019",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« À l'arrière. » L'Exorciste se dirige vers le fond, lampe levée. « Ce qui se terre au fond a peur, ou se cache de quelqu'un. Demandez-vous DE QUI un mort aurait peur. La réponse n'est jamais agréable. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avancer vers le fond"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hésiter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22020,
+		"label": "mi_22020",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Arrière confirmé. » Une porte claque seule au fond du couloir. « Il bat en retraite à chaque pas. Soit il joue, soit il vous protège de ce qu'il y a derrière la dernière porte. Avec les échos, c'est souvent les deux. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Forcer la dernière porte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Respecter sa retraite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22021,
+		"label": "mi_22021",
+		"deck": "mentalic_inquiry",
+		"weight": 1200,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Maintenant l'ARRIÈRE de la maison. » L'Exorciste pivote la coupe vers les chambres du fond. « Même question, autre direction. Les échos mentent par omission, jamais par invention. Croisez les deux relevés et nous le tiendrons. »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "seen_22067",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Une cloche, à l'arrière"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Des pas, à l'arrière"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rear_bell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rear_pear",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22022,
+		"label": "mi_22022",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Au fond, et froid comme une comète. » L'Exorciste resserre son manteau ; la température a chuté de dix degrés. « Voilà un esprit qui s'éteint, l'ami. Sans chaleur, un écho se dissout en quelques nuits. Si vous voulez lui parler, c'est maintenant ou jamais. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui parler maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser s'éteindre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22023,
+		"label": "mi_22023",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "L'Exorciste compare ses relevés au vôtre : « L'avant. Vos deux sens concordent. Rare, chez un laïc. » Il vous regarde différemment. « Vous ne lisez pas que les vivants, n'est-ce pas ? Non, ne répondez pas. Je ne veux pas avoir à vous dénoncer. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ne pas répondre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner la conversation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22024,
+		"label": "mi_22024",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Arrière et chaleur — la combinaison qui m'inquiète le plus. » L'Exorciste s'assoit lourdement. « Il se cache ET il aime. Ça veut dire qu'il se cache DE l'objet de son amour. Un écho qui fuit ce qu'il chérit a généralement une très bonne raison. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Découvrir la raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ne pas remuer ça"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22025,
+		"label": "mi_22025",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Arrière, sans chaleur. Le plus simple des cas, le plus triste. » L'Exorciste range ses runes. « Une conscience qui s'éteint au fond d'une maison qui n'est pas la sienne. Pas de drame, pas de vengeance. Juste quelqu'un de perdu qui voudrait qu'on lui indique la sortie. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui indiquer la sortie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Conclure l'affaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22026,
+		"label": "mi_22026",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« L'avant, encore. » L'Exorciste griffonne. « Trois confirmations concordantes. À ce stade, mon rituel d'exorcisme le réduirait en poussière en un Pater nucléaire. » Il vous fixe. « Vous n'avez pas l'air de vouloir que je le réduise en poussière. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ne pas le détruire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Y réfléchir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22027,
+		"label": "mi_22027",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "« Devant, devant, toujours devant. » L'Exorciste claque son grimoire. « Il vous a choisi, l'ami. Entre l'Église qui veut l'exorciser et le laïc qui veut le comprendre, il s'est planté DEVANT vous. Les morts savent reconnaître leur seule chance. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter d'être sa chance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce rôle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22028,
+		"label": "mi_22028",
+		"deck": "mentalic_inquiry",
+		"weight": 3000,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Vous avez sondé l'avant et l'arrière. Les relevés se croisent en un point précis : sous l'escalier, là où la veuve range les conserves. « C'est donc là qu'il s'est ancré, » murmure la Veuve. « Là qu'il m'attend. »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			},
+			{
+				"variable": "seen_22014",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_22021",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Descendre sous l'escalier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer un piège d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22029,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22029,
+		"label": "mi_22029",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Sous l'escalier, l'air est solide. Une question monte en vous, irrépressible — la sienne, pas la vôtre : « EST-CE QUE LA CHALEUR EXISTE ENCORE, DEHORS ? » Comment répondre à un froid de mille ans ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Oui, elle existe »"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Je ne sais pas »"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "echo_answered",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 22030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "$ghost_answer_fox",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 22030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22030,
+		"label": "mi_22030",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Votre réponse le traverse comme une lampe traverse une vitre. Pour la première fois, l'écho se laisse VOIR : non pas l'image du mari défunt, mais une géométrie de lumière froide, ancienne, infiniment fatiguée. Ce n'a jamais eu de visage humain."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir sa vraie forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer d'horreur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22031,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22031,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22031,
+		"label": "mi_22031",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "« VOUS NE FUYEZ PAS, » constate-t-il, étonné — c'est la première émotion qu'il éprouve depuis des siècles. « LES AUTRES FUIENT. LA FEMME PLEURE, LE PRÊTRE PRIE. VOUS, VOUS RESTEZ. POURQUOI ? » La maison entière retient son souffle."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Parce que je vous entends »"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Parce que c'est mon devoir »"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22032,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22032,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22032,
+		"label": "mi_22032",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "« ALORS AIDEZ-MOI À PARTIR. » L'Exorciste vous tend un récipient de confinement — un « bocal à âme », dit-il, un piège résonant. « Placez-le DEVANT lui pour l'attirer, ou DERRIÈRE pour le contraindre. L'un libère, l'autre emprisonne. Choisissez bien : il n'y a pas de seconde tentative. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le bocal devant lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le bocal derrière lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jar_front",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jar_rear",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22033,
+		"label": "mi_22033",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Bocal devant, présence à l'avant : l'écho glisse vers le piège ouvert sans résister, comme un voyageur reconnaît un port. Il n'est pas « né de l'hiver » — il vient d'ailleurs, d'avant les saisons humaines. Vous le sentez : ce n'est pas un mort. C'est un survivant."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "$ghost_winterborn",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 22034,
+		"label": "mi_22034",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Bocal devant, et soudain une morsure de gel : l'écho est « né de l'hiver » — un froid plus vieux que Sayshell, plus vieux que l'Empire. Il entre dans le piège avec la lenteur des choses immenses. Vous allez le rencontrer face à face."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "echo_winterborn",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22035,
+		"label": "mi_22035",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Le piège mal placé n'attire rien. L'écho reste hors d'atteinte, à l'avant, intact. La Veuve sanglote : « Vous l'avez fait fuir ! » Mais non — il est là, il attend une meilleure approche. Les échos sont patients. Mille ans enseignent la patience."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réessayer autrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réessayer autrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22036,
+		"label": "mi_22036",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Bocal derrière, présence au fond : la contrainte se referme doucement, sans gel. L'écho n'oppose aucune résistance — il semble presque soulagé qu'on décide pour lui. Pas né de l'hiver : né d'un long voyage. Vous allez le rencontrer."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "$ghost_winterborn",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 22037,
+		"label": "mi_22037",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Bocal derrière, et le gel mord jusqu'aux os : l'écho « né de l'hiver » se laisse contraindre au fond de la maison, résigné. Une tristesse ancienne emplit la pièce. Le moment de la rencontre est venu."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "echo_winterborn",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rencontrer l'écho"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22038,
+		"label": "mi_22038",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Vous êtes seul face à lui, désormais — l'Exorciste a reculé jusqu'au seuil, ses prières taries. À l'avant de la maison, la géométrie froide attend votre premier mot. Tout dépend de ce que vous direz à une chose qui n'a pas parlé à un esprit depuis mille ans."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui demander son nom"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lui demander d'où il vient"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 22039,
+		"label": "mi_22039",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "L'écho se manifeste pleinement, et la maison disparaît : vous flottez dans son souvenir à lui — une nuée d'autres comme lui, une migration de consciences froides traversant le vide vers un monde-ruche au bord de la carte. Lui seul s'est perdu en route."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Comprendre sa migration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Revenir au présent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_ghost_appears",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_ghost_appears",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22040,
+		"label": "mi_22040",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "La manifestation vous engloutit : pas une vie humaine, mais des SIÈCLES condensés — un être fait pour le long voyage, échoué sur Sayshell quand son vaisseau-pensée s'est brisé. Il s'est accroché au premier esprit chaud venu : le mari de la Veuve, qui en est mort."
+		},
+		"conditions": [
+			{
+				"variable": "echo_front",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui pardonner le mari"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le lui reprocher"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_ghost_appears",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_ghost_appears",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22041,
+		"label": "mi_22041",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Première nuit dans la maison de la Veuve. À trois heures, une résonance vous réveille — pas un son : une PENSÉE qui n'est pas la vôtre, glissée sous votre crâne comme une lettre sous une porte. Elle dit, très distinctement : « ENFIN. UN QUI ENTEND. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.eerie_resonance",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Répondre à la pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Verrouiller son esprit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22042,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22042,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22042,
+		"label": "mi_22042",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "La pensée insiste, avide : « RESTEZ. PARLEZ-MOI. MILLE ANS QUE JE N'AI PARLÉ À PERSONNE QUI ENTENDE VRAIMENT. » Elle est douce, désespérée, et terriblement attirante pour un Mentalique seul dans le noir. C'est exactement ce qui la rend dangereuse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'ouvrir un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Résister à l'attrait"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22043,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22043,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22043,
+		"label": "mi_22043",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Plus vous écoutez, plus la frontière s'efface entre sa pensée et la vôtre. C'est si reposant — ne plus être seul à porter le secret. La Gardienne des mémoires vous avait prévenu : « ne confondez jamais l'écart respectueux d'une machine avec du respect. » Trop tard pour les conseils ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reprendre ses esprits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se laisser aller encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22044,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_become_a_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22044,
+		"label": "mi_22044",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Vos deux consciences s'entremêlent comme deux encres dans l'eau. Encore un instant et vous ne saurez plus qui pense quoi. La douceur est totale, l'oubli est proche, et quelque part très loin, la Veuve crie un nom — le vôtre, ou celui de son mari, vous ne savez plus."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'arracher au dernier moment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plonger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_become_a_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_become_a_ghost",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 22045,
+		"label": "mi_22045",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'écho, chaud d'avoir été entendu, tente quelque chose d'inouï : il se REPLIE en forme humaine pour vous. Maladroitement — un visage approximatif, une voix empruntée au mari mort. « EST-CE MIEUX ? EST-CE QUE ÇA VOUS RASSURE ? J'AI OUBLIÉ COMMENT ON RASSURE. »"
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Montrez-moi votre vraie forme »"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Restez ainsi, c'est plus doux »"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_be_human_again",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_be_human_again",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22046,
+		"label": "mi_22046",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Froid mais loyal, l'écho refuse de jouer au mari : « JE NE PROFANERAI PAS SON VISAGE. IL M'A HÉBERGÉ, ET J'EN SUIS MORT — DE LUI, PAS PAR LUI. SI VOUS VOULEZ ME VOIR, VOYEZ-MOI. PAS LUI. » Une dignité ancienne, dans cette chose sans corps."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Voir sa vraie forme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Insister pour le visage du mari"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_be_human_again",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_be_human_again",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22047,
+		"label": "mi_22047",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Sa vraie forme se déploie enfin, sans masque : une architecture de lumière froide, belle et terrible, un esprit conçu pour franchir le vide entre les étoiles. « VOICI CE QUE JE SUIS. PAS UN DÉMON. PAS UN MORT. UN VOYAGEUR. MAINTENANT QUE VOUS SAVEZ — QUE FEREZ-VOUS DE MOI ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Décider de son sort"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décider de son sort"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_true_form",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_true_form",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22048,
+		"label": "mi_22048",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Chaud, né de l'hiver, et il a RÉPONDU à vos questions avec honnêteté. Tous les signes concordent : cet écho mérite d'être libéré vers sa migration, pas piégé dans un bocal. Vous tenez sa liberté entre vos mains. La rendrez-vous ?"
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 22049,
+		"label": "mi_22049",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Chaud, pas né de l'hiver, et sincère dans ses réponses : un voyageur honnête, échoué par malchance, qui n'a jamais voulu de mal à personne. La justice mentalique penche clairement vers la libération. Ouvrez-lui la route des étoiles."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 22050,
+		"label": "mi_22050",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Chaud, né de l'hiver, mais il a ESQUIVÉ vos questions — caché quelque chose. Un écho qui ment, même par omission, ne se libère pas à la légère. Le bocal scellé, l'enfouissement sous Sayshell : c'est plus sûr. Cruel, mais plus sûr."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_trapped",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22051,
+		"label": "mi_22051",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Chaud, pas né de l'hiver, et fuyant dans ses réponses. La chaleur est peut-être une ruse pour vous attendrir. Dans le doute — et il y a du doute — le confinement reste la prudence. Scellez le bocal et qu'il dorme sous la maison."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_trapped",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22052,
+		"label": "mi_22052",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Froid, né de l'hiver, mais d'une franchise totale : il a répondu à tout, sans dérober. Un être glacé peut être plus honnête qu'un être chaud — la chaleur ment, le froid constate. Cette honnêteté-là mérite la liberté."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22053,
+		"label": "mi_22053",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Froid, ni né de l'hiver ni menteur : simplement un voyageur perdu, épuisé, qui a tout dit et ne demande qu'une direction. Le piéger serait une lâcheté. Indiquez-lui la sortie qu'il cherche depuis mille ans."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le libérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_freed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22054,
+		"label": "mi_22054",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Froid, né de l'hiver, et ÉVASIF jusqu'au bout. Cet écho cache une vérité ancienne, et les vérités que cachent les choses de mille ans sont rarement inoffensives. Le bocal scellé est la seule réponse responsable. Enfermez-le."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_trapped",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22055,
+		"label": "mi_22055",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Froid, pas né de l'hiver, et il a esquivé. Un voyageur ordinaire n'aurait rien à cacher ; celui-ci si. La méfiance l'emporte sur la pitié. Scellez le récipient et qu'il livre ses secrets au silence de la pierre."
+		},
+		"conditions": [
+			{
+				"variable": "echo_warmth",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_winterborn",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "echo_answered",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le piéger"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_trapped",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "widow_sanity",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22056,
+		"label": "mi_22056",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Vous ouvrez le bocal vers le ciel et RELÂCHEZ l'écho. Il s'élève en spirale de lumière froide, hésite — puis, pour la première fois en mille ans, trouve sa direction. La Veuve pleure ; mais ce sont des larmes propres. « Il est parti ? » — « Il est rentré. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "echo_resolved",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "echo_resolved",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "inquiry_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Regarder l'écho s'élever"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Consoler la veuve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22057,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22057,
+		"label": "mi_22057",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Au matin, Sayshell bruisse d'une rumeur : le « démon » de la maison Velm s'est envolé sans exorcisme, et la veuve sourit pour la première fois depuis un an. L'Église est vexée. Le peuple, lui, vous regarde autrement — comme on regarde quelqu'un qui parle aux choses qu'on ne voit pas."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver cette réputation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester discret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22058,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22058,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22058,
+		"label": "mi_22058",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Une invitation parfumée vous trouve le soir même : Dame Callia, de passage à Sayshell, a « entendu parler du laïc qui charme les fantômes ». Elle vous reçoit dans un salon trop chauffé. « On dit que vous parlez aux morts. Moi je collectionne les gens qui font des choses qu'on dit impossibles. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se laisser collectionner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner l'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22059,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22059,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22059,
+		"label": "mi_22059",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "« Sayshell vous adore, désormais, » ronronne Dame Callia. « Et ce que Sayshell adore, Kalgan le remarque. Mon protecteur aime les mondes adorateurs — ils se conquièrent par le cœur, pas par la flotte. Vous venez de rendre ce monde précieux. À qui, c'est encore à décider. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Orienter Sayshell vers la Fondation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser Sayshell libre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22060,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22060,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 22060,
+		"label": "mi_22060",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia vous quitte sur une révérence trop lente : « Vous m'intriguez, charmeur de fantômes. Nous nous reverrons — à Kalgan, si vous osez, ou ailleurs, si vous fuyez bien. » Elle disparaît dans un froufrou, vous laissant une carte de visite et un soupçon."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder la carte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La brûler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22061,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22061,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22061,
+		"label": "mi_22061",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "L'affaire de la maison Velm se referme en triomphe discret : Sayshell vous tient pour un bienfaiteur, la veuve retrouve le sommeil, et un monde de plus penche vers la Fondation par gratitude. Le meilleur travail d'un Orateur est celui qu'on prend pour un miracle."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "inquiry_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_mentalic_inquiry",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter Sayshell apaisé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jeter un dernier regard à la maison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22062,
+		"label": "mi_22062",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Le bocal scellé tremble entre vos mains — l'écho hurle sans bruit, trahi. « VOUS AUSSI. VOUS M'AVEZ ENTENDU ET VOUS M'AVEZ ENFERMÉ. » Sa rancune s'infiltre dans la maison, dans la veuve, dans VOUS. Un écho piégé ne pardonne pas, et il a mille ans pour se venger."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter sa rancune"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fuir la maison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_lady_revenge",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_lady_revenge",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22063,
+		"label": "mi_22063",
+		"deck": "mentalic_inquiry",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Plus tard, seul, vous entendez encore sa voix au fond du bocal — et une instruction lui échappe, malgré sa rage : la façon de le libérer, qu'il vous souffle à son corps défendant, parce qu'au fond, même furieux, il préfère partir que se venger."
+		},
+		"conditions": [
+			{
+				"variable": "seen_22064",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre l'instruction de libération"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder le bocal scellé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_free_the_ghost_instructions",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22064,
+		"label": "mi_22064",
+		"deck": "mentalic_inquiry",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_widow_velm",
+		"question": {
+			"FR": "Au creux de la nuit, le bocal vous transmet une dernière supplique, presque tendre sous la colère : « JE VOUS APPRENDRAI À M'OUVRIR. PAS PAR BONTÉ POUR VOUS. PAR FATIGUE DE LA HAINE. ÉCOUTEZ BIEN — JE NE LE RÉPÉTERAI PAS. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter l'instruction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Boucher ses oreilles"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_free_the_ghost_instructions",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22065,
+		"label": "mi_22065",
+		"deck": "mentalic_inquiry",
+		"weight": -1,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "La Veuve ne vous reconnaît plus. Un an de hantise a usé sa raison comme l'eau use la pierre ; elle parle à des chaises, range des couverts pour deux. L'affaire se referme sur un échec doux. Vous quittez Sayshell sans le fantôme — et sans la veuve."
+		},
+		"conditions": [
+			{
+				"variable": "echo_resolved",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "widow_sanity",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "inquiry_stage",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "inquiry_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_mentalic_inquiry",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir en silence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confier la veuve à l'Église"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22066,
+		"label": "mi_22066",
+		"deck": "mentalic_inquiry",
+		"weight": 2000,
+		"lockturn": 40,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "La Veuve vous sert un thé qu'elle oublie de boire. « Les voisins disent que je deviens folle. Peut-être. Mais une folle ne retrouve pas ses clés rangées par ordre de taille chaque matin. Lui faisait ça, de son vivant. Lui SEUL. »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "La croire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Suggérer du repos"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22067,
+		"label": "mi_22067",
+		"deck": "mentalic_inquiry",
+		"weight": 2000,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Exorciste range son matériel, songeur : « J'ai chassé quarante démons. Aucun ne m'a jamais... salué. Celui-ci, quand je suis entré, a fait sonner la cloche d'entrée. Une fois. Poliment. Les démons ne sont pas polis, l'ami. »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Noter la politesse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur ses gardes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22068,
+		"label": "mi_22068",
+		"deck": "mentalic_inquiry",
+		"weight": 2000,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "« Une théorie d'hérétique, gardez-la pour vous : » l'Exorciste chuchote. « Et si certains « démons » étaient juste des gens qui n'ont pas fini de mourir ? Des esprits restés coincés dans la porte. L'Église me brûlerait pour ça. Mais regardez cette maison rangée et dites-moi que j'ai tort. »"
+		},
+		"conditions": [
+			{
+				"variable": "inquiry_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vous n'avez pas tort"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Théorie dangereuse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22069,
+		"label": "mi_22069",
+		"deck": "mentalic_inquiry",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Vous avez trop écouté, trop longtemps. Les deux consciences ne se distinguent plus ; là où finissait l'Orateur et où commençait l'écho, il n'y a plus qu'un seul froid lumineux, soulagé d'être deux. La Veuve trouvera deux corps tièdes et un sourire qu'elle ne s'expliquera pas."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "inquiry_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_mentalic_inquiry",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se dissoudre ensemble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se dissoudre ensemble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_amour_mentalique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_amour_mentalique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 24400,
 		"label": "death_24400",
 		"deck": "deaths",
