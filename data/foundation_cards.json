@@ -33833,6 +33833,3667 @@
 		}
 	},
 	{
+		"id": 38000,
+		"label": "uprising_38000",
+		"deck": "uprising",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Une révolte populaire embrase un monde de la Fondation : taxes, famine, un gouverneur méprisant. La foule gronde devant le palais. Le chef des dockers, torche au poing, vous reconnaît : « Vous ! Vous êtes des nôtres ou des leurs ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Temporiser avec la foule"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38001,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38001,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38001,
+		"label": "uprising_38001",
+		"deck": "uprising",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Les meneurs de la révolte vous jaugent : « On a besoin d'un homme qui sait parler aux puissants. Vous avez cette tête-là. Rejoignez-nous, et on renverse le gouverneur. Refusez, et on se souviendra de votre visage. » Menace ou recrutement ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter leurs griefs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder ses distances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 112,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 141,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 112,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 141,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38002,
+		"label": "uprising_38002",
+		"deck": "uprising",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Un prédicateur de l'Église de la Science tente de canaliser la révolte vers la foi : « L'Esprit Galactique punit le gouverneur impie ! » La ferveur religieuse peut éteindre l'émeute ou la transformer en croisade. Lame à double tranchant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir la voie religieuse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La trouver dangereuse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38003,
+		"label": "uprising_38003",
+		"deck": "uprising",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un agitateur charismatique émerge de la foule — un meneur-né, dangereux et magnétique. Le suivre des yeux, c'est comprendre comment naissent les révolutions. Le laisser monter, c'est peut-être créer un futur tyran. Ou un futur héros."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'observer de près"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le neutraliser tôt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38004,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38004,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38004,
+		"label": "uprising_38004",
+		"deck": "uprising",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'agitateur vous teste : « Tu hésites. Les hésitants finissent écrasés entre les deux camps. » Il a tort et raison à la fois. Votre rôle d'Orateur EST d'hésiter — de peser mille ans contre une émeute. Mais ça, vous ne pouvez pas le lui dire."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "agitator_trust",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Feindre l'engagement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Assumer l'hésitation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "agitator_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 38005,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38005,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38005,
+		"label": "uprising_38005",
+		"deck": "uprising",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'agitateur grimpe ou tombe selon votre appui. Lui prêter main forte ferait basculer la révolte ; le lâcher la décapiterait. Le pouvoir d'un Mentalique sur un meneur de foule est immense — et c'est précisément ce qui ronge votre légitimité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'appuyer discrètement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à son sort"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "agitator_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "agitator_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 38006,
+		"label": "uprising_38006",
+		"deck": "uprising",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le gouverneur assiégé vous fait porter un message : « Matez cette racaille et nommez votre prix. » De l'autre côté des barricades, la foule vous croit des leurs. Vous êtes l'homme du milieu — la place la plus dangereuse de toute révolution."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jouer double jeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Choisir un camp"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38007,
+		"label": "uprising_38007",
+		"deck": "uprising",
+		"weight": 1000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'heure du choix : soutenir l'aile RELIGIEUSE de la révolte, qui veut une théocratie populaire. L'Église gagnerait un monde, la foule un dogme, et vous un allié encombrant. Les théocraties commencent toujours par libérer et finissent par enfermer."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir les religieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de choisir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 128,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 197,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_uprising",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "refused_side",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38008,
+		"label": "uprising_38008",
+		"deck": "uprising",
+		"weight": 1000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'autre voie : soutenir l'aile MILITAIRE de la révolte, des officiers déçus prêts à un coup d'État ordonné. La force gagnerait un monde, la foule un maître en uniforme, et vous un allié brutal mais prévisible. Choisir, toujours choisir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir les militaires"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de choisir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 102,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 101,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_uprising",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "refused_side",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38009,
+		"label": "uprising_38009",
+		"deck": "uprising",
+		"weight": 30000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Vous avez refusé de choisir un camp — et la révolte, sans direction, se délite en chaos. Un grand prêtre opportuniste ramasse les morceaux. « L'indécision est un choix, étranger, » vous dit-il. « Celui de laisser les autres décider à votre place. »"
+		},
+		"conditions": [
+			{
+				"variable": "refused_side",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encaisser la leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter de reprendre la main"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38010,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38010,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38010,
+		"label": "uprising_38010",
+		"deck": "uprising",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "forell_patriarch",
+		"question": {
+			"FR": "Le chaos post-révolte cherche un ordre. Deux mains se tendent vers le pouvoir vacant : l'une religieuse, l'autre militaire. Même en ayant refusé de choisir, vous devez maintenant subir le choix des autres — ou l'infléchir au dernier instant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Infléchir vers les religieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Infléchir vers les militaires"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38011,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38011,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38011,
+		"label": "uprising_38011",
+		"deck": "uprising",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La révolte se solde par un nouvel ordre — celui que vous avez, in fine, contribué à dessiner. Religieux ou martial, il marquera ce monde pour un siècle. Le gouverneur honni est tombé ; reste à savoir si son successeur vaudra mieux. Rarement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Stabiliser le nouvel ordre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir vers d'autres feux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 102,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 101,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_uprising",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 128,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 197,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_uprising",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38800,
+		"label": "santanni_rebellion_38800",
+		"deck": "santanni_rebellion",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "rebel_warlord",
+		"question": {
+			"FR": "Sur Smyrno, un seigneur de guerre rebelle lève une armée contre l'ordre établi — et il vient de Santanni, qu'il jure venger. « Mon monde a saigné pour vos équilibres, » crache-t-il. « Maintenant Santanni rend les coups. » La périphérie s'embrase."
+		},
+		"conditions": [
+			{
+				"variable": "santanni_rebel_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sonder ses intentions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le tenir à distance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 38801,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38801,
+		"label": "santanni_rebellion_38801",
+		"deck": "santanni_rebellion",
+		"weight": 800,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "rebel_warlord",
+		"question": {
+			"FR": "Le rebelle santannien gagne des partisans à chaque atrocité du pouvoir en place. Sa colère est juste, ses méthodes terribles. « Vous me jugez ? » vous lance-t-il. « Jugez d'abord ceux qui ont affamé mon monde pour préserver leur précieux ÉQUILIBRE. »"
+		},
+		"conditions": [
+			{
+				"variable": "santanni_rebel_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "rebel_strength",
+				"op": "below",
+				"value": 5
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 213
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reconnaître ses griefs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Condamner ses méthodes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "rebel_strength",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "loyalist_favor",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "loyalist_favor",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 38802,
+		"label": "santanni_rebellion_38802",
+		"deck": "santanni_rebellion",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "rebel_general",
+		"question": {
+			"FR": "Le général loyaliste qui traque le rebelle vous consulte : « Cet homme est dangereux ET il a raison, ce qui est le pire mélange. Le tuer en fera un martyr. Le rallier, un allié sanglant. Conseillez-moi, vous qui lisez les âmes des deux. »"
+		},
+		"conditions": [
+			{
+				"variable": "santanni_rebel_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 213
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conseiller le ralliement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Conseiller la fermeté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "rebel_strength",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "loyalist_favor",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38803,
+		"label": "santanni_rebellion_38803",
+		"deck": "santanni_rebellion",
+		"weight": 800,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": "rebel_warlord",
+		"question": {
+			"FR": "La rébellion santannienne atteint son point critique : le rebelle marche sur une cité-clé. Encore quelques semaines et ce sera la bataille rangée. Il vous reste une fenêtre étroite pour désamorcer — ou pour choisir un camp avant que les canons ne choisissent."
+		},
+		"conditions": [
+			{
+				"variable": "santanni_rebel_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 213
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 11
+			},
+			{
+				"variable": "rebel_strength",
+				"op": "below",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter la médiation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser venir la bataille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "rebel_strength",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "loyalist_favor",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 38804,
+		"label": "santanni_rebellion_38804",
+		"deck": "santanni_rebellion",
+		"weight": 1200,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": "rebel_general",
+		"question": {
+			"FR": "La bataille de la cité éclate, inévitable. Le rebelle santannien et le général loyaliste s'affrontent dans les rues. Votre influence mentalique peut faire pencher la mêlée — au prix d'une légitimité que ce genre d'ingérence dévore."
+		},
+		"conditions": [
+			{
+				"variable": "santanni_rebel_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 213
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 11
+			},
+			{
+				"variable": "rebel_strength",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Peser sur la bataille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester spectateur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "smyrno",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_jicheng",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 38805,
+		"label": "santanni_rebellion_38805",
+		"deck": "santanni_rebellion",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La bataille fait rage, indécise. Dans le fracas, le rebelle et le général se cherchent du regard à travers la fumée. L'issue tient à un fil — et le fil, en cet instant, c'est vous. Que souffle votre esprit à la mêlée ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Souffler la victoire au rebelle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Souffler la victoire au loyaliste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.jicheng",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.jicheng",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 38806,
+		"label": "santanni_rebellion_38806",
+		"deck": "santanni_rebellion",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le rebelle l'emporte — et, désarmé par votre médiation, dépose les armes plutôt que de raser la cité. « Vous m'avez fait gagner pour mieux m'arrêter, » comprend-il. « Rusé. Santanni se souviendra que sa vengeance fut entendue, non assouvie. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le rallier à la Fondation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser libre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ma_chao_joins_party_win",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ma_chao_joins_party_win",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38807,
+		"label": "santanni_rebellion_38807",
+		"deck": "santanni_rebellion",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rebel_general",
+		"question": {
+			"FR": "Le rebelle est vaincu — mais épargné sur votre intercession. Brisé, il rumine : « Vous auriez dû me laisser mourir en martyr. Vivre vaincu, c'est ma vraie défaite. » Parfois la clémence est plus cruelle que la lame. Il vous en voudra longtemps."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui offrir une seconde voie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à son amertume"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ma_chao_joins_party_defeat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ma_chao_joins_party_defeat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 38808,
+		"label": "santanni_rebellion_38808",
+		"deck": "santanni_rebellion",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rebel_general",
+		"question": {
+			"FR": "La rébellion santannienne s'achève par un ralliement : le seigneur de guerre, vengeance entendue, met son armée au service de la Fondation. Santanni penche vers vous, méfiant mais loyal. Une colère bien écoutée vaut mille soumissions forcées."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "santanni_rebel_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller l'alliance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "deck_santanni_rebellion",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 173,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_santanni_rebellion",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38809,
+		"label": "santanni_rebellion_38809",
+		"deck": "santanni_rebellion",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rebel_general",
+		"question": {
+			"FR": "La rébellion mate, le rebelle rallié de force, l'ordre revenu — mais l'amertume couve sous la cendre. Santanni obéit sans aimer. « La paix des vaincus dure ce que dure leur faiblesse, » murmure le général. Une victoire à surveiller."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "santanni_rebel_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Surveiller la rancœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tourner la page"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "deck_santanni_rebellion",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 173,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_santanni_rebellion",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 38810,
+		"label": "santanni_rebellion_38810",
+		"deck": "santanni_rebellion",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "rebel_general",
+		"question": {
+			"FR": "Des mois plus tard, le rebelle gracié resurgit — ni tout à fait allié ni tout à fait ennemi, hanté par sa défaite épargnée. « Je ne sais plus quoi faire de la vie que vous m'avez laissée, » avoue-t-il. Les clémences mal digérées reviennent toujours frapper."
+		},
+		"conditions": [
+			{
+				"variable": "rebel_returns",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 215
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui trouver une cause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Couper les ponts"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ma_chao_joins_party_defeat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_santanni_rebellion",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 39200,
+		"label": "gadget_craft_39200",
+		"deck": "gadget_craft",
+		"weight": 600,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Un artisan de génie vous propose de fabriquer des micro-réacteurs — des « gadgets » que la frontière s'arrache. « Six couches de cellules combustibles, ni plus ni moins. Ratez le dosage et ça fait boum. Réussissez et ça fait fortune. On tente ? »"
+		},
+		"conditions": [
+			{
+				"variable": "made_gadget",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 6
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			},
+			{
+				"variable": "gadget_layers",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer la fabrication"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pas le temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_start_wine_making",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 39201,
+		"label": "gadget_craft_39201",
+		"deck": "gadget_craft",
+		"weight": 600,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'artisan revient à la charge, saison propice : « Les composants sont frais, le marché est haut. C'est MAINTENANT qu'on forge des gadgets, pas quand les cellules auront pris l'humidité. Alors ? On allume le four ? »"
+		},
+		"conditions": [
+			{
+				"variable": "made_gadget",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 5
+			},
+			{
+				"variable": "gadget_layers",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Forger des gadgets"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reporter encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_start_wine_making",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 39202,
+		"label": "gadget_craft_39202",
+		"deck": "gadget_craft",
+		"weight": 600,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "« Vos caisses sont pleines, » remarque l'artisan, l'œil brillant. « Le moment rêvé pour investir dans une série de gadgets. L'argent qui dort ne fait pas de réacteurs. L'argent qui forge, lui, fait des fortunes. Logique d'artisan. »"
+		},
+		"conditions": [
+			{
+				"variable": "made_gadget",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 60
+			},
+			{
+				"variable": "gadget_layers",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Investir dans la série"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder ses crédits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_start_wine_making",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 39203,
+		"label": "gadget_craft_39203",
+		"deck": "gadget_craft",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "gadget_artisan",
+		"question": {
+			"FR": "L'atelier bourdonne. L'artisan vous tend une cellule combustible : « Première couche. Vous versez le combustible doucement — DOUCEMENT — ou on repeint le plafond avec nos restes. Allez, à vous l'honneur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Verser la première couche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser faire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 39204,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 39204,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 39204,
+		"label": "gadget_craft_39204",
+		"deck": "gadget_craft",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "gadget_artisan",
+		"question": {
+			"FR": "« Bien ! Couche posée. » L'artisan essuie son front. « On continue — chaque couche stabilise la précédente. Encore du combustible, ou on filtre maintenant ? Trop tôt et le gadget est faible ; trop tard et il est instable. L'art est dans le timing. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ajouter une couche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Filtrer maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "jukebox.winemaker_ricepour",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_add_rice",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "jukebox.winemaker_winefilter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 39205,
+		"label": "gadget_craft_39205",
+		"deck": "gadget_craft",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "gadget_artisan",
+		"question": {
+			"FR": "« Deuxième couche en place. » Les mains de l'artisan ne tremblent jamais. « Le cœur du réacteur prend forme. On empile encore, ou on scelle ? Un bon gadget se construit comme une mauvaise réputation : une couche à la fois. »"
+		},
+		"conditions": [
+			{
+				"variable": "gadget_layers",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Empiler encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sceller maintenant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "jukebox.winemaker_ricepour",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_add_rice",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "jukebox.winemaker_winefilter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 39206,
+		"label": "gadget_craft_39206",
+		"deck": "gadget_craft",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "gadget_artisan",
+		"question": {
+			"FR": "« Ça monte, ça monte. » L'artisan sourit en comptant les couches. « Encore quelques cellules et on tient un réacteur de compétition. Mais ne soyez pas gourmand — j'ai vu des gadgets trop ambitieux finir en cratère. On pousse, ou on s'arrête ? »"
+		},
+		"conditions": [
+			{
+				"variable": "gadget_layers",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pousser le dosage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'arrêter là"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "jukebox.winemaker_ricepour",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_add_rice",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "jukebox.winemaker_winefilter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 39207,
+		"label": "gadget_craft_39207",
+		"deck": "gadget_craft",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "gadget_artisan",
+		"question": {
+			"FR": "« Attention — zone rouge. » L'artisan se fait grave. « Au-delà, le gadget devient une bombe. On peut ajouter une dernière couche pour la performance maximale... ou finir proprement et vivre vieux. Votre appel, patron. C'est votre nom sur la facture. »"
+		},
+		"conditions": [
+			{
+				"variable": "gadget_layers",
+				"op": "above",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Une dernière couche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Finir proprement"
+			},
+			"reaction": {
+				"FR": "Vous scellez le réacteur au bon moment. L'artisan exhale : « Voilà du travail propre. Pas de cratère. Bonne journée. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "jukebox.winemaker_ricepour",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_add_rice",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "jukebox.winemaker_winefilter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wine_complete",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 39208,
+		"label": "gadget_craft_39208",
+		"deck": "gadget_craft",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le gadget est parfait — six couches exactement, équilibre impeccable. L'artisan le brandit comme un trophée : « LE voilà. Le meilleur micro-réacteur de la périphérie. La frontière va se l'arracher, et notre légende est lancée. »"
+		},
+		"conditions": [
+			{
+				"variable": "gadget_layers",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "made_gadget",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le mettre en vente"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "En garder un pour soi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 39209,
+		"label": "gadget_craft_39209",
+		"deck": "gadget_craft",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le gadget rate — trop peu de couches, puissance famélique. L'artisan grimace : « Bon. Pas un cratère, c'est déjà ça. Mais ce réacteur-là, je ne le signe pas. On le démonte et on recommence un jour. La perfection se mérite, patron. »"
+		},
+		"conditions": [
+			{
+				"variable": "gadget_layers",
+				"op": "below",
+				"value": 9
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recommencer plus tard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vendre le raté quand même"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 39210,
+		"label": "gadget_craft_39210",
+		"deck": "gadget_craft",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le gadget surchauffe — trop de couches, instabilité critique. L'artisan le plonge en urgence dans le bac de refroidissement. « OUF. On l'a échappé belle. Trop d'ambition tue l'ambitieux, et le réacteur avec. Leçon coûteuse, plafond intact. »"
+		},
+		"conditions": [
+			{
+				"variable": "gadget_layers",
+				"op": "above",
+				"value": 9
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "gadget_layers",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tirer la leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maudire la malchance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 39600,
+		"label": "heirs_quarrel_39600",
+		"deck": "heirs_quarrel",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Le vieux patriarche d'une grande maison marchande vous prend pour arbitre : « Mes deux fils se déchirent ma succession. L'aîné gère, le cadet rêve. L'un veut des comptoirs, l'autre des poèmes. Lequel mérite la maison ? Aidez-moi à ne pas me tromper. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Étudier les deux fils"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser d'arbitrer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 39601,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 39601,
+		"label": "heirs_quarrel_39601",
+		"deck": "heirs_quarrel",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Le cadet poète vous récite ses vers — médiocres, sincères, désarmants : « Mon frère croit qu'une maison se mène par les chiffres. Moi je sais qu'elle se mène par les hommes. Lequel de nous deux a raison, étranger qui lit dans les cœurs ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le cadet a du cœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le commerce d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 39602,
+		"label": "heirs_quarrel_39602",
+		"deck": "heirs_quarrel",
+		"weight": 300,
+		"lockturn": 170,
+		"hidden": false,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Le cadet gagne en assurance sous votre regard bienveillant — trop, peut-être. Il complote désormais ouvertement contre son aîné. « Vous m'avez dit que j'avais raison, » vous rappelle-t-il. Vos encouragements ont des conséquences."
+		},
+		"conditions": [
+			{
+				"variable": "heir_poet",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tempérer son ambition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attiser sa flamme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 39603,
+		"label": "heirs_quarrel_39603",
+		"deck": "heirs_quarrel",
+		"weight": 300,
+		"lockturn": 170,
+		"hidden": false,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Les deux frères s'affrontent devant le père mourant. Le cadet a un plan brillant et déloyal pour évincer l'aîné. Le valider couronnerait le plus doué ; le dénoncer sauverait l'honneur de la maison. Rarement les deux."
+		},
+		"conditions": [
+			{
+				"variable": "heir_poet",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "quarrel_stage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Couronner le plus doué"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sauver l'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 39604,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 39604,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 39604,
+		"label": "heirs_quarrel_39604",
+		"deck": "heirs_quarrel",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "L'affaire de succession éclate au grand jour : intrigues, lettres volées, alliances de domestiques. La maison marchande retient son souffle. Quoi qu'il advienne, le perdant n'oubliera jamais le rôle qu'y joua l'étranger arbitre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer son arbitrage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Prendre du recul"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "quarrel_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 39605,
+		"label": "heirs_quarrel_39605",
+		"deck": "heirs_quarrel",
+		"weight": 300,
+		"lockturn": 170,
+		"hidden": false,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Le cadet, blessé par une remarque, se referme : « Vous me préfériez avant. Qu'ai-je fait ? » Il a tout misé sur votre approbation, et la moindre froideur le dévaste. Les âmes sensibles sont des alliés exigeants."
+		},
+		"conditions": [
+			{
+				"variable": "heir_poet",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "heir_poet",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le rassurer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser mûrir seul"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 39606,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 39606,
+		"label": "heirs_quarrel_39606",
+		"deck": "heirs_quarrel",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Réconcilié avec lui-même, le cadet trouve enfin sa place : ni gestionnaire ni évincé, mais ambassadeur de la maison — un poète qui ouvre par les mots les portes que les chiffres ferment. Le père sourit. L'aîné, moins."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Bénir cette répartition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surveiller la rivalité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "heir_poet",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 39607,
+		"label": "heirs_quarrel_39607",
+		"deck": "heirs_quarrel",
+		"weight": 300,
+		"lockturn": 130,
+		"hidden": false,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "La succession se règle dans le sang d'un scandale : l'un des frères tombe, l'autre triomphe amer. La maison survit, diminuée. Le patriarche meurt en murmurant qu'il aurait dû ne jamais vous appeler. Les arbitres récoltent toujours les rancunes."
+		},
+		"conditions": [
+			{
+				"variable": "quarrel_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_heirs_quarrel",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Porter le poids du verdict"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter la maison endeuillée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 39608,
+		"label": "heirs_quarrel_39608",
+		"deck": "heirs_quarrel",
+		"weight": 300,
+		"lockturn": 130,
+		"hidden": false,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "L'aîné l'emporte, la maison reste solide et terne. « Merci d'avoir choisi la raison, » vous dit-il sans chaleur. Le commerce continuera, prospère et sans âme. On a sauvé une entreprise et perdu une famille. Bilan mitigé."
+		},
+		"conditions": [
+			{
+				"variable": "quarrel_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_heirs_quarrel",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter ce bilan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaider une dernière fois pour le cadet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 39609,
+		"label": "heirs_quarrel_39609",
+		"deck": "heirs_quarrel",
+		"weight": 300,
+		"lockturn": 130,
+		"hidden": false,
+		"bearer": "heirs_patriarch",
+		"question": {
+			"FR": "Le cadet l'emporte, contre toute prudence — et la maison se met à RAYONNER : ses poèmes deviennent des contrats, ses rêves des routes commerciales. Parfois le cœur gère mieux que les chiffres. Le vieux père l'a su trop tard, vous juste à temps."
+		},
+		"conditions": [
+			{
+				"variable": "quarrel_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_heirs_quarrel",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer ce pari gagnant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester modeste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 40000,
+		"label": "imperial_chamberlains_40000",
+		"deck": "imperial_chamberlains",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un chambellan de Trantor vous confie son drame : stérile depuis l'irradiation d'un vieux réacteur, il lui faut pourtant un héritier sous peine de perdre sa charge. « L'Empire ne pardonne pas les lignées éteintes. Aidez-moi, ou je suis fini. »"
+		},
+		"conditions": [
+			{
+				"variable": "chamberlain_heir_quest",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "chamberlain_sterile",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher une solution"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Compatir sans agir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 40001,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40001,
+		"label": "imperial_chamberlains_40001",
+		"deck": "imperial_chamberlains",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un « médecin » de cour propose au chambellan une cure de fertilité miraculeuse — poudres, incantations, et factures. Vous flairez le charlatan à dix pas. Mais le désespoir n'écoute pas le flair. « Une chance, étranger. Laissez-moi ma chance. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Démasquer le charlatan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser espérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40002,
+		"label": "imperial_chamberlains_40002",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La « cure » du charlatan en est à sa deuxième phase, plus coûteuse encore. Le chambellan s'endette joyeusement. « Je SENS que ça marche ! » Ce qu'il sent, c'est l'effet placebo et l'allègement de sa bourse. Continuer cette farce, ou la stopper ?"
+		},
+		"conditions": [
+			{
+				"variable": "fertility_cure_stage",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Stopper la saignée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser y croire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40003,
+		"label": "imperial_chamberlains_40003",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Troisième phase de la cure miracle : le charlatan exige maintenant des « ingrédients rares » importés à prix d'or. Le chambellan vend ses meubles. La frontière entre l'espoir et la ruine devient invisible, et il la franchit en chantant."
+		},
+		"conditions": [
+			{
+				"variable": "fertility_cure_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Intervenir fermement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner le regard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40004,
+		"label": "imperial_chamberlains_40004",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "Le chambellan, marié sur le tard à une jeune épouse, sauve les apparences à la cour. « Un mariage fait taire les rumeurs mieux qu'un héritier, » philosophe-t-il. La cour de Trantor se nourrit d'apparences ; il en a fait son armure."
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "chamberlain_sterile",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approuver la stratégie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le mettre en garde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 40005,
+		"label": "imperial_chamberlains_40005",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le charlatan, démasqué et furieux, menace de révéler à la cour la stérilité du chambellan. Le chantage impérial est un art ancien. Votre protégé blêmit : « S'il parle, je tombe. Et ceux qui tombent à Trantor ne se relèvent pas. »"
+		},
+		"conditions": [
+			{
+				"variable": "fertility_cure_stage",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "married",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Faire taire le charlatan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter la rumeur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 40006,
+		"label": "imperial_chamberlains_40006",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Contre toute attente, un héritier paraît — adopté en secret, présenté comme un miracle. Le chambellan jubile. La cour s'extasie. Vous seul savez l'arrangement, et un secret de plus alourdit votre besace déjà pleine."
+		},
+		"conditions": [
+			{
+				"variable": "heir_baby",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "fertility_cure_stage",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder le secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'inquiéter du risque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 40007,
+		"label": "imperial_chamberlains_40007",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'héritier « miraculeux » grandit, et avec lui le risque qu'on découvre la supercherie. Le chambellan, paranoïaque, multiplie les cures inutiles « pour entretenir la légende ». La légende coûte cher, et les légendes finissent toujours par se fissurer."
+		},
+		"conditions": [
+			{
+				"variable": "heir_baby",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "fertility_cure_stage",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider la légende"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer une sortie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "fertility_cure_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 40008,
+		"label": "imperial_chamberlains_40008",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La cour bruisse de soupçons. Le chambellan, acculé, vous supplie d'un dernier service avant que tout ne s'effondre. Les charges impériales sont des châteaux de cartes ; il sent le sien vaciller au moindre courant d'air."
+		},
+		"conditions": [
+			{
+				"variable": "fertility_cure_stage",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter de le sauver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se distancier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 40009,
+		"label": "imperial_chamberlains_40009",
+		"deck": "imperial_chamberlains",
+		"weight": 100,
+		"lockturn": 6,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La purge tombe, impériale et froide : les soupçons ont mûri, les chambellans tombent par fournées, et le vôtre avec. Les listes de Trantor ne se trompent jamais sur le nom — seulement sur la justice. Vous avez tout fait. Ça n'a pas suffi."
+		},
+		"conditions": [
+			{
+				"variable": "fertility_cure_stage",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui faire ses adieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sauver sa propre couverture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_purge_imperiale",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_purge_imperiale",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
 		"id": 40400,
 		"label": "feeble_heir_40400",
 		"deck": "feeble_heir",

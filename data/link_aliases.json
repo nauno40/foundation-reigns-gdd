@@ -271,5 +271,27 @@
 	},
 	"_not_suspicious_surrender": {
 		"node": 43204
+	},
+	"_battle_jicheng": {
+		"node": 38805
+	},
+	"_ma_chao_joins_party_win": {
+		"node": 38808
+	},
+	"_ma_chao_joins_party_defeat": {
+		"node": 38809
+	},
+	"_start_wine_making": {
+		"node": 39203
+	},
+	"_add_rice": {
+		"nodes": [
+			39205,
+			39206,
+			39207
+		]
+	},
+	"_wine_complete": {
+		"node": 39208
 	}
 }

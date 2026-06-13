@@ -36,7 +36,12 @@ def _conv_outcomes(node, key, var_map, planet_map, deck_close):
                 out.append({"variable": "link", "intValue": 0, "stringValue": str(t),
                             "addOperation": False, "toKeep": False})
             continue
-        value = int(o.get("value", 0))
+        raw = o.get("value", 0)
+        if var == "location" or isinstance(raw, str):
+            out.append({"variable": "location", "intValue": 0, "stringValue": str(raw),
+                        "addOperation": False, "toKeep": True})
+            continue
+        value = int(raw)
         if name == "planet_state":
             pid = planet_map.get(abs(value), "terminus")
             out.append({"variable": "planet_%s_state" % pid,
