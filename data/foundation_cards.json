@@ -33036,6 +33036,3760 @@
 		}
 	},
 	{
+		"id": 29200,
+		"label": "planet_anacreon_29200",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Sur Anacréon, royaume fier où votre couverture est magistrate d'un fief : la saison sèche menace les récoltes du domaine. « Magistrat ! Faites quelque chose ! » Vos administrés ignorent qu'ils s'adressent à un Mentalique. Ils veulent juste de la pluie et des impôts bas."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "anacreon_drought",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gérer la sécheresse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lever un impôt d'urgence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29201,
+		"label": "planet_anacreon_29201",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Mi-saison sur votre fief d'Anacréon : la « Crête de Pierre », un litige minier ancestral, ressurgit. Deux clans réclament le même filon. En tant que magistrat, votre verdict fera un allié et un ennemi. La justice de fief est un art de se faire détester équitablement."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "crete_de_pierre",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trancher le litige minier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reporter le jugement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29202,
+		"label": "planet_anacreon_29202",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Le litige de la Crête de Pierre, déjà tranché, vous vaut des remerciements... et des pots-de-vin tardifs du clan gagnant. « Une marque de gratitude, magistrat, rien de plus. » Accepter, c'est se vendre ; refuser, c'est insulter. La frontière korellienne déteint sur Anacréon."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "crete_de_pierre",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser le pot-de-vin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter la gratitude"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29203,
+		"label": "planet_anacreon_29203",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Saison des moissons sur votre fief : la Crête de Pierre rapporte gros, et l'impôt minier remplit vos coffres administratifs. Vos administrés grognent, vos supérieurs anacréoniens sourient. Un bon magistrat presse l'orange sans faire crier le fruit. Trop fort."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "crete_de_pierre",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Modérer l'impôt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maximiser la recette"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29204,
+		"label": "planet_anacreon_29204",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde local vous propose d'optimiser la fiscalité du fief — à son avantage, naturellement. « Magistrat, un peu de souplesse comptable enrichit tout le monde. Surtout les souples. » L'évasion fiscale anacréonienne a ses lettres de noblesse."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "crete_de_pierre",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser la combine"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fermer les yeux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29205,
+		"label": "planet_anacreon_29205",
+		"deck": "planet_anacreon",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Un projet de canal d'irrigation pourrait transformer votre fief aride d'Anacréon en grenier. Coûteux, visionnaire, et politiquement risqué — les notables préfèrent la rareté qui maintient les prix. Le progrès dérange toujours ceux qui profitent du manque."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_canal",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			},
+			{
+				"variable": "mentalic_strength",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer le canal"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préserver le statu quo"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 16,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29206,
+		"label": "planet_anacreon_29206",
+		"deck": "planet_anacreon",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Fin d'année fiscale sur votre fief prospère : les comptes débordent. Un inspecteur anacréonien rôde. « Des coffres trop pleins attirent les questions, magistrat. » Cacher la richesse ou l'afficher : sur Anacréon, les deux peuvent coûter la tête."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			},
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 60
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Dissimuler l'excédent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Afficher la prospérité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "anacreon_inspector_doubt",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29207,
+		"label": "planet_anacreon_29207",
+		"deck": "planet_anacreon",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Fin d'année difficile : votre fief d'Anacréon a mal rendu, les caisses sont basses. L'inspecteur royal fronce les sourcils. « Un magistrat qui appauvrit son fief déçoit la Couronne. » Justifier la disette ou détourner pour combler le trou : choix de mauvais perdant."
+		},
+		"conditions": [
+			{
+				"variable": "anacreon_magistrate",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			},
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Justifier honnêtement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maquiller les comptes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "anacreon_inspector_doubt",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29208,
+		"label": "planet_anacreon_29208",
+		"deck": "planet_anacreon",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une épidémie frappe Anacréon. Le roi s'en moque — « les royaumes forts ne pleurent pas leurs faibles » — mais le peuple meurt. Magistrat compatissant ou loyal serviteur de la Couronne ? Votre couverture exige la loyauté ; votre mission, parfois, la pitié."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soigner le peuple"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Suivre la ligne royale"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29209,
+		"label": "planet_anacreon_29209",
+		"deck": "planet_anacreon",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Fin d'année à la cour d'Anacréon : le roi exige un tribut exceptionnel de tous ses magistrats « pour la grandeur du royaume ». Traduction : pour ses caprices. Payer vide votre fief ; refuser attire la disgrâce. Servir un roi vaniteux est un sport coûteux."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Payer le tribut"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaider la pauvreté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29210,
+		"label": "planet_anacreon_29210",
+		"deck": "planet_anacreon",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sécheresse sur votre fief d'Anacréon : sans pluie, pas de récolte, pas d'impôt, pas de magistrat heureux. L'intendant vous regarde, suppliant. Sur ces mondes, faire pleuvoir — vraiment ou en apparence — est la première vertu d'un bon administrateur."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Creuser des puits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire venir un faiseur de pluie"
+			},
+			"reaction": {
+				"FR": "Un « ingénieur des nuages » s'agite. La mousson arrive à point. Votre fief vous croit béni des dieux. Vous, vous connaissez le calendrier."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rain_maker",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 29211,
+		"label": "planet_anacreon_29211",
+		"deck": "planet_anacreon",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un seigneur anacréonien belliqueux veut lever une armée sur votre fief « pour mater les voisins ». La guerre rapporte gloire et ruine à parts égales. En magistrat avisé, freinerez-vous cette ardeur martiale, ou la chevaucherez-vous vers les honneurs ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Freiner la guerre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chevaucher l'ardeur martiale"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29212,
+		"label": "planet_anacreon_29212",
+		"deck": "planet_anacreon",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "An 188 du Plan : un prêtre de l'Église de la Science arrive sur Anacréon, prêchant la foi technologique. C'est la stratégie de Hardin en marche — convertir les royaumes par la religion plutôt que par les armes. Soutenir la mission, c'est servir le Plan en personne."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 188
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir le missionnaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester neutre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 29213,
+		"label": "planet_anacreon_29213",
+		"deck": "planet_anacreon",
+		"weight": -1,
+		"lockturn": 999,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un secret brûlant tombe entre vos mains : un prétendant au trône impérial se cache sur Anacréon, traqué par tous. L'abriter ferait de votre fief le berceau d'une restauration — ou son tombeau. Les couronnes en exil sont des aimants à catastrophes."
+		},
+		"conditions": [
+			{
+				"variable": "harbor_pretender",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "anacreon"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Abriter le prétendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le livrer aux autorités"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29214,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29214,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29214,
+		"label": "planet_anacreon_29214",
+		"deck": "planet_anacreon",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant impérial, caché dans votre fief, se révèle : jeune, idéaliste, dangereusement charismatique. « Aidez-moi à reprendre le trône de mes pères, magistrat, et l'Empire renaîtra ! » Un Empire renaissant : exactement ce que le Plan de Seldon NE veut pas."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Feindre l'adhésion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le décourager doucement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29215,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29215,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29215,
+		"label": "planet_anacreon_29215",
+		"deck": "planet_anacreon",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Vous voilà gardien d'un prétendant impérial — fardeau magnifique et mortel. La cour d'Anacréon, l'Empire, et la moitié des ambitieux de la périphérie le cherchent. Votre fief est devenu le secret le plus dangereux de la Galaxie. Et c'est vous qui en tenez la clé."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "harbor_pretender",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger le secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer une issue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 169,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 169,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 29216,
+		"label": "planet_anacreon_29216",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 72,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Un général impérial flaire la présence du prétendant sur votre fief. Il rôde, questionne, menace. « Un magistrat loyal n'aurait rien à cacher, » insinue-t-il. Garder le secret exige des nerfs d'acier et un esprit verrouillé. Heureusement, le second est votre spécialité."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir tête au général"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Brouiller les pistes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 29217,
+		"label": "planet_anacreon_29217",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant impérial, reconnaissant, vous confie ses projets de restauration. Plus vous l'écoutez, plus vous mesurez le danger : il est sincère, populaire, capable. Exactement le genre d'homme qui pourrait rallumer l'Empire — et éteindre le Plan d'un seul règne brillant."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "fallen_noble_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tempérer ses ambitions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'encourager pour mieux le contrôler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29218,
+		"label": "planet_anacreon_29218",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Fin d'année : le prétendant impérial veut profiter des fêtes pour rallier des soutiens à votre cour. Chaque banquet est un risque, chaque toast une fuite possible. Magistrat hôte d'une conspiration royale : votre couverture n'a jamais été aussi tendue."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Contrôler les festivités"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Limiter ses apparitions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29219,
+		"label": "planet_anacreon_29219",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Mi-saison, le prétendant s'impatiente : « Combien de temps encore dans l'ombre, magistrat ? Un empereur n'est pas fait pour se terrer ! » Son orgueil menace votre prudence. Calmer un futur empereur sans le braquer : exercice d'équilibriste mental."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Calmer son impatience"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser bouillir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29220,
+		"label": "planet_anacreon_29220",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le maître-espion vous apporte une nouvelle grave : la cachette du prétendant est éventée. « On vient le chercher, et vous avec. Décidez VITE : on le sort, on le sacrifie, ou on se bat. Trois mauvaises options, choisissez la moins pire. » Le secret a vécu."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "seen_3026",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "fallen_noble_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exfiltrer le prétendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le sacrifier pour sauver la couverture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 29221,
+		"label": "planet_anacreon_29221",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le prétendant impérial, sauvé de justesse, vous voue une gratitude éternelle — encombrante. « Quand je régnerai, vous serez mon premier ministre, magistrat ! » Un futur empereur qui vous doit la vie : atout immense, ou catastrophe pour le Plan ? Probablement les deux."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter sa reconnaissance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner les honneurs futurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 16,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29222,
+		"label": "planet_anacreon_29222",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le prétendant veut maintenant agir — lever son étendard, marcher sur une capitale. Le Plan exige qu'il échoue ; votre cœur, peut-être, qu'il réussisse. Saboter doucement la cause d'un homme bon pour le bien d'un Plan abstrait : voilà le vrai fardeau d'un Orateur."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Saboter discrètement sa cause"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser tenter sa chance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29223,
+		"label": "planet_anacreon_29223",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le prétendant impérial mûrit, conseillé par vous. Sous votre influence, son rêve de restauration brutale se mue en patience — il apprend à attendre, à bâtir, à durer. Vous transformez un brandon en braise. Le Plan respire : un Empire qui couve ne brûle pas."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver sa patience"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter de votre œuvre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29224,
+		"label": "planet_anacreon_29224",
+		"deck": "planet_anacreon",
+		"weight": 300,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Des années de patronage portent leur fruit ambigu : le prétendant impérial, devenu sage et mesuré, renonce au trône pour servir l'ordre nouveau. « Vous m'avez appris qu'un empire ne se reprend pas, il se mérite, » dit-il. Vous avez désamorcé une bombe historique. Personne ne le saura jamais."
+		},
+		"conditions": [
+			{
+				"variable": "imperial_pretender_hosted",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recevoir son adieu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester humble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29225,
+		"label": "planet_anacreon_29225",
+		"deck": "planet_anacreon",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Un général impérial revanchard menace votre fief d'Anacréon, soupçonnant vos manœuvres. « Les magistrats trop habiles finissent décapités, » prévient-il. La confrontation approche — par les armes ou par la ruse, il faudra le désarmer avant qu'il ne vous démasque."
+		},
+		"conditions": [
+			{
+				"variable": "revanchard_general",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "planet_anacreon_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "revanchard_trust",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le désarmer par la ruse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la défense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29226,
+		"label": "planet_anacreon_29226",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 1000,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le général revanchard passe à l'offensive contre votre fief. La bataille menace tout ce que vous avez bâti sur Anacréon. Votre influence mentalique peut faire pencher l'affrontement — au prix, toujours, de cette légitimité que l'ingérence trop visible dévore."
+		},
+		"conditions": [
+			{
+				"variable": "revanchard_general",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "planet_anacreon_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "cao_cao:neighbour",
+				"op": "equal",
+				"value": -1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Peser sur l'affrontement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser les armes parler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29227,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29227,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29227,
+		"label": "planet_anacreon_29227",
+		"deck": "planet_anacreon",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Au cœur de la bataille pour votre fief, le général revanchard et vos défenseurs s'étripent. L'issue tient à un souffle — le vôtre. Que glisse votre esprit dans la mêlée d'Anacréon, sachant que chaque victoire trop nette vous expose un peu plus ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Souffler la victoire aux vôtres"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le sort décider"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.cao_cao_yuzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 29228,
+		"label": "planet_anacreon_29228",
+		"deck": "planet_anacreon",
+		"weight": 200,
+		"lockturn": 1000,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le général revanchard, devenu menace directe, marche sur votre fief avec ses légions. Plus de ruse possible : c'est la bataille ouverte, ou la fuite. Anacréon, monde fier, va décider en une journée de sang qui de vous deux écrira la suite."
+		},
+		"conditions": [
+			{
+				"variable": "cao_cao:threat",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_anacreon_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Livrer bataille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Évacuer le fief"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.cao_cao_yuzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31200,
+		"label": "planet_trantor_31200",
+		"deck": "planet_trantor",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année sur Trantor, capitale moribonde de quarante milliards d'âmes : les canalisations millénaires lâchent, inondant des secteurs entiers. « L'Empire ne répare plus rien, » soupire un fonctionnaire. « Il attend juste de finir de couler. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Organiser les secours"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner les eaux usées"
+			},
+			"reaction": {
+				"FR": "Un technicien rerouge un collecteur antique. Un secteur est sauvé, trois autres reçoivent ses eaux. Sur Trantor, sauver, c'est déplacer la noyade."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_river_flooding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 31201,
+		"label": "planet_trantor_31201",
+		"deck": "planet_trantor",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un noble déchu de Trantor vous implore de l'aider à reconquérir son fief perdu. « J'avais des terres grandes comme une planète ! Et aujourd'hui je mendie dans le secteur 17 ! » Sa déchéance est celle de l'Empire entier, en miniature pathétique."
+		},
+		"conditions": [
+			{
+				"variable": "trantor_cede",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "fallen_noble_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'aider modestement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner sa cause perdue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "trantor_cede",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "fallen_noble_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 31202,
+		"label": "planet_trantor_31202",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une famille patricienne de Trantor vous propose un mariage de couverture avec leur fille — alliance commode dans la capitale impériale. « Un époux discret et solvable, voilà tout ce qu'on demande, » dit le père. « L'amour, on s'en passe depuis trois générations. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 215
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le mariage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner l'union"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31203,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 31203,
+		"label": "planet_trantor_31203",
+		"deck": "planet_trantor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le mariage patricien scellé, votre épouse de couverture se révèle plus fine qu'annoncé : « Vous n'êtes pas un simple marchand. Je ne sais pas ce que vous êtes, et je m'en moque — tant que vous me sortez de cette ville qui meurt. Marché conclu ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "married",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter son pacte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Nier être autre chose"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31204,
+		"label": "planet_trantor_31204",
+		"deck": "planet_trantor",
+		"weight": 600,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Un général impérial cantonné sur Trantor cherche un appui pour ses ambitions. « L'Empire agonise ; quelqu'un ramassera la couronne. Pourquoi pas moi ? Pourquoi pas, avec un conseiller avisé comme vous ? » Les généraux ambitieux sont l'avenir sanglant de Trantor."
+		},
+		"conditions": [
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 199
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jauger ses chances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de conspirer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "trantor_cede",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31205,
+		"label": "planet_trantor_31205",
+		"deck": "planet_trantor",
+		"weight": 700,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 191 du Plan : les rues de Trantor bruissent de complots. Le maître-espion vous briefe : « Tout le monde conspire contre tout le monde ici. C'est le sport national d'un empire qui n'a plus que ça. Observez, notez, ne vous mouillez pas. Surtout, ne vous mouillez pas. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 191
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Observer et noter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'impliquer un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31206,
+		"label": "planet_trantor_31206",
+		"deck": "planet_trantor",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "An 192 : une nouvelle décisive parvient à Trantor — un signe que le grand déclin s'accélère. Le Contact vous murmure : « Le Plan prévoyait ceci à dix ans près. Trantor tombera, et de sa chute naîtra notre marge de manœuvre. Soyez prêt. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_planet_trantor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se préparer au tournant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter du Plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31207,
+		"label": "planet_trantor_31207",
+		"deck": "planet_trantor",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Votre épouse patricienne vous présente son réseau — un trésor de contacts dans toute l'administration moribonde de Trantor. « Mes tantes savent tout, mes oncles peuvent tout. Une famille qui décline depuis trois siècles a appris à survivre. Servez-vous. »"
+		},
+		"conditions": [
+			{
+				"variable": "patrician_network",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "seen_1094",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter le réseau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester indépendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 215,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31208,
+		"label": "planet_trantor_31208",
+		"deck": "planet_trantor",
+		"weight": 2000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Un général vengeur croise votre route sur Trantor — un homme que l'Empire a humilié et qui n'oublie rien. « On m'a tout pris : grade, honneur, famille. Il me reste la rancune, et la rancune, voyez-vous, ne déchoit jamais. » Un homme dangereux à connaître."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 194
+			},
+			{
+				"variable": "vengeful_general_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gagner sa confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en tenir éloigné"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 31209,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31209,
+		"label": "planet_trantor_31209",
+		"deck": "planet_trantor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le général vengeur vous teste, méfiant : « Pourquoi un marchand s'intéresse-t-il à un paria comme moi ? » La vraie réponse — qu'un Orateur surveille les futurs Bel Riose — est impossible. Il faut mentir avec assez de sincérité pour qu'un homme blessé y croie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tisser un lien sincère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder ses distances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31210,
+		"label": "planet_trantor_31210",
+		"deck": "planet_trantor",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous alerte : le général vengeur lève discrètement des partisans. « Voilà comment commencent les Riose, » souffle-t-il. « Un homme blessé, une armée loyale, et un empire trop faible pour l'arrêter. Surveillez-le. De très près. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_1096",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le surveiller de près"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le sous-estimer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31211,
+		"label": "planet_trantor_31211",
+		"deck": "planet_trantor",
+		"weight": 900,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le général vengeur, désormais puissant, se souvient de votre amitié des mauvais jours. « Vous étiez là quand je n'étais rien. Je n'oublie pas ça non plus. » Sa gratitude est aussi entière que sa rancune. Avoir un Riose pour ami : bénédiction ou bombe à retardement ?"
+		},
+		"conditions": [
+			{
+				"variable": "seen_1097",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "vengeful_general_stage",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "vengeful_general_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver son amitié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en méfier malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31212,
+		"label": "planet_trantor_31212",
+		"deck": "planet_trantor",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le général vengeur passe à l'acte : il marche sur ses anciens bourreaux. Son ascension menace l'ordre — et le Plan. Votre influence pourrait le tempérer ou l'attiser. La frontière entre le confident et le marionnettiste est mince, et la légitimité y veille."
+		},
+		"conditions": [
+			{
+				"variable": "vengeful_general_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "vengeful_general_trust",
+				"op": "equal",
+				"value": 11
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tempérer sa fureur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à sa vengeance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.angry_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.angry_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31213,
+		"label": "planet_trantor_31213",
+		"deck": "planet_trantor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Vous tempérez le général : sa vengeance se mue en ambition mesurée. Il bâtit un fief stable plutôt qu'un brasier. « Vous m'avez sauvé de moi-même, » reconnaît-il, à demi reconnaissant, à demi frustré. Les fauves apprivoisés gardent toujours un œil sur la porte."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "vengeful_general_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller cette alliance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester vigilant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31214,
+		"label": "planet_trantor_31214",
+		"deck": "planet_trantor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Vous avez trop attisé le général : devenu incontrôlable, il vous perce à jour dans un accès de paranoïa lucide. « Vous me MANIPULIEZ. Depuis le début. » Sa lame psychique — car il a deviné votre nature — cherche votre esprit. On récolte ce qu'on a soufflé."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "vengeful_general_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fuir son esprit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter sa fureur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 31215,
+		"label": "planet_trantor_31215",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un seigneur de guerre voisin de Trantor — brutal, magnétique, imprévisible — étend son ombre sur la capitale. « Le plus dangereux de sa génération, » murmure-t-on. Il pourrait précipiter la chute de Trantor, ou la retarder. Tout dépend de qui le tient en laisse."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "warlord_is_neighbor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approcher le seigneur de guerre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'éviter soigneusement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31216,
+		"label": "planet_trantor_31216",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le seigneur de guerre voisin vous jauge comme une proie évalue une autre proie. « On me dit habile, étranger. On vous dit habile aussi. Deux habiles dans la même pièce, c'est un de trop. » Le jeu d'influence commence, et l'enjeu est Trantor."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Engager le duel d'esprits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Battre en retraite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31217,
+		"label": "planet_trantor_31217",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de guerre teste votre loyauté par une mission douteuse. Refuser l'offense ; accepter vous compromet. Avec un homme pareil, chaque réponse est un pari sur sa prochaine humeur. Les imprévisibles sont les pires partenaires de jeu."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la mission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser fermement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31218,
+		"label": "planet_trantor_31218",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de guerre, capricieux, vous prend en affection autant qu'il vous menace. « Vous m'amusez, étranger. Les gens qui m'amusent vivent plus longtemps. » Survivre à un fauve en le divertissant : un art épuisant, et une légitimité qui s'use."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le divertir habilement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Cesser ce jeu dangereux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31219,
+		"label": "planet_trantor_31219",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de guerre vous offre une alliance — scellée par un cadeau empoisonné, à la fois honneur et piège. L'accepter vous lie à un homme qui trahira au premier caprice ; le refuser fait de vous son ennemi. Avec lui, toutes les portes mènent au danger."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'alliance piégée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La refuser dignement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 31220,
+		"label": "planet_trantor_31220",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de guerre se retourne enfin contre Trantor — et contre vous. Sa puissance menace tout. Le moment est venu de l'abattre par la ruse, ou de fuir un monde qu'il s'apprête à ensanglanter. Les imprévisibles finissent toujours par exploser."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "warlord_neighbor",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le piéger par la ruse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fuir Trantor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "warlord_neighbor",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_trantor_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.xuzhou_lv_bu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31221,
+		"label": "planet_trantor_31221",
+		"deck": "planet_trantor",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un agent du seigneur de guerre vous file dans les couloirs sans fin de Trantor. La capitale-monde est un labyrinthe parfait pour perdre une filature — ou pour disparaître soi-même à jamais. Quarante milliards d'habitants, et vous vous sentez seul et traqué."
+		},
+		"conditions": [
+			{
+				"variable": "warlord_is_neighbor",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "seen_811",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Semer la filature"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confronter l'agent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31222,
+		"label": "planet_trantor_31222",
+		"deck": "planet_trantor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous ralliez deux figures-clés de Trantor à votre cause discrète : un patricien et un militaire, ennemis hier, alliés improbables aujourd'hui. La capitale moribonde recèle encore des hommes de valeur. Les sauver du naufrage, c'est sauver des graines pour l'après-Empire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller cette double alliance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 111,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 212,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31223,
+		"label": "planet_trantor_31223",
+		"deck": "planet_trantor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le piège se referme dans les profondeurs de Trantor : un canon neutronique braqué, une trahison, et le sol qui s'embrase. La capitale-monde dévore ceux qui jouent trop longtemps dans ses ombres. Votre règne, peut-être, s'achève ici, sous quarante milliards d'indifférents."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter l'impossible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter l'impossible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_canon_neutronique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_canon_neutronique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
 		"id": 32800,
 		"label": "planet_korell_32800",
 		"deck": "planet_korell",
