@@ -123,7 +123,7 @@ if aliases and cards:
     for c in cards:
         for outcome in c.get("yesOutcome",[]) + c.get("noOutcome",[]) + c.get("loadOutcome",[]):
             sv = str(outcome.get("stringValue", ""))
-            if outcome.get("variable") == "link" and sv.startswith("_"):
+            if outcome.get("variable") == "link" and sv and not sv.lstrip("-").isdigit():
                 check(sv in aliases,
                       f"card {c.get('id','?')}: alias de link non enregistré '{sv}'")
 

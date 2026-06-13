@@ -14,15 +14,16 @@ func draw_card() -> Dictionary:
 	var link = str(_ctx.get_var("link", ""))
 	if link != "" and link != "0":
 		_ctx.set_var("link", "")
-		if link.begins_with("_"):
-			var resolved = _resolve_alias(link)
-			if not resolved.is_empty():
-				return resolved
-			# alias d'action ou inconnu : retombe sur le tirage aléatoire
-		else:
+		if link.is_valid_int():
 			var linked = _data.get_card_by_id(int(link))
 			if not linked.is_empty():
 				return linked
+		else:
+			# alias nommé (avec ou sans _) : registre data/link_aliases.json
+			var resolved = _resolve_alias(link)
+			if not resolved.is_empty():
+				return resolved
+			# action ou alias inconnu : retombe sur le tirage aléatoire
 
 	var eligible = _get_eligible_cards()
 	if eligible.is_empty():

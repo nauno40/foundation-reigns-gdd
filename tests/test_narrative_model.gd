@@ -278,3 +278,9 @@ func test_link_alias_conditional_nodes_picks_first_match():
 	ctx.set_var("link", "_test_variants")
 	var card = model.draw_card()
 	assert_eq(int(card.get("id", 0)), 99908, "première variante dont les conditions passent")
+
+func test_link_bare_word_alias_resolves():
+	data.link_aliases["refugees"] = {"node": 1003}
+	ctx.set_var("link", "refugees")
+	var card = model.draw_card()
+	assert_eq(int(card.get("id", 0)), 1003, "un alias sans underscore se résout aussi")
