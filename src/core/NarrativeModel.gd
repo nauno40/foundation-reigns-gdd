@@ -40,6 +40,15 @@ func _resolve_alias(alias: String) -> Dictionary:
 		return {}
 	if entry.has("node"):
 		return _data.get_card_by_id(int(entry["node"]))
+	if entry.has("nodes"):
+		# Variantes conditionnelles : la première dont les conditions passent
+		for node_id in entry["nodes"]:
+			var candidate = _data.get_card_by_id(int(node_id))
+			if candidate.is_empty():
+				continue
+			if _evaluator.evaluate_all(candidate.get("conditions", []), _ctx._vars):
+				return candidate
+		return {}
 	match entry.get("action", ""):
 		"enddispatch":
 			pass  # rien : retour au tirage aléatoire

@@ -258,3 +258,15 @@ func test_find_interlude_card_empty_when_no_match():
 	ctx.set_var("turns", 0)
 	var card = model.find_interlude_card()
 	assert_true(card.is_empty(), "aucun intermède sans conditions remplies")
+
+func test_link_alias_conditional_nodes_picks_first_match():
+	data.cards.append({"id": 99907, "label": "v1", "deck": "new_speaker",
+		"weight": 1, "lockturn": 0, "hidden": true, "question": {"FR": "?"},
+		"conditions": [{"variable": "tyranny", "op": "above", "value": 1}]})
+	data.cards.append({"id": 99908, "label": "v2", "deck": "new_speaker",
+		"weight": 1, "lockturn": 0, "hidden": true, "question": {"FR": "?"},
+		"conditions": [{"variable": "tyranny", "op": "equal", "value": 0}]})
+	data.link_aliases["_test_variants"] = {"nodes": [99907, 99908]}
+	ctx.set_var("link", "_test_variants")
+	var card = model.draw_card()
+	assert_eq(int(card.get("id", 0)), 99908, "première variante dont les conditions passent")

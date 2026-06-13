@@ -112,8 +112,8 @@ aliases = load("link_aliases.json")
 if aliases:
     for name, entry in aliases.items():
         check(name.startswith("_"), f"alias '{name}' doit commencer par _")
-        check(("node" in entry) != ("action" in entry),
-              f"alias '{name}': exactement un de node/action requis")
+        check(sum(k in entry for k in ("node", "nodes", "action")) == 1,
+              f"alias '{name}': exactement un de node/nodes/action requis")
         if entry.get("action") == "jump" and planets:
             check(entry.get("planet") in {p["id"] for p in planets},
                   f"alias '{name}': planète inconnue '{entry.get('planet')}'")
