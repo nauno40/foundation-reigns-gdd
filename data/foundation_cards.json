@@ -33036,6 +33036,1327 @@
 		}
 	},
 	{
+		"id": 32800,
+		"label": "planet_korell_32800",
+		"deck": "planet_korell",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année sur Korell, république de façade : les crues menacent les ports francs. « Le Commdor décrétera la météo s'il le faut, » plaisante un docker. Sur Korell, même la pluie doit demander une autorisation au Commdor."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Renforcer les digues"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Invoquer une crue maîtrisée"
+			},
+			"reaction": {
+				"FR": "Un ingénieur détourne un bras de fleuve. Les ports sont sauvés. Le Commdor s'en attribue le mérite, naturellement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_river_flooding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 32801,
+		"label": "planet_korell_32801",
+		"deck": "planet_korell",
+		"weight": 140,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Saison froide sur Korell : les pêcheurs des récifs orbitaux réclament des subventions. « Pas de poisson, pas de républicains contents, » résume leur porte-parole. Le Commdor déteste les mécontents — surtout ceux qui votent, là où le vote existe encore."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Subventionner les pêcheurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Les renvoyer au Commdor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32802,
+		"label": "planet_korell_32802",
+		"deck": "planet_korell",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Mi-saison, le marché de Korell bat son plein : un négociant vous propose un partenariat juteux sur les routes du récif. « Korell ferme ses ports à votre Fondation, officiellement. Officieusement, l'argent n'a pas de drapeau. On s'entend ? »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 7
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conclure l'accord discret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Respecter l'embargo"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32803,
+		"label": "planet_korell_32803",
+		"deck": "planet_korell",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une épidémie frappe les docks de Korell. Le Commdor minimise : « Mauvais pour le commerce, ces rumeurs de peste. Étouffez-moi ça. » Étouffer une épidémie ne la soigne pas — ça la cache jusqu'à ce qu'elle explose. Dilemme classique des tyrans commerçants."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soigner malgré le Commdor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Obéir et étouffer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 32804,
+		"label": "planet_korell_32804",
+		"deck": "planet_korell",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Commdor de Korell vous reçoit sous ses propres statues géantes : « On me dit que vous venez de Terminus. Charmante bibliothèque, votre monde. Sans défense, mais charmante. Korell, lui, a des canons ET des comptables. Devinez ce qui dure. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Flatter sa puissance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vanter la Fondation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 32805,
+		"label": "planet_korell_32805",
+		"deck": "planet_korell",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le port de Korell prospère sous votre gestion discrète — un peu trop : le Commdor remarque l'embellie et veut sa part. « Un étranger qui enrichit MON port mérite récompense... ou surveillance. Disons les deux. » L'intérêt d'un tyran est une laisse."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la récompense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner son attention"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32806,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32806,
+		"label": "planet_korell_32806",
+		"deck": "planet_korell",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un commerçant korellien tente de vous corrompre — maladroitement, avec des pots-de-vin si gros qu'ils en deviennent insultants. « Tout le monde a un prix, l'étranger. Le mien est haut, le vôtre sûrement bas. » Le mépris est sa seule monnaie sincère."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser avec dignité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer le corruptible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32807,
+		"label": "planet_korell_32807",
+		"deck": "planet_korell",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les pêcheurs de Korell rêvent d'un nouveau type de barque-récif, plus rapide. L'investissement est risqué mais visionnaire. « Le Commdor ne financera jamais ça — trop d'imagination pour un tyran comptable, » soupire le chef de quai. À vous de voir."
+		},
+		"conditions": [
+			{
+				"variable": "korell_new_barque",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer la barque nouvelle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop risqué"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "korell_new_barque",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32808,
+		"label": "planet_korell_32808",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La barque-récif prototype marche au-delà des espoirs. Les pêcheurs veulent maintenant un filet assorti, plus fin, plus large. L'innovation appelle l'innovation — et chaque amélioration creuse un peu plus la bourse avant de la remplir."
+		},
+		"conditions": [
+			{
+				"variable": "korell_new_barque",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Financer le nouveau filet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en tenir aux barques"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "korell_new_net",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32809,
+		"label": "planet_korell_32809",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les barques nouvelles essaiment sur les récifs de Korell. Les prises doublent, les pêcheurs vous bénissent, et le Commdor lorgne la manne. « Toute richesse korellienne finit dans MES caisses, » rappelle-t-il. Le génie nourrit toujours le tyran, hélas."
+		},
+		"conditions": [
+			{
+				"variable": "korell_new_barque",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger les pêcheurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le Commdor ponctionner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32810,
+		"label": "planet_korell_32810",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une querelle éclate entre pêcheurs sur le partage des nouvelles zones. Vos innovations ont créé de la richesse — et la richesse crée des disputes là où la pauvreté créait de la solidarité. Le progrès a toujours ce goût doux-amer."
+		},
+		"conditions": [
+			{
+				"variable": "korell_new_barque",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Arbitrer le partage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Les laisser régler ça"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 32811,
+		"label": "planet_korell_32811",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les filets nouveaux raflent tant de poisson que les récifs s'épuisent. Un vieux pêcheur vous met en garde : « On vide la mer, l'étranger. Vos machines pêchent plus vite que la mer ne se remplit. Le progrès qui mange sa source n'est pas un progrès. »"
+		},
+		"conditions": [
+			{
+				"variable": "korell_new_net",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réguler la pêche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maximiser les prises"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32812,
+		"label": "planet_korell_32812",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La pêche korellienne, mécanisée à outrance, devient une industrie florissante et froide. Les anciens pêcheurs deviennent ouvriers, les récifs des usines. Vous avez enrichi Korell et tué quelque chose au passage. Le bilan, comme toujours, est gris."
+		},
+		"conditions": [
+			{
+				"variable": "korell_new_net",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer la modernisation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Regretter l'ancien temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32813,
+		"label": "planet_korell_32813",
+		"deck": "planet_korell",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un pêcheur korellien vous offre un void-poisson rarissime — une créature des grands fonds orbitaux, dit-on porte-bonheur. « Acceptez-le, l'étranger. Refuser un cadeau, sur Korell, c'est déclarer la guerre. Et ce poisson vaut une rançon. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "korell_new_net",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le void-poisson"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le refuser poliment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_accepted_koi",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "korell_new_net",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32814,
+		"label": "planet_korell_32814",
+		"deck": "planet_korell",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un second pêcheur, jaloux, vous offre un void-poisson ENCORE plus rare. La surenchère des cadeaux est un sport korellien : qui offre le plus oblige le plus. Accepter, c'est entrer dans un jeu de dettes où le Commdor lui-même se prendrait les pieds."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "korell_new_net",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter et jouer le jeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mettre fin à la surenchère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_accepted_koi",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "korell_new_net",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32815,
+		"label": "planet_korell_32815",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le village de pêcheurs que vous avez aidé veut vous ériger une statue — petite, mais sincère, à côté des colosses du Commdor. « Pour que les générations sachent qui nous a vraiment nourris, » disent-ils. Une statue d'étranger, sur Korell : provocation involontaire."
+		},
+		"conditions": [
+			{
+				"variable": "korell_village",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner fermement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32816,
+		"label": "planet_korell_32816",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Commdor a vu votre statuette parmi les siennes. Il fulmine en silence — la pire des fureurs chez un tyran comptable. « Un étranger statufié sur MON monde. Intéressant. Très intéressant. » Quand un Commdor trouve les choses intéressantes, on prépare ses bagages."
+		},
+		"conditions": [
+			{
+				"variable": "korell_village",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Désamorcer sa jalousie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre l'innocence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32817,
+		"label": "planet_korell_32817",
+		"deck": "planet_korell",
+		"weight": 200,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Les pêcheurs de Korell, reconnaissants, vous confient un secret : une route maritime cachée qui contourne les douanes du Commdor. « Pour vos amis de la Fondation, l'étranger. On n'oublie pas qui nous a rendu la mer généreuse. » Un cadeau qui vaut une flotte."
+		},
+		"conditions": [
+			{
+				"variable": "korell_village",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "seen_2578",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la route secrète"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce risque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32818,
+		"label": "planet_korell_32818",
+		"deck": "planet_korell",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un émissaire d'un seigneur allié vous trouve sur Korell : « Mon maître réclame votre présence ailleurs — affaire urgente. Korell peut attendre ; mon maître, non. » L'appel du large, juste quand les choses devenaient intéressantes sur ce monde de tyran."
+		},
+		"conditions": [
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Répondre à l'appel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Finir d'abord à Korell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "allied_lord",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32819,
+		"label": "planet_korell_32819",
+		"deck": "planet_korell",
+		"weight": 800,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous rejoint en hâte sur Korell : « Terminus a besoin de vous, MAINTENANT. Quelque chose se prépare au centre, et votre place n'est plus sur ce caillou marchand. Laissez les poissons aux pêcheurs et rentrez. » Le devoir rappelle."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "planet_terminus_state",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "seen_2967",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 20
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rentrer sur Terminus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Encore un jour ici"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32820,
+		"label": "planet_korell_32820",
+		"deck": "planet_korell",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Crise sur Korell : le commerce s'effondre tandis que le militarisme monte. Le Commdor, acculé, songe à la guerre pour masquer sa banqueroute. « Un tyran ruiné cherche toujours un ennemi extérieur, » note le maître-espion. Et l'ennemi désigné, c'est souvent la Fondation."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 40
+			},
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 60
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Détourner Korell de la guerre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer Terminus au pire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
 		"id": 36400,
 		"label": "planet_kalgan_36400",
 		"deck": "planet_kalgan",
@@ -33830,6 +35151,716 @@
 			"default": "suspicious",
 			"yes": "neutral",
 			"no": "afraid"
+		}
+	},
+	{
+		"id": 37600,
+		"label": "planet_askone_37600",
+		"deck": "planet_askone",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Début d'année sur Askone, monde technophobe : les inondations menacent les rizières, mais les Anciens refusent les pompes « impies ». « Mieux vaut nos pieds dans l'eau que la machine dans nos âmes, » récitent-ils. La piété coûte des récoltes."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Respecter leur choix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Invoquer la crue providentielle"
+			},
+			"reaction": {
+				"FR": "Un « régisseur des eaux » détourne discrètement un canal. Les Anciens crient au miracle. Vous, vous appelez ça de l'hydraulique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_river_flooding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 37601,
+		"label": "planet_askone_37601",
+		"deck": "planet_askone",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une fièvre frappe Askone — et les Anciens interdisent les remèdes machinés. « La maladie purifie, » assurent-ils tandis que leurs fidèles tombent. Soigner en cachette, ou respecter un dogme qui tue ? Le secret est votre métier, après tout."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soigner clandestinement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Respecter le dogme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -14,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 37602,
+		"label": "planet_askone_37602",
+		"deck": "planet_askone",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un Ancien d'Askone, plus pragmatique que les autres, vous glisse en secret : « Entre nous : nos jeunes désertent vers vos mondes à machines. La technophobie vide nos villages. Aidez-moi à entrouvrir la porte, sans que les vieux ne me lapident. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'aider à moderniser"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ne pas s'en mêler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 37603,
+		"label": "planet_askone_37603",
+		"deck": "planet_askone",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une rumeur intrigue tout Askone : une bête errante hanterait les forêts du nord, une créature qui « ressent les pensées » et fuit les esprits troublés. Les chasseurs reviennent bredouilles et secoués. Un Mentalique, lui, pourrait l'approcher..."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "askone_beast",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Traquer la bête sensible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser la légende courir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37604,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37604,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 37604,
+		"label": "planet_askone_37604",
+		"deck": "planet_askone",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Vous trouvez la bête — une créature sylvestre aux grands yeux, qui se fige en sentant votre esprit. Elle ne fuit pas : elle vous SONDE, curieuse. Aucun chasseur ne l'avait approchée car aucun chasseur ne savait calmer son propre esprit."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Calmer son esprit pour l'approcher"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter de la capturer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37605,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_panda",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37605,
+		"label": "planet_askone_37605",
+		"deck": "planet_askone",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La bête sensible vous accepte, pose sa tête contre votre paume. Les villageois d'Askone observent, bouche bée : « L'étranger a apprivoisé l'Esprit des Bois ! » En une caresse, vous venez de devenir une légende locale. Encombrant, parfois utile."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Devenir gardien de la bête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La relâcher discrètement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_captured_the_panda",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_panda",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 37606,
+		"label": "planet_askone_37606",
+		"deck": "planet_askone",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La bête sensible vous teste encore — un esprit animal mais fin, qui jauge votre patience. Brusquez-la et elle fuira pour toujours ; persévérez et elle vous suivra. Apprivoiser un être qui lit les intentions exige une sincérité totale. Embarrassant, pour un espion."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Persévérer sincèrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renoncer à la bête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_panda",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_angry_panda",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 37607,
+		"label": "planet_askone_37607",
+		"deck": "planet_askone",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous capturez la bête sensible — et le regrettez aussitôt : enfermée, elle projette une détresse mentale qui vous ronge. Les créatures qui ressentent les pensées ne supportent pas les cages. Ni les remords de leurs geôliers."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "askone_beast",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "La libérer par pitié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La garder malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37608,
+		"label": "planet_askone_37608",
+		"deck": "planet_askone",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La bête, effrayée par votre approche maladroite, projette une vague de panique pure — et tout le village la ressent. Hystérie collective, fuite éperdue. Une créature mentalique apeurée est une arme involontaire. Il faut tout apaiser, vite."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "askone_beast",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Apaiser la bête et la foule"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Battre en retraite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 37609,
+		"label": "planet_askone_37609",
+		"deck": "planet_askone",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La bête sensible, désormais vôtre, devient un atout inattendu : elle FLAIRE les esprits hostiles. À Askone, elle gronde devant les fanatiques et ronronne devant les sincères. Un détecteur de mensonges sur pattes. La Seconde Fondation en saliverait."
+		},
+		"conditions": [
+			{
+				"variable": "askone_beast",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter son don"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La laisser tranquille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "askone_beast",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 37610,
+		"label": "planet_askone_37610",
+		"deck": "planet_askone",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La bête vieillit, son don s'émousse. Les villageois d'Askone, qui la vénéraient, se demandent si « l'Esprit des Bois » vous abandonne — et si vous-même n'êtes qu'un charlatan. Les légendes qui fanent éclaboussent leurs faiseurs."
+		},
+		"conditions": [
+			{
+				"variable": "askone_beast",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gérer le déclin de la légende"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter Askone à temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 37611,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 37611,
+		"label": "planet_askone_37611",
+		"deck": "planet_askone",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La bête sensible s'éteint paisiblement, la tête sur vos genoux. Askone vous tient pour celui « que l'Esprit des Bois a choisi ». Un statut sacré sur un monde technophobe : encombrant, mais c'est une porte ouverte là où la Fondation n'en avait aucune."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer sa mémoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tourner la page"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "askone_beast",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "neutral"
 		}
 	},
 	{

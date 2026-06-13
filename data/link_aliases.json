@@ -293,5 +293,20 @@
 	},
 	"_wine_complete": {
 		"node": 39208
+	},
+	"_river_flooding": {
+		"action": "enddispatch"
+	},
+	"_meet_the_panda": {
+		"node": 37606
+	},
+	"_captured_the_panda": {
+		"node": 37607
+	},
+	"_angry_panda": {
+		"node": 37608
+	},
+	"_accepted_koi": {
+		"action": "enddispatch"
 	}
 }
