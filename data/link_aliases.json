@@ -380,5 +380,47 @@
 	},
 	"_defend_qingzhou_lost": {
 		"node": 38411
+	},
+	"_weaving_colour_quiz": {
+		"node": 35206
+	},
+	"women_weaver": {
+		"node": 35213
+	},
+	"_silk_innovator": {
+		"node": 35216
+	},
+	"_xu_shu_like": {
+		"node": 32402
+	},
+	"_xu_shu_dislike": {
+		"node": 32404
+	},
+	"_i_know_who_you_are": {
+		"node": 32411
+	},
+	"_mi_zhu_introduce": {
+		"node": 33204
+	},
+	"_how_to_meet_tao_qian": {
+		"node": 33205
+	},
+	"_peaceful_xuzhou": {
+		"node": 33206
+	},
+	"refugees": {
+		"node": 33207
+	},
+	"_refugee_jobs": {
+		"node": 33208
+	},
+	"_meet_tao_qian": {
+		"node": 33212
+	},
+	"_who_can_rule_xuzhou": {
+		"node": 33217
+	},
+	"_volunteer_rule_xuzhou": {
+		"node": 33219
 	}
 }

@@ -36790,6 +36790,1319 @@
 		}
 	},
 	{
+		"id": 32400,
+		"label": "defector_advisor_32400",
+		"deck": "defector_advisor",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "An 197, sur Terminus : un transfuge se présente, brillant et nerveux — un ancien conseiller impérial qui a tout quitté. « Je veux servir la Fondation, » dit-il. Le maître-espion flaire le piège : « Personne ne déserte l'Empire par amour de la lecture publique. Que cherche-t-il VRAIMENT ? »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 197
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "defector_trust",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui faire confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le soupçonner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32401,
+		"label": "defector_advisor_32401",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le transfuge se révèle d'une intelligence rare — et d'une lucidité gênante. À peine arrivé, il analyse Terminus mieux que ses dirigeants. « Cet homme voit tout, » s'inquiète le Contact. « Y compris, peut-être, ce que vous cachez. Un conseiller trop perspicace est un danger. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'apprécier malgré le risque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le tenir à l'écart"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xu_shu_like",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xu_shu_dislike",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32402,
+		"label": "defector_advisor_32402",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge gagne en influence, conseillant le Conseil de Terminus avec un brio inquiétant. Vous le sentez vous OBSERVER — pas avec hostilité, mais avec une curiosité de chasseur. « Vous n'êtes pas un simple marchand, n'est-ce pas ? » glisse-t-il un soir. Le piège se referme à l'envers."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Détourner sa curiosité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tester sa loyauté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32403,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32403,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32403,
+		"label": "defector_advisor_32403",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le transfuge se met en danger pour la Fondation — une preuve de loyauté, ou une manœuvre pour gagner votre confiance ? Il s'expose à l'Empire qu'il a trahi. « Je brûle mes vaisseaux, » dit-il. « Maintenant, croyez-vous en moi ? » Difficile de feindre un tel risque. Difficile, pas impossible."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Croire en sa loyauté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester méfiant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.xu_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.xu_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32404,
+		"label": "defector_advisor_32404",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge, devançant vos doutes, prend les devants contre vous : il rassemble des indices sur votre vraie nature. « Je ne vous dénoncerai pas, » dit-il. « Je veux COMPRENDRE. Un homme comme vous ne peut pas être ce qu'il prétend. Ça me fascine. » La fascination d'un génie est une prison."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter sa curiosité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer une diversion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.against_xu_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.against_xu_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32405,
+		"label": "defector_advisor_32405",
+		"deck": "defector_advisor",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge, encore tiède, doute de la Fondation : « Vous prêchez la liberté et cachez vos vrais maîtres. Comme l'Empire, au fond. » Son cynisme d'ancien courtisan le rend imprévisible. Le convaincre exige plus qu'un discours — il faut lui montrer une vérité qu'il ne peut réfuter."
+		},
+		"conditions": [
+			{
+				"variable": "defector_trust",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui montrer la sincérité du Plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser douter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32406,
+		"label": "defector_advisor_32406",
+		"deck": "defector_advisor",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge, gagné à la cause, devient un atout redoutable : ses connaissances de l'Empire valent une flotte de renseignement. « Tout ce que je sais est à vous, » offre-t-il. Mais un homme qui donne tout attend toujours quelque chose en retour. Reste à découvrir quoi."
+		},
+		"conditions": [
+			{
+				"variable": "defector_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter son savoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sonder ses attentes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32407,
+		"label": "defector_advisor_32407",
+		"deck": "defector_advisor",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge hésite encore, tiraillé entre la Fondation et la nostalgie de l'Empire. « On ne quitte pas vraiment ce qu'on a aimé, même corrompu, » avoue-t-il. Sa loyauté reste un fil tendu. Un mot de trop, et il repart ; un mot juste, et il est vôtre à jamais."
+		},
+		"conditions": [
+			{
+				"variable": "defector_trust",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trouver le mot juste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser mûrir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32408,
+		"label": "defector_advisor_32408",
+		"deck": "defector_advisor",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge, désormais loyal, met son génie au service du Plan — sans en connaître l'existence. Il croit servir la Fondation ; il sert, en réalité, la Seconde. L'ironie vous amuse à peine : utiliser un homme lucide en lui cachant l'essentiel, c'est jouer avec le feu intelligent."
+		},
+		"conditions": [
+			{
+				"variable": "defector_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Diriger discrètement son talent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lui révéler une part de vérité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32409,
+		"label": "defector_advisor_32409",
+		"deck": "defector_advisor",
+		"weight": 2000,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le moment de vérité arrive : le transfuge vous confronte, seul à seul. « Je sais qui vous êtes. Pas le nom — la NATURE. Vous lisez les esprits. Vous influencez. Vous êtes de ceux que l'Empire chassait en secret. » Il sourit, sans menace. « Et je veux vous aider. »"
+		},
+		"conditions": [
+			{
+				"variable": "quest_defector",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "defector_trust",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le tester avant de répondre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Nier farouchement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32410,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_i_know_who_you_are",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32410,
+		"label": "defector_advisor_32410",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge attend votre réponse, calme. « Niez si vous voulez. Mais réfléchissez : un homme qui connaît votre secret et choisit de vous servir vaut mille alliés ignorants. Je ne vous trahirai pas. J'ai trahi l'Empire ; je ne trahis qu'une fois. » L'argument est solide. Terriblement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui accorder votre confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exiger des garanties"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 186,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_i_know_who_you_are",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32411,
+		"label": "defector_advisor_32411",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "« Je sais qui vous êtes, » répète le transfuge, et cette fois c'est scellé. « Et vous savez que je sais. Étrange équilibre, non ? Deux hommes qui se tiennent par un secret. » Il tend la main. « Appelons ça de la confiance. Faute de mieux. C'est ainsi que naissent les meilleures alliances. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller cet équilibre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Redouter ce lien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32412,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32412,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32412,
+		"label": "defector_advisor_32412",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge rejoint votre cercle le plus intime — le seul, hors la Seconde Fondation, à connaître votre nature. « Un fardeau partagé, » dit-il. « Le vôtre était lourd à porter seul, je crois. » Il a raison, et c'est ce qui rend ce génie dangereux : il comprend même votre solitude."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_defector",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter cette intimité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder une réserve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 186,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "defector_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32413,
+		"label": "defector_advisor_32413",
+		"deck": "defector_advisor",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Contact s'alarme de votre proximité avec le transfuge : « Un homme qui connaît votre secret est une faille permanente. Le jour où il changera d'avis — et les génies changent d'avis — vous serez à sa merci. Êtes-vous SÛR de lui ? Peut-on jamais l'être ? »"
+		},
+		"conditions": [
+			{
+				"variable": "quest_palver",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Défendre votre choix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reconnaître le risque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32414,
+		"label": "defector_advisor_32414",
+		"deck": "defector_advisor",
+		"weight": 800,
+		"lockturn": 9,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le transfuge, pour prouver sa fidélité, déjoue un complot contre vous avant même que vous ne le voyiez venir. « Vous voyez ? » dit-il, modeste. « Je veille. » Sa loyauté est réelle — et c'est précisément ce qui vous lie à lui d'un nœud impossible à défaire sans douleur."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "defector_trust",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le remercier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'inquiéter de la dépendance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32415,
+		"label": "defector_advisor_32415",
+		"deck": "defector_advisor",
+		"weight": 800,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge devient indispensable, ce qui est un autre nom pour dangereux. Le Conseil de Terminus l'écoute plus que ses propres ministres. « Votre protégé prend trop de place, » murmure-t-on. Un conseiller transfuge trop puissant attire les soupçons — sur lui, et sur vous."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 60
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "defector_trust",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Modérer son ascension"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser monter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32416,
+		"label": "defector_advisor_32416",
+		"deck": "defector_advisor",
+		"weight": 600,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Au sommet de son influence, le transfuge vous offre un choix : « Je peux devenir le ministre le plus puissant de Terminus, et vous servir d'autant mieux. Ou rester dans l'ombre, plus sûr, moins utile. Vous tenez ma laisse. Que choisit le marionnettiste discret que vous êtes ? »"
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 70
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "quest_defector",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "defector_trust",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le pousser au sommet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le garder dans l'ombre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "defector_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32417,
+		"label": "defector_advisor_32417",
+		"deck": "defector_advisor",
+		"weight": 100,
+		"lockturn": 350,
+		"hidden": false,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Les années passent, et le transfuge tient parole : jamais il ne vous trahit, jamais il ne révèle votre secret. À sa mort, il vous glisse : « J'emporte ce que je sais de vous. C'était mon dernier service. Le meilleur, peut-être. » Un génie loyal jusqu'au bout. Rare. Précieux. Perdu."
+		},
+		"conditions": [
+			{
+				"variable": "quest_defector",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 208
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recueillir son adieu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller le mourant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32418,
+		"label": "defector_advisor_32418",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le transfuge, sentant sa fin, organise sa succession au service de la Fondation. « J'ai formé des hommes pour continuer, » dit-il. « Mais aucun ne connaîtra votre secret. Ce poids-là meurt avec moi, comme convenu. » Sa prévoyance vous sidère. Même mourant, il pense à vous protéger."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer sa prévoyance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer l'après"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32419,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32419,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32419,
+		"label": "defector_advisor_32419",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "defector_advisor",
+		"question": {
+			"FR": "Le legs du transfuge : un réseau d'agents formés, un savoir impérial encyclopédique, et un secret bien gardé. « Tout cela est à la Fondation, » a-t-il écrit. « Et l'amitié, elle, était à vous. » Vous fermez le dossier. Les meilleurs alliés sont ceux dont la perte fait vraiment mal."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reprendre son réseau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pleurer l'ami"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32420,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_defector_advisor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32420,
+		"label": "defector_advisor_32420",
+		"deck": "defector_advisor",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'ère du transfuge s'achève. Le Contact, radouci, admet : « Vous aviez raison sur lui. Un homme qui connaît votre secret et meurt sans le dire — je n'aurais pas parié dessus. » Vous non plus, au fond. Mais on ne bâtit rien de grand sans parier, parfois, sur une âme."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_defector_advisor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore ce chapitre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder sa mémoire vive"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 32800,
 		"label": "planet_korell_32800",
 		"deck": "planet_korell",
@@ -38108,6 +39421,1503 @@
 			"default": "afraid",
 			"yes": "neutral",
 			"no": "afraid"
+		}
+	},
+	{
+		"id": 33200,
+		"label": "dying_viceroy_33200",
+		"deck": "dying_viceroy",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Trantor, un vieux vice-roi impérial agonise — Ducem Barr, le dernier juste d'une administration pourrie. Il vous fait mander : « On me dit que vous êtes un homme de confiance. Par les temps qui courent, c'est aussi rare qu'un honnête percepteur. Approchez. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'approcher du vice-roi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se méfier d'un piège"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33201,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33201,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33201,
+		"label": "dying_viceroy_33201",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le vice-roi mourant vous jauge de son lit : « Mon secteur va me survivre, et je n'ai pas d'héritier digne. Les vautours impériaux tournent déjà. Je cherche quelqu'un à qui léguer non pas le pouvoir — il corrompt — mais la RESPONSABILITÉ. Êtes-vous cet homme ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter sa proposition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner un tel fardeau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33202,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33202,
+		"label": "dying_viceroy_33202",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "« Mon intendant vous présentera les affaires, » dit le vice-roi. « Il est fidèle et un peu sot — la meilleure combinaison chez un subordonné. Suivez-le. Et jugez par vous-même si mon secteur mérite qu'on se batte pour lui, ou qu'on le laisse aux charognards. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "intendant_trust",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre l'intendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Interroger le vice-roi d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33203,
+		"label": "dying_viceroy_33203",
+		"deck": "dying_viceroy",
+		"weight": 600,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'intendant, dévoué jusqu'à la maladresse, vous présente : « Le vice-roi vous estime ! Il n'estime personne ! C'est un miracle ! » Sa loyauté touchante cache une administration au bord du gouffre. Un secteur entier tient par la volonté d'un mourant et le zèle d'un brave homme."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "quest_viceroy",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "intendant_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gagner sa confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder ses distances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mi_zhu_introduce",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "intendant_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33204,
+		"label": "dying_viceroy_33204",
+		"deck": "dying_viceroy",
+		"weight": 200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un fonctionnaire vous explique comment approcher vraiment le vice-roi : « Il teste tout le monde. Refusez ses cadeaux, contredisez-le poliment, prouvez que vous ne convoitez rien. C'est ainsi qu'il reconnaît les siens — par ce qu'ils REFUSENT. » Conseil précieux d'un initié."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "quest_viceroy",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre ce conseil"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher un chemin direct"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_how_to_meet_tao_qian",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_peaceful_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33205,
+		"label": "dying_viceroy_33205",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Vous découvrez comment mériter le vice-roi : non par flatterie, mais par intégrité visible. Refuser ses largesses le rassure ; les accepter le déçoit. Un vieil homme désabusé qui cherche, avant de mourir, une preuve que la vertu existe encore. Vous pouvez la lui donner. Ou la simuler."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui offrir une intégrité vraie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La simuler habilement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_how_to_meet_tao_qian",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33206,
+		"label": "dying_viceroy_33206",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le secteur du vice-roi, paisible en surface, cache des tensions : réfugiés affluant des mondes en guerre, caisses vides, notables avides. « La paix de mon secteur est un équilibre fragile, » avoue le vieil homme. « Le maintenir vous coûtera plus que de le conquérir. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Préserver l'équilibre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réformer en profondeur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "refugees",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33207,
+		"label": "dying_viceroy_33207",
+		"deck": "dying_viceroy",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une vague de réfugiés submerge le secteur — des familles fuyant les guerres de la périphérie. Les notables veulent fermer les portes ; le vice-roi, lui, hésite. « Que feriez-vous ? » vous demande-t-il, fiévreux. « Accueillir et risquer le chaos, ou refuser et trahir tout ce que je crois ? »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_596",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir les réfugiés"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protéger d'abord le secteur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_refugee_jobs",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33208,
+		"label": "dying_viceroy_33208",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion propose une solution aux réfugiés : les employer plutôt que les nourrir à fonds perdus. « Donnez-leur du travail, ils donneront de la richesse. La charité épuise ; l'intégration enrichit. » Pragmatique et humain à la fois — assez rare pour qu'on l'écoute."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer le programme d'emploi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur la charité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33209,
+		"label": "dying_viceroy_33209",
+		"deck": "dying_viceroy",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une congrégation de l'Église de la Science veut bâtir un temple dans le secteur, pour « apaiser les réfugiés par la foi ». Coûteux, et politiquement chargé : un temple est aussi un pouvoir. Le vice-roi vous laisse trancher : « Vous gérerez ce secteur. Autant commencer. »"
+		},
+		"conditions": [
+			{
+				"variable": "church_presence",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "sector_temple",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Autoriser le temple"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser l'implantation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33210,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33210,
+		"label": "dying_viceroy_33210",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le temple bâti, l'Église gagne en influence dans le secteur — apaisant les réfugiés, mais réclamant déjà plus. « La foi est un bon ciment et un mauvais maître, » note le vice-roi. « Vous venez d'inviter un partenaire qui voudra bientôt être patron. Surveillez-le. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encadrer l'Église"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser faire la foi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "sector_temple",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33211,
+		"label": "dying_viceroy_33211",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "Le vice-roi, affaibli, vous reçoit une dernière fois en pleine lucidité : « Le temps presse. Je dois savoir avant de partir : accepterez-vous mon secteur, oui ou non ? Ne mentez pas à un mourant. C'est le seul luxe qu'il me reste — la vérité des autres. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la charge"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser honnêtement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_tao_qian",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_tao_qian",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33212,
+		"label": "dying_viceroy_33212",
+		"deck": "dying_viceroy",
+		"weight": 500,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le moment solennel : le vice-roi, devant témoins, vous désigne son successeur. « Je ne vous lègue pas un trône, » insiste-t-il. « Je vous lègue des gens. Des millions. Traitez-les mieux que l'Empire ne nous a traités. C'est tout ce que je demande. Promettez. » Sa main froide serre la vôtre."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 60
+			},
+			{
+				"variable": "quest_viceroy",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "seen_592",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_599",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le promettre solennellement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter avec gravité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33213,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33213,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33213,
+		"label": "dying_viceroy_33213",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "Vous voilà désigné successeur du vice-roi — héritier d'un secteur, d'un peuple, d'une responsabilité écrasante. Reste à décider COMMENT régner : en administrateur ferme qui consolide, ou en réformateur qui transforme. Le vieil homme vous a légué le choix avec le fardeau."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_viceroy",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réformer hardiment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "viceroy_successor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "viceroy_successor",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 33214,
+		"label": "dying_viceroy_33214",
+		"deck": "dying_viceroy",
+		"weight": 450,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "Le secteur hérité pose la question de la transition : céder une partie à un allié pour vous concentrer, ou tout garder au risque de la surcharge. Le vice-roi, de son vivant, divisait pour mieux durer. « Un homme seul ne tient pas un secteur, » vous avait-il prévenu. « Choisissez vos partages. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "viceroy_successor",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "sector_cede",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sector_cede",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Céder une part à un allié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tout garder en main"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33215,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_volunteer_rule_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33215,
+		"label": "dying_viceroy_33215",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "Vous cédez une part du secteur à un allié de confiance — soulagement et risque mêlés. « Bien joué, » aurait approuvé le vice-roi. « On ne perd jamais ce qu'on partage avec les bons. On ne garde jamais ce qu'on serre trop fort. » La sagesse d'un mort guide vos premiers pas de gestionnaire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller le partage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surveiller l'allié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33216,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33216,
+		"label": "dying_viceroy_33216",
+		"deck": "dying_viceroy",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le partage du secteur stabilise votre héritage : un monde de plus penche vers la Fondation, administré avec justice plutôt que pillé. Le maître-espion approuve : « Le vieux Barr a bien choisi son successeur. Vous gérez un secteur comme on garde un secret : sans en avoir l'air. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider l'héritage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester humble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_trantor_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "viceroy_successor",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33217,
+		"label": "dying_viceroy_33217",
+		"deck": "dying_viceroy",
+		"weight": 350,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "La question de qui doit vraiment gouverner le secteur ressurgit : vous, sous couverture, ne pouvez régner ouvertement. Il faut un prête-nom, un gouverneur de paille loyal. « Trouvez l'homme, » disait le vice-roi. « Pas le plus brillant — le plus FIDÈLE. Le brillant trahit, le fidèle dure. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "viceroy_successor",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "sector_cede",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sector_cede",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher un gouverneur fidèle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Gérer dans l'ombre soi-même"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_can_rule_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_can_rule_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33218,
+		"label": "dying_viceroy_33218",
+		"deck": "dying_viceroy",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "Un candidat au poste de gouverneur se présente — loyal, compétent, ambitieux juste ce qu'il faut. « Servez le secteur, pas vous-même, » lui dites-vous. Il jure. Vous lisez son esprit : il est sincère. Pour l'instant. Les serments se fanent, mais celui-ci tiendra quelques années. Assez."
+		},
+		"conditions": [
+			{
+				"variable": "governor_candidate",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le nommer gouverneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher mieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "governor_candidate",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_volunteer_rule_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33219,
+		"label": "dying_viceroy_33219",
+		"deck": "dying_viceroy",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "Faute de candidat idéal, un volontaire inattendu s'offre à gouverner le secteur : l'intendant fidèle et un peu sot du vieux vice-roi. « Je ne suis pas brillant, » admet-il, « mais j'aimais mon maître, et j'aimerai son secteur. » Parfois la loyauté vaut mieux que le génie. Souvent, même."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Confier le secteur à l'intendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner cette idée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_volunteer_rule_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33220,
+		"label": "dying_viceroy_33220",
+		"deck": "dying_viceroy",
+		"weight": 600,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "dying_viceroy",
+		"question": {
+			"FR": "L'héritage du vice-roi est scellé : un secteur stabilisé, un gouverneur en place, un peuple mieux traité. Vous quittez Trantor en gardant la vraie main sur ce monde, invisible. Le vieux Barr repose en paix, son legs entre des mains qu'il aurait approuvées. Un mort bien servi. Rare honneur."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "viceroy_successor",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "sector_cede",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sector_cede",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "intendant_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter le secteur apaisé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller de loin sur le legs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_trantor_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "viceroy_successor",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_volunteer_rule_xuzhou",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
 		}
 	},
 	{
@@ -39522,6 +42332,1395 @@
 			"default": "sad",
 			"yes": "sad",
 			"no": "sad"
+		}
+	},
+	{
+		"id": 35200,
+		"label": "trade_secret_35200",
+		"deck": "trade_secret",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Sur Neotrantor, une tisserande détient un secret de fabrication révolutionnaire — un tissu-circuit, moitié étoffe moitié électronique. Le maître de guilde s'agite : « Ce procédé vaut une planète, l'étranger. Aidez-moi à le... sécuriser, avant qu'un autre ne le fasse. »"
+		},
+		"conditions": [
+			{
+				"variable": "weave_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sécuriser le secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser au peuple"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35201,
+		"label": "trade_secret_35201",
+		"deck": "trade_secret",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia s'intéresse au tissu-circuit pour de tout autres raisons : « Imaginez des robes qui CALCULENT, charmeur. Mon protecteur de Kalgan paierait des flottes entières. Présentez-moi cette tisserande, et je vous revaudrai ça. À ma façon. »"
+		},
+		"conditions": [
+			{
+				"variable": "weave_stage",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Présenter la tisserande"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder Callia à distance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35202,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35202,
+		"label": "trade_secret_35202",
+		"deck": "trade_secret",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "La tisserande refuse de vendre son secret à Callia : « Mon métier nourrit mon quartier. Le vendre à Kalgan, c'est l'affamer. » Sa loyauté envers les siens complique les affaires — et la rend, paradoxalement, plus précieuse encore. Les incorruptibles ont de la valeur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.loom",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Respecter son choix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La pousser à vendre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 35203,
+		"label": "trade_secret_35203",
+		"deck": "trade_secret",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Callia, éconduite, manœuvre en coulisse pour voler le procédé. La tisserande, naïve, ne voit rien venir. Vous pouvez la prévenir — au risque de vous brouiller avec Callia — ou laisser faire et récupérer les miettes. Le secret attire les requins, dont vous."
+		},
+		"conditions": [
+			{
+				"variable": "weave_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			},
+			{
+				"variable": "seen_2476",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prévenir la tisserande"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser Callia opérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35204,
+		"label": "trade_secret_35204",
+		"deck": "trade_secret",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde propose d'industrialiser le tissu-circuit — usines, brevets, fortune. « La tisserande gardera une part, bien sûr, » assure-t-il du ton de qui n'en pense pas un mot. Transformer un savoir-faire artisanal en empire industriel : profitable et un peu triste."
+		},
+		"conditions": [
+			{
+				"variable": "weave_stage",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			},
+			{
+				"variable": "seen_2477",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Industrialiser équitablement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser l'artisanat vivre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35205,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 35205,
+		"label": "trade_secret_35205",
+		"deck": "trade_secret",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "L'industrialisation bute sur un détail : la teinture-circuit exige un dosage que seule la tisserande maîtrise. Sans elle, les tissus sont muets. « Son secret tient en une nuance de couleur, » réalise le maître de guilde. « Une seule. Et elle ne la dira pas. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Négocier la nuance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter de la percer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weaving_colour_quiz",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35206,
+		"label": "trade_secret_35206",
+		"deck": "trade_secret",
+		"weight": 1000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La tisserande vous teste par une énigme de couleurs : « Si vous comprenez POURQUOI cette nuance et pas une autre, vous comprendrez mon métier. Sinon, vous n'êtes qu'un voleur de plus en costume. » Le secret n'est pas technique. Il est dans le regard."
+		},
+		"conditions": [
+			{
+				"variable": "weave_stage",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "weave_stage",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Résoudre l'énigme des couleurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avouer ne pas comprendre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35207,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 35207,
+		"label": "trade_secret_35207",
+		"deck": "trade_secret",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Vous saisissez la nuance — non par calcul, mais par intuition mentalique, en lisant la fierté de la tisserande. « VOUS avez compris, » s'étonne-t-elle. « Pas avec votre tête. Avec autre chose. » Elle vous regarde, troublée. Un Mentalique sent ce que les ingénieurs ratent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Détourner son trouble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Partager sa compréhension"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35208,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 35208,
+		"label": "trade_secret_35208",
+		"deck": "trade_secret",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La tisserande, conquise, accepte de vous initier — vous, et personne d'autre. « Le procédé vivra par les bonnes mains ou mourra avec moi. J'ai choisi les vôtres. Ne me faites pas regretter. » Un secret galactique confié à un espion : ironie qu'elle ignore."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer sa confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer la responsabilité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 35209,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 35209,
+		"label": "trade_secret_35209",
+		"deck": "trade_secret",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le procédé du tissu-circuit est désormais entre vos mains — et la tisserande veut en faire profiter les femmes de son quartier, exclues de la guilde. « Apprenons-le aux nôtres. Que la guilde tremble. » Une révolution sociale dans un rouleau d'étoffe."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "weave_stage",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "trade_secret",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir les tisserandes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préserver le monopole"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "circuit_business",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "women_weaver",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35210,
+		"label": "trade_secret_35210",
+		"deck": "trade_secret",
+		"weight": 500,
+		"lockturn": 72,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "L'atelier des tisserandes prospère, défiant la guilde masculine. Le commerce explose, les crédits affluent. Mais la guilde, humiliée, prépare sa riposte. « Le progrès dérange toujours les rentes établies, » sourit la tisserande, sans peur. Vous, vous surveillez les couteaux."
+		},
+		"conditions": [
+			{
+				"variable": "weave_stage",
+				"op": "equal",
+				"value": 10
+			},
+			{
+				"variable": "circuit_business",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger l'atelier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tempérer la provocation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "circuit_business",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35211,
+		"label": "trade_secret_35211",
+		"deck": "trade_secret",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un marchand véreux propose d'écouler le tissu-circuit au marché noir, hors taxes de guilde. « Le double de marge, l'étranger, et personne ne pose de questions. » Tentant, sale, et exactement le genre de raccourci qui finit par étrangler les artisans qu'il prétend servir."
+		},
+		"conditions": [
+			{
+				"variable": "circuit_business",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "weave_stage",
+				"op": "above",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser le marché noir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Empocher la marge"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "weave_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35212,
+		"label": "trade_secret_35212",
+		"deck": "trade_secret",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le tissu-circuit devient la coqueluche de la périphérie. Les commandes pleuvent de Trantor, de Kalgan, de partout. La tisserande, dépassée, vous confie la gestion. « Vous êtes plus doué pour les affaires que pour le métier, » constate-t-elle. « Chacun son don. »"
+		},
+		"conditions": [
+			{
+				"variable": "circuit_business",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "weave_stage",
+				"op": "above",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gérer l'expansion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La laisser maîtresse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35213,
+		"label": "trade_secret_35213",
+		"deck": "trade_secret",
+		"weight": 800,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Les femmes tisserandes réclament leur entrée officielle dans la guilde — une première historique. La guilde résiste, furieuse. Callia, opportuniste, propose son appui kalganien « contre une petite faveur ». Soutenir l'émancipation, mais à quel prix politique ?"
+		},
+		"conditions": [
+			{
+				"variable": "women_weavers",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "circuit_business",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir leur intégration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Éviter le conflit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "women_weavers",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35214,
+		"label": "trade_secret_35214",
+		"deck": "trade_secret",
+		"weight": 1200,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Les tisserandes gagnent du terrain, soutenues par votre influence discrète. La guilde plie peu à peu. « On change un monde un fil à la fois, » sourit la tisserande. Vous mesurez le pouvoir d'un Mentalique placé au bon endroit : immense, et c'est bien ce qui inquiète."
+		},
+		"conditions": [
+			{
+				"variable": "women_weavers",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "women_weavers",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "circuit_business",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Poursuivre la lutte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Modérer votre rôle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "women_weavers",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 35215,
+		"label": "trade_secret_35215",
+		"deck": "trade_secret",
+		"weight": 1200,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le triomphe est total : la tisserande entre dans l'histoire comme l'innovatrice qui a brisé le monopole, son procédé essaime, les femmes tissent dans la guilde. « Vous y êtes pour beaucoup, » vous dit-elle. Vous, vous savez que les meilleures victoires d'un Orateur sont anonymes."
+		},
+		"conditions": [
+			{
+				"variable": "women_weavers",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "weave_stage",
+				"op": "above",
+				"value": 10
+			},
+			{
+				"variable": "circuit_business",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "circuit_business",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer dans l'ombre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la suite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_innovator",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_innovator",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35216,
+		"label": "trade_secret_35216",
+		"deck": "trade_secret",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "L'affaire du tissu-circuit se referme en apothéose — Neotrantor enrichi, un savoir partagé, une rente brisée. Le maître de guilde, beau perdant, hausse les épaules : « Vous avez ruiné mon monopole et enrichi mon monde. Difficile de vous en vouloir vraiment. Difficile. »"
+		},
+		"conditions": [
+			{
+				"variable": "planet_neotrantor_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "remove",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "circuit_business",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_trade_secret",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "weave_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "woman_weaver",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter Neotrantor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confier l'atelier aux tisserandes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 35217,
+		"label": "trade_secret_35217",
+		"deck": "trade_secret",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Un dernier rebond : un seigneur d'Askone revendique la « propriété » du procédé, prétextant un vieux brevet. L'affaire menace de partir en procès interplanétaire. Mieux vaut peut-être aller régler ça sur place, avant que les avocats ne mangent tout le profit."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "askone_claim",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "askone_claim_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir régler à Askone"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser pourrir le litige"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 35218,
+		"label": "trade_secret_35218",
+		"deck": "trade_secret",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia referme l'épisode à sa manière, un sourire en coin : « Vous avez préféré des tisserandes à mon protecteur de Kalgan. Sentimental. Coûteux. Charmant. » Elle s'éloigne. « Nous nous reverrons, faiseur de révolutions en dentelle. Comptez-y. »"
+		},
+		"conditions": [
+			{
+				"variable": "askone_claim",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "circuit_business",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_trade_secret",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "weave_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "woman_weaver",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "askone_claim",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_neotrantor_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Saluer Callia"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se méfier de sa promesse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "askone_claim_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "askone_claim_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
 		}
 	},
 	{

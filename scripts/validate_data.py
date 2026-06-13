@@ -111,7 +111,7 @@ if cards:
 aliases = load("link_aliases.json")
 if aliases:
     for name, entry in aliases.items():
-        check(name.startswith("_"), f"alias '{name}' doit commencer par _")
+        check(not name.lstrip("-").isdigit(), f"alias '{name}' ne doit pas être numérique")
         check(sum(k in entry for k in ("node", "nodes", "action")) == 1,
               f"alias '{name}': exactement un de node/nodes/action requis")
         if entry.get("action") == "jump" and planets:
