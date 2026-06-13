@@ -143,3 +143,16 @@ func test_advance_turn_preserves_year_keep_flag():
 	ctx.advance_turn()
 	ctx.empty_non_keep()
 	assert_eq(ctx.get_var("year"), 51, "year reste toKeep après advance_turn")
+
+func test_advance_turn_cycles_month_1_to_12():
+	ctx.initialize_new_reign()
+	ctx.set_var("year", 1, true)
+	ctx.set_var("y_start", 1, true)
+	ctx.set_var("age_start", 36)
+	var seen := {}
+	for i in range(13):
+		ctx.advance_turn()
+		seen[int(ctx.get_var("month"))] = true
+	assert_true(seen.has(1) and seen.has(12), "le mois cycle de 1 à 12")
+	for m in seen:
+		assert_true(m >= 1 and m <= 12, "mois dans 1..12")

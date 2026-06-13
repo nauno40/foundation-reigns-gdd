@@ -42,6 +42,8 @@ func advance_turn() -> void:
 	var age_start: int = int(get_var("age_start", 35))
 	var y_start: int = int(get_var("y_start", 1))
 	_vars["age"] = age_start + (int(_vars["year"]) - y_start)
+	# Mois cyclique 1..12 — alimente les cartes saisonnières (jeu de base)
+	_vars["month"] = (int(get_var("turns", 1)) - 1) % 12 + 1
 
 func apply_cover(cover: Dictionary) -> void:
 	var resource: String = cover.get("bonus_resource", "")
