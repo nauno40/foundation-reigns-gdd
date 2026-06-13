@@ -137,5 +137,27 @@
 	},
 	"_affaire_barr_echec": {
 		"node": 28426
+	},
+	"_victory_persona_comments": {
+		"nodes": [
+			21278,
+			21279,
+			21280
+		]
+	},
+	"_victory_persona_continues": {
+		"node": 21281
+	},
+	"_noai": {
+		"node": 3001
+	},
+	"_yanzhou_recuits": {
+		"action": "enddispatch"
+	},
+	"_xu_shu_where_to": {
+		"action": "enddispatch"
+	},
+	"_xu_shu_when_back": {
+		"action": "enddispatch"
 	}
 }

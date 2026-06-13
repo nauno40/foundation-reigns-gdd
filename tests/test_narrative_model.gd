@@ -254,10 +254,18 @@ func test_find_interlude_card_matches_conditions():
 	assert_eq(int(card.get("id", 0)), 99906,
 		"la carte la plus spécifique est dispatchée")
 
-func test_find_interlude_card_empty_when_no_match():
+func test_find_interlude_card_empty_outside_reign_start():
+	# en début de règne (turns 0), le débrief générique 21236 matche toujours ;
+	# hors début de règne, aucun intermède ne doit être dispatché
+	ctx.set_var("turns", 5)
+	var card = model.find_interlude_card()
+	assert_true(card.is_empty(), "aucun intermède hors début de règne")
+
+func test_generic_debrief_dispatched_at_reign_start():
 	ctx.set_var("turns", 0)
 	var card = model.find_interlude_card()
-	assert_true(card.is_empty(), "aucun intermède sans conditions remplies")
+	assert_eq(int(card.get("id", 0)), 21236,
+		"le débrief générique joue par défaut au début du règne")
 
 func test_link_alias_conditional_nodes_picks_first_match():
 	data.cards.append({"id": 99907, "label": "v1", "deck": "new_speaker",

@@ -1284,7 +1284,6 @@ async function showCardPanelInGraph(cardId) {
     const res = await fetch('/api/reference/card/' + cardId);
     const card = await res.json();
     title.textContent = '#' + card.id + ' ' + (card.label||'');
-    // Show a read-only view for reference cards
     body.innerHTML = renderRefCardDetail(card);
     return;
   }
@@ -1292,17 +1291,9 @@ async function showCardPanelInGraph(cardId) {
   const res = await fetch('/api/card/' + cardId);
   const card = await res.json();
   title.textContent = '#' + card.id + ' ' + (card.label||'');
-  // Use the existing card detail function but rendered into the panel
-  body.innerHTML = renderCardDetailHTML(card);
-  renderArrayItems(card, 'conditions');
-  renderArrayItems(card, 'loadOutcome');
-  renderArrayItems(card, 'yesOutcome');
-  renderArrayItems(card, 'noOutcome');
-  // Re-bind checkboxes/inputs in panel
-  body.querySelectorAll('input[onchange], select[onchange], textarea[onchange]').forEach(el => {
-    const fn = el.getAttribute('onchange');
-    if (fn) el.onchange = new Function(fn);
-  });
+
+  renderCardDetail(card);
+  body.innerHTML = document.getElementById('card-detail').innerHTML;
 }
 
 function renderRefCardDetail(card) {
