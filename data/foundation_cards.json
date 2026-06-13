@@ -31229,6 +31229,4465 @@
 		}
 	},
 	{
+		"id": 26400,
+		"label": "gifted_orphan_26400",
+		"deck": "gifted_orphan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Sur Korell, une rumeur insiste : un orphelin difforme, raillé de tous, retournerait les cœurs par un simple regard. « Un bouffon mutant, » ricane le maître de guilde. Mais vous, Mentalique, sentez autre chose dans cette rumeur. Quelque chose qui ne devrait pas exister."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Enquêter sur l'orphelin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer les ragots"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26401,
+		"label": "gifted_orphan_26401",
+		"deck": "gifted_orphan",
+		"weight": 2600,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Vous le croisez au marché de Korell : un jeune homme chétif, au long nez, que la foule moque — jusqu'à ce qu'il LÈVE les yeux. En un instant, les rires se muent en adoration. Sans un mot. Sans un geste. Votre sang se glace : cet enfant FAÇONNE les émotions. Comme vous. En pire."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'approcher avec prudence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer, alarmé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26402,
+		"label": "gifted_orphan_26402",
+		"deck": "gifted_orphan",
+		"weight": 2200,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "L'orphelin mutant chantonne, seul, un air triste — et toute la place de Korell pleure avec lui sans savoir pourquoi. Puis il sourit, et la joie déferle. Il joue des foules comme d'un instrument. La psychohistoire n'a pas de variable pour un tel être. Le Plan est aveugle à lui."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "saison_korell",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "seen_1146",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partager sa mélancolie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Briser le charme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cheerful_song",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sad_song",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26403,
+		"label": "gifted_orphan_26403",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "L'air joyeux du mutant vous atteint vous aussi — un instant, vous l'aimez, irrésistiblement. Puis votre entraînement de Mentalique se rebiffe : VOUS pouvez résister, un peu. Lui le sent. Son regard se fixe sur vous, intrigué : enfin quelqu'un qui ne plie pas tout à fait."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "saison_korell",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "mule_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir son regard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Masquer votre nature"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mule_friendship",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_friendship",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26404,
+		"label": "gifted_orphan_26404",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "L'air mélancolique du mutant vous serre le cœur d'une tristesse empruntée. Vous comprenez sa solitude : un monstre adoré qui sait que tout cet amour est sa propre fabrication. Personne ne l'aime VRAIMENT. Il le sait. C'est ce qui le rendra terrible."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "saison_korell",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "mule_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui montrer une vraie compassion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vous endurcir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mule_friendship",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_friendship",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26405,
+		"label": "gifted_orphan_26405",
+		"deck": "gifted_orphan",
+		"weight": 1800,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Le mutant vous aborde, méfiant et avide : « Vous ne m'adorez pas. Pourquoi ? Tout le monde m'adore quand je le veux. » Sa voix tremble entre menace et espoir. Un être qui n'a jamais connu d'affection non forcée vient de rencontrer quelqu'un d'immunisé. Dangereux. Fascinant."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_friendship",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui parler d'égal à égal"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre l'adoration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26406,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26406,
+		"label": "gifted_orphan_26406",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "« Apprenez-moi, » supplie presque le mutant. « Vous résistez — vous savez des choses sur ce que je suis. Personne ne m'a jamais rien appris, sinon à me haïr. » Le former, c'est risquer de créer un monstre éduqué ; le rejeter, c'est l'abandonner à sa rage. Choix impossible."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le guider un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser tout lien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26407,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26407,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26407,
+		"label": "gifted_orphan_26407",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous mesurez son pouvoir en l'observant : il ne lit pas les esprits comme vous — il les RÉÉCRIT. Amour, peur, loyauté, à volonté, définitivement. Un général ennemi deviendrait son adorateur en un regard. Aucune armée ne l'arrête. Aucune trahison ne le menace. Le cauchemar du Plan a un visage d'enfant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mesurer la menace"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Espérer le canaliser"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26408,
+		"label": "gifted_orphan_26408",
+		"deck": "gifted_orphan",
+		"weight": 1200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le maître-espion, ignorant la vraie nature du mutant, le voit juste comme un meneur charismatique : « Ce gamin lève une armée de fanatiques sur Korell. Inquiétant, mais gérable. » Vous savez qu'il se trompe du tout au tout. Comment expliquer une menace que la psychohistoire elle-même ne voit pas ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "seen_1150",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avertir sans tout dire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le réseau aveugle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26409,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26409,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26409,
+		"label": "gifted_orphan_26409",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le mutant grandit en puissance, ralliant monde après monde par adoration forcée. « Le Mulet », l'appelle-t-on désormais — stérile comme la bête, têtu comme elle. Son sourire conquiert ce que mille flottes ne prendraient pas. Et il vous garde, vous, comme une curiosité précieuse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rester dans son cercle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fuir tant qu'il est temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26410,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26410,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26410,
+		"label": "gifted_orphan_26410",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Le Mulet vous confie, dans un rare moment de vérité : « Vous croyez que j'aime régner ? Je cherche juste quelqu'un qui m'aime sans que je l'y force. Vous, peut-être. C'est pour ça que je ne vous ai pas brisé. Pas encore. » Sa solitude est une arme braquée sur la Galaxie entière."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui offrir une vraie amitié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Exploiter sa faille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 26411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 26411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26411,
+		"label": "gifted_orphan_26411",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous presse d'agir contre le jeune conquérant. Mais frapper le Mulet de front est suicidaire — il retournerait l'assassin d'un regard. Sa seule faille est ce besoin d'amour authentique. Une faille que seul un Mentalique pourrait, peut-être, exploiter. Ou guérir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher la faille du cœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer une fuite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "suspicious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26412,
+		"label": "gifted_orphan_26412",
+		"deck": "gifted_orphan",
+		"weight": 1200,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Le Mulet teste votre loyauté en vous épargnant ses pouvoirs : « Je pourrais vous faire m'adorer. Je ne le fais pas. Cadeau. » C'est sa façon d'aimer : ne PAS contraindre. Terrifiant de tendresse. Vous tenez là le seul lien qu'un monstre tout-puissant n'ait jamais accepté de ne pas forcer."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_friendship",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "mule_stage",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer ce cadeau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'en méfier doublement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26413,
+		"label": "gifted_orphan_26413",
+		"deck": "gifted_orphan",
+		"weight": 1800,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Mulet hésite encore entre vous garder comme ami ou comme outil. Un mot de travers et il vous brise comme les autres. « Convainquez-moi que vous valez plus libre qu'asservi, » dit-il, presque suppliant. La survie tient à un fil — celui de la solitude d'un dieu enfant."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_friendship",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "mule_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Plaider pour la liberté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se soumettre par prudence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26414,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_let_it_be",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26414,
+		"label": "gifted_orphan_26414",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Vous gagnez un sursis : le Mulet vous laisse libre, fasciné par cette amitié non contrainte. « Restez vrai, » murmure-t-il. « Le jour où je sentirai que vous me craignez comme les autres, ce sera fini. » Vivre auprès du Mulet sans jamais trembler : exploit impossible, et pourtant vital."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rester authentique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Cacher votre terreur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26415,
+		"label": "gifted_orphan_26415",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Le Mulet, encouragé par votre présence, tempère parfois sa cruauté. Vous découvrez l'effroyable responsabilité d'être la conscience d'un tyran absolu : un mot de vous l'adoucit, un autre le déchaîne. Le destin de la Galaxie pèse sur votre amitié avec un monstre seul."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Adoucir le Mulet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer le fardeau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26416,
+		"label": "gifted_orphan_26416",
+		"deck": "gifted_orphan",
+		"weight": 1200,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Vous renoncez à infléchir le Mulet — c'est au-dessus de vos forces. « Laissez courir, » vous dites-vous. Il conquerra, il régnera, il finira seul. La psychohistoire reprendra ses droits après lui. Mais combien de mondes brisés d'ici là ? Le détachement a un coût en cauchemars."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_friendship",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "mule_stage",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'inéluctable"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser d'abandonner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 26417,
+		"label": "gifted_orphan_26417",
+		"deck": "gifted_orphan",
+		"weight": 1200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le Mulet prépare sa grande offensive. Vous êtes l'un des rares à savoir ce qui vient : non pas une guerre, mais une CONVERSION de masse, des mondes entiers tombant amoureux de leur conquérant. La Seconde Fondation doit être prévenue. Mais comment décrire l'indescriptible ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_stage",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "seen_1239",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Alerter la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder le secret encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26418,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26418,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26418,
+		"label": "gifted_orphan_26418",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Vos rapports à la Table sèment l'effroi : un mutant capable d'annuler la psychohistoire elle-même. Certains refusent d'y croire. « Impossible, le Plan prévoit tout. » Vous savez qu'ils ont tort, et que ce déni coûtera cher. Cassandre était mentalique, sans doute."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Insister malgré l'incrédulité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rassembler des preuves"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26419,
+		"label": "gifted_orphan_26419",
+		"deck": "gifted_orphan",
+		"weight": 800,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Le Mulet, sentant la Seconde Fondation s'agiter, vous interroge droit dans les yeux : « On me cherche. Des gens cachés, puissants. Vous en êtes ? » Mentir au seul être capable de réécrire votre âme... Un instant de vérité où tout — votre vie, le Plan — tient en équilibre."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_stage",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "seen_1156",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Nier de toute votre âme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Détourner sa question"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26420,
+		"label": "gifted_orphan_26420",
+		"deck": "gifted_orphan",
+		"weight": 100000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Le Mulet décide de marcher sur la Fondation. Rien ne l'arrêtera par les armes. Vous comprenez, glacé, que vous assistez à la naissance de la Crise que Seldon n'a pas vue venir — l'imprévu absolu, le grain de sable qui pourrait broyer mille ans de Plan. Et vous l'avez vu grandir."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_stage",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "seen_1156",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Courir prévenir la Fondation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter un dernier appel à lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26421,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26421,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "mule_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26421,
+		"label": "gifted_orphan_26421",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Le Mulet vous épargne une dernière fois en partant en guerre : « Vous ne me suivrez pas, et je ne vous forcerai pas. Mon seul ami libre. » Il s'éloigne vers la conquête, immense et seul. Vous restez, dévasté : vous auriez pu le tuer enfant. Vous ne l'avez pas fait. Le saurez-vous jamais regretter ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "mule_commander",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le regarder partir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jurer de l'arrêter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 26422,
+		"label": "gifted_orphan_26422",
+		"deck": "gifted_orphan",
+		"weight": 1200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "L'amitié impossible avec le Mulet vous a tout appris de lui — ses forces, sa faille, sa solitude. Ce savoir est l'arme la plus précieuse de la Seconde Fondation contre lui. Vous l'avez payé en cauchemars et en remords. Mais la Galaxie, peut-être, en sera sauvée. Peut-être."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_friendship",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "mule_stage",
+				"op": "above",
+				"value": 4
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "mule_friendship",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Livrer ce savoir à la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "En garder une part secrète"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26423,
+		"label": "gifted_orphan_26423",
+		"deck": "gifted_orphan",
+		"weight": 800,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "L'amiral de la future coalition vous consulte : « On dit que vous CONNAISSEZ le Mulet. Comment bat-on un homme que nos propres soldats adoreraient ? » La réponse — qu'on ne le bat pas par les armes mais par l'esprit — sonne comme une folie à ses oreilles militaires."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Expliquer l'inexplicable"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à ses canons"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26424,
+		"label": "gifted_orphan_26424",
+		"deck": "gifted_orphan",
+		"weight": 800,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Vous voilà conseiller de l'ombre dans la lutte contre le Mulet — le seul qui sache vraiment à quoi la Galaxie fait face. Un fardeau de Cassandre : tout savoir, n'être cru qu'à moitié, et porter le poids d'avoir aimé le monstre quand il n'était qu'un enfant moqué."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer ce rôle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plier sous le poids"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 26425,
+		"label": "gifted_orphan_26425",
+		"deck": "gifted_orphan",
+		"weight": 1400,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le Mulet lance sa première grande campagne — et les mondes tombent non par la force, mais par l'AMOUR. Ses ennemis se rendent en l'acclamant. La psychohistoire, impuissante, regarde mille ans de calculs s'effondrer devant un sourire de mutant. La Crise est là."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "mule_commander",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Documenter l'effondrement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher la parade"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26426,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26426,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26426,
+		"label": "gifted_orphan_26426",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Une bataille décisive s'engage pour un monde-clé. Les flottes de la Fondation sont supérieures — mais leurs équipages flanchent, gagnés à distance par l'aura du Mulet. On ne perd pas par manque de canons. On perd parce que les canonniers se mettent à aimer la cible."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter de blinder les esprits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Constater l'impuissance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.lujiang",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26427,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 26427,
+		"label": "gifted_orphan_26427",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Le monde-clé tombe au Mulet, comme les autres, par adoration. Ses rangs grossissent de vos propres déserteurs amoureux. Vous comprenez l'horreur de cette guerre : chaque défaite RENFORCE l'ennemi d'âmes converties. Une réaction en chaîne d'amour. Le Plan n'a jamais rien vu de tel."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sauver les esprits encore libres"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Battre en retraite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.lujiang",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mule_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26428,
+		"label": "gifted_orphan_26428",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le Mulet, au faîte de sa puissance, vous fait porter un message — à vous seul : « Mon vieil ami libre. Venez régner à mes côtés. Vous serez le seul qui m'aimera par choix. » L'offre est sincère, monstrueuse, et terriblement tentante pour qui a connu sa solitude."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Refuser son empire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Feindre d'hésiter pour gagner du temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26429,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26429,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26429,
+		"label": "gifted_orphan_26429",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "Votre refus blesse le Mulet comme rien ne l'avait blessé : « Vous AUSSI. » Pour la première fois, sa solitude se mue en rage froide. Il ne vous brisera pas — par fierté, par ce reste d'amour. Mais il jure de prouver, en conquérant tout, que personne ne mérite d'être aimé librement."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "mule_commander",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Endurer sa douleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter de le raisonner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_korell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "grand_commodore_korell",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 26430,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_grand_commander_zhou_yu",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 26430,
+		"label": "gifted_orphan_26430",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "L'ascension du Mulet entre dans sa phase terminale. Vous avez fait ce que vous pouviez : averti la Table, étudié l'ennemi, refusé son empire. Le reste appartient à la Seconde Fondation et à la grande confrontation qui vient. Vous n'êtes plus qu'un témoin. Le plus lucide, et le plus brisé."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_gifted_orphan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Passer le relais à la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la résistance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26431,
+		"label": "gifted_orphan_26431",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Un commandant rival du Mulet — non converti, miraculeusement — propose une alliance désespérée. « Vous le connaissez. Aidez-moi à monter l'ultime coalition. » C'est mince, c'est fou, mais c'est peut-être la dernière chance avant que toute la Galaxie ne tombe amoureuse de son bourreau."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Monter la coalition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Juger la cause perdue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26432,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26432,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26432,
+		"label": "gifted_orphan_26432",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "La coalition contre le Mulet se forme dans l'urgence et le doute. Vous en êtes la cheville secrète — celui qui sait. « On a une chance sur mille, » admet le commandant. « Une sur mille, c'est mieux que zéro, » répondez-vous, songeant à un enfant moqué sur un marché de Korell. Mille ans plus tôt, hier."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Croire en cette chance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter le désespoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26433,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26433,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 26433,
+		"label": "gifted_orphan_26433",
+		"deck": "gifted_orphan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_mule",
+		"question": {
+			"FR": "La grande confrontation avec le Mulet approche, portée par votre coalition fragile. Vous avez vu naître le monstre ; vous le verrez peut-être tomber. Entre les deux, une vie entière à porter un savoir que nul ne voulait croire. La Crise que Seldon n'a pas prévue va se jouer. Et vous y serez."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "mule_commander",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_gifted_orphan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Marcher vers la confrontation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confier le sort au Plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27200,
+		"label": "fall_of_terminus_27200",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Korell, dernière forteresse libre. Un seigneur réfugié vous implore : « Le Mulet vient. Terminus est tombée — TOMBÉE, vous m'entendez ? La bibliothèque du monde aux mains d'un mutant. Protégez au moins les fuyards. » La capitale de la Fondation a cédé. L'impensable est arrivé."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "terminus_refugees",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_fall_of_terminus",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "refugee_lord",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger les réfugiés"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Organiser la résistance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "protect_refugees",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "protect_refugees",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27201,
+		"label": "fall_of_terminus_27201",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de guerre de Korell, dernier rempart, hésite : se battre ou se rendre au Mulet ? « Mes mondes ou mon honneur, » résume-t-il, déchiré. Vous savez que se rendre au Mulet n'épargne rien — on devient son adorateur, pas son allié. Mais comment expliquer un sortilège à un guerrier ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "korell_lord",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_fall_of_terminus",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le pousser au combat"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Comprendre sa tentation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27202,
+		"label": "fall_of_terminus_27202",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 208, mois 11 : le maître-espion dresse le tableau. « Terminus perdue, la Première Fondation décapitée, le Mulet maître de la moitié de la périphérie. Il ne reste que des poches libres, et nous, et le secret de la Seconde Fondation. C'est ici, à Korell, que tout se jouera. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 108
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Évaluer la situation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser de désespérer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27203,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27203,
+		"label": "fall_of_terminus_27203",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact pose le choix terrible : concentrer toutes les forces libres en une ultime bataille rangée contre la flotte du Mulet, ou disperser, préserver, et confier l'avenir à la Seconde Fondation invisible. Tout risquer en un coup, ou survivre dans l'ombre. La Crise de Seldon, sans Seldon pour la prévoir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tout miser sur la bataille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préserver l'ombre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "korell_lord",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "contact_trust",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "refugee_lord",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "palver_trust",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "korell_lord",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "contact_trust",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "refugee_lord",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "palver_trust",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 27204,
+		"label": "fall_of_terminus_27204",
+		"deck": "fall_of_terminus",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "L'amiral de la coalition est prêt à l'affrontement, sûr de sa flotte supérieure. Vous devez le prévenir de l'arme invisible du Mulet sans paraître fou : « Vos vaisseaux sont meilleurs. Vos hommes vont quand même se rendre. Pas par lâcheté — par enchantement. Préparez les ESPRITS, pas que les canons. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "vengeful_general_trust",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le préparer au pire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à sa confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "terminus_allies",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27205,
+		"label": "fall_of_terminus_27205",
+		"deck": "fall_of_terminus",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le général vengeur, lui, sous-estime le Mulet : « Un mutant chétif contre ma flotte ? Risible. » Son arrogance est un danger. Quand ses propres pilotes commenceront à adorer l'ennemi, son mépris se muera en panique. Préparer un homme à l'impensable quand il refuse même d'y penser."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			},
+			{
+				"variable": "vengeful_general_trust",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "coalition_admiral_trust",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Briser son arrogance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser apprendre durement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 27206,
+		"label": "fall_of_terminus_27206",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "Preem Palver prend les choses en main — il est venu en personne, masquant sa puissance. « La bataille matérielle, laissez-la aux amiraux, » vous dit-il. « Vous et moi livrons l'AUTRE bataille : empêcher nos flottes de tomber amoureuses. Esprit contre esprit. Nous sommes le vrai dispositif. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Combattre aux côtés de Palver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer l'enjeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27207,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27207,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27207,
+		"label": "fall_of_terminus_27207",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "Palver vous instruit pour le duel mental : « Le Mulet projette de l'émotion sur des millions à la fois — mais c'est diffus. Nous, nous projetons fin et concentré. Comme une digue contre une marée. Tenez les esprits-clés : les capitaines, les amiraux. Si LEUR cœur tient, leur flotte tient. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir les esprits-clés"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter de la digue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "terminus_allies",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27208,
+		"label": "fall_of_terminus_27208",
+		"deck": "fall_of_terminus",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Les flottes se rangent pour la bataille décisive au-dessus de Korell. La marée émotionnelle du Mulet déferle déjà — vous la sentez monter, immense, irrésistible. À vos côtés, Palver ferme les yeux et projette une contre-volonté de fer. « Maintenant, » souffle-t-il. « Tenez avec moi. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 11
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			},
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Projeter de toutes vos forces"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vous accrocher à Palver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27209,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27209,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27209,
+		"label": "fall_of_terminus_27209",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "Les vaisseaux du Mulet arrivent — et, comme prévu, des capitaines de la coalition vacillent, gagnés par l'adoration. Vous et Palver tenez la ligne mentale, esprit après esprit, arrachant chaque cœur au charme à mesure qu'il cède. C'est une bataille invisible et déchirante. Le destin se joue dans le silence des âmes."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.redcliff_boats_arriving",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Arracher les cœurs au charme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Concentrer sur l'essentiel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27210,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27210,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27210,
+		"label": "fall_of_terminus_27210",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "La bataille fait rage sur deux plans : feu et émotion. Les canons tonnent pendant que vous et Palver livrez un combat que nul ne voit. Épuisement, terreur, et la sensation du Mulet vous cherchant dans la mêlée des esprits. « Il SAIT que nous sommes là, » halète Palver. « Tenez. Encore. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir la ligne mentale"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Puiser vos dernières forces"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27211,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27211,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27211,
+		"label": "fall_of_terminus_27211",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Le tournant approche : la flotte du Mulet, malgré son charme, n'a pas converti assez de vos hommes — votre digue mentale tient. Pour la première fois, l'invincible vacille. « Maintenant, frappez ! » criez-vous aux amiraux dont vous avez sauvé l'âme. Les canons libres tonnent enfin à plein."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer la contre-attaque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maintenir la digue d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27212,
+		"label": "fall_of_terminus_27212",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "La bataille décisive se joue au-dessus de Korell, et vous devez y être en personne. Le Contact vous presse : « Votre place est là-bas, au cœur du dispositif mental. Sans vous et Palver, la flotte tombe en une heure. Rejoignez le front. C'est l'heure pour laquelle un Orateur existe. »"
+		},
+		"conditions": [
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "korell"
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rejoindre le front de Korell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Coordonner depuis l'arrière"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "coalition_admiral_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "korell_lord",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27213,
+		"label": "fall_of_terminus_27213",
+		"deck": "fall_of_terminus",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Au cœur de la bataille de Korell, le Mulet concentre soudain toute sa puissance — non sur les flottes, mais sur VOUS et Palver, les deux digues. La pression mentale devient insoutenable. « Il a compris que nous sommes la clé, » articule Palver, sang au nez. « Tenez. Pour tout. Pour le Plan. »"
+		},
+		"conditions": [
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Endurer l'assaut"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Riposter mentalement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27214,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27214,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27214,
+		"label": "fall_of_terminus_27214",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "L'assaut mental du Mulet est titanesque. Palver, plus vieux, faiblit le premier. C'est à vous, désormais, de tenir seul la digue contre une marée qui veut noyer la dernière résistance libre de la Galaxie. Un Orateur contre un Mulet. Le déséquilibre absolu. Et pourtant, vous tenez. Une seconde de plus. Puis une autre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir seul l'impossible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Soutenir Palver d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27215,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27215,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27215,
+		"label": "fall_of_terminus_27215",
+		"deck": "fall_of_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "La bataille atteint son point de rupture. Vos forces faiblissent, mais celles du Mulet aussi — réécrire des millions d'âmes l'épuise enfin. Pour la première fois, le monstre connaît la fatigue. « Il n'est pas infini, » réalisez-vous, exalté de désespoir. « Personne ne l'est. Tenez ! »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pousser l'avantage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27216,
+		"label": "fall_of_terminus_27216",
+		"deck": "fall_of_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "Palver, ranimé par votre obstination, revient dans la bataille mentale : « Ensemble. Une dernière poussée. » Vos deux esprits se synchronisent en une digue parfaite, et la marée du Mulet, pour la première fois, REFLUE. Les flottes libres reprennent courage. L'invincible recule. L'impensable s'inverse."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Synchroniser avec Palver"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Donner tout ce qui reste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27217,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27217,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 27217,
+		"label": "fall_of_terminus_27217",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "La flotte du Mulet, son charme contré, doit livrer une vraie bataille — et là, vos canons supérieurs parlent. Le mutant découvre, incrédule, qu'on peut le battre quand son arme magique est neutralisée. « Voilà, » souffle Palver, exsangue. « Voilà comment on tue un dieu : on le force à n'être qu'un homme. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Achever la bataille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Épargner le Mulet vaincu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27218,
+		"label": "fall_of_terminus_27218",
+		"deck": "fall_of_terminus",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion coordonne la phase finale : « La flotte du Mulet rompt ! Mais lui s'échappe — il faut décider : le poursuivre, ou consolider la victoire ? » Le Mulet vivant reste une menace mortelle. Le Mulet acculé pourrait tout retenter. La prudence et l'audace s'affrontent dans l'urgence."
+		},
+		"conditions": [
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Poursuivre le Mulet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Consolider la victoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27219,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27219,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27219,
+		"label": "fall_of_terminus_27219",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "La poursuite du Mulet vous mène au bord de l'épuisement total. Le mutant fuit, blessé dans son orgueil plus que dans sa chair. Vous le sentez, lointain : une solitude redevenue rage. « Il reviendra, » prévient Palver. « Mais affaibli, démasqué. La Galaxie sait désormais qu'il peut perdre. C'est déjà une victoire. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser fuir affaibli"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter la capture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27220,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27220,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27220,
+		"label": "fall_of_terminus_27220",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le Mulet échappe à la capture, mais sa légende d'invincibilité est brisée. Vous avez, avec Palver, accompli l'impossible : arrêter l'imprévu absolu, la Crise que Seldon n'avait pas vue. La Fondation survit, meurtrie. Terminus est perdue, mais le Plan, lui, respire encore. De justesse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mesurer la victoire amère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Penser à la reconstruction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27221,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 27221,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27221,
+		"label": "fall_of_terminus_27221",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Après la bataille de Korell, Palver planifie l'avenir : « Le Mulet vit, mais il vieillit, et il est stérile — son empire mourra avec lui. La Seconde Fondation gérera le reste, dans l'ombre, comme toujours. Vous, vous avez tenu la digue. Peu d'Orateurs auront fait davantage. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Planifier l'après-Mulet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Recueillir l'éloge"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_plan_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_plan_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 27222,
+		"label": "fall_of_terminus_27222",
+		"deck": "fall_of_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Le plan d'après-bataille se dessine : traquer patiemment le Mulet, reconstruire la Fondation, ramener le Plan dans son couloir. Long, ingrat, vital. « La gloire des Orateurs, » sourit Palver, « c'est de sauver le monde et de n'avoir le droit de le dire à personne. Vous y êtes habitué, j'imagine. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reprendre le long travail"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Savourer un instant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27223,
+		"label": "fall_of_terminus_27223",
+		"deck": "fall_of_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "preem_palver",
+		"question": {
+			"FR": "Une dernière confrontation guette : les restes de la flotte du Mulet, sans leur maître pour les charmer, livrent un baroud d'honneur. Bataille ordinaire, presque reposante après le duel des esprits. « Du combat normal, » soupire l'amiral, soulagé. « Enfin un ennemi qu'on peut juste... combattre. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Livrer ce dernier combat"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Proposer la reddition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_battle_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27224,
+		"label": "fall_of_terminus_27224",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "La dernière bataille contre les forces du Mulet se solde — victoire âprement gagnée. Les mondes libres respirent. Vous regardez le champ d'étoiles jonché d'épaves et songez à l'enfant moqué d'un marché de Korell, devenu le fléau de la Galaxie, puis vaincu. Le cercle se referme, lourd de tristesse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Contempler le cercle bouclé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer les morts"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.after_red_cliffs",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.after_red_cliffs",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 27225,
+		"label": "fall_of_terminus_27225",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion organise la traque du Mulet en fuite : « Il faut le suivre sans l'acculer — un fauve blessé est plus dangereux. Des agents discrets, sur sa piste, pour le jour où il retentera sa chance. » Vous savez, vous, qu'il ne retentera peut-être rien : un cœur brisé deux fois ne se relève pas toujours."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer la traque discrète"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le croire fini"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_escape_after_red_cliffs",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 206,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 103,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 206,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 103,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27226,
+		"label": "fall_of_terminus_27226",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le Mulet disparaît dans les marges de la Galaxie, vaincu, seul, redevenu le paria du marché de Korell. Vous repensez à son offre : « Régnez à mes côtés, mon seul ami libre. » Vous l'avez refusée, et la Galaxie en fut sauvée. Mais une part de vous pleurera toujours l'enfant qu'on aurait pu aimer autrement."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 109
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "terminus_allies",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Porter ce deuil secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tourner enfin la page"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 27227,
+		"label": "fall_of_terminus_27227",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le Contact scelle l'épilogue : « La Crise du Mulet est traversée. Pas par le Plan — par des hommes. Par VOUS. Seldon ne l'avait pas vue ; la Seconde Fondation l'a corrigée. C'est notre raison d'être : être la marge d'erreur du Plan, sa main invisible quand les équations faillissent. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 109
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "terminus_allies",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter cette vérité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Méditer le rôle de la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 27228,
+		"label": "fall_of_terminus_27228",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le bilan de la chute de Terminus et de la résistance de Korell : un monde-symbole perdu, un monstre vaincu, le Plan sauvé in extremis. « La pire crise depuis Seldon, » résume Palver, « et la plus belle preuve que nous servons à quelque chose. Reposez-vous, Orateur. Vous l'avez mérité. Mille fois. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "terminus_allies",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se reposer enfin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer la reconstruction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 27229,
+		"label": "fall_of_terminus_27229",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de Korell, humilié d'avoir été sauvé par d'autres, rumine sa fierté blessée : « On a gagné grâce à des marchands et des fermiers, pas à mes flottes. » Sa jalousie pourrait nuire à l'après. Ménager l'orgueil d'un allié vaincu-vainqueur : dernière diplomatie d'une longue guerre."
+		},
+		"conditions": [
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "terminus_allies",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_korell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Flatter sa contribution"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'ignorer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_humbled",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_jealous",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 27230,
+		"label": "fall_of_terminus_27230",
+		"deck": "fall_of_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le seigneur de Korell, malgré sa jalousie, finit par rallier l'ordre nouveau — Korell devient un pilier de la Fondation reconstruite. « Vous m'avez laissé l'honneur tout en me sauvant, » reconnaît-il. « C'est de la haute diplomatie, ça. Ou de la haute manipulation. Avec vous, je ne sais jamais. »"
+		},
+		"conditions": [
+			{
+				"variable": "terminus_allies",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "terminus_allies",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_korell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller l'alliance de Korell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter l'ambiguïté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_humbled",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_jealous",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 27231,
+		"label": "fall_of_terminus_27231",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "L'épopée du Mulet se referme. Korell ralliée, la Fondation survivante, le Plan remis sur ses rails par la main invisible de la Table. Vous rangez ce chapitre — le plus lourd de votre existence d'Orateur. L'imprévu absolu a été dompté. Pour cette fois. Il y en aura d'autres. Il y a toujours d'autres."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_fall_of_terminus",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore le chapitre du Mulet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller sur l'avenir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 27232,
+		"label": "fall_of_terminus_27232",
+		"deck": "fall_of_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Dernière pensée, seul dans le calme revenu : vous avez connu le Mulet enfant, l'avez vu devenir fléau, l'avez vaincu adulte. Entre les deux, toute une vie de Mentalique à porter un savoir que nul ne croyait. La Galaxie ne saura jamais votre nom. C'est très bien ainsi. C'est tout le sens du Plan."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_fall_of_terminus",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'anonymat du héros"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sourire dans l'ombre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 28400,
 		"label": "barr_28400",
 		"deck": "siwenna_affair",
@@ -35096,6 +39555,1696 @@
 			"default": "afraid",
 			"yes": "neutral",
 			"no": "neutral"
+		}
+	},
+	{
+		"id": 29600,
+		"label": "expedition_mule_29600",
+		"deck": "expedition_mule",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Rossem, Preem Palver vous convoque, grave comme jamais : « Le Mulet a pris trop de mondes. La Seconde Fondation appelle à une grande assemblée — toutes les puissances libres, une dernière fois, pour décider comment l'arrêter. Vous y serez. Vous le connaissez mieux que quiconque. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_630",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "contact_trust",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "liu_bei_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rejoindre l'assemblée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter de son utilité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contact_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29601,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29601,
+		"label": "expedition_mule_29601",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Palver vous prépare à l'assemblée : « Les seigneurs réunis sont orgueilleux, divisés, terrifiés. Chacun croit que SON monde tombera en dernier. Votre tâche : leur faire comprendre que face au Mulet, l'union est la seule arme. Convaincre des orgueilleux d'avoir peur ensemble. Bon courage. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter la mission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La juger impossible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29602,
+		"label": "expedition_mule_29602",
+		"deck": "expedition_mule",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "À l'assemblée, un seigneur belliqueux vous toise : « Et qui êtes-vous pour parler du Mulet, marchand ? » Vous n'êtes pas invité officiellement — juste l'homme qui sait. Imposer votre voix dans ce nid de vanités armées : premier combat, et pas le moindre."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'imposer par le savoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester en retrait"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_not_invited",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_not_invited",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29603,
+		"label": "expedition_mule_29603",
+		"deck": "expedition_mule",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Non convié, vous devez gagner votre place à l'assemblée par la ruse et la vérité. Un vieux seigneur, sceptique, finit par vous écouter : « Si ce que vous dites du Mulet est vrai, nous sommes tous morts. » — « Pas si nous restons unis, » répondez-vous. Le doute, au moins, est semé."
+		},
+		"conditions": [
+			{
+				"variable": "contact_trust",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "frontier_lord",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "assembly_joined",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver ce doute salutaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Forcer la conviction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29604,
+		"label": "expedition_mule_29604",
+		"deck": "expedition_mule",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant impérial, présent à l'assemblée, joue sa propre carte : « Unissons-nous SOUS MON commandement. » Son ambition menace de saborder la coalition avant qu'elle naisse. Face au Mulet, même l'union devient un champ de bataille d'egos. Désespérant. Humain."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Contrer son ambition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser prendre la tête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29605,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29605,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29605,
+		"label": "expedition_mule_29605",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'assemblée se déchire : qui commandera la coalition contre le Mulet ? Chaque seigneur se veut chef. Pendant qu'ils se disputent un trône de cendres, le Mulet, lui, gagne des mondes. « Ils se battent pour le commandement d'une armée qui n'existe pas encore, » soufflez-vous, accablé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Forcer un compromis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser la dispute s'envenimer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29606,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "pretender_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_luoyang_on_fire_start",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "assembly_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29606,
+		"label": "expedition_mule_29606",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Vous arrachez un accord fragile : une coalition, un commandement tournant, une trêve des vanités. C'est bancal, c'est provisoire, mais ça EXISTE. Palver vous félicite sobrement : « Vous avez fait l'impossible : faire collaborer des orgueilleux effrayés. Maintenant, il faut gagner. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider la coalition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Redouter sa fragilité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "assembly_joined",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "assembly_joined",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 29607,
+		"label": "expedition_mule_29607",
+		"deck": "expedition_mule",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le général vengeur, rallié à la coalition, doute de votre place : « Un civil qui dicte la stratégie ? » Mais quand vous décrivez les pouvoirs du Mulet, son scepticisme vire à l'effroi. « Comment combat-on... ÇA ? » — « Pas comme on combat un homme, » dites-vous. « Comme on combat une idée. »"
+		},
+		"conditions": [
+			{
+				"variable": "vengeful_general_trust",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "assembly_joined",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le rallier vraiment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser sceptique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "vengeful_general_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29608,
+		"label": "expedition_mule_29608",
+		"deck": "expedition_mule",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un seigneur clé de la coalition vacille, tenté de pactiser avec le Mulet pour épargner son monde. « Mieux vaut l'adorer vivant que mourir libre, » murmure-t-il. La trahison rôde dès avant la bataille. Le Mulet n'a même pas besoin d'être là : sa seule menace divise déjà ses ennemis."
+		},
+		"conditions": [
+			{
+				"variable": "contact_trust",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "assembly_joined",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le retenir dans l'alliance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser partir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contact_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contact_trust",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29609,
+		"label": "expedition_mule_29609",
+		"deck": "expedition_mule",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion établit le plan contre le Mulet : non une bataille rangée, mais une frappe ciblée sur sa personne, avant qu'il ne convertisse vos flottes. « On a une fenêtre étroite. Une seule. S'il nous voit venir, il retourne nos pilotes contre nous. » Tout repose sur le secret. Et le secret est le métier du Mulet."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "assembly_joined",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approuver la frappe ciblée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préférer la prudence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29610,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29610,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29610,
+		"label": "expedition_mule_29610",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le plan contre le Mulet se précise dans le secret le plus absolu. Palver insiste : « Aucune pensée ne doit fuir. Le Mulet lit les émotions à distance. Votre peur même pourrait le prévenir. » Comploter contre un être qui sent la peur : il faut conspirer le cœur calme. Presque impossible."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "mule_threat",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "assembly_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Verrouiller votre esprit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avouer votre terreur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29611,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_plan_against_dong_zhuo",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29611,
+		"label": "expedition_mule_29611",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un seigneur de la coalition propose un piège élaboré : attirer le Mulet loin de ses flottes, l'isoler, le frapper. Risqué, brillant, désespéré. « S'il flaire le piège, nous sommes tous à lui, » prévient Palver. Le sort de la Galaxie tient à la qualité d'un mensonge tendu à un lecteur d'âmes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Adopter le piège"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher plus sûr"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "loyal_lord",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_plan_against_dong_zhuo",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "loyal_lord",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_plan_against_dong_zhuo",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29612,
+		"label": "expedition_mule_29612",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le plan d'ensemble contre le Mulet prend forme — coalition, piège, frappe. Mais chaque maillon dépend d'une loyauté que le Mulet pourrait retourner. Vous regardez ce château de cartes et songez : « Nous misons mille ans de Plan sur l'espoir que personne ne croisera son regard au mauvais moment. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lancer l'opération"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hésiter une dernière fois"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29613,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29613,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29613,
+		"label": "expedition_mule_29613",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le prétendant impérial, jaloux du commandement, menace de saboter le plan par dépit. Sa vanité pourrait tout perdre. « Un homme qui préfère régner sur des ruines à servir dans la victoire, » soupire Palver. Vous devez le neutraliser sans briser la coalition. Diplomatie sur fil de rasoir."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Neutraliser le prétendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Composer avec lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29614,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29614,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29614,
+		"label": "expedition_mule_29614",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un seigneur de la coalition, terrifié, déserte à la veille de l'opération — emportant des secrets. S'il tombe aux mains du Mulet, tout est révélé. « Rattrapez-le, » ordonne Palver, livide. La course contre la trahison commence, et le Mulet n'a qu'à attendre que ses ennemis se livrent eux-mêmes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rattraper le déserteur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Modifier le plan en urgence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29615,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29615,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 29615,
+		"label": "expedition_mule_29615",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La traque du déserteur tourne au drame : il préfère se taire que parler, par un dernier sursaut d'honneur. « Je ne livrerai pas les nôtres, même au Mulet, » murmure-t-il avant de disparaître. Un héros inattendu sauve l'opération. La dignité existe encore, même au bord du gouffre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer son sacrifice"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sécuriser la fuite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29616,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29616,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29616,
+		"label": "expedition_mule_29616",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'opération entre dans sa phase critique. La coalition, soudée par la peur et votre obstination, marche vers le Mulet. Palver vous serre l'épaule : « Quoi qu'il arrive, vous aurez fait l'impossible. Vous avez uni des hommes contre un dieu. Maintenant, prions que les dieux saignent. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avancer vers l'épreuve"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29617,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29617,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29617,
+		"label": "expedition_mule_29617",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Les flottes de la coalition convergent vers le Mulet — une armada hétéroclite portée par un espoir mince. Vous savez ce qu'aucun de ces capitaines ne sait vraiment : que leur pire ennemi n'est pas la flotte d'en face, mais le risque d'aimer soudain l'homme qui la commande."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Renforcer la résolution"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surveiller les esprits"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29618,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29618,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29618,
+		"label": "expedition_mule_29618",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Premier contact avec les forces du Mulet — et déjà, des capitaines de la coalition vacillent, gagnés à distance. « Tenez bon ! » hurlez-vous dans les comms, projetant de toutes vos forces mentaliques un contre-courant de volonté. Un Orateur contre un Mulet : David face à un Goliath qui réécrit les cœurs."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Projeter votre volonté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Économiser vos forces"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29620,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29619,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 29619,
+		"label": "expedition_mule_29619",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "La bataille bascule dans le chaos émotionnel : moitié de la coalition se bat, moitié hésite, gagnée par l'aura du Mulet. Vous tenez la ligne par la seule force de votre esprit, épuisé, sentant le monstre vous chercher dans la mêlée. « Il sait que je suis là, » réalisez-vous, glacé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir coûte que coûte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vous dissimuler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29620,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29620,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29620,
+		"label": "expedition_mule_29620",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La capitale de la coalition brûle — le Mulet a frappé le premier, là où on l'attendait le moins. Les flammes dévorent des siècles d'histoire pendant que ses ennemis se disputaient le commandement. « Voilà ce que coûte la division, » murmure Palver dans les cendres. La leçon est écrite en feu."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "capital_burning",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_expedition_mule",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sauver ce qui reste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maudire les querelles"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29621,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29621,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 29621,
+		"label": "expedition_mule_29621",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Dans les ruines, la coalition se ressoude par le deuil commun. « Maintenant ils comprennent, » dit Palver. « Il a fallu une capitale en cendres pour faire taire les vanités. » Trop tard pour cette ville, peut-être pas pour la Galaxie. Le malheur partagé forge ce que la peur n'avait pas su unir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reconstruire l'alliance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pleurer la cité perdue"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29622,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "luoyang_in_ashes",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29622,
+		"label": "expedition_mule_29622",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La coalition, enfin vraiment unie, prépare son ultime assaut contre le Mulet. Vous mesurez le chemin parcouru : d'une assemblée d'orgueilleux à une armée de frères d'armes, soudés par les cendres. « Vous avez fait ça, » dit Palver. « Souvenez-vous-en, quoi qu'il advienne ensuite. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mener l'assaut final"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confier le sort au Plan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "loyal_lord",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 29623,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "luoyang_in_ashes",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29623,
+		"label": "expedition_mule_29623",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'assaut final contre le Mulet s'engage — toutes les forces libres, un seul élan. La bataille sera mentale autant que matérielle. Vous prenez position au cœur du dispositif, prêt à affronter esprit contre esprit l'être que vous avez connu enfant. Le moment que mille ans de Plan n'ont pas su prévoir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter le Mulet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter le Mulet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.stop_dong_zhuo",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.stop_dong_zhuo",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 29624,
+		"label": "expedition_mule_29624",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'expédition contre le Mulet atteint son paroxysme. Quoi qu'il advienne — victoire, défaite, sursis — vous aurez tenu la ligne que Seldon n'avait pas tracée. La coalition impossible existe. Le monstre saigne, peut-être. La suite appartient à la grande confrontation, et à la Seconde Fondation."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Passer le relais à la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir jusqu'au bout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 29625,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 29625,
+		"label": "expedition_mule_29625",
+		"deck": "expedition_mule",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'assemblée se disperse, sa tâche accomplie ou trahie. Vous repartez vidé, ayant donné toute votre âme mentalique à retenir des hommes au bord de l'adoration. « Reposez-vous, » dit Palver. « La vraie bataille — celle des esprits — ne fait que commencer. Et vous en êtes le cœur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_expedition_mule",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se préparer à la suite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'effondrer enfin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "pretender_stage",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "desperate",
+			"yes": "neutral",
+			"no": "sad"
 		}
 	},
 	{

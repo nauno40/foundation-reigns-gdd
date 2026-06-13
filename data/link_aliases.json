@@ -422,5 +422,44 @@
 	},
 	"_volunteer_rule_xuzhou": {
 		"node": 33219
+	},
+	"_cheerful_song": {
+		"node": 26403
+	},
+	"_sad_song": {
+		"node": 26404
+	},
+	"_let_it_be": {
+		"node": 26416
+	},
+	"_grand_commander_zhou_yu": {
+		"node": 26431
+	},
+	"_not_invited": {
+		"node": 29603
+	},
+	"_luoyang_on_fire_start": {
+		"node": 29620
+	},
+	"_plan_against_dong_zhuo": {
+		"node": 29612
+	},
+	"luoyang_in_ashes": {
+		"node": 29624
+	},
+	"_plan_after_red_cliffs": {
+		"node": 27222
+	},
+	"_battle_after_red_cliffs": {
+		"node": 27224
+	},
+	"_cao_cao_escape_after_red_cliffs": {
+		"node": 27226
+	},
+	"_zhou_yu_humbled": {
+		"node": 27231
+	},
+	"_zhou_yu_jealous": {
+		"node": 27232
 	}
 }
