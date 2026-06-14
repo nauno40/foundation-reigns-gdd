@@ -12441,6 +12441,3670 @@
 		}
 	},
 	{
+		"id": 20456,
+		"label": "planet_ruler_20456",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Le collecteur d'impôts propose un grand recensement du fief pour asseoir une fiscalité juste."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On recense"
+			},
+			"reaction": {
+				"FR": "On lance le recensement. Long, mais l'impôt deviendra équitable."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en passe"
+			},
+			"reaction": {
+				"FR": "On renonce au recensement. L'impôt restera approximatif."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20457,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20457,
+		"label": "planet_ruler_20457",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Le recensement révèle des fraudeurs parmi les notables. Les poursuivre, ou monnayer leur silence ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On poursuit"
+			},
+			"reaction": {
+				"FR": "On traque les notables fraudeurs. Juste — et risqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On monnaie"
+			},
+			"reaction": {
+				"FR": "On monnaie leur régularisation. Pragmatique, peu glorieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20458,
+		"label": "planet_ruler_20458",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Une école mystique — adeptes de la Voie — demande protection et reconnaissance sur le fief."
+		},
+		"conditions": [
+			{
+				"variable": "taoism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la reconnaît"
+			},
+			"reaction": {
+				"FR": "On reconnaît les mystiques de la Voie. La spiritualité fleurit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la tolère sans plus"
+			},
+			"reaction": {
+				"FR": "On les tolère discrètement. Ni faveur ni persécution."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20459,
+		"label": "planet_ruler_20459",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Des moines ascètes prêchent le détachement et l'aumône sur vos places. Les soutenir ?"
+		},
+		"conditions": [
+			{
+				"variable": "buddhism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les soutient"
+			},
+			"reaction": {
+				"FR": "On soutient les ascètes. La charité gagne le fief."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les encadre"
+			},
+			"reaction": {
+				"FR": "On encadre leur prêche. La ferveur, oui ; le désordre, non."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20460,
+		"label": "planet_ruler_20460",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Des lettrés traditionalistes réclament le retour aux rites anciens et au respect des aînés."
+		},
+		"conditions": [
+			{
+				"variable": "confucianism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rétablit les rites"
+			},
+			"reaction": {
+				"FR": "On restaure les rites anciens. L'ordre traditionnel rassure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On modernise"
+			},
+			"reaction": {
+				"FR": "On préfère regarder devant. Les lettrés s'offusquent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "confucianism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20461,
+		"label": "planet_ruler_20461",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Le scribe impérial propose de codifier les lois disparates du fief en un seul recueil."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On codifie"
+			},
+			"reaction": {
+				"FR": "On rédige un code unique. La justice y gagne en clarté."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la coutume"
+			},
+			"reaction": {
+				"FR": "On garde les coutumes locales. Souple, mais confus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20462,
+		"label": "planet_ruler_20462",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Le collecteur d'impôts suggère de doter le fief d'un hymne pour souder le peuple. Encore faut-il de la prestance."
+		},
+		"conditions": [
+			{
+				"variable": "strength",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On compose un hymne"
+			},
+			"reaction": {
+				"FR": "On commande un hymne au fief. La fierté monte d'un ton."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On juge cela vain"
+			},
+			"reaction": {
+				"FR": "On juge l'hymne superflu. Le collecteur insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_anthem",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20463,
+		"label": "planet_ruler_20463",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 2,
+		"hidden": true,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "Pour l'hymne, faut-il des paroles guerrières et fières, ou douces et rassembleuses ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fières et guerrières"
+			},
+			"reaction": {
+				"FR": "On choisit l'hymne martial. Le fief bombe le torse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douces et rassembleuses"
+			},
+			"reaction": {
+				"FR": "On choisit l'hymne apaisant. Le fief chante à l'unisson."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_anthem",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20464,
+		"label": "planet_ruler_20464",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 2,
+		"hidden": true,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "L'hymne doit-il célébrer l'Orateur-magistrat, ou le peuple d'Anacréon ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le peuple"
+			},
+			"reaction": {
+				"FR": "On dédie l'hymne au peuple. Modeste et populaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le magistrat"
+			},
+			"reaction": {
+				"FR": "On se met en avant dans l'hymne. Flatteur, un brin vain."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_anthem",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 20465,
+		"label": "planet_ruler_20465",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tax_collector",
+		"question": {
+			"FR": "L'hymne du fief retentit enfin sur toutes les places. Le faire chanter par décret, ou laisser au peuple le choix ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Par décret"
+			},
+			"reaction": {
+				"FR": "On impose l'hymne. Unité forcée, mais unité."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Au libre choix"
+			},
+			"reaction": {
+				"FR": "On laisse l'hymne se répandre seul. Plus lent, plus sincère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20466,
+		"label": "planet_ruler_20466",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Un plutocrate du fief propose de financer la garde en échange d'exemptions fiscales."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le marché"
+			},
+			"reaction": {
+				"FR": "On accepte l'arrangement. La garde tient, le fisc renonce à lui."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le passe-droit. Le plutocrate boude."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "banditism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20467,
+		"label": "planet_ruler_20467",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Un ancien chef de bande rallié vous propose d'enrôler ses hommes dans la milice du fief."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 104
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les enrôle"
+			},
+			"reaction": {
+				"FR": "On intègre les anciens brigands. Force brute, loyauté douteuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse les repris de justice. Plus sûr, moins de bras."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "banditism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20468,
+		"label": "planet_ruler_20468",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Le plutocrate signale une recrudescence de banditisme. Lever une force punitive coûte cher."
+		},
+		"conditions": [
+			{
+				"variable": "bandit",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 50
+			},
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lève la force"
+			},
+			"reaction": {
+				"FR": "On envoie une expédition punitive. Les routes redeviennent sûres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On temporise. Le banditisme s'enhardit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20469,
+		"label": "planet_ruler_20469",
+		"deck": "planet_ruler",
+		"weight": 180,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Un légiste sévère prône des peines exemplaires pour rétablir l'ordre. Sa rigueur effraie autant qu'elle rassure."
+		},
+		"conditions": [
+			{
+				"variable": "legalism",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On adopte sa rigueur"
+			},
+			"reaction": {
+				"FR": "On durcit les peines. L'ordre règne — dans la crainte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tempère"
+			},
+			"reaction": {
+				"FR": "On tempère sa sévérité. La justice garde un cœur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legalism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20470,
+		"label": "planet_ruler_20470",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:mill_engineer",
+		"question": {
+			"FR": "L'ingénieur des moulins se plaint que les lois sévères paralysent ses chantiers. Assouplir pour le commerce ?"
+		},
+		"conditions": [
+			{
+				"variable": "legalism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On assouplit"
+			},
+			"reaction": {
+				"FR": "On allège les règles pour les chantiers. Le commerce respire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On maintient la loi"
+			},
+			"reaction": {
+				"FR": "On maintient la rigueur. L'ordre avant le profit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "legalism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20471,
+		"label": "planet_ruler_20471",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact évoque le système de caution : libérer les accusés contre garantie engorgerait moins les geôles."
+		},
+		"conditions": [
+			{
+				"variable": "bail",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On instaure la caution"
+			},
+			"reaction": {
+				"FR": "On instaure la caution. Les geôles se vident un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la détention"
+			},
+			"reaction": {
+				"FR": "On garde la détention stricte. Sûr, mais coûteux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bail",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20472,
+		"label": "planet_ruler_20472",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Un émissaire errant met en garde : la caution favorise les riches, qui s'achètent la liberté."
+		},
+		"conditions": [
+			{
+				"variable": "bail",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encadre la caution"
+			},
+			"reaction": {
+				"FR": "On plafonne la caution. Plus juste entre riches et pauvres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse tel quel"
+			},
+			"reaction": {
+				"FR": "On laisse le système en l'état. L'or ouvre les cellules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bail",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20473,
+		"label": "planet_ruler_20473",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact propose d'accepter le métal brut comme paiement de l'impôt, faute de monnaie en circulation."
+		},
+		"conditions": [
+			{
+				"variable": "metal_as_tax",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le métal"
+			},
+			"reaction": {
+				"FR": "On taxe en métal. Pratique pour le peuple, lourd à gérer."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On exige la monnaie"
+			},
+			"reaction": {
+				"FR": "On exige la monnaie sonnante. Strict, mais clair."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "metal_as_tax",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 16,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20474,
+		"label": "planet_ruler_20474",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village se réjouit de l'impôt en métal : les paysans respirent. Mais le trésor manque de liquidités."
+		},
+		"conditions": [
+			{
+				"variable": "metal_as_tax",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On maintient"
+			},
+			"reaction": {
+				"FR": "On maintient l'impôt en métal. Le peuple soulagé, le trésor à sec."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On revient à la monnaie"
+			},
+			"reaction": {
+				"FR": "On revient à la monnaie. Le trésor liquide, les paysans grognent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "metal_as_tax",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20475,
+		"label": "planet_ruler_20475",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La guerre menace. Votre contact propose une conscription : un homme sur trois sous les armes."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 50
+			},
+			{
+				"variable": "draft_one_in_three",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On décrète la conscription"
+			},
+			"reaction": {
+				"FR": "On lève un homme sur trois. L'armée gonfle, les champs se vident."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lève des volontaires"
+			},
+			"reaction": {
+				"FR": "On préfère les volontaires. Moins de bras, plus de cœur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "draft_one_in_three",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20476,
+		"label": "planet_ruler_20476",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village supplie : la conscription saigne les campagnes. Exempter les fils uniques ?"
+		},
+		"conditions": [
+			{
+				"variable": "draft_one_in_three",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exempte"
+			},
+			"reaction": {
+				"FR": "On exempte les fils uniques. Les campagnes respirent un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On maintient"
+			},
+			"reaction": {
+				"FR": "On maintient la levée totale. L'armée d'abord."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20477,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20477,
+		"label": "planet_ruler_20477",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "La conscription gronde dans les villages. Réprimer la grogne, ou lâcher du lest ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lâche du lest"
+			},
+			"reaction": {
+				"FR": "On adoucit la levée. La grogne retombe, l'armée maigrit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On réprime"
+			},
+			"reaction": {
+				"FR": "On mate la grogne. L'ordre tient, la rancune couve."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "draft_one_in_three",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20478,
+		"label": "planet_ruler_20478",
+		"deck": "planet_ruler",
+		"weight": 50,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho, voix sans visage, vous transmet une rumeur de cour : on vous cherche une épouse de prestige."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y intéresse"
+			},
+			"reaction": {
+				"FR": "On prête l'oreille aux tractations matrimoniales."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On suggère la campagne"
+			},
+			"reaction": {
+				"FR": "On préfère une alliance plus modeste, hors la cour."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20479,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_countryside_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20479,
+		"label": "planet_ruler_20479",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia, mutine, évoque « onze sœurs à marier » dans une grande maison alliée. Un casse-tête diplomatique."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.happy_baby",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en mêle"
+			},
+			"reaction": {
+				"FR": "On plonge dans l'imbroglio des onze sœurs. Délicat et cocasse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On garde ses distances. Onze sœurs, onze pièges."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_eleven_sisters",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_eleven_sisters",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20480,
+		"label": "planet_ruler_20480",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:porcelain_master",
+		"question": {
+			"FR": "Le maître porcelainier propose une dot en porcelaine pour sceller l'une de ces alliances."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On offre la porcelaine"
+			},
+			"reaction": {
+				"FR": "On scelle l'alliance d'une dot précieuse. Élégant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On offre autre chose"
+			},
+			"reaction": {
+				"FR": "On préfère une autre dot. Le porcelainier est déçu."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20481,
+		"label": "planet_ruler_20481",
+		"deck": "planet_ruler",
+		"weight": -1,
+		"lockturn": 200,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia, le regard brillant, suggère que votre propre couverture gagnerait à un mariage. L'idée fait son chemin."
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y songe"
+			},
+			"reaction": {
+				"FR": "On envisage l'union de couverture. Le Plan approuverait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On élude"
+			},
+			"reaction": {
+				"FR": "On élude la question. Callia sourit, déçue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 13,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_planet_ruler",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20482,
+		"label": "planet_ruler_20482",
+		"deck": "planet_ruler",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia insiste, taquine, sur les avantages d'une alliance bien choisie pour asseoir votre autorité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la laisse manœuvrer"
+			},
+			"reaction": {
+				"FR": "On laisse Callia tisser ses fils matrimoniaux. Habile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reprend la main"
+			},
+			"reaction": {
+				"FR": "On reprend la main sur ces affaires de cœur. Callia boude."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20483,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20483,
+		"label": "planet_ruler_20483",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia conclut, mi-figue mi-raisin : « Un magistrat sans alliance est un magistrat sans avenir, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On note le conseil"
+			},
+			"reaction": {
+				"FR": "On retient l'avis de Callia. Politique du cœur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On en sourit"
+			},
+			"reaction": {
+				"FR": "On sourit de son insistance. Callia n'a pas tort, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20484,
+		"label": "planet_ruler_20484",
+		"deck": "planet_ruler",
+		"weight": 90,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village demande une remise d'impôt pour les familles ayant fourni des soldats."
+		},
+		"conditions": [
+			{
+				"variable": "military_service_tax_discount",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "strength",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accorde la remise"
+			},
+			"reaction": {
+				"FR": "On dégrève les familles de soldats. Juste reconnaissance."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse la remise. Le doyen serre les dents."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military_service_tax_discount",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20485,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20485,
+		"label": "planet_ruler_20485",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "La remise accordée, d'autres familles réclament le même traitement. Étendre, ou tenir bon ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On étend"
+			},
+			"reaction": {
+				"FR": "On étend les remises. Populaire, ruineux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient bon"
+			},
+			"reaction": {
+				"FR": "On limite les remises. Le trésor tient, les jaloux grognent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20486,
+		"label": "planet_ruler_20486",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le sel se vend à prix d'or sur le fief. Instaurer un monopole d'État pour le rendre abordable ?"
+		},
+		"conditions": [
+			{
+				"variable": "expensive_salt",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On monopolise le sel"
+			},
+			"reaction": {
+				"FR": "On nationalise le sel. Le peuple en profite, les marchands enragent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le marché"
+			},
+			"reaction": {
+				"FR": "On laisse le sel au marché libre. Cher, mais sans heurts."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "expensive_salt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_salt_normal",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20487,
+		"label": "planet_ruler_20487",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia note que le monopole du sel ferait grincer de puissants marchands. Les amadouer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les amadoue"
+			},
+			"reaction": {
+				"FR": "On compense les marchands du sel. Coûteux, mais apaisant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe en force"
+			},
+			"reaction": {
+				"FR": "On impose le monopole sans ménagement. Les marchands fulminent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "expensive_salt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20488,
+		"label": "planet_ruler_20488",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks signale que le sel cher nourrit la contrebande. Sévir, ou baisser les prix ?"
+		},
+		"conditions": [
+			{
+				"variable": "expensive_salt",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On baisse les prix"
+			},
+			"reaction": {
+				"FR": "On casse les prix du sel. La contrebande s'effondre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On traque les contrebandiers"
+			},
+			"reaction": {
+				"FR": "On pourchasse les contrebandiers. Coûteux, sans fin."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "expensive_salt",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20489,
+		"label": "planet_ruler_20489",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia revient avec une idée : organiser une grande fête de rencontres pour marier la jeunesse du fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On organise la fête"
+			},
+			"reaction": {
+				"FR": "On lance la fête des rencontres. Le fief se réjouit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline la fête. Callia hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20490,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20490,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20490,
+		"label": "planet_ruler_20490",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "À la fête, Lady Callia vous presse d'aider un couple timide à se trouver. Jouer les entremetteurs ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue l'entremetteur"
+			},
+			"reaction": {
+				"FR": "On rapproche les timides. Callia jubile, le couple rougit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire le hasard"
+			},
+			"reaction": {
+				"FR": "On laisse le hasard agir. Callia trouve cela bien tiède."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_find_the_match",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20491,
+		"label": "planet_ruler_20491",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact soulève la question des maisons closes : les légaliser pour les encadrer, ou les interdire ?"
+		},
+		"conditions": [
+			{
+				"variable": "legitimate_brothels",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On légalise et encadre"
+			},
+			"reaction": {
+				"FR": "On encadre les maisons closes. Ordre et hygiène, scandale chez les dévots."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On interdit"
+			},
+			"reaction": {
+				"FR": "On interdit les maisons closes. Vertueux — et la clandestinité grossit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimate_brothels",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20492,
+		"label": "planet_ruler_20492",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:mill_engineer",
+		"question": {
+			"FR": "L'ingénieur des moulins note que les quartiers réservés, bien gérés, rapporteraient des taxes utiles."
+		},
+		"conditions": [
+			{
+				"variable": "legitimate_brothels",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On taxe"
+			},
+			"reaction": {
+				"FR": "On taxe les maisons légales. Le trésor s'arrondit, les dévots protestent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On renonce à ces taxes-là. Moralité sauve, coffres maigres."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legitimate_brothels",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20493,
+		"label": "planet_ruler_20493",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Votre contact alerte : la prostitution clandestine sombre dans le crime. Intervenir ?"
+		},
+		"conditions": [
+			{
+				"variable": "legitimate_brothels",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On intervient"
+			},
+			"reaction": {
+				"FR": "On nettoie les bas-fonds. Coûteux, nécessaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ferme les yeux"
+			},
+			"reaction": {
+				"FR": "On ferme les yeux. Le crime prospère dans l'ombre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_criminal_prostitute",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20494,
+		"label": "planet_ruler_20494",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'affaire criminelle remonte à un notable respecté. Le démasquer, ou étouffer le scandale ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le démasque"
+			},
+			"reaction": {
+				"FR": "On démasque le notable. Scandale assaini, ennemi puissant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On étouffe"
+			},
+			"reaction": {
+				"FR": "On étouffe l'affaire. Le calme, au prix de la justice."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20495,
+		"label": "planet_ruler_20495",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "La disette menace. Votre contact propose un rationnement strict des vivres."
+		},
+		"conditions": [
+			{
+				"variable": "food_rationing",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rationne"
+			},
+			"reaction": {
+				"FR": "On instaure le rationnement. La faim recule, la grogne monte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le marché"
+			},
+			"reaction": {
+				"FR": "On laisse le marché nourrir le fief. Risqué en disette."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "food_rationing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20496,
+		"label": "planet_ruler_20496",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial réclame sa part de vivres malgré la disette. Céder, ou résister ?"
+		},
+		"conditions": [
+			{
+				"variable": "food_rationing",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On résiste"
+			},
+			"reaction": {
+				"FR": "On refuse de livrer les vivres. L'Empire fronce les sourcils."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cède une part"
+			},
+			"reaction": {
+				"FR": "On cède une part. L'Empire content, le fief affamé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "food_rationing",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20497,
+		"label": "planet_ruler_20497",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur attise la colère des affamés contre les greniers des riches. Calmer, ou laisser éclater ?"
+		},
+		"conditions": [
+			{
+				"variable": "food_rationing",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On calme"
+			},
+			"reaction": {
+				"FR": "On apaise les affamés par des distributions. Le trésor saigne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse éclater"
+			},
+			"reaction": {
+				"FR": "On laisse la colère gronder. Dangereux jeu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "food_rationing",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20498,
+		"label": "planet_ruler_20498",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial propose d'acheminer du grain impérial — contre une lourde contrepartie politique."
+		},
+		"conditions": [
+			{
+				"variable": "food_rationing",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le grain"
+			},
+			"reaction": {
+				"FR": "On accepte le grain impérial. Le fief mange, l'Empire s'invite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse l'aide piégée. Fierté coûteuse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "food_rationing",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20499,
+		"label": "planet_ruler_20499",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks signale des navires de vivres détournés par des pillards. Escorter les convois ?"
+		},
+		"conditions": [
+			{
+				"variable": "food_rationing",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On escorte"
+			},
+			"reaction": {
+				"FR": "On escorte les convois de grain. Sûr, mais des bras mobilisés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On prend le risque"
+			},
+			"reaction": {
+				"FR": "On laisse passer sans escorte. Les pillards rôdent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "food_rationing",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -17,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20500,
+		"label": "planet_ruler_20500",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amiral propose une revue navale pour impressionner les mondes voisins et dissuader les ambitions."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On organise la revue"
+			},
+			"reaction": {
+				"FR": "On déploie la flotte en parade. Les voisins y réfléchiront."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde profil bas"
+			},
+			"reaction": {
+				"FR": "On évite l'étalage. Discret, moins dissuasif."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20501,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20501,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20501,
+		"label": "planet_ruler_20501",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant juge la revue navale provocante. Maintenir, ou annuler ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On maintient"
+			},
+			"reaction": {
+				"FR": "On maintient la revue. La force se montre, les tensions montent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On annule"
+			},
+			"reaction": {
+				"FR": "On annule la parade. Apaisant, mais on paraît faible."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20502,
+		"label": "planet_ruler_20502",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Un philosophe de la bienveillance prêche que le peuple passe avant le prince. Séduisant — et subversif."
+		},
+		"conditions": [
+			{
+				"variable": "mencius",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On prête l'oreille au philosophe. Ses idées troublent et séduisent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le fait taire"
+			},
+			"reaction": {
+				"FR": "On muselle le philosophe. L'ordre avant les idées."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20503,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20503,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20503,
+		"label": "planet_ruler_20503",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Le philosophe de la bienveillance propose des réformes en faveur des petites gens."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les adopte"
+			},
+			"reaction": {
+				"FR": "On adopte ses réformes. Le peuple vous adore, les notables moins."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les édulcore"
+			},
+			"reaction": {
+				"FR": "On édulcore les réformes. Un compromis tiède."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20504,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20504,
+		"label": "planet_ruler_20504",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Les réformes bienveillantes plaisent au peuple mais inquiètent vos soutiens fortunés. Trancher."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pour le peuple"
+			},
+			"reaction": {
+				"FR": "On tranche pour le peuple. Popularité gagnée, alliés froissés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pour les notables"
+			},
+			"reaction": {
+				"FR": "On rassure les notables. L'ordre tient, le peuple déchante."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "mencius",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20505,
+		"label": "planet_ruler_20505",
+		"deck": "planet_ruler",
+		"weight": 180,
+		"lockturn": 400,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Le philosophe lie bienveillance et piété : un fief juste, dit-il, est un fief béni. Soutenir ce discours ?"
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 40
+			},
+			{
+				"variable": "mencius",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le soutient"
+			},
+			"reaction": {
+				"FR": "On épouse le discours pieux et juste. La foi du fief s'enracine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste laïque"
+			},
+			"reaction": {
+				"FR": "On garde le pouvoir hors de la foi. Le philosophe s'attriste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mencius",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20506,
+		"label": "planet_ruler_20506",
+		"deck": "planet_ruler",
+		"weight": 180,
+		"lockturn": 400,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Le philosophe affirme qu'un bon gouvernement vaut mille soldats. Investir dans l'administration plutôt que l'armée ?"
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 30
+			},
+			{
+				"variable": "mencius",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.angry_distant_crowd",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Dans l'administration"
+			},
+			"reaction": {
+				"FR": "On muscle l'administration. Le fief tourne mieux, l'armée moins."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Dans l'armée"
+			},
+			"reaction": {
+				"FR": "On renforce l'armée. Sûr, mais le philosophe soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "mencius",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20507,
+		"label": "planet_ruler_20507",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 400,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Le philosophe de la bienveillance demande à enseigner ses idées dans vos écoles."
+		},
+		"conditions": [
+			{
+				"variable": "mencius",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "On le laisse enseigner. Une génération bienveillante grandit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse l'enseignement. Trop subversif, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20508,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20508,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20508,
+		"label": "planet_ruler_20508",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Ses élèves, fervents, réclament des postes dans l'administration du fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les nomme"
+			},
+			"reaction": {
+				"FR": "On nomme les disciples. L'administration s'idéalise — et s'inexpérimente."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les éprouve d'abord"
+			},
+			"reaction": {
+				"FR": "On les met à l'épreuve avant tout poste. Sage prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20509,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20509,
+		"label": "planet_ruler_20509",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Le philosophe vieillissant vous demande de garantir la pérennité de son école après lui."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la garantit"
+			},
+			"reaction": {
+				"FR": "On pérennise l'école. Son héritage traversera les règnes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste évasif"
+			},
+			"reaction": {
+				"FR": "On reste évasif. Le philosophe s'en inquiète."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20510,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20510,
+		"label": "planet_ruler_20510",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique applique désormais les principes bienveillants. Sa clémence divise les notables."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le soutient"
+			},
+			"reaction": {
+				"FR": "On soutient le juge clément. La justice s'humanise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le rappelle à l'ordre"
+			},
+			"reaction": {
+				"FR": "On rappelle le juge à la rigueur. Les notables respirent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20511,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20511,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20511,
+		"label": "planet_ruler_20511",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique vous soumet un cas épineux où loi et bienveillance s'opposent frontalement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On choisit la bienveillance"
+			},
+			"reaction": {
+				"FR": "On juge avec le cœur. Le peuple approuve, la loi vacille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On choisit la loi"
+			},
+			"reaction": {
+				"FR": "On juge selon la loi stricte. Juste, mais dur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20512,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20512,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 20800,
 		"label": "seldon_plan_20800",
 		"deck": "seldon_plan",
