@@ -23540,6 +23540,3868 @@
 		}
 	},
 	{
+		"id": 20624,
+		"label": "planet_ruler_20624",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde profite de la morgue de la capitale pour vendre ses produits de luxe à prix d'or."
+		},
+		"conditions": [
+			{
+				"variable": "snobby_capital",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse le luxe prospérer. Les coffres marchands gonflent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On régule"
+			},
+			"reaction": {
+				"FR": "On régule les prix du luxe. Les snobs grognent, le peuple souffle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "snobby_capital",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20625,
+		"label": "planet_ruler_20625",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho rapporte que la capitale snob se moque ouvertement de vos origines modestes de couverture."
+		},
+		"conditions": [
+			{
+				"variable": "snobby_capital",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On en rit"
+			},
+			"reaction": {
+				"FR": "On rit des moqueries. L'indifférence désarme les snobs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les remet à leur place"
+			},
+			"reaction": {
+				"FR": "On rabroue les moqueurs. L'autorité parle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "snobby_capital",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20626,
+		"label": "planet_ruler_20626",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "L'entremetteuse note que la capitale snob refuse de se mêler au peuple, même en fête."
+		},
+		"conditions": [
+			{
+				"variable": "snobby_capital",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On force le mélange"
+			},
+			"reaction": {
+				"FR": "On impose des fêtes communes. Les classes se frôlent, mal à l'aise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On respecte les rangs"
+			},
+			"reaction": {
+				"FR": "On laisse chacun sa fête. L'ordre social pèse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "snobby_capital",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20627,
+		"label": "planet_ruler_20627",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général de l'Empire traque un fugitif célèbre et exige votre aide. Collaborer, ou protéger le fuyard ?"
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 70
+			},
+			{
+				"variable": "legalism",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "cao_cao",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "where_is_cao_cao",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On aide l'Empire"
+			},
+			"reaction": {
+				"FR": "On livre des indices au général. L'Empire vous saura gré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On protège le fugitif"
+			},
+			"reaction": {
+				"FR": "On couvre le fuyard. Jeu dangereux contre l'Empire."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "legalism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20628,
+		"label": "planet_ruler_20628",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial soupçonne le fugitif de s'être réfugié sur votre fief. Fouiller, ou nier ?"
+		},
+		"conditions": [
+			{
+				"variable": "cao_cao",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "where_is_cao_cao",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 198
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fouille"
+			},
+			"reaction": {
+				"FR": "On fouille le fief pour l'Empire. Zélé, impopulaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On nie"
+			},
+			"reaction": {
+				"FR": "On nie toute présence. Risqué si le général insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20629,
+		"label": "planet_ruler_20629",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Un prince exilé en fuite cherche refuge sur votre fief. L'accueillir, c'est défier l'Empire."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 55
+			},
+			{
+				"variable": "liu_bei",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "find_liu_bei",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 223
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "On offre l'asile au prince. Un allié — et un risque énorme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le prince traqué. Prudent, peu glorieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20630,
+		"label": "planet_ruler_20630",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le prince exilé promet monts et merveilles en échange de votre protection. Le croire ?"
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 55
+			},
+			{
+				"variable": "liu_bei",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "find_liu_bei",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 223
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le croit"
+			},
+			"reaction": {
+				"FR": "On mise sur le prince. Pari sur l'avenir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sceptique"
+			},
+			"reaction": {
+				"FR": "On doute de ses promesses. Prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20631,
+		"label": "planet_ruler_20631",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Des agents cherchent le prince exilé jusque sur vos terres. Le cacher, ou le livrer ?"
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 40
+			},
+			{
+				"variable": "find_liu_bei",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 223
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le cache"
+			},
+			"reaction": {
+				"FR": "On dissimule le prince. Loyauté risquée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le livre"
+			},
+			"reaction": {
+				"FR": "On livre le prince. Sûr, et déshonorant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20632,
+		"label": "planet_ruler_20632",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le prince exilé, reconnaissant, propose une alliance scellée par la foi commune en l'avenir."
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 40
+			},
+			{
+				"variable": "find_liu_bei",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 223
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle l'alliance"
+			},
+			"reaction": {
+				"FR": "On s'allie au prince exilé. Un destin lié au vôtre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste libre"
+			},
+			"reaction": {
+				"FR": "On garde sa liberté. Le prince comprend, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20633,
+		"label": "planet_ruler_20633",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks signale qu'en saison de mousson, les approvisionnements militaires risquent de pourrir. Stocker autrement ?"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			},
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réorganise les stocks"
+			},
+			"reaction": {
+				"FR": "On modernise le stockage militaire. Coûteux, prévoyant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On prend le risque"
+			},
+			"reaction": {
+				"FR": "On garde les vieux entrepôts. Économique, périlleux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20634,
+		"label": "planet_ruler_20634",
+		"deck": "planet_ruler",
+		"weight": 1000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks propose un grand entrepôt fortifié pour les réserves de guerre du fief."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le bâtit"
+			},
+			"reaction": {
+				"FR": "On érige l'entrepôt fortifié. Les réserves à l'abri."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en passe"
+			},
+			"reaction": {
+				"FR": "On renonce. Les réserves restent vulnérables."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20635,
+		"label": "planet_ruler_20635",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier propose de loter les terres en friche du fief pour les vendre aux colons."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lotit et vend"
+			},
+			"reaction": {
+				"FR": "On vend les friches aux colons. Le trésor encaisse, le paysage change."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde les friches"
+			},
+			"reaction": {
+				"FR": "On garde les terres en réserve. Prudent, peu lucratif."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20636,
+		"label": "planet_ruler_20636",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le Grand Prêtre propose un grand pèlerinage qui attirerait des fidèles — et leurs offrandes — au fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On autorise le pèlerinage"
+			},
+			"reaction": {
+				"FR": "On lance le pèlerinage. Fidèles et offrandes affluent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le pèlerinage. Le Grand Prêtre se renfrogne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20637,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20637,
+		"label": "planet_ruler_20637",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le pèlerinage afflue mais déborde les capacités du fief. Limiter l'accès, ou tout accueillir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On limite"
+			},
+			"reaction": {
+				"FR": "On régule le flux de pèlerins. Ordre maintenu, dévots déçus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accueille tout"
+			},
+			"reaction": {
+				"FR": "On accueille la marée de pèlerins. Chaos pieux, recettes record."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20638,
+		"label": "planet_ruler_20638",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:bargemaster",
+		"question": {
+			"FR": "Le maître-batelier propose d'ouvrir une ligne de transport fluvial pour désenclaver l'arrière-pays."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On ouvre la ligne"
+			},
+			"reaction": {
+				"FR": "On crée la ligne fluviale. L'arrière-pays s'ouvre au commerce."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On renonce. L'arrière-pays reste isolé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20639,
+		"label": "planet_ruler_20639",
+		"deck": "planet_ruler",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:fierce_warrior",
+		"question": {
+			"FR": "Le bretteur colosse, désœuvré, propose de mater une bande de brigands qui écume les routes."
+		},
+		"conditions": [
+			{
+				"variable": "zhang_fei",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 221
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'envoie"
+			},
+			"reaction": {
+				"FR": "On lâche le colosse sur les brigands. Les routes redeviennent sûres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On retient le colosse. Trop brutal, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20640,
+		"label": "planet_ruler_20640",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:physician",
+		"question": {
+			"FR": "Le physicien vous annonce que vous couvez une fièvre tenace. Vous ménager, ou tenir votre rang malgré tout ?"
+		},
+		"conditions": [
+			{
+				"variable": "sick",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sick",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se ménage"
+			},
+			"reaction": {
+				"FR": "On lève le pied. Le fief tourne au ralenti, vous guérissez."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient bon"
+			},
+			"reaction": {
+				"FR": "On gouverne malgré la fièvre. Courageux, imprudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "sick",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20641,
+		"label": "planet_ruler_20641",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:physician",
+		"question": {
+			"FR": "La fièvre empire. Le physicien insiste pour un traitement lourd et un long repos."
+		},
+		"conditions": [
+			{
+				"variable": "sick",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se soigne"
+			},
+			"reaction": {
+				"FR": "On suit le traitement. Le fief attend, vous récupérez."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse le repos"
+			},
+			"reaction": {
+				"FR": "On refuse de s'arrêter. La fièvre gagne du terrain."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "sick",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20642,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 20642,
+		"label": "planet_ruler_20642",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:physician",
+		"question": {
+			"FR": "Alité, vous devez déléguer le pouvoir. À qui confier le fief le temps de guérir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "À un fidèle éprouvé"
+			},
+			"reaction": {
+				"FR": "On confie le fief à un fidèle. Sûr, dans la mesure du possible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "À personne"
+			},
+			"reaction": {
+				"FR": "On garde tout en main, malade. Épuisant, risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "sick",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20643,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 20643,
+		"label": "planet_ruler_20643",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:physician",
+		"question": {
+			"FR": "La maladie atteint un point critique. Le physicien ne promet plus rien. Lutter, ou s'en remettre au sort ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lutte"
+			},
+			"reaction": {
+				"FR": "On lutte contre le mal. Le corps tient — pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en remet au sort"
+			},
+			"reaction": {
+				"FR": "On lâche prise. Le sommeil menace de ne pas finir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_dans_son_sommeil",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_dans_son_sommeil",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 20644,
+		"label": "planet_ruler_20644",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant du fief vous met en garde, à voix basse : « Votre pouvoir grandit trop vite, Orateur. L'Empire commence à vous remarquer. »"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 8
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se fait discret"
+			},
+			"reaction": {
+				"FR": "On modère son ascension. Mieux vaut grandir dans l'ombre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On assume"
+			},
+			"reaction": {
+				"FR": "On assume sa montée en puissance. L'exposition guette."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_bei",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20645,
+		"label": "planet_ruler_20645",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant insiste : « On murmure à la cour impériale que le magistrat d'Anacréon en fait trop. Prudence. »"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rentre les griffes"
+			},
+			"reaction": {
+				"FR": "On rentre les griffes. La rumeur s'apaisera."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hausse les épaules"
+			},
+			"reaction": {
+				"FR": "On néglige la rumeur. Elle enfle pourtant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_biao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20646,
+		"label": "planet_ruler_20646",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« Vos manufactures, vos troupes, vos alliances… L'Empire additionne, Orateur », souffle l'intendant. « Et le total l'inquiète. »"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rééquilibre"
+			},
+			"reaction": {
+				"FR": "On disperse ses atouts pour paraître moins menaçant. Rusé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On consolide"
+			},
+			"reaction": {
+				"FR": "On consolide sans détour. L'Empire fronce les sourcils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_lv_bu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20647,
+		"label": "planet_ruler_20647",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant rapporte qu'un rapport secret au trône vous décrit comme « un danger en gestation »."
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 11
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On désamorce"
+			},
+			"reaction": {
+				"FR": "On envoie des gages de loyauté. Le rapport perd de son venin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse dire"
+			},
+			"reaction": {
+				"FR": "On laisse courir le rapport. Imprudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_ma_teng",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20648,
+		"label": "planet_ruler_20648",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« Trop de gloire tue, Orateur », prévient l'intendant. « On a vu tomber des magistrats pour moins que cela. »"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se fait oublier"
+			},
+			"reaction": {
+				"FR": "On baisse le profil. La gloire est un piège."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On brille encore"
+			},
+			"reaction": {
+				"FR": "On continue de briller. La cible sur votre dos grossit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_zhang_lu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20649,
+		"label": "planet_ruler_20649",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant suggère d'offrir un tribut volontaire à l'Empire pour endormir ses soupçons sur votre puissance."
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 14
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On verse le tribut"
+			},
+			"reaction": {
+				"FR": "On verse un tribut apaisant. L'Empire ronronne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse de payer. La défiance impériale demeure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_zhang",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20650,
+		"label": "planet_ruler_20650",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« Vos rivaux soufflent sur les braises, Orateur », murmure l'intendant. « Ils peignent votre ambition aux pires couleurs. »"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 16
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les contre"
+			},
+			"reaction": {
+				"FR": "On contre les médisances. La réputation se défend."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les ignore"
+			},
+			"reaction": {
+				"FR": "On ignore les rivaux. Leurs calomnies prospèrent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_yuan_shao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20651,
+		"label": "planet_ruler_20651",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant propose de feindre une disgrâce passagère pour rassurer l'Empire sur vos intentions."
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 17
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On feint la disgrâce"
+			},
+			"reaction": {
+				"FR": "On joue la disgrâce. L'Empire baisse la garde. Habile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse la comédie"
+			},
+			"reaction": {
+				"FR": "On refuse de jouer la comédie. Fier, exposé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_yuan_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20652,
+		"label": "planet_ruler_20652",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« Un magistrat trop aimé du peuple devient suspect au prince », note l'intendant. Tempérer votre popularité ?"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 18
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la tempère"
+			},
+			"reaction": {
+				"FR": "On modère sa popularité. Moins de ferveur, moins de soupçons."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la cultive"
+			},
+			"reaction": {
+				"FR": "On cultive l'amour du peuple. Bouclier — ou cible."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_gongsun_zan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20653,
+		"label": "planet_ruler_20653",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant repère un espion impérial chargé d'évaluer votre menace. Le tromper, ou le retourner ?"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 20
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le trompe"
+			},
+			"reaction": {
+				"FR": "On endort l'espion d'une mise en scène rassurante."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le retourne"
+			},
+			"reaction": {
+				"FR": "On retourne l'espion. Risqué, précieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20654,
+		"label": "planet_ruler_20654",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« Vos victoires effraient autant qu'elles impressionnent », dit l'intendant. Partager la gloire avec l'Empire ?"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 21
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On partage la gloire"
+			},
+			"reaction": {
+				"FR": "On attribue ses succès à l'Empire. Flatteur, désintéressé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le crédit"
+			},
+			"reaction": {
+				"FR": "On garde le crédit de ses victoires. Fier, menaçant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_cao_pi",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20655,
+		"label": "planet_ruler_20655",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant conseille de marier un proche à la cour impériale pour donner des gages de loyauté."
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 22
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle une alliance"
+			},
+			"reaction": {
+				"FR": "On marie un proche à la cour. Loyauté affichée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On refuse l'alliance de cour. Indépendant, suspect."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_cao_rui",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20656,
+		"label": "planet_ruler_20656",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« On vous prête des ambitions de trône, Orateur », souffle l'intendant. Démentir avec éclat ?"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 23
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dément avec éclat"
+			},
+			"reaction": {
+				"FR": "On dément haut et fort. La rumeur reflue — un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse planer le doute"
+			},
+			"reaction": {
+				"FR": "On laisse planer le mystère. Dangereux jeu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_sima_yi",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20657,
+		"label": "planet_ruler_20657",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant suggère de réduire ostensiblement votre garde pour paraître inoffensif aux yeux de l'Empire."
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 25
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réduit la garde"
+			},
+			"reaction": {
+				"FR": "On dégarnit sa garde, en façade. L'Empire se rassure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde sa garde"
+			},
+			"reaction": {
+				"FR": "On garde sa garde intacte. Sûr, mais voyant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_sun_ce",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20658,
+		"label": "planet_ruler_20658",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "« Le trône hésite entre vous récompenser et vous abattre », révèle l'intendant. Forcer la main par la loyauté ?"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 26
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On surjoue la loyauté"
+			},
+			"reaction": {
+				"FR": "On multiplie les preuves de loyauté. L'Empire penche pour la récompense."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste digne"
+			},
+			"reaction": {
+				"FR": "On reste digne sans surjouer. Le trône hésite encore."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_sun_quan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20659,
+		"label": "planet_ruler_20659",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant conclut, grave : « Votre étoile est au zénith, Orateur. C'est là qu'on devient une cible. »"
+		},
+		"conditions": [
+			{
+				"variable": "player:threat",
+				"op": "equal",
+				"value": 27
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On redescend d'un cran"
+			},
+			"reaction": {
+				"FR": "On modère son éclat. Survivre vaut mieux que briller."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On vise plus haut encore"
+			},
+			"reaction": {
+				"FR": "On vise plus haut. Le vertige du pouvoir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_shan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "region_contest",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20660,
+		"label": "planet_ruler_20660",
+		"deck": "planet_ruler",
+		"weight": 1200,
+		"lockturn": 180,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant vous avertit : un prince exilé rassemble des fidèles et pourrait disputer votre influence dans la région."
+		},
+		"conditions": [
+			{
+				"variable": "liu_bei:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le surveille"
+			},
+			"reaction": {
+				"FR": "On garde l'œil sur le prince exilé. Prudence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le néglige"
+			},
+			"reaction": {
+				"FR": "On néglige le prince errant. Erreur, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_bei",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20661,
+		"label": "planet_ruler_20661",
+		"deck": "planet_ruler",
+		"weight": 1500,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant signale qu'un vieux roi voisin, malgré son grand âge, tient encore un royaume convoité."
+		},
+		"conditions": [
+			{
+				"variable": "liu_biao:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le ménage"
+			},
+			"reaction": {
+				"FR": "On ménage le vieux roi. Une succession se prépare."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le presse"
+			},
+			"reaction": {
+				"FR": "On presse le vieux roi. Risqué — il a des alliés."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_biao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20662,
+		"label": "planet_ruler_20662",
+		"deck": "planet_ruler",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant blêmit : « Le Champion Invaincu erre de nouveau, sans maître. Là où il passe, les trônes tombent. »"
+		},
+		"conditions": [
+			{
+				"variable": "lv_bu:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se garde du Champion Invaincu. Un fauve sans laisse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le courtise"
+			},
+			"reaction": {
+				"FR": "On songe à rallier l'Invaincu. Jeu avec le feu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_lv_bu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20663,
+		"label": "planet_ruler_20663",
+		"deck": "planet_ruler",
+		"weight": 1500,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant rapporte qu'un seigneur de la frontière nord lève une armée de cavaliers redoutés."
+		},
+		"conditions": [
+			{
+				"variable": "ma_teng:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le surveille"
+			},
+			"reaction": {
+				"FR": "On surveille le seigneur frontalier. Prudence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'apaise"
+			},
+			"reaction": {
+				"FR": "On envoie des présents au seigneur. Diplomatie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_ma_teng",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20664,
+		"label": "planet_ruler_20664",
+		"deck": "planet_ruler",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant note qu'un primate du grain règne en maître théocratique sur un monde voisin, gagnant les cœurs."
+		},
+		"conditions": [
+			{
+				"variable": "zhang_lu:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'observe"
+			},
+			"reaction": {
+				"FR": "On observe la théocratie du grain. Une influence rivale."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'imite"
+			},
+			"reaction": {
+				"FR": "On copie ses méthodes charitables. Habile récupération."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_zhang_lu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20665,
+		"label": "planet_ruler_20665",
+		"deck": "planet_ruler",
+		"weight": 1500,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant juge qu'un gouverneur voisin, faible et riche, ne tiendra pas longtemps son monde prospère."
+		},
+		"conditions": [
+			{
+				"variable": "liu_zhang:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le protège"
+			},
+			"reaction": {
+				"FR": "On protège le gouverneur faible. Un vassal reconnaissant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lorgne son monde"
+			},
+			"reaction": {
+				"FR": "On lorgne le monde du faible. Tentation."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_zhang",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20666,
+		"label": "planet_ruler_20666",
+		"deck": "planet_ruler",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant met en garde contre un grand seigneur de guerre dont l'ombre s'étend sur toute la région."
+		},
+		"conditions": [
+			{
+				"variable": "yuan_shao:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se garde du grand seigneur. Sa puissance inquiète."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le flatte"
+			},
+			"reaction": {
+				"FR": "On flatte le grand seigneur. Apaisement calculé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_yuan_shao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20667,
+		"label": "planet_ruler_20667",
+		"deck": "planet_ruler",
+		"weight": 1800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant rapporte qu'un seigneur du Sud, prétentieux, se proclame presque souverain. Le contrer ?"
+		},
+		"conditions": [
+			{
+				"variable": "yuan_shu:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le contre"
+			},
+			"reaction": {
+				"FR": "On rabaisse les prétentions du Sudiste. Tension assurée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse s'illusionner"
+			},
+			"reaction": {
+				"FR": "On laisse le Sudiste à sa morgue. Il s'effondrera seul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_yuan_shu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20668,
+		"label": "planet_ruler_20668",
+		"deck": "planet_ruler",
+		"weight": 1800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant signale un rude seigneur du Nord, maître de cavaliers blancs, qui guerroie sans relâche."
+		},
+		"conditions": [
+			{
+				"variable": "gongsun_zan:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'allie à lui"
+			},
+			"reaction": {
+				"FR": "On s'allie au seigneur du Nord. Un rempart guerrier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se garde du belliqueux Nordiste. Imprévisible."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_gongsun_zan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20669,
+		"label": "planet_ruler_20669",
+		"deck": "planet_ruler",
+		"weight": 800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant frémit : « Le général de l'Empire devient le vrai maître du trône. Sa puissance n'a plus d'égale. »"
+		},
+		"conditions": [
+			{
+				"variable": "cao_cao:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On compose avec lui"
+			},
+			"reaction": {
+				"FR": "On compose avec le général tout-puissant. Realpolitik."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'y oppose en secret"
+			},
+			"reaction": {
+				"FR": "On prépare en secret de lui résister. Jeu mortel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20670,
+		"label": "planet_ruler_20670",
+		"deck": "planet_ruler",
+		"weight": 1800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant note que l'héritier usurpateur consolide l'Empire d'une main de fer."
+		},
+		"conditions": [
+			{
+				"variable": "cao_pi:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le reconnaît"
+			},
+			"reaction": {
+				"FR": "On reconnaît l'usurpateur. Prudence politique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le défie"
+			},
+			"reaction": {
+				"FR": "On défie l'usurpateur. Périlleux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_cao_pi",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20671,
+		"label": "planet_ruler_20671",
+		"deck": "planet_ruler",
+		"weight": 1800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant évoque un jeune héritier impérial, brillant mais entouré de vautours de cour."
+		},
+		"conditions": [
+			{
+				"variable": "cao_rui:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le courtise"
+			},
+			"reaction": {
+				"FR": "On courtise le jeune héritier. Un investissement d'avenir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend de voir"
+			},
+			"reaction": {
+				"FR": "On attend de juger le jeune héritier. Prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_cao_rui",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20672,
+		"label": "planet_ruler_20672",
+		"deck": "planet_ruler",
+		"weight": 1800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant baisse la voix : « Le chancelier impérial tisse sa toile. Patient comme l'araignée, il survivra à tous. »"
+		},
+		"conditions": [
+			{
+				"variable": "sima_yi:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le surveille"
+			},
+			"reaction": {
+				"FR": "On surveille le chancelier patient. Le plus dangereux de tous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le sous-estime"
+			},
+			"reaction": {
+				"FR": "On néglige le chancelier. Erreur fatale, souvent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_sima_yi",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20673,
+		"label": "planet_ruler_20673",
+		"deck": "planet_ruler",
+		"weight": 1800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant rapporte qu'un jeune conquérant fulgurant taille un empire dans le Sud à la vitesse de l'éclair."
+		},
+		"conditions": [
+			{
+				"variable": "sun_ce:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se garde du jeune conquérant. Trop rapide, trop fort."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le courtise"
+			},
+			"reaction": {
+				"FR": "On courtise le jeune conquérant. Pari sur sa fougue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_sun_ce",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20674,
+		"label": "planet_ruler_20674",
+		"deck": "planet_ruler",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant note qu'un souverain du Sud, prudent et tenace, consolide un royaume durable."
+		},
+		"conditions": [
+			{
+				"variable": "sun_quan:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On négocie avec lui"
+			},
+			"reaction": {
+				"FR": "On négocie avec le souverain du Sud. Paix prudente."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le contre"
+			},
+			"reaction": {
+				"FR": "On contre le Sudiste tenace. Guerre longue en vue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_sun_quan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20675,
+		"label": "planet_ruler_20675",
+		"deck": "planet_ruler",
+		"weight": 2000,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:steward",
+		"question": {
+			"FR": "L'intendant soupire : un héritier fantoche règne sur un monde voisin, jouet de ses conseillers. Une proie facile."
+		},
+		"conditions": [
+			{
+				"variable": "liu_shan:threat",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le protège"
+			},
+			"reaction": {
+				"FR": "On protège le fantoche. Un vassal docile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On profite de sa faiblesse"
+			},
+			"reaction": {
+				"FR": "On exploite sa faiblesse. Sans gloire, efficace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "contestleft",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.generic_liu_shan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "contestright",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20676,
+		"label": "planet_ruler_20676",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous quitte, sa mission accomplie. « Le fief est entre bonnes mains, Orateur. Le Plan aussi. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On salue l'émissaire. Un fil du réseau se referme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On tente de retenir l'émissaire. Il sourit et s'en va."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20677,
+		"label": "planet_ruler_20677",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:corrupt_inspector",
+		"question": {
+			"FR": "L'inspecteur corrompu, démasqué une fois de trop, est traduit en justice. Faire un exemple, ou bannir sans bruit ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fait un exemple"
+			},
+			"reaction": {
+				"FR": "On juge l'inspecteur en public. La corruption recule, un temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le bannit discrètement"
+			},
+			"reaction": {
+				"FR": "On le bannit sans bruit. Net, peu spectaculaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20678,
+		"label": "planet_ruler_20678",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:usurper_heir",
+		"question": {
+			"FR": "L'héritier usurpateur de l'Empire vous convoque pour jauger votre loyauté. Répondre à l'appel ?"
+		},
+		"conditions": [
+			{
+				"variable": "cao_pi",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 226
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y rend"
+			},
+			"reaction": {
+				"FR": "On répond à la convocation impériale. Risqué, obligé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se dérobe"
+			},
+			"reaction": {
+				"FR": "On esquive l'appel. L'usurpateur le remarquera."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20679,
+		"label": "planet_ruler_20679",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:imperial_chancellor",
+		"question": {
+			"FR": "Le chancelier impérial, maître de l'ombre, vous tend une « offre d'amitié » qui ressemble à un piège."
+		},
+		"conditions": [
+			{
+				"variable": "cao_cao",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 213
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sima_yi",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue le jeu"
+			},
+			"reaction": {
+				"FR": "On feint l'amitié avec le chancelier. Duel d'hypocrites."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur ses gardes"
+			},
+			"reaction": {
+				"FR": "On reste méfiant. Le chancelier sourit, patient."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "sima_yi",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "sima_yi",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
 		"id": 20800,
 		"label": "seldon_plan_20800",
 		"deck": "seldon_plan",
