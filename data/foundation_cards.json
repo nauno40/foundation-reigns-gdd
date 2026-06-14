@@ -45187,6 +45187,1604 @@
 		}
 	},
 	{
+		"id": 30400,
+		"label": "start_30400",
+		"deck": "start",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "Le noir, d'abord. Puis une voix calme, professionnelle : « Bienvenue, Orateur. Premier éveil. Je suis l'Analyste de la Table — je serai votre porte d'entrée dans le métier le plus secret de la Galaxie. Quelques réglages, et nous commençons. Détendez-vous. Enfin, autant qu'on peut, vu ce qui vous attend. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "onboarding",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je suis prêt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Où suis-je ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 30401,
+		"label": "start_30401",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Établissons votre première couverture, » poursuit l'Analyste. « Identité civile, passé fabriqué, place dans la société. Vous serez quelqu'un d'ordinaire aux yeux de tous — et un Mentalique de la Seconde Fondation pour personne. Le secret est votre seule armure. Compris ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "is_woman",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "bastard_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "married",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_baby",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_adult",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_son",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_daughter",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "is_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_husband",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Compris"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Et si je suis démasqué ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30403,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30402,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30402,
+		"label": "start_30402",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Démasqué ? » L'Analyste ne sourit pas. « Alors vous mourez, et un autre prend la suite. La Fondation ne s'arrête jamais pour un homme. C'est dur ? Oui. C'est le Plan ? Oui. Mille ans valent plus qu'une vie — la vôtre y comprise. Surtout la vôtre. Continuons. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter cette règle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est cruel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30404,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30406,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30403,
+		"label": "start_30403",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Votre don, maintenant, » dit l'Analyste. « Vous lisez les émotions. Vous les infléchissez. Doucement — un grand coup de barre se VOIT, et ce qui se voit vous tue. Le bon Orateur agit comme l'eau sur la pierre : sans qu'on s'en aperçoive, pendant des années. Patience. Toujours patience. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Maîtriser ma patience"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pourquoi tant de retenue ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30404,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30405,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 30404,
+		"label": "start_30404",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« La retenue, » explique l'Analyste, « parce que votre légitimité — votre couverture — s'use chaque fois que vous en savez ou faites trop. Jouez votre rôle civil sincèrement et elle se reconstitue. Trichez avec votre don et elle s'effrite. Un Orateur grillé est un Orateur mort. Tout se tient. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je comprends l'équilibre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Comment la surveiller ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30405,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30406,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30405,
+		"label": "start_30405",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Vous ne la surveillez PAS par un chiffre, » insiste l'Analyste. « Vous la lisez dans le ton des gens, dans leurs regards. Quand on commence à vous trouver « trop perspicace », c'est mauvais signe. Quand on vous oublie comme un meuble, c'est parfait. Disparaître en restant : voilà l'art. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Disparaître en restant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Art difficile"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30407,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.medium",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30406,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30406,
+		"label": "start_30406",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Les quatre piliers, à présent, » continue l'Analyste. « Militaire, religion, commerce, politique. La Fondation vit de leur équilibre. Trop peu d'un seul, elle s'effondre ; trop, elle devient l'Empire qu'elle doit remplacer. Ni faible, ni hégémonique. L'esprit de Seldon en quatre cadrans. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Veiller à l'équilibre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Et si un cadran s'emballe ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30407,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.medium",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30407,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.medium",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30407,
+		"label": "start_30407",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Si un pilier touche le zéro ou le maximum, » dit l'Analyste, grave, « la Fondation meurt, et vous avec. Pas de seconde chance sur ce point. Surveillez les quatre comme un funambule surveille son fil. Le Plan est un exercice d'équilibre permanent. Mille ans sur une corde raide. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder l'équilibre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vertigineux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30408,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30408,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "effect.wrap.strong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30408,
+		"label": "start_30408",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Dernière chose avant de vous lâcher dans le monde, » dit l'Analyste. « Vous mourrez. Souvent. Et chaque fois, vous renaîtrez dans un nouveau corps, une nouvelle couverture, la même mission. Ce qui compte — l'année, les crises, les planètes ralliées — survit. Vous n'êtes qu'un maillon. Le plus fier des maillons. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le cycle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Combien de vies ?"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "effect.wrap.max",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "effect.wrap.max",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 30409,
+		"label": "start_30409",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:table_analyst",
+		"question": {
+			"FR": "« Autant qu'il en faudra, » répond l'Analyste. « Le Plan court sur mille ans ; les Orateurs durent quarante. Faites le calcul. Vous serez une vingtaine à vous succéder, sans jamais vous connaître, tous au service de la même ombre. Maintenant — éveillez-vous pour de vrai. Le monde vous attend. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'éveiller"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'éveiller, le cœur serré"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "effect.wrap.max",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "effect.wrap.max",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30410,
+		"label": "start_30410",
+		"deck": "start",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Sayshell, an 183. Encens, foule, soleil chaud sur les dalles d'un marché. Vous êtes désormais un négociant — c'est ce que dit votre passé, c'est ce que croient les badauds. Un marchand vous hèle : « Hé, l'étranger ! Première fois à Sayshell ? Ça se voit. Vous avez l'air... neuf. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "year",
+				"intValue": 183,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "moon",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "month",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "sayshell",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jouer le marchand aguerri"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avouer être nouveau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 30411,
+		"label": "start_30411",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Votre première transaction commerciale teste votre couverture : marchander un lot de cierges électriques. « Trop cher ! » beuglez-vous, comme un vrai négociant. Le vendeur sourit, vous sourirez, l'affaire se conclut. Première leçon réussie : être ordinaire est un talent qui s'apprend."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conclure le marché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surpayer par maladresse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30412,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30412,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30412,
+		"label": "start_30412",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia, de passage, vous remarque dans la foule — déjà : « Tiens, un visage neuf. » Son œil exercé jauge. « Vous n'avez pas tout à fait le maintien d'un marchand. Plus... attentif. Intéressant. » Premier contact avec une mémoire dangereuse. Votre couverture passe son premier vrai test."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Détourner son intérêt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Soutenir son regard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30413,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30413,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 30413,
+		"label": "start_30413",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Une querelle de marché dégénère ; on vous prend à témoin. Votre arbitrage improvisé révèle vos premiers réflexes politiques. « Bien parlé, l'étranger, » concède un badaud. Vous apprenez en direct le poids des mots, et combien un Mentalique doit peser les siens deux fois."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Arbitrer avec mesure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trancher net"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30414,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30414,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30414,
+		"label": "start_30414",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Un prêtre de l'Église de la Science prêche sur la place. Votre réaction — pieuse ou sceptique — teintera votre couverture aux yeux de Sayshell. « Vous croyez en l'Esprit Galactique, l'étranger ? » Question piège dans un monde où la foi et la science se confondent. Premier vrai choix religieux."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Feindre la dévotion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester poliment neutre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30416,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30415,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30415,
+		"label": "start_30415",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le prêtre insiste, flairant un tiède : « L'incroyance se voit sur un visage, l'étranger. » Vous rétablissez votre couverture d'une parole bien sentie. La foi est une armure sociale autant qu'une croyance ; un Orateur la porte sans y croire, comme un costume. Leçon apprise sur le tas."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.achievement_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sauver les apparences"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Changer de sujet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30416,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30416,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30416,
+		"label": "start_30416",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le soir tombe sur votre première journée de couverture. Un vétéran du marché vous offre un verre : « Vous vous en êtes bien tiré, pour un bleu. » Vous mesurez le chemin : ce matin un éveil dans le noir, ce soir un marchand crédible parmi d'autres. La métamorphose a commencé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trinquer à la couverture"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sobre et vigilant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30417,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30417,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30417,
+		"label": "start_30417",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le vétéran vous raconte les rumeurs de Sayshell — qui monte, qui tombe, quel monde s'agite. Renseignement précieux glissé dans du bavardage. Un Orateur écoute tout : les grandes histoires se cachent dans les petites. Vous emmagasinez, l'air de rien, votre premier réseau d'informations."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tout enregistrer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire mine de bavarder"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30418,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30418,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30418,
+		"label": "start_30418",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Une mendiante vous tend la main. Votre geste — aumône ou indifférence — n'est vu de personne d'important, et c'est justement le test. « On juge un Orateur à sa conduite quand nul ne regarde, » disait Palver. Vous l'ignorez encore, mais ce moment compte plus que tous les autres."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Donner par bonté vraie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Passer son chemin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30419,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30419,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30419,
+		"label": "start_30419",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La nuit, seul dans votre chambre louée, l'immensité de la tâche vous saisit : mille ans, vingt vies, une ombre à servir sans jamais en recueillir la gloire. Un instant de vertige. Puis le calme : c'est exactement ce pour quoi on vous a éveillé. Le doute aussi fait partie de l'entraînement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embrasser la mission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser le doute parler"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30420,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30420,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30420,
+		"label": "start_30420",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Au matin, l'Analyste vous transmet un dernier message avant de couper le lien : « Vous êtes lancé, Orateur. Je ne vous reparlerai qu'entre deux morts, désormais. D'ici là, vous êtes seul — seul avec un secret qui pèse une galaxie. Bon courage. Et... soyez un bon maillon. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Promettre de l'être"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Saluer l'Analyste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30421,
+		"label": "start_30421",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Votre couverture est établie, vos réflexes rodés, votre première journée derrière vous. Sayshell vous a accepté comme l'un des siens — un marchand quelconque de plus. Personne ne soupçonne l'ombre derrière le sourire. La partie commence vraiment. Mille ans vous attendent, un jour à la fois."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Commencer le règne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Respirer un grand coup"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30422,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30422,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30422,
+		"label": "start_30422",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'induction s'achève. De simple éveil dans le noir, vous voilà Orateur en mission, couverture en place, esprit aiguisé. Le monde vous croit ordinaire ; le Plan vous sait essentiel. Désormais, chaque carte qui vient est une décision, et chaque décision déplace, d'un cheveu, le destin de la Galaxie."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.achievement_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 50,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Entrer dans le jeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Entrer dans le jeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30423,
+		"label": "start_30423",
+		"deck": "start",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un individu étrange vous aborde, surexcité : « Vous ! Vous êtes un personnage de jeu, n'est-ce pas ?! Je viens du FUTUR ! Enfin, d'au-dessus ! Quelqu'un vous CONTRÔLE ! » Un illuminé, sûrement. Ou un psychohistorien amateur qui a deviné une vérité dérangeante sur le libre arbitre. Inquiétant, dans tous les cas."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'écouter par curiosité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'éconduire fermement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "meta_doubt",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 30424,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hiding_phone",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30424,
+		"label": "start_30424",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'illuminé poursuit, fiévreux : « Vos choix ne sont pas les vôtres ! Une main invisible vous guide ! » Vous songez, troublé, à votre propre rôle : n'êtes-vous pas, vous aussi, la main invisible derrière d'autres ? L'ironie vous glace. Vous le renvoyez à ses délires. Mais le doute, lui, reste."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Méditer cette ironie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chasser cette pensée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30425,
+		"label": "start_30425",
+		"deck": "start",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'illuminé disparaît dans la foule en marmonnant des « niveaux » et des « parties ». Folie pure, sans doute. Et pourtant — un Mentalique sait mieux que quiconque combien les êtres se croient libres en étant menés. Vous reprenez votre route, un sourire pensif aux lèvres. Le Plan a de l'humour, parfois."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reprendre sa route"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jeter un regard par-dessus l'épaule"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "curious"
+		}
+	},
+	{
 		"id": 31200,
 		"label": "planet_trantor_31200",
 		"deck": "planet_trantor",
@@ -50995,6 +52593,1175 @@
 				"addOperation": true,
 				"toKeep": false
 			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34000,
+		"label": "ghost_in_the_vault_34000",
+		"deck": "ghost_in_the_vault",
+		"weight": 1000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Une rumeur tenace court Anacréon : le vieux palais royal, abandonné depuis la chute de la monarchie, serait HANTÉ. Gardiens en fuite, lumières nocturnes, une voix qui appelle un roi mort. « Allez-y, vous, » vous presse un notable. « On dit que vous comprenez ces choses-là. » Si seulement il savait."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "anacreon"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Enquêter sur le palais"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Laisser dormir les fantômes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34001,
+		"label": "ghost_in_the_vault_34001",
+		"deck": "ghost_in_the_vault",
+		"weight": -1,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le dernier héritier de la dynastie déchue vous reçoit, fébrile : « Mon grand-père régna ici. Depuis sa mort, QUELQUE CHOSE habite ses appartements. Ça connaît des secrets que seul lui savait. Soit c'est son spectre, soit c'est pire. Découvrez-le, et je vous revaudrai ça. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "anacreon"
+			},
+			{
+				"variable": "vault_echo_stage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'enquête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce nid à ennuis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34002,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34002,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34002,
+		"label": "ghost_in_the_vault_34002",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Dans le palais, l'air est lourd d'une présence. Vous tendez votre sens mentalique — et captez non un mort, mais un ÉCHO : une conscience résiduelle, imprimée dans les murs par des années de pouvoir et de paranoïa royale. Le vieux roi a laissé une empreinte si forte qu'elle... persiste. Et pense."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sonder l'empreinte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34003,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34003,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34003,
+		"label": "ghost_in_the_vault_34003",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'empreinte du roi mort réagit à votre présence — elle vous prend pour un conspirateur, comme tous ceux qui approchaient le trône. « ENCORE UN TRAÎTRE, » murmure-t-elle dans votre esprit. La paranoïa du défunt souverain, gravée pour l'éternité, vous cible. Une obsession sans corps, mais non sans griffes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Apaiser l'empreinte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affirmer votre innocence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34004,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34004,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34004,
+		"label": "ghost_in_the_vault_34004",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'empreinte royale vous fait revivre ses derniers jours : un roi vieillissant, voyant des complots partout, mourant seul dans sa méfiance. La tristesse de ce pouvoir paranoïaque vous serre le cœur. L'écho ne hante pas par malice — il rejoue en boucle l'agonie d'une couronne qui n'a su qu'avoir peur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Compatir à sa solitude"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vous endurcir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34005,
+		"label": "ghost_in_the_vault_34005",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Plus vous restez, plus l'empreinte vous absorbe dans sa boucle de méfiance. Vous sentez sa paranoïa déteindre sur vous — un piège mental : qui s'attarde trop dans cet esprit mort risque d'y rester. « Ne pas surjouer le visiteur, » vous répétez-vous, luttant contre l'aspiration."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Résister à l'aspiration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plonger encore un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 34006,
+		"label": "ghost_in_the_vault_34006",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'empreinte royale vous offre un marché spectral : « Aide-moi à punir les traîtres, et je te livre les SECRETS de ce palais. » Des secrets d'État vieux d'une génération, peut-être utiles à la Fondation. Mais pactiser avec une obsession morte, c'est risquer de lui prêter une volonté qu'elle n'a plus."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le marché"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser tout pacte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_overstayed_palace",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34007,
+		"label": "ghost_in_the_vault_34007",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Vous refusez de servir la paranoïa du roi mort — et l'empreinte, frustrée, redouble d'intensité. Le palais entier vibre de sa colère résiduelle. « Si vous restez trop longtemps, » réalisez-vous, « son obsession deviendra la vôtre. » Il faut conclure, vite, avant que le piège ne se referme."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Hâter la résolution"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir bon encore"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_overstayed_palace",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "vault_echo_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34008,
+		"label": "ghost_in_the_vault_34008",
+		"deck": "ghost_in_the_vault",
+		"weight": 1200,
+		"lockturn": 40,
+		"hidden": false,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'empreinte royale s'est ancrée plus profond — elle a appris de vous, s'est nourrie de votre attention mentalique. L'héritier, alarmé, vous presse : « C'est PIRE depuis votre venue ! » Vous avez, sans le vouloir, renforcé le fantôme en l'écoutant. Les échos grandissent de l'attention qu'on leur porte."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "anacreon"
+			},
+			{
+				"variable": "vault_echo_stage",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réparer votre erreur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter de l'effacer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34009,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_overstayed_palace",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 34009,
+		"label": "ghost_in_the_vault_34009",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous cherchez le cœur de l'empreinte — le point d'ancrage, là où la conscience du roi s'est imprimée le plus fort. Le trône lui-même, sans doute, siège de tant d'années de peur. L'atteindre, c'est pouvoir dissoudre l'écho. Mais le trône est gardé par le plus dense de la paranoïa royale."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approcher le trône"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher un autre ancrage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34010,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34010,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34010,
+		"label": "ghost_in_the_vault_34010",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Au pied du trône hanté, l'empreinte déchaîne tout ce qui lui reste : visions de complots, terreurs empruntées, une marée de méfiance ancienne. Vous tenez votre esprit comme on tient une digue, avançant pas à pas vers le siège du roi mort. Chaque mètre coûte une bataille intérieure."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avancer vers le trône"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Projeter le calme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34011,
+		"label": "ghost_in_the_vault_34011",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous touchez le trône — et l'empreinte vous submerge d'un dernier assaut : la mort du roi, revécue, sa solitude absolue, sa peur d'avoir tout perdu en ne faisant confiance à personne. Pour la dissoudre, il faut lui offrir ce qu'il n'a jamais eu : non la vengeance, mais la PAIX."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui offrir la paix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Briser l'empreinte de force"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34012,
+		"label": "ghost_in_the_vault_34012",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Vous insufflez à l'empreinte une compassion qu'aucun courtisan ne lui offrit jamais. Surprise, la conscience résiduelle vacille : on ne l'avait jamais APAISÉE, seulement crainte ou flattée. « Quelqu'un... comprend ? » murmure le roi mort. La paranoïa de toute une vie commence, enfin, à se défaire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accompagner sa dissolution"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maintenir l'apaisement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34013,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_overstayed_palace",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34013,
+		"label": "ghost_in_the_vault_34013",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "L'empreinte du roi se dissout doucement, libérée de sa boucle de peur. Avant de s'effacer, elle vous livre sans marchander les secrets du palais — non par pacte, mais par gratitude. « Vous m'avez rendu ce que mes sujets m'ont refusé, » souffle l'écho. « Une fin sans soupçon. Merci, étranger. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recueillir ses secrets"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser partir en paix"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34014,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_ghost_in_the_vault",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34014,
+		"label": "ghost_in_the_vault_34014",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Le palais d'Anacréon s'apaise enfin, le fantôme dissous, l'héritier soulagé. Vous emportez des secrets d'État vieux d'une génération — et la leçon glaçante d'un pouvoir mort de sa propre méfiance. « Voilà ce qui attend les couronnes qui ne savent qu'avoir peur, » songez-vous. Un avertissement pour la Fondation elle-même."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "vault_echo_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Méditer l'avertissement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter le palais"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34015,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_overstayed_palace",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34015,
+		"label": "ghost_in_the_vault_34015",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Si vous aviez choisi la force plutôt que la paix, l'empreinte se serait défendue jusqu'au bout — un duel mental contre la paranoïa cristallisée d'un roi. Combat épuisant, victoire amère : on ne raisonne pas une obsession, on la brise, et briser laisse toujours des éclats dans l'esprit du briseur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter l'empreinte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Revenir à l'apaisement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ghost_in_the_palace_battle",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_overstayed_palace",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34016,
+		"label": "ghost_in_the_vault_34016",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "Le duel mental contre l'empreinte royale atteint son comble : sa terreur cristallisée contre votre volonté. C'est le genre de confrontation qui forge un Orateur — ou le brise. Vous avez tenu la digue contre des échos avant ; celui-ci n'est qu'un roi mort. Mais les rois morts mordent encore."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.brawl",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "emperor_suspicion",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vaincre l'empreinte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher à l'apaiser malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.ghost_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.ghost_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34017,
+		"label": "ghost_in_the_vault_34017",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "L'empreinte, acculée, livre un dernier coup — une lame psychique de pure paranoïa, cherchant à vous entraîner dans sa folie. Un instant, vous vacillez au bord du gouffre mental du roi mort. Affronter l'esprit d'un paranoïaque royal cristallisé : l'un des dangers les plus sournois du métier."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_ghost_in_the_vault",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Résister au gouffre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trancher l'empreinte d'un coup"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_lame_psychique",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34018,
+		"label": "ghost_in_the_vault_34018",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "L'empreinte brisée, le palais se tait — mais Anacréon en garde une cicatrice. Le monde bascule, méfiant : on murmure que l'étranger « parle aux morts ». Votre réputation enfle, dangereuse. Avoir vaincu un fantôme royal vous classe parmi les sorciers. Encombrant, sur un monde déjà superstitieux."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_ghost_in_the_vault",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_anacreon_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "revanchard_general",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gérer cette réputation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter Anacréon vite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34019,
+		"label": "ghost_in_the_vault_34019",
+		"deck": "ghost_in_the_vault",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "vengeful_general",
+		"question": {
+			"FR": "L'affaire du palais hanté se referme, l'empreinte royale dissoute ou brisée selon votre voie. Vous repartez avec des secrets, une leçon sur la paranoïa du pouvoir, et le souvenir d'un roi mort de n'avoir su qu'avoir peur. Anacréon, libéré de son spectre, vous doit une dette qu'il préférerait oublier."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_ghost_in_the_vault",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'affaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Encaisser la dette d'Anacréon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
 			{
 				"variable": "politics",
 				"intValue": -5,

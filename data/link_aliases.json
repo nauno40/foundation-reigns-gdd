@@ -488,5 +488,14 @@
 	},
 	"_cao_cao_returned_home": {
 		"node": 28828
+	},
+	"_hiding_phone": {
+		"node": 30424
+	},
+	"_overstayed_palace": {
+		"node": 34008
+	},
+	"_ghost_in_the_palace_battle": {
+		"node": 34016
 	}
 }
