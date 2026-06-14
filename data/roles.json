@@ -94,5 +94,14 @@
 	},
 	"sworn_marshal": {
 		"title": "Maréchal lige"
+	},
+	"grand_encyclopaedist": {
+		"title": "Grand Encyclopédiste"
+	},
+	"resonance_master": {
+		"title": "Maîtresse de la Résonance"
+	},
+	"lattice_master": {
+		"title": "Maître du Treillis"
 	}
 }

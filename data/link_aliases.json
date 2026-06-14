@@ -692,5 +692,57 @@
 	},
 	"_killed_huang_zhong": {
 		"action": "enddispatch"
+	},
+	"_the_grand_master_go_prep": {
+		"node": 25204
+	},
+	"_go_game_confirm": {
+		"node": 25206
+	},
+	"the_grand_master_go_game": {
+		"node": 25207
+	},
+	"_go_level_5_happy": {
+		"node": 25211
+	},
+	"_go_level_5_continue_happy": {
+		"node": 25215
+	},
+	"_go_level_5_lose": {
+		"node": 25217
+	},
+	"_go_level_5_win": {
+		"node": 25218
+	},
+	"_the_grand_master_string_1": {
+		"nodes": [
+			25220,
+			25221,
+			25222,
+			25223
+		]
+	},
+	"_the_grand_master_string_2": {
+		"nodes": [
+			25224,
+			25225,
+			25226,
+			25227
+		]
+	},
+	"_the_grand_master_qin_fail": {
+		"node": 25229
+	},
+	"_the_grand_master_qin_end": {
+		"node": 25228
+	},
+	"_poem_competition_start": {
+		"node": 25232
+	},
+	"_poem_competition_fail": {
+		"node": 25243
+	},
+	"EXTERNE:2693": {
+		"action": "enddispatch"
 	}
 }

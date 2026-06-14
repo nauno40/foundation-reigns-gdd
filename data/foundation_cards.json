@@ -28944,6 +28944,2798 @@
 		}
 	},
 	{
+		"id": 25200,
+		"label": "encyclopaedia_25200",
+		"deck": "encyclopaedia",
+		"weight": 2000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact murmure : « Les Encyclopédistes de Santanni n'ouvrent leurs portes qu'aux esprits qu'ils jugent dignes. Ils vous attendent — peut-être. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 7
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part pour Santanni"
+			},
+			"reaction": {
+				"FR": "Le saut est calculé. Santanni grise tourne sous la coque."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste"
+			},
+			"reaction": {
+				"FR": "« Une autre fois, alors. Santanni n'attend personne longtemps. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "santanni",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25201,
+		"label": "encyclopaedia_25201",
+		"deck": "encyclopaedia",
+		"weight": -1,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le Grand Encyclopédiste vous toise par-dessus ses lentilles. « Trois épreuves, étranger. Le Treillis, la Résonance, la Disputation. Par quoi commençons-nous — le jeu, ou la musique ? »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "the_grand_master_go",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "the_grand_master_qin",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_go",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "the_grand_master_qin",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le Treillis"
+			},
+			"reaction": {
+				"FR": "« L'esprit avant l'oreille. Soit. Suivez-moi. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La Résonance"
+			},
+			"reaction": {
+				"FR": "« L'oreille avant l'esprit. Curieux choix. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_go_prep",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25219,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 25202,
+		"label": "encyclopaedia_25202",
+		"deck": "encyclopaedia",
+		"weight": 1000000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Les mois ont filé. Le Grand Encyclopédiste referme son grimoire. « Trop tard. Santanni ne s'allie pas aux lents. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "the_grand_master_go",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "the_grand_master_qin",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On insiste"
+			},
+			"reaction": {
+				"FR": "Les portes se ferment. Le saut hyperspatial vous emporte ailleurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'incline"
+			},
+			"reaction": {
+				"FR": "On quitte Santanni les mains vides. Le Plan, lui, est patient."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25203,
+		"label": "encyclopaedia_25203",
+		"deck": "encyclopaedia",
+		"weight": 10000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Vos échecs aux épreuves ont fait le tour de l'académie. Le Grand Encyclopédiste soupire : « Revenez quand vous saurez penser. »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "the_grand_master_go",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "the_grand_master_qin",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part dignement"
+			},
+			"reaction": {
+				"FR": "On quitte Santanni la tête haute, le cœur lourd."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On supplie"
+			},
+			"reaction": {
+				"FR": "La supplique ne fait qu'ajouter au mépris. On saute ailleurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 25204,
+		"label": "encyclopaedia_25204",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le Maître du Treillis dispose les pierres lumineuses. « Connaissez-vous seulement les règles, ou faut-il tout vous apprendre ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Je connais les règles"
+			},
+			"reaction": {
+				"FR": "« Nous verrons bien. Asseyez-vous. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Apprenez-moi"
+			},
+			"reaction": {
+				"FR": "Le maître lève un sourcil. L'humilité, au moins, est sincère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_game_confirm",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25205,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25205,
+		"label": "encyclopaedia_25205",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le plateau scintille de pièges. Vous hésitez : vous lancer, ou demander d'abord une initiation accélérée ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Une initiation"
+			},
+			"reaction": {
+				"FR": "« Sage. Un fou qui se croit prêt perd toujours. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Je me lance"
+			},
+			"reaction": {
+				"FR": "Vous posez la première pierre au hasard. Le maître grimace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_crash_course",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25206,
+		"label": "encyclopaedia_25206",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact glisse à votre oreille : « Tout est dans l'ouverture. Confirmez votre stratégie et tenez bon. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue"
+			},
+			"reaction": {
+				"FR": "Les pierres prennent place. La partie commence pour de bon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On doute encore"
+			},
+			"reaction": {
+				"FR": "Mieux vaut une dernière leçon qu'une humiliation publique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "the_grand_master_go_game",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_crash_course",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 25207,
+		"label": "encyclopaedia_25207",
+		"deck": "encyclopaedia",
+		"weight": 500,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "La grande partie s'engage. Le Maître du Treillis joue vite, sans pitié. « Niveau cinq, étranger. Mon meilleur. Tenez si vous pouvez. »"
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_go",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.move_go_piece_variation",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On attaque"
+			},
+			"reaction": {
+				"FR": "Vos pierres mordent dans son territoire. Il se penche, intéressé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On défend"
+			},
+			"reaction": {
+				"FR": "Vous bâtissez un mur. Lent, solide — et peut-être trop timide."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25208,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_crash_course",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25208,
+		"label": "encyclopaedia_25208",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Le maître encercle votre flanc est. Sacrifier le groupe, ou le sauver ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On sacrifie"
+			},
+			"reaction": {
+				"FR": "Le sacrifice ouvre une brèche. Audacieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On sauve"
+			},
+			"reaction": {
+				"FR": "Vous sauvez les pierres — et perdez l'initiative."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25209,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_happy",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25209,
+		"label": "encyclopaedia_25209",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Le centre du Treillis flamboie de tensions. Un coup peut tout renverser."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On frappe au centre"
+			},
+			"reaction": {
+				"FR": "Le plateau tremble. Le maître retient son souffle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On consolide les bords"
+			},
+			"reaction": {
+				"FR": "Prudent. Le maître reprend l'avantage, pierre à pierre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25210,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25210,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25210,
+		"label": "encyclopaedia_25210",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Le maître pose une pierre que vous n'aviez pas vue. Votre grand groupe vacille."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On contre-attaque"
+			},
+			"reaction": {
+				"FR": "Trop tard — le piège se referme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se replie"
+			},
+			"reaction": {
+				"FR": "Le repli ne sauve rien. Le territoire s'effondre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_lose",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_lose",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25211,
+		"label": "encyclopaedia_25211",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Contre toute attente, votre attaque tient. Le Maître du Treillis fronce les sourcils et change de rythme."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On presse l'avantage"
+			},
+			"reaction": {
+				"FR": "Vous enfoncez la brèche. L'académie murmure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "Vous laissez respirer le maître. Il en profite, bien sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25212,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25212,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25212,
+		"label": "encyclopaedia_25212",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Le maître tente une invasion désespérée dans votre moitié."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la contient"
+			},
+			"reaction": {
+				"FR": "L'invasion meurt étouffée. Magnifique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "Vous l'ignorez pour agrandir ailleurs — pari risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_continue_happy",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25213,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 25213,
+		"label": "encyclopaedia_25213",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Le score se resserre. Chaque pierre compte désormais."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue serré"
+			},
+			"reaction": {
+				"FR": "Vous comptez les libertés une à une. Le maître aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tente un coup d'éclat"
+			},
+			"reaction": {
+				"FR": "Un coup spectaculaire — qui peut tout gagner ou tout perdre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25214,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25214,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 25214,
+		"label": "encyclopaedia_25214",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Votre coup d'éclat se retourne. Le maître punit l'audace."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encaisse"
+			},
+			"reaction": {
+				"FR": "La punition est nette. Le territoire fond."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'entête"
+			},
+			"reaction": {
+				"FR": "L'entêtement précipite la chute."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_lose",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_lose",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25215,
+		"label": "encyclopaedia_25215",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "La fin de partie approche. Vous menez d'un cheveu. Le maître joue son avant-dernière pierre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On verrouille"
+			},
+			"reaction": {
+				"FR": "Vous fermez la dernière porte. Plus rien à tenter pour lui."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attaque encore"
+			},
+			"reaction": {
+				"FR": "Une dernière agression — inutile, mais panache."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25216,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25216,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25216,
+		"label": "encyclopaedia_25216",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:lattice_master",
+		"question": {
+			"FR": "Dernière pierre. Le décompte tombe."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On compte"
+			},
+			"reaction": {
+				"FR": "À deux points près. La victoire est à vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le maître compter"
+			},
+			"reaction": {
+				"FR": "Le maître compte, recompte — et vous concède la partie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_win",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_go_level_5_win",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 25217,
+		"label": "encyclopaedia_25217",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le Maître du Treillis ramasse les pierres. « Vaincu. Mais pas indigne. Revenez quand votre esprit aura mûri. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_go",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'incline"
+			},
+			"reaction": {
+				"FR": "On a perdu le Treillis. L'épreuve est close."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On conteste"
+			},
+			"reaction": {
+				"FR": "Contester une défaite au Treillis ? Le maître rit, et c'est pire."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 25218,
+		"label": "encyclopaedia_25218",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le maître se lève et incline la tête — un honneur rare. « Vous pensez comme nous, étranger. La première épreuve est vôtre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_go",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure"
+			},
+			"reaction": {
+				"FR": "Une épreuve gagnée. Deux restent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste modeste"
+			},
+			"reaction": {
+				"FR": "« La modestie sied au vainqueur. Bien. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25219,
+		"label": "encyclopaedia_25219",
+		"deck": "encyclopaedia",
+		"weight": 1200,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "La Maîtresse de la Résonance effleure un instrument de cordes-lumière. « Accordez-le. Si vous le faussez, l'épreuve s'arrête. »"
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_qin",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accorde"
+			},
+			"reaction": {
+				"FR": "Vous posez les doigts sur les cordes. Elles frémissent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "Refuser la Résonance, c'est refuser Santanni. Elle se détourne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_1",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:2693",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25220,
+		"label": "encyclopaedia_25220",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "La première corde sonne faux, trop grave. Tendre, ou détendre ?"
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_1",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tend"
+			},
+			"reaction": {
+				"FR": "La note remonte, plus pure. Encore un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On détend"
+			},
+			"reaction": {
+				"FR": "La corde gémit, fausse à nouveau. La maîtresse fronce les sourcils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25221,
+		"label": "encyclopaedia_25221",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "Presque juste. Un cheveu de tension manque à la première corde."
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_1",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On affine"
+			},
+			"reaction": {
+				"FR": "La note se cale, cristalline. La maîtresse sourit à peine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On force"
+			},
+			"reaction": {
+				"FR": "Trop de tension — la corde menace de rompre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_qin_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 25222,
+		"label": "encyclopaedia_25222",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "La première corde chante juste. Faut-il la fixer, ou y revenir une fois ?"
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_1",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_tuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fixe"
+			},
+			"reaction": {
+				"FR": "La note est scellée. On passe à la seconde corde."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On revient dessus"
+			},
+			"reaction": {
+				"FR": "Vous la retouchez — et la faussez de nouveau. Maladroit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25223,
+		"label": "encyclopaedia_25223",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "À trop vouloir parfaire la première corde, vous l'avez surtendue."
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_1",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On relâche d'un cran"
+			},
+			"reaction": {
+				"FR": "Vous sauvez la corde de justesse. Ouf."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'achève"
+			},
+			"reaction": {
+				"FR": "La corde casse net. La maîtresse soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_qin_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_string_1",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25224,
+		"label": "encyclopaedia_25224",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "La seconde corde est muette, morte. Il faut la réveiller."
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_2",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la pince fort"
+			},
+			"reaction": {
+				"FR": "Un son rauque jaillit. C'est un début."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la caresse"
+			},
+			"reaction": {
+				"FR": "À peine un souffle. La maîtresse attend mieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25225,
+		"label": "encyclopaedia_25225",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "La seconde corde répond, mais boite. Encore un réglage."
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_2",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On ajuste"
+			},
+			"reaction": {
+				"FR": "La note se redresse, claire. On approche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On insiste trop"
+			},
+			"reaction": {
+				"FR": "Vous la cassez à force d'insister."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_qin_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25226,
+		"label": "encyclopaedia_25226",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "Les deux cordes vibrent à l'unisson. La maîtresse ferme les yeux."
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_2",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_tuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On laisse résonner"
+			},
+			"reaction": {
+				"FR": "L'accord emplit la salle. Parfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ajoute une fioriture"
+			},
+			"reaction": {
+				"FR": "La fioriture brise l'harmonie. Dommage."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_qin_end",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25227,
+		"label": "encyclopaedia_25227",
+		"deck": "encyclopaedia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:resonance_master",
+		"question": {
+			"FR": "Vous avez trop tendu la seconde corde dans l'élan."
+		},
+		"conditions": [
+			{
+				"variable": "the_grand_master_string_2",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_tuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On corrige"
+			},
+			"reaction": {
+				"FR": "Corrigé à temps. L'accord tient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse filer"
+			},
+			"reaction": {
+				"FR": "La corde rompt. L'épreuve vacille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_qin_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_string_2",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_the_grand_master_string_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25228,
+		"label": "encyclopaedia_25228",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "La Maîtresse de la Résonance rouvre les yeux, émue. « Vous avez l'oreille de Santanni. La seconde épreuve est vôtre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_qin",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'incline"
+			},
+			"reaction": {
+				"FR": "Deux épreuves gagnées. Une dernière."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On remercie la maîtresse"
+			},
+			"reaction": {
+				"FR": "« Gardez vos remerciements pour la Disputation. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25229,
+		"label": "encyclopaedia_25229",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "La corde rompue pend, inerte. La maîtresse se lève sans un mot. L'épreuve est perdue."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_qin",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'excuse"
+			},
+			"reaction": {
+				"FR": "Les excuses ne raccordent pas une corde. Épreuve close."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste digne"
+			},
+			"reaction": {
+				"FR": "On encaisse l'échec en silence. C'est tout ce qui reste."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25230,
+		"label": "encyclopaedia_25230",
+		"deck": "encyclopaedia",
+		"weight": 20000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le Grand Encyclopédiste vous convoque. « Le Treillis, la Résonance — vaincus. Reste la Disputation. Êtes-vous prêt à défendre une idée contre tout Santanni ? »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "the_grand_master_go",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "the_grand_master_qin",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master_poem",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "L'amphithéâtre se remplit. Tous les regards sur vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recule"
+			},
+			"reaction": {
+				"FR": "Reculer au seuil de la victoire ? Le maître n'en revient pas."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25231,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 25231,
+		"label": "encyclopaedia_25231",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le sujet tombe : « La Fondation sauvera-t-elle la galaxie, ou la remplacera-t-elle ? » Vous avez un battement de cœur pour ouvrir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On ouvre fort"
+			},
+			"reaction": {
+				"FR": "Votre première phrase fait taire l'amphithéâtre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ouvre prudemment"
+			},
+			"reaction": {
+				"FR": "Une ouverture mesurée. L'assemblée attend la suite."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_poem_competition_start",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25232,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25232,
+		"label": "encyclopaedia_25232",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un Encyclopédiste vous coupe : « La Fondation n'est qu'un Empire qui n'ose pas dire son nom ! » Réplique ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réfute"
+			},
+			"reaction": {
+				"FR": "Vous démontez l'argument pièce à pièce. Murmures admiratifs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On concède un point"
+			},
+			"reaction": {
+				"FR": "Concéder ? L'assemblée y voit une faiblesse — ou une finesse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25233,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25233,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25233,
+		"label": "encyclopaedia_25233",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le débat s'échauffe. On vous oppose Hari Seldon lui-même, cité de travers."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On corrige la citation"
+			},
+			"reaction": {
+				"FR": "Vous rétablissez Seldon dans le texte. L'érudition impressionne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On retourne la citation"
+			},
+			"reaction": {
+				"FR": "Vous tournez la citation contre eux. Audacieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25234,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25234,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 25234,
+		"label": "encyclopaedia_25234",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le contradicteur attaque la psychohistoire : « Une science qui nie le libre arbitre ! » Votre vers de réponse ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On chante la nécessité"
+			},
+			"reaction": {
+				"FR": "Votre tirade sur le déterminisme arrache des hochements de tête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On bafouille"
+			},
+			"reaction": {
+				"FR": "Les mots se dérobent. Un silence gênant tombe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_poem",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 25235,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_poem_competition_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25235,
+		"label": "encyclopaedia_25235",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Pris d'élan, vous risquez une métaphore audacieuse sur les masses et les étoiles."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la pousse trop loin"
+			},
+			"reaction": {
+				"FR": "La métaphore s'effondre sous son propre poids. Rires."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la retient à temps"
+			},
+			"reaction": {
+				"FR": "Vous arrêtez la figure pile au sommet. Applaudissements."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_poem_competition_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "the_grand_master_poem",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 25236,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 25236,
+		"label": "encyclopaedia_25236",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Dernière passe. Le Grand Encyclopédiste en personne vous porte l'estocade rhétorique."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pare et riposte"
+			},
+			"reaction": {
+				"FR": "Votre riposte cloue le bec au maître. L'amphithéâtre gronde d'admiration."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On encaisse"
+			},
+			"reaction": {
+				"FR": "Vous encaissez sans répondre. L'estocade porte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "the_grand_master_poem",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 25237,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_poem_competition_fail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 25237,
+		"label": "encyclopaedia_25237",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le silence se fait. À vous le mot de la fin."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On conclut avec panache"
+			},
+			"reaction": {
+				"FR": "Votre péroraison résonne sous la coupole. Sublime."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On conclut sobrement"
+			},
+			"reaction": {
+				"FR": "Une fin sobre, presque sèche. L'effet est… discutable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25238,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25238,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25238,
+		"label": "encyclopaedia_25238",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le Grand Encyclopédiste se lève lentement. Tout Santanni retient son souffle, suspendu à son verdict."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "the_grand_master",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On attend le verdict"
+			},
+			"reaction": {
+				"FR": "Le maître ouvre la bouche…"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On soutient son regard"
+			},
+			"reaction": {
+				"FR": "Vous le fixez sans ciller. Le maître apprécie l'aplomb."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25239,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25239,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25239,
+		"label": "encyclopaedia_25239",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "« Trois épreuves, trois victoires », tranche le maître. « Santanni n'avait pas vu cela depuis une génération. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle l'alliance"
+			},
+			"reaction": {
+				"FR": "Le maître tend la main. Santanni est à la Fondation."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "Vous hésitez une seconde de trop. Le maître se rembrunit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25240,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 25240,
+		"label": "encyclopaedia_25240",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Le Grand Encyclopédiste vous offre l'accès aux archives interdites de Santanni. Un trésor — ou un piège politique ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte les archives"
+			},
+			"reaction": {
+				"FR": "Les portes blindées s'ouvrent. Le savoir de Santanni est vôtre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline poliment"
+			},
+			"reaction": {
+				"FR": "Décliner un tel don ? Le maître y lit une sagesse rare."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25241,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 25241,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 25241,
+		"label": "encyclopaedia_25241",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "Santanni jure fidélité à la Fondation. Les Encyclopédistes plient leurs grimoires et lèvent leurs verres en votre honneur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On trinque"
+			},
+			"reaction": {
+				"FR": "Un monde de plus dans le Plan. Seldon sourirait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'éclipse discrètement"
+			},
+			"reaction": {
+				"FR": "Vous partez avant les discours. Un Orateur reste un Orateur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25242,
+		"label": "encyclopaedia_25242",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "L'alliance scellée, il est temps de quitter Santanni pour d'autres mondes à rallier."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On embarque"
+			},
+			"reaction": {
+				"FR": "Le saut hyperspatial vous arrache à Santanni triomphant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'attarde"
+			},
+			"reaction": {
+				"FR": "Un dernier regard aux coupoles, puis le grand saut."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 25243,
+		"label": "encyclopaedia_25243",
+		"deck": "encyclopaedia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_encyclopaedist",
+		"question": {
+			"FR": "L'épreuve a tourné court. Le Grand Encyclopédiste referme ses portes. Il faut chercher des alliés ailleurs."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_encyclopaedia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part"
+			},
+			"reaction": {
+				"FR": "On quitte Santanni les mains vides. Le grand saut, encore."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On promet de revenir"
+			},
+			"reaction": {
+				"FR": "« Revenez plus sage », lâche le maître. Puis le saut."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 25600,
 		"label": "hj_25600",
 		"deck": "hyperjumps",
