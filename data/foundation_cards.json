@@ -25552,6 +25552,4421 @@
 		}
 	},
 	{
+		"id": 22800,
+		"label": "terminus_defense_22800",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "Un vieux commandant balafré vous jauge. « On lève des volontaires contre l'insurrection. Un esprit vif comme le vôtre nous manque. Vous en êtes ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'engage"
+			},
+			"reaction": {
+				"FR": "On rejoint la milice. Le commandant hoche la tête, satisfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On tergiverse. « La Périphérie n'attend pas les tièdes », grogne-t-il."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22801,
+		"label": "terminus_defense_22801",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "Le commandant vous présente trois capitaines volontaires. « Apprenez-leur à se battre — ou apprenez d'eux. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "lu_zhi",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les forme"
+			},
+			"reaction": {
+				"FR": "On prend les trois capitaines en main. Une petite troupe se soude."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les écoute"
+			},
+			"reaction": {
+				"FR": "On les laisse mener. Ils savent déjà tenir une lame."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 132,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 149,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 118,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 132,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 149,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 118,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22802,
+		"label": "terminus_defense_22802",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison s'inquiète : un prêcheur rebelle prétend guérir par miracle et rallie les foules. « Prodige, ou imposture ? »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 8
+			},
+			{
+				"variable": "magic_buster",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On décide de démasquer le faux prophète."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse courir"
+			},
+			"reaction": {
+				"FR": "On ignore le prêcheur. Ses foules grossissent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22803,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22803,
+		"label": "terminus_defense_22803",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le prétendu thaumaturge soigne un boiteux devant la foule en délire. Truquage évident, ou phénomène réel ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "magic_buster",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cherche le truc"
+			},
+			"reaction": {
+				"FR": "On fouille la mise en scène. Un faux plancher, un faux boiteux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On observe encore"
+			},
+			"reaction": {
+				"FR": "On observe sans agir. Le doute s'installe dans la foule."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22804,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22805,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22804,
+		"label": "terminus_defense_22804",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le prêcheur invoque l'Esprit Galactique pour « écarter la peste ». Le capitaine attend votre verdict."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le démasque"
+			},
+			"reaction": {
+				"FR": "On expose la supercherie en public. Le prêcheur blêmit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le confond plus tard"
+			},
+			"reaction": {
+				"FR": "On garde nos preuves pour le bon moment."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22807,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22805,
+		"label": "terminus_defense_22805",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le faux prophète sent le danger et tente de retourner la foule contre vous."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient bon"
+			},
+			"reaction": {
+				"FR": "On affronte la foule, preuves en main. Elle vacille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recule"
+			},
+			"reaction": {
+				"FR": "On bat en retraite. Le prêcheur triomphe — pour l'instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22807,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22806,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22806,
+		"label": "terminus_defense_22806",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Un complice du prêcheur s'enfuit avec les « reliques ». Le rattraper ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le poursuit"
+			},
+			"reaction": {
+				"FR": "On coince le complice et ses faux miracles. Preuve accablante."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse filer"
+			},
+			"reaction": {
+				"FR": "On le laisse fuir. Une pièce du puzzle s'échappe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22807,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22807,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22807,
+		"label": "terminus_defense_22807",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le moment de vérité. On vous tend les fioles « sacrées » du prêcheur. Les briser devant tous, ou les analyser d'abord ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les brise"
+			},
+			"reaction": {
+				"FR": "On fracasse les fioles. De l'eau croupie en jaillit. Rires."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les analyse"
+			},
+			"reaction": {
+				"FR": "On révèle la composition frauduleuse. La science a parlé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 22808,
+		"label": "terminus_defense_22808",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le faux prophète, démasqué, supplie ou maudit — au choix. La foule attend votre sentence."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le gracie"
+			},
+			"reaction": {
+				"FR": "On gracie l'imposteur déchu. La clémence impressionne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le châtie"
+			},
+			"reaction": {
+				"FR": "On châtie le charlatan. L'ordre rationnel est rétabli."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "magic_buster",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "time_traveller",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "hogwart",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22809,
+		"label": "terminus_defense_22809",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "L'imposture démontée, le commandant vous félicite : « Vous avez sauvé plus de têtes qu'une bataille gagnée. »"
+		},
+		"conditions": [
+			{
+				"variable": "magic_buster",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "seen_22814",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure"
+			},
+			"reaction": {
+				"FR": "On accepte les éloges. La superstition a reculé d'un pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste modeste"
+			},
+			"reaction": {
+				"FR": "On minimise. Le commandant apprécie la retenue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22810,
+		"label": "terminus_defense_22810",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:relief_officer",
+		"question": {
+			"FR": "L'officier de renfort accourt : « Une colonne rebelle marche sur la cité ! Sortons-nous à leur rencontre, ou tenons-nous les murs ? »"
+		},
+		"conditions": [
+			{
+				"variable": "battle_zhang_jiao_1",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On sort à leur rencontre"
+			},
+			"reaction": {
+				"FR": "On engage l'ennemi en rase campagne. Audacieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient les murs"
+			},
+			"reaction": {
+				"FR": "On se retranche derrière les remparts. Plus sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 118,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 22811,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 118,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 22811,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22811,
+		"label": "terminus_defense_22811",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "La bataille fait rage sous les murs. Le commandant vous confie un flanc à tenir coûte que coûte."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient le flanc"
+			},
+			"reaction": {
+				"FR": "On tient bon. La ligne ne cède pas. La cité respire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On contre-attaque"
+			},
+			"reaction": {
+				"FR": "On lance une contre-charge risquée. Tout ou rien."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.defender",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.defender",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22812,
+		"label": "terminus_defense_22812",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "La victoire se dessine. Un capitaine ennemi se rend et offre de rallier vos rangs."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "battle_zhang_jiao_1",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'enrôle"
+			},
+			"reaction": {
+				"FR": "Le transfuge rejoint la troupe. Un bras de plus, un risque aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le transfuge. La défiance vaut prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22813,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 102,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22813,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 102,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22813,
+		"label": "terminus_defense_22813",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "Après la bataille, le butin s'amoncelle. Le partager avec les hommes, ou le verser au trésor de guerre ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On partage"
+			},
+			"reaction": {
+				"FR": "On partage le butin. Les hommes vous adorent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde pour la guerre"
+			},
+			"reaction": {
+				"FR": "On thésaurise pour la suite. Les coffres gonflent, les sourires moins."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22814,
+		"label": "terminus_defense_22814",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison apporte de sombres nouvelles : l'insurrection embrase la périphérie entière. La guerre ne fait que commencer."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 8
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se prépare"
+			},
+			"reaction": {
+				"FR": "On affûte les défenses pour la longue guerre qui vient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde espoir"
+			},
+			"reaction": {
+				"FR": "On rassure les troupes. Le moral, c'est aussi une arme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22815,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22815,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22815,
+		"label": "terminus_defense_22815",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "Le commandant vous demande conseil sur la stratégie d'ensemble. Le suivre aveuglément flatte le vieil homme ; le contredire le froisse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approuve sa stratégie"
+			},
+			"reaction": {
+				"FR": "On valide son plan. Le commandant rayonne de confiance."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le corrige"
+			},
+			"reaction": {
+				"FR": "On amende son plan. Il grogne, mais reconnaît la justesse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22816,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "lu_zhi",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22816,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "lu_zhi",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22816,
+		"label": "terminus_defense_22816",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "Un commandant ami, assiégé sur Anacréon, réclame du secours. L'aider, c'est s'éloigner de vos bases."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "help_commander_huangfu",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part le secourir"
+			},
+			"reaction": {
+				"FR": "On file vers Anacréon au secours de l'allié."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur position"
+			},
+			"reaction": {
+				"FR": "On refuse de dégarnir nos lignes. L'allié devra tenir seul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22817,
+		"label": "terminus_defense_22817",
+		"deck": "terminus_defense",
+		"weight": 10000000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous presse : « Tout se joue sur Anacréon, Orateur. C'est là qu'il faut être. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "anacreon"
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 8
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Anacréon"
+			},
+			"reaction": {
+				"FR": "On saute vers Anacréon, cœur de la tourmente."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On hésite encore. Le maître-espion soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22818,
+		"label": "terminus_defense_22818",
+		"deck": "terminus_defense",
+		"weight": 10000000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Sur Anacréon, le capitaine de garnison vous confronte à une rumeur : votre vieux commandant serait accusé de trahison."
+		},
+		"conditions": [
+			{
+				"variable": "seen_22814",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 185
+			},
+			{
+				"variable": "battle_zhang_jiao_2",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le défend"
+			},
+			"reaction": {
+				"FR": "On prend fait et cause pour le commandant. Trois capitaines vous suivent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On enquête prudemment"
+			},
+			"reaction": {
+				"FR": "On enquête avant de juger. La vérité d'abord."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_three_brothers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22819,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22819,
+		"label": "terminus_defense_22819",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tyrant_general",
+		"question": {
+			"FR": "Le général tyran d'Anacréon exige que vous accabliez le commandant pour vous attirer ses faveurs."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "dong_zhuo",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On obéit au tyran"
+			},
+			"reaction": {
+				"FR": "On charge le commandant. Le tyran sourit, vous méprise un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse de salir un innocent. Le tyran se renfrogne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22820,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dong_zhuo",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_innocent_lu_zhi",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22820,
+		"label": "terminus_defense_22820",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tyrant_general",
+		"question": {
+			"FR": "Le général tyran vous donne un ordre infâme : faire taire les témoins de la défense du commandant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On désobéit"
+			},
+			"reaction": {
+				"FR": "On désobéit au tyran. Trois capitaines volontaires se rangent à vos côtés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On exécute l'ordre"
+			},
+			"reaction": {
+				"FR": "On exécute l'ordre infâme. L'âme se charge d'un poids."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_three_brothers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_dong_zhuo_order",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22821,
+		"label": "terminus_defense_22821",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tyrant_general",
+		"question": {
+			"FR": "Le tyran insiste, menaçant. Vos trois capitaines guettent votre réaction."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient tête"
+			},
+			"reaction": {
+				"FR": "On défie le tyran. Les trois capitaines dégainent avec vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On plie"
+			},
+			"reaction": {
+				"FR": "On plie sous la menace. Les capitaines détournent les yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_three_brothers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_dong_zhuo_order",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22822,
+		"label": "terminus_defense_22822",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tyrant_general",
+		"question": {
+			"FR": "Le tyran lance ses sbires. La rue gronde. Trois inconnus dégainent à vos côtés — qui sont-ils ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "dong_zhuo",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte leur aide"
+			},
+			"reaction": {
+				"FR": "On combat coude à coude avec les trois bretteurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se méfie"
+			},
+			"reaction": {
+				"FR": "On se méfie, mais on accepte le renfort. Pas le choix."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22823,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22823,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22823,
+		"label": "terminus_defense_22823",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fierce_warrior",
+		"question": {
+			"FR": "Un colosse à la barbe hérissée fend la mêlée en riant. « Belle bagarre ! Je m'invite ! »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le laisse charger"
+			},
+			"reaction": {
+				"FR": "Le colosse taille dans les sbires du tyran. Quelle fougue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le canalise"
+			},
+			"reaction": {
+				"FR": "On tente de le tempérer. Autant retenir un ouragan."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22824,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22824,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22824,
+		"label": "terminus_defense_22824",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Un homme au port noble vous tend la main une fois le calme revenu. « On se bat bien, à vos côtés. Unissons nos causes ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'allie à lui"
+			},
+			"reaction": {
+				"FR": "On scelle une alliance avec le meneur charismatique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste indépendant"
+			},
+			"reaction": {
+				"FR": "On décline l'alliance. Il s'incline, respectueux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22825,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22825,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22825,
+		"label": "terminus_defense_22825",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sworn_marshal",
+		"question": {
+			"FR": "Un guerrier silencieux à la longue lame jure fidélité au meneur — et, par extension, à vous."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "guan_yu",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "Le bretteur taciturne rejoint la cause. Une lame d'exception."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le jauge"
+			},
+			"reaction": {
+				"FR": "On l'observe sans un mot. Il en fait autant. Respect mutuel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.brothers",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.brothers",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22826,
+		"label": "terminus_defense_22826",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tyrant_general",
+		"question": {
+			"FR": "Les trois frères d'armes vous aident à innocenter le vieux commandant devant la cour d'Anacréon."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "battle_zhang_jiao_2",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_bei",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On plaide sa cause"
+			},
+			"reaction": {
+				"FR": "On démontre son innocence. Le commandant est lavé du soupçon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On soudoie un juge"
+			},
+			"reaction": {
+				"FR": "On graisse une patte pour hâter l'acquittement. Efficace, salissant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22827,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22827,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22827,
+		"label": "terminus_defense_22827",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:tyrant_general",
+		"question": {
+			"FR": "Le tyran, humilié, jure vengeance. Le meneur charismatique propose de quitter Anacréon avant les représailles."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part avec eux"
+			},
+			"reaction": {
+				"FR": "On s'éclipse avec les trois frères. Vivre pour combattre encore."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste affronter le tyran"
+			},
+			"reaction": {
+				"FR": "On reste défier le tyran. Courageux — ou suicidaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22828,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dong_zhuo",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 22828,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22828,
+		"label": "terminus_defense_22828",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fierce_warrior",
+		"question": {
+			"FR": "Le colosse barbu veut régler son compte au tyran sur-le-champ."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "zhang_fei",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On retient le colosse. La patience, cette fois, sauve des vies."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse faire"
+			},
+			"reaction": {
+				"FR": "On le laisse foncer. Le tyran fuit, mais la note sera salée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22829,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22829,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22829,
+		"label": "terminus_defense_22829",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le meneur charismatique vous remercie. « Nos chemins se recroiseront, Orateur. La Périphérie est petite. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le salue"
+			},
+			"reaction": {
+				"FR": "On se quitte alliés. Trois bretteurs de plus dans votre jeu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur ses gardes"
+			},
+			"reaction": {
+				"FR": "On salue, prudent. Les amis d'aujourd'hui…"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22830,
+		"label": "terminus_defense_22830",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "Un officier d'Anacréon vous propose d'observer de près les bandes millénaristes pour percer leurs tactiques."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "anacreon"
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 8
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 12
+			},
+			{
+				"variable": "seen_22834",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les observe"
+			},
+			"reaction": {
+				"FR": "On part espionner les insurgés. Renseignement précieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse la mission"
+			},
+			"reaction": {
+				"FR": "On décline. Trop risqué, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22831,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "help_commander_huangfu",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22831,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "help_commander_huangfu",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22831,
+		"label": "terminus_defense_22831",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "Tapi dans les fourrés, vous étudiez le camp rebelle. Leurs feux, leurs rondes, leurs failles."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "observe_yellow_turbans",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On note tout"
+			},
+			"reaction": {
+				"FR": "On dresse une carte précise de leurs défenses."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se retire vite"
+			},
+			"reaction": {
+				"FR": "On file avant d'être repéré. Mieux vaut peu que rien."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22832,
+		"label": "terminus_defense_22832",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Un officier ambitieux et brillant vous toise. « Vos observations m'ont été… utiles. Travaillons ensemble. Ou pas. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_22831",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On collabore"
+			},
+			"reaction": {
+				"FR": "On s'associe à l'officier ambitieux. Alliance à double tranchant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde ses distances"
+			},
+			"reaction": {
+				"FR": "On le tient à distance. Trop ambitieux pour être franc."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22833,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22833,
+		"label": "terminus_defense_22833",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "L'officier ambitieux propose un plan audacieux : incendier le camp rebelle par une nuit de vent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approuve le feu"
+			},
+			"reaction": {
+				"FR": "On valide le plan de feu. Cruel, efficace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On préfère l'assaut"
+			},
+			"reaction": {
+				"FR": "On préfère l'assaut franc. Plus d'honneur, plus de pertes."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22834,
+		"label": "terminus_defense_22834",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le scholar du codex décrypte les bannières rebelles : « Leur faiblesse est là, dans leur dogme même. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_22831",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exploite la faille"
+			},
+			"reaction": {
+				"FR": "On retourne leur dogme contre eux. Subtil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur le terrain militaire"
+			},
+			"reaction": {
+				"FR": "On s'en tient aux armes. Le scholar soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22835,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22835,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22835,
+		"label": "terminus_defense_22835",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le scholar propose de diffuser un faux oracle pour semer la discorde chez les rebelles."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On diffuse l'oracle"
+			},
+			"reaction": {
+				"FR": "Le faux oracle divise l'ennemi. Guerre psychologique réussie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse la ruse"
+			},
+			"reaction": {
+				"FR": "On refuse de jouer les prophètes. Le scholar range ses plans."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22836,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22836,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22836,
+		"label": "terminus_defense_22836",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "La discorde gagne le camp rebelle. Faut-il frapper maintenant, dans la confusion ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On frappe"
+			},
+			"reaction": {
+				"FR": "On frappe au cœur du désordre. L'ennemi se débande."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend mieux"
+			},
+			"reaction": {
+				"FR": "On attend une faille plus large. Patience calculée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22837,
+		"label": "terminus_defense_22837",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "Le stratège du feu inspecte les hautes herbes sèches autour du camp rebelle. « Une étincelle, et tout s'embrase. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_22836",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prépare l'embrasement"
+			},
+			"reaction": {
+				"FR": "On dispose les amorces dans l'herbe sèche. Le piège est tendu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On juge cela trop cruel"
+			},
+			"reaction": {
+				"FR": "On renonce au feu. Le stratège hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_dry_grass",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22838,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22838,
+		"label": "terminus_defense_22838",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "Vous achevez de cartographier les défenses rebelles. Transmettre le rapport au commandement, ou le garder pour vous ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "observe_yellow_turbans",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On transmet"
+			},
+			"reaction": {
+				"FR": "On livre le rapport. Le commandement vous en saura gré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le garde"
+			},
+			"reaction": {
+				"FR": "On garde l'information. Un atout dans la manche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22839,
+		"label": "terminus_defense_22839",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "L'officier ambitieux donne le signal. Les flèches enflammées pleuvent sur le camp rebelle."
+		},
+		"conditions": [
+			{
+				"variable": "seen_22838",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.arrow_flame",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "observe_yellow_turbans",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On embrase tout"
+			},
+			"reaction": {
+				"FR": "Le camp s'embrase d'un coup. Victoire terrible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On épargne les fuyards"
+			},
+			"reaction": {
+				"FR": "On laisse fuir les non-combattants. L'officier grimace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yellow_tubans_burned",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yellow_tubans_burned",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22840,
+		"label": "terminus_defense_22840",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "Le stratège du feu attend l'ordre : lancer les archers incendiaires maintenant, ou patienter que le vent forcisse ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "observe_yellow_turbans",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance maintenant"
+			},
+			"reaction": {
+				"FR": "Les archers tirent. Le feu prend, vorace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend le vent"
+			},
+			"reaction": {
+				"FR": "On attend la rafale. Quand elle vient, l'enfer se déchaîne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22841,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22841,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22841,
+		"label": "terminus_defense_22841",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "Les flammes encerclent le camp rebelle. Une brèche s'ouvre pour l'assaut final."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.arrow_flame",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On donne l'assaut"
+			},
+			"reaction": {
+				"FR": "On charge à travers la fumée. L'ennemi est brisé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le feu finir"
+			},
+			"reaction": {
+				"FR": "On laisse les flammes achever l'ouvrage. Froid, efficace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22842,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22842,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22842,
+		"label": "terminus_defense_22842",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "La bataille du feu est gagnée. Le stratège vous demande quoi faire des prisonniers calcinés et hagards."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "fire_arrow_archers",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les soigne"
+			},
+			"reaction": {
+				"FR": "On soigne les survivants. Geste rare en ces temps de cendre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les exécute"
+			},
+			"reaction": {
+				"FR": "On exécute les prisonniers. La terreur, pour message."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22843,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22843,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22843,
+		"label": "terminus_defense_22843",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fire_strategist",
+		"question": {
+			"FR": "La victoire du feu range Anacréon dans votre camp — au moins pour un temps. Comment célébrer ce triomphe ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_anacreon_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Par un défilé martial"
+			},
+			"reaction": {
+				"FR": "On parade en armes. Anacréon retient le nom de l'Orateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Par des largesses"
+			},
+			"reaction": {
+				"FR": "On distribue vivres et crédits. Le peuple acclame."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 22844,
+		"label": "terminus_defense_22844",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "L'officier ambitieux récolte les lauriers de la bataille — souvent les vôtres. Le laisser briller, ou rétablir la vérité ?"
+		},
+		"conditions": [
+			{
+				"variable": "fire_arrow_archers",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "seen_22840",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rétablit la vérité"
+			},
+			"reaction": {
+				"FR": "On revendique votre part. L'officier serre les dents."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse briller"
+			},
+			"reaction": {
+				"FR": "On lui cède la gloire. Il vous en devra une — peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_promoted",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_promoted",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22845,
+		"label": "terminus_defense_22845",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "L'officier ambitieux est promu haut dans la hiérarchie impériale. S'en faire un allié, ou un rival surveillé ?"
+		},
+		"conditions": [
+			{
+				"variable": "fire_arrow_archers",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "seen_22840",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cultive l'alliance"
+			},
+			"reaction": {
+				"FR": "On le félicite chaudement. Un allié haut placé, désormais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le surveille"
+			},
+			"reaction": {
+				"FR": "On le surveille de près. Son ambition n'a pas de fond."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_promoted",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cao_cao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_promoted",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22846,
+		"label": "terminus_defense_22846",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous met en garde : « Cet officier ira loin. Et il écrasera quiconque le gêne. Vous compris. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On note la menace. Mieux vaut prévenir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le sous-estime"
+			},
+			"reaction": {
+				"FR": "On hausse les épaules. Erreur, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22847,
+		"label": "terminus_defense_22847",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Les rapports affluent de tous les fronts. La guerre tourne, lentement, en faveur de l'ordre."
+		},
+		"conditions": [
+			{
+				"variable": "magic_buster",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 8
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On consolide"
+			},
+			"reaction": {
+				"FR": "On consolide les acquis. La Périphérie souffle un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On pousse l'avantage"
+			},
+			"reaction": {
+				"FR": "On exploite l'élan. Le risque paie — ou ruine."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:208",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:208",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22848,
+		"label": "terminus_defense_22848",
+		"deck": "terminus_defense",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous prend à part. « La guerre vous a fait un nom. Il est temps d'en tirer une position. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On prête l'oreille à ses plans. Une charge se dessine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste soldat"
+			},
+			"reaction": {
+				"FR": "On préfère rester sur le terrain. L'espion insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22849,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22849,
+		"label": "terminus_defense_22849",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison vous offre de prendre la tête des défenseurs de la cité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le commandement"
+			},
+			"reaction": {
+				"FR": "On prend le commandement des défenseurs. Lourde charge."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse à un autre"
+			},
+			"reaction": {
+				"FR": "On cède la place. Un meneur de plus, un poids de moins."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22850,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "lead_defenders",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22850,
+		"label": "terminus_defense_22850",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "À la tête des défenseurs, première décision : discipline de fer, ou confiance et initiative ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Discipline de fer"
+			},
+			"reaction": {
+				"FR": "On impose l'ordre strict. Les hommes obéissent au doigt."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confiance"
+			},
+			"reaction": {
+				"FR": "On laisse l'initiative aux capitaines. Souple, risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "lead_defenders",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "lead_defenders",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22851,
+		"label": "terminus_defense_22851",
+		"deck": "terminus_defense",
+		"weight": 500,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:corrupt_inspector",
+		"question": {
+			"FR": "Un inspecteur corrompu vous glisse : « Une charge de magistrat sur Anacréon ? Cela s'achète. Quelques crédits bien placés… »"
+		},
+		"conditions": [
+			{
+				"variable": "lead_defenders",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "become_a_magistrate",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On verse le pot-de-vin"
+			},
+			"reaction": {
+				"FR": "On graisse la patte de l'inspecteur. La charge se rapproche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse de payer"
+			},
+			"reaction": {
+				"FR": "On refuse la corruption. L'inspecteur hausse un sourcil."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bribe",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "become_a_magistrate",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22852,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22852,
+		"label": "terminus_defense_22852",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:corrupt_inspector",
+		"question": {
+			"FR": "L'inspecteur corrompu revient à la charge : « Tout le monde paie, Orateur. La vertu ne nourrit pas son magistrat. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie quand même"
+			},
+			"reaction": {
+				"FR": "On cède et on paie. La charge, à ce prix."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche une autre voie"
+			},
+			"reaction": {
+				"FR": "On refuse encore. Il doit bien exister une voie honnête."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bribe",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "become_a_magistrate",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22853,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22853,
+		"label": "terminus_defense_22853",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'inspecteur, agacé, double sa demande. Payer cette somme indigne, ou claquer la porte ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie l'indignité"
+			},
+			"reaction": {
+				"FR": "On paie, écœuré. La charge s'achète au prix de l'honneur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce à la charge"
+			},
+			"reaction": {
+				"FR": "On claque la porte. La probité a un coût aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bribe",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "become_a_magistrate",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "become_a_magistrate",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22854,
+		"label": "terminus_defense_22854",
+		"deck": "terminus_defense",
+		"weight": 300,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:corrupt_inspector",
+		"question": {
+			"FR": "Un notable bienveillant vous propose plutôt une lettre de recommandation pour obtenir la charge honnêtement."
+		},
+		"conditions": [
+			{
+				"variable": "become_a_magistrate",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "referral_letter",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte la lettre"
+			},
+			"reaction": {
+				"FR": "On accepte la recommandation. Une voie propre, enfin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On préfère se débrouiller"
+			},
+			"reaction": {
+				"FR": "On décline. On obtiendra la charge par soi-même."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22855,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22855,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22855,
+		"label": "terminus_defense_22855",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:corrupt_inspector",
+		"question": {
+			"FR": "La lettre de recommandation en main, il faut convaincre le conseil d'Anacréon de votre valeur."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.magistrate_pen",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On plaide avec aplomb"
+			},
+			"reaction": {
+				"FR": "On séduit le conseil par l'éloquence. Bel effet."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On expose ses mérites sobrement. Solide, sans éclat."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22856,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22856,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22856,
+		"label": "terminus_defense_22856",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:corrupt_inspector",
+		"question": {
+			"FR": "Le conseil hésite encore. Un dernier geste pourrait emporter la décision."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "referral_letter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On offre ses services"
+			},
+			"reaction": {
+				"FR": "On promet dévouement et compétence. Le conseil s'incline."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On glisse un présent"
+			},
+			"reaction": {
+				"FR": "On accompagne la lettre d'un présent. L'effet est… ambigu."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "bribe",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22857,
+		"label": "terminus_defense_22857",
+		"deck": "terminus_defense",
+		"weight": 1000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Lettre et pot-de-vin réunis, la charge de magistrat d'Anacréon vous est enfin accordée. On vous y installe en grande pompe."
+		},
+		"conditions": [
+			{
+				"variable": "become_a_magistrate",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "referral_letter",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "bribe",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "become_a_magistrate",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "magistrate",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "golden_donkey",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend ses fonctions"
+			},
+			"reaction": {
+				"FR": "On endosse la robe de magistrat. Anacréon, terrain de jeu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On prend la charge sans tapage. Mieux vaut peu de regards."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22858,
+		"label": "terminus_defense_22858",
+		"deck": "terminus_defense",
+		"weight": 1000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Magistrat par la lettre seule, vous prenez vos fonctions sur Anacréon — les mains propres, pour une fois."
+		},
+		"conditions": [
+			{
+				"variable": "become_a_magistrate",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "referral_letter",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "bribe",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.eagle_noise_wind",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "become_a_magistrate",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "magistrate",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "stone_ridge",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gouverne avec droiture"
+			},
+			"reaction": {
+				"FR": "On administre Anacréon avec probité. Rare et remarqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On gouverne sans vagues. Le pouvoir s'apprend en marchant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "jukebox.eagle_noise_wind",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22859,
+		"label": "terminus_defense_22859",
+		"deck": "terminus_defense",
+		"weight": 200000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Un ancien chef de bande, repenti et redoutable, se présente : « J'ai déserté le brigandage, magistrat. Voulez-vous de mon bras ? »"
+		},
+		"conditions": [
+			{
+				"variable": "banditism",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'enrôle"
+			},
+			"reaction": {
+				"FR": "Le repenti rejoint vos rangs. Un sabre rude et loyal."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le renvoie"
+			},
+			"reaction": {
+				"FR": "On le congédie. Un ancien bandit reste un bandit, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_is_back",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22860,
+		"label": "terminus_defense_22860",
+		"deck": "terminus_defense",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le chef de bande revient encore tendre la main. « Une seconde chance, magistrat. Je ne la demanderai pas trois fois. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_22859",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui fait confiance"
+			},
+			"reaction": {
+				"FR": "On accorde la seconde chance. Il jure fidélité, ému."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse net"
+			},
+			"reaction": {
+				"FR": "On refuse pour de bon. Il s'éloigne, sombre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_is_back",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22861,
+		"label": "terminus_defense_22861",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "L'ancien bandit, désormais à votre service, propose de traquer ses anciens complices restés hors-la-loi."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance la traque"
+			},
+			"reaction": {
+				"FR": "On envoie le repenti nettoyer ses anciennes pistes. Efficace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On amnistie d'abord"
+			},
+			"reaction": {
+				"FR": "On tente l'amnistie avant la traque. Pari sur la rédemption."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22862,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22862,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22862,
+		"label": "terminus_defense_22862",
+		"deck": "terminus_defense",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "La traque rapporte un riche butin de brigands. L'employer pour la cité, ou récompenser le repenti ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pour la cité"
+			},
+			"reaction": {
+				"FR": "On investit le butin dans Anacréon. Le repenti approuve."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pour le repenti"
+			},
+			"reaction": {
+				"FR": "On récompense le repenti. Sa loyauté se cimente."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 22863,
+		"label": "terminus_defense_22863",
+		"deck": "terminus_defense",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:exorcist",
+		"question": {
+			"FR": "Un vieux prêtre des morts vient bénir votre charge fraîchement acquise. « Que les ombres d'Anacréon vous épargnent, magistrat. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 186
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte la bénédiction"
+			},
+			"reaction": {
+				"FR": "On laisse le vieux prêtre officier. Le peuple aime ces rites."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline poliment"
+			},
+			"reaction": {
+				"FR": "On décline la bénédiction. Le prêtre s'éloigne, marmonnant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
 		"id": 23200,
 		"label": "cover_union_23200",
 		"deck": "cover_union",

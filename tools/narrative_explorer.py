@@ -755,6 +755,59 @@ button.small { padding: 2px 8px; font-size: 11px; }
 }
 #source-select:focus { outline: none; border-color: var(--accent); }
 
+/* Reader layout */
+#reader-layout { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+#reader-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 12px; border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+#reader-progress { font-family: var(--mono); font-size: 11px; color: var(--ink-dim); }
+.reader-actions { display: flex; gap: 4px; }
+.reader-actions button { font-size: 10px; padding: 3px 10px; font-family: var(--mono); }
+#reader-card {
+  flex: 1; overflow-y: auto; padding: 16px 20px; max-width: 720px; margin: 0 auto;
+}
+.reader-empty {
+  display: flex; align-items: center; justify-content: center;
+  height: 200px; color: var(--ink-faint); font-family: var(--mono); font-size: 13px;
+}
+.reader-card-box {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+  padding: 20px 24px; margin-bottom: 12px;
+}
+.reader-card-box .rc-header {
+  display: flex; gap: 8px; align-items: center; margin-bottom: 12px;
+  font-family: var(--mono); font-size: 10px; color: var(--ink-faint);
+}
+.reader-card-box .rc-header .rc-id { color: var(--accent); font-size: 12px; }
+.reader-card-box .rc-header .rc-label { color: var(--ink); font-size: 11px; font-weight: 600; }
+.reader-question {
+  font-family: 'Spectral', serif; font-size: 17px; line-height: 1.5;
+  color: var(--ink); padding: 8px 0 12px; border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.reader-question .rc-en { font-size: 12px; color: var(--ink-faint); margin-top: 4px; }
+.reader-choice {
+  padding: 10px 12px; margin: 6px 0; border-radius: 6px;
+  border-left: 3px solid var(--border);
+}
+.reader-choice.left { border-left-color: var(--accent); background: rgba(79,214,232,.04); }
+.reader-choice.right { border-left-color: var(--amber); background: rgba(232,182,90,.04); }
+.reader-choice .rc-ctitle { font-weight: 600; font-size: 13px; color: var(--ink); }
+.reader-choice .rc-creaction { font-style: italic; font-size: 12px; color: var(--ink-dim); margin: 2px 0; }
+.reader-choice .rc-coutcomes { font-size: 10px; margin-top: 3px; }
+.reader-meta {
+  display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 12px;
+  padding-top: 10px; border-top: 1px solid var(--border);
+  font-size: 10px; color: var(--ink-faint); font-family: var(--mono);
+}
+.reader-meta span { background: var(--surface); padding: 1px 6px; border-radius: 3px; }
+.reader-meta .cond { color: var(--accent); }
+.reader-meta .link { color: var(--amber); }
+.reader-meta .impact-pos { color: var(--green); }
+.reader-meta .impact-neg { color: var(--danger); }
+
 /* Toast */
 .toast {
   position: fixed; bottom: 16px; right: 16px; padding: 8px 14px; border-radius: 6px;
@@ -787,6 +840,7 @@ button.small { padding: 2px 8px; font-size: 11px; }
         <option value="foundation">📜 Foundation</option>
         <option value="reference">📖 Reigns TK</option>
       </select>
+      <button class="small" onclick="toggleReaderView()" id="btn-reader-view">📖 Lecteur</button>
       <button class="small" onclick="toggleTableView()" id="btn-table-view">📋 Tableau</button>
       <button class="small" onclick="saveAll()" id="btn-save" disabled>💾 Sauvegarder</button>
       <button class="small" onclick="addCard()">+ Carte</button>
@@ -823,6 +877,20 @@ button.small { padding: 2px 8px; font-size: 11px; }
       </div>
       <div id="card-detail">
         <div class="empty-state">Sélectionnez un deck à gauche<br>puis une carte dans la liste</div>
+      </div>
+    </div>
+    <div id="reader-layout" style="display:none">
+      <div id="reader-toolbar">
+        <span id="reader-progress">—</span>
+        <div class="reader-actions">
+          <button onclick="jumpReaderCard(-5)" title="-5">⏪</button>
+          <button onclick="prevReaderCard()">◀ Précédente</button>
+          <button onclick="nextReaderCard()">Suivante ▶</button>
+          <button onclick="jumpReaderCard(5)" title="+5">⏩</button>
+        </div>
+      </div>
+      <div id="reader-card">
+        <div class="reader-empty">Sélectionnez un deck pour lire les cartes</div>
       </div>
     </div>
   </div>
@@ -911,11 +979,18 @@ async function selectDeck(name) {
   window._deckCards = cardsData;
   renderTable(cardsData);
   document.getElementById('card-detail').innerHTML = '<div class="empty-state">S\u00e9lectionnez une carte</div>';
-  // Default to graph view
-  document.getElementById('graph-layout').style.display = 'flex';
-  document.getElementById('table-layout').style.display = 'none';
-  closeCardPanel();
-  renderGraph();
+  // Default to graph view (or reader if active)
+  if (_readerView) {
+    document.getElementById('graph-layout').style.display = 'none';
+    document.getElementById('table-layout').style.display = 'none';
+    document.getElementById('reader-layout').style.display = 'flex';
+    loadReaderCards();
+  } else {
+    document.getElementById('graph-layout').style.display = 'flex';
+    document.getElementById('table-layout').style.display = 'none';
+    closeCardPanel();
+    renderGraph();
+  }
 }
 
 // === Table ===
@@ -1212,6 +1287,132 @@ async function saveAll() {
   await fetch('/api/save', { method: 'POST' }); markClean(); toast('Sauvegard\u00e9e \u2705', 'success');
 }
 
+// === Reader view ===
+let _readerCards = [];
+let _readerIndex = 0;
+let _readerView = false;
+
+function toggleReaderView() {
+  _readerView = !_readerView;
+  document.getElementById('graph-layout').style.display = _readerView ? 'none' : 'flex';
+  document.getElementById('table-layout').style.display = 'none';
+  document.getElementById('reader-layout').style.display = _readerView ? 'flex' : 'none';
+  document.getElementById('btn-reader-view').textContent = _readerView ? '🕸️ Graphe' : '📖 Lecteur';
+  if (_readerView && selectedDeck) loadReaderCards();
+}
+
+async function loadReaderCards() {
+  const deck = selectedDeck;
+  if (!deck) { document.getElementById('reader-card').innerHTML = '<div class="reader-empty">Sélectionnez un deck</div>'; return; }
+  const cards = await fetchCardsForDeck(deck);
+  // Sort by id for Foundation, by _refNodeIndex for reference
+  if (currentSource === 'reference') {
+    cards.sort((a, b) => (a._refNodeIndex||0) - (b._refNodeIndex||0));
+  } else {
+    cards.sort((a, b) => a.id - b.id);
+  }
+  _readerCards = cards;
+  _readerIndex = 0;
+  showReaderCard(0);
+}
+
+function showReaderCard(idx) {
+  if (!_readerCards.length) return;
+  if (idx < 0) idx = 0;
+  if (idx >= _readerCards.length) idx = _readerCards.length - 1;
+  _readerIndex = idx;
+  const card = _readerCards[idx];
+  const total = _readerCards.length;
+  document.getElementById('reader-progress').textContent = deckLabel(selectedDeck) + ' — Carte ' + (idx+1) + '/' + total + ' (#' + card.id + ')';
+  document.getElementById('reader-card').innerHTML = buildReaderCardHTML(card, idx, total);
+}
+
+function deckLabel(name) {
+  return name || '?';
+}
+
+function buildReaderCardHTML(card, idx, total) {
+  const FR = (s) => s?.FR || '';
+  const EN = (s) => s?.EN || '';
+  const qFR = FR(card.question);
+  const qEN = EN(card.question);
+  const leftTitle = FR(card.leftAnswer?.title);
+  const leftReaction = FR(card.leftAnswer?.reaction);
+  const rightTitle = FR(card.rightAnswer?.title);
+  const rightReaction = FR(card.rightAnswer?.reaction);
+
+  // Outcome chips
+  function renderOutcomes(outcomes, cls) {
+    if (!outcomes || !outcomes.length) return '';
+    return outcomes.map(o => {
+      const v = o.variable || '?';
+      const val = o.intValue || 0;
+      if (v === 'link') return '<span class="link">→ #' + val + '</span>';
+      const sign = val >= 0 ? '+' : '';
+      const op = o.addOperation !== false ? sign + val : '=' + val;
+      const pcls = val > 0 ? 'impact-pos' : val < 0 ? 'impact-neg' : '';
+      return '<span class="' + pcls + '">' + v + ' ' + op + '</span>';
+    }).join(' ');
+  }
+
+  // Conditions
+  const conds = (card.conditions||[]).map(c => '<span class="cond">' + (c.variable||'') + ' ' + (c.op||'') + ' ' + (c.value||'') + '</span>').join(' ');
+
+  // Links from all outcomes
+  const links = [];
+  for (const key of ['yesOutcome','noOutcome','loadOutcome']) {
+    for (const o of (card[key]||[])) {
+      if (o.variable === 'link' && o.intValue) {
+        const target = _readerCards.find(c => c.id === o.intValue);
+        const tLabel = target ? '#' + target.id + ' ' + (target.label||'').substring(0, 20) : '#' + o.intValue;
+        links.push('<span class="link">' + key.replace('Outcome','') + ' → ' + tLabel + '</span>');
+      }
+    }
+  }
+
+  const moods = card.moods || {};
+  const moodStr = 'D:' + (moods.default||'neutral') + ' Y:' + (moods.yes||'neutral') + ' N:' + (moods.no||'neutral');
+
+  return '<div class="reader-card-box">'
+    + '<div class="rc-header">'
+    + '<span class="rc-id">#' + card.id + '</span>'
+    + '<span class="rc-label">' + escHtml(card.label||'') + '</span>'
+    + '<span>W:' + (card.weight||1) + '</span>'
+    + '<span>L:' + (card.lockturn||0) + '</span>'
+    + (card.hidden ? '<span style="color:var(--danger)">CACHÉE</span>' : '')
+    + (card.key ? '<span style="color:var(--amber)">CLÉ</span>' : '')
+    + '</div>'
+
+    + '<div class="reader-question">'
+    + escHtml(qFR)
+    + (qEN ? '<div class="rc-en">' + escHtml(qEN) + '</div>' : '')
+    + '</div>'
+
+    + '<div class="reader-choice left">'
+    + '<div class="rc-ctitle">◀ ' + escHtml(leftTitle || 'Gauche') + '</div>'
+    + (leftReaction ? '<div class="rc-creaction">' + escHtml(leftReaction) + '</div>' : '')
+    + '<div class="rc-coutcomes">' + renderOutcomes(card.yesOutcome) + '</div>'
+    + '</div>'
+
+    + '<div class="reader-choice right">'
+    + '<div class="rc-ctitle">' + escHtml(rightTitle || 'Droite') + ' ▶</div>'
+    + (rightReaction ? '<div class="rc-creaction">' + escHtml(rightReaction) + '</div>' : '')
+    + '<div class="rc-coutcomes">' + renderOutcomes(card.noOutcome) + '</div>'
+    + '</div>'
+
+    + (conds ? '<div class="reader-meta"><span>Conditions:</span> ' + conds + '</div>' : '')
+    + '<div class="reader-meta">'
+    + '<span>Moods:</span> ' + moodStr
+    + (links.length ? ' <span>Liens:</span> ' + links.join(' ') : '')
+    + (card.loadOutcome?.length ? ' <span>Load:</span> ' + renderOutcomes(card.loadOutcome) : '')
+    + '</div>'
+    + '</div>';
+}
+
+function nextReaderCard() { if (_readerIndex < _readerCards.length - 1) showReaderCard(_readerIndex + 1); }
+function prevReaderCard() { if (_readerIndex > 0) showReaderCard(_readerIndex - 1); }
+function jumpReaderCard(delta) { showReaderCard(_readerIndex + delta); }
+
 // === Source switching ===
 let currentSource = 'foundation';
 
@@ -1237,6 +1438,9 @@ async function switchSource(source) {
   document.getElementById('card-detail').innerHTML = '<div class="empty-state">Sélectionnez un deck à gauche<br>puis une carte dans la liste</div>';
   renderDecks();
   document.getElementById('graph-view').innerHTML = '<div class="graph-empty">Sélectionnez un deck</div>';
+  document.getElementById('reader-card').innerHTML = '<div class="reader-empty">Sélectionnez un deck</div>';
+  document.getElementById('reader-progress').textContent = '—';
+  _readerCards = [];
 }
 
 async function fetchCardsForDeck(deckName) {

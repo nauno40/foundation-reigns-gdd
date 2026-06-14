@@ -184,5 +184,26 @@
 	},
 	"heir_tutor": {
 		"title": "Précepteur"
+	},
+	"defense_mentor": {
+		"title": "Vieux commandant"
+	},
+	"garrison_captain": {
+		"title": "Capitaine de garnison"
+	},
+	"relief_officer": {
+		"title": "Officier de renfort"
+	},
+	"tyrant_general": {
+		"title": "Général tyran"
+	},
+	"fierce_warrior": {
+		"title": "Bretteur colosse"
+	},
+	"fire_strategist": {
+		"title": "Stratège du feu"
+	},
+	"corrupt_inspector": {
+		"title": "Inspecteur corrompu"
 	}
 }
