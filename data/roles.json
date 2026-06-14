@@ -256,5 +256,74 @@
 	},
 	"loyal_general": {
 		"title": "Général loyaliste"
+	},
+	"plan_herald": {
+		"title": "Voix du Plan"
+	},
+	"talent_scout": {
+		"title": "Recruteur de talents"
+	},
+	"court_official": {
+		"title": "Officier de cour"
+	},
+	"imperial_scribe": {
+		"title": "Scribe impérial"
+	},
+	"ghost_seeker": {
+		"title": "Chasseur de fantômes"
+	},
+	"riddle_child": {
+		"title": "Enfant aux comptines"
+	},
+	"wandering_envoy": {
+		"title": "Émissaire errant"
+	},
+	"alchemist": {
+		"title": "Alchimiste"
+	},
+	"usurper_heir": {
+		"title": "Héritier usurpateur"
+	},
+	"young_strategist": {
+		"title": "Jeune stratège"
+	},
+	"wu_commander": {
+		"title": "Commandant du Sud"
+	},
+	"vengeful_general": {
+		"title": "Général vengeur"
+	},
+	"frontier_general": {
+		"title": "Général de la frontière"
+	},
+	"imperial_chancellor": {
+		"title": "Chancelier impérial"
+	},
+	"young_conqueror": {
+		"title": "Jeune conquérant"
+	},
+	"warlord_yuan": {
+		"title": "Grand seigneur de guerre"
+	},
+	"southern_lord": {
+		"title": "Seigneur du Sud"
+	},
+	"island_warlord": {
+		"title": "Seigneur insulaire"
+	},
+	"turncoat_advisor": {
+		"title": "Conseiller transfuge"
+	},
+	"monkey_keeper": {
+		"title": "Montreur de singes"
+	},
+	"giant_envoy": {
+		"title": "Émissaire géant"
+	},
+	"sea_trader": {
+		"title": "Marchand des étoiles"
+	},
+	"puppet_heir": {
+		"title": "Héritier fantoche"
 	}
 }

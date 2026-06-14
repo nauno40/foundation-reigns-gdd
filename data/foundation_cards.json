@@ -8739,6 +8739,3900 @@
 		}
 	},
 	{
+		"id": 20800,
+		"label": "seldon_plan_20800",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "An 184. La première convulsion de la Périphérie. Le maître des docks vous secoue : « Ça commence, Orateur. Le Plan est en marche. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On observe"
+			},
+			"reaction": {
+				"FR": "On note le premier frémissement de l'Histoire. Tout part de là."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On agit déjà"
+			},
+			"reaction": {
+				"FR": "On intervient sans attendre. Le Plan, lui, attendait."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20801,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20801,
+		"label": "seldon_plan_20801",
+		"deck": "seldon_plan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:plan_herald",
+		"question": {
+			"FR": "La toute première bataille de l'ère oppose la Fondation à ses voisins affamés. Faut-il s'y mêler ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On combat"
+			},
+			"reaction": {
+				"FR": "On verse dans la mêlée inaugurale. Le sang du Plan coule."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse l'Histoire suivre son cours. Plus sage, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.first",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.first",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20802,
+		"label": "seldon_plan_20802",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 210. Loin, sur la frontière sud, un stratège pèse une campagne. Votre contact vous demande d'orienter discrètement son choix."
+		},
+		"conditions": [
+			{
+				"variable": "take_nanjun",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 210
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "cao_cao_no_jingzhou",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'encourage"
+			},
+			"reaction": {
+				"FR": "On souffle dans le bon sens. Le stratège y gagne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le freine"
+			},
+			"reaction": {
+				"FR": "On tempère son ardeur. Le stratège recule, prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20803,
+		"label": "seldon_plan_20803",
+		"deck": "seldon_plan",
+		"weight": 750,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Vers l'an 186, les voies du Plan mènent à Trantor, cœur agonisant de l'Empire. L'y suivre ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 185
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 189
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "rossem"
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Trantor"
+			},
+			"reaction": {
+				"FR": "On saute vers Trantor, là où tout se décide encore."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste"
+			},
+			"reaction": {
+				"FR": "On diffère le voyage impérial. Le Plan patiente."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20804,
+		"label": "seldon_plan_20804",
+		"deck": "seldon_plan",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un nom remonte des dossiers : un agitateur de Siwenna que le Plan veut voir de près. Votre contact insiste."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 184
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 189
+			},
+			{
+				"variable": "meet_wei_hong",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_wei_hong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part pour Siwenna"
+			},
+			"reaction": {
+				"FR": "On met le cap sur Siwenna, monde de poussière."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On note le nom"
+			},
+			"reaction": {
+				"FR": "On garde le nom en réserve. Siwenna attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20805,
+		"label": "seldon_plan_20805",
+		"deck": "seldon_plan",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous parle d'un sage de Santanni qu'il faudrait rencontrer avant l'an 192."
+		},
+		"conditions": [
+			{
+				"variable": "meet_kong_rong",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 192
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 185
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_kong_rong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Santanni"
+			},
+			"reaction": {
+				"FR": "On file vers Santanni et ses Encyclopédistes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite. L'émissaire poursuit son chemin sans vous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_santanni",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20806,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20806,
+		"label": "seldon_plan_20806",
+		"deck": "seldon_plan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire insiste : « Le sage de Santanni ne reçoit pas deux fois. Décidez-vous, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part enfin"
+			},
+			"reaction": {
+				"FR": "On cède et on saute vers Santanni."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On renonce à Santanni. Une porte se ferme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_santanni",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20807,
+		"label": "seldon_plan_20807",
+		"deck": "seldon_plan",
+		"weight": 100,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:warlord_yuan",
+		"question": {
+			"FR": "Un grand seigneur de guerre vous propose un poste d'inspecteur sur l'un de ses mondes. Honneur — ou laisse ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 201
+			},
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "submit_to_yuan_shao",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "yuan_shao",
+				"op": "above",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le poste"
+			},
+			"reaction": {
+				"FR": "On endosse la charge d'inspecteur. Une place dans le jeu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On refuse la laisse dorée. Le seigneur s'en offusque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yuan_shao_propose_qingzhou_inspector",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "yuan_shao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20808,
+		"label": "seldon_plan_20808",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Vers l'an 188, le Plan vous rappelle à Trantor pour y rencontrer un vieux gouverneur cherchant un héritier."
+		},
+		"conditions": [
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 60
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 186
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 192
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Trantor"
+			},
+			"reaction": {
+				"FR": "On retourne à Trantor, sur la piste du vieux gouverneur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On diffère. Le contact soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "meet_tao_qian",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20809,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20809,
+		"label": "seldon_plan_20809",
+		"deck": "seldon_plan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact ne lâche pas : « Le vieux gouverneur de Trantor n'a plus longtemps. Allez-y maintenant. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "meet_tao_qian",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y va"
+			},
+			"reaction": {
+				"FR": "On saute vers Trantor sans plus tarder."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On résiste"
+			},
+			"reaction": {
+				"FR": "On résiste à la pression. Le contact grimace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20810,
+		"label": "seldon_plan_20810",
+		"deck": "seldon_plan",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:defense_mentor",
+		"question": {
+			"FR": "An 189. Un vieux commandant respecté — celui qui vous a formé — vous fait signe. Le Plan veut renouer ce fil."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "lu_zhi",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_lu_zhi",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retrouve"
+			},
+			"reaction": {
+				"FR": "On retrouve le vieux commandant. De vieux liens se ravivent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On remet les retrouvailles. Le fil pend, en attente."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20811,
+		"label": "seldon_plan_20811",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "An 189, cinquième mois. Un avis de recherche circule contre un officier ambitieux. Le recruteur de talents guette votre réaction."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit l'affaire"
+			},
+			"reaction": {
+				"FR": "On s'intéresse au fugitif. Une piste prometteuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On délaisse l'affaire. L'officier court toujours."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_wanted_start",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_wanted_start",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20812,
+		"label": "seldon_plan_20812",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 190. Sur Rossem, monde caché, l'Assemblée secrète des Orateurs vous convoque enfin."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 190
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "join_the_assembly",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "join_the_assembly",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y répond"
+			},
+			"reaction": {
+				"FR": "On gagne l'Assemblée de Rossem. Le cœur de la Seconde Fondation."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se dérobe"
+			},
+			"reaction": {
+				"FR": "On esquive la convocation. Audacieux — et dangereux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20813,
+		"label": "seldon_plan_20813",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'Assemblée des Orateurs vous attend sur Rossem. Le contact insiste : « On ne fait pas attendre les Orateurs, Orateur. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 190
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "rossem"
+			},
+			{
+				"variable": "join_the_assembly",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "join_the_assembly",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Rossem"
+			},
+			"reaction": {
+				"FR": "On saute vers Rossem et son Assemblée voilée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste"
+			},
+			"reaction": {
+				"FR": "On reste hors de Rossem. Le silence se fait pesant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20814,
+		"label": "seldon_plan_20814",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Une rumeur incendiaire : la capitale impériale brûlerait. Vrai cataclysme, ou intox du Plan ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "luoyang_on_fire",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On vérifie"
+			},
+			"reaction": {
+				"FR": "On enquête sur l'incendie de la capitale. Tout n'est pas faux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On doute"
+			},
+			"reaction": {
+				"FR": "On doute de la rumeur. Le feu, pourtant, est bien réel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_luoyang_on_fire_real",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_luoyang_on_fire_real",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20815,
+		"label": "seldon_plan_20815",
+		"deck": "seldon_plan",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde confirme : la vieille capitale est en flammes. L'exode des marchands commence."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "luoyang_on_fire",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On organise l'exode"
+			},
+			"reaction": {
+				"FR": "On encadre la fuite des marchands. Coûteux, salvateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse fuir"
+			},
+			"reaction": {
+				"FR": "On laisse l'exode se débrouiller. Le chaos gagne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_luoyang_on_fire_real",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20816,
+		"label": "seldon_plan_20816",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La capitale embrasée crache ses réfugiés vers les mondes extérieurs. Faut-il regagner Trantor pour y voir clair ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Trantor"
+			},
+			"reaction": {
+				"FR": "On saute vers Trantor au cœur du brasier politique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste à distance"
+			},
+			"reaction": {
+				"FR": "On observe l'incendie de loin. Prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20817,
+		"label": "seldon_plan_20817",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Sur Rossem, l'écho de la capitale en flammes parvient à l'Assemblée. Les Orateurs débattent gravement."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pèse dans le débat"
+			},
+			"reaction": {
+				"FR": "On oriente le débat des Orateurs. Influence subtile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On écoute"
+			},
+			"reaction": {
+				"FR": "On écoute en silence. Le Plan suit son cours."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20818,
+		"label": "seldon_plan_20818",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "An 190. Le recruteur signale un talent rare caché sur Sayssel. Le Plan veut qu'on l'y trouve."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 190
+			},
+			{
+				"variable": "seen_657",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "talent_in_jizhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part pour Sayssel"
+			},
+			"reaction": {
+				"FR": "On met le cap sur Sayssel dénicher le talent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On note"
+			},
+			"reaction": {
+				"FR": "On note la piste de Sayssel pour plus tard."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "sayshell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20819,
+		"label": "seldon_plan_20819",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "Sur Sayssel, le talent caché se révèle plus farouche que prévu. L'approcher avec douceur, ou fermeté ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 190
+			},
+			{
+				"variable": "seen_657",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "sayshell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "talent_in_jizhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avec douceur"
+			},
+			"reaction": {
+				"FR": "On approche le talent avec patience. Il s'ouvre, peu à peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avec fermeté"
+			},
+			"reaction": {
+				"FR": "On force la rencontre. Le talent se cabre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20820,
+		"label": "seldon_plan_20820",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "An 191. Neotrantor, vestige impérial, entre dans la trame du Plan. Une visite s'impose."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 191
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 61
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "visit_changan",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Neotrantor"
+			},
+			"reaction": {
+				"FR": "On saute vers Neotrantor, l'ombre de l'Empire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On diffère"
+			},
+			"reaction": {
+				"FR": "On remet la visite. Le Plan note le retard."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_neotrantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20821,
+		"label": "seldon_plan_20821",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Fin d'an 192, le Plan vous oriente vers Korell, monde marchand fermé. L'occasion d'un coup d'œil."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 193
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "visit_yangzhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Korell"
+			},
+			"reaction": {
+				"FR": "On met le cap sur Korell la secrète."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste"
+			},
+			"reaction": {
+				"FR": "On reste à l'écart de Korell. Pour l'instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20822,
+		"label": "seldon_plan_20822",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "An 192. Une opération de séduction au long cours porte ses fruits. La danseuse-agent rapporte un succès."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 6
+			},
+			{
+				"variable": "honey_trap",
+				"op": "above",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exploite"
+			},
+			"reaction": {
+				"FR": "On capitalise sur le piège réussi. Belle prise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On consolide"
+			},
+			"reaction": {
+				"FR": "On consolide l'acquis avant d'aller plus loin."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20823,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20823,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20823,
+		"label": "seldon_plan_20823",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 192. Le même dossier piétine faute d'appât suffisant. Votre contact attend un signe."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 6
+			},
+			{
+				"variable": "honey_trap",
+				"op": "below",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On relance"
+			},
+			"reaction": {
+				"FR": "On relance l'opération sur de nouvelles bases."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On clôt le dossier"
+			},
+			"reaction": {
+				"FR": "On referme le dossier inabouti. Tant pis."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20824,
+		"label": "seldon_plan_20824",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:southern_lord",
+		"question": {
+			"FR": "An 192. Un seigneur du Sud, ambitieux, ouvre une route commerciale que le Plan veut surveiller."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "yuan_shu",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "planet_neotrantor_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On surveille la route"
+			},
+			"reaction": {
+				"FR": "On garde l'œil sur le négoce du seigneur du Sud."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On néglige la route. Le seigneur prospère seul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "yuan_shu",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20825,
+		"label": "seldon_plan_20825",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "An 196. Deux sœurs d'une grande maison entrent dans le jeu des alliances. Le Plan s'y intéresse."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en mêle"
+			},
+			"reaction": {
+				"FR": "On approche les deux sœurs et leurs intrigues."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste à l'écart"
+			},
+			"reaction": {
+				"FR": "On laisse les deux sœurs à leurs jeux de cour."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_two_sisters",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_two_sisters",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20826,
+		"label": "seldon_plan_20826",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "Après l'an 197, un conseiller brillant erre sans maître. Le Plan veut qu'on le ramène vers Terminus."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 197
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			},
+			{
+				"variable": "meet_xu_shu",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_xu_shu",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le cherche"
+			},
+			"reaction": {
+				"FR": "On part en quête du conseiller errant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On note"
+			},
+			"reaction": {
+				"FR": "On note la piste pour plus tard."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20827,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20827,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20827,
+		"label": "seldon_plan_20827",
+		"deck": "seldon_plan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La piste du conseiller mène à Terminus. Votre contact presse : « Un tel esprit ne reste pas libre longtemps. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Terminus"
+			},
+			"reaction": {
+				"FR": "On saute vers Terminus sur ses traces."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On diffère. Le contact s'agace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20828,
+		"label": "seldon_plan_20828",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "Sur Terminus, le conseiller errant accepte enfin de parler. L'écouter longuement, ou aller à l'essentiel ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 197
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "meet_xu_shu",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_xu_shu",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute longuement"
+			},
+			"reaction": {
+				"FR": "On recueille toute sa pensée. Une mine d'or."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On va à l'essentiel"
+			},
+			"reaction": {
+				"FR": "On presse le conseiller d'aller au fait. Il se ferme un peu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20829,
+		"label": "seldon_plan_20829",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:warlord_yuan",
+		"question": {
+			"FR": "An 200. Le grand seigneur de guerre consolide son empire de mondes. Le flatter, ou le contrer ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le flatte"
+			},
+			"reaction": {
+				"FR": "On caresse l'orgueil du grand seigneur. Il vous adopte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le contre"
+			},
+			"reaction": {
+				"FR": "On contrarie ses desseins. Un ennemi de poids, désormais."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "yuan_shao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "yuan_shao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20830,
+		"label": "seldon_plan_20830",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:court_official",
+		"question": {
+			"FR": "An 200. Un officier de cour vous tend un dossier sensible. L'accepter, c'est entrer dans une intrigue qui vous dépasse."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend le dossier"
+			},
+			"reaction": {
+				"FR": "On s'empare du dossier brûlant. Le jeu se corse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le dossier. L'officier insiste, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20831,
+		"label": "seldon_plan_20831",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:war_counselor",
+		"question": {
+			"FR": "An 200. Un conseiller de campagne menace de quitter votre suite. Le retenir vaut bien un effort."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "seen_20830",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 192
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On retient le conseiller. Son savoir reste à vos côtés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse partir"
+			},
+			"reaction": {
+				"FR": "On le laisse filer. Un atout en moins."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": -192,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": -192,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20832,
+		"label": "seldon_plan_20832",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:young_conqueror",
+		"question": {
+			"FR": "An 200. Un jeune conquérant fulgurant bouscule l'ordre des mondes. Le Plan veut qu'on jauge sa trajectoire."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "qiao_sisters",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'observe"
+			},
+			"reaction": {
+				"FR": "On suit l'ascension du jeune conquérant. Fascinant et inquiétant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le néglige"
+			},
+			"reaction": {
+				"FR": "On sous-estime le jeune conquérant. Erreur, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20833,
+		"label": "seldon_plan_20833",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:war_counselor",
+		"question": {
+			"FR": "Le grand commandant d'un monde du Sud se range dans votre jeu. Un allié de poids — ou un calcul ?"
+		},
+		"conditions": [
+			{
+				"variable": "grand_commander_yangzhou",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "seen_20832",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "grand_commander_yangzhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhou_yu",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle l'alliance"
+			},
+			"reaction": {
+				"FR": "On s'allie au grand commandant. Une flotte de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On garde ses distances. La méfiance vaut prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20834,
+		"label": "seldon_plan_20834",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:banquet_host",
+		"question": {
+			"FR": "Après l'an 192, un hôte de banquet vous convie aux fastes d'une cour voisine. Le Plan y voit une occasion."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 192
+			},
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y rend"
+			},
+			"reaction": {
+				"FR": "On paraît au banquet. Les langues se délient autour du vin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline l'invitation. L'hôte vous trouve bien sévère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_celeb",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_celeb",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20835,
+		"label": "seldon_plan_20835",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:riddle_child",
+		"question": {
+			"FR": "Entre 201 et 206, un enfant aux comptines chante des vers étranges qui semblent prédire l'avenir. Coïncidence ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 201
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 206
+			},
+			{
+				"variable": "sleeping_dragon",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On prête l'oreille aux comptines prophétiques. Troublant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On néglige l'enfant. Ses vers se perdent dans le vent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_nursery_rhymes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20836,
+		"label": "seldon_plan_20836",
+		"deck": "seldon_plan",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:giant_envoy",
+		"question": {
+			"FR": "Un émissaire géant — au sens propre — vous convie sur Smyrno pour une affaire délicate."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 201
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 206
+			},
+			{
+				"variable": "sleeping_dragon",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Smyrno"
+			},
+			"reaction": {
+				"FR": "On répond à l'invitation et on saute vers Smyrno."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline l'invitation du géant. Il s'éloigne, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "giant_horns_invitation",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_smyrno",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20837,
+		"label": "seldon_plan_20837",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:giant_envoy",
+		"question": {
+			"FR": "Sur Smyrno, l'émissaire géant signale des troubles qui couvent. Les désamorcer demande tact et fermeté."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "horns_troubles",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 32
+			},
+			{
+				"variable": "giant_horns_troubles",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "giant_horns_invitation",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "horns_troubles",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en mêle"
+			},
+			"reaction": {
+				"FR": "On s'attaque aux troubles de Smyrno. Délicat."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse couver"
+			},
+			"reaction": {
+				"FR": "On laisse les troubles mûrir. Risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20838,
+		"label": "seldon_plan_20838",
+		"deck": "seldon_plan",
+		"weight": 12000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:giant_envoy",
+		"question": {
+			"FR": "Les troubles de Smyrno s'aggravent. L'émissaire géant réclame une intervention."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			},
+			{
+				"variable": "horns_troubles",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 32
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On intervient"
+			},
+			"reaction": {
+				"FR": "On intervient fermement. Smyrno se calme — un temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On temporise encore. La tension monte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20839,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20839,
+		"label": "seldon_plan_20839",
+		"deck": "seldon_plan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:giant_envoy",
+		"question": {
+			"FR": "L'émissaire géant propose une solution radicale aux maux de Smyrno."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'approuve"
+			},
+			"reaction": {
+				"FR": "On valide la solution radicale. Efficace, brutale."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la modère"
+			},
+			"reaction": {
+				"FR": "On adoucit la mesure. Plus humaine, moins sûre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20840,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20840,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20840,
+		"label": "seldon_plan_20840",
+		"deck": "seldon_plan",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:giant_envoy",
+		"question": {
+			"FR": "Smyrno apaisé, l'émissaire géant vous remercie et regagne ses hauteurs. Le Plan avance d'un cran."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "giant_horns_troubles",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure"
+			},
+			"reaction": {
+				"FR": "On note le succès de Smyrno. Un monde de plus stabilisé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On repart"
+			},
+			"reaction": {
+				"FR": "On repart aussitôt vers d'autres fronts."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20841,
+		"label": "seldon_plan_20841",
+		"deck": "seldon_plan",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "An 208, neuvième mois. Votre contact vous transmet un signal discret : le Plan entre dans une phase critique."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se prépare"
+			},
+			"reaction": {
+				"FR": "On se met en alerte. Une crise approche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste vigilant"
+			},
+			"reaction": {
+				"FR": "On garde l'œil ouvert. Le Plan ne prévient qu'une fois."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20842,
+		"label": "seldon_plan_20842",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:riddle_child",
+		"question": {
+			"FR": "An 207. L'enfant aux comptines revient, ses vers plus sombres encore. On dirait qu'il connaît la suite."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 207
+			},
+			{
+				"variable": "meet_pang_tong",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le questionne"
+			},
+			"reaction": {
+				"FR": "On interroge l'enfant prophète. Ses réponses glacent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en détourne"
+			},
+			"reaction": {
+				"FR": "On se détourne de l'enfant. Mieux vaut ne pas savoir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_nursery_rhymes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20843,
+		"label": "seldon_plan_20843",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": 72,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Après l'an 202, le Plan vous rappelle à Trantor pour une affaire de poisson cru et de haute politique. Étrange mélange."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "trantor"
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 202
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 44
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Trantor"
+			},
+			"reaction": {
+				"FR": "On saute vers Trantor, intrigué par l'affaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On diffère"
+			},
+			"reaction": {
+				"FR": "On remet le voyage. Le contact lève les yeux au ciel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "raw_fish",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "raw_fish",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20844,
+		"label": "seldon_plan_20844",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:ghost_seeker",
+		"question": {
+			"FR": "Un hantise rôderait dans un palais d'Anacréon. Le chasseur de fantômes vous y attend."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "trantor"
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 196
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 43
+			},
+			{
+				"variable": "ghostbuster",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "planet_terminus_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "ghost_in_the_palace",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "ghost_in_the_palace",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Anacréon"
+			},
+			"reaction": {
+				"FR": "On part démystifier le « fantôme » du palais d'Anacréon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sceptique"
+			},
+			"reaction": {
+				"FR": "On reste à distance du conte de fantômes."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "anacreon",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20845,
+		"label": "seldon_plan_20845",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Après l'an 207, des plaintes montent contre l'afflux de réfugiés sur vos mondes. Votre contact attend une politique."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 207
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On apaise la grogne"
+			},
+			"reaction": {
+				"FR": "On désamorce les plaintes. Coûteux, mais juste."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On laisse gronder. La rancune enfle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_complaints_about_immigrants",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20846,
+		"label": "seldon_plan_20846",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Les plaintes contre les immigrés enflent encore. Trancher, ou laisser pourrir ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_20845",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_trantor_state",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tranche"
+			},
+			"reaction": {
+				"FR": "On légifère sur les réfugiés. Le calme revient, tendu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse courir"
+			},
+			"reaction": {
+				"FR": "On laisse l'affaire s'envenimer. Mauvais calcul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_complaints_about_immigrants",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20847,
+		"label": "seldon_plan_20847",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une nouvelle vague de plaintes anti-réfugiés déferle. Le Plan observe votre fermeté."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_20845",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reste ferme"
+			},
+			"reaction": {
+				"FR": "On tient une ligne claire. Les esprits s'apaisent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cède"
+			},
+			"reaction": {
+				"FR": "On cède aux pressions. Le précédent est fâcheux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_complaints_about_immigrants",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20848,
+		"label": "seldon_plan_20848",
+		"deck": "seldon_plan",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "An 209. Une alliance matrimoniale de couverture se profile avec une noble guerrière. Le Plan y voit un levier."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "marry_shangxiang",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sun_shangxiang",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y intéresse"
+			},
+			"reaction": {
+				"FR": "On explore l'alliance matrimoniale. Politique et périlleuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'écarte"
+			},
+			"reaction": {
+				"FR": "On écarte l'idée du mariage. Trop risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_about_shangxiang",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_about_shangxiang",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20849,
+		"label": "seldon_plan_20849",
+		"deck": "seldon_plan",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Déjà marié sous couverture, vous devez décliner l'alliance avec la noble guerrière sans froisser sa maison."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "married",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "marry_shangxiang",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sun_shangxiang",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On décline avec tact"
+			},
+			"reaction": {
+				"FR": "On refuse l'union avec diplomatie. L'honneur est sauf."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline sèchement"
+			},
+			"reaction": {
+				"FR": "On refuse net. La maison de la guerrière s'en offusque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20850,
+		"label": "seldon_plan_20850",
+		"deck": "seldon_plan",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La noble guerrière elle-même prend les choses en main, peu importe votre avis. Une force de la nature."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "marry_shangxiang",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "sun_quan",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On compose avec elle"
+			},
+			"reaction": {
+				"FR": "On compose avec son caractère de feu. Sage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lui résiste"
+			},
+			"reaction": {
+				"FR": "On lui résiste. Autant défier une tempête."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20851,
+		"label": "seldon_plan_20851",
+		"deck": "seldon_plan",
+		"weight": 20000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Après l'an 208, un culte du grain prospère sur Askone et inquiète vos services. Le Plan veut qu'on s'en approche."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 7
+			},
+			{
+				"variable": "rice_fever",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "rice_fever",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête sur le culte"
+			},
+			"reaction": {
+				"FR": "On part observer le Culte du Grain de près."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse prospérer"
+			},
+			"reaction": {
+				"FR": "On laisse le culte croître sans nous. Pour l'instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 21200,
 		"label": "ns_21200",
 		"deck": "new_speaker",
