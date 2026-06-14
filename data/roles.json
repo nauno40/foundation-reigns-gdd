@@ -64,5 +64,35 @@
 	},
 	"exorcist": {
 		"title": "Exorciste de l'Église de la Science"
+	},
+	"water_warden": {
+		"title": "Maître des eaux"
+	},
+	"death_priest": {
+		"title": "Prêtre des morts"
+	},
+	"remnant_lord": {
+		"title": "Seigneur du Vestige"
+	},
+	"war_counselor": {
+		"title": "Conseiller de campagne"
+	},
+	"field_officer": {
+		"title": "Officier de terrain"
+	},
+	"naval_strategist": {
+		"title": "Stratège naval"
+	},
+	"garrison_chief": {
+		"title": "Chef de garnison"
+	},
+	"civic_judge": {
+		"title": "Juge civique"
+	},
+	"veteran_marshal": {
+		"title": "Vieux maréchal"
+	},
+	"sworn_marshal": {
+		"title": "Maréchal lige"
 	}
 }

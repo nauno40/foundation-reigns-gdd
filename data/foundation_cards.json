@@ -31229,6 +31229,2325 @@
 		}
 	},
 	{
+		"id": 26000,
+		"label": "planet_terminus_26000",
+		"deck": "planet_terminus",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "La crue de la Mer de Terminus a noyé les docks bas. Les négociants hurlent, les ingénieurs proposent une digue qui mangerait tout le budget."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On bâtit la digue"
+			},
+			"reaction": {
+				"FR": "Le trésor saigne. Mais les docks tiendront le prochain dégel."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse couler"
+			},
+			"reaction": {
+				"FR": "« L'eau s'en ira seule, Orateur. La rancune des marchands, non. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_river_flooding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26001,
+		"label": "planet_terminus_26001",
+		"deck": "planet_terminus",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une fièvre court dans les faubourgs de Terminus. On parle déjà de fermer le spatioport — au risque d'étrangler le commerce."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On ferme le port"
+			},
+			"reaction": {
+				"FR": "La fièvre s'éteint. Les caisses des marchands aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse ouvert"
+			},
+			"reaction": {
+				"FR": "Le commerce respire. La fièvre, elle, prend son temps pour partir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26002,
+		"label": "planet_terminus_26002",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Fête de la Fondation. Le Maire veut une parade somptueuse pour rappeler la grandeur de Terminus à toute la Périphérie."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On finance la fête"
+			},
+			"reaction": {
+				"FR": "Terminus brille. Anacréon, dit-on, en a grincé des dents."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la modère"
+			},
+			"reaction": {
+				"FR": "Une fête sobre. Le peuple murmure que l'Orateur compte trop ses crédits."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26003,
+		"label": "planet_terminus_26003",
+		"deck": "planet_terminus",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:war_counselor",
+		"question": {
+			"FR": "Un stratège vous prend à part : « Si la Korell ne tient pas sa flotte au Jingzhou, la zone franche est à prendre. Mais il faut décider vite. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 7
+			},
+			{
+				"variable": "cao_cao_no_jingzhou",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le croit"
+			},
+			"reaction": {
+				"FR": "Il sourit. Vous venez de gagner sa confiance — et un projet dangereux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On doute"
+			},
+			"reaction": {
+				"FR": "« La prudence vous perdra, Orateur, comme elle a perdu l'Empire. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26004,
+		"label": "planet_terminus_26004",
+		"deck": "planet_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'heure est venue. Le stratège déploie la carte de la zone franche : « On frappe maintenant, ou on l'oublie pour dix ans. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 209
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance la campagne"
+			},
+			"reaction": {
+				"FR": "Les ordres partent vers la flotte. Le dé est jeté."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "« Dix ans, Orateur. Vous nous coûtez dix ans. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "terminus",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "take_nanjun",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 26005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26005,
+		"label": "planet_terminus_26005",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "Le stratège attend votre méthode : assaut éclair improvisé, ou manœuvre longuement préparée ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assaut improvisé"
+			},
+			"reaction": {
+				"FR": "« Audacieux. Ou suicidaire. On verra à l'aube. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Manœuvre préparée"
+			},
+			"reaction": {
+				"FR": "« Sage. Lente, mais sage. La flotte se met en ordre. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_attack_nanjun_unplanned",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_attack_nanjun_planned",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26006,
+		"label": "planet_terminus_26006",
+		"deck": "planet_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:field_officer",
+		"question": {
+			"FR": "Sans plan, la flotte de Terminus fonce sur la zone franche. L'officier de terrain attend l'ordre d'engager."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Engager"
+			},
+			"reaction": {
+				"FR": "Le combat est confus, sanglant, mais la zone tombe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer"
+			},
+			"reaction": {
+				"FR": "On se replie. La zone reste contestée — et l'occasion, perdue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.nanjun_unplanned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.nanjun_unplanned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26007,
+		"label": "planet_terminus_26007",
+		"deck": "planet_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:naval_strategist",
+		"question": {
+			"FR": "Votre stratège naval, lui, a flairé un piège korellien et propose d'attendre une nuit de plus."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On attend"
+			},
+			"reaction": {
+				"FR": "L'attente paie : le piège se referme sur du vide."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On fonce quand même"
+			},
+			"reaction": {
+				"FR": "L'officier de terrain hausse les épaules et engage. À l'aveugle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_attack_nanjun_wait",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26008,
+		"label": "planet_terminus_26008",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:field_officer",
+		"question": {
+			"FR": "Le plan est prêt, les vecteurs calculés. L'officier de terrain demande s'il déclenche l'assaut planifié."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On déclenche"
+			},
+			"reaction": {
+				"FR": "Tout se déroule comme prévu. Presque trop bien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend encore"
+			},
+			"reaction": {
+				"FR": "Le stratège naval réclame une dernière nuit de patience."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.nanjun_planned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_attack_nanjun_wait",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26009,
+		"label": "planet_terminus_26009",
+		"deck": "planet_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La zone est prise, mais le commandant korellien et son escadre ont filé par la faille hyperspatiale du nord."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On poursuit"
+			},
+			"reaction": {
+				"FR": "On les talonne dans le noir. Risqué, mais la fuite ne sera pas gratuite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse fuir"
+			},
+			"reaction": {
+				"FR": "Le commandant korellien s'évapore. Il reviendra — ils reviennent toujours."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "take_nanjun",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_attack_nanjun_cao_ren_out",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26010,
+		"label": "planet_terminus_26010",
+		"deck": "planet_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:naval_strategist",
+		"question": {
+			"FR": "Votre stratège naval a anticipé la fuite korellienne et tendu un filet d'astronefs sur la faille du nord."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On referme le filet"
+			},
+			"reaction": {
+				"FR": "Le commandant korellien se jette droit dans la nasse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la zone"
+			},
+			"reaction": {
+				"FR": "Mieux vaut tenir ce qu'on a pris que courir après une ombre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26011,
+		"label": "planet_terminus_26011",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:naval_strategist",
+		"question": {
+			"FR": "Le commandant korellien, acculé, propose sa reddition contre la vie de ses équipages."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "Il rend son épée. Un ennemi de moins, un témoin gênant de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On exige plus"
+			},
+			"reaction": {
+				"FR": "Il préfère se saborder. La zone franche est à vous, le reste, en cendres."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26012,
+		"label": "planet_terminus_26012",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La zone franche est tenue. Le stratège naval vous dévisage : restez-vous magnanime envers les vaincus, ou faites-vous un exemple ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fait un exemple"
+			},
+			"reaction": {
+				"FR": "La Périphérie tremble. La foi en la Fondation, un peu moins."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se montre clément"
+			},
+			"reaction": {
+				"FR": "Les vaincus s'inclinent. Votre stratège y gagne en prestige."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.nanjun_cao_ren_out",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "take_nanjun",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "angry",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 26013,
+		"label": "planet_terminus_26013",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:war_counselor",
+		"question": {
+			"FR": "Victoire. La zone franche jure fidélité à Terminus, et trois grands noms de la flotte vous regardent désormais autrement."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "take_nanjun",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_terminus_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure"
+			},
+			"reaction": {
+				"FR": "Le stratège, le souverain et l'émissaire lèvent leur coupe en votre honneur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste humble"
+			},
+			"reaction": {
+				"FR": "L'humilité, en temps de triomphe, intrigue plus qu'elle ne rassure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "sun_quan",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "lu_su",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "sun_quan",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "lu_su",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "nanjun",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26014,
+		"label": "planet_terminus_26014",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": 72,
+		"hidden": false,
+		"bearer": "role:garrison_chief",
+		"question": {
+			"FR": "Avec la zone franche acquise et l'émissaire dans votre camp, on vous presse d'armer une seconde flotte."
+		},
+		"conditions": [
+			{
+				"variable": "lu_su",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "planet_terminus_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 217
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On arme"
+			},
+			"reaction": {
+				"FR": "Les chantiers de Terminus rugissent. La Périphérie le saura vite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On consolide"
+			},
+			"reaction": {
+				"FR": "Plutôt que de nouveaux canons, du négoce. Les coffres approuvent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26015,
+		"label": "planet_terminus_26015",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": 72,
+		"hidden": false,
+		"bearer": "role:garrison_chief",
+		"question": {
+			"FR": "L'émissaire reste tiède à votre égard, et la zone franche réclame déjà des garnisons que vous n'avez pas."
+		},
+		"conditions": [
+			{
+				"variable": "lu_su",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "planet_terminus_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 217
+			},
+			{
+				"variable": "nanjun",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On garnit la zone"
+			},
+			"reaction": {
+				"FR": "On dégarnit Terminus pour tenir la zone. Pari risqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On délègue"
+			},
+			"reaction": {
+				"FR": "On confie la garde aux marchands locaux. Bon marché — et fragile."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26016,
+		"label": "planet_terminus_26016",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:field_officer",
+		"question": {
+			"FR": "Le commandant korellien a fui, mais la zone est à vous. Reste à décider du sort de la garnison qui s'est rendue."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "take_nanjun",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les enrôle"
+			},
+			"reaction": {
+				"FR": "Des transfuges korelliens sous bannière de Terminus. Que peut-il mal tourner ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les renvoie"
+			},
+			"reaction": {
+				"FR": "On les rend à Korell, désarmés. Un geste que le rival n'oubliera pas."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26017,
+		"label": "planet_terminus_26017",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le juge civique des vergers vient se plaindre : des colons squattent les serres hydroponiques de l'État."
+		},
+		"conditions": [
+			{
+				"variable": "magistrate_peach_blossoms",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les expulse"
+			},
+			"reaction": {
+				"FR": "Les serres sont rendues à l'État. Les colons, eux, à la rue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les régularise"
+			},
+			"reaction": {
+				"FR": "On légalise l'occupation. Le juge fulmine, le peuple respire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 26018,
+		"label": "planet_terminus_26018",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Le commandant de la garnison de Terminus exige une revue d'armes en grande pompe pour rappeler qui protège la cité."
+		},
+		"conditions": [
+			{
+				"variable": "magistrate_peach_blossoms",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On parade en armes"
+			},
+			"reaction": {
+				"FR": "Les blasters luisent au soleil pâle. Le message est reçu — partout."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse la parade"
+			},
+			"reaction": {
+				"FR": "« Une Fondation qui cache ses canons invite l'ennemi », grogne-t-il."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26019,
+		"label": "planet_terminus_26019",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique des vergers propose d'ouvrir un tribunal public où le peuple jugerait ses propres litiges."
+		},
+		"conditions": [
+			{
+				"variable": "magistrate_peach_blossoms",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "La justice du peuple par le peuple. Imparfaite, mais aimée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la main"
+			},
+			"reaction": {
+				"FR": "La justice reste celle du Maire. Ordonnée, et un peu plus froide."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26020,
+		"label": "planet_terminus_26020",
+		"deck": "planet_terminus",
+		"weight": 200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Un vieux maréchal couvert de cicatrices plante son sabre devant vous : « On dit l'Orateur sage. Moi, je le veux brave. En garde ! »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 163
+			},
+			{
+				"variable": "seen_26034",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 219
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "huang_zhong",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On relève le défi"
+			},
+			"reaction": {
+				"FR": "La foule retient son souffle. Vous aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "« Un sage qui fuit le fer n'est qu'un lâche bien habillé. » Murmure dans la foule."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_respond_to_huang_zhong_challenge",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26021,
+		"label": "planet_terminus_26021",
+		"deck": "planet_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maréchal tourne autour de vous, lame basse. « Seul, Orateur ? Pas de champion pour vous couvrir ? »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 109
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dégaine soi-même"
+			},
+			"reaction": {
+				"FR": "Vous levez la lame. Vos mains tremblent moins que vous ne le craigniez."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "Vous gagnez du temps. Le vieux loup le sent et grogne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26022,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26022,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26022,
+		"label": "planet_terminus_26022",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maréchal fond sur vous. Il n'y a plus de mots — seulement l'acier."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On croise le fer"
+			},
+			"reaction": {
+				"FR": "Le duel s'engage sous les hourras et les paris."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On esquive"
+			},
+			"reaction": {
+				"FR": "Esquiver un maître d'armes ? Il rit et frappe plus fort."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_huang_zhong_duel",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26023,
+		"label": "planet_terminus_26023",
+		"deck": "planet_terminus",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sworn_marshal",
+		"question": {
+			"FR": "Votre maréchal lige s'interpose, lame tirée : « Mon Orateur ne se bat pas contre les chiens. Moi, si. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 109
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "guan_yu",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le laisse faire"
+			},
+			"reaction": {
+				"FR": "Deux vétérans, un cercle de poussière. La cité ne respire plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On insiste pour combattre"
+			},
+			"reaction": {
+				"FR": "« Comme vous voudrez. Mais je couvre vos arrières. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26024,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26024,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26024,
+		"label": "planet_terminus_26024",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sworn_marshal",
+		"question": {
+			"FR": "Les deux lames se jaugent. Votre maréchal lige murmure : « Je peux le tuer. Ou seulement l'humilier. Votre ordre ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On humilie"
+			},
+			"reaction": {
+				"FR": "Désarmé, le vieux loup tombe à genoux. Vivant. Honteux. Précieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tue"
+			},
+			"reaction": {
+				"FR": "L'acier tranche. Un grand bretteur de moins sous le ciel de Terminus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26025,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26025,
+		"label": "planet_terminus_26025",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le vieux maréchal, désarmé, vous fixe longuement. Puis il pose son sabre à vos pieds : « Un homme qui m'épargne mérite mon bras. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "huang_zhong",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "Le vétéran rejoint votre garde. Terminus a gagné une légende."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "« Tant pis. Je trouverai un seigneur moins frileux. » Il s'en va, droit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 163,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26026,
+		"label": "planet_terminus_26026",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le duel bascule. Le maréchal a une ouverture — votre gorge est offerte. Il hésite une fraction de seconde."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "huang_zhong",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On profite de l'hésitation"
+			},
+			"reaction": {
+				"FR": "Vous frappez le premier. Le vétéran chancelle, stupéfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On baisse la garde"
+			},
+			"reaction": {
+				"FR": "Vous abaissez la lame. Le geste le désarme plus sûrement que l'acier."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26027,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26027,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "curious",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 26027,
+		"label": "planet_terminus_26027",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le maréchal est à votre merci, à terre, le souffle court. Sa vie tient à un mot."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'achève"
+			},
+			"reaction": {
+				"FR": "Le coup part. La foule se tait. Vous venez de tuer une légende."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'épargne"
+			},
+			"reaction": {
+				"FR": "Vous reculez d'un pas. Le vieux loup vous regarde, neuf."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_killed_huang_zhong",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26028,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "angry",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 26028,
+		"label": "planet_terminus_26028",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le maréchal épargné s'agenouille dans la poussière. « Mon sabre est à vous, Orateur. Et ma rancune, à vos ennemis. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'enrôle"
+			},
+			"reaction": {
+				"FR": "Le vétéran jure fidélité. Une lame de plus pour la Fondation."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le congédie"
+			},
+			"reaction": {
+				"FR": "Il salue et disparaît dans la foule. On le reverra, ou pas."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26029,
+		"label": "planet_terminus_26029",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "On rapporte que le vieux maréchal écume les tavernes de Terminus en maudissant votre nom. L'humiliation, semble-t-il, n'est pas passée."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le fait taire"
+			},
+			"reaction": {
+				"FR": "Vos hommes le raccompagnent fermement hors des murs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "Laisser un vétéran amer en liberté ? Le Maire fronce les sourcils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26030,
+		"label": "planet_terminus_26030",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maréchal humilié a vendu ses griefs au plus offrant. Trois mondes savent désormais que l'Orateur a tremblé."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dément"
+			},
+			"reaction": {
+				"FR": "On étouffe la rumeur. À moitié. Le mal est fait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On assume"
+			},
+			"reaction": {
+				"FR": "Vous laissez courir. Une légende vexée vaut une mauvaise réclame."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26031,
+		"label": "planet_terminus_26031",
+		"deck": "planet_terminus",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le vieux maréchal réapparaît, sobre et grave, à la porte de votre résidence. « J'ai trop bu et trop parlé. Reprenons depuis le début. »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_26028",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_26029",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "seen_26034",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 219
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "Le vétéran semble sincère. Ou très bon comédien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le chasse"
+			},
+			"reaction": {
+				"FR": "« Encore une porte fermée. Soit. » Il tourne les talons, voûté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26032,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26032,
+		"label": "planet_terminus_26032",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "« Mettez-moi à l'épreuve, Orateur », dit le maréchal. « Une mission, n'importe laquelle. Je vous prouverai ma valeur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le teste"
+			},
+			"reaction": {
+				"FR": "On lui confie une patrouille sur la frontière. Il rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse encore"
+			},
+			"reaction": {
+				"FR": "Le vieux loup soupire. La patience d'un vétéran a des limites."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26033,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26033,
+		"label": "planet_terminus_26033",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le maréchal revient de mission, l'uniforme troué mais la tête haute. Il a tenu parole — et plus encore."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'adoube"
+			},
+			"reaction": {
+				"FR": "Le vétéran intègre votre garde rapprochée. Terminus l'acclame."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "Vous le remerciez, sans plus. Il encaisse, mais quelque chose se ferme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26034,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26034,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26034,
+		"label": "planet_terminus_26034",
+		"deck": "planet_terminus",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Le vieux maréchal s'incline une dernière fois : « Ma lame, mon sang, mon nom. Tout est à la Fondation, désormais. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "Le vétéran prête serment. Une légende rallie le Plan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "Vous tardez à répondre. Il attend, immobile, fier — et un peu blessé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 163,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26035,
+		"label": "planet_terminus_26035",
+		"deck": "planet_terminus",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:war_counselor",
+		"question": {
+			"FR": "Le stratège revient à la charge sur la zone franche : « La fenêtre se rouvre, Orateur. Cette fois, ne la laissez pas filer. »"
+		},
+		"conditions": [
+			{
+				"variable": "take_nanjun",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 210
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "take_nanjun",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On planifie l'assaut"
+			},
+			"reaction": {
+				"FR": "Les cartes ressortent, les flottes s'éveillent. On y retourne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reporte"
+			},
+			"reaction": {
+				"FR": "« Toujours demain avec vous. Demain, l'ennemi sera prêt. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhou_yu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 26400,
 		"label": "gifted_orphan_26400",
 		"deck": "gifted_orphan",
@@ -79728,6 +82047,663 @@
 			"default": "flattered",
 			"yes": "flattered",
 			"no": "neutral"
+		}
+	},
+	{
+		"id": 40800,
+		"label": "planet_siwenna_40800",
+		"deck": "planet_siwenna",
+		"weight": 20,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une fièvre de poussière remonte des canaux à sec. Les médecins de Siwenna réclament que l'on brûle le quartier bas pour l'enrayer."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le brûle"
+			},
+			"reaction": {
+				"FR": "Les flammes ont mangé un tiers de la ville. La fièvre, elle, est restée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On soigne"
+			},
+			"reaction": {
+				"FR": "« Vous voilà plus humain qu'un fonctionnaire impérial, Orateur. C'est suspect. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 40801,
+		"label": "planet_siwenna_40801",
+		"deck": "planet_siwenna",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:water_warden",
+		"question": {
+			"FR": "Un homme maigre se dresse sur la place sèche. « Donnez-moi cent crédits et je ferai pleuvoir avant la fin du mois ! »"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie"
+			},
+			"reaction": {
+				"FR": "Il a empoché l'argent et fixé le ciel. Le ciel l'a ignoré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "Il hausse les épaules : « Alors priez. Ça marche aussi mal, et c'est gratuit. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rain_maker",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 40802,
+		"label": "planet_siwenna_40802",
+		"deck": "planet_siwenna",
+		"weight": 20000,
+		"lockturn": 450,
+		"hidden": false,
+		"bearer": "role:death_priest",
+		"question": {
+			"FR": "Une jeune veuve s'agenouille. Son mari, percepteur de l'Empire, est mort en laissant des dettes — et, dit-elle, un fantôme qui hante le grenier à grain."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 195
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "Le prêtre des morts hoche la tête. Vous, vous écoutez surtout les pensées de la veuve."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'éconduit"
+			},
+			"reaction": {
+				"FR": "« Un Orateur sans cœur. Siwenna s'en souviendra. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 40803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 40803,
+		"label": "planet_siwenna_40803",
+		"deck": "planet_siwenna",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:death_priest",
+		"question": {
+			"FR": "Le grenier craque la nuit, jure-t-elle. Le prêtre des morts veut une veillée. Vous savez qu'il n'y a pas de fantôme — seulement une charpente qui se tord."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "widow",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On veille"
+			},
+			"reaction": {
+				"FR": "On a brûlé de l'encens jusqu'à l'aube. La veuve a enfin dormi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On démystifie"
+			},
+			"reaction": {
+				"FR": "Vous montrez la poutre fendue. Elle vous regarde comme si vous aviez tué le mort une seconde fois."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "widow",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 40804,
+		"label": "planet_siwenna_40804",
+		"deck": "planet_siwenna",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:death_priest",
+		"question": {
+			"FR": "La veuve revient : les retainers de son mari réclament leur arriéré de solde, ou ils prendront la maison."
+		},
+		"conditions": [
+			{
+				"variable": "widow",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 195
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie la solde"
+			},
+			"reaction": {
+				"FR": "Le trésor de Siwenna grince. Les hommes rengainent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "Les retainers serrent les rangs autour du domaine. Mauvais signe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 40805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 40805,
+		"label": "planet_siwenna_40805",
+		"deck": "planet_siwenna",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:death_priest",
+		"question": {
+			"FR": "Les retainers ont dressé un campement devant le grenier. Leur chef vous toise : « La dame, ou l'argent. Choisissez, étranger. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On protège la dame"
+			},
+			"reaction": {
+				"FR": "Vous placez la veuve sous votre couverture. Le chef recule — pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cède le domaine"
+			},
+			"reaction": {
+				"FR": "La veuve part sans un mot. Les retainers, eux, restent. Et ils vous observent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "widow",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "widow",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 40806,
+		"label": "planet_siwenna_40806",
+		"deck": "planet_siwenna",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:remnant_lord",
+		"question": {
+			"FR": "Le chef des retainers a rallié les fermiers en colère. Ils encerclent le palais du gouverneur. On vous demande de trancher."
+		},
+		"conditions": [
+			{
+				"variable": "widow",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 196
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réprime"
+			},
+			"reaction": {
+				"FR": "Les blasters crachent. Le calme revient — un calme de cendres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On parlemente"
+			},
+			"reaction": {
+				"FR": "Vos mots glissent sur leur rage comme la pluie qui ne vient jamais."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "widow",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 40807,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 40807,
+		"label": "planet_siwenna_40807",
+		"deck": "planet_siwenna",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:remnant_lord",
+		"question": {
+			"FR": "Trop tard. Siwenna se soulève. Votre couverture brûle avec le palais — il faut sauter vers un autre monde avant que la foule ne vous reconnaisse."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 194
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fuit"
+			},
+			"reaction": {
+				"FR": "Le saut hyperspatial vous arrache à Siwenna. Derrière vous, un monde de plus passe à l'ennemi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste"
+			},
+			"reaction": {
+				"FR": "Rester, c'était mourir. La foule a un visage, et c'est le vôtre qu'elle cherche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_siwenna_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "siwenna_revolt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 40808,
+		"label": "planet_siwenna_40808",
+		"deck": "planet_siwenna",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:remnant_lord",
+		"question": {
+			"FR": "Siwenna gronde une génération plus tard, et la mémoire des fermiers est longue. Le même grenier, la même colère — il faut fuir encore."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fuit"
+			},
+			"reaction": {
+				"FR": "Encore un saut, encore un monde perdu. Le Plan, lui, ne tremble pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On affronte"
+			},
+			"reaction": {
+				"FR": "On n'affronte pas une rancune vieille de cent ans. Elle vous engloutit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_siwenna_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_somewhere",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "siwenna_revolt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "desperate"
 		}
 	},
 	{

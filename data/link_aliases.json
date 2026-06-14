@@ -662,5 +662,35 @@
 	},
 	"_woman_looking_for_cat": {
 		"node": 28024
+	},
+	"_attack_nanjun_unplanned": {
+		"nodes": [
+			26007,
+			26006
+		]
+	},
+	"_attack_nanjun_planned": {
+		"nodes": [
+			26010,
+			26009
+		]
+	},
+	"_attack_nanjun_wait": {
+		"node": 26013
+	},
+	"_attack_nanjun_cao_ren_out": {
+		"node": 26016
+	},
+	"_respond_to_huang_zhong_challenge": {
+		"nodes": [
+			26023,
+			26021
+		]
+	},
+	"_huang_zhong_duel": {
+		"node": 26026
+	},
+	"_killed_huang_zhong": {
+		"action": "enddispatch"
 	}
 }
