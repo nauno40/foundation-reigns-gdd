@@ -28944,6 +28944,3121 @@
 		}
 	},
 	{
+		"id": 24800,
+		"label": "transmuter_trade_24800",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:bargemaster",
+		"question": {
+			"FR": "Le maître-batelier amarre sa barge à transmuteurs. « La voie d'eau jusqu'à Neotrantor, Orateur. Plus rapide. Plus traître. On embarque ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "boat",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On embarque"
+			},
+			"reaction": {
+				"FR": "La barge glisse sur le fleuve de mercure. Askone s'éloigne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On regagne Askone à pied. La lumisoie attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24801,
+		"label": "transmuter_trade_24801",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:bargemaster",
+		"question": {
+			"FR": "Un remous violent secoue la barge. Des caisses de transmuteurs menacent de basculer par-dessus bord."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.items_overboard_river",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "boat",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On sauve les caisses"
+			},
+			"reaction": {
+				"FR": "On rattrape les caisses au prix de quelques côtes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On stabilise la barge"
+			},
+			"reaction": {
+				"FR": "La barge tient ; une caisse, elle, sombre dans le mercure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24802,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24802,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24802,
+		"label": "transmuter_trade_24802",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Votre contact, accroupi à la proue, scrute la berge. « Des pillards de Neotrantor remontent le fleuve. On force le passage ou on se planque ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "visit_yizhou_river",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On force"
+			},
+			"reaction": {
+				"FR": "On passe au moteur plein, blasters armés. Risqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se planque"
+			},
+			"reaction": {
+				"FR": "On se tapit sous les roseaux métalliques. Le cœur bat fort."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24803,
+		"label": "transmuter_trade_24803",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:bargemaster",
+		"question": {
+			"FR": "Le maître-batelier jure : « Rapides en vue ! On allège ou on tient la cargaison ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On allège"
+			},
+			"reaction": {
+				"FR": "On jette du lest. La barge bondit — mais la cargaison maigrit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient la cargaison"
+			},
+			"reaction": {
+				"FR": "On garde tout. La barge gémit dans les rapides."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24804,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "boat",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24804,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24804,
+		"label": "transmuter_trade_24804",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le courant s'accélère. Votre contact crie de pagayer comme un damné."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.paddling_hard",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pagaie"
+			},
+			"reaction": {
+				"FR": "À bout de bras, on franchit la passe. Épuisant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse filer"
+			},
+			"reaction": {
+				"FR": "On laisse le courant décider. La coque encaisse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24805,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "boat",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 24805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24805,
+		"label": "transmuter_trade_24805",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:caravan_hand",
+		"question": {
+			"FR": "Un homme d'équipage bascule par-dessus bord dans le mercure bouillonnant !"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.man_overboard",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On plonge le sauver"
+			},
+			"reaction": {
+				"FR": "On le hisse à bord, trempé et vivant. La cargaison, elle, a dérivé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le cap"
+			},
+			"reaction": {
+				"FR": "On ne peut pas tout sauver. Le fleuve garde son dû."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24806,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_boat_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24806,
+		"label": "transmuter_trade_24806",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:bargemaster",
+		"question": {
+			"FR": "La barge prend l'eau. Le maître-batelier hurle : « On écope ou on accoste ! »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On écope"
+			},
+			"reaction": {
+				"FR": "On vide la coque à la louche. La barge tient bon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accoste"
+			},
+			"reaction": {
+				"FR": "On échoue la barge sur un banc. Sauvés — mais en retard."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "boat",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_boat_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_boat_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24807,
+		"label": "transmuter_trade_24807",
+		"deck": "transmuter_trade",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La barge se retourne dans les rapides. Le mercure froid se referme sur vous."
+		},
+		"conditions": [
+			{
+				"variable": "boat",
+				"op": "below",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.upturnedboat_river",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lutte"
+			},
+			"reaction": {
+				"FR": "On lutte. Le fleuve gagne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lâche prise"
+			},
+			"reaction": {
+				"FR": "Le courant emporte l'Orateur et son secret au fond."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_noyade",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_noyade",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 24808,
+		"label": "transmuter_trade_24808",
+		"deck": "transmuter_trade",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Trempés mais vivants, vous accostez aux quais scintillants de Neotrantor. Le grand marché vous attend."
+		},
+		"conditions": [
+			{
+				"variable": "boat",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "visit_yizhou_river",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On débarque"
+			},
+			"reaction": {
+				"FR": "Pied à terre sur Neotrantor, la cité-vestige de l'Empire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reprend souffle"
+			},
+			"reaction": {
+				"FR": "Un instant pour souffler, puis le marché."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "neotrantor",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "neotrantor",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24809,
+		"label": "transmuter_trade_24809",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur tâte les bêtes de bât. « La voie des montagnes, Orateur. Longue, mais discrète. Vos montures sont-elles d'attaque ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "stamina",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend la montagne"
+			},
+			"reaction": {
+				"FR": "La caravane s'ébranle vers les cols de Neotrantor."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rebrousse chemin"
+			},
+			"reaction": {
+				"FR": "On renonce à la montagne et on file vers Askone."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_exhausted_horses",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24810,
+		"label": "transmuter_trade_24810",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur fronce les sourcils : « Les bêtes sont déjà fourbues. On pousse, ou on les ménage ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "stamina",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pousse"
+			},
+			"reaction": {
+				"FR": "On force l'allure. Les bêtes soufflent, mais on avance."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les ménage"
+			},
+			"reaction": {
+				"FR": "On ralentit. Plus sûr — et plus lent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_exhausted_horses",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_exhausted_horses",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24811,
+		"label": "transmuter_trade_24811",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde grogne : « La caravane traîne. Les coffres sont vides, on ne peut pas payer de porteurs. »"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "visit_yizhou_mountain",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On porte soi-même"
+			},
+			"reaction": {
+				"FR": "On charge la lumisoie sur son dos. Le dos s'en souviendra."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On abandonne du fret"
+			},
+			"reaction": {
+				"FR": "On délaisse une partie du fret. La caravane respire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_slow_walkers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_slow_walkers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "stamina",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24812,
+		"label": "transmuter_trade_24812",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde sourit : « Les coffres sont pleins, Orateur. Engageons des porteurs de Neotrantor pour franchir les cols. »"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 29
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "visit_yizhou_mountain",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On engage des porteurs"
+			},
+			"reaction": {
+				"FR": "Des porteurs robustes allègent la caravane. Coûteux, efficace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On économise"
+			},
+			"reaction": {
+				"FR": "On garde les crédits et la sueur. La montée sera rude."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_slow_walkers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_slow_walkers",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "stamina",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24813,
+		"label": "transmuter_trade_24813",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Votre contact repère des éclaireurs de Neotrantor sur la crête. « Ils nous observent. On les salue, ou on disparaît ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les salue"
+			},
+			"reaction": {
+				"FR": "Un salut franc désarme les éclaireurs. Pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On disparaît"
+			},
+			"reaction": {
+				"FR": "On se fond dans la rocaille. Discret, mais on perd du temps."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24814,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24814,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24814,
+		"label": "transmuter_trade_24814",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde propose un raccourci par une faille obscure."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend le raccourci"
+			},
+			"reaction": {
+				"FR": "La faille gagne une journée. Et glace le sang."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la piste sûre"
+			},
+			"reaction": {
+				"FR": "On reste sur la piste battue, lente et fourbue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24815,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "stamina",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_travel_faster",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24815,
+		"label": "transmuter_trade_24815",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:caravan_hand",
+		"question": {
+			"FR": "L'altitude joue des tours. Un homme d'équipage jure voir des silhouettes de métal danser entre les rochers."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "hallucinated",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On calme l'homme. L'air raréfié, rien de plus. Sans doute."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'inquiète aussi"
+			},
+			"reaction": {
+				"FR": "Le doute gagne la caravane. Les blasters sortent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24816,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24816,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24816,
+		"label": "transmuter_trade_24816",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:mountain_guide",
+		"question": {
+			"FR": "Le maître de montagne pointe une ombre immense au fond du col. « Ça, ce n'est pas l'altitude. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approche"
+			},
+			"reaction": {
+				"FR": "On avance, lampe levée, vers la forme tapie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On contourne"
+			},
+			"reaction": {
+				"FR": "On prend un détour prudent. L'ombre ne bouge pas. Pour l'instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24817,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "stamina",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 24817,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24817,
+		"label": "transmuter_trade_24817",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pack_master",
+		"question": {
+			"FR": "Le maître de bât retient les bêtes affolées devant un colosse de métal rouillé — un robot de guerre impérial, dormant depuis mille ans."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "animal",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le réveille"
+			},
+			"reaction": {
+				"FR": "On gratte la rouille de sa plaque. Un œil s'allume. Erreur ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe en silence"
+			},
+			"reaction": {
+				"FR": "On retient son souffle et on franchit le col. Le colosse dort."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24818,
+		"label": "transmuter_trade_24818",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pack_master",
+		"question": {
+			"FR": "Le robot impérial entrouvre un œil de braise. Le maître de bât blêmit : « Un mot de trop et il nous broie tous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "animal",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui parle"
+			},
+			"reaction": {
+				"FR": "On récite un vieux code impérial. Le robot hésite, puis se rendort."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recule lentement"
+			},
+			"reaction": {
+				"FR": "Pas après pas, on s'éloigne. Le colosse retombe dans son rêve de fer."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mountain_destination",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24819,
+		"label": "transmuter_trade_24819",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pack_master",
+		"question": {
+			"FR": "Le robot de guerre se dresse de toute sa hauteur. Vos crédits ne lui font ni chaud ni froid."
+		},
+		"conditions": [
+			{
+				"variable": "hallucinated",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 20
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fuit"
+			},
+			"reaction": {
+				"FR": "On fuit. Le bras de métal est plus rapide."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On supplie"
+			},
+			"reaction": {
+				"FR": "Une machine ne connaît pas la pitié. Elle vous emporte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 24820,
+		"label": "transmuter_trade_24820",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pack_master",
+		"question": {
+			"FR": "Épuisé, vous trébuchez sous l'œil du colosse impérial. Vos jambes ne répondent plus."
+		},
+		"conditions": [
+			{
+				"variable": "hallucinated",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "stamina",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rampe"
+			},
+			"reaction": {
+				"FR": "On rampe. Le métal se penche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'effondre"
+			},
+			"reaction": {
+				"FR": "L'épuisement vous cloue au sol. Le robot vous cueille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 24821,
+		"label": "transmuter_trade_24821",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Ruiné, sans rien à offrir, vous affrontez le gardien de fer les mains vides."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On bluffe"
+			},
+			"reaction": {
+				"FR": "Le bluff ne marche pas sur une machine. Elle vous saisit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se rend"
+			},
+			"reaction": {
+				"FR": "Se rendre à un robot ? Il ne sait pas ce que ça veut dire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 24822,
+		"label": "transmuter_trade_24822",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:caravan_hand",
+		"question": {
+			"FR": "Sans escorte, sans arme, vous êtes seul face au colosse impérial."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On combat"
+			},
+			"reaction": {
+				"FR": "On frappe le métal. Le métal ne sent rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On détale"
+			},
+			"reaction": {
+				"FR": "Trop tard. Le bras de fer se referme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_emporte_par_robot",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 24823,
+		"label": "transmuter_trade_24823",
+		"deck": "transmuter_trade",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le col franchi, la caravane débouche sur les terrasses brillantes de Neotrantor. Le grand marché s'étale en contrebas."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "visit_yizhou_mountain",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On descend"
+			},
+			"reaction": {
+				"FR": "Pied à terre sur Neotrantor, fourbus mais entiers."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On souffle d'abord"
+			},
+			"reaction": {
+				"FR": "Un instant de répit, puis la cohue du marché."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "neotrantor",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "neotrantor",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24824,
+		"label": "transmuter_trade_24824",
+		"deck": "transmuter_trade",
+		"weight": 6000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Au grand marché, un marchand de lumisoie déploie une étoffe qui change de couleur au moindre souffle. « Magnifique, n'est-ce pas ? Et hors de prix. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On marchande"
+			},
+			"reaction": {
+				"FR": "On arrache un meilleur prix à force de palabres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On paie le prix fort"
+			},
+			"reaction": {
+				"FR": "On paie sans broncher. Le marchand en reste coi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_expensive_silk",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_expensive_silk",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24825,
+		"label": "transmuter_trade_24825",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "« Vous venez par le fleuve », note le marchand. « Alors c'est à Terminus que cette lumisoie se vendra le mieux. »"
+		},
+		"conditions": [
+			{
+				"variable": "visit_yizhou_river",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On note la destination"
+			},
+			"reaction": {
+				"FR": "Terminus. On grave la route dans sa mémoire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite sur la destination. Le marchand s'impatiente."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bring_silk_to_jingzhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24826,
+		"label": "transmuter_trade_24826",
+		"deck": "transmuter_trade",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "« Vous venez par les cols », dit le marchand. « Askone paiera cette lumisoie au prix de l'or. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On note la destination"
+			},
+			"reaction": {
+				"FR": "Askone. La route se dessine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On tergiverse. Le marchand hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bring_silk_to_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24827,
+		"label": "transmuter_trade_24827",
+		"deck": "transmuter_trade",
+		"weight": 1200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Le marchand vous toise : « Acheter la lumisoie, c'est bien. La tisser soi-même, c'est l'art. Voulez-vous apprendre le métier ? »"
+		},
+		"conditions": [
+			{
+				"variable": "weaver",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On apprend"
+			},
+			"reaction": {
+				"FR": "Le marchand vous installe devant un métier à champ-de-force."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "« Tant pis. Un revendeur de plus, un artiste de moins. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24828,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "weaver",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24828,
+		"label": "transmuter_trade_24828",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "L'artisan transmuteur tend la navette luminescente. « Premier passage. Suivez le fil de lumière — ou perdez le motif. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On commence"
+			},
+			"reaction": {
+				"FR": "Les doigts tremblent sur la navette. Le fil s'allume."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On observe encore"
+			},
+			"reaction": {
+				"FR": "On regarde l'artisan une fois de plus. Le motif est diabolique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24829,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24829,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24829,
+		"label": "transmuter_trade_24829",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Le métier bourdonne. L'artisan désigne la trame : « De droite à gauche, cette fois. Vous suivez ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit"
+			},
+			"reaction": {
+				"FR": "La navette file droit. Le motif tient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On improvise"
+			},
+			"reaction": {
+				"FR": "On improvise un détour. L'artisan grimace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24830,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24830,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24830,
+		"label": "transmuter_trade_24830",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "Le fil de lumière vacille. L'artisan transmuteur attend votre geste : lancer la navette à droite, ou repartir de l'autre côté ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "À droite"
+			},
+			"reaction": {
+				"FR": "La navette plonge à droite. Le motif progresse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On repart"
+			},
+			"reaction": {
+				"FR": "On reprend la trame depuis l'autre bord. Plus sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24831,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_from_right",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24831,
+		"label": "transmuter_trade_24831",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "Le motif s'étoffe. Encore un passage délicat sous l'œil de l'artisan."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On poursuit"
+			},
+			"reaction": {
+				"FR": "Le fil s'enroule juste. L'étoffe scintille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recommence la rangée"
+			},
+			"reaction": {
+				"FR": "On défait la rangée pour mieux la refaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24832,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_from_right",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24832,
+		"label": "transmuter_trade_24832",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "La trame se tend dangereusement. Un faux mouvement et tout se défait."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On retraverse"
+			},
+			"reaction": {
+				"FR": "On ramène la navette en douceur. Ouf."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On force le passage"
+			},
+			"reaction": {
+				"FR": "On force — et le fil casse net. À refaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_back_across",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24833,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24833,
+		"label": "transmuter_trade_24833",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "L'artisan pointe une boucle ratée dans le motif. « Là. Vous la corrigez ou vous l'assumez ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On corrige"
+			},
+			"reaction": {
+				"FR": "On défait la boucle, patiemment. Le motif redevient pur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'assume"
+			},
+			"reaction": {
+				"FR": "On garde la boucle. « Un défaut d'auteur », plaisante l'artisan."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24834,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_from_right",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24834,
+		"label": "transmuter_trade_24834",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "Le champ-de-force grésille. L'étoffe est presque achevée."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On retraverse"
+			},
+			"reaction": {
+				"FR": "Dernier passage maîtrisé. La lumisoie ondule, parfaite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accélère"
+			},
+			"reaction": {
+				"FR": "On précipite la fin — et on emmêle les fils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_back_across",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24835,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24835,
+		"label": "transmuter_trade_24835",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "Plus que quelques fils. L'artisan retient son souffle."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On termine"
+			},
+			"reaction": {
+				"FR": "Les derniers fils se rangent. L'œuvre est belle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On retraverse encore"
+			},
+			"reaction": {
+				"FR": "On refait un passage par prudence. L'artisan approuve."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24836,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_back_across",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 24836,
+		"label": "transmuter_trade_24836",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "Le motif réclame une dernière torsade savante."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On torsade"
+			},
+			"reaction": {
+				"FR": "La torsade prend, lumineuse. Magistral."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On simplifie"
+			},
+			"reaction": {
+				"FR": "On simplifie — l'étoffe perd un peu de son éclat."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24837,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_back_across",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24837,
+		"label": "transmuter_trade_24837",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_artisan",
+		"question": {
+			"FR": "L'étoffe est prête à être détachée du métier. Un geste de trop la déchirerait."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On détache doucement"
+			},
+			"reaction": {
+				"FR": "L'étoffe se libère, intacte et chatoyante."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tire un coup sec"
+			},
+			"reaction": {
+				"FR": "On tire trop fort — un accroc au coin. Dommage."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_weave_back_across",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24838,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24838,
+		"label": "transmuter_trade_24838",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Le marchand examine votre première lumisoie tissée à la main. Verdict ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On attend son avis"
+			},
+			"reaction": {
+				"FR": "« Pas mal, pour un Orateur. Vraiment pas mal. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On défend mon travail"
+			},
+			"reaction": {
+				"FR": "Vous plaidez pour votre œuvre. Le marchand sourit, conquis."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24839,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24839,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 24839,
+		"label": "transmuter_trade_24839",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:loom_apprentice",
+		"question": {
+			"FR": "L'apprenti tisserand range la navette et vous tend votre étoffe. Un premier métier appris."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "weaver",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'empoche"
+			},
+			"reaction": {
+				"FR": "La lumisoie rejoint la cargaison. Et le savoir, votre tête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la lui offre"
+			},
+			"reaction": {
+				"FR": "Vous offrez la pièce à l'apprenti, ému. Beau geste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 24840,
+		"label": "transmuter_trade_24840",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Le marchand vous défie : « Encore une pièce ? On dit qu'on n'est tisserand qu'à la deuxième. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On retente"
+			},
+			"reaction": {
+				"FR": "On se réinstalle au métier, les doigts plus sûrs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'arrête là"
+			},
+			"reaction": {
+				"FR": "Une pièce suffit pour aujourd'hui. Le marchand hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_try_weaving",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24841,
+		"label": "transmuter_trade_24841",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "L'étoffe précédente s'est défaite au lavage. L'artisan soupire : « Recommençons. La lumisoie ne pardonne pas. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "weaver",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On recommence"
+			},
+			"reaction": {
+				"FR": "On reprend le métier, têtu. La maîtrise se gagne au fil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On renonce, dépité. Le métier reste froid."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_try_weaving",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24842,
+		"label": "transmuter_trade_24842",
+		"deck": "transmuter_trade",
+		"weight": 900,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Le marchand vous propose de perfectionner votre art avant de partir."
+		},
+		"conditions": [
+			{
+				"variable": "weaver",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "weaver",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se perfectionne"
+			},
+			"reaction": {
+				"FR": "Une session de plus, et la lumisoie n'a plus de secret."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On part vendre"
+			},
+			"reaction": {
+				"FR": "Assez tissé — il est temps de vendre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_start_weaving",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24843,
+		"label": "transmuter_trade_24843",
+		"deck": "transmuter_trade",
+		"weight": 900,
+		"lockturn": 72,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Loin de Neotrantor, votre savoir de tisserand attire les regards. Un noble vous presse de fonder un atelier ici même."
+		},
+		"conditions": [
+			{
+				"variable": "weaver",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "neotrantor"
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 51
+			},
+			{
+				"variable": "seen_2488",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fonde l'atelier"
+			},
+			"reaction": {
+				"FR": "Un atelier de lumisoie hors de Neotrantor — coup politique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le secret"
+			},
+			"reaction": {
+				"FR": "On préfère garder le secret du métier. Pour l'instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24844,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24844,
+		"label": "transmuter_trade_24844",
+		"deck": "transmuter_trade",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Le secret de la lumisoie vaut une fortune — et bien des ennemis. Le marchand murmure : « Le vendre, ou l'emporter dans la tombe ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le garde"
+			},
+			"reaction": {
+				"FR": "On scelle le secret. Mieux vaut une rente qu'une cible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le monnaie"
+			},
+			"reaction": {
+				"FR": "On vend le procédé. L'or rentre — la concurrence aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "trade_secret",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24845,
+		"label": "transmuter_trade_24845",
+		"deck": "transmuter_trade",
+		"weight": 500,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "À Neotrantor, on vous rappelle que la lumisoie du fleuve est promise à Terminus. Reconfirmez-vous la livraison ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			},
+			{
+				"variable": "visit_yizhou_river",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "bring_silk_to_jingzhou",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On confirme"
+			},
+			"reaction": {
+				"FR": "Terminus, donc. La route se ferme sur sa promesse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On change d'avis"
+			},
+			"reaction": {
+				"FR": "On hésite encore. Le négoce déteste l'hésitation."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bring_silk_to_jingzhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24846,
+		"label": "transmuter_trade_24846",
+		"deck": "transmuter_trade",
+		"weight": 500,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "À Neotrantor, la lumisoie des cols est promise à Askone. Reconfirmez-vous ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "neotrantor"
+			},
+			{
+				"variable": "visit_yizhou_mountain",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "bring_silk_to_hanzhong",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On confirme"
+			},
+			"reaction": {
+				"FR": "Askone, donc. On charge pour le grand saut."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On change d'avis"
+			},
+			"reaction": {
+				"FR": "On tergiverse. La cargaison, elle, n'attend pas."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bring_silk_to_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24847,
+		"label": "transmuter_trade_24847",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "De retour à Terminus, les marchands se pressent autour de votre lumisoie. Vente à la criée, ou à un seul gros acheteur ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "bring_silk_to_jingzhou",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "bring_silk_to_jingzhou",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "À la criée"
+			},
+			"reaction": {
+				"FR": "La criée fait monter les prix. Beau bénéfice."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "À un gros acheteur"
+			},
+			"reaction": {
+				"FR": "Un seul acheteur, discret et généreux. Encore mieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 24848,
+		"label": "transmuter_trade_24848",
+		"deck": "transmuter_trade",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": false,
+		"bearer": "role:transmuter_merchant",
+		"question": {
+			"FR": "Sur Askone, la lumisoie des cols s'arrache. Vente rapide, ou enchère patiente ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "bring_silk_to_hanzhong",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "bring_silk_to_hanzhong",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vente rapide"
+			},
+			"reaction": {
+				"FR": "On écoule vite, à bon prix. Les coffres gonflent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Enchère patiente"
+			},
+			"reaction": {
+				"FR": "On laisse monter l'enchère. La patience paie, en or."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
 		"id": 25200,
 		"label": "encyclopaedia_25200",
 		"deck": "encyclopaedia",

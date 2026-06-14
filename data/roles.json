@@ -103,5 +103,26 @@
 	},
 	"lattice_master": {
 		"title": "Maître du Treillis"
+	},
+	"bargemaster": {
+		"title": "Maître-batelier"
+	},
+	"caravan_hand": {
+		"title": "Homme de caravane"
+	},
+	"mountain_guide": {
+		"title": "Maître de montagne"
+	},
+	"pack_master": {
+		"title": "Maître de bât"
+	},
+	"transmuter_merchant": {
+		"title": "Marchand de lumisoie"
+	},
+	"transmuter_artisan": {
+		"title": "Artisan transmuteur"
+	},
+	"loom_apprentice": {
+		"title": "Apprenti tisserand"
 	}
 }

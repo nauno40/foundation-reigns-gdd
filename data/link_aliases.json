@@ -744,5 +744,44 @@
 	},
 	"EXTERNE:2693": {
 		"action": "enddispatch"
+	},
+	"_boat_destination": {
+		"nodes": [
+			24807,
+			24808
+		]
+	},
+	"_exhausted_horses": {
+		"nodes": [
+			24811,
+			24812
+		]
+	},
+	"_mountain_slow_walkers": {
+		"node": 24813
+	},
+	"_travel_faster": {
+		"node": 24815
+	},
+	"_mountain_destination": {
+		"node": 24823
+	},
+	"_expensive_silk": {
+		"nodes": [
+			24825,
+			24826
+		]
+	},
+	"_weave_from_right": {
+		"node": 24830
+	},
+	"_weave_back_across": {
+		"node": 24838
+	},
+	"_try_weaving": {
+		"node": 24830
+	},
+	"_start_weaving": {
+		"node": 24828
 	}
 }
