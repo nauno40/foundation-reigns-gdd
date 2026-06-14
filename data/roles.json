@@ -124,5 +124,29 @@
 	},
 	"loom_apprentice": {
 		"title": "Apprenti tisserand"
+	},
+	"schism_preacher": {
+		"title": "Prêcheur des Voiles"
+	},
+	"codex_scholar": {
+		"title": "Scholar du codex"
+	},
+	"zealot_captain": {
+		"title": "Capitaine zélote"
+	},
+	"veiled_prophet": {
+		"title": "Prophète Voilé"
+	},
+	"rebel_quartermaster": {
+		"title": "Quartier-maître"
+	},
+	"sect_treasurer": {
+		"title": "Trésorier de la secte"
+	},
+	"imperial_general": {
+		"title": "Général impérial"
+	},
+	"rival_warlord": {
+		"title": "Seigneur rival"
 	}
 }

@@ -25552,6 +25552,4171 @@
 		}
 	},
 	{
+		"id": 24000,
+		"label": "church_schism_24000",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Un prêcheur en haillons dorés s'agenouille devant vous. « Orateur, l'Esprit Galactique revient de notre vivant. Le lirez-vous dans les Écritures Voilées ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lit"
+			},
+			"reaction": {
+				"FR": "On feuillette le texte interdit. Les symboles dansent, troublants."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On repousse le grimoire. Le prêcheur recule, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24001,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24001,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24001,
+		"label": "church_schism_24001",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le scholar du codex pose son doigt sur une ligne chiffrée. « Personne n'a déchiffré ce passage depuis trois siècles. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tente le déchiffrage"
+			},
+			"reaction": {
+				"FR": "On se penche sur le chiffre. Le scholar retient son souffle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On remet à plus tard"
+			},
+			"reaction": {
+				"FR": "On referme le codex. Certaines portes attendent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24002,
+		"label": "church_schism_24002",
+		"deck": "church_schism",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "L'écriture interdite réapparaît, encore plus dense. Le scholar du codex tremble : « C'est une prophétie de date, Orateur. Une date proche. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 185
+			},
+			{
+				"variable": "decode_magic",
+				"op": "equal",
+				"value": -10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "decode_magic",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On décode"
+			},
+			"reaction": {
+				"FR": "On s'attelle au chiffre. La salle se fait silencieuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On brûle le texte"
+			},
+			"reaction": {
+				"FR": "On jette le codex au feu. Le scholar pousse un cri d'horreur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24003,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24003,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24003,
+		"label": "church_schism_24003",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le chiffre résiste. Le scholar propose une clé risquée tirée d'un atome instable."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On essaie la clé"
+			},
+			"reaction": {
+				"FR": "La clé fonctionne — mais le procédé coûte cher en hommes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche autrement"
+			},
+			"reaction": {
+				"FR": "On cherche une voie plus sûre. Plus lente, aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24004,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24005,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "afraid",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24004,
+		"label": "church_schism_24004",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Les symboles s'alignent enfin. Le scholar blêmit devant ce qu'ils révèlent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On poursuit"
+			},
+			"reaction": {
+				"FR": "On lit jusqu'au bout. Ce qui est écrit donne le vertige."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'arrête"
+			},
+			"reaction": {
+				"FR": "On referme avant la fin. Mieux vaut ne pas tout savoir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24005,
+		"label": "church_schism_24005",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Une autre piste de déchiffrage s'ouvre, moins effrayante mais plus floue."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la suit"
+			},
+			"reaction": {
+				"FR": "On suit la piste douce. Le sens reste à demi voilé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On force l'autre voie"
+			},
+			"reaction": {
+				"FR": "On revient au chiffre brutal. Le scholar se signe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24006,
+		"label": "church_schism_24006",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le verdict tombe : soit la prophétie est vraie, soit c'est l'œuvre d'un fou. Le scholar vous regarde : « Que croyons-nous ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "C'est une prophétie"
+			},
+			"reaction": {
+				"FR": "On décrète l'écriture authentique. Le chiffre est percé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est un délire"
+			},
+			"reaction": {
+				"FR": "On classe le tout comme délire d'un illuminé. Le scholar n'est pas convaincu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "decode_magic",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "time_traveller",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "hogwart",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24007,
+		"label": "church_schism_24007",
+		"deck": "church_schism",
+		"weight": 12000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "On rapporte que le Prophète Voilé en personne a lu votre déchiffrage — et qu'il vous réclame."
+		},
+		"conditions": [
+			{
+				"variable": "seen_24032",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 185
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On répond à l'appel"
+			},
+			"reaction": {
+				"FR": "On accepte de rencontrer le Prophète. Imprudent, fascinant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On ignore la convocation. Le mouvement, lui, ne vous oublie pas."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24008,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24008,
+		"label": "church_schism_24008",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Un émissaire des Voiles d'Or vous remet un foulard doré. « Portez-le, et les nôtres vous ouvriront leurs portes. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le porte"
+			},
+			"reaction": {
+				"FR": "Le foulard doré autour du cou, on devient l'un des leurs. En façade."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le refuse"
+			},
+			"reaction": {
+				"FR": "On rend le foulard. La méfiance, des deux côtés, s'épaissit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24009,
+		"label": "church_schism_24009",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Le prêcheur propose de vous mener au camp caché de la secte. « Mais le chemin se mérite. Saurez-vous le trouver ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cherche le chemin"
+			},
+			"reaction": {
+				"FR": "On s'enfonce dans les terres grises à la recherche du camp."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On exige un guide"
+			},
+			"reaction": {
+				"FR": "On refuse l'épreuve et on réclame un guide. Le prêcheur soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding0",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24010,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24010,
+		"label": "church_schism_24010",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Trois sentes se croisent sous un ciel de cendres. Aucune n'est balisée."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "find_the_camp",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "La sente de gauche"
+			},
+			"reaction": {
+				"FR": "On prend à gauche, vers les collines mortes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La sente de droite"
+			},
+			"reaction": {
+				"FR": "On prend à droite, vers la rivière sèche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24011,
+		"label": "church_schism_24011",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Le chemin se perd dans un champ de pylônes rouillés. Lequel suivre ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "find_the_camp",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On longe les pylônes"
+			},
+			"reaction": {
+				"FR": "On longe la ligne de fer. Elle mène quelque part. Peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On coupe à travers"
+			},
+			"reaction": {
+				"FR": "On coupe tout droit dans la friche métallique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24012,
+		"label": "church_schism_24012",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Une grange en ruine se dresse, seule. Le scholar du codex hésite : « Refuge, ou piège ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On entre"
+			},
+			"reaction": {
+				"FR": "On pousse la porte branlante. À l'intérieur, des indices."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On contourne"
+			},
+			"reaction": {
+				"FR": "On préfère contourner la grange suspecte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24013,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding_barn",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24013,
+		"label": "church_schism_24013",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Des traces fraîches dans la poussière. Le prêcheur sourit : « Les nôtres sont passés ici. Par où ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit les traces"
+			},
+			"reaction": {
+				"FR": "On suit la piste fraîche, le cœur battant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On perd la piste"
+			},
+			"reaction": {
+				"FR": "Les traces s'effacent. On tourne en rond. Mauvais."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding0",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_found",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24014,
+		"label": "church_schism_24014",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Une chèvre efflanquée bêle près d'un sentier. Le scholar y voit un signe."
+		},
+		"conditions": [
+			{
+				"variable": "seen_24015",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_goat",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit la chèvre"
+			},
+			"reaction": {
+				"FR": "On suit la bête. Elle vous mène — droit dans un fossé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On laisse la chèvre à ses bêlements et on continue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding2_wrong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 24015,
+		"label": "church_schism_24015",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le capitaine zélote surgit des broussailles, lame au clair. « Halte ! Qui cherche les Voiles d'Or ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_goat",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On parlemente"
+			},
+			"reaction": {
+				"FR": "On parlemente. Le zélote baisse sa lame — un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste muet"
+			},
+			"reaction": {
+				"FR": "On garde le silence. Le zélote rengaine, méfiant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24016,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24016,
+		"label": "church_schism_24016",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le capitaine zélote vous jauge. « Un homme de votre trempe nous serait utile. Vous joignez-vous à nous, ou restez-vous étranger ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "bandit",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rallie"
+			},
+			"reaction": {
+				"FR": "Le zélote crache dans sa paume et la tend. Un allié de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On garde ses distances. Le zélote hausse les épaules, vexé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24017,
+		"label": "church_schism_24017",
+		"deck": "church_schism",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le chemin bifurque encore. Sans le capitaine zélote pour guider, le doute s'installe."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tente la pente"
+			},
+			"reaction": {
+				"FR": "On grimpe la pente raide. Mauvaise pioche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On suit le ruisseau"
+			},
+			"reaction": {
+				"FR": "On suit le lit du ruisseau. Plus prometteur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding2_wrong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24018,
+		"label": "church_schism_24018",
+		"deck": "church_schism",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le capitaine zélote montre deux passages. « L'un mène au camp. L'autre, aux loups. À vous de sentir. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 104
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le passage haut"
+			},
+			"reaction": {
+				"FR": "On choisit le passage haut. Erreur — ça monte vers rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le passage bas"
+			},
+			"reaction": {
+				"FR": "On choisit le passage bas. Le zélote hoche la tête."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding2_wrong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "sad",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24019,
+		"label": "church_schism_24019",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Un froissement dans les buissons métalliques. Embuscade, ou gibier ?"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_bushrustle",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dégaine"
+			},
+			"reaction": {
+				"FR": "On dégaine — c'étaient des éclaireurs amis. Tendu, mais ça passe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste calme"
+			},
+			"reaction": {
+				"FR": "On reste calme. Bien vu : de simples charognards."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24020,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24020,
+		"label": "church_schism_24020",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le capitaine zélote bondit le premier dans le fourré. « Couvrez-moi, Orateur ! »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "bandit",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le couvre"
+			},
+			"reaction": {
+				"FR": "On le couvre au blaster. L'embuscade tourne à votre avantage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le suit"
+			},
+			"reaction": {
+				"FR": "On le suit dans le fourré, lame contre lame."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24021,
+		"label": "church_schism_24021",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Un grognement de sanglier de fer résonne — un drone-traqueur impérial rôde."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 104
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_boar_squealing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'évite"
+			},
+			"reaction": {
+				"FR": "On contourne le drone. Discrétion salutaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'abat"
+			},
+			"reaction": {
+				"FR": "On abat le drone-traqueur. Bruyant, mais satisfaisant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding3",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24022,
+		"label": "church_schism_24022",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Au sommet d'une crête, une vallée s'ouvre. Des feux scintillent en bas — le camp, enfin ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On descend"
+			},
+			"reaction": {
+				"FR": "On dévale vers les feux. Le camp des Voiles d'Or se dessine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On observe d'abord"
+			},
+			"reaction": {
+				"FR": "On observe la vallée avant de s'y risquer."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding4",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24023,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24023,
+		"label": "church_schism_24023",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Le prêcheur s'arrête, grave. « Au-delà, c'est leur cœur sacré. On n'y entre pas les mains vides. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On offre un présent"
+			},
+			"reaction": {
+				"FR": "On offre un atome-relique. Les portes du camp s'entrouvrent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On entre sans rien"
+			},
+			"reaction": {
+				"FR": "On entre les mains vides. Les gardes se raidissent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pathfinding0",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_found",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24024,
+		"label": "church_schism_24024",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Les sentinelles du camp vous encerclent. Un mot de travers et c'est fini."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On donne le mot de passe"
+			},
+			"reaction": {
+				"FR": "Le foulard doré parle pour vous. On vous laisse passer."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On improvise"
+			},
+			"reaction": {
+				"FR": "On bafouille une formule. Les sentinelles hésitent… puis cèdent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24025,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_found",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24025,
+		"label": "church_schism_24025",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Au centre du camp, une foule en haillons dorés psalmodie. Tous se tournent vers vous."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les salue"
+			},
+			"reaction": {
+				"FR": "On lève la main. La foule répond d'un murmure d'or."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On baisse les yeux"
+			},
+			"reaction": {
+				"FR": "On baisse les yeux, modeste. La foule s'écarte, intriguée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_found",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_found",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24026,
+		"label": "church_schism_24026",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le capitaine zélote vous présente aux guerriers du camp. « Voici celui qui a percé l'Écriture Voilée. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "find_the_camp",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On galvanise les troupes"
+			},
+			"reaction": {
+				"FR": "On harangue les zélotes. Ils grondent d'enthousiasme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On laisse le capitaine parler. Sage prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24027,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24027,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24027,
+		"label": "church_schism_24027",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Les éclaireurs annoncent une colonne orthodoxe en approche. Le capitaine zélote serre son arme : « On les attend ou on frappe ? »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 104
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "bandit",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On frappe les premiers"
+			},
+			"reaction": {
+				"FR": "On lance l'assaut. Le sang d'or coule le premier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les attend"
+			},
+			"reaction": {
+				"FR": "On se retranche. Que l'orthodoxie vienne se briser ici."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_battle",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 104,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_battle",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24028,
+		"label": "church_schism_24028",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Avec le capitaine zélote à vos côtés, la première bataille des Voiles d'Or s'engage."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 104
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "find_the_camp",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On charge"
+			},
+			"reaction": {
+				"FR": "On charge derrière les bannières dorées. Le choc est terrible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient la ligne"
+			},
+			"reaction": {
+				"FR": "On tient la ligne, serrés. Les orthodoxes butent dessus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_battle",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_first_battle",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24029,
+		"label": "church_schism_24029",
+		"deck": "church_schism",
+		"weight": 10,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Le Prophète Voilé en personne lève son bâton-atome au-dessus de la mêlée. « Frappez ! L'Esprit est avec nous ! »"
+		},
+		"conditions": [
+			{
+				"variable": "seen_24032",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit le Prophète"
+			},
+			"reaction": {
+				"FR": "On combat sous son ombre dorée. Les rangs orthodoxes plient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On doute"
+			},
+			"reaction": {
+				"FR": "On hésite une seconde de trop. La ligne vacille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24030,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24030,
+		"label": "church_schism_24030",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "La bataille bascule. Une percée s'offre droit au cœur ennemi."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'exploite"
+			},
+			"reaction": {
+				"FR": "On enfonce la brèche. Victoire des Voiles d'Or !"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On consolide"
+			},
+			"reaction": {
+				"FR": "On consolide au lieu de percer. L'élan retombe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.yellow",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24031,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24031,
+		"label": "church_schism_24031",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le capitaine zélote, blessé, vous tend sa bannière. « Portez-la… jusqu'au bout. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la brandit"
+			},
+			"reaction": {
+				"FR": "On lève la bannière dorée. Les zélotes rugissent et chargent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le couvre"
+			},
+			"reaction": {
+				"FR": "On le tire à l'abri d'abord. La bannière attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.yellow",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.yellow",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24032,
+		"label": "church_schism_24032",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Au soir de la bataille, le Prophète Voilé gît, foudroyé par un canon orthodoxe. Son quartier-maître pleure : « Le Voilé est mort. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On recueille ses paroles"
+			},
+			"reaction": {
+				"FR": "Le Prophète murmure une dernière prophétie, puis s'éteint."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ordonne la retraite"
+			},
+			"reaction": {
+				"FR": "On sonne la retraite. Le corps du Prophète part avec nous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24033,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24033,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24033,
+		"label": "church_schism_24033",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Le quartier-maître s'agenouille devant vous : « Le Prophète n'est plus. Ses lieutenants vous suivront — si vous les prenez. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les accueille"
+			},
+			"reaction": {
+				"FR": "Deux lieutenants des Voiles d'Or se rangent sous votre bannière."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les renvoie"
+			},
+			"reaction": {
+				"FR": "On congédie les lieutenants. Le mouvement se disperse un peu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 128,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 197,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 128,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 197,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24034,
+		"label": "church_schism_24034",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Des mois après le martyre, l'Écriture Voilée que vous avez décodée circule de monde en monde. Faut-il l'authentifier publiquement ?"
+		},
+		"conditions": [
+			{
+				"variable": "decode_magic",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "seen_24032",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 8
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'authentifie"
+			},
+			"reaction": {
+				"FR": "On scelle l'Écriture du sceau de l'Orateur. Elle devient loi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la laisse rumeur"
+			},
+			"reaction": {
+				"FR": "On laisse l'Écriture à l'état de rumeur. Plus maniable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:208",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:208",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24035,
+		"label": "church_schism_24035",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Sans Prophète, les Voiles d'Or se déchirent. On vient vous supplier de trancher leur avenir."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 12
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend les choses en main"
+			},
+			"reaction": {
+				"FR": "On s'impose comme arbitre du mouvement orphelin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse les factions se débrouiller. Le chaos guette."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_after_zhang_jiao_death",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_after_zhang_jiao_death",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24036,
+		"label": "church_schism_24036",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le quartier-maître pose la question qui brûle : « Servirons-nous un nouveau maître… ou serons-nous notre propre maître, Orateur ? »"
+		},
+		"conditions": [
+			{
+				"variable": "essential_art_of_peace",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend la tête"
+			},
+			"reaction": {
+				"FR": "On accepte de mener les Voiles d'Or. Le poids est immense."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche un chef"
+			},
+			"reaction": {
+				"FR": "On refuse la couronne d'épines et on cherche un autre chef."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_be_our_own_lead",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 24037,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 24037,
+		"label": "church_schism_24037",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Les lieutenants débattent du nom à donner au mouvement renaissant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rebaptise"
+			},
+			"reaction": {
+				"FR": "Un nouveau nom, une nouvelle bannière. Le mouvement renaît."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde l'ancien nom"
+			},
+			"reaction": {
+				"FR": "On garde « les Voiles d'Or ». La mémoire du Prophète l'exige."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24038,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24038,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24038,
+		"label": "church_schism_24038",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Le prêcheur veut prêcher l'insurrection ouverte. Le quartier-maître prône la patience."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prêche l'insurrection"
+			},
+			"reaction": {
+				"FR": "On déchaîne les sermons de feu. La périphérie s'embrase."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On calme les ardeurs. Le mouvement grandit dans l'ombre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24039,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24039,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24039,
+		"label": "church_schism_24039",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Un lieutenant zélote propose une cible : un temple orthodoxe richement doté."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'attaque"
+			},
+			"reaction": {
+				"FR": "On pille le temple orthodoxe. Les coffres se remplissent, les ennemis aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'épargne"
+			},
+			"reaction": {
+				"FR": "On épargne le temple. La modération étonne — et déçoit certains."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24040,
+		"label": "church_schism_24040",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "L'Écriture Voilée en main, faut-il en faire la doctrine officielle du mouvement ?"
+		},
+		"conditions": [
+			{
+				"variable": "essential_art_of_peace",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On en fait dogme"
+			},
+			"reaction": {
+				"FR": "L'Écriture devient dogme. Les fidèles affluent, fanatisés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste souple"
+			},
+			"reaction": {
+				"FR": "On garde la doctrine ouverte. Plus sage, moins enflammé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_be_our_own_lead",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "time_traveller",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 24041,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24041,
+		"label": "church_schism_24041",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le lieutenant zélote insiste pour une démonstration de force immédiate."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On démontre la force"
+			},
+			"reaction": {
+				"FR": "On frappe fort et vite. La réputation des Voiles d'Or enfle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On retient le zélote. La prudence l'agace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24042,
+		"label": "church_schism_24042",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Un autre lieutenant suggère de nouer une alliance avec des seigneurs mécontents."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'allie"
+			},
+			"reaction": {
+				"FR": "On scelle un pacte discret avec des nobles aigris."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste indépendant"
+			},
+			"reaction": {
+				"FR": "On refuse les alliances. Le mouvement marchera seul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_cang_suggestion",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24043,
+		"label": "church_schism_24043",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "Le quartier-maître déroule une carte : « Pour durer, il nous faut une base. Cette cité-temple ferait l'affaire — si on la prend de force. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "find_a_base",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la prend de force"
+			},
+			"reaction": {
+				"FR": "On assaille la cité-temple. Le sang coule, la base est nôtre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche ailleurs"
+			},
+			"reaction": {
+				"FR": "On renonce à l'assaut sanglant et on cherche un autre refuge."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.defendertown",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24044,
+		"label": "church_schism_24044",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:zealot_captain",
+		"question": {
+			"FR": "La cité-temple tombe. Deux capitaines locaux vous prêtent serment, et le monde tout entier bascule dans votre giron."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.base_collapse",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "find_a_base",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "magistrate",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On consolide la base"
+			},
+			"reaction": {
+				"FR": "On fortifie la nouvelle capitale des Voiles d'Or. Un bastion est né."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la pille d'abord"
+			},
+			"reaction": {
+				"FR": "On pille avant de bâtir. Riche butin, fondations fragiles."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 101,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 100,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 101,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 100,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24045,
+		"label": "church_schism_24045",
+		"deck": "church_schism",
+		"weight": 1000,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "À la tête du mouvement, vous tranchez les querelles quotidiennes des Voiles d'Or. Justice rude, ou clémence ?"
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Justice rude"
+			},
+			"reaction": {
+				"FR": "On juge durement. L'ordre règne — par la peur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Clémence"
+			},
+			"reaction": {
+				"FR": "On juge avec douceur. Les fidèles vous aiment, les rivaux vous méprisent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 24046,
+		"label": "church_schism_24046",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sect_treasurer",
+		"question": {
+			"FR": "Le trésorier de la secte vous alerte : les armes manquent pour tenir la base."
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "essential_art_of_peace",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réarme"
+			},
+			"reaction": {
+				"FR": "On vide les coffres pour réarmer. Les bras se garnissent d'acier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rationne"
+			},
+			"reaction": {
+				"FR": "On rationne l'armement. Risqué, mais le trésor tient."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24047,
+		"label": "church_schism_24047",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial dépêche un héraut : il offre l'amnistie si vous dissolvez le mouvement."
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On refuse l'amnistie"
+			},
+			"reaction": {
+				"FR": "On renvoie le héraut. Les Voiles d'Or ne se rendent pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On négocie"
+			},
+			"reaction": {
+				"FR": "On négocie en coulisse. La trahison ou la survie ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24048,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24048,
+		"label": "church_schism_24048",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Le quartier-maître vous presse de proclamer un sermon d'unité avant l'orage."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prêche l'unité"
+			},
+			"reaction": {
+				"FR": "On prêche. Les Voiles d'Or se resserrent, prêts à mourir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On prépare la guerre en silence"
+			},
+			"reaction": {
+				"FR": "On laisse les sermons et on affûte les lames."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24049,
+		"label": "church_schism_24049",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Un seigneur rival affaibli vous demande asile. Le prendre, c'est un allié — et un rapace à votre table."
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "liu_bei",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "liu_bei_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui ouvre la porte"
+			},
+			"reaction": {
+				"FR": "On accueille le rival affaibli. Un couteau de plus dans le dos, peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le chasse"
+			},
+			"reaction": {
+				"FR": "On chasse le rival. Un ennemi clair vaut mieux qu'un faux ami."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24050,
+		"label": "church_schism_24050",
+		"deck": "church_schism",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le seigneur rival, désormais puissant, exige une part du mouvement."
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "liu_bei",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "liu_bei_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cède une part"
+			},
+			"reaction": {
+				"FR": "On lui concède une part. La paix, au prix de l'autorité."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le brise"
+			},
+			"reaction": {
+				"FR": "On brise le rival ambitieux. Le mouvement chancelle de la secousse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 24051,
+		"label": "church_schism_24051",
+		"deck": "church_schism",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Hors de la base, le mouvement s'étiole faute de discipline. Le Prophète défunt aurait-il toléré ce relâchement ?"
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reprend en main"
+			},
+			"reaction": {
+				"FR": "On rétablit la discipline de fer. Les murmures grondent, l'ordre revient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse couler"
+			},
+			"reaction": {
+				"FR": "On ferme les yeux sur le relâchement. Le confort endort la cause."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24052,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_soft_bed",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24052,
+		"label": "church_schism_24052",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le scholar du codex vous tente : transformer le bastion en cité de luxe pour amadouer les notables."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On embellit la cité"
+			},
+			"reaction": {
+				"FR": "On dore le bastion. Les notables affluent, les puristes fulminent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde l'austérité"
+			},
+			"reaction": {
+				"FR": "On garde l'austérité du Prophète. Pauvre, mais pure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_soft_bed",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_soft_bed",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24053,
+		"label": "church_schism_24053",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Le mouvement s'installe enfin. Le monde entier reconnaît votre autorité — lit de plumes ou siège du pouvoir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "magistrate",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_sayshell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'installe au pouvoir"
+			},
+			"reaction": {
+				"FR": "On fonde une vraie capitale. Les Voiles d'Or ont un État."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On refuse le faste. Le bastion reste un camp, pas un trône."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "find_a_base",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "find_a_base",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 24054,
+		"label": "church_schism_24054",
+		"deck": "church_schism",
+		"weight": 100,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial marche enfin sur votre bastion en force. L'heure de vérité."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 70
+			},
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "deck",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On livre bataille"
+			},
+			"reaction": {
+				"FR": "On affronte l'armée impériale sous les murs. Tout se joue ici."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se replie"
+			},
+			"reaction": {
+				"FR": "On abandonne le bastion pour sauver le mouvement. Amer, mais vivant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.yellow_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.yellow_cao_cao",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24055,
+		"label": "church_schism_24055",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Acculé, le général impérial vous propose un marché : dissoudre les Voiles d'Or contre la vie sauve pour vos fidèles."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dissout le mouvement"
+			},
+			"reaction": {
+				"FR": "On dissout les Voiles d'Or. La foi survit, l'épée tombe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On combat jusqu'au bout"
+			},
+			"reaction": {
+				"FR": "On refuse. Le bastion brûlera plutôt que de se rendre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_church_schism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 24056,
+		"label": "church_schism_24056",
+		"deck": "church_schism",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:schism_preacher",
+		"question": {
+			"FR": "Les années ont passé. Le mouvement, ni vaincu ni victorieux, vacille au bord du gouffre. On attend votre verdict."
+		},
+		"conditions": [
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 188
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On relance la cause"
+			},
+			"reaction": {
+				"FR": "On ranime la flamme dorée. Un dernier sursaut."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse mourir"
+			},
+			"reaction": {
+				"FR": "On laisse les Voiles d'Or s'éteindre doucement. L'Histoire tourne la page."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24057,
+		"label": "church_schism_24057",
+		"deck": "church_schism",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:codex_scholar",
+		"question": {
+			"FR": "Le mouvement n'a plus d'avenir. Le quartier-maître, en larmes, demande comment finir avec dignité."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "yellow_turban_lead",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On négocie une fin"
+			},
+			"reaction": {
+				"FR": "On négocie une reddition honorable. Les fidèles seront épargnés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On sacrifie tout"
+			},
+			"reaction": {
+				"FR": "On choisit le martyre collectif. La légende, au prix du sang."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24058,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24058,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 24058,
+		"label": "church_schism_24058",
+		"deck": "church_schism",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Les Voiles d'Or se dissolvent. Reste à choisir l'héritage : la cendre, ou le mythe."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fait un martyre"
+			},
+			"reaction": {
+				"FR": "On grave le martyre dans toutes les mémoires. La foi gonfle, les armes tombent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On efface les traces"
+			},
+			"reaction": {
+				"FR": "On efface tout. Mieux vaut l'oubli qu'un mythe dangereux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_church_schism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "yellow_turban_lead",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_church_schism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 24059,
+		"label": "church_schism_24059",
+		"deck": "church_schism",
+		"weight": 300,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sect_treasurer",
+		"question": {
+			"FR": "Le trésorier de la secte annonce les caisses presque vides. Lever une dîme sur les fidèles ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lève la dîme"
+			},
+			"reaction": {
+				"FR": "On taxe les fidèles. Les coffres respirent, la ferveur grogne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche un mécène"
+			},
+			"reaction": {
+				"FR": "On cherche un riche protecteur. La dignité a un prix."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 24060,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 24060,
+		"label": "church_schism_24060",
+		"deck": "church_schism",
+		"weight": 300,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Le quartier-maître propose d'ouvrir un marché doré aux portes du bastion pour renflouer la cause."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On ouvre le marché"
+			},
+			"reaction": {
+				"FR": "Le marché doré prospère. L'or rentre, la pureté s'effrite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse le négoce"
+			},
+			"reaction": {
+				"FR": "On refuse de marchander la foi. Pauvres, mais droits."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 24400,
 		"label": "death_24400",
 		"deck": "deaths",

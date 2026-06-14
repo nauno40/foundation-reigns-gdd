@@ -783,5 +783,47 @@
 	},
 	"_start_weaving": {
 		"node": 24828
+	},
+	"_pathfinding0": {
+		"node": 24012
+	},
+	"_pathfinding1": {
+		"node": 24012
+	},
+	"_pathfinding_barn": {
+		"node": 24014
+	},
+	"_pathfinding2": {
+		"node": 24022
+	},
+	"_pathfinding2_wrong": {
+		"node": 24019
+	},
+	"_pathfinding3": {
+		"node": 24022
+	},
+	"_pathfinding4": {
+		"node": 24024
+	},
+	"_found": {
+		"node": 24026
+	},
+	"_first_battle": {
+		"node": 24029
+	},
+	"_after_zhang_jiao_death": {
+		"node": 24036
+	},
+	"_be_our_own_lead": {
+		"node": 24043
+	},
+	"_zhou_cang_suggestion": {
+		"node": 24043
+	},
+	"_soft_bed": {
+		"node": 24053
+	},
+	"EXTERNE:208": {
+		"action": "enddispatch"
 	}
 }
