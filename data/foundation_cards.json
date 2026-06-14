@@ -33401,6 +33401,1985 @@
 		}
 	},
 	{
+		"id": 26800,
+		"label": "lady_callia_26800",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Le maître contrebandier vous glisse un tuyau parfumé : « Sur Korell, deux sœurs font tourner toutes les têtes de la périphérie — les plus belles, les plus rusées. L'aînée, Dame Callia, mène Kalgan par le bout du nez. Approchez-les, et vous tenez la moitié des secrets de la haute société. Si elles ne vous mangent pas avant. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Mettre le cap sur Korell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Éviter ce nid de vipères"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26801,
+		"label": "lady_callia_26801",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Sur Korell, la légende des deux sœurs est partout : salons, rumeurs, soupirs de prétendants ruinés. Dame Callia et sa cadette règnent sur un petit empire de charme et d'information. « Beaucoup les courtisent, » sourit un valet. « Aucun n'en revient indemne. Ni plus riche. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher à les rencontrer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se renseigner d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26802,
+		"label": "lady_callia_26802",
+		"deck": "lady_callia",
+		"weight": 800,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Un jeune lord de Korell, rival ambitieux, vous toise dans l'antichambre des sœurs : « Encore un soupirant ? La file est longue, l'étranger, et moi je suis devant. » Sa morgue cache une vraie rivalité. Approcher Dame Callia, c'est entrer dans une cour où les couteaux sont des compliments."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "callia_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "callia_stage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rivaliser avec le lord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser passer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26803,
+		"label": "lady_callia_26803",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "L'amiral de Korell, présent à la cour des sœurs, vous jauge avec plus de finesse que le jeune lord : « Vous n'avez pas le maintien d'un soupirant ordinaire. Plus... observateur. Dame Callia adore les énigmes. Vous allez la fasciner — ce qui est exactement aussi dangereux que de l'ennuyer. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cultiver le mystère"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer le soupirant banal"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26804,
+		"label": "lady_callia_26804",
+		"deck": "lady_callia",
+		"weight": 700,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le dock-maître, qui connaît tout Korell, vous arrange une présentation aux sœurs : « Un carrosse vous prendra à la nuit. N'arrivez ni trop tôt — vulgaire — ni trop tard — insultant. Et surtout : Dame Callia teste tout le monde. Échouez son test, et vous n'existerez plus pour la haute société. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "callia_stage",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'invitation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander conseil sur le test"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26805,
+		"label": "lady_callia_26805",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le carrosse vous mène au palais des sœurs, scintillant au loin. Le dock-maître vous lâche un dernier conseil : « Dame Callia lit les hommes comme des livres ouverts. Vous, paraît-il, vous savez fermer le vôtre. C'est votre seule chance. Et votre plus grand danger : elle ADORE les livres fermés. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qiaosisters_carriage_distant",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Verrouiller votre esprit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vous fier à votre charme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26806,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 26806,
+		"label": "lady_callia_26806",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "On vous présente aux deux sœurs. Dame Callia, l'aînée, vous transperce d'un regard amusé ; la cadette, plus douce, vous observe en silence. « Voici donc l'étranger énigmatique, » ronronne Callia. « Voyons si vous valez le déplacement, ou si vous n'êtes qu'une rumeur de plus. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "callia_father",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rencontrer les sœurs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Saluer avec révérence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_daughters",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_the_daughters",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26807,
+		"label": "lady_callia_26807",
+		"deck": "lady_callia",
+		"weight": 50,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "La cadette des sœurs, plus réservée, vous touche par sa sincérité au milieu de tant d'artifice : « Ma sœur joue avec les cœurs ; moi, je les écoute. » Dans cette cour de masques, un visage vrai. Vous sentez que c'est ELLE, et non l'éblouissante Callia, qui pourrait compter. Surprise du cœur d'un Orateur."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'intéresser à la cadette"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur Dame Callia"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26808,
+		"label": "lady_callia_26808",
+		"deck": "lady_callia",
+		"weight": 50,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia, voyant votre intérêt pour sa cadette, plisse les yeux — mi-amusée, mi-jalouse : « Tiens. Vous regardez ma sœur. Original. La plupart ne voient que moi. » Sa fierté est piquée, sa curiosité aiguisée. Un jeu à trois s'amorce, où chaque mot pèse et chaque regard compte double."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 30
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Désamorcer sa jalousie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avouer votre préférence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 26809,
+		"label": "lady_callia_26809",
+		"deck": "lady_callia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Un gala se prépare au palais des sœurs — concert, poésie, joutes d'esprit. « Vous y brillerez, ou vous y disparaîtrez, » prévient l'amiral. « La haute société de Korell juge un homme à une soirée. Préparez votre numéro, l'étranger. On ne vous donnera pas de seconde chance d'éblouir. »"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Préparer une prestation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Compter sur l'improvisation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_concert_start",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_concert_start",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26810,
+		"label": "lady_callia_26810",
+		"deck": "lady_callia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia vous lance un défi pour le gala : « Tous mes soupirants offrent des bijoux. Ennuyeux. Offrez-moi quelque chose qu'on ne peut pas ACHETER, et vous m'aurez peut-être impressionnée. Échouez, et rejoignez la longue file des oubliés. » Un test de génie, pas de bourse."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qiaosisters_carriage_distant",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Relever le défi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Demander un indice"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_concert_start",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_concert_start",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26811,
+		"label": "lady_callia_26811",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Le gala bat son plein. Vient votre tour de prestation devant toute la cour de Korell. L'amiral vous adresse un clin d'œil d'encouragement ; le jeune lord, un rictus de mépris. Dame Callia attend, le menton dans la main. Tout se joue maintenant — votre place dans ce monde, et peut-être plus."
+		},
+		"conditions": [
+			{
+				"variable": "callia_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Se lancer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Prendre une grande inspiration"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26812,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26812,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26812,
+		"label": "lady_callia_26812",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Pour votre prestation, vous choisissez la musique — un instrument ancien, le luth de cristal des cours impériales. Mais l'instrument du palais est désaccordé, piège tendu pour les prétendants. L'accorder devant tous, sous les rires retenus, exige nerf et oreille. Première épreuve avant même la première note."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accorder l'instrument"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer malgré le désaccord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26813,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26813,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26813,
+		"label": "lady_callia_26813",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vos doigts cherchent l'accord juste sur le luth de cristal. Un silence moqueur pèse sur la salle — combien de soupirants se sont ridiculisés sur cette corde rebelle ? Votre oreille mentalique, sensible aux moindres vibrations, vous donne un avantage discret. Mais un avantage qui ne doit pas se voir."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accorder à l'oreille fine"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenter au jugé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_qin_tuning_1_good",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_qin_tuning_1_bad",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26814,
+		"label": "lady_callia_26814",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'instrument s'accorde enfin, parfait — un murmure d'étonnement parcourt la cour. Dame Callia hausse un sourcil : « Tiens, tiens. » L'épreuve technique passée, reste la vraie : jouer une mélodie qui touche ces cœurs blasés. Un Mentalique sent ce qui émeut. Encore faut-il le traduire en musique sans tricher."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_tuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jouer du fond du cœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer avec maîtrise"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "gala_tuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_performance_start",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_qin_tuning_1_bad",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26815,
+		"label": "lady_callia_26815",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'accord vous échappe — une fausse note cristalline résonne, et quelques rires fusent. Mais vous transformez l'erreur en grâce : une improvisation autour du défaut, qui surprend plus qu'un jeu parfait. Dame Callia se redresse, intriguée. Parfois, rattraper une chute élègamment vaut mieux que de ne jamais tomber."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.qin_string_chord_untuned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Improviser sur l'erreur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reprendre depuis le début"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_qin_tuning_1_good",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "gala_tuned",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_performance_start",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26816,
+		"label": "lady_callia_26816",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "coalition_admiral",
+		"question": {
+			"FR": "Votre mélodie s'élève, et la cour de Korell se tait pour de bon. Vous jouez non pour éblouir, mais pour ÉMOUVOIR — la cadette a les larmes aux yeux, Dame Callia elle-même oublie de sourire. Dans cette salle de masques, vous venez de faire tomber, l'instant d'une note, tous les visages peints."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Achever la mélodie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Dédier la dernière note à la cadette"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_performance_end",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_performance_end",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26817,
+		"label": "lady_callia_26817",
+		"deck": "lady_callia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "La prestation est un triomphe. Dame Callia applaudit lentement, conquise et méfiante à la fois : « Vous m'avez offert l'inachetable, étranger. Une émotion vraie. Personne n'avait réussi depuis... » Elle s'interrompt, troublée d'avoir presque avoué une faille. « Vous êtes admis dans mon cercle. Méfiez-vous-en. »"
+		},
+		"conditions": [
+			{
+				"variable": "gala_tuned",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter l'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester humble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26818,
+		"label": "lady_callia_26818",
+		"deck": "lady_callia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Votre place dans le cercle des sœurs acquise, l'intrigue s'épaissit. Dame Callia vous veut comme allié — ou comme conquête, vous ne savez jamais. La cadette, elle, vous regarde autrement, sincèrement. Entre l'éblouissante stratège et la douce discrète, votre cœur d'Orateur, qui ne devrait pas en avoir, hésite."
+		},
+		"conditions": [
+			{
+				"variable": "gala_tuned",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approcher la cadette"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jouer le jeu de Callia"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26819,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26819,
+		"label": "lady_callia_26819",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Le rival lord, fou de jalousie de votre succès, vous provoque ouvertement : « Un étranger sans nom courtise les perles de Korell ? Scandale ! » Il cherche le duel, ou le déshonneur. Désamorcer sa rage sans perdre la face devant les sœurs : exercice d'équilibriste social aux enjeux brûlants."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Apaiser le rival"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Relever son défi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26820,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhou_yu_engaged_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26820,
+		"label": "lady_callia_26820",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Vous désamorcez le rival avec une élégance qui impressionne toute la cour — et les sœurs plus que tout. Dame Callia murmure à sa cadette : « Celui-là sait désarmer sans humilier. Rare. » Le jeune lord, vaincu sans combat, s'éclipse. Vous gagnez en stature ce qu'il perd en superbe. La meilleure victoire est celle où l'adversaire se ridiculise seul."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_lady_callia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer ce triomphe social"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tendre la main au vaincu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26821,
+		"label": "lady_callia_26821",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Le rival, humilié, jure de se venger — un ennemi de plus dans la haute société de Korell. « Les rancunes de salon sont les plus tenaces, » prévient l'amiral. Vous avez gagné les sœurs et perdu un lord. Dans ce monde de masques, chaque conquête se paie d'une inimitié. La balance des cours."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_lady_callia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Surveiller le rival rancunier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'oublier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 26822,
+		"label": "lady_callia_26822",
+		"deck": "lady_callia",
+		"weight": 700,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "callia_sister",
+		"question": {
+			"FR": "L'intrigue mûrit : la cadette des sœurs vous avoue ses sentiments, simplement, loin des jeux de Callia : « Je ne sais pas qui vous êtes vraiment. Je m'en moque. Vous, au moins, vous m'avez VUE — pas ma beauté, MOI. C'est si rare que ça en devient effrayant. » Un cœur vrai s'offre. Dangereux trésor pour un Orateur."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "callia_stage",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Répondre à ses sentiments"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La protéger de vous-même"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xiao_qiao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xiao_qiao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26823,
+		"label": "lady_callia_26823",
+		"deck": "lady_callia",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "callia_sister",
+		"question": {
+			"FR": "La cadette est libre, sincère, et amoureuse — et vous, sous couverture, devez peser ce qu'un Orateur peut s'autoriser. Un mariage avec elle serait une couverture parfaite ET un bonheur véritable. Mais aimer, pour qui doit mourir et renaître ailleurs, est toujours un pari déchirant sur le temps."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Envisager l'union"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reculer devant l'attachement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26824,
+		"label": "lady_callia_26824",
+		"deck": "lady_callia",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "callia_sister",
+		"question": {
+			"FR": "Dame Callia, devinant l'idylle, joue sa dernière carte — mi-marieuse, mi-rivale : « Vous voulez ma sœur ? Soit. Mais sachez que je vous ai jaugé jusqu'à l'os, et que si vous la blessez, tout Kalgan vous tombera dessus. Ceci dit... vous formeriez un joli couple. Damné soit mon bon cœur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Demander sa bénédiction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter sa menace"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26825,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 26825,
+		"label": "lady_callia_26825",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "callia_sister",
+		"question": {
+			"FR": "Dame Callia vous met à l'épreuve une dernière fois, pour sa sœur : une question piège sur vos intentions, à laquelle nul menteur ne survit. Son regard sonde le vôtre. Un Mentalique sait dissimuler ; mais face à une lectrice d'hommes de son calibre, la meilleure ruse est parfois une vérité bien choisie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Répondre avec sincérité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Esquiver avec esprit"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26826,
+		"label": "lady_callia_26826",
+		"deck": "lady_callia",
+		"weight": 800,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "callia_sister",
+		"question": {
+			"FR": "Dame Callia, conquise par votre sincérité, bénit l'union : « Prenez ma sœur, étranger sans passé. Rendez-la heureuse, ou répondez de moi. » Sa rude tendresse vous touche. Sous la stratège glacée, une grande sœur protectrice. Vous gagnez non une, mais DEUX alliées — la plus dangereuse de Kalgan, et la plus douce."
+		},
+		"conditions": [
+			{
+				"variable": "callia_stage",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter sa bénédiction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La remercier avec chaleur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26827,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_lady_callia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26827,
+		"label": "lady_callia_26827",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Les préparatifs du mariage s'engagent — couverture rêvée pour un Orateur, et bonheur sincère. La cadette rayonne ; Dame Callia organise tout avec une efficacité redoutable. « Un mariage de Kalgan se doit d'être éblouissant, » décrète-t-elle. Vous vous laissez porter, mesurant le prix et la grâce de cette vie volée au Plan."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Préparer les noces"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Savourer l'instant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26828,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26829,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26828,
+		"label": "lady_callia_26828",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "La veille des noces, un doute vous saisit : avez-vous le droit, vous qui mourrez et renaîtrez ailleurs, d'enchaîner un cœur sincère à un fantôme ? La cadette, sentant votre trouble, vous prend la main : « Quoi que vous cachiez, j'épouse l'homme que j'ai vu jouer. Lui, je le connais. Le reste m'est égal. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 12,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'épouser malgré tout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lui avouer une part de vérité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wedding_xiao_qiao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wedding_xiao_qiao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26829,
+		"label": "lady_callia_26829",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Le matin des noces se lève sur Korell, éclatant. Vous épousez la cadette des sœurs — couverture parfaite, alliance avec Kalgan via Dame Callia, et un bonheur que vous n'osiez espérer. « Mon mari le mystérieux, » sourit-elle. Vous savez ce que vaut ce sourire, et ce qu'il coûtera quand viendra, un jour, l'heure de renaître ailleurs."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 12,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Célébrer l'union"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Célébrer, le cœur partagé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wedding_xiao_qiao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wedding_xiao_qiao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 26830,
+		"label": "lady_callia_26830",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Aux noces, Dame Callia porte un toast qui en dit long : « À ma sœur, qui a trouvé un homme insondable — et à cet homme, qui a trouvé plus rusé que lui en moi. Faites-la heureuse, l'énigme. Sinon, je connais des gens à Kalgan. Beaucoup de gens. » Rires, larmes, et une alliance scellée dans le champagne et la menace voilée."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trinquer avec Callia"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Promettre solennellement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26831,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26831,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 26831,
+		"label": "lady_callia_26831",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'union célébrée, votre nouvelle famille de couverture vous ancre dans la haute société de Korell — et vous donne, en Dame Callia, l'une des informatrices les plus précieuses de la périphérie. « Bienvenue dans la famille, beau-frère, » ronronne-t-elle. « Vous allez voir : on s'amuse beaucoup, et on survit rarement à l'ennui. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Embrasser ce nouveau rôle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur ses gardes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26832,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 26832,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 26832,
+		"label": "lady_callia_26832",
+		"deck": "lady_callia",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "callia_sister",
+		"question": {
+			"FR": "L'arc des sœurs de Korell se referme sur un mariage de couverture parfait : une épouse aimante, une belle-sœur redoutable et alliée, une place au cœur de la haute société. Dame Callia, désormais des vôtres, sera de toutes vos intrigues futures. Vous avez gagné un foyer, un réseau, et un cœur — en sachant que le Plan, un jour, vous les reprendra."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "callia_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_lady_callia",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'arc de Korell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chérir ce bonheur volé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 187,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 187,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 27200,
 		"label": "fall_of_terminus_27200",
 		"deck": "fall_of_terminus",
