@@ -497,5 +497,41 @@
 	},
 	"_ghost_in_the_palace_battle": {
 		"node": 34016
+	},
+	"_xuzhou_officer_ill": {
+		"node": 34417
+	},
+	"_xuzhou_officer_death": {
+		"node": 34418
+	},
+	"_kong_rong_impressed": {
+		"node": 32001
+	},
+	"_beihai_lost": {
+		"node": 32006
+	},
+	"taishi_ci_help": {
+		"node": 32009
+	},
+	"_bought_boat": {
+		"node": 33602
+	},
+	"_happy_sail": {
+		"node": 33608
+	},
+	"_storm_ahead": {
+		"node": 33614
+	},
+	"_end_sailing": {
+		"node": 33615
+	},
+	"_sailing_result": {
+		"node": 33616
+	},
+	"_sail_back": {
+		"node": 33620
+	},
+	"_sail_back_2": {
+		"node": 33619
 	}
 }

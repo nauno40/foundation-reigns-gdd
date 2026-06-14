@@ -48476,6 +48476,1490 @@
 		}
 	},
 	{
+		"id": 32000,
+		"label": "askone_elders_32000",
+		"deck": "askone_elders",
+		"weight": 1300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "Sur Santanni, monde des savants, un vieil érudit vous impressionne par sa lucidité au milieu du chaos : « L'Empire s'effondre, la périphérie s'embrase, et nous, nous continuons d'enseigner. C'est dérisoire ? Non. C'est tout ce qui nous distingue des barbares. » Un homme à connaître."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 192
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gagner son estime"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le trouver naïf"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_kong_rong_impressed",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32001,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32001,
+		"label": "askone_elders_32001",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "L'érudit, conquis par votre conversation, vous ouvre les portes de l'académie de Santanni : « Rares sont les visiteurs qui écoutent avant de parler. Restez. Le savoir que nous gardons ici pourrait servir votre Fondation mieux que mille flottes. » Une alliance intellectuelle se noue."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_scholar",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller le lien savant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32002,
+		"label": "askone_elders_32002",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "Le vieil érudit devient un allié précieux — sa mémoire encyclopédique et son réseau d'académiciens valent un trésor de renseignement. « Mes pairs savent des choses que les espions ignorent, » sourit-il. « Le savoir circule par d'autres canaux que la peur. » Vous gagnez les yeux et les oreilles de Santanni."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_scholar",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "scholar_trust",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter ce réseau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'honorer sans l'utiliser"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 119,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 119,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32003,
+		"label": "askone_elders_32003",
+		"deck": "askone_elders",
+		"weight": 1000000,
+		"lockturn": 28,
+		"hidden": false,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "An 192 : une nouvelle alarmante — l'académie de Santanni est ASSIÉGÉE par des pillards profitant du chaos impérial. Le vieil érudit et ses savants sont piégés. « Sauvez-les, » vous presse un messager. « Brûlez l'académie, et c'est un siècle de savoir qui part en fumée. » Vous foncez vers Santanni."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "siege_stage",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			},
+			{
+				"variable": "scholar_trust",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Voler au secours de Santanni"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Juger le sauvetage trop risqué"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "siege_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_santanni",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32004,
+		"label": "askone_elders_32004",
+		"deck": "askone_elders",
+		"weight": 1000000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "Vous atteignez Santanni assiégée. L'académie tient encore, mais les pillards resserrent l'étau. Le vieil érudit refuse de fuir : « Mes livres ne se sauvent pas en courant. » Organiser une défense désespérée, ou évacuer ce qui peut l'être ? Le temps presse, les barbares aussi."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 6
+			},
+			{
+				"variable": "scholar_trust",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "siege_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Organiser la défense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Évacuer le savoir d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_beihai_lost",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32005,
+		"label": "askone_elders_32005",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "loyal_defender",
+		"question": {
+			"FR": "Au cœur de la défense de l'académie, un jeune guerrier surgit — un défenseur héroïque qui taille en pièces les pillards pour protéger les savants. « Je ne suis qu'un soldat, » dit-il, « mais je sais qu'un monde sans livres ne vaut pas qu'on vive dedans. » Un allié inespéré tombe du ciel."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "defender_loyalty",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Combattre à ses côtés"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser mener"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.taishi_ci",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.taishi_ci",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32006,
+		"label": "askone_elders_32006",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "La défense vacille — trop de pillards, trop peu de bras. L'académie pourrait tomber. Le vieil érudit vous confie un coffre : « Si tout est perdu, sauvez au moins CECI. Les écrits irremplaçables. Le reste, on le rebâtira. » Le poids d'un siècle de pensée pèse soudain dans vos mains."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "siege_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sauver le coffre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser d'abandonner l'académie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32007,
+		"label": "askone_elders_32007",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le sort de Santanni se joue. Le maître-espion vous rejoint avec des renforts de fortune : « On ne sauvera pas tout. Choisissez : les savants, les livres, ou le monde. » Trois trésors, une seule chance. La défense désespérée d'un sanctuaire du savoir contre la barbarie montante."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sauver les savants"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Sauver le savoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32008,
+		"label": "askone_elders_32008",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "loyal_defender",
+		"question": {
+			"FR": "Contre toute attente, la défense tient ! Le jeune guerrier héroïque, à la tête de vos forces, brise l'assaut des pillards. Santanni est sauvée, l'académie debout, le vieil érudit en larmes : « Vous avez sauvé plus qu'un monde. Vous avez sauvé ce qui le rend digne. » Une victoire qui compte double."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "siege_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "scholar_trust",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer la délivrance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer le jeune défenseur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32009,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": -202,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32009,
+		"label": "askone_elders_32009",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "loyal_defender",
+		"question": {
+			"FR": "Le jeune défenseur héroïque, sa mission accomplie, hésite sur son avenir. Vous reconnaissez en lui une loyauté et un courage rares. « Servez une cause à votre mesure, » lui proposez-vous. « Protéger le savoir, partout, pas seulement ici. » Recruter un tel homme : un atout pour la Fondation."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le recruter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser libre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "taishi_ci_help",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32010,
+		"label": "askone_elders_32010",
+		"deck": "askone_elders",
+		"weight": 30000,
+		"lockturn": 26,
+		"hidden": false,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "An 196 : Santanni, à peine remise, fait face à une nouvelle menace — un seigneur de guerre veut annexer le monde des savants. « La connaissance est une arme, » convoite-t-il, « et je veux l'arsenal. » Défendre Santanni encore, ou la laisser tomber sous une coupe qui étouffera sa pensée libre ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "santanni"
+			},
+			{
+				"variable": "second_siege",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 196
+			},
+			{
+				"variable": "scholar_trust",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Défendre Santanni à nouveau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier avec le seigneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "second_siege",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_santanni",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32011,
+		"label": "askone_elders_32011",
+		"deck": "askone_elders",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "La seconde bataille pour Santanni s'engage. Le seigneur de guerre est plus retors que les pillards — il veut le monde intact, savants compris, pour les asservir. « Un savoir enchaîné n'est plus un savoir, » plaide le vieil érudit. Vous comprenez : il ne s'agit pas de survie, mais de liberté."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "santanni"
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 196
+			},
+			{
+				"variable": "scholar_trust",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "second_siege",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Combattre pour la liberté de Santanni"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher un compromis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32012,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32012,
+		"label": "askone_elders_32012",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion propose une stratégie pour la bataille de Santanni : retourner les propres mercenaires du seigneur de guerre par la ruse et quelques crédits. « Ses hommes se battent pour de l'or, pas pour des idées. Achetons leur défection. » La guerre du savoir se gagne aussi à coups de bourse."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "warlord_favor",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Acheter les mercenaires"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Compter sur la défense"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32013,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32013,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 32013,
+		"label": "askone_elders_32013",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le tournant de la bataille de Santanni : vos forces, renforcées par les mercenaires retournés, brisent le siège du seigneur de guerre. Le jeune défenseur s'illustre une fois de plus. Santanni reste libre, son académie intacte, sa pensée affranchie. La barbarie recule, le savoir tient bon."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Achever la victoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Épargner le seigneur vaincu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.yuan_tan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.yuan_tan",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32014,
+		"label": "askone_elders_32014",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "Santanni sauvée deux fois, le vieil érudit et le jeune défenseur vous offrent leur fidélité entière. Le monde des savants devient un bastion de la Fondation — un phare de connaissance dans la nuit impériale. « Tant qu'on enseignera ici, » dit l'érudit, « le Plan aura un sanctuaire. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "second_siege",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller Santanni à la Fondation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester modeste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 100,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 144,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 32015,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 100,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 144,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 32015,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 17,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32015,
+		"label": "askone_elders_32015",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "On vous propose de devenir le gouverneur officieux de Santanni — la main invisible qui protège son savoir. Tentant, mais risqué : trop de visibilité use une couverture. « Un gouverneur fantôme, » sourit l'érudit. « Cela vous ressemble. » Accepter, c'est ancrer un monde-clé sous votre influence."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Devenir gouverneur de l'ombre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préférer un prête-nom"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "santanni_governor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32016,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32016,
+		"label": "askone_elders_32016",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact valide votre influence sur Santanni : « Un monde de savants acquis à la Fondation vaut une flotte. Leur loyauté est intellectuelle — la plus durable. » Vous installez discrètement les structures qui feront de Santanni un pilier du Plan, à l'abri des regards impériaux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Consolider Santanni"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester prudent"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_santanni_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "santanni_governor",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 32017,
+		"label": "askone_elders_32017",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion organise l'administration secrète de Santanni : réseaux, relais, protections. « Vous avez sauvé ce monde ; maintenant, gardez-le. » Le savoir de Santanni alimentera la Seconde Fondation pour des générations. Vous mesurez le poids et la beauté de ce legs invisible."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pérenniser le legs"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer la responsabilité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32018,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32018,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32018,
+		"label": "askone_elders_32018",
+		"deck": "askone_elders",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "elder_scholar",
+		"question": {
+			"FR": "Votre œuvre sur Santanni accomplie, le devoir vous appelle ailleurs — vers Trantor, le cœur agonisant de l'Empire. « Santanni est en bonnes mains, » assure l'érudit. « Allez où le Plan a besoin de vous. Nous garderons la lumière allumée. » Vous partez, laissant derrière un sanctuaire sauvé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir pour Trantor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire ses adieux à Santanni"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "deck_askone_elders",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "trantor",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_askone_elders",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "trantor",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 32019,
+		"label": "askone_elders_32019",
+		"deck": "askone_elders",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Des années plus tard, votre rang dans la Table s'élève — récompense des mondes sauvés, de Santanni à tant d'autres. « Vous montez, Orateur, » note le Contact. « Mais souvenez-vous d'où vient ce rang : de savants défendus, de livres sauvés du feu. Le pouvoir qui oublie ses sources se corrompt. »"
+		},
+		"conditions": [
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "santanni_governor",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "rank",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer vos origines"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter l'ascension"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32020,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 32020,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 32020,
+		"label": "askone_elders_32020",
+		"deck": "askone_elders",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'arc de Santanni se referme sur une note rare : un monde sauvé, une académie florissante, deux alliés fidèles, et un rang gagné dans l'ombre. Le savoir libre de Santanni rayonnera longtemps après vous. « Voilà, » songez-vous, « le genre de victoire qu'aucune flotte ne remporte. » Une lumière de plus contre la longue nuit."
+		},
+		"conditions": [
+			{
+				"variable": "planet_santanni_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "santanni_governor",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_askone_elders",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'arc de Santanni"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller de loin sur le sanctuaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 32400,
 		"label": "defector_advisor_32400",
 		"deck": "defector_advisor",
@@ -52607,6 +54091,1428 @@
 		}
 	},
 	{
+		"id": 33600,
+		"label": "outer_trade_routes_33600",
+		"deck": "outer_trade_routes",
+		"weight": 700,
+		"lockturn": 24,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Un projet ambitieux vous tente : ouvrir une route commerciale vers les confins, là où nul cargo régulier ne s'aventure. « Les routes du large, » sourit un vieux navigateur. « Fortune assurée pour qui survit. Le « qui survit » étant la partie délicate. » Cap sur Korell, port de départ des audacieux."
+		},
+		"conditions": [
+			{
+				"variable": "outer_route",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "voyage_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "korell"
+			},
+			{
+				"variable": "nb_quest_korell",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Monter l'expédition"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Trop risqué"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_korell",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33601,
+		"label": "outer_trade_routes_33601",
+		"deck": "outer_trade_routes",
+		"weight": 5000,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "À Korell, vous achetez un vaisseau-cargo pour la grande traversée. Le chantier naval vous prévient : « Solide coque, mais les confins, c'est l'inconnu. Tempêtes de plasma, pirates, vides sans cartes. Vous payez cher pour le droit de risquer votre peau. » Vous signez quand même."
+		},
+		"conditions": [
+			{
+				"variable": "outer_route",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "voyage_stage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Acheter le vaisseau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Marchander d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bought_boat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33602,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33602,
+		"label": "outer_trade_routes_33602",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le vaisseau acquis, il faut l'équiper et recruter un équipage pour les confins — des hommes assez fous ou désespérés pour suivre une route sans carte. « Les bons marins refusent ; les autres acceptent, » résume le maître d'équipage. Vous embarquez une bande hétéroclite et une cargaison précieuse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recruter l'équipage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réduire la voilure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33603,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33603,
+		"label": "outer_trade_routes_33603",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'expédition lève l'ancre vers les confins. Le capitaine, un loup de l'espace au regard usé, vous jauge : « Premier voyage au large, l'armateur ? Ça se voit. Restez près de moi, faites ce que je dis, et vous reverrez peut-être un port. Peut-être. » Le grand vide s'ouvre devant la proue."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "voyage_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre le capitaine"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Imposer votre autorité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33604,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33604,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 33604,
+		"label": "outer_trade_routes_33604",
+		"deck": "outer_trade_routes",
+		"weight": 1200,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Premières semaines de traversée : le commerce s'annonce juteux, les premiers comptoirs des confins paient en métaux rares. « Ça commence bien, » jubile le capitaine. « Trop bien. Le large n'aime pas qu'on soit content. » La superstition des marins de l'espace cache souvent une sagesse durement apprise."
+		},
+		"conditions": [
+			{
+				"variable": "outer_route",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "voyage_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pousser plus loin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Consolider les acquis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33605,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33605,
+		"label": "outer_trade_routes_33605",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Un comptoir des confins propose un marché exceptionnel — mais l'odeur du piège flotte. « Trop beau, » murmure le capitaine. Le maître-espion, embarqué incognito, hoche la tête. Saisir l'aubaine et risquer l'embuscade, ou jouer la prudence et perdre l'occasion ? Le large récompense l'audace et punit l'imprudence du même geste."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Saisir l'aubaine"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Flairer le piège"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33606,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33606,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33606,
+		"label": "outer_trade_routes_33606",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion, en mer, déjoue une tentative de piraterie avant qu'elle ne frappe — un comptoir complice qui voulait vous attirer dans une nasse. « Sur les routes du large, l'ami d'aujourd'hui est l'embuscade de demain, » dit-il. Vous évitez le pire de justesse. Le voyage se durcit."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Renforcer la vigilance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Riposter aux pirates"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33607,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33607,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33607,
+		"label": "outer_trade_routes_33607",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "La traversée se poursuit, prospère malgré les dangers. Le capitaine s'adoucit : « Vous tenez le coup, l'armateur. Beaucoup auraient déjà fait demi-tour. » Le commerce des confins remplit les cales de richesses — et le moral de l'équipage, fragile, dépend de chaque bonne fortune. Naviguer, c'est gérer des hommes autant que des étoiles."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Maintenir le cap heureux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer l'équipage au pire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_happy_sail",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33608,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33608,
+		"label": "outer_trade_routes_33608",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Bonne navigation : les vents stellaires sont favorables, les comptoirs accueillants, les profits constants. L'équipage chante. Le capitaine, méfiant par habitude, scrute l'horizon : « Profitez. Ça ne dure jamais, au large. » Vous engrangez les richesses en guettant le ciel qui, lui, ne promet rien."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Profiter de la bonne fortune"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester sur ses gardes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33609,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33609,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33609,
+		"label": "outer_trade_routes_33609",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "L'expédition atteint les comptoirs les plus lointains — terra incognita commerciale. Les richesses y sont fabuleuses, les risques aussi. « Personne n'est jamais allé si loin et revenu, » murmure le capitaine, partagé entre fierté et terreur. Vous écrivez une page d'histoire commerciale. Si vous survivez pour la raconter."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pousser jusqu'au bout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Amorcer le retour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33610,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33610,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33610,
+		"label": "outer_trade_routes_33610",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Le ciel se charge : une tempête de plasma se forme droit devant, immense, mortelle. Le capitaine blêmit : « Voilà. Le large réclame son dû. » Foncer à travers et risquer le naufrage, ou la contourner et perdre des jours précieux dans un vide hostile ? La mer des étoiles montre les dents."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Affronter la tempête"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La contourner"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33611,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_storm_ahead",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 33611,
+		"label": "outer_trade_routes_33611",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Au cœur de la tempête de plasma, le vaisseau craque, l'équipage prie, et vous tenez la barre des nerfs autant que des mains. « Si on passe ça, » hurle le capitaine dans le fracas, « on passe TOUT ! » Chaque seconde est un combat contre des forces qui se moquent du commerce et des hommes."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir la barre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Alléger le vaisseau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33612,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33612,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33612,
+		"label": "outer_trade_routes_33612",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le vaisseau émerge de la tempête, criblé mais entier. L'équipage exténué acclame. Le capitaine, livide, vous serre l'épaule : « Vous avez tenu, l'armateur. Beaucoup de capitaines aguerris ont coulé là où vous êtes passé. » Le large vous a éprouvé et, pour cette fois, épargné. Le retour s'amorce."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conclure le voyage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réparer avant de rentrer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_end_sailing",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 33613,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 33613,
+		"label": "outer_trade_routes_33613",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:ship_captain",
+		"question": {
+			"FR": "Avant le retour, un dernier comptoir offre la cargaison de toute une vie — mais détour dangereux. L'équipage, échaudé par la tempête, rechigne. « On a déjà tenté le diable, » grognent-ils. Pousser l'avidité un cran plus loin, ou rentrer avec ce qu'on a, vivants et riches ? La cupidité a coulé plus de vaisseaux que les tempêtes."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter le dernier comptoir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rentrer sagement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_end_sailing",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_end_sailing",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 33614,
+		"label": "outer_trade_routes_33614",
+		"deck": "outer_trade_routes",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Trop loin, trop avide : les caisses vides et l'équipage à bout, le voyage tourne au cauchemar. Un saut hyperspatial mal calculé, par désespoir, vous écartèle entre deux points de l'espace. Vous mourez riche de promesses et pauvre de tout le reste, perdu sur les routes du large que nul ne cartographiera."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 20
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'abandonner au vide"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maudire votre avidité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_ecartele",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_ecartele",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 33615,
+		"label": "outer_trade_routes_33615",
+		"deck": "outer_trade_routes",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le bilan du voyage se dessine : richesses fabuleuses ou ruine, selon votre audace et votre chance. Le capitaine fait les comptes : « On a perdu des hommes, gagné une fortune, et vu des choses qu'on racontera jusqu'à notre mort. C'est ça, le large. » Vous mettez le cap sur le retour."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sailing_result",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Faire le bilan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer les marins perdus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sailing_result",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33616,
+		"label": "outer_trade_routes_33616",
+		"deck": "outer_trade_routes",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le retour triomphal s'organise : cales pleines, route nouvelle ouverte, fortune assurée pour la Fondation. « Vous avez fait l'impossible, l'armateur, » s'incline le capitaine. « Une route régulière vers les confins. Les marchands chanteront votre nom. » Korell vous attend en héros du commerce."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 60
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 90,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "outer_route",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "voyage_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rentrer en triomphe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester modeste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sail_back",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sail_back_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33617,
+		"label": "outer_trade_routes_33617",
+		"deck": "outer_trade_routes",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le retour, plus modeste, n'en est pas moins une victoire : la route est tracée, les premiers profits engrangés, l'expérience acquise. « Pas la fortune rêvée, » admet le capitaine, « mais on est vivants et la route existe. Les suivants iront plus loin grâce à nous. » Un pionnier ouvre, d'autres récoltent."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 30,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "outer_route",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "voyage_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter ce résultat"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Planifier le prochain voyage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sail_back",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_sail_back_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 33618,
+		"label": "outer_trade_routes_33618",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "De retour à Korell, les marchands se pressent pour exploiter votre nouvelle route. La Guilde veut sa part, le Commdor sa taxe, les pirates leur tribut. « Ouvrir une route, c'est facile, » soupire le capitaine. « La garder ouverte, c'est la vraie guerre. » Le succès attire les vautours comme le sang."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Défendre la route ouverte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vendre les droits et passer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 33619,
+		"label": "outer_trade_routes_33619",
+		"deck": "outer_trade_routes",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La route des confins devient un atout stratégique pour la Fondation — un cordon commercial qui irrigue la périphérie hors du contrôle impérial. « Le commerce libre est notre meilleure arme, » approuve le Contact. « Plus durable que les flottes. » Votre folle expédition s'avère un coup de maître géopolitique."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pérenniser la route"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "En mesurer la portée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 33620,
+		"label": "outer_trade_routes_33620",
+		"deck": "outer_trade_routes",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'aventure des routes du large se referme : un cordon commercial nouveau, un village de pêcheurs-marins reconnaissant sur Korell, et le souvenir indélébile d'une tempête de plasma survécue. Vous laissez aux confins une route qui portera, longtemps, les couleurs discrètes de la Fondation. Les pionniers passent ; les routes restent."
+		},
+		"conditions": [
+			{
+				"variable": "voyage_stage",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "voyage_stage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_outer_trade_routes",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'aventure du large"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Confier la route aux marins"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_korell_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "korell_village",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 34000,
 		"label": "ghost_in_the_vault_34000",
 		"deck": "ghost_in_the_vault",
@@ -53771,6 +56677,1545 @@
 		],
 		"moods": {
 			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34400,
+		"label": "agri_worlds_34400",
+		"deck": "agri_worlds",
+		"weight": 1400,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Trantor importe son grain des mondes nourriciers de la périphérie, et leurs syndics paysans sont des durs à cuire. Pour traiter avec eux, un rituel : partager leur plat sacré — du poisson cru des mers polaires, qui « sépare les amis des touristes ». On vous tend une assiette. Tout le monde vous observe."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Manger le poisson cru"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner poliment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "ate_raw",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34401,
+		"label": "agri_worlds_34401",
+		"deck": "agri_worlds",
+		"weight": 1000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le syndic paysan insiste, l'œil narquois : « Un homme qui ne partage pas notre table ne partage pas notre confiance. » Le poisson cru luit, suspect. Avaler pour sceller l'alliance, ou tenir bon au risque de tout perdre. La diplomatie agraire passe, littéralement, par l'estomac."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avaler bravement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser ce chantage culinaire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ate_raw",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34402,
+		"label": "agri_worlds_34402",
+		"deck": "agri_worlds",
+		"weight": 1000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:terminus_mayor",
+		"question": {
+			"FR": "Vous avez décliné le poisson cru, et les syndics se sont refroidis. « Un délicat, » crachent-ils. Pour regagner du terrain, il faudra prouver votre respect autrement — par les actes, puisque l'estomac vous a manqué. Les paysans pardonnent tout sauf le mépris de leur table."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "ate_raw",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Réparer par les actes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Assumer votre refus"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34403,
+		"label": "agri_worlds_34403",
+		"deck": "agri_worlds",
+		"weight": 1000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:terminus_mayor",
+		"question": {
+			"FR": "Vous avez mangé le poisson cru — et survécu au regard de tous. Les syndics, impressionnés, vous tendent une seconde portion : « Un vrai des nôtres en reprend ! » Refuser maintenant serait un affront ; accepter, un risque pour votre estomac déjà éprouvé. La confiance paysanne a un prix gastrique."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "ate_raw",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "En reprendre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Remercier sans rajouter"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ate_raw",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34404,
+		"label": "agri_worlds_34404",
+		"deck": "agri_worlds",
+		"weight": 1000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le festin paysan se prolonge, plat après plat de plus en plus audacieux. Chaque bouchée gagne un quintal de grain pour Trantor et un haut-le-cœur pour vous. Le syndic-chef rayonne : « Vous tenez bien la table ! On peut faire affaire, avec un homme qui respecte la nourriture. »"
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenir la table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mener la négociation entre deux plats"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ate_raw",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34405,
+		"label": "agri_worlds_34405",
+		"deck": "agri_worlds",
+		"weight": 1000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Au sommet du festin, on vous offre LE morceau d'honneur — une part rituelle réputée éprouver les plus solides. Le syndic affûte son couteau cérémoniel. « Celui-ci, peu y survivent dignement, » sourit-il. Refuser perdrait tout ; accepter pourrait vous coûter plus qu'un haut-le-cœur."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le morceau d'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Y aller prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34406,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ate_raw",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34406,
+		"label": "agri_worlds_34406",
+		"deck": "agri_worlds",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "On affûte le couteau cérémoniel devant vous, dans un silence solennel. Le morceau d'honneur sera tranché net, servi cru, et avalé d'un trait — ou recraché en disgrâce. Tout le syndicat paysan retient son souffle. Votre couverture de négociant n'a jamais été aussi... digestive."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.knife_sharpening",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Avaler d'un trait"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Savourer lentement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34407,
+		"label": "agri_worlds_34407",
+		"deck": "agri_worlds",
+		"weight": 800,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "La diplomatie du festin porte ses fruits : les syndics vous adoptent. Mais l'alliance se négocie maintenant sur le fond — quantités, prix, routes. Un syndic dur en affaires teste votre fermeté : « Vous mangez bien. Marchandez-vous aussi bien ? » L'estomac a ouvert la porte ; reste à conclure."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "feast_diplomacy",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Marchander ferme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Céder pour préserver l'amitié"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -89,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34408,
+		"label": "agri_worlds_34408",
+		"deck": "agri_worlds",
+		"weight": 800,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Un syndic rival tente de saboter votre accord par jalousie : « Cet étranger nous embobine ! » Le démasquer ou l'amadouer ? Les rivalités paysannes sont aussi profondes que leurs sillons. Naviguer entre les clans agraires demande autant de doigté qu'avaler leur poisson cru."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "feast_diplomacy",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Amadouer le rival"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le confondre publiquement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34409,
+		"label": "agri_worlds_34409",
+		"deck": "agri_worlds",
+		"weight": 800,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le dock-maître des mondes nourriciers vous explique la logistique : « Le grain, c'est facile à promettre, dur à livrer. Pirates, tempêtes solaires, douaniers véreux. Vous voulez une route fiable ? Investissez dans l'escorte. » Nourrir Trantor exige plus que des poignées de main."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "feast_diplomacy",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Investir dans l'escorte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Faire confiance aux syndics"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34410,
+		"label": "agri_worlds_34410",
+		"deck": "agri_worlds",
+		"weight": 800,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une fête de la moisson rassemble tous les syndics — occasion en or pour cimenter l'alliance, ou tout gâcher d'un faux pas. Danses, beuveries, et un dernier défi culinaire qui se profile. « Restez jusqu'au bout, » vous glisse le dock-maître, « ou ils diront que vous les snobez. » La nuit sera longue."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "feast_diplomacy",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Rester jusqu'au bout"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Partir avant les excès"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34411,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34411,
+		"label": "agri_worlds_34411",
+		"deck": "agri_worlds",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La fête de la moisson dégénère en joyeuse beuverie où les vraies négociations se font, paradoxalement, le mieux. Entre deux rasades, un syndic vous lâche le vrai prix, un autre la vraie route. L'alcool délie les langues paysannes mieux que tous les contrats. Vous engrangez, l'esprit clair sous l'ivresse feinte."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Récolter les confidences"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller à ne pas trop boire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34412,
+		"label": "agri_worlds_34412",
+		"deck": "agri_worlds",
+		"weight": 800,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Trop de poisson cru, trop de fêtes : votre estomac se rebelle dangereusement. Le médecin du syndicat fronce les sourcils : « La fièvre des mers, mon gars. Certains en meurent. La salamandre, qu'on appelle ça — ça vous tord les tripes comme un feu froid. » La diplomatie gastrique a ses martyrs."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 6
+			},
+			{
+				"variable": "feast_diplomacy",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "ate_raw",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lutter contre la fièvre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Cacher votre malaise"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34413,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34413,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34413,
+		"label": "agri_worlds_34413",
+		"deck": "agri_worlds",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La fièvre des mers vous emporte — la « salamandre » consume vos entrailles comme un plasma erratique. Vous mourez d'avoir trop bien fait votre travail de couverture, terrassé par un poisson cru au nom d'une alliance céréalière. L'Orateur Premier en rira, ou en pleurera. Une mort... originale."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_agri_worlds",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'abandonner à la fièvre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Protester contre l'absurde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_salamandre",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_salamandre",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34414,
+		"label": "agri_worlds_34414",
+		"deck": "agri_worlds",
+		"weight": 800,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": "role:terminus_mayor",
+		"question": {
+			"FR": "Vous résistez à la fièvre des mers — votre constitution d'Orateur, ou votre prudence à table, vous sauve. Les syndics, admiratifs : « Il a tenu la salamandre ! Un dur, ce négociant. » Votre survie scelle l'alliance mieux que tout contrat. On ne se méfie pas d'un homme qui a failli mourir à votre table."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 6
+			},
+			{
+				"variable": "feast_diplomacy",
+				"op": "below",
+				"value": 10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			},
+			{
+				"variable": "ate_raw",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "feast_diplomacy",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Capitaliser sur votre survie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Jurer de ne plus jamais manger cru"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34415,
+		"label": "agri_worlds_34415",
+		"deck": "agri_worlds",
+		"weight": 1200,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "L'alliance des mondes nourriciers est presque scellée. Un dernier obstacle : un officier syndic clé tombe malade, et sans son aval, rien ne se signe. Le soigner ou attendre sa guérison incertaine ? Le grain de Trantor dépend de la santé d'un seul paysan grippé. Fragilité des grandes affaires."
+		},
+		"conditions": [
+			{
+				"variable": "feast_diplomacy",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "trantor"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Faire soigner l'officier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Attendre sa guérison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xuzhou_officer_ill",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 34416,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 34416,
+		"label": "agri_worlds_34416",
+		"deck": "agri_worlds",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Vous mobilisez les meilleurs soins pour l'officier syndic souffrant. Sa guérison — ou son aggravation — décidera de l'alliance entière. Vous veillez à son chevet, jouant le négociant inquiet qui, au fond, l'est vraiment : un homme bon ne devrait pas mourir d'une grippe pour une question de grain."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Veiller sur sa guérison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer l'enjeu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xuzhou_officer_ill",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xuzhou_officer_ill",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 34417,
+		"label": "agri_worlds_34417",
+		"deck": "agri_worlds",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'officier syndic succombe malgré vos efforts — la maladie l'emporte au pire moment. Le syndicat, en deuil, suspend toute négociation. « Pas d'affaires en temps de deuil, » décrètent les Anciens. Respecter leur peine, c'est peut-être perdre l'alliance. Mais la brusquer la perdrait à coup sûr."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Respecter le deuil"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaider la continuité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xuzhou_officer_death",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xuzhou_officer_death",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "sad",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 34418,
+		"label": "agri_worlds_34418",
+		"deck": "agri_worlds",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Contre toute attente, le deuil ressoude le syndicat autour de vous — l'étranger qui a tout tenté pour sauver un des leurs. « Vous avez veillé un paysan comme un frère, » disent les Anciens. Trantor obtient son grain, et vous, le respect durable d'un peuple qui n'en accorde pas deux fois."
+		},
+		"conditions": [
+			{
+				"variable": "ate_raw",
+				"op": "below",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller l'alliance dans le deuil"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer le défunt"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "raw_ritual",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_agri_worlds",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_trantor_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "raw_ritual",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_agri_worlds",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_trantor_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 34419,
+		"label": "agri_worlds_34419",
+		"deck": "agri_worlds",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "L'affaire des mondes nourriciers se referme : Trantor sera nourri, l'alliance paysanne tient, et votre estomac s'en remet lentement. Vous repartez avec des contrats, une réputation de « dur à la table », et une aversion définitive pour le poisson cru. La diplomatie agraire vous aura coûté quelques nuits blanches et beaucoup de digestion."
+		},
+		"conditions": [
+			{
+				"variable": "ate_raw",
+				"op": "above",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter les mondes nourriciers"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Promettre de revenir (à jeun)"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "raw_ritual",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_agri_worlds",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "raw_ritual",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_agri_worlds",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
 			"yes": "flattered",
 			"no": "neutral"
 		}
