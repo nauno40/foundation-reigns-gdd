@@ -16105,6 +16105,3465 @@
 		}
 	},
 	{
+		"id": 20512,
+		"label": "planet_ruler_20512",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique conclut son cas épineux. Faut-il publier le jugement en exemple, ou le régler dans la discrétion ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On publie"
+			},
+			"reaction": {
+				"FR": "On affiche le jugement. La loi se fait pédagogie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On règle l'affaire en sourdine. Moins de vagues."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20513,
+		"label": "planet_ruler_20513",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:rice_almoner",
+		"question": {
+			"FR": "L'almonier du Grain propose de nourrir les soldats du fief à même les greniers publics."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On nourrit la troupe"
+			},
+			"reaction": {
+				"FR": "On puise dans les greniers pour l'armée. Soldats repus, civils inquiets."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rationne la troupe"
+			},
+			"reaction": {
+				"FR": "On rationne aussi l'armée. Équitable, impopulaire chez les soldats."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20514,
+		"label": "planet_ruler_20514",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison réclame de meilleures armes pour ses hommes. L'arsenal est vieillissant."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 45
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réarme"
+			},
+			"reaction": {
+				"FR": "On modernise l'arsenal. La garnison fière, le trésor allégé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On répare l'ancien"
+			},
+			"reaction": {
+				"FR": "On rafistole les vieilles armes. Économique, risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20515,
+		"label": "planet_ruler_20515",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous conseille de cultiver l'amitié d'un fief voisin par un échange d'otages de bonne foi."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 80
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On échange des otages"
+			},
+			"reaction": {
+				"FR": "On scelle l'amitié par des otages nobles. Usage d'un autre âge, efficace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On préfère un traité"
+			},
+			"reaction": {
+				"FR": "On préfère un simple traité. Plus moderne, moins contraignant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20516,
+		"label": "planet_ruler_20516",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Un plutocrate propose d'affermer la collecte des taxes commerciales — contre une coquette commission."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On afferme la collecte"
+			},
+			"reaction": {
+				"FR": "On confie la collecte au plutocrate. Pratique, et il s'engraisse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la régie"
+			},
+			"reaction": {
+				"FR": "On garde la collecte en régie. Plus juste, plus lourd."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20517,
+		"label": "planet_ruler_20517",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact signale que le commerce florissant attire des escrocs de haut vol. Renforcer les contrôles ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On renforce"
+			},
+			"reaction": {
+				"FR": "On muscle les contrôles de marché. Les escrocs détalent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse couler"
+			},
+			"reaction": {
+				"FR": "On allège les contrôles. Le négoce file — et la fraude aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20518,
+		"label": "planet_ruler_20518",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse de bonne aventure prédit que l'un de vos conseillers vous trahira. Vague avertissement, ou vraie menace ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On scrute discrètement ses conseillers. La méfiance s'installe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hausse les épaules"
+			},
+			"reaction": {
+				"FR": "On balaie la prédiction. Le doute, lui, demeure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20519,
+		"label": "planet_ruler_20519",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:tutor",
+		"question": {
+			"FR": "Le précepteur propose d'enseigner l'art de la guerre aux jeunes nobles du fief."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.relaxed_horses",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On crée l'académie"
+			},
+			"reaction": {
+				"FR": "On fonde une académie militaire. Une élite d'officiers se forme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en passe"
+			},
+			"reaction": {
+				"FR": "On renonce à l'académie. Le précepteur est déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20520,
+		"label": "planet_ruler_20520",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:cult_deacon",
+		"question": {
+			"FR": "Le diacre du culte propose de bénir les armes de la garnison pour le moral des troupes."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On laisse bénir"
+			},
+			"reaction": {
+				"FR": "On laisse bénir les armes. La troupe y puise du courage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste rationnel"
+			},
+			"reaction": {
+				"FR": "On refuse les bénédictions. La raison avant la ferveur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20521,
+		"label": "planet_ruler_20521",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique veut juger un soldat coupable de pillage. La discipline ou la clémence envers un vétéran ?"
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 60
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Discipline stricte"
+			},
+			"reaction": {
+				"FR": "On punit le soldat pillard. L'ordre militaire est sauf."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Clémence"
+			},
+			"reaction": {
+				"FR": "On gracie le vétéran. Les soldats apprécient, les victimes moins."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20522,
+		"label": "planet_ruler_20522",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village se plaint que la garnison rançonne les paysans. Sévir contre vos propres soldats ?"
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 61
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On sévit"
+			},
+			"reaction": {
+				"FR": "On punit les soldats indélicats. Le peuple soulagé, la troupe maussade."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ferme les yeux"
+			},
+			"reaction": {
+				"FR": "On ferme les yeux sur la troupe. Dangereux laxisme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20523,
+		"label": "planet_ruler_20523",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial propose une alliance militaire — qui ferait du fief un vassal docile."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On refuse la vassalité"
+			},
+			"reaction": {
+				"FR": "On refuse l'alliance-piège. L'indépendance a un prix."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accepte la protection"
+			},
+			"reaction": {
+				"FR": "On accepte la protection impériale. Sûr, mais soumis."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20524,
+		"label": "planet_ruler_20524",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact a démasqué un espion étranger au cœur de votre administration. L'arrêter, ou le retourner ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retourne"
+			},
+			"reaction": {
+				"FR": "On retourne l'espion contre ses maîtres. Coup de maître."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'arrête"
+			},
+			"reaction": {
+				"FR": "On arrête l'espion. Net, mais on perd une source."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20525,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20525,
+		"label": "planet_ruler_20525",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'espion retourné livre de précieux renseignements — vrais, ou intoxication ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les vérifie"
+			},
+			"reaction": {
+				"FR": "On recoupe ses dires. Prudence d'espion."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On agit aussitôt"
+			},
+			"reaction": {
+				"FR": "On agit sur ses renseignements. Risqué si c'est un piège."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20526,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20526,
+		"label": "planet_ruler_20526",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'espion retourné demande l'asile et une nouvelle identité sur le fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le protège"
+			},
+			"reaction": {
+				"FR": "On lui forge une nouvelle vie. Loyauté achetée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le renvoie"
+			},
+			"reaction": {
+				"FR": "On le renvoie à ses risques. Froid calcul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20527,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20527,
+		"label": "planet_ruler_20527",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'affaire d'espionnage close, faut-il purger l'administration de tout soupçon, ou tourner la page ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On purge"
+			},
+			"reaction": {
+				"FR": "On épure l'administration. Sûr, mais paralysant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tourne la page"
+			},
+			"reaction": {
+				"FR": "On tourne la page. La confiance revient, le risque demeure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20528,
+		"label": "planet_ruler_20528",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une faction de notables ambitieux pousse pour plus d'autonomie du fief vis-à-vis de l'Empire."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les soutient"
+			},
+			"reaction": {
+				"FR": "On épouse la cause autonomiste. L'Empire fronce les sourcils."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les tempère"
+			},
+			"reaction": {
+				"FR": "On tempère les autonomistes. Prudence diplomatique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20529,
+		"label": "planet_ruler_20529",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une faction loyaliste réclame au contraire un resserrement des liens avec l'Empire. Le fief se divise."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 40
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On penche pour l'Empire"
+			},
+			"reaction": {
+				"FR": "On rassure les loyalistes. L'ordre impérial prime."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste neutre"
+			},
+			"reaction": {
+				"FR": "On refuse de choisir. Les deux factions vous boudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20530,
+		"label": "planet_ruler_20530",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:public_works",
+		"question": {
+			"FR": "L'intendant des travaux signale un atelier d'art licencieux très prisé. Le tolérer, ou le fermer ?"
+		},
+		"conditions": [
+			{
+				"variable": "erotic_art",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le tolère"
+			},
+			"reaction": {
+				"FR": "On tolère l'atelier. L'art prospère, les dévots fulminent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le ferme"
+			},
+			"reaction": {
+				"FR": "On ferme l'atelier scandaleux. Vertu affichée, artistes en fuite."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20531,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "erotic_art",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20531,
+		"label": "planet_ruler_20531",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:porcelain_master",
+		"question": {
+			"FR": "Le maître porcelainier, lui, voudrait orner ses pièces de motifs audacieux pour séduire les riches."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "On laisse l'audace décorer la porcelaine. Les nobles s'arrachent les pièces."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On exige la sobriété"
+			},
+			"reaction": {
+				"FR": "On impose la sobriété. Élégant, moins lucratif."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20532,
+		"label": "planet_ruler_20532",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier vous rappelle que le fief s'est lourdement endetté pour ses grands travaux. Rembourser, ou rééchelonner ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rembourse"
+			},
+			"reaction": {
+				"FR": "On solde la dette. Le trésor saigne, le fief respire à terme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rééchelonne"
+			},
+			"reaction": {
+				"FR": "On rééchelonne la dette. Du répit — et des intérêts."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20533,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20533,
+		"label": "planet_ruler_20533",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur exploite l'endettement pour dénoncer votre gestion sur les places."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le réfute publiquement"
+			},
+			"reaction": {
+				"FR": "On répond à l'agitateur en place publique. Duel de tribuns."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On ignore l'agitateur. Ses accusations enflent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20534,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20534,
+		"label": "planet_ruler_20534",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier propose un dernier prêt — à un taux qui pourrait étrangler le fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On refuse le prêt"
+			},
+			"reaction": {
+				"FR": "On refuse le prêt usuraire. Sage, mais les caisses restent vides."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On accepte le prêt étrangleur. Du souffle, et une corde au cou."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20535,
+		"label": "planet_ruler_20535",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison signale des troubles à la frontière de Smyrno. Y dépêcher des troupes ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On envoie des troupes"
+			},
+			"reaction": {
+				"FR": "On dépêche des renforts à Smyrno. La frontière se calme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur place"
+			},
+			"reaction": {
+				"FR": "On garde les troupes au fief. Smyrno se débrouillera."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20536,
+		"label": "planet_ruler_20536",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:invader",
+		"question": {
+			"FR": "Un envahisseur opportuniste teste les défenses du fief en début de saison. Riposter fort, ou observer ?"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 4
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On riposte fort"
+			},
+			"reaction": {
+				"FR": "On repousse l'envahisseur sans ménagement. Message reçu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On observe d'abord"
+			},
+			"reaction": {
+				"FR": "On jauge l'envahisseur avant d'agir. Prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20537,
+		"label": "planet_ruler_20537",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amiral propose de construire un port de guerre pour projeter la puissance du fief sur les routes stellaires."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On bâtit le port"
+			},
+			"reaction": {
+				"FR": "On érige un port de guerre. La flotte du fief prend l'espace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On renonce au port. Trop cher, trop voyant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20538,
+		"label": "planet_ruler_20538",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison rapporte que Smyrno réclame votre arbitrage dans un litige local."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On arbitre"
+			},
+			"reaction": {
+				"FR": "On tranche le litige de Smyrno. Votre autorité s'étend."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On délègue"
+			},
+			"reaction": {
+				"FR": "On délègue l'arbitrage. Smyrno trouve cela tiède."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20539,
+		"label": "planet_ruler_20539",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact évoque une opportunité au sud : un monde affaibli qui n'attend qu'un protecteur."
+		},
+		"conditions": [
+			{
+				"variable": "south",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en empare"
+			},
+			"reaction": {
+				"FR": "On étend votre protection au sud. Le fief grandit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On laisse le monde du sud à son sort. Prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20540,
+		"label": "planet_ruler_20540",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amiral propose une démonstration de force pour décourager les pirates des routes commerciales."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On déploie la flotte"
+			},
+			"reaction": {
+				"FR": "On patrouille les routes. Les pirates se font discrets."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On arme les marchands"
+			},
+			"reaction": {
+				"FR": "On laisse les marchands s'armer. Moins cher, plus risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20541,
+		"label": "planet_ruler_20541",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial inspecte le fief et critique vos manufactures « déloyales ». L'amadouer ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'amadoue"
+			},
+			"reaction": {
+				"FR": "On comble l'envoyé de présents. Son rapport sera flatteur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient tête"
+			},
+			"reaction": {
+				"FR": "On tient tête à l'envoyé. Risqué pour vos manufactures."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20542,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20542,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20542,
+		"label": "planet_ruler_20542",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier suggère de soudoyer l'inspecteur impérial pour un rapport favorable."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.camel_sheep_marketplace",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le soudoie"
+			},
+			"reaction": {
+				"FR": "On graisse la patte de l'inspecteur. Le rapport sera doux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse la corruption"
+			},
+			"reaction": {
+				"FR": "On refuse de corrompre. Intègre, exposé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20543,
+		"label": "planet_ruler_20543",
+		"deck": "planet_ruler",
+		"weight": 300,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "On vous signale qu'un monde voisin imite vos réformes avec succès. S'en réjouir, ou s'en méfier ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "smyrno"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.sandstorm",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'en réjouit"
+			},
+			"reaction": {
+				"FR": "On salue l'imitation. Vos idées essaiment. Flatteur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On y voit une rivalité naissante. Prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20544,
+		"label": "planet_ruler_20544",
+		"deck": "planet_ruler",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse de bonne aventure propose de lire l'avenir du fief dans les astres. Y prêter l'oreille ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 60
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On écoute la lecture des astres. Troublant, peut-être révélateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse la séance. Superstition, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_fortune_read",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20545,
+		"label": "planet_ruler_20545",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse plonge dans une transe et murmure des présages contradictoires. Approfondir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approfondit"
+			},
+			"reaction": {
+				"FR": "On la presse de préciser. Les présages s'embrouillent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'arrête là"
+			},
+			"reaction": {
+				"FR": "On met fin à la séance. L'esprit en paix, le mystère entier."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_fortune_read_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20546,
+		"label": "planet_ruler_20546",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse rend son verdict : « Un grand danger, mais une grande chance, Orateur. » Vague, comme toujours."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la récompense"
+			},
+			"reaction": {
+				"FR": "On récompense la diseuse. Sa réputation grandit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la congédie"
+			},
+			"reaction": {
+				"FR": "On la congédie poliment. Ses augures se dissipent."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20547,
+		"label": "planet_ruler_20547",
+		"deck": "planet_ruler",
+		"weight": 150,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier propose d'émettre une monnaie locale pour fluidifier le commerce du fief."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 35
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On bat monnaie"
+			},
+			"reaction": {
+				"FR": "On frappe une monnaie du fief. Le négoce s'envole, l'Empire grogne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On renonce à la monnaie locale. Prudent envers l'Empire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "debt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20548,
+		"label": "planet_ruler_20548",
+		"deck": "planet_ruler",
+		"weight": 170,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier vous met en garde : les dettes du fief atteignent un seuil critique. Agir, ou nier ?"
+		},
+		"conditions": [
+			{
+				"variable": "debt",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On agit"
+			},
+			"reaction": {
+				"FR": "On prend le problème à bras-le-corps. Mesures d'austérité."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On nie le danger"
+			},
+			"reaction": {
+				"FR": "On minimise la dette. Le gouffre se creuse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20549,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20549,
+		"label": "planet_ruler_20549",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le Grand Prêtre, créancier inattendu, réclame son dû au nom du culte. Le rembourser passe avant tout."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rembourse"
+			},
+			"reaction": {
+				"FR": "On solde la dette envers le culte. Le trésor exsangue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On négocie un délai"
+			},
+			"reaction": {
+				"FR": "On négocie avec le Grand Prêtre. Il accorde un sursis — étroit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20550,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20550,
+		"label": "planet_ruler_20550",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le Grand Prêtre se fait menaçant : sans paiement immédiat, le fief sera maudit — et ruiné."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie tout"
+			},
+			"reaction": {
+				"FR": "On vide les coffres pour le culte. Sauvé de la ruine, à genoux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On défie le culte"
+			},
+			"reaction": {
+				"FR": "On défie le Grand Prêtre. Pari terrible sur sa colère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_dettes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_dettes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 20551,
+		"label": "planet_ruler_20551",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Votre stature militaire grandissante inquiète l'Empire. Le capitaine de garnison conseille la discrétion."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 50
+			},
+			{
+				"variable": "strength",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se fait discret"
+			},
+			"reaction": {
+				"FR": "On modère l'étalage militaire. L'Empire se rassure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On affiche sa force"
+			},
+			"reaction": {
+				"FR": "On affiche la puissance du fief. L'Empire se crispe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20552,
+		"label": "planet_ruler_20552",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre poids politique croît. Votre contact suggère de tisser un réseau d'alliances entre fiefs."
+		},
+		"conditions": [
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 70
+			},
+			{
+				"variable": "strength",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.distant_crowd_chanting",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tisse le réseau"
+			},
+			"reaction": {
+				"FR": "On bâtit un réseau d'alliances. Le fief gagne en influence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste seul"
+			},
+			"reaction": {
+				"FR": "On reste indépendant. Plus libre, plus isolé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20553,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20553,
+		"label": "planet_ruler_20553",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Les alliances entre fiefs portent leurs fruits, mais exigent des concessions. Lesquelles céder ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Des concessions commerciales"
+			},
+			"reaction": {
+				"FR": "On cède sur le commerce. Les alliés contents, le trésor moins."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Des concessions militaires"
+			},
+			"reaction": {
+				"FR": "On partage des troupes. L'alliance se cimente, l'autonomie s'érode."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20554,
+		"label": "planet_ruler_20554",
+		"deck": "planet_ruler",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison propose des grandes manœuvres pour aguerrir la troupe."
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance les manœuvres"
+			},
+			"reaction": {
+				"FR": "On organise de grandes manœuvres. La troupe s'aguerrit, ça coûte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'entraîne sobrement"
+			},
+			"reaction": {
+				"FR": "On s'entraîne à moindres frais. Suffisant, sans éclat."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20555,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20555,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20555,
+		"label": "planet_ruler_20555",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Les manœuvres révèlent des faiblesses dans le commandement. Limoger les officiers fautifs ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On limoge"
+			},
+			"reaction": {
+				"FR": "On remplace les officiers défaillants. Du sang neuf, des rancunes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les forme"
+			},
+			"reaction": {
+				"FR": "On forme les officiers faibles. Patient, incertain."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20556,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20556,
+		"label": "planet_ruler_20556",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "La troupe aguerrie réclame une vraie campagne pour faire ses preuves."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.horse_colliding_man",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance une campagne"
+			},
+			"reaction": {
+				"FR": "On engage une campagne. Gloire en vue, sang en jeu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la paix"
+			},
+			"reaction": {
+				"FR": "On garde la troupe au repos. Sage, frustrant pour les soldats."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20557,
+		"label": "planet_ruler_20557",
+		"deck": "planet_ruler",
+		"weight": 500,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "En saison chaude, on propose d'ouvrir une station balnéaire sur la côte du fief pour attirer les riches."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			},
+			{
+				"variable": "seaside",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'ouvre"
+			},
+			"reaction": {
+				"FR": "On crée la station côtière. Les fortunés affluent, le fief brille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On préserve la côte"
+			},
+			"reaction": {
+				"FR": "On préserve la côte sauvage. Le peuple pêcheur approuve."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20558,
+		"label": "planet_ruler_20558",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une émeute couve dans un faubourg surpeuplé. Votre contact attend vos ordres."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On envoie la garde"
+			},
+			"reaction": {
+				"FR": "On déploie la garde. L'émeute est matée, la rancune couve."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On envoie des vivres"
+			},
+			"reaction": {
+				"FR": "On désamorce par des vivres. Coûteux, apaisant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20559,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 20559,
+		"label": "planet_ruler_20559",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:town_crier",
+		"question": {
+			"FR": "Le crieur public propose de calmer la foule par une proclamation rassurante de votre part."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On proclame"
+			},
+			"reaction": {
+				"FR": "On lance une proclamation apaisante. Les esprits se calment, un temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse la garde agir"
+			},
+			"reaction": {
+				"FR": "On laisse la garde rétablir l'ordre. Ferme, brutal."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20560,
+		"label": "planet_ruler_20560",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'émeute a éclaté pour de bon. Votre contact propose d'en chercher les meneurs cachés."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête sur les meneurs"
+			},
+			"reaction": {
+				"FR": "On traque les instigateurs de l'émeute. Le fil se tire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On réprime d'abord"
+			},
+			"reaction": {
+				"FR": "On réprime avant d'enquêter. L'ordre d'abord, les causes après."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_investigate_riot",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20561,
+		"label": "planet_ruler_20561",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'enquête révèle que l'émeute fut attisée par un rival. Le confondre, ou riposter en secret ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le confond"
+			},
+			"reaction": {
+				"FR": "On démasque le rival publiquement. Scandale, vengeance ouverte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On riposte en secret"
+			},
+			"reaction": {
+				"FR": "On prépare une riposte discrète. Patience venimeuse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20562,
+		"label": "planet_ruler_20562",
+		"deck": "planet_ruler",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Après l'émeute, faut-il reconstruire le faubourg dévasté, ou en profiter pour l'assainir de fond en comble ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reconstruit vite"
+			},
+			"reaction": {
+				"FR": "On rebâtit au plus vite. Le peuple soulagé, les vieux maux persistent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On assainit"
+			},
+			"reaction": {
+				"FR": "On rebâtit en assainissant. Long, mais un faubourg neuf."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "hearsay_agent",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 20563,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20563,
+		"label": "planet_ruler_20563",
+		"deck": "planet_ruler",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le faubourg rebâti, faut-il y installer une garde permanente, ou miser sur la confiance retrouvée ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On installe une garde"
+			},
+			"reaction": {
+				"FR": "On poste une garde permanente. Sûr, un brin pesant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On mise sur la confiance"
+			},
+			"reaction": {
+				"FR": "On retire la garde. Pari sur la paix civile."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "hearsay_agent",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "hearsay_agent",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20564,
+		"label": "planet_ruler_20564",
+		"deck": "planet_ruler",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un informateur de votre réseau rapporte une rumeur explosive sur un notable. La vérifier ?"
+		},
+		"conditions": [
+			{
+				"variable": "hearsay_agent",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On vérifie"
+			},
+			"reaction": {
+				"FR": "On recoupe la rumeur. Prudence avant d'agir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'exploite aussitôt"
+			},
+			"reaction": {
+				"FR": "On exploite la rumeur sans attendre. Risqué si elle est fausse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20565,
+		"label": "planet_ruler_20565",
+		"deck": "planet_ruler",
+		"weight": 400,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un informateur propose de salir un rival politique par une rumeur savamment distillée."
+		},
+		"conditions": [
+			{
+				"variable": "hearsay_agent",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 55
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On distille la rumeur"
+			},
+			"reaction": {
+				"FR": "On lance la rumeur calculée. Le rival vacille. Cynique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse ce procédé"
+			},
+			"reaction": {
+				"FR": "On refuse la calomnie. Intègre, désarmé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20566,
+		"label": "planet_ruler_20566",
+		"deck": "planet_ruler",
+		"weight": 600,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un informateur vous prévient d'un complot politique en gestation chez les notables."
+		},
+		"conditions": [
+			{
+				"variable": "hearsay_agent",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "politics",
+				"op": "below",
+				"value": 45
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On déjoue le complot"
+			},
+			"reaction": {
+				"FR": "On démantèle le complot dans l'œuf. Bien joué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse mûrir"
+			},
+			"reaction": {
+				"FR": "On laisse mûrir pour saisir tous les comploteurs. Risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20567,
+		"label": "planet_ruler_20567",
+		"deck": "planet_ruler",
+		"weight": 600,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Un informateur rapporte qu'un prêcheur fanatique monte le peuple contre votre autorité « impie »."
+		},
+		"conditions": [
+			{
+				"variable": "hearsay_agent",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 45
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le fait taire"
+			},
+			"reaction": {
+				"FR": "On réduit le prêcheur au silence. L'ordre tient, le martyre guette."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse prêcher"
+			},
+			"reaction": {
+				"FR": "On laisse prêcher le fanatique. Tolérant, dangereux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
 		"id": 20800,
 		"label": "seldon_plan_20800",
 		"deck": "seldon_plan",
