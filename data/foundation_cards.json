@@ -39834,6 +39834,1732 @@
 		}
 	},
 	{
+		"id": 28000,
+		"label": "trantor_court_28000",
+		"deck": "trantor_court",
+		"weight": 3000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Sur Rossem, un savant en exil vous intrigue — un ancien de la cour de Trantor, tombé en disgrâce pour avoir dit trop de vérités. « La cour impériale ? » ricane-t-il. « Un théâtre où l'on s'entre-tue avec des sourires. J'en suis sorti vivant, c'est déjà un exploit. » Un témoin précieux des arcanes du pouvoir mourant."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'interroger sur la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le juger aigri"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28001,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28001,
+		"label": "trantor_court_28001",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le savant exilé vous décrit la cour de Trantor : intrigues byzantines, eunuques tout-puissants, un Empereur fantoche. « Tout s'y achète et s'y trahit, » dit-il. « Comprenez ce nid de serpents, et vous comprendrez pourquoi l'Empire meurt. » Pour un Orateur, c'est une mine d'or stratégique. Vous buvez ses paroles."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approfondir avec lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le remercier et partir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28002,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28002,
+		"label": "trantor_court_28002",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le savant exilé vous oriente vers d'autres figures de la cour déchue, éparpillées dans la périphérie : un poète frondeur, un eunuque repenti, une dame d'honneur exilée. « Réunissez leurs témoignages, » dit-il, « et vous aurez la carte complète des faiblesses de Trantor. » La cartographie d'un empire par ses transfuges."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre ses pistes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se concentrer sur l'essentiel"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:354",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:354",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28003,
+		"label": "trantor_court_28003",
+		"deck": "trantor_court",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Le contrebandier vous parle d'un autre trésor de la cour : un sceau ou un document compromettant qui circulerait sous le manteau. « Celui qui tient ce papier tient un ministre par la gorge, » sourit-il. « Intéressé ? » Les secrets de cour valent leur pesant de chantage. Et le chantage, parfois, sert le Plan."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher le document"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner ce jeu trouble"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28004,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_where_is_the_seal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28004,
+		"label": "trantor_court_28004",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Le contrebandier vous met sur la piste du document compromettant — un dédale de receleurs et de faux. « Sur le marché noir des secrets de cour, » prévient-il, « la moitié des papiers sont des faux, et l'autre moitié vous tue. » Démêler le vrai du faux exige flair et prudence. Le renseignement impérial est un champ de mines."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Démêler le vrai du faux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Abandonner la piste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28005,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28005,
+		"label": "trantor_court_28005",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Vous remontez la filière du document de cour jusqu'à un receleur nerveux. « Ce papier ? » blêmit-il. « Il a déjà coûté trois vies. Je vous le cède à prix d'or — et bon débarras. Ce qu'il révèle pourrait faire tomber un ministre de Trantor. Ou celui qui le détient. » Un trésor brûlant change de mains."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Acquérir le document"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Flairer le piège"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28006,
+		"label": "trantor_court_28006",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": -1,
+		"hidden": true,
+		"bearer": "role:smuggler",
+		"question": {
+			"FR": "Le document compromettant en main, vous mesurez son pouvoir : il révèle la corruption au sommet de Trantor. Une arme de chantage, ou de déstabilisation. Le Contact tempère : « Utile, mais dangereux. Un Orateur ne fait pas chanter — il INFLUENCE. Gardez ce papier comme un levier de dernier recours. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Conserver le levier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer sa dangerosité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28007,
+		"label": "trantor_court_28007",
+		"deck": "trantor_court",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "acerbic_genius",
+		"question": {
+			"FR": "Un personnage haut en couleur croise votre route : un génie acerbe et sans emploi, ex-conseiller impérial viré pour insolence. « Je suis trop intelligent pour cette galaxie d'imbéciles, » déclare-t-il sans rire. « Personne ne veut de moi. Leur perte. » Brillant, insupportable, et potentiellement très utile. Le recruter sera un défi."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'intéresser au génie acerbe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Fuir cet ego"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28008,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28008,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28008,
+		"label": "trantor_court_28008",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "acerbic_genius",
+		"question": {
+			"FR": "Le génie acerbe vous teste par des piques : « Vous, au moins, vous écoutez sans vous vexer. Rare, chez les médiocres. » C'est un compliment, dans sa bouche. Sous l'arrogance, une intelligence prodigieuse et une solitude amère. Apprivoiser un tel caractère demande une patience que seul un Orateur possède."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Encaisser ses piques"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Lui river son clou"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mi_heng_looking_for_job",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_mi_heng_looking_for_job",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 28009,
+		"label": "trantor_court_28009",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "acerbic_genius",
+		"question": {
+			"FR": "Le génie acerbe cherche un employeur digne de lui — c'est-à-dire personne, à ses yeux. « Tous des ânes bâtés, » crache-t-il. « Vous compris, probablement. Mais vous semblez un âne... curieux. Faites-moi une offre intéressante, pour voir. » Recruter cet esprit brillant et impossible : un atout et un casse-tête."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Lui faire une offre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à son mépris"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28010,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28010,
+		"label": "trantor_court_28010",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "acerbic_genius",
+		"question": {
+			"FR": "Le génie acerbe daigne considérer votre offre : « Servir une cause ? Quelle cause vaut mon génie ? » Lui révéler l'ampleur du Plan est impossible ; le séduire par le défi intellectuel, peut-être. « J'ai des énigmes que nul n'a su résoudre, » glissez-vous. Son œil s'allume malgré lui. L'orgueil a ses leviers."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'appâter par le défi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Flatter son génie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28011,
+		"label": "trantor_court_28011",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "acerbic_genius",
+		"question": {
+			"FR": "Le génie acerbe vous rejoint enfin — non par loyauté, mais par ennui et curiosité : « Vos énigmes valent mieux que la cour de Trantor. Faible compliment, mais compliment. Je reste. Tant que vous m'intéressez. » Vous gagnez un cerveau prodigieux et un caractère épouvantable. Un duo improbable se forme."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accueillir le génie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Poser vos conditions"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 200,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 200,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28012,
+		"label": "trantor_court_28012",
+		"deck": "trantor_court",
+		"weight": 1000,
+		"lockturn": 12,
+		"hidden": false,
+		"bearer": "acerbic_genius",
+		"question": {
+			"FR": "Le génie acerbe, à votre service, dissèque les faiblesses de Trantor avec une jubilation cruelle : « Voici comment leur empire s'effondre, point par point. Délicieux. » Son analyse vaut une flotte d'espions. « Travailler pour vous est moins assommant que prévu, » concède-t-il. De sa part, c'est de l'enthousiasme."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 200
+			},
+			{
+				"variable": "seen_450",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter son analyse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tempérer sa cruauté"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_offering_mi_heng_a_job",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28013,
+		"label": "trantor_court_28013",
+		"deck": "trantor_court",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une dame d'honneur exilée de Trantor vous contacte — elle détient les secrets d'alcôve de la cour. « Les vrais leviers du pouvoir impérial ne sont pas dans les conseils, » murmure-t-elle, « mais dans les chambres. Je sais qui aime qui, qui trahit qui. Mes confidences valent cher. » Le renseignement intime d'un empire."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 189
+			},
+			{
+				"variable": "seen_396",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter la dame d'honneur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner ces ragots"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "instructor_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 28014,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28014,
+		"label": "trantor_court_28014",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La dame d'honneur vous livre la carte sentimentale de Trantor — alliances secrètes, haines cachées, faiblesses du cœur. « L'Empire se gouverne par les passions, pas par la raison, » dit-elle. Pour un Mentalique, c'est de l'or pur : connaître les cœurs, c'est tenir les ficelles. Vous emmagasinez ce savoir précieux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cartographier les cœurs de la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier ses dires"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "instructor_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28015,
+		"label": "trantor_court_28015",
+		"deck": "trantor_court",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un ancien instructeur de la cour, désabusé, vous met en garde : « Vous fréquentez les transfuges de Trantor ? Prudence. Certains sont des appâts, retournés par les eunuques. La cour tend des pièges jusque dans son exil. » Un conseil avisé : dans le jeu impérial, même les vaincus peuvent être des armes."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 189
+			},
+			{
+				"variable": "seen_396",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre sa mise en garde"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le juger paranoïaque"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28016,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28016,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28016,
+		"label": "trantor_court_28016",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'instructeur de cour vous apprend à distinguer les vrais transfuges des appâts impériaux : « Regardez ce qu'ils CRAIGNENT, pas ce qu'ils disent. Un vrai exilé craint Trantor ; un appât craint de vous décevoir. » Leçon précieuse de contre-espionnage. La cour de Trantor est un échiquier où chaque pièce peut être un leurre."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "instructor_trust",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Appliquer sa méthode"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le remercier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "instructor_trust",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28017,
+		"label": "trantor_court_28017",
+		"deck": "trantor_court",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un courtisan en fuite vous propose un marché douteux : « Réintégrez-moi à la cour de Trantor — vous avez les contacts — et je serai votre espion au cœur de l'Empire. » Tentant : un agent au sommet. Risqué : un homme prêt à trahir Trantor trahira aussi bien la Fondation. La loyauté des opportunistes a une date de péremption."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter le marché risqué"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Refuser cet allié douteux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28018,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28018,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 28018,
+		"label": "trantor_court_28018",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le courtisan, refusé ou retourné, montre son vrai visage : un intrigant pur, sans loyauté ni cause. « Tout le monde sert ses intérêts, l'étranger, » dit-il. « Vous comme moi. » Vous le laissez à ses combines, ayant appris une chose : la cour de Trantor ne produit plus que des survivants sans âme. L'Empire pourrit par la tête."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser à ses intrigues"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le démasquer"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 28019,
+		"label": "trantor_court_28019",
+		"deck": "trantor_court",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "An 189 : les événements vous appellent vers Trantor même, le cœur de l'Empire agonisant. « C'est là que tout se décide, ou plutôt se défait, » dit le savant exilé. « Allez voir la bête mourante de près. Vous comprendrez pourquoi le Plan de Seldon mise sur sa chute. » Vous mettez le cap sur la capitale-monde."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 7
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir pour Trantor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hésiter à plonger au cœur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28020,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28020,
+		"label": "trantor_court_28020",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact valide votre voyage vers Trantor : « Voir l'Empire de l'intérieur affûtera votre jugement. Mais prudence : la cour dévore les naïfs. Observez, n'intervenez pas. Le Plan veut que Trantor tombe SEULE, sans martyr ni sauveur. Soyez un témoin, pas un acteur. » Vous gagnez la capitale moribonde."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partir en observateur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Promettre la prudence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_trantor",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 28021,
+		"label": "trantor_court_28021",
+		"deck": "trantor_court",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "An 189, mois 8 : avant Trantor, un dernier épisode léger sur Rossem. Une vieille dame vous supplie de retrouver son chat — fugueur notoire. « Il connaît tous les secrets du quartier, ce matou, » jure-t-elle. Diversion absurde, mais un Orateur sait qu'on gagne les cœurs par les petites choses. Et les chats mènent partout."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher le chat"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner cette quête féline"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28022,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28022,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28022,
+		"label": "trantor_court_28022",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le chat fugueur vous mène, de toit en toit, à travers les secrets de Rossem — il connaît les passages, les caches, les commerces louches. « Ce chat est un meilleur espion que la moitié de mon réseau, » s'amuse le maître-espion. Suivre un matou pour cartographier un monde : méthode peu orthodoxe, étonnamment efficace."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "animal_count",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre le chat espion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le ramener à sa maîtresse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cat_grumpy",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cat_relaxed",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28023,
+		"label": "trantor_court_28023",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le chat vous conduit à une découverte inattendue : une réunion clandestine d'agents impériaux, surpris grâce au matou. « Voilà ce que cachait le quartier, » réalisez-vous. La vieille dame et son chat vous ont offert un renseignement de premier ordre. Parfois, les plus grandes pistes commencent par les plus petites quêtes."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Exploiter la découverte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Remercier le chat"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_woman_looking_for_cat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cat_normal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28024,
+		"label": "trantor_court_28024",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La vieille dame retrouve son chat, comblée : « Vous avez un bon fond, l'étranger. Le matou vous aime, et il ne se trompe jamais sur les gens. » Sa bénédiction naïve vous touche. Dans le grand jeu des cours et des empires, un chat retrouvé et une vieille dame heureuse pèsent, à leur façon, leur poids d'humanité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Recevoir sa bénédiction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Caresser le chat"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28025,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_woman_looking_for_cat",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28025,
+		"label": "trantor_court_28025",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia, croisée sur Rossem, s'amuse de vos fréquentations : « De transfuges impériaux à des chats fugueurs ? Vous avez des goûts éclectiques, charmeur. » Sous la moquerie, elle glane, comme toujours. « La cour de Trantor vous intéresse ? Mon protecteur y a des... contacts. Donnant-donnant ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Négocier avec Callia"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder vos distances"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28026,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28026,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 28026,
+		"label": "trantor_court_28026",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia vous ouvre, contre menue monnaie d'information, des portes à la cour de Trantor : « Mon protecteur de Kalgan rêve de respectabilité impériale. Il a graissé bien des pattes à Trantor. Servez-vous de ses canaux — et n'oubliez pas qui vous les a ouverts. » Une alliée encombrante, mais efficace."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Utiliser ses canaux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La remercier prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28027,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 28027,
+		"label": "trantor_court_28027",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "imperial_pretender",
+		"question": {
+			"FR": "Un prétendant impérial mineur, croisé dans ce dédale de cour, tente de vous enrôler dans ses combines de restauration. « L'Empire renaîtra, et les premiers ralliés seront récompensés ! » Vous savez ce que vaut cette promesse — rien. Mais le ménager peut servir. Les prétendants sont des pions utiles tant qu'ils s'ignorent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ménager le prétendant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décourager ses rêves"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28028,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28028,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28028,
+		"label": "trantor_court_28028",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le dédale de la cour de Trantor se referme sur une certitude : l'Empire est un cadavre qui s'ignore, rongé par ses intrigues, incapable de se réformer. « Le Plan a raison, » concluez-vous. « On ne sauve pas Trantor. On attend qu'elle tombe, et on bâtit sur ses ruines. » Un savoir froid, mais essentiel pour un Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Intégrer cette leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Plaindre l'Empire mourant"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28029,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 28029,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 28029,
+		"label": "trantor_court_28029",
+		"deck": "trantor_court",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'arc de la cour de Trantor s'achève. Vous avez sondé les arcanes de l'Empire mourant, recruté un génie impossible, glané mille secrets, et compris dans votre chair pourquoi le Plan mise sur la chute. « L'Empire pourrit par la tête, » résumez-vous, « et aucune intrigue de cour n'y changera rien. » Cap sur l'avenir, loin du passé qui s'effondre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'arc de la cour"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter le théâtre impérial"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 28400,
 		"label": "barr_28400",
 		"deck": "siwenna_affair",
@@ -47166,6 +48892,1555 @@
 		}
 	},
 	{
+		"id": 30000,
+		"label": "forell_house_30000",
+		"deck": "forell_house",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "forell_son_char",
+		"question": {
+			"FR": "La grande maison Forell — héritière de Hober Mallow, première dynastie marchande de la Fondation — vous emploie comme intermédiaire. Le vieux patriarche se meurt ; ses affaires partent en quenouille. « Sauvez ce que vous pouvez de notre empire commercial, » vous prie son intendant. « Avant que les vautours ne se servent. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 226
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reprendre les affaires Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Décliner ce panier de crabes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30001,
+		"label": "forell_house_30001",
+		"deck": "forell_house",
+		"weight": 800,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Une piste mène à un secret de la maison Forell : un « village isolé » que le patriarche aurait fondé loin de tout, refuge ou trésor caché. « Il en parlait dans son délire, » dit l'intendant. « Un labyrinthe de pêchers le protégerait. » Sur Terminus, retrouver ce dédale devient votre mission. Les vieux marchands cachent bien leurs trésors."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "forell_runaway",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher le labyrinthe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ignorer ces divagations"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_macaque_home",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "forell_village_found",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30002,
+		"label": "forell_house_30002",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Vous trouvez l'entrée du labyrinthe Forell — une vaste roseraie-verger conçue pour égarer les curieux. Le dock-maître siffle : « Le vieux Forell était parano. Ce dédale a perdu plus d'un héritier avide. Avancez avec méthode, ou tournez en rond jusqu'à la nuit. » Le labyrinthe des pêchers vous avale."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "forell_runaway",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Entrer dans le labyrinthe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher un plan d'abord"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_peach_maze",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30003,
+		"label": "forell_house_30003",
+		"deck": "forell_house",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Premier carrefour du labyrinthe : trois allées de pêchers, identiques, trompeuses. Un repère discret — une branche cassée, peut-être un signe du vieux Forell — pointe vaguement. À gauche ou à droite ? Le dédale teste la patience autant que le sens de l'orientation. Un faux pas, et vous repartez de zéro."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Prendre à gauche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Prendre à droite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_b",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_c",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30004,
+		"label": "forell_house_30004",
+		"deck": "forell_house",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le labyrinthe se resserre, les pêchers plus denses. Vous avancez à l'instinct — un instinct mentalique, qui sent peut-être l'écho des pas du vieux Forell sur ces allées. Chaque embranchement est un pari. « Le vieux était fou, mais méthodique, » vous répétez-vous. « Sa folie a une logique. Trouvez-la. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre l'écho des pas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Procéder méthodiquement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_b",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_c",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30005,
+		"label": "forell_house_30005",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Une allée vous ramène à un point déjà vu — le labyrinthe vous joue des tours. Frustration. Mais un détail change : une fleur fanée là où elle était fraîche. Le temps passe, le dédale se moque de vous. « Garder la tête froide, » vous ordonnez-vous. « Un labyrinthe ne gagne que contre ceux qui paniquent. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder son calme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rebrousser chemin"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_b_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_e",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30006,
+		"label": "forell_house_30006",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le labyrinthe Forell révèle sa logique tordue : les allées qui SEMBLENT mener au centre s'en éloignent, et vice versa. Le vieux marchand a inversé l'intuition. « Génie paranoïaque, » songez-vous, presque admiratif. Vous prenez systématiquement le chemin qui paraît le pire. Le dédale, déjoué, commence à céder."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre la logique inversée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter de votre théorie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_staring_point",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_c",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30007,
+		"label": "forell_house_30007",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous progressez dans le dédale, déchiffrant ses pièges un à un. Le cœur du labyrinthe approche — vous le sentez. Quelques détours encore, calculés à rebours de l'instinct, et le secret du vieux Forell sera à portée. La patience d'un Orateur fait merveille dans les épreuves que la précipitation ferait échouer."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Approcher du centre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier votre progression"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_d",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_c_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30008,
+		"label": "forell_house_30008",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un retour forcé au point de départ — un piège du labyrinthe que vous n'aviez pas vu. Agaçant, mais instructif : vous cartographiez mentalement chaque impasse. « Le dédale m'apprend ses règles à chaque échec, » réalisez-vous. La défaite, ici, est une leçon. Vous repartez, plus sage et plus déterminé."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Repartir mieux armé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Maudire le vieux Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_staring_point",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_b",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30009,
+		"label": "forell_house_30009",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le labyrinthe livre enfin son secret : au-delà d'une dernière haie, une clairière cachée. Vous touchez au but. Le cœur du dédale Forell — ce que le vieux marchand a protégé d'un mur de pêchers et de ruses. Un dernier pas, et le mystère se dévoile. Le souffle court, vous écartez les branches."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Franchir la dernière haie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Marquer une pause solennelle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_e_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_exit",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30010,
+		"label": "forell_house_30010",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Encore une fausse sortie — le labyrinthe a un dernier tour dans son sac. Mais vous n'êtes plus le novice du début : vous reconnaissez le piège, le contournez, avancez. « Presque, » murmurez-vous. Le dédale a rencontré plus patient que lui. Le vieux Forell, où qu'il soit, doit sourire de vous voir si près."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Contourner le dernier piège"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avancer pas à pas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_exit",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_c_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30011,
+		"label": "forell_house_30011",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le labyrinthe se fait plus clément — ou vous, plus habile. Les pêchers s'espacent, la lumière filtre. Le centre n'est plus qu'à quelques détours. Vous savourez l'approche, conscient d'avoir vaincu une énigme qui a défait des héritiers cupides. La méthode et la patience, encore, triomphent de la ruse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Savourer l'approche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Presser le pas"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_e",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_d_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30012,
+		"label": "forell_house_30012",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Avant-dernière épreuve du dédale : un embranchement où tout se ressemble, ultime piège du vieux Forell. Votre sens mentalique capte une infime trace — l'usure du sol, là où le vieux passait le plus. Vous suivez ce fil ténu. Le génie d'un paranoïaque finit toujours par trahir son propre secret."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre la trace d'usure"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Choisir au hasard"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_b_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_maze_e",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30013,
+		"label": "forell_house_30013",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Enfin — la sortie du labyrinthe, et au-delà, le secret du vieux Forell. Vous émergez des pêchers dans une clairière baignée de lumière. Le dédale est vaincu. Reste à découvrir ce qu'un patriarche marchand jugeait digne d'un tel rempart végétal. La curiosité d'un Orateur est à son comble."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Découvrir le secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Reprendre son souffle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30014,
+		"label": "forell_house_30014",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "forell_son_char",
+		"question": {
+			"FR": "Le fils Forell — l'héritier fugueur que vous aviez déjà croisé — surgit dans la clairière, son singe-robot sur l'épaule : « VOUS ! Vous avez trouvé la cachette de père ! » Lui aussi cherchait. « Ce village, c'est son dernier rêve : un refuge pour ceux que le commerce a broyés. Ne le livrez pas aux vautours. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Écouter le fils Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Revendiquer la trouvaille"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30015,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30015,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30015,
+		"label": "forell_house_30015",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Au cœur du labyrinthe, un village isolé — le secret du vieux Forell : une communauté de réfugiés du commerce, ruinés et recueillis, vivant cachée sous la protection de la maison. « Père les a sauvés en secret, » dit le fils, ému. « Sa honte et sa fierté. Un marchand qui rachetait ses propres ravages. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "forell_village_found",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "forell_runaway",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger le village"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Évaluer sa valeur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_isolated_village_enter",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30016,
+		"label": "forell_house_30016",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous entrez dans le village caché des Forell — paisible, modeste, peuplé de gens que le grand commerce a brisés puis qu'un vieux marchand repentant a sauvés. « On nous croyait morts, » dit un ancien. « Le seigneur Forell nous a offert une seconde vie, loin des comptoirs qui nous ont ruinés. » Un secret touchant."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.simple_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer ce refuge"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "S'enquérir de leurs besoins"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_isolated_village_discover",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_isolated_village_discover",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30017,
+		"label": "forell_house_30017",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le dock-maître, ému, mesure la portée de la découverte : « Le vieux Forell, ce requin du commerce, cachait un cœur. Ce village vaut plus que tous ses comptoirs. » Vous décidez de son sort : le préserver tel quel, l'intégrer discrètement à la Fondation, ou le révéler au grand jour ? Un trésor humain, pas matériel."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Préserver le secret du village"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'intégrer à la Fondation"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30018,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30018,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30018,
+		"label": "forell_house_30018",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Dame Callia, flairant une affaire, s'invite : « Un village caché de la maison Forell ? Délicieux. Mon protecteur paierait cher pour ce genre de... main-d'œuvre reconnaissante. » Sa convoitise menace le refuge. Le protéger d'elle exige diplomatie et fermeté. Tous les trésors n'éveillent pas que de nobles appétits."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger le village de Callia"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier avec elle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30019,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30019,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30019,
+		"label": "forell_house_30019",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact évalue le village caché : « Une communauté loyale, secrète, reconnaissante. Pour la Seconde Fondation, c'est une base parfaite — invisible, dévouée. Mais l'utiliser, c'est trahir le rêve du vieux Forell. » Le dilemme d'un Orateur : un refuge sincère, ou un atout stratégique ? Rarement les deux sans compromis."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Respecter le rêve de Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "En faire une base discrète"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30020,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_secret_base",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30020,
+		"label": "forell_house_30020",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous tranchez le sort du village Forell : ni pillé par Callia, ni trahi par l'usage, mais protégé — un refuge maintenu, discrètement soutenu par la Fondation, fidèle au rêve de son fondateur. Le fils Forell, reconnaissant, vous serre la main : « Père vous aurait aimé. Vous avez compris que certaines richesses ne se monnaient pas. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller la protection du village"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Promettre un soutien discret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30021,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30021,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30021,
+		"label": "forell_house_30021",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'affaire de la maison Forell se referme : l'empire commercial sauvé, le village secret préservé, le fils réconcilié avec la mémoire de son père. Terminus gagne un refuge caché et la Fondation, un nœud de loyauté discret. « Le commerce broie, » médite le fils, « mais parfois, il rachète. Grâce à des gens comme vous. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'arc Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller de loin sur le village"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_terminus_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "deck_forell_house",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "magistrat_vergers",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "deck_forell_house",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30022,
+		"label": "forell_house_30022",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Une base secrète au cœur du village Forell prend forme — discrète, loyale, idéale pour les opérations de la Table. « Le rêve d'un marchand devient un outil du Plan, » songez-vous, partagé. Le vieux Forell aurait-il approuvé ? Peut-être : protéger les siens et servir une grande cause ne sont pas toujours opposés."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Établir la base discrète"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "En mesurer la portée"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30023,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30023,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30023,
+		"label": "forell_house_30023",
+		"deck": "forell_house",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le réseau Forell, ancré dans son village caché, devient un atout durable pour la Fondation — yeux et oreilles sur Terminus, refuge en cas de besoin. Le fils Forell veille sur l'héritage de son père, vous sur le Plan. Une alliance improbable entre un marchand repenti et l'ombre derrière le Plan. Le commerce et le secret, alliés."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pérenniser le réseau Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer le pacte"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_followup",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_followup",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30024,
+		"label": "forell_house_30024",
+		"deck": "forell_house",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'épilogue de la maison Forell vous laisse songeur : un dédale vaincu, un village sauvé, un héritage transmis. Le commerce, que la Fondation manie comme une arme, peut aussi abriter des cœurs. « Tout n'est pas que calcul, même chez les marchands, » concluez-vous. Une leçon de plus dans le grand livre d'un Orateur. Cap ailleurs."
+		},
+		"conditions": [
+			{
+				"variable": "seen_2168",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "seen_2179",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "deck_forell_house",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tourner la page Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Garder cette leçon"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:2179",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:2179",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30025,
+		"label": "forell_house_30025",
+		"deck": "forell_house",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le tout dernier fil de l'affaire Forell se noue : la maison stabilisée, le village arrimé, le fils installé dans son rôle. Vous quittez Terminus en laissant derrière un peu d'ordre dans le chaos commercial, et un secret bien gardé de plus. Les Forell, désormais, sont des vôtres — sans le savoir tout à fait."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_forell_house",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter l'affaire Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Quitter l'affaire Forell"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 30400,
 		"label": "start_30400",
 		"deck": "start",
@@ -48761,6 +52036,1375 @@
 			"default": "neutral",
 			"yes": "neutral",
 			"no": "curious"
+		}
+	},
+	{
+		"id": 30800,
+		"label": "imperial_sigil_30800",
+		"deck": "imperial_sigil",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Sur Rossem, monde glacé et oublié, une rumeur invraisemblable : un authentique SCEAU IMPÉRIAL — la matrice qui valide les décrets de Trantor — aurait échoué là après le Sac. « Qui tient le sceau tient un fragment de légitimité impériale, » murmure le maître de guilde. « De quoi faire et défaire des prétendants. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "seal_search_stage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Chercher le sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir la rumeur pour un mythe"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30801,
+		"label": "imperial_sigil_30801",
+		"deck": "imperial_sigil",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un vieux chasseur de Rossem prétend savoir où chercher : « Mon chien flaire les métaux anciens. Le sceau, s'il existe, dort sous les ruines du vieux comptoir impérial. Suivez la bête. » Le chien jappe, impatient. Une chasse au trésor sur un monde de glace, guidée par un molosse. L'Empire finit en archéologie canine."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "seal_search_stage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.dog_bark",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "seal_hunt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "animal_count",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre le chien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Douter du chasseur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30802,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30802,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30802,
+		"label": "imperial_sigil_30802",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le chien vous mène à travers les ruines gelées du comptoir impérial — couloirs effondrés, givre éternel, échos de grandeur déchue. « L'Empire passait par ici, jadis, » souffle le chasseur. « Avant que tout ne gèle. » Vous fouillez les décombres d'une splendeur morte, à la recherche d'un symbole de pouvoir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fouiller les ruines"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Avancer prudemment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30803,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30803,
+		"label": "imperial_sigil_30803",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le chien s'arrête, museau pointé vers une dalle descellée. Le maître de guilde gratte le givre : « Quelque chose, là-dessous. » Le cœur battant, vous dégagez une cache impériale oubliée. Le sceau y serait-il, après des siècles de glace et d'oubli ? La main tremble en écartant la dernière croûte de gel."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ouvrir la cache"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Examiner d'abord les lieux"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30804,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30804,
+		"label": "imperial_sigil_30804",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La cache révèle des trésors impériaux mineurs — bijoux, sceaux secondaires, paperasse séculaire. Mais pas LE sceau. « Il faut creuser plus profond, » insiste le chasseur. « La vraie matrice ne se cache jamais en surface. » L'Empire enterrait ses secrets en couches, comme un oignon de pouvoir. Vous continuez."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Creuser plus profond"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se contenter des trouvailles"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30805,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30805,
+		"label": "imperial_sigil_30805",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Plus bas, sous le comptoir gelé, une salle scellée — le bureau du vice-roi impérial, intact, momifié par le froid. Le chien gronde devant une porte de métal noir. « C'est là, » murmure le chasseur. « Tout ce que l'Empire jugeait précieux est derrière cette porte. Le sceau aussi, peut-être. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Forcer la porte noire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher une clé"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30806,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30806,
+		"label": "imperial_sigil_30806",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La porte cède. Le bureau du vice-roi vous accueille, figé dans le temps : fauteuil, registres, et sur la table, un coffret scellé aux armes impériales. Votre souffle se condense dans l'air glacé. Si le sceau existe, il est là, à portée de main, après des siècles d'attente sous la glace de Rossem."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Ouvrir le coffret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Hésiter devant le trésor"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30807,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30807,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30807,
+		"label": "imperial_sigil_30807",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le coffret recèle... un écrin vide, et un message gravé : « Le sceau a été déplacé. Cherchez celui qui garde la lumière. » Déception et énigme mêlées. Le chasseur jure ; le chien gémit. Le trésor se dérobe encore. « Celui qui garde la lumière, » répétez-vous. « Un phare ? Un gardien ? Le jeu continue. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.dog_bark_distant",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Déchiffrer l'énigme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Renoncer à la chasse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30808,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30808,
+		"label": "imperial_sigil_30808",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le chien repart sur une nouvelle piste — « la lumière » serait un vieux gardien de phare, sur une lune de Rossem, qui détiendrait le sceau sans le savoir. La chasse rebondit. « Toujours un détour de plus avec les trésors impériaux, » grogne le chasseur. « Comme si l'Empire se moquait de nous d'outre-tombe. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Suivre la nouvelle piste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Souffler un peu"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30809,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30809,
+		"label": "imperial_sigil_30809",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion vous accompagne chez le gardien du phare — un ermite à demi fou qui « garde la lumière » depuis quarante ans. « Le sceau ? » caquette-t-il. « Ah, le joli presse-papier que m'a laissé un mourant. Je m'en sers pour caler ma porte. » La matrice impériale, cale-porte d'un ermite. L'Histoire a de ces ironies."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Récupérer le sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Ménager l'ermite"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30810,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30810,
+		"label": "imperial_sigil_30810",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le sceau impérial enfin en main — froid, lourd, chargé de mille ans d'autorité. Le Contact mesure l'enjeu : « Cet objet peut légitimer un usurpateur ou démasquer un faux. Une arme politique pure. À garder loin des ambitieux. » Vous tenez un fragment du pouvoir impérial. La question est : qu'en faire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "seal_search_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Confier le sceau à la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Réfléchir à son usage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jade_seal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jade_seal",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30811,
+		"label": "imperial_sigil_30811",
+		"deck": "imperial_sigil",
+		"weight": -1,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "La nouvelle du sceau retrouvé fuit — et les convoitises s'éveillent. Le maître-espion s'alarme : « Tout ambitieux de la périphérie va vouloir cette matrice. Un prétendant qui scelle ses décrets du vrai sceau impérial gagne une légitimité dangereuse. Cachez-le, ou détruisez-le. Mais ne le laissez pas traîner. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "seal_hunt",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "seal_hunt",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Cacher le sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Envisager de le détruire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30812,
+		"label": "imperial_sigil_30812",
+		"deck": "imperial_sigil",
+		"weight": -1,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Une piste mène vers Kalgan : un seigneur de guerre y rassemble des reliques impériales pour se forger une légitimité de pacotille. « Il lui manque le sceau, » note le maître-espion. « Le vôtre. S'il l'apprend, il viendra le prendre. Mieux vaut le devancer — ou le piéger. » La chasse au trésor devient course politique."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "seal_hunt",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "seal_hunt",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Devancer le seigneur de Kalgan"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Préparer un piège"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "kalgan",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30813,
+		"label": "imperial_sigil_30813",
+		"deck": "imperial_sigil",
+		"weight": -1,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Le chien flaire à nouveau — cette fois, des intrus sur vos traces, agents du seigneur de Kalgan venus voler le sceau. « Suivez la bête, elle vous mènera hors de leur nasse, » conseille le chasseur. La possession du sceau fait de vous une cible. Le trésor impérial est une malédiction autant qu'une arme."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "seal_hunt",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.dog_bark",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "seal_hunt",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fuir guidé par le chien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Affronter les agents"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_follow_the_dog",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30814,
+		"label": "imperial_sigil_30814",
+		"deck": "imperial_sigil",
+		"weight": -1,
+		"lockturn": 20,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La traque autour du sceau s'intensifie. Le seigneur de Kalgan ne lâchera pas — un fragment de légitimité impériale vaut bien quelques vies. Vous devez décider du sort du sceau avant qu'il ne déclenche une guerre de prétendants. « Un objet, mille convoitises, » soupire le Contact. « L'Empire empoisonne encore, même mort. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "rossem"
+			},
+			{
+				"variable": "seal_hunt",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "seal_hunt",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Trancher le sort du sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Gagner du temps"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "kalgan",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 30815,
+		"label": "imperial_sigil_30815",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Le Contact pose le dilemme final : remettre le sceau à la Table pour qu'elle le neutralise, ou le détruire ici, à jamais, privant tous les ambitieux d'un outil de légitimation. « Détruire un tel symbole, » hésite-t-il, « c'est effacer un fragment d'Histoire. Mais l'Histoire, parfois, mérite l'oubli. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Détruire le sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le confier à la Table"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30817,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30816,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 30816,
+		"label": "imperial_sigil_30816",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous détruisez le sceau impérial — la matrice fond dans un creuset, mille ans d'autorité réduits en métal anonyme. Le seigneur de Kalgan rage dans le vide, sa quête de légitimité brisée. « Bien joué, » approuve le Contact. « Un faux empereur de moins. On ne ressuscite pas l'Empire avec un cale-porte. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_imperial_sigil",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Assumer la destruction"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Regarder fondre l'Histoire"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30817,
+		"label": "imperial_sigil_30817",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Le seigneur de Kalgan, apprenant la perte du sceau, vous affronte directement — colère de prétendant frustré. « Vous m'avez privé de ma couronne, étranger ! » Le confronter exige nerf et ruse : un seigneur de guerre humilié est un ennemi mortel. Mais sans le sceau, sa légitimité n'est que vent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le défier sur le terrain politique"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Apaiser sa fureur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_fight_sun_jian",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_why_sun_jian_here",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30818,
+		"label": "imperial_sigil_30818",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Le seigneur de Kalgan exige des explications : pourquoi un simple négociant détruirait-il une relique impériale ? Votre réponse doit le détourner de la vérité — que vous servez une cause plus haute que son ambition de pacotille. Un Mentalique tisse le mensonge juste qui désamorce un fauve déçu."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Inventer un prétexte crédible"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le braver ouvertement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_why_sun_jian_here",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_why_sun_jian_here",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30819,
+		"label": "imperial_sigil_30819",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "L'affrontement avec le seigneur de Kalgan tourne au duel d'influence — il a des hommes, vous avez l'esprit. Le retourner par la persuasion, ou le briser par la ruse ? Sa cour de mercenaires guette le moindre signe de faiblesse. Vaincre un seigneur de guerre sans armée : spécialité d'Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le retourner par la persuasion"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le briser par la ruse"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30820,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30820,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30820,
+		"label": "imperial_sigil_30820",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Vous désamorcez le seigneur de Kalgan — sa fureur retombe, sa quête impériale s'éteint faute d'objet. « Vous m'avez coûté un empire, étranger, » grince-t-il en partant. « Je ne l'oublierai pas. » Un ennemi de plus, une catastrophe de moins : pas d'usurpateur légitimé pour rallumer les guerres impériales. Bon bilan."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le laisser partir frustré"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Surveiller sa rancune"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_leave_forever",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 16,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_fight_sun_jian",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 30821,
+		"label": "imperial_sigil_30821",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "L'affaire du sceau impérial se referme : la relique détruite ou cachée, un faux prétendant désarmé, et la périphérie épargnée d'une guerre de légitimité. Vous repartez de Rossem avec un chien fidèle qui jappe à vos talons et la satisfaction d'avoir enterré, pour de bon, un fantôme de l'Empire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Quitter Rossem"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Adopter le chien chasseur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30822,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_leave_forever",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 30822,
+		"label": "imperial_sigil_30822",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "rival_lord",
+		"question": {
+			"FR": "Le chasseur de Rossem vous fait ses adieux, son chien à vos pieds : « La bête vous a choisi. Gardez-la. Sur la glace de Rossem, un compagnon fidèle vaut tous les sceaux impériaux. » Vous repartez avec un molosse renifleur de métaux et une leçon : les vraies richesses ne se scellent pas. Elles aboient et remuent la queue."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder le chien"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le laisser à son maître"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30823,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 30823,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 30823,
+		"label": "imperial_sigil_30823",
+		"deck": "imperial_sigil",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "L'arc du sceau impérial s'achève. Vous avez transformé une chasse au trésor en service au Plan : un fragment dangereux de l'ancien monde, neutralisé avant qu'il ne nourrisse de nouvelles guerres. L'Empire s'efface un symbole à la fois, et vous êtes la main discrète qui referme ses tombeaux. Cap sur d'autres mondes."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_imperial_sigil",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'affaire du sceau"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Repartir vers le prochain défi"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "sayshell",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "kalgan",
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
 		}
 	},
 	{
