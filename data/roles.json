@@ -325,5 +325,41 @@
 	},
 	"puppet_heir": {
 		"title": "Héritier fantoche"
+	},
+	"fortune_teller": {
+		"title": "Diseuse de bonne aventure"
+	},
+	"rainmaker": {
+		"title": "Faiseur de pluie"
+	},
+	"mill_engineer": {
+		"title": "Ingénieur des moulins"
+	},
+	"porcelain_master": {
+		"title": "Maître porcelainier"
+	},
+	"silk_merchant": {
+		"title": "Marchand de soie"
+	},
+	"circuit_judge": {
+		"title": "Juge itinérant"
+	},
+	"foreign_envoy": {
+		"title": "Émissaire étranger"
+	},
+	"tax_collector": {
+		"title": "Collecteur d'impôts"
+	},
+	"village_elder": {
+		"title": "Doyen du village"
+	},
+	"public_works": {
+		"title": "Intendant des travaux"
+	},
+	"town_crier": {
+		"title": "Crieur public"
+	},
+	"steward": {
+		"title": "Intendant du fief"
 	}
 }

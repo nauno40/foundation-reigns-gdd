@@ -1110,5 +1110,38 @@
 			20816,
 			20817
 		]
+	},
+	"_draughts": {
+		"node": 20418
+	},
+	"_anthem": {
+		"node": 20465
+	},
+	"_countryside_suggestion": {
+		"action": "enddispatch"
+	},
+	"_eleven_sisters": {
+		"node": 20480
+	},
+	"_salt_normal": {
+		"action": "enddispatch"
+	},
+	"_find_the_match": {
+		"node": 20491
+	},
+	"_criminal_prostitute": {
+		"node": 20494
+	},
+	"_fortune_read": {
+		"node": 20545
+	},
+	"_fortune_read_2": {
+		"node": 20546
+	},
+	"_investigate_riot": {
+		"node": 20561
+	},
+	"_monk_fashion": {
+		"node": 20588
 	}
 }
