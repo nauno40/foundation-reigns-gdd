@@ -169,5 +169,20 @@
 	},
 	"penitent": {
 		"title": "Pénitent"
+	},
+	"cover_spouse": {
+		"title": "Conjoint de couverture"
+	},
+	"noble_spouse": {
+		"title": "Noble allié"
+	},
+	"midwife": {
+		"title": "Sage-femme"
+	},
+	"physician": {
+		"title": "Physicien de cour"
+	},
+	"heir_tutor": {
+		"title": "Précepteur"
 	}
 }

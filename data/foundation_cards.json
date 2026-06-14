@@ -25552,6 +25552,5285 @@
 		}
 	},
 	{
+		"id": 23200,
+		"label": "cover_union_23200",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse déploie un dossier. « Une fille de négociant, riche à faire pâlir un Commdor. Elle ferait une épouse de couverture parfaite. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte de rencontrer l'héritière. La couverture se tisse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On décline. La marieuse soupire et tourne la page."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23201,
+		"label": "cover_union_23201",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« Cette fois », sourit la marieuse, « une fille de magistrat. Des appuis politiques jusque sur Trantor. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte. Une alliance de cour, sous le voile du mariage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On refuse l'héritière de robe. La marieuse note quelque chose."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23202,
+		"label": "cover_union_23202",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« Une fille d'officier de garnison », propose la marieuse. « Elle vous ouvrira les casernes — et tient le sabre mieux que vous. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte de courtiser la fille d'épée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On décline. Trop d'acier pour une couverture tranquille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23203,
+		"label": "cover_union_23203",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« La nièce d'un haut prêtre de la Science », murmure la marieuse. « La dévotion en personne. Et un alibi en or. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte. Une épouse pieuse pour un Orateur impie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On refuse la dévote. La marieuse hausse un sourcil."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 6,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23204,
+		"label": "cover_union_23204",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« Un jeune négociant interstellaire », annonce la marieuse. « Beau parti, bourse pleine, questions rares. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte de rencontrer le marchand. Couverture commerciale assurée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On décline le négociant. La marieuse range son dossier."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 7,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23205,
+		"label": "cover_union_23205",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« Un conseiller de cour, ambitieux mais discret », propose la marieuse. « Il vous épousera pour le rang, vous pour l'alibi. Donnant-donnant. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte. Un époux politique, parfait paravent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On refuse le courtisan. Trop ambitieux, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 8,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23206,
+		"label": "cover_union_23206",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« Un officier décoré », dit la marieuse. « Il vous protégera — et ne saura jamais qui vous protégez vraiment. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte le militaire. Une couverture armée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On décline l'officier. La marieuse insiste à peine."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 9,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23207,
+		"label": "cover_union_23207",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "« Un missionnaire de la Science », conclut la marieuse. « Pieux, voyageur, et merveilleusement crédule. »"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "marriage",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rencontre"
+			},
+			"reaction": {
+				"FR": "On accepte. Un époux de foi pour masquer l'incroyant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On refuse le missionnaire. La marieuse ferme le dossier."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 10,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_meet",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23208,
+		"label": "cover_union_23208",
+		"deck": "cover_union",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "Le premier rendez-vous. Votre prétendant scrute votre visage. Faut-il jouer le charme, ou la réserve mystérieuse ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue le charme"
+			},
+			"reaction": {
+				"FR": "On déploie le charme. Le prétendant fond — et ne soupçonne rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste réservé"
+			},
+			"reaction": {
+				"FR": "On reste énigmatique. Intrigant, mais risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_date",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_matchmaker_date",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23209,
+		"label": "cover_union_23209",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "L'héritière de négociant vous regarde droit dans les yeux. « Épousez-moi pour mon or, je le sais. M'épousez-vous quand même ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On scelle l'union de couverture. La marieuse exulte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On recule au dernier moment. L'héritière encaisse, glaciale."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23210,
+		"label": "cover_union_23210",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "La fille de magistrat pose ses conditions. « Mon nom contre votre discrétion. Marché conclu, Orateur ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On scelle l'alliance. Les portes de la cour s'entrouvrent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On se dérobe. La magistrate vous raye de sa liste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23211,
+		"label": "cover_union_23211",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "La fille d'officier croise les bras. « Je n'épouse pas un lâche. Prouvez-moi que vous tiendrez votre rang. »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On relève le défi et on signe. Une épouse d'acier à son bras."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On bat en retraite. Elle ricane : « Je le savais. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23212,
+		"label": "cover_union_23212",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "La nièce du haut prêtre joint les mains. « L'Esprit Galactique bénit-il cette union, selon vous ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On invoque l'Esprit et on signe. La dévote rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On recule, faute de foi. Elle prie pour votre âme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23213,
+		"label": "cover_union_23213",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Le jeune négociant compte déjà vos atouts. « Une union profitable aux deux. On signe ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 7
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On scelle le contrat. La couverture marchande tient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On se retire de l'affaire. Le négociant hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23214,
+		"label": "cover_union_23214",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Le conseiller de cour vous tend un contrat de mariage déjà rédigé. « Tout est prévu. Votre signature, Orateur ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 8
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On paraphe le contrat. Un époux politique, et mille portes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On repousse le contrat. Le conseiller plisse les yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23215,
+		"label": "cover_union_23215",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "L'officier décoré claque des talons. « Je vous offre mon nom et mon épée. Les prenez-vous ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On accepte l'épée et le nom. Une couverture en uniforme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On décline. L'officier salue, raide, et tourne les talons."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23216,
+		"label": "cover_union_23216",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 10,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Le missionnaire vous prend les mains. « Unissons nos chemins sous le regard de la Science. M'épousez-vous ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 10
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On épouse le missionnaire crédule. Couverture sainte, parfaite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce"
+			},
+			"reaction": {
+				"FR": "On retire ses mains. Le missionnaire bénit votre départ."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "spouse",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23217,
+		"label": "cover_union_23217",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "Jour de noce. Sous les guirlandes, toute la cité célèbre l'union de l'Orateur et de son épouse. Discours sincère, ou de pure forme ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "married",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Un discours sincère"
+			},
+			"reaction": {
+				"FR": "On feint l'émotion à la perfection. Personne ne doute."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Un discours de forme"
+			},
+			"reaction": {
+				"FR": "On expédie le discours. Quelques regards se font songeurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_after_wedding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_after_wedding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23218,
+		"label": "cover_union_23218",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "Jour de noce. La cité acclame l'Orateur et son époux. Vous voilà marié — façade impeccable. Larme de circonstance, ou sourire froid ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "married",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Une larme"
+			},
+			"reaction": {
+				"FR": "On verse la larme attendue. La foule fond. Couverture scellée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Un sourire"
+			},
+			"reaction": {
+				"FR": "On sourit, distant. Élégant, mais un brin suspect."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_after_wedding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_after_wedding",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23219,
+		"label": "cover_union_23219",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Une rumeur cruelle court sur votre virilité d'apparat. Faut-il la démentir publiquement, ou l'ignorer avec dédain ?"
+		},
+		"conditions": [
+			{
+				"variable": "castrated",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dément"
+			},
+			"reaction": {
+				"FR": "On dément avec aplomb. La rumeur s'éteint, mal à l'aise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ignore"
+			},
+			"reaction": {
+				"FR": "On méprise la rumeur. Elle enfle un peu, puis meurt seule."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23220,
+		"label": "cover_union_23220",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre épouse marchande gère déjà vos comptes mieux que vous. « Laissez-moi les coffres, vous garderez les secrets. »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_supply",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui confie les coffres"
+			},
+			"reaction": {
+				"FR": "Les comptes prospèrent sous sa main. Un héritier, maintenant ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la main"
+			},
+			"reaction": {
+				"FR": "On garde les coffres. Elle boude, mais s'incline."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23221,
+		"label": "cover_union_23221",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre épouse de robe vous ouvre les salons de Trantor. « Souriez, saluez, et laissez-moi parler. »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 4
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_people",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue le jeu"
+			},
+			"reaction": {
+				"FR": "On charme la cour à son bras. Et un héritier scellerait tout."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste en retrait"
+			},
+			"reaction": {
+				"FR": "On la laisse briller seule. Elle apprécie — à moitié."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23222,
+		"label": "cover_union_23222",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre épouse d'épée a déjà réorganisé votre garde. « Vos hommes étaient mous. Plus maintenant. Un héritier pour les commander, un jour ? »"
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_military",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approuve"
+			},
+			"reaction": {
+				"FR": "La garde est au cordeau. La lignée, ensuite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tempère"
+			},
+			"reaction": {
+				"FR": "On modère ses réformes. Elle range son sabre, frustrée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23223,
+		"label": "cover_union_23223",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre épouse dévote veut imposer la prière du soir à toute la maisonnée."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_morality",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte la prière"
+			},
+			"reaction": {
+				"FR": "La maisonnée prie. Façade pieuse irréprochable — et un héritier béni ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse les dévotions. Elle pince les lèvres, déçue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23224,
+		"label": "cover_union_23224",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre époux marchand veut investir votre dot dans une route commerciale risquée."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 7
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_supply",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_husband",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On investit"
+			},
+			"reaction": {
+				"FR": "L'investissement double la mise. Un héritier pour en hériter ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la dot"
+			},
+			"reaction": {
+				"FR": "On garde la dot au chaud. Il grogne contre votre prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23225,
+		"label": "cover_union_23225",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre époux conseiller tisse déjà des intrigues en votre nom à la cour."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 8
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_people",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le laisse manœuvrer"
+			},
+			"reaction": {
+				"FR": "Ses intrigues vous servent. Un héritier consoliderait l'édifice."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le freine"
+			},
+			"reaction": {
+				"FR": "On bride ses manœuvres. Il vous trouve bien timoré."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23226,
+		"label": "cover_union_23226",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre époux officier veut lever une garde personnelle à vos couleurs."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_military",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_husband",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "Une garde fidèle veille sur le foyer. Et un héritier à protéger ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse la garde. Il range ses ambitions, vexé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23227,
+		"label": "cover_union_23227",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre époux missionnaire veut transformer votre demeure en lieu de culte."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 10
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_morality",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_husband",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "Le foyer devient chapelle. Couverture sainte — et un héritier pieux ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On garde la maison profane. Il prêche dans le vide."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23228,
+		"label": "cover_union_23228",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:noble_spouse",
+		"question": {
+			"FR": "Un noble étranger, ému par votre union, vous offre son amitié et son épée. Un allié inattendu se range à votre table."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 14
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "bonus_morality",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "Le noble rejoint votre maison. Un puissant ami de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste courtois"
+			},
+			"reaction": {
+				"FR": "On reste poli sans s'engager. Le noble respecte la distance."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 165,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 165,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23229,
+		"label": "cover_union_23229",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Les anciens de la cité s'enquièrent : un héritier viendra-t-il couronner cette belle union ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "has_wife",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'espère"
+			},
+			"reaction": {
+				"FR": "On laisse entendre qu'un héritier est espéré. La couverture s'épaissit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On élude"
+			},
+			"reaction": {
+				"FR": "On élude la question. Les anciens chuchotent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23230,
+		"label": "cover_union_23230",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "La cité attend un héritier de l'Orateur. La pression dynastique se fait sentir jusque dans les sermons."
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "has_husband",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rassure"
+			},
+			"reaction": {
+				"FR": "On promet une descendance. Le peuple se réjouit d'avance."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On botte en touche"
+			},
+			"reaction": {
+				"FR": "On esquive. Les langues vont bon train."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_heir",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23231,
+		"label": "cover_union_23231",
+		"deck": "cover_union",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Les médecins doutent qu'un héritier soit possible. Faut-il s'obstiner, ou envisager une autre voie ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "castrated",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "try_for_a_baby",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'obstine"
+			},
+			"reaction": {
+				"FR": "On persévère contre l'avis des médecins. L'espoir demeure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renonce à l'héritier"
+			},
+			"reaction": {
+				"FR": "On renonce à l'enfant. La couverture devra tenir autrement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23232,
+		"label": "cover_union_23232",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre épouse vous annonce, rayonnante, qu'un héritier est en chemin. Joie sincère, ou calcul de couverture ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exulte"
+			},
+			"reaction": {
+				"FR": "On joue la joie parfaite. La cité jubile avec vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste mesuré"
+			},
+			"reaction": {
+				"FR": "On accueille la nouvelle avec retenue. Étrange, murmure-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23233,
+		"label": "cover_union_23233",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Vous attendez un héritier. Votre époux paonne dans toute la cité. Faut-il calmer son enthousiasme bruyant ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le calme"
+			},
+			"reaction": {
+				"FR": "On tempère ses fanfaronnades. Plus discret, plus sûr."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse fanfaronner"
+			},
+			"reaction": {
+				"FR": "On le laisse claironner. La cité s'amuse de sa fierté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_2",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23234,
+		"label": "cover_union_23234",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:midwife",
+		"question": {
+			"FR": "La sage-femme veille sur la grossesse. « Du repos, de la prudence. Tout ira bien — si l'on m'écoute. »"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit ses conseils"
+			},
+			"reaction": {
+				"FR": "On suit la sage-femme à la lettre. La grossesse se passe au mieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On poursuit les devoirs"
+			},
+			"reaction": {
+				"FR": "On continue les affaires d'État. La sage-femme fronce les sourcils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23235,
+		"label": "cover_union_23235",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Les semaines passent. L'heir grandit dans l'ombre du secret. Annoncer publiquement le terme, ou rester discret ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On annonce"
+			},
+			"reaction": {
+				"FR": "On annonce le terme. La cité prépare déjà les festivités."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On garde le silence. Mieux vaut prévenir les mauvais sorts."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_baby",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_baby",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23236,
+		"label": "cover_union_23236",
+		"deck": "cover_union",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "La grossesse se complique un peu. La sage-femme réclame l'alitement complet."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On impose le repos"
+			},
+			"reaction": {
+				"FR": "On impose le repos. La prudence l'emporte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse vivre"
+			},
+			"reaction": {
+				"FR": "On laisse votre conjoint vaquer. Risqué, mais humain."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_4",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_baby",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 23237,
+		"label": "cover_union_23237",
+		"deck": "cover_union",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:physician",
+		"question": {
+			"FR": "Le physicien de la cour propose un remède impérial coûteux pour assurer l'accouchement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie le remède"
+			},
+			"reaction": {
+				"FR": "On paie le remède rare. La sécurité a un prix."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en remet à la nature"
+			},
+			"reaction": {
+				"FR": "On refuse le remède. La nature suivra son cours."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_baby",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_pregnaunt_5",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 23238,
+		"label": "cover_union_23238",
+		"deck": "cover_union",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:physician",
+		"question": {
+			"FR": "Le terme approche. Le physicien hésite entre deux méthodes pour la délivrance."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On choisit la prudente"
+			},
+			"reaction": {
+				"FR": "On opte pour la méthode prudente. Lente, mais sûre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On choisit la rapide"
+			},
+			"reaction": {
+				"FR": "On choisit la délivrance rapide. Plus risquée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_baby",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_difficult_labor",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 23239,
+		"label": "cover_union_23239",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "L'accouchement est rude. La sage-femme s'active dans l'urgence — la vie de votre conjoint vacille."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "has_son",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_baby",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reste au chevet"
+			},
+			"reaction": {
+				"FR": "On veille au chevet, le cœur serré, jusqu'au cri du nouveau-né."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire les médecins"
+			},
+			"reaction": {
+				"FR": "On s'écarte et on laisse les médecins œuvrer. L'attente est atroce."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_en_couches",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_en_couches",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 23240,
+		"label": "cover_union_23240",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "La délivrance s'éternise. La sage-femme, le front en sueur, redouble d'efforts."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "heir_baby",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_daughter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encourage"
+			},
+			"reaction": {
+				"FR": "On encourage votre conjoint d'une main ferme. L'enfant finit par naître."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On prie en silence"
+			},
+			"reaction": {
+				"FR": "On prie — vous, l'incroyant. L'ironie n'échappe à personne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_en_couches",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_en_couches",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 23241,
+		"label": "cover_union_23241",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Un fils ! Le nouveau-né hurle à pleins poumons. La cité explose de joie. Premier regard : fierté, ou inquiétude ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "has_son",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_baby",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Fierté"
+			},
+			"reaction": {
+				"FR": "On lève le fils vers la foule. La lignée de couverture est née."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Inquiétude"
+			},
+			"reaction": {
+				"FR": "On serre l'enfant, songeur. Que deviendra-t-il, fils d'un secret ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "heir_boastful",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "heir_blessful",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23242,
+		"label": "cover_union_23242",
+		"deck": "cover_union",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Une fille ! Menue et vigoureuse, elle ouvre les yeux. La cité acclame l'héritière. Joie débordante, ou émotion contenue ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "heir_baby",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_daughter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Joie débordante"
+			},
+			"reaction": {
+				"FR": "On célèbre la naissance à grand bruit. La couverture rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Émotion contenue"
+			},
+			"reaction": {
+				"FR": "On contemple l'enfant en silence. Un Orateur a-t-il droit à cela ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "heir_boastful",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "heir_blessful",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23243,
+		"label": "cover_union_23243",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre fils, tout-petit, est déjà turbulent et fanfaron. Faut-il encourager son audace, ou la canaliser ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "has_son",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "heir_boastful",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encourage l'audace"
+			},
+			"reaction": {
+				"FR": "On nourrit son tempérament fougueux. Un futur capitaine, peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le canalise"
+			},
+			"reaction": {
+				"FR": "On tempère ses élans. Plus sage, moins flamboyant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23244,
+		"label": "cover_union_23244",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre fils est un enfant doux et pieux. Faut-il cultiver sa sérénité, ou l'aguerrir au monde ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "has_son",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "heir_blessful",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cultive sa douceur"
+			},
+			"reaction": {
+				"FR": "On nourrit sa nature paisible. Un esprit, pas une épée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'aguerrit"
+			},
+			"reaction": {
+				"FR": "On l'endurcit un peu. Le monde n'épargne pas les doux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23245,
+		"label": "cover_union_23245",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre fille, petite, est déjà effrontée et brillante. Encourager son panache, ou lui apprendre la mesure ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "has_daughter",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "heir_boastful",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encourage le panache"
+			},
+			"reaction": {
+				"FR": "On laisse éclore son audace. Une meneuse en herbe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lui apprend la mesure"
+			},
+			"reaction": {
+				"FR": "On lui enseigne la retenue. Utile, dans un monde de loups."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23246,
+		"label": "cover_union_23246",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Votre fille est posée et bienveillante. Faut-il nourrir sa sagesse, ou éveiller son ambition ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "has_daughter",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "heir_blessful",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On nourrit sa sagesse"
+			},
+			"reaction": {
+				"FR": "On cultive sa bonté. Une âme rare sous les étoiles."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On éveille son ambition"
+			},
+			"reaction": {
+				"FR": "On allume en elle l'étincelle de l'ambition."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23247,
+		"label": "cover_union_23247",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:midwife",
+		"question": {
+			"FR": "Votre fils grandit. La marieuse — décidément partout — suggère déjà un bon précepteur militaire."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "has_son",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On engage le précepteur"
+			},
+			"reaction": {
+				"FR": "Le fils s'exerce au sabre et à la stratégie. Il s'épanouit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On choisit les livres"
+			},
+			"reaction": {
+				"FR": "On préfère les livres aux armes. Le précepteur insiste, en vain."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23248,
+		"label": "cover_union_23248",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:midwife",
+		"question": {
+			"FR": "Votre fille grandit, vive et curieuse. Quelle éducation lui donner ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "has_daughter",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Les lettres et la foi"
+			},
+			"reaction": {
+				"FR": "On l'oriente vers le savoir et la dévotion. Elle excelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le monde et les armes"
+			},
+			"reaction": {
+				"FR": "On l'ouvre au monde rude. Elle apprend vite, et dur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23249,
+		"label": "cover_union_23249",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Le précepteur évalue votre fils audacieux. « Le formerai-je au commandement, ou au négoce ? »"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "heir_boastful",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "heir_baby",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_child",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Au commandement"
+			},
+			"reaction": {
+				"FR": "Le garçon apprend l'art de la guerre. Un futur officier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Au négoce"
+			},
+			"reaction": {
+				"FR": "Le garçon apprend les comptes et les routes. Un futur marchand."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bonus_military",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bonus_supply",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23250,
+		"label": "cover_union_23250",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Le précepteur observe votre enfant serein. « Le tournerai-je vers la Science, ou vers la politique ? »"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "heir_blessful",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "heir_baby",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_child",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Vers la Science"
+			},
+			"reaction": {
+				"FR": "L'enfant embrasse la voie de la foi-savante. Pieux et brillant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vers la politique"
+			},
+			"reaction": {
+				"FR": "L'enfant apprend les arcanes du pouvoir. Fin et mesuré."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "bonus_morality",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "bonus_people",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23251,
+		"label": "cover_union_23251",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier, formé aux armes, réclame de vraies responsabilités militaires."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "child_age",
+				"op": "below",
+				"value": 15
+			},
+			{
+				"variable": "bonus_military",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui en confie"
+			},
+			"reaction": {
+				"FR": "On confie un détachement à l'héritier. Il s'aguerrit au feu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le juge trop jeune"
+			},
+			"reaction": {
+				"FR": "On le juge trop tendre. Il ronge son frein."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23252,
+		"label": "cover_union_23252",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier, formé à la politique, veut siéger à vos côtés au conseil."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "child_age",
+				"op": "below",
+				"value": 15
+			},
+			{
+				"variable": "bonus_people",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'admet au conseil"
+			},
+			"reaction": {
+				"FR": "L'héritier prend goût aux intrigues. Habile, déjà."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'écarte encore"
+			},
+			"reaction": {
+				"FR": "On l'écarte du conseil. Il boude, mais observe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23253,
+		"label": "cover_union_23253",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier, voué à la Science, veut prêcher en public."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "child_age",
+				"op": "below",
+				"value": 15
+			},
+			{
+				"variable": "bonus_morality",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'y autorise"
+			},
+			"reaction": {
+				"FR": "L'héritier prêche, inspiré. La foule l'écoute, charmée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On le retient encore. Sa ferveur attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23254,
+		"label": "cover_union_23254",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier, formé au négoce, veut tenter une première grande spéculation."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "child_age",
+				"op": "below",
+				"value": 15
+			},
+			{
+				"variable": "bonus_supply",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le finance"
+			},
+			"reaction": {
+				"FR": "On finance l'audace de l'héritier. Coûteux, formateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse les fonds. Il apprendra la patience, de force."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23255,
+		"label": "cover_union_23255",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier atteint l'âge adulte, façonné par les armes. La cité voit en lui un chef. Le pousser en avant, ou le tenir en réserve ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 15
+			},
+			{
+				"variable": "bonus_military",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "heir_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_adult",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 16,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le met en avant"
+			},
+			"reaction": {
+				"FR": "On présente l'héritier comme un futur commandant. Acclamations."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le tient en réserve"
+			},
+			"reaction": {
+				"FR": "On garde l'héritier dans l'ombre. Prudent — et frustrant pour lui."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23256,
+		"label": "cover_union_23256",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier devient adulte, fin politique. On le presse d'épouser un grand nom. Arranger l'union, ou le laisser libre ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 15
+			},
+			{
+				"variable": "bonus_people",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "heir_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_adult",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 16,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On arrange l'union"
+			},
+			"reaction": {
+				"FR": "On marie l'héritier à un grand parti. La lignée s'enracine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse libre"
+			},
+			"reaction": {
+				"FR": "On laisse l'héritier choisir. Romanesque — et risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23257,
+		"label": "cover_union_23257",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier, devenu adulte pieux, veut entrer dans les ordres de la Science. Le bénir, ou le retenir au siècle ?"
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 15
+			},
+			{
+				"variable": "bonus_morality",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "heir_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_adult",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 16,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le bénit"
+			},
+			"reaction": {
+				"FR": "L'héritier prend l'habit. Une lignée sainte, et un alibi parfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On le garde au monde. La maison a besoin d'un successeur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23258,
+		"label": "cover_union_23258",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier adulte, rompu au négoce, veut prendre les rênes de vos affaires."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "equal",
+				"value": 15
+			},
+			{
+				"variable": "bonus_supply",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "heir_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_adult",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "child_age",
+				"intValue": 16,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui cède les affaires"
+			},
+			"reaction": {
+				"FR": "On confie le négoce à l'héritier. Il le fait fructifier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le contrôle"
+			},
+			"reaction": {
+				"FR": "On garde la main sur les affaires. Il attendra son heure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "child_age",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23259,
+		"label": "cover_union_23259",
+		"deck": "cover_union",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier guerrier brûle de prouver sa valeur dans une vraie campagne."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 15
+			},
+			{
+				"variable": "bonus_military",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'envoie au front"
+			},
+			"reaction": {
+				"FR": "On envoie l'héritier guerroyer. Il revient couvert de gloire — ou pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le garde près"
+			},
+			"reaction": {
+				"FR": "On le garde au foyer. Sa fougue se mue en amertume."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23260,
+		"label": "cover_union_23260",
+		"deck": "cover_union",
+		"weight": 600,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier politique vous propose une réforme audacieuse de la cité."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 18
+			},
+			{
+				"variable": "bonus_people",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On examine sa réforme. Brillante par endroits, naïve ailleurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la rejette"
+			},
+			"reaction": {
+				"FR": "On rejette la réforme. L'héritier serre les dents."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23261,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23261,
+		"label": "cover_union_23261",
+		"deck": "cover_union",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "La réforme de votre héritier divise la cité. La soutenir publiquement, ou la désavouer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la soutient"
+			},
+			"reaction": {
+				"FR": "On soutient l'héritier en place publique. Pari risqué, beau geste."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la désavoue"
+			},
+			"reaction": {
+				"FR": "On désavoue la réforme. L'héritier l'apprend devant tous. Humiliation."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23262,
+		"label": "cover_union_23262",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 144,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier pieux veut fonder une œuvre de charité en votre nom."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 18
+			},
+			{
+				"variable": "bonus_morality",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'y aide"
+			},
+			"reaction": {
+				"FR": "On finance l'œuvre de l'héritier. La maison gagne en sainteté."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse l'idée mûrir"
+			},
+			"reaction": {
+				"FR": "On diffère l'œuvre. L'héritier patiente, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23263,
+		"label": "cover_union_23263",
+		"deck": "cover_union",
+		"weight": 100,
+		"lockturn": 144,
+		"hidden": false,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Votre héritier marchand veut ouvrir un comptoir familial sur un monde lointain."
+		},
+		"conditions": [
+			{
+				"variable": "child_age",
+				"op": "above",
+				"value": 18
+			},
+			{
+				"variable": "bonus_supply",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On finance le comptoir"
+			},
+			"reaction": {
+				"FR": "Le comptoir s'ouvre, prometteur. La fortune de la maison s'étend."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On refuse le comptoir lointain. L'héritier vise déjà ailleurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 23600,
 		"label": "church_primate_23600",
 		"deck": "church_primate",
