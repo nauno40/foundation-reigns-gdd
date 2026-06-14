@@ -48476,6 +48476,1419 @@
 		}
 	},
 	{
+		"id": 31600,
+		"label": "nucleics_for_power_31600",
+		"deck": "nucleics_for_power",
+		"weight": 500,
+		"lockturn": 200,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Une rumeur de génie vous attire vers Siwenna : un vieil inventeur y aurait reconstitué un secret perdu de l'Empire — une source d'énergie nucléaire miniaturisée que même Trantor ne sait plus fabriquer. « Le tenir, » murmure le maître de guilde, « c'est tenir un levier sur toute la périphérie. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "siwenna"
+			},
+			{
+				"variable": "nucleics_stage",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Aller voir l'inventeur"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Tenir la rumeur pour folle"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_siwenna",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31601,
+		"label": "nucleics_for_power_31601",
+		"deck": "nucleics_for_power",
+		"weight": 1400,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur de Siwenna vous reçoit dans son atelier encombré de prototypes : « Vous venez pour mon « élixir de puissance », comme les autres ? » Il crache le mot. « Tous veulent ma formule, aucun ne veut de MOI. Prouvez-moi que vous êtes différent, ou repartez avec les autres charognards. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "nucleics_stage",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'intéresser à l'homme"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Aller droit à la formule"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31602,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31602,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 31602,
+		"label": "nucleics_for_power_31602",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "« Bien, » concède l'inventeur, radouci. « Vous écoutez. Rare. » Il vous montre son œuvre : une cellule nucléaire grosse comme un poing, capable d'alimenter une cité. « L'Empire savait faire ça. Il a oublié. Moi, j'ai retrouvé. Reste à décider à qui je le confie — et pour quoi. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "quest_inventor",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "nucleics_stage",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Gagner sa confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Évaluer l'invention"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31603,
+		"label": "nucleics_for_power_31603",
+		"deck": "nucleics_for_power",
+		"weight": 5000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur pose ses conditions : « Ma formule contre une chose — la PROTECTION. Siwenna agonise, les seigneurs de guerre rôdent, et un vieil homme avec un trésor est une proie. Garantissez ma sécurité, et le secret est à votre Fondation. Sinon, je le brûle plutôt que de le voir mal employé. »"
+		},
+		"conditions": [
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 25
+			},
+			{
+				"variable": "nucleics_stage",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garantir sa protection"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier les termes"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "nucleics_recipe",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31604,
+		"label": "nucleics_for_power_31604",
+		"deck": "nucleics_for_power",
+		"weight": 100000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "Vous obtenez la formule — un savoir qui vaut des flottes. Mais l'inventeur insiste : il veut superviser sa fabrication, jaloux de son œuvre. « Personne ne forge mes cellules sans moi, » décrète-t-il. La maîtrise du secret implique de composer avec un génie ombrageux. Le prix de l'exclusivité."
+		},
+		"conditions": [
+			{
+				"variable": "deck",
+				"op": "equal",
+				"value": 25
+			},
+			{
+				"variable": "nucleics_stage",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Accepter sa supervision"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Industrialiser sans lui"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "made_gadget",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "nucleics_stage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 31605,
+		"label": "nucleics_for_power_31605",
+		"deck": "nucleics_for_power",
+		"weight": 1500,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "La production des cellules nucléaires démarre sous l'œil sourcilleux de l'inventeur. Chaque unité forgée renforce la position de la Fondation — et l'appétit des convoiteurs. « Plus on en fabrique, plus on devient une cible, » avertit le maître-espion. Le pouvoir attire toujours les couteaux."
+		},
+		"conditions": [
+			{
+				"variable": "made_gadget",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "nucleics_stage",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "nucleics_stage",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sécuriser la production"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accélérer la cadence"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31606,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31606,
+		"label": "nucleics_for_power_31606",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur, fier de son œuvre déployée, vous confie son rêve plus vaste : un « élixir de puissance » ultime, une cellule si dense qu'elle alimenterait une planète. Visionnaire ou mégalomane ? « Le génie et la folie partagent le même atelier, » songez-vous, en l'écoutant exposer son chef-d'œuvre."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "made_gadget",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "nucleics_stage",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "deck_nucleics_for_power",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Soutenir son grand projet"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le ramener à la raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31607,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "ultimate_cell",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31607,
+		"label": "nucleics_for_power_31607",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur dévoile sa vraie nature au fil du travail : aigri par l'Empire qui l'a méprisé, il rêve de revanche autant que de science. « Ils m'ont ri au nez, à Trantor, » siffle-t-il. « Bientôt ils MENDIERONT mes cellules. » Un génie blessé est un allié puissant et instable. À manier avec soin."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Canaliser son ressentiment"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Flatter sa revanche"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wei_hong_fear_mongering",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wei_hong_good_deeds",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 31608,
+		"label": "nucleics_for_power_31608",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur teste votre loyauté par une exigence déraisonnable — un caprice de génie. Y céder le rassure mais l'enhardit ; refuser le braque. « Vous me comprenez, ou vous êtes comme les autres ? » Tout le rapport se joue sur ce fil : être l'ami qu'il n'a jamais eu, sans devenir son esclave."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le faire comprendre raison"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Céder à son caprice"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wei_hong_understands",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wei_hong_angry",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 31609,
+		"label": "nucleics_for_power_31609",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur, apaisé par votre patience, baisse enfin la garde : « Vous savez, personne ne m'avait traité en HOMME depuis vingt ans. Que des mains tendues vers ma formule. » Sa gratitude vaut plus que sa science. Un Mentalique sait : on ne gagne jamais mieux un cœur qu'en ne convoitant pas son trésor."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Honorer cette confiance"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "En profiter habilement"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wei_hong_understands",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_wei_hong_angry",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31610,
+		"label": "nucleics_for_power_31610",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur vous offre tout — formule, prototypes, et sa propre allégeance à la Fondation : « Faites-en bon usage. Pas pour la guerre. Pour ÉCLAIRER. C'est tout ce que je demande à un vieux fou qui a passé sa vie sur une cellule. » Vous gagnez un trésor technologique et la fidélité de son créateur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Jurer un bon usage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Accepter sans promettre"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yanzhou_recuits",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "ultimate_cell",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "nucleics_stage",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 153,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_yanzhou_recuits",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "ultimate_cell",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "nucleics_stage",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 22,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 31611,
+		"label": "nucleics_for_power_31611",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "siwenna_inventor",
+		"question": {
+			"FR": "L'inventeur, mal compris, se referme amèrement : « Vous voulez la formule, pas l'homme. Comme les autres. » Sa déception empoisonne l'affaire — il ne livrera qu'à contrecœur, en bridant son génie. On obtient le secret, mais pas le cœur. Et un génie sans cœur invente mal. Demi-victoire amère."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Tenter de le reconquérir"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Se contenter de la formule"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "ultimate_cell",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "ultimate_cell",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 31612,
+		"label": "nucleics_for_power_31612",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion sécurise Siwenna autour de l'inventeur — gardes discrets, fausses pistes, protection rapprochée. « Tant qu'il vit et invente, il vaut une planète, » dit-il. « Mort, il ne vaut plus qu'un secret figé. » Protéger le génie devient une mission à part entière. La poule aux œufs nucléaires."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_siwenna_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Renforcer sa protection"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Évaluer les menaces"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31613,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31613,
+		"label": "nucleics_for_power_31613",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Un assistant de l'inventeur — jeune, brillant, ambitieux — pourrait reprendre le flambeau le jour venu. « Mon élève, » dit le vieux avec une fierté bourrue. « Plus doué que moi, et plus prudent. L'avenir de la formule, c'est lui. » Cultiver la relève d'un génie : prévoyance d'un bon Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "S'attacher l'élève"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Rester centré sur le maître"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31614,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "party",
+				"intValue": 154,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31614,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31614,
+		"label": "nucleics_for_power_31614",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'élève de l'inventeur vous rallie, garantissant l'avenir de la technologie nucléaire au-delà de la vie du vieux maître. « Je continuerai son œuvre, » promet-il, « et dans le bon sens. » La Fondation s'assure ainsi non un secret, mais une LIGNÉE de savants. Le vrai trésor n'est jamais la formule : c'est l'esprit qui la porte."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_nucleics_for_power",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sceller la relève"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Veiller sur la transmission"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 151,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31615,
+		"label": "nucleics_for_power_31615",
+		"deck": "nucleics_for_power",
+		"weight": 5000,
+		"lockturn": 30,
+		"hidden": false,
+		"bearer": null,
+		"question": {
+			"FR": "Un détail bloque tout : la formule de l'inventeur exige un composant rare, dont la source s'est tarie. Un chimiste de Siwenna prétend pouvoir le synthétiser : « Je peux recréer l'ingrédient manquant. Contre rémunération, évidemment. » Sans lui, les cellules ne se fabriquent plus. Le génie tient à un grain de poussière."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "siwenna"
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 25
+			},
+			{
+				"variable": "nucleics_recipe",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Engager le chimiste"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Chercher une autre source"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31616,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 31616,
+		"label": "nucleics_for_power_31616",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Le chimiste vous mène vers la source du composant rare — une mine oubliée, un procédé perdu. « Tout savoir impérial se retrouve, si on creuse, » philosophe-t-il. « L'Empire n'a rien inventé qu'on ne puisse réinventer. » Reconstituer la chaîne complète de la technologie : patient travail d'archéologie industrielle."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Reconstituer la chaîne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vérifier sa fiabilité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_where_to_find_wine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31617,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 31617,
+		"label": "nucleics_for_power_31617",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La quête du composant rare se complique : la source est sur un territoire disputé, gardée par des intérêts hostiles. « Rien n'est jamais simple sur Siwenna, » soupire le chimiste. Obtenir l'ingrédient exigera ruse ou force. Le moindre rouage de la grande machine technologique demande sa propre bataille."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Forcer l'accès à la source"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Négocier le passage"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31618,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31618,
+		"label": "nucleics_for_power_31618",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "Vous sécurisez la source du composant rare — la chaîne de production est enfin complète. Cellule nucléaire, ingrédient, procédé : la Fondation maîtrise désormais une technologie que l'Empire a perdue. « Nous fabriquons ce que Trantor ne sait plus, » mesure le maître-espion. « Le futur change de mains. Discrètement. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Verrouiller la chaîne"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Mesurer l'avantage acquis"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31619,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31619,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31619,
+		"label": "nucleics_for_power_31619",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "La technologie nucléaire de Siwenna devient un atout majeur — mais aussi une cible. Des espions rivaux rôdent, des seigneurs convoitent. « Un secret partagé n'est plus un secret, » rappelle le maître-espion. « Gardons celui-ci comme la prunelle de nos yeux. » Le pouvoir technologique exige une vigilance de chaque instant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Protéger le secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Diffuser prudemment la technologie"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31620,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 31620,
+		"label": "nucleics_for_power_31620",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'inventeur, vieillissant, contemple son œuvre déployée par la Fondation : « J'ai éclairé des mondes, finalement. Pas vengé, non — éclairé. C'est mieux. » Sa sérénité retrouvée vous touche. Vous avez transformé un génie aigri en bienfaiteur paisible. Parfois, sauver un homme vaut bien sauver un monde."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Partager sa sérénité"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le remercier"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 31621,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 31621,
+		"label": "nucleics_for_power_31621",
+		"deck": "nucleics_for_power",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": null,
+		"question": {
+			"FR": "L'arc de l'inventeur de Siwenna se referme : une technologie perdue retrouvée, une lignée de savants ralliée, un monde-clé arrimé à la Fondation par le génie plutôt que par les armes. La cellule nucléaire de Siwenna éclairera longtemps la périphérie — et le nom de son inventeur, lui, restera dans l'ombre. Comme le vôtre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Clore l'arc de Siwenna"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Honorer l'inventeur en secret"
+			},
+			"reaction": {
+				"FR": ""
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "nucleics_recipe",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "nucleics_recipe",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 32000,
 		"label": "askone_elders_32000",
 		"deck": "askone_elders",
