@@ -825,5 +825,44 @@
 	},
 	"EXTERNE:208": {
 		"action": "enddispatch"
+	},
+	"_lost_kids_hanzhong_yes": {
+		"node": 23608
+	},
+	"_lost_kids_hanzhong_no": {
+		"node": 23610
+	},
+	"_hanzhong_invitation_yes": {
+		"node": 23611
+	},
+	"_hanzhong_invitation_no": {
+		"node": 23612
+	},
+	"_looking_for_someone": {
+		"node": 23610
+	},
+	"_community_day": {
+		"node": 23615
+	},
+	"_hanzhong_more": {
+		"node": 23620
+	},
+	"_hanzhong_enough": {
+		"node": 23622
+	},
+	"_join_the_cult": {
+		"node": 23636
+	},
+	"_hanzhong_boy_not_eat": {
+		"node": 23644
+	},
+	"_hanzhong_boy_eat": {
+		"node": 23645
+	},
+	"_zhang_lu_war": {
+		"nodes": [
+			23654,
+			23655
+		]
 	}
 }

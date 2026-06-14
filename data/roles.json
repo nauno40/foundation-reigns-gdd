@@ -148,5 +148,26 @@
 	},
 	"rival_warlord": {
 		"title": "Seigneur rival"
+	},
+	"community_elder": {
+		"title": "Doyen du Culte"
+	},
+	"rice_almoner": {
+		"title": "Almonier du Grain"
+	},
+	"cult_deacon": {
+		"title": "Diacre du Culte"
+	},
+	"faith_healer": {
+		"title": "Guérisseuse du Grain"
+	},
+	"cult_magistrate": {
+		"title": "Magistrat du Culte"
+	},
+	"grand_primate": {
+		"title": "Grand Primate"
+	},
+	"penitent": {
+		"title": "Pénitent"
 	}
 }

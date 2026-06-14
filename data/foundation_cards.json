@@ -25552,6 +25552,4451 @@
 		}
 	},
 	{
+		"id": 23600,
+		"label": "church_primate_23600",
+		"deck": "church_primate",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Un créancier en robe grise vous arrête. « On distribue du grain gratuit aux affamés, là-bas. Folie charitable… ou début d'un empire ? »"
+		},
+		"conditions": [
+			{
+				"variable": "rice_fever",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "military",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encourage"
+			},
+			"reaction": {
+				"FR": "On bénit la distribution. Le Culte du Grain prend racine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se méfie"
+			},
+			"reaction": {
+				"FR": "On fronce les sourcils. La charité gratuite cache souvent un calcul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23601,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23601,
+		"label": "church_primate_23601",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier insiste : « Du grain gratuit, c'est du pouvoir gratuit. Faut-il les laisser faire, ou couper les vivres ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On coupe les vivres"
+			},
+			"reaction": {
+				"FR": "On tarit la distribution. Le peuple gronde, le créancier ricane."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse couler le grain. Le mouvement enfle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "angry",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23602,
+		"label": "church_primate_23602",
+		"deck": "church_primate",
+		"weight": 800,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique signale que le Culte du Grain rend désormais la justice dans les faubourgs, à votre place."
+		},
+		"conditions": [
+			{
+				"variable": "rice_fever",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tolère"
+			},
+			"reaction": {
+				"FR": "On laisse le Culte juger. Pratique — et dangereux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reprend la main"
+			},
+			"reaction": {
+				"FR": "On rétablit vos tribunaux. Le Culte recule, vexé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23603,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23603,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23603,
+		"label": "church_primate_23603",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique murmure : « Ils ne demandent ni impôt ni soldat. Juste la foi. Comment lutter contre ça ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les imite"
+			},
+			"reaction": {
+				"FR": "On copie leurs méthodes charitables. Le peuple applaudit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les surveille"
+			},
+			"reaction": {
+				"FR": "On place des mouchards parmi les fidèles du Grain."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23606,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23604,
+		"label": "church_primate_23604",
+		"deck": "church_primate",
+		"weight": 800,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur vous prévient : le Culte du Grain recrute jusque dans vos rangs. « Bientôt ils seront plus nombreux que nous. »"
+		},
+		"conditions": [
+			{
+				"variable": "rice_fever",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On infiltre"
+			},
+			"reaction": {
+				"FR": "On glisse nos agents dans le Culte. Renseignement précieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse grandir"
+			},
+			"reaction": {
+				"FR": "On laisse le Culte grossir. Le profit politique reste à prendre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23605,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "suspicious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23605,
+		"label": "church_primate_23605",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur propose de récupérer le Culte à votre profit avant qu'il n'échappe à tous."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le récupère"
+			},
+			"reaction": {
+				"FR": "On noyaute le Culte du Grain de l'intérieur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste à l'écart"
+			},
+			"reaction": {
+				"FR": "On garde ses distances. Le Culte avance seul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23606,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23606,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23606,
+		"label": "church_primate_23606",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "Tout mène à un nom : le Grand Primate, maître du Culte sur Askone. Il faut aller le voir — ailleurs d'abord."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "rice_fever",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part en quête"
+			},
+			"reaction": {
+				"FR": "On saute vers Sayssel sur la piste du Grand Primate."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On note le nom"
+			},
+			"reaction": {
+				"FR": "On garde le nom du Primate en mémoire. La rencontre attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_sayshell",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "meet_zhang_lu",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "meet_zhang_lu",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23607,
+		"label": "church_primate_23607",
+		"deck": "church_primate",
+		"weight": 4000,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Sur Askone, jour de communauté. Le doyen vous aborde : « Des enfants se sont perdus dans les silos. Aidez-vous à les chercher ? »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_zhang_lu",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "community_day",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On aide"
+			},
+			"reaction": {
+				"FR": "On fouille les silos. Les enfants sont sains et saufs — et reconnaissants."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline poliment. Le doyen marque le coup."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_lost_kids_hanzhong_yes",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_lost_kids_hanzhong_no",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23608,
+		"label": "church_primate_23608",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Le doyen, soulagé, vous propose de rester pour la fête du Grain."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte l'invitation"
+			},
+			"reaction": {
+				"FR": "On reste pour la fête. Une porte s'ouvre dans le Culte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche encore"
+			},
+			"reaction": {
+				"FR": "On préfère continuer à chercher quelqu'un d'autre dans la foule."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_invitation_yes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_looking_for_someone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23609,
+		"label": "church_primate_23609",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Le doyen vous présente d'autres familles du Culte. « Cherchez-vous quelqu'un en particulier, Orateur ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte l'invitation"
+			},
+			"reaction": {
+				"FR": "On accepte de partager leur table. Confiance gagnée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche encore"
+			},
+			"reaction": {
+				"FR": "On poursuit ses recherches parmi les fidèles."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_invitation_yes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_looking_for_someone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23610,
+		"label": "church_primate_23610",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Le doyen vous tend une coupe de grain bénit. « Des nôtres, ou de passage ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se joint à eux"
+			},
+			"reaction": {
+				"FR": "On boit le grain bénit. On est désormais bienvenu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste de passage"
+			},
+			"reaction": {
+				"FR": "On repose la coupe. Le doyen hoche la tête, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_invitation_yes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_invitation_no",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23611,
+		"label": "church_primate_23611",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Accueilli au Culte, on vous convie à célébrer le jour de communauté."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "community_day",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On célèbre"
+			},
+			"reaction": {
+				"FR": "On partage la fête du Grain. Le Culte vous adopte un peu plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On observe"
+			},
+			"reaction": {
+				"FR": "On observe la cérémonie en retrait, prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23612,
+		"label": "church_primate_23612",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "On vous laisse entrevoir l'organisation du Culte un jour de communauté."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "community_day",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'intéresse"
+			},
+			"reaction": {
+				"FR": "On étudie leurs rouages. Fascinant — et instructif."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On garde profil bas. Trop de curiosité éveille les soupçons."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23613,
+		"label": "church_primate_23613",
+		"deck": "church_primate",
+		"weight": 1000000,
+		"lockturn": 3,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde, alléché, propose de financer la prochaine fête du Grain pour s'attirer les faveurs du Culte."
+		},
+		"conditions": [
+			{
+				"variable": "meet_zhang_lu",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "community_day",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "cult_of_rice",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On finance"
+			},
+			"reaction": {
+				"FR": "On parraine la fête. Le Culte vous doit une fière chandelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On garde les crédits. Le Culte grandit sans nous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_community_day",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23614,
+		"label": "church_primate_23614",
+		"deck": "church_primate",
+		"weight": 1000000,
+		"lockturn": 9,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde revient : le Culte a triplé. « Investir maintenant, c'est posséder demain. »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_zhang_lu",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "community_day",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "cult_of_rice",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On investit gros"
+			},
+			"reaction": {
+				"FR": "On déverse l'or dans le Culte. On en devient un pilier."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On limite la mise. Le Culte avance, nous suivons de loin."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_community_day",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23615,
+		"label": "church_primate_23615",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Jour de communauté en grande pompe. Le doyen vous offre de présider les réjouissances."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.party_atmos",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On préside"
+			},
+			"reaction": {
+				"FR": "On préside la fête du Grain. La foule scande votre nom."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste simple convive"
+			},
+			"reaction": {
+				"FR": "On décline l'honneur et on se mêle aux fidèles."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_more",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23616,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23616,
+		"label": "church_primate_23616",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rice_almoner",
+		"question": {
+			"FR": "L'almonier du Grain montre les greniers : « Faut-il tout distribuer, ou garder des réserves pour l'hiver ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On distribue tout"
+			},
+			"reaction": {
+				"FR": "On vide les greniers. Générosité acclamée, lendemains incertains."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde des réserves"
+			},
+			"reaction": {
+				"FR": "On garde du grain en réserve. Prudent, mais moins aimé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23617,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23617,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23617,
+		"label": "church_primate_23617",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rice_almoner",
+		"question": {
+			"FR": "L'almonier propose d'étendre la distribution aux mondes voisins."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On étend"
+			},
+			"reaction": {
+				"FR": "Le Grain franchit les frontières. Le Culte rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On concentre sur Askone"
+			},
+			"reaction": {
+				"FR": "On garde la charité locale. Mieux maîtrisée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23618,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23618,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23618,
+		"label": "church_primate_23618",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks signale des marchands qui veulent acheter du grain bénit pour le revendre cher ailleurs."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On leur vend"
+			},
+			"reaction": {
+				"FR": "On vend aux marchands. Le grain bénit devient denrée de luxe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse de marchander le Grain. Le Culte garde sa pureté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23619,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23619,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 23619,
+		"label": "church_primate_23619",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cult_deacon",
+		"question": {
+			"FR": "Le diacre du Culte demande s'il faut bâtir un grand temple-grenier pour couronner le mouvement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On bâtit le temple"
+			},
+			"reaction": {
+				"FR": "On érige le temple-grenier. Le Culte a enfin un cœur de pierre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On juge cela suffisant"
+			},
+			"reaction": {
+				"FR": "On estime le Culte assez grand. Le diacre soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_more",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_enough",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23620,
+		"label": "church_primate_23620",
+		"deck": "church_primate",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Le doyen vous presse : « Le Culte ne demande qu'un guide. Le serez-vous pleinement, ou à demi ? »"
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "below",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'engage pleinement"
+			},
+			"reaction": {
+				"FR": "On épouse la cause du Grain corps et âme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'engage à demi"
+			},
+			"reaction": {
+				"FR": "On garde un pied dehors. Le doyen le sent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 7,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 6,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23621,
+		"label": "church_primate_23621",
+		"deck": "church_primate",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Le Culte a tant grandi qu'il faut trancher : en faire un État, ou une simple œuvre charitable ?"
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Un État"
+			},
+			"reaction": {
+				"FR": "On proclame l'embryon d'une théocratie du Grain."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une œuvre"
+			},
+			"reaction": {
+				"FR": "On le garde charitable, sans ambition de pouvoir. Pour l'instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 9,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 8,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23622,
+		"label": "church_primate_23622",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:community_elder",
+		"question": {
+			"FR": "Le doyen vous confie un litige entre deux familles du Grain. À vous de juger selon la loi du Culte."
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On juge avec sagesse"
+			},
+			"reaction": {
+				"FR": "On rend un jugement équitable. Le Culte vous vénère un peu plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On esquive"
+			},
+			"reaction": {
+				"FR": "On renvoie les plaignants dos à dos. Le doyen est déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23623,
+		"label": "church_primate_23623",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks propose d'armer une milice du Grain pour protéger les convois."
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On arme la milice"
+			},
+			"reaction": {
+				"FR": "Une milice du Grain veille désormais sur les routes. Force nouvelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste désarmé"
+			},
+			"reaction": {
+				"FR": "On refuse les armes. La foi pour seule garde."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 23624,
+		"label": "church_primate_23624",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:cult_deacon",
+		"question": {
+			"FR": "Le diacre suggère de codifier les règles du Culte en une véritable loi sacrée."
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 7
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On codifie"
+			},
+			"reaction": {
+				"FR": "On grave la Loi du Grain. Le Culte devient un ordre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse coutume"
+			},
+			"reaction": {
+				"FR": "On garde des coutumes souples. Le diacre s'inquiète du flou."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23625,
+		"label": "church_primate_23625",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:faith_healer",
+		"question": {
+			"FR": "La guérisseuse du Culte soigne par le grain et la prière. On vous demande de bénir sa pratique."
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la bénit"
+			},
+			"reaction": {
+				"FR": "On adoube la guérisseuse. Les malades affluent, pleins d'espoir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la freine"
+			},
+			"reaction": {
+				"FR": "On modère ses pratiques. La science avant la foi, murmure-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23626,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23626,
+		"label": "church_primate_23626",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:faith_healer",
+		"question": {
+			"FR": "La guérisseuse veut ouvrir un hospice du Grain pour les incurables."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On ouvre l'hospice"
+			},
+			"reaction": {
+				"FR": "L'hospice du Grain accueille les désespérés. Geste admiré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On diffère l'ouverture. La guérisseuse insiste, déçue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23627,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23627,
+		"label": "church_primate_23627",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:faith_healer",
+		"question": {
+			"FR": "Un miraculé proclame que le grain bénit l'a sauvé. Vrai prodige, ou mise en scène ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On crie au miracle"
+			},
+			"reaction": {
+				"FR": "On proclame le prodige. La ferveur du Culte explose."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On enquête discrètement. Mieux vaut un Culte sans faux miracles."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23628,
+		"label": "church_primate_23628",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho — cette voix sans visage du réseau — vous glisse que le Culte du Grain attire l'attention de l'Empire."
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 7
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accélère"
+			},
+			"reaction": {
+				"FR": "On hâte l'œuvre avant que l'Empire ne réagisse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ralentit"
+			},
+			"reaction": {
+				"FR": "On freine pour ne pas alerter l'Empire. Sage prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 23629,
+		"label": "church_primate_23629",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial débarque, tout sourire venimeux : « L'Empereur s'intéresse à votre… distribution de grain. Beaucoup. »"
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On endort l'envoyé de belles paroles. Pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le défie"
+			},
+			"reaction": {
+				"FR": "On toise l'envoyé impérial. Le gant est jeté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 23630,
+		"label": "church_primate_23630",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho rapporte que des espions impériaux comptent les greniers du Culte."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "seen_23629",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les berne"
+			},
+			"reaction": {
+				"FR": "On leur montre des greniers à demi vides. Ils repartent rassurés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les chasse"
+			},
+			"reaction": {
+				"FR": "On chasse les espions. Geste de force — et aveu de richesse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 23631,
+		"label": "church_primate_23631",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial revient avec une offre : reconnaître le Culte contre un lourd tribut."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "seen_23630",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On paie le tribut"
+			},
+			"reaction": {
+				"FR": "On paie l'Empire. Le Culte gagne du temps, perd de l'or."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le tribut. L'envoyé plisse les yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 23632,
+		"label": "church_primate_23632",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:cult_magistrate",
+		"question": {
+			"FR": "Un noble local demande à rejoindre le Culte — avec ses soldats et ses arrière-pensées."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "seen_23631",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "Le noble et ses lances rejoignent le Grain. Force et danger."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le refuse"
+			},
+			"reaction": {
+				"FR": "On écarte le noble ambitieux. Sa rancune est acquise."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23633,
+		"label": "church_primate_23633",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "Le Culte atteint son apogée. L'Écho murmure : « Il ne manque qu'un sceau. Celui du Grand Primate lui-même. »"
+		},
+		"conditions": [
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le cherche"
+			},
+			"reaction": {
+				"FR": "On part à la rencontre du Grand Primate. L'heure est venue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend"
+			},
+			"reaction": {
+				"FR": "On patiente. Le Primate viendra à nous, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23634,
+		"label": "church_primate_23634",
+		"deck": "church_primate",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Enfin, le Grand Primate vous reçoit dans son temple-grenier. « On me dit que vous comprenez le Grain. Le servez-vous… ou vous servez-vous de lui ? »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_zhang_lu",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_zhang_lu",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_lu",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le sert"
+			},
+			"reaction": {
+				"FR": "Le Primate sourit. « Alors entrez. Le Grain a besoin de vous. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On esquive la question"
+			},
+			"reaction": {
+				"FR": "On botte en touche. Le Primate vous fait simplement enrôler."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23635,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_join_the_cult",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23635,
+		"label": "church_primate_23635",
+		"deck": "church_primate",
+		"weight": 800,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Grand Primate vous jauge longuement. « Le Grain ne se partage pas avec n'importe qui. Prouvez votre foi. »"
+		},
+		"conditions": [
+			{
+				"variable": "zhang_lu",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "meet_zhang_lu",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "cult_of_rice",
+				"op": "above",
+				"value": 9
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_zhang_lu",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prouve sa foi"
+			},
+			"reaction": {
+				"FR": "On récite la Loi du Grain sans faute. Le Primate hoche la tête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste évasif"
+			},
+			"reaction": {
+				"FR": "On reste vague. Le Primate vous garde à l'essai."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23636,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cult_of_rice",
+				"intValue": 9,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23636,
+		"label": "church_primate_23636",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Grand Primate vous ouvre les coffres du Culte — et ses ambitions. « Ensemble, le Grain nourrira toute la galaxie. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'engage à ses côtés"
+			},
+			"reaction": {
+				"FR": "On scelle l'alliance avec le Primate. Coûteux, mais immense."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On garde une réserve. Le Primate le remarque, sans rien dire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23637,
+		"label": "church_primate_23637",
+		"deck": "church_primate",
+		"weight": 5000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Grand Primate vous confie ce qu'il a de plus cher : la gestion de son fief sacré sur Askone. « Gouvernez-le comme le Grain l'exige. »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_zhang_lu",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte l'intendance"
+			},
+			"reaction": {
+				"FR": "On prend les rênes d'Askone théocratique. Un monde entier sous le Grain."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accepte humblement"
+			},
+			"reaction": {
+				"FR": "On accepte la charge avec déférence. Le Primate apprécie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "manage_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_askone_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "manage_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "cult_of_rice",
+				"intValue": 20,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_askone_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 23638,
+		"label": "church_primate_23638",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "À la tête d'Askone, première décision : maintenir la milice du Grain, ou lever une vraie armée ?"
+		},
+		"conditions": [
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "La milice suffit"
+			},
+			"reaction": {
+				"FR": "On garde la milice. Askone reste un fief de foi, pas de fer."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lève une armée"
+			},
+			"reaction": {
+				"FR": "On forge une armée du Grain. Askone montre les dents."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23639,
+		"label": "church_primate_23639",
+		"deck": "church_primate",
+		"weight": 900,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Les greniers d'Askone débordent. Distribuer gratuitement à tous, ou vendre le surplus ?"
+		},
+		"conditions": [
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "free_hanzhong",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "free_hanzhong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On distribue gratuitement"
+			},
+			"reaction": {
+				"FR": "On nourrit Askone pour rien. La ferveur grimpe, les coffres baissent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On vend le surplus"
+			},
+			"reaction": {
+				"FR": "On vend le surplus. L'or rentre, la pureté du Grain s'écorne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23640,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23640,
+		"label": "church_primate_23640",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le peuple d'Askone réclame que la gratuité du Grain devienne loi éternelle."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On grave la loi"
+			},
+			"reaction": {
+				"FR": "Le Grain gratuit, à jamais. Askone vous adore."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse l'éternité"
+			},
+			"reaction": {
+				"FR": "On refuse de lier l'avenir. Le Primate vous trouve sage — ou tiède."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23641,
+		"label": "church_primate_23641",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:cult_magistrate",
+		"question": {
+			"FR": "Le magistrat du Culte propose une loi austère : interdire la viande sur tout Askone, par piété."
+		},
+		"conditions": [
+			{
+				"variable": "free_hanzhong",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 40
+			},
+			{
+				"variable": "seen_23642",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "meat_eating_banned",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meat_eating_banned",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On interdit la viande"
+			},
+			"reaction": {
+				"FR": "Askone devient végétarien par décret. Pieux — et impopulaire chez les chasseurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On autorise"
+			},
+			"reaction": {
+				"FR": "On laisse manger qui veut. Le magistrat fulmine contre l'impureté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23642,
+		"label": "church_primate_23642",
+		"deck": "church_primate",
+		"weight": 900,
+		"lockturn": 36,
+		"hidden": false,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le Grand Prêtre lui-même vous écrit : la libre distribution affole les marchés voisins. Faut-il la suspendre ?"
+		},
+		"conditions": [
+			{
+				"variable": "free_hanzhong",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suspend"
+			},
+			"reaction": {
+				"FR": "On suspend la gratuité. Les marchés se calment, le peuple grogne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On maintient"
+			},
+			"reaction": {
+				"FR": "On maintient le Grain libre. Le Grand Prêtre vous met en garde."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "free_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 23643,
+		"label": "church_primate_23643",
+		"deck": "church_primate",
+		"weight": 1000,
+		"lockturn": 35,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique amène un garçon surpris à manger pendant le jeûne sacré. « La Loi du Grain réclame une punition, Orateur. »"
+		},
+		"conditions": [
+			{
+				"variable": "free_hanzhong",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'épargne"
+			},
+			"reaction": {
+				"FR": "On gracie l'enfant. La clémence touche le peuple, irrite les zélés."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On applique la Loi"
+			},
+			"reaction": {
+				"FR": "On punit l'enfant selon la Loi. L'ordre règne, les cœurs se serrent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_boy_not_eat",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_boy_eat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 23644,
+		"label": "church_primate_23644",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le garçon gracié pleure de soulagement. Le juge civique, lui, serre les dents."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réconforte l'enfant"
+			},
+			"reaction": {
+				"FR": "On console le petit. Le peuple murmure que l'Orateur a un cœur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On sermonne quand même"
+			},
+			"reaction": {
+				"FR": "On gracie mais on sermonne. Un compromis qui ne contente personne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hanzhong_boy_eat",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23645,
+		"label": "church_primate_23645",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le garçon puni baisse la tête. Le silence pèse sur la place."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On justifie la sévérité"
+			},
+			"reaction": {
+				"FR": "On explique la Loi à la foule. Certains comprennent, d'autres s'éloignent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On regrette en silence"
+			},
+			"reaction": {
+				"FR": "On encaisse le malaise sans un mot. Le Primate, lui, approuve."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "neutral",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23646,
+		"label": "church_primate_23646",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier suggère d'autoriser un vin sacré, brassé du Grain, pour renflouer le fief."
+		},
+		"conditions": [
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "winemaking_hanzhong",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance le vin sacré"
+			},
+			"reaction": {
+				"FR": "Le vin du Grain coule et l'or rentre. Le magistrat grimace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On refuse le vin. Askone reste austère — et pauvre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "winemaking_hanzhong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23647,
+		"label": "church_primate_23647",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 9,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le vin sacré fait fureur. Faut-il l'exporter, au risque de profaner le Grain ?"
+		},
+		"conditions": [
+			{
+				"variable": "winemaking_hanzhong",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'exporte"
+			},
+			"reaction": {
+				"FR": "Le vin du Grain s'exporte. Fortune assurée, pureté discutée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le garde sacré"
+			},
+			"reaction": {
+				"FR": "On garde le vin pour le culte. Pauvre, mais saint."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "winemaking_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23648,
+		"label": "church_primate_23648",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:penitent",
+		"question": {
+			"FR": "Un pénitent s'accuse d'un crime ancien et implore le pardon du Grain."
+		},
+		"conditions": [
+			{
+				"variable": "forgivable_hanzhong",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pardonne"
+			},
+			"reaction": {
+				"FR": "On accorde le pardon du Grain. La miséricorde grandit le Culte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On exige réparation"
+			},
+			"reaction": {
+				"FR": "On réclame réparation avant pardon. Juste — mais sévère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23649,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23649,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23649,
+		"label": "church_primate_23649",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact glisse : « Pardonner trop facilement, c'est inviter tous les coupables d'Askone à votre porte. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "forgivable_hanzhong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On garde la rigueur"
+			},
+			"reaction": {
+				"FR": "On instaure un pardon mesuré. La justice du Grain reste crédible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On pardonne largement"
+			},
+			"reaction": {
+				"FR": "On pardonne à tous. Askone se vide de ses prisons — et de sa peur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "flattered"
+		}
+	},
+	{
+		"id": 23650,
+		"label": "church_primate_23650",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial revient une dernière fois : « Le pardon, la gratuité… L'Empereur appelle cela de la sédition douce. »"
+		},
+		"conditions": [
+			{
+				"variable": "forgivable_hanzhong",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On désamorce"
+			},
+			"reaction": {
+				"FR": "On rassure l'envoyé une fois encore. Le sursis se paie cher."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On assume"
+			},
+			"reaction": {
+				"FR": "On assume la voie du Grain. L'envoyé repart, le visage fermé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "forgivable_hanzhong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 23651,
+		"label": "church_primate_23651",
+		"deck": "church_primate",
+		"weight": -1,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Grand Primate vous avertit, grave : « Ma faveur faiblit là-haut. Si l'Empire frappe, serez-vous à mes côtés ? »"
+		},
+		"conditions": [
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "zhang_lu",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "seen_23650",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On jure fidélité au Primate. Il veut y croire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste vague"
+			},
+			"reaction": {
+				"FR": "On reste évasif. Le Primate sent le sol se dérober."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23652,
+		"label": "church_primate_23652",
+		"deck": "church_primate",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial masse ses troupes aux frontières d'Askone. Il offre une dernière porte de sortie : la soumission."
+		},
+		"conditions": [
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "zhang_lu",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "seen_23651",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On résiste"
+			},
+			"reaction": {
+				"FR": "On refuse de plier. Askone se prépare au siège."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On négocie"
+			},
+			"reaction": {
+				"FR": "On entame des pourparlers. La dignité du Grain vacille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_lu",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23653,
+		"label": "church_primate_23653",
+		"deck": "church_primate",
+		"weight": -1,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "L'heure du choix sonne. Le Grand Primate vous regarde : faut-il faire la guerre à l'Empire pour Askone ?"
+		},
+		"conditions": [
+			{
+				"variable": "manage_hanzhong",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_askone_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "zhang_lu",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "seen_23652",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fait la guerre"
+			},
+			"reaction": {
+				"FR": "On dégaine pour le Grain. Askone contre l'Empire — David et Goliath."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche encore la paix"
+			},
+			"reaction": {
+				"FR": "On tente une dernière voie pacifique. Le Primate doute."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhang_lu_war",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23654,
+		"label": "church_primate_23654",
+		"deck": "church_primate",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Seuls face à l'Empire, sans allié, vous menez la guerre du Grain."
+		},
+		"conditions": [
+			{
+				"variable": "cao_cao",
+				"op": "below",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se bat seuls"
+			},
+			"reaction": {
+				"FR": "On se bat sans renfort. Askone tombe, mais la légende du Grain naît."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On capitule"
+			},
+			"reaction": {
+				"FR": "On capitule pour épargner Askone. Le Grain survit, soumis."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "manage_hanzhong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_askone_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "terminus",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.zhang_lu_without_help",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "sad",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23655,
+		"label": "church_primate_23655",
+		"deck": "church_primate",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le général impérial, gagné par votre cause, hésite à frapper Askone. Une ouverture inespérée."
+		},
+		"conditions": [
+			{
+				"variable": "cao_cao",
+				"op": "above",
+				"value": 4
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rallie"
+			},
+			"reaction": {
+				"FR": "On retourne le général. Askone est sauvé — par la ruse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur ses gardes"
+			},
+			"reaction": {
+				"FR": "On se méfie du général. Prudent, mais l'occasion s'effrite."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.zhang_lu_with_help",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.zhang_lu_with_help",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23656,
+		"label": "church_primate_23656",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Quoi qu'il advienne, le Grand Primate vous remet le sceau du Culte avant la tourmente. « Le Grain vous survivra, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "manage_hanzhong",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_lu_no_hanzhong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prend le sceau"
+			},
+			"reaction": {
+				"FR": "On reçoit le sceau du Grain. Un héritage lourd."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse l'honneur"
+			},
+			"reaction": {
+				"FR": "On refuse le sceau. Le Primate insiste, les larmes aux yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23657,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23657,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23657,
+		"label": "church_primate_23657",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Primate vous confie ses dernières volontés pour le Culte."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On promet de les tenir"
+			},
+			"reaction": {
+				"FR": "On jure de perpétuer le Grain. Le vieil homme s'apaise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste réaliste"
+			},
+			"reaction": {
+				"FR": "On promet sans s'engager. Le Primate lit la vérité dans vos yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23658,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23658,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23658,
+		"label": "church_primate_23658",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Primate désigne son successeur. À vous d'approuver, ou de proposer un autre nom."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approuve"
+			},
+			"reaction": {
+				"FR": "On valide son héritier. La continuité du Grain est assurée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On propose un autre"
+			},
+			"reaction": {
+				"FR": "On avance un autre nom. Le Primate fronce les sourcils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23659,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23659,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 23659,
+		"label": "church_primate_23659",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Primate vous demande comment l'Histoire devra se souvenir du Culte du Grain."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Comme un refuge"
+			},
+			"reaction": {
+				"FR": "« Un refuge pour les affamés », dictez-vous. Le Primate sourit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Comme une puissance"
+			},
+			"reaction": {
+				"FR": "« Une puissance née du Grain », proclamez-vous. Le Primate hésite."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23660,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 23660,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 23660,
+		"label": "church_primate_23660",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Le Culte du Grain entre dans la légende. Le Grand Primate ferme les yeux, en paix, son œuvre confiée à vos mains."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_church_primate",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On veille sur le Grain"
+			},
+			"reaction": {
+				"FR": "On reprend le flambeau du Culte. L'arc du Primate s'achève."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le Culte libre"
+			},
+			"reaction": {
+				"FR": "On rend le Culte au peuple. Le Grain n'appartient à personne."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 23661,
+		"label": "church_primate_23661",
+		"deck": "church_primate",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:grand_primate",
+		"question": {
+			"FR": "Askone soumis, le Culte dispersé, on vous demande quel ordre établir sur ses ruines."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "manage_hanzhong",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reconstruit"
+			},
+			"reaction": {
+				"FR": "On relève Askone, pierre à pierre. Le Grain repoussera."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse la cendre"
+			},
+			"reaction": {
+				"FR": "On laisse Askone à ses cendres. Le Plan, lui, continue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_askone_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_askone_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 24000,
 		"label": "church_schism_24000",
 		"deck": "church_schism",
