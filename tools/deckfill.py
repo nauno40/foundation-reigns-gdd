@@ -86,8 +86,10 @@ def fill_deck(deck, texts, bearers, *, var_map=None, planet_map=None,
     seen_map = seen_map or {}
     sk = json.loads((ROOT / "data/skeletons" / (deck + ".json")).read_text())
     nodes = {n["id"]: n for n in sk["nodes"]}
-    assert set(texts) == set(nodes), (
-        "ids manquants/en trop: %s" % (set(texts) ^ set(nodes)))
+    unknown = set(texts) - set(nodes)
+    assert not unknown, "ids hors squelette: %s" % unknown
+    # Remplissage partiel autorisé (decks géants, mode _in_progress) : seuls
+    # les nœuds fournis sont écrits ; check_structure tolère les manquants.
 
     cards = []
     for nid, tx in texts.items():

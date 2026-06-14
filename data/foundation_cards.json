@@ -21377,6 +21377,6098 @@
 		}
 	},
 	{
+		"id": 21600,
+		"label": "anacreon_throne_21600",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:court_companion",
+		"question": {
+			"FR": "Votre compagnon de cour vous glisse dans l'entourage du vieux roi d'Anacréon. « Souriez, buvez peu, écoutez tout. »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue le courtisan"
+			},
+			"reaction": {
+				"FR": "On se fond dans la cour anacréonienne. Personne ne vous remarque."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste en retrait"
+			},
+			"reaction": {
+				"FR": "On observe de loin. Le compagnon hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "meet_liu_biao",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "meet_liu_biao",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21601,
+		"label": "anacreon_throne_21601",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:banquet_host",
+		"question": {
+			"FR": "L'hôte du banquet royal vous accueille avec emphase. « Un visage neuf à la table du roi ! Buvons à Anacréon ! »"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 200
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_liu_biao",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On trinque"
+			},
+			"reaction": {
+				"FR": "On lève la coupe. La cour vous adopte le temps d'un toast."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On refuse le vin. L'hôte vous trouve bien austère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21602,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21602,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21602,
+		"label": "anacreon_throne_21602",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:banquet_host",
+		"question": {
+			"FR": "Le banquet royal s'éternise en libations. Faut-il y dépenser pour soigner sa réputation à la cour ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On régale la cour"
+			},
+			"reaction": {
+				"FR": "On offre une tournée princière. On parle de vous au palais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On garde sa bourse. La cour boude un peu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "celeb",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21603,
+		"label": "anacreon_throne_21603",
+		"deck": "anacreon_throne",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact vous presse : « Tout se joue à la cour d'Anacréon. C'est là qu'il faut être, Orateur. »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 200
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne la cour"
+			},
+			"reaction": {
+				"FR": "On saute vers le cœur du royaume d'Anacréon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On hésite. Le contact soupire lourdement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21604,
+		"label": "anacreon_throne_21604",
+		"deck": "anacreon_throne",
+		"weight": 1200,
+		"lockturn": 60,
+		"hidden": false,
+		"bearer": "role:court_companion",
+		"question": {
+			"FR": "Votre compagnon de cour insiste pour vous mener directement au palais royal."
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "nb_quest_here",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le suit"
+			},
+			"reaction": {
+				"FR": "On gagne le palais d'Anacréon en sa compagnie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste"
+			},
+			"reaction": {
+				"FR": "On reste en arrière. Le compagnon s'impatiente."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_terminus",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21605,
+		"label": "anacreon_throne_21605",
+		"deck": "anacreon_throne",
+		"weight": 200,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Une fête de cour s'annonce. Votre contact suggère d'y briller pour asseoir votre couverture."
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "celeb",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y montre"
+			},
+			"reaction": {
+				"FR": "On paraît à la fête. Les regards se tournent, intrigués."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'évite"
+			},
+			"reaction": {
+				"FR": "On évite les mondanités. Plus discret, moins utile."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21606,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21606,
+		"label": "anacreon_throne_21606",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:banquet_host",
+		"question": {
+			"FR": "La fête bat son plein. Offrir un présent somptueux au roi ferait grand effet."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On offre un présent"
+			},
+			"reaction": {
+				"FR": "Le présent royal vous vaut un sourire du vieux roi. Coûteux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On s'abstient. Le roi vous oublie aussitôt."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "celeb",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21607,
+		"label": "anacreon_throne_21607",
+		"deck": "anacreon_throne",
+		"weight": 2000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le vieux roi d'Anacréon vous reçoit enfin, coupe tremblante à la main. « On me dit fin, étranger. On dit vrai. Qui veillera sur mon trône ? »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 200
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_liu_biao",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On le rassure d'une voix douce. Le roi s'attache à vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste honnête"
+			},
+			"reaction": {
+				"FR": "On reste prudemment vague. Le roi plisse les yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_biao_after_drink",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_biao_after_drink",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21608,
+		"label": "anacreon_throne_21608",
+		"deck": "anacreon_throne",
+		"weight": 2000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Après le banquet, le roi d'Anacréon, éméché, vous confie ses angoisses sur sa succession."
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "celeb",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "meet_liu_biao",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On recueille ses confidences. Une mine d'or politique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le ménage"
+			},
+			"reaction": {
+				"FR": "On l'invite à se reposer. Le roi apprécie l'égard."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_biao_after_drink",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_biao_after_drink",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21609,
+		"label": "anacreon_throne_21609",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "À la table royale, les langues se délient sur l'avenir du trône. Faut-il flatter le vieux roi, ou parler franc ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.banquet_chatter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On flatte le roi"
+			},
+			"reaction": {
+				"FR": "On flatte le monarque. Il rayonne, et vous adopte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On parle franc"
+			},
+			"reaction": {
+				"FR": "On lui dit ses vérités. Audacieux — il s'en souviendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21610,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21610,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21610,
+		"label": "anacreon_throne_21610",
+		"deck": "anacreon_throne",
+		"weight": 2000,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'enquêteur royal vous prend à part : « Le vieux roi décline trop vite. Naturel… ou aidé ? Voulez-vous m'aider à percer ce mystère ? »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 195
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 208
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte"
+			},
+			"reaction": {
+				"FR": "On se lance dans l'enquête sur la santé du roi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On décline. L'enquêteur vous juge bien timoré."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21611,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21611,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21611,
+		"label": "anacreon_throne_21611",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'enquêteur royal — un héritier écarté, dit-on — vous montre des fioles suspectes dans les appartements du roi."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "liu_qi",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête à fond"
+			},
+			"reaction": {
+				"FR": "On suit la piste des fioles. Le mystère s'épaissit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On avance à pas comptés. L'enquêteur s'impatiente."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_qi_mystery",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21612,
+		"label": "anacreon_throne_21612",
+		"deck": "anacreon_throne",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Un prince exilé, charismatique et désargenté, sollicite l'asile à la cour d'Anacréon."
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "liu_bei",
+				"op": "below",
+				"value": 3
+			},
+			{
+				"variable": "seen_21613",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "liu_bei_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On plaide pour lui"
+			},
+			"reaction": {
+				"FR": "On appuie sa demande. Le prince exilé vous en saura gré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se méfie du prince errant. Sa réputation le précède."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21613,
+		"label": "anacreon_throne_21613",
+		"deck": "anacreon_throne",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le prince exilé vous prend en affection. « Vous avez l'œil juste, étranger. Restons proches. »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "liu_bei",
+				"op": "above",
+				"value": 2
+			},
+			{
+				"variable": "seen_21612",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "liu_bei_dead",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cultive le lien"
+			},
+			"reaction": {
+				"FR": "On se rapproche du prince. Un allié de sang royal."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde ses distances"
+			},
+			"reaction": {
+				"FR": "On reste poli sans plus. Le prince le remarque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21614,
+		"label": "anacreon_throne_21614",
+		"deck": "anacreon_throne",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le vieux roi se méfie du prince exilé que vous fréquentez. « Cet homme convoite mon trône, j'en jurerais. »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "liu_bei",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On défend le prince"
+			},
+			"reaction": {
+				"FR": "On plaide la loyauté du prince. Le roi grogne, sceptique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On abonde dans son sens"
+			},
+			"reaction": {
+				"FR": "On flatte la méfiance du roi. Le prince exilé s'en doutera."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21615,
+		"label": "anacreon_throne_21615",
+		"deck": "anacreon_throne",
+		"weight": 2000,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'enquêteur royal a du nouveau sur le mystère du trône. « Suivez-moi. Et taisez ce que vous verrez. »"
+		},
+		"conditions": [
+			{
+				"variable": "meet_liu_biao",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "seen_21610",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le suit"
+			},
+			"reaction": {
+				"FR": "On le suit dans les couloirs dérobés du palais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite à le suivre. Il part sans vous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_qi_mystery",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21616,
+		"label": "anacreon_throne_21616",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Dans les archives royales, un registre a été falsifié. Quelqu'un réécrit la succession d'Anacréon."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On compare les écritures"
+			},
+			"reaction": {
+				"FR": "On démasque la falsification. Un fil se tend vers le coupable."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On note et on file"
+			},
+			"reaction": {
+				"FR": "On relève l'indice et on s'éclipse. Prudence d'espion."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21617,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21617,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21617,
+		"label": "anacreon_throne_21617",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Un serviteur effrayé murmure un nom, puis se ravise. Le faire parler de force, ou le rassurer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On gagne sa confiance. Il lâche un indice précieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le presse"
+			},
+			"reaction": {
+				"FR": "On le presse durement. Il se braque et se tait."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21618,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21618,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21618,
+		"label": "anacreon_throne_21618",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Les pièces s'assemblent : la maladie du roi n'a rien de naturel. Le mystère du trône d'Anacréon est bel et bien un crime."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jingzhou_mystery",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On poursuit l'enquête"
+			},
+			"reaction": {
+				"FR": "On décide d'aller au bout. Le crime aura un nom."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On enterre l'affaire"
+			},
+			"reaction": {
+				"FR": "On songe à étouffer l'affaire. Trop dangereux, peut-être."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21619,
+		"label": "anacreon_throne_21619",
+		"deck": "anacreon_throne",
+		"weight": 1200,
+		"lockturn": 34,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le vieux roi, lucide un instant, vous dévisage. « Mon aîné me ressemble. Le cadet ressemble à sa mère. Lequel mérite mon trône ? »"
+		},
+		"conditions": [
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "succession_clues",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'aîné vous ressemble"
+			},
+			"reaction": {
+				"FR": "« L'aîné, alors. Le sang ne ment pas », dictez-vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Vive le roi d'abord"
+			},
+			"reaction": {
+				"FR": "« Vivez encore, sire », éludez-vous. Le roi sourit faiblement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_qi_resembles_liu_biao",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_long_live_liu_biao",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21620,
+		"label": "anacreon_throne_21620",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "L'héritier aîné, droit et grave, vous demande votre appui contre son cadet."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'appuie"
+			},
+			"reaction": {
+				"FR": "On soutient l'aîné. Un camp est choisi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste neutre"
+			},
+			"reaction": {
+				"FR": "On refuse de choisir. L'aîné s'en va, déçu — vers le cadet, la rumeur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_cong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21621,
+		"label": "anacreon_throne_21621",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "L'héritier aîné vous confie ses craintes : on l'écarte du trône au profit du cadet, le fils de la reine."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On le rassure. L'aîné reprend courage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste évasif"
+			},
+			"reaction": {
+				"FR": "On reste vague. L'aîné pressent qu'on penche pour le cadet."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_cong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21622,
+		"label": "anacreon_throne_21622",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "L'héritier cadet, fils de la reine, se révèle ambitieux et calculateur. Un premier indice de complot affleure."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "succession_clues",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le surveille"
+			},
+			"reaction": {
+				"FR": "On garde l'œil sur le cadet. Le complot a un visage, peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le sous-estime"
+			},
+			"reaction": {
+				"FR": "On néglige le cadet. Erreur, sans doute."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21623,
+		"label": "anacreon_throne_21623",
+		"deck": "anacreon_throne",
+		"weight": 1200,
+		"lockturn": 37,
+		"hidden": false,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "Le frère de la reine — régent et général — vous toise. « L'enquête vous amuse, étranger ? Prenez garde où vous fourrez votre nez. »"
+		},
+		"conditions": [
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "succession_clues",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient bon"
+			},
+			"reaction": {
+				"FR": "On soutient son regard. Le régent serre les dents."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recule"
+			},
+			"reaction": {
+				"FR": "On bat en retraite. Le régent sourit, satisfait."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21624,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21624,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21624,
+		"label": "anacreon_throne_21624",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "Le régent-général tente de vous acheter le silence par une charge lucrative."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On feint d'accepter"
+			},
+			"reaction": {
+				"FR": "On feint d'accepter pour mieux l'observer. Rusé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse net"
+			},
+			"reaction": {
+				"FR": "On refuse la charge. Le régent vous classe parmi ses ennemis."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21626,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21625,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21625,
+		"label": "anacreon_throne_21625",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "Le régent fait surveiller vos pas. Il faut secouer la filature pour poursuivre l'enquête."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On sème les espions"
+			},
+			"reaction": {
+				"FR": "On sème les mouchards du régent dans les ruelles du palais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les affronte"
+			},
+			"reaction": {
+				"FR": "On affronte les espions. Bruyant, mais efficace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21626,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21626,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21626,
+		"label": "anacreon_throne_21626",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde, témoin gêné, accepte enfin de livrer ce qu'il sait du complot."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "succession_clues",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On recueille son témoignage"
+			},
+			"reaction": {
+				"FR": "Le marchand parle. Un nouvel indice accable la reine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On doute de lui"
+			},
+			"reaction": {
+				"FR": "On se méfie de son témoignage. Trop arrangé, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21627,
+		"label": "anacreon_throne_21627",
+		"deck": "anacreon_throne",
+		"weight": 800,
+		"lockturn": 34,
+		"hidden": false,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "La reine consort en personne vous reçoit, tout sourire de velours. « On me dit curieux, Orateur. La curiosité tue, dit-on. Du thé ? »"
+		},
+		"conditions": [
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "succession_clues",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le thé"
+			},
+			"reaction": {
+				"FR": "On boit le thé sous son regard de glace. Duel feutré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline poliment"
+			},
+			"reaction": {
+				"FR": "On décline. La reine note l'affront d'un battement de cils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21628,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21628,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21628,
+		"label": "anacreon_throne_21628",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "La reine vous offre son amitié — ou sa rancune, au choix. « Servez mon fils, et Anacréon vous sourira. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "succession_clues",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On feint l'allégeance"
+			},
+			"reaction": {
+				"FR": "On feint de la servir pour mieux la percer à jour."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste loyal au roi"
+			},
+			"reaction": {
+				"FR": "On rappelle votre loyauté au roi. La reine se rembrunit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21629,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21629,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21629,
+		"label": "anacreon_throne_21629",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "La reine laisse échapper un détail de trop. Le relever devant elle, ou le garder pour soi ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le garde"
+			},
+			"reaction": {
+				"FR": "On engrange l'indice en silence. La reine ne se doute de rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la confronte"
+			},
+			"reaction": {
+				"FR": "On la confronte. Erreur — elle se met sur ses gardes."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21630,
+		"label": "anacreon_throne_21630",
+		"deck": "anacreon_throne",
+		"weight": 800,
+		"lockturn": 34,
+		"hidden": false,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'enquêteur royal recoupe vos indices. « Tout accuse soit le régent, soit sa sœur la reine. Qui soupçonnez-vous d'abord ? »"
+		},
+		"conditions": [
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "succession_clues",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le régent-général"
+			},
+			"reaction": {
+				"FR": "On oriente l'enquête sur le frère. La traque commence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La reine consort"
+			},
+			"reaction": {
+				"FR": "On vise la reine. Périlleux — elle est intouchable, presque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21631,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21631,
+		"label": "anacreon_throne_21631",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Le moment de désigner un coupable approche. L'enquêteur attend votre intuition."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le régent"
+			},
+			"reaction": {
+				"FR": "On pointe le régent-général. L'étau se resserre sur lui."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "La reine"
+			},
+			"reaction": {
+				"FR": "On pointe la reine. Le pari le plus dangereux de tous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_suspect_cai_mao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_suspect_lady_cai",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21632,
+		"label": "anacreon_throne_21632",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Pour accuser le régent, il faut une preuve irréfutable. L'enquêteur propose une fouille risquée de ses appartements."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fouille"
+			},
+			"reaction": {
+				"FR": "On fouille les quartiers du régent. Le danger rôde à chaque pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche un témoin"
+			},
+			"reaction": {
+				"FR": "On préfère un témoin à une effraction. Plus lent, plus sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21633,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21633,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21633,
+		"label": "anacreon_throne_21633",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "La fouille révèle une lettre compromettante du régent. La produire ouvertement, ou la garder en réserve ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la produit"
+			},
+			"reaction": {
+				"FR": "On brandit la preuve. Le régent est acculé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la garde"
+			},
+			"reaction": {
+				"FR": "On garde la lettre pour l'heure propice. Patience d'espion."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_accuse_cai_mao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21634,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21634,
+		"label": "anacreon_throne_21634",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Le régent flaire le danger et tente de détruire les preuves. Il faut agir vite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le devance"
+			},
+			"reaction": {
+				"FR": "On sauve la preuve in extremis. Le régent blêmit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse faire"
+			},
+			"reaction": {
+				"FR": "On le laisse brûler la lettre. Une autre preuve, alors."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_accuse_cai_mao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21635,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21635,
+		"label": "anacreon_throne_21635",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'heure de l'accusation publique a sonné. Accuser le régent devant toute la cour d'Anacréon ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accuse"
+			},
+			"reaction": {
+				"FR": "On accuse le régent en plein conseil. La cour retient son souffle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite encore"
+			},
+			"reaction": {
+				"FR": "On diffère l'accusation. Le courage vacille un instant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_accuse_cai_mao",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21636,
+		"label": "anacreon_throne_21636",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "La reine, voyant son frère menacé, se dresse pour le défendre avec férocité."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient l'accusation"
+			},
+			"reaction": {
+				"FR": "On maintient l'accusation face à la reine. Bataille de cour."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recule devant elle"
+			},
+			"reaction": {
+				"FR": "On recule devant la furie royale. Le régent souffle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21637,
+		"label": "anacreon_throne_21637",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Soupçonner la reine est plus délicat encore. Il faut retourner ses propres dames de compagnie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les retourne"
+			},
+			"reaction": {
+				"FR": "On gagne une dame à votre cause. Une fissure dans la garde de la reine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche ailleurs"
+			},
+			"reaction": {
+				"FR": "On cherche une autre faille. Les dames sont trop fidèles."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21638,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21638,
+		"label": "anacreon_throne_21638",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Une dame de la reine accepte de témoigner — si vous garantissez sa vie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la protège"
+			},
+			"reaction": {
+				"FR": "On jure de la protéger. Elle livre un témoignage accablant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On ne peut rien promettre"
+			},
+			"reaction": {
+				"FR": "On ne promet rien. La dame se ravise, terrifiée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21639,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21639,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21639,
+		"label": "anacreon_throne_21639",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "La reine sent l'enquête se refermer sur elle et contre-attaque par des rumeurs sur votre compte."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dément"
+			},
+			"reaction": {
+				"FR": "On étouffe ses rumeurs. La reine perd du terrain."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On contre-attaque"
+			},
+			"reaction": {
+				"FR": "On riposte par d'autres révélations. La cour gronde."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21640,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21640,
+		"label": "anacreon_throne_21640",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "Le moment de vérité. Faut-il porter l'accusation jusqu'au trône, au risque de tout perdre ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On va jusqu'au bout"
+			},
+			"reaction": {
+				"FR": "On porte l'accusation au pied du trône. Le palais tremble."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'arrête"
+			},
+			"reaction": {
+				"FR": "On renonce au dernier instant. La prudence l'emporte sur la justice."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21641,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21641,
+		"label": "anacreon_throne_21641",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Les preuves s'accumulent contre la reine. Le vieux roi, brisé, doit entendre la vérité sur la mère de son fils."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui dit tout"
+			},
+			"reaction": {
+				"FR": "On révèle tout au roi. Son monde s'effondre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'épargne"
+			},
+			"reaction": {
+				"FR": "On épargne le roi. La vérité attendra sa mort."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21642,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21642,
+		"label": "anacreon_throne_21642",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le roi exige un jugement. La reine sera-t-elle confondue devant la cour d'Anacréon ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la confond"
+			},
+			"reaction": {
+				"FR": "On démontre sa culpabilité. La reine vacille, démasquée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse un doute"
+			},
+			"reaction": {
+				"FR": "On laisse planer le doute. La reine s'engouffre dans la brèche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21643,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "jingzhou_mystery",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21643,
+		"label": "anacreon_throne_21643",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "La sentence est suspendue à vos derniers mots. Déclarer la reine coupable, ou lui laisser une issue ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Coupable"
+			},
+			"reaction": {
+				"FR": "On la déclare coupable. Anacréon a sa criminelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lui laisse une issue"
+			},
+			"reaction": {
+				"FR": "On lui ménage une sortie honorable. La justice se fait clémence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_lady_cai_found_guilty",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21644,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "lady_cai",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21644,
+		"label": "anacreon_throne_21644",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "Reconnue coupable ou non, la reine jure une vengeance silencieuse. Faut-il la bannir, ou la garder à l'œil ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la bannit"
+			},
+			"reaction": {
+				"FR": "On exile la reine. Anacréon respire — pour un temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la garde sous surveillance"
+			},
+			"reaction": {
+				"FR": "On la garde près, surveillée. Un serpent au sein du palais."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21645,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21645,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21645,
+		"label": "anacreon_throne_21645",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "L'affaire close, le vieux roi vous remercie d'une main tremblante. « Vous avez sauvé mon trône de la pourriture. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte sa gratitude"
+			},
+			"reaction": {
+				"FR": "On reçoit les remerciements du roi. Votre crédit grimpe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste humble"
+			},
+			"reaction": {
+				"FR": "On minimise. Le roi vous en estime davantage."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21646,
+		"label": "anacreon_throne_21646",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "La reine déchue tente une dernière manœuvre pour réhabiliter son fils cadet."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la déjoue"
+			},
+			"reaction": {
+				"FR": "On déjoue sa manœuvre. Le cadet perd ses appuis."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'ignore"
+			},
+			"reaction": {
+				"FR": "On néglige sa manœuvre. Le cadet reprend des forces."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21647,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21647,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21647,
+		"label": "anacreon_throne_21647",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "La cour d'Anacréon, lavée de son complot, se range derrière l'héritier que vous avez soutenu."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On consolide sa position"
+			},
+			"reaction": {
+				"FR": "On affermit l'héritier choisi. La succession s'apaise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste en retrait"
+			},
+			"reaction": {
+				"FR": "On laisse la cour décider. Plus prudent, moins influent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21648,
+		"label": "anacreon_throne_21648",
+		"deck": "anacreon_throne",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "Le mystère résolu, l'enquêteur royal — l'héritier écarté — vous propose son alliance pour l'avenir."
+		},
+		"conditions": [
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle l'alliance"
+			},
+			"reaction": {
+				"FR": "On s'allie à l'héritier reconnaissant. Un appui de sang royal."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste libre"
+			},
+			"reaction": {
+				"FR": "On garde sa liberté. L'héritier respecte le choix."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21649,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21649,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21649,
+		"label": "anacreon_throne_21649",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'enquêteur reconnaissant se range à vos côtés pour de bon. « Mon épée et mon nom sont vôtres, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "L'héritier rejoint votre cause. Un allié de poids à Anacréon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On le remercie chaleureusement. Loyauté scellée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 219,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21650,
+		"label": "anacreon_throne_21650",
+		"deck": "anacreon_throne",
+		"weight": 500,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "La reine, malgré tout libre, ourdit déjà sa revanche. Un poison, une lame dans l'ombre — le danger plane sur vous."
+		},
+		"conditions": [
+			{
+				"variable": "jingzhou_mystery",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "lady_cai",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jingzhou_mystery",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se protège"
+			},
+			"reaction": {
+				"FR": "On renforce sa garde. La reine attend son heure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la prend de vitesse"
+			},
+			"reaction": {
+				"FR": "On frappe le premier. Risqué, dans un palais d'intrigues."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21651,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21651,
+		"label": "anacreon_throne_21651",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "Une coupe empoisonnée vous est tendue lors d'un banquet. La reine vous fixe, un sourire aux lèvres."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On refuse de boire"
+			},
+			"reaction": {
+				"FR": "On repousse la coupe. La reine pince les lèvres, dépitée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On feint de boire"
+			},
+			"reaction": {
+				"FR": "On feint de boire pour la confondre. Jeu dangereux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21652,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21652,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21652,
+		"label": "anacreon_throne_21652",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queen_consort",
+		"question": {
+			"FR": "Le piège de la reine se referme. Lames tirées, le banquet vire au guet-apens."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se défend"
+			},
+			"reaction": {
+				"FR": "On lutte pour sa vie sous les lustres du palais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tente la fuite"
+			},
+			"reaction": {
+				"FR": "On tente de fuir le guet-apens. La porte est gardée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_assassine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_assassine",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "desperate",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 21653,
+		"label": "anacreon_throne_21653",
+		"deck": "anacreon_throne",
+		"weight": 1200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le vieux roi, en gage de confiance, vous confie un monde-garnison à la frontière : Smyrno. « Tenez-le pour Anacréon. »"
+		},
+		"conditions": [
+			{
+				"variable": "liu_biao",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 201
+			},
+			{
+				"variable": "cao_cao_no_yuzhou",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte la charge"
+			},
+			"reaction": {
+				"FR": "On prend le commandement de Smyrno. Lourde responsabilité."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accepte humblement"
+			},
+			"reaction": {
+				"FR": "On accepte avec déférence. Le roi apprécie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21654,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21654,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21654,
+		"label": "anacreon_throne_21654",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "À Smyrno, les défenses sont en ruine et la garnison clairsemée. Réarmer coûtera cher."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réarme"
+			},
+			"reaction": {
+				"FR": "On rebâtit les défenses de Smyrno. Les coffres saignent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rafistole"
+			},
+			"reaction": {
+				"FR": "On colmate à moindres frais. Fragile, mais tenable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21655,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21655,
+		"label": "anacreon_throne_21655",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Smyrno regorge de ressources oubliées. Les exploiter pour le royaume, ou pour soi ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pour le royaume"
+			},
+			"reaction": {
+				"FR": "On verse les ressources au trésor d'Anacréon. Le roi vous bénit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pour la garnison"
+			},
+			"reaction": {
+				"FR": "On garde tout pour fortifier Smyrno. Prudent, autonome."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 16,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21656,
+		"label": "anacreon_throne_21656",
+		"deck": "anacreon_throne",
+		"weight": 1200,
+		"lockturn": 18,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le roi vous demande ce que cache exactement la garnison de Smyrno. Un secret y dormirait."
+		},
+		"conditions": [
+			{
+				"variable": "liu_biao",
+				"op": "below",
+				"value": 4
+			},
+			{
+				"variable": "liu_biao",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 201
+			},
+			{
+				"variable": "cao_cao_no_yuzhou",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On fouille les entrepôts secrets de Smyrno."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On élude"
+			},
+			"reaction": {
+				"FR": "On élude la question. Le roi fronce les sourcils."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xinye_whats_in_there",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21657,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21657,
+		"label": "anacreon_throne_21657",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact a découvert le secret de Smyrno : un dépôt d'armes atomiques impériales, intact."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le sécurise"
+			},
+			"reaction": {
+				"FR": "On met la main sur l'arsenal atomique. Un trésor — et une cible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le scelle"
+			},
+			"reaction": {
+				"FR": "On rescelle le dépôt. Mieux vaut que nul n'en connaisse l'existence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21658,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21658,
+		"label": "anacreon_throne_21658",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "L'arsenal de Smyrno change la donne. Il fait de vous un seigneur redouté de la frontière."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On affiche sa force"
+			},
+			"reaction": {
+				"FR": "On exhibe l'arsenal. Anacréon tremble — d'admiration ou de peur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On garde l'arsenal secret. Une carte dans la manche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "liu_biao",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21659,
+		"label": "anacreon_throne_21659",
+		"deck": "anacreon_throne",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:anacreon_king",
+		"question": {
+			"FR": "Le frère de la reine, toujours général, lorgne Smyrno et son arsenal. Il marche dessus avec ses troupes."
+		},
+		"conditions": [
+			{
+				"variable": "seen_21641",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 208
+			},
+			{
+				"variable": "seen_21647",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "garrison_xinye",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On défend Smyrno"
+			},
+			"reaction": {
+				"FR": "On se prépare à défendre le monde-garnison contre le régent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On parlemente"
+			},
+			"reaction": {
+				"FR": "On tente de négocier. Le régent n'écoute que les canons."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.cai_mao_jingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21660,
+		"label": "anacreon_throne_21660",
+		"deck": "anacreon_throne",
+		"weight": 200,
+		"lockturn": 70,
+		"hidden": false,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "Le régent-général assiège Smyrno. La garnison vacille sous le nombre."
+		},
+		"conditions": [
+			{
+				"variable": "seen_21659",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 208
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient les murs"
+			},
+			"reaction": {
+				"FR": "On tient bon derrière les remparts atomiques. Le siège s'éternise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lance une sortie"
+			},
+			"reaction": {
+				"FR": "On tente une sortie audacieuse. Tout ou rien."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.cai_mao_jingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21661,
+		"label": "anacreon_throne_21661",
+		"deck": "anacreon_throne",
+		"weight": 200,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Au plus fort du siège, le général de l'Empire — observateur — pèse ses chances d'intervenir."
+		},
+		"conditions": [
+			{
+				"variable": "garrison_xinye",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 208
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le tient à l'écart"
+			},
+			"reaction": {
+				"FR": "On manœuvre pour garder l'Empire hors du jeu. Délicat."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'appâte"
+			},
+			"reaction": {
+				"FR": "On songe à attirer l'Empire — alliance à double tranchant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "neutral",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21662,
+		"label": "anacreon_throne_21662",
+		"deck": "anacreon_throne",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:royal_investigator",
+		"question": {
+			"FR": "L'enquêteur royal, votre allié, accourt avec des renforts au cœur du siège de Smyrno."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 208
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 8
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 219
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On coordonne l'attaque"
+			},
+			"reaction": {
+				"FR": "On synchronise l'assaut avec ses renforts. Le régent recule."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le couvre"
+			},
+			"reaction": {
+				"FR": "On couvre son arrivée. La jonction se fait sous le feu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21663,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21663,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21663,
+		"label": "anacreon_throne_21663",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "La bataille de Smyrno fait rage. Le régent-général engage tout ce qu'il a."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On contre-charge"
+			},
+			"reaction": {
+				"FR": "On contre-charge à découvert. Le choc est terrible."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient la ligne"
+			},
+			"reaction": {
+				"FR": "On tient la ligne, serrés. Les murs atomiques tiennent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.cai_mao_jingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.cai_mao_jingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21664,
+		"label": "anacreon_throne_21664",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "Une brèche : le régent-général est isolé, à votre merci."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "cao_cao_no_jingzhou",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le capture"
+			},
+			"reaction": {
+				"FR": "On capture le régent. Le complot perd sa tête militaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'abat"
+			},
+			"reaction": {
+				"FR": "On abat le régent dans la mêlée. Anacréon perd un fléau."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 158,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21665,
+		"label": "anacreon_throne_21665",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:queens_brother",
+		"question": {
+			"FR": "Le siège bascule. Une dernière charge ennemie menace de tout emporter — vous compris."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient coûte que coûte"
+			},
+			"reaction": {
+				"FR": "On tient. Smyrno résiste. Le prix du sang est lourd."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se replie"
+			},
+			"reaction": {
+				"FR": "On ordonne le repli. Smyrno vacille, mais le remnant survit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_champ_de_bataille",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_death_champ_de_bataille",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21666,
+		"label": "anacreon_throne_21666",
+		"deck": "anacreon_throne",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact rapporte de sombres nouvelles : le grand général de l'Empire galactique marche enfin sur la frontière en personne."
+		},
+		"conditions": [
+			{
+				"variable": "seen_1666",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On se prépare"
+			},
+			"reaction": {
+				"FR": "On prépare Smyrno au pire. L'Empire ne plaisante pas."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde espoir"
+			},
+			"reaction": {
+				"FR": "On rassure la garnison. Le moral est une arme aussi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21667,
+		"label": "anacreon_throne_21667",
+		"deck": "anacreon_throne",
+		"weight": 12000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial déploie sa flotte au-dessus de Smyrno. Sa puissance dépasse tout ce que vous avez affronté."
+		},
+		"conditions": [
+			{
+				"variable": "garrison_xinye",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_21666",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On résiste"
+			},
+			"reaction": {
+				"FR": "On organise la résistance désespérée de Smyrno."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On évacue les civils"
+			},
+			"reaction": {
+				"FR": "On commence l'évacuation des civils. La fin approche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.cao_cao_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.cao_cao_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21668,
+		"label": "anacreon_throne_21668",
+		"deck": "anacreon_throne",
+		"weight": 12000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial vous accule. Seul un coup de génie tactique pourrait sauver Smyrno."
+		},
+		"conditions": [
+			{
+				"variable": "garrison_xinye",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_21666",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cherche le génie"
+			},
+			"reaction": {
+				"FR": "On se tourne vers votre brillant conseiller pour une parade."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On affronte de front"
+			},
+			"reaction": {
+				"FR": "On affronte l'Empire de front. Courageux — et suicidaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhuge_liang_xinye",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_zhuge_liang_xinye",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 21669,
+		"label": "anacreon_throne_21669",
+		"deck": "anacreon_throne",
+		"weight": 12000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le régent vaincu ne menace plus Smyrno ; reste l'Empire. Le général impérial offre une reddition honorable."
+		},
+		"conditions": [
+			{
+				"variable": "garrison_xinye",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "cao_cao_no_jingzhou",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On refuse la reddition"
+			},
+			"reaction": {
+				"FR": "On refuse de plier devant l'Empire. Smyrno tiendra ou tombera."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On négocie"
+			},
+			"reaction": {
+				"FR": "On gagne du temps par la négociation. La fuite se prépare."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21670,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21670,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 21670,
+		"label": "anacreon_throne_21670",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial lance l'assaut final sur Smyrno. Tenir une dernière heure, ou sauver ce qui peut l'être ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tient l'arrière-garde"
+			},
+			"reaction": {
+				"FR": "On tient l'arrière-garde pour couvrir la retraite. Héroïque."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On embarque tout le monde"
+			},
+			"reaction": {
+				"FR": "On embarque civils et soldats en hâte. Smyrno brûle derrière vous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.cao_cao_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21671,
+		"label": "anacreon_throne_21671",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:brilliant_advisor",
+		"question": {
+			"FR": "Votre brillant conseiller propose une ruse pour ralentir l'Empire : un rideau de feu atomique sur les approches de Smyrno."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On déclenche le feu"
+			},
+			"reaction": {
+				"FR": "On embrase les approches. L'Empire ralentit, le temps de fuir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite devant tant de destruction. Le conseiller insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.cao_cao_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21672,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21672,
+		"label": "anacreon_throne_21672",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:brilliant_advisor",
+		"question": {
+			"FR": "Smyrno tombe. Des milliers d'habitants, sans toit, suivent votre remnant dans l'exode. Les emmener ralentit la fuite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les emmène"
+			},
+			"reaction": {
+				"FR": "On prend les réfugiés sous notre protection. Lourd, mais juste."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On accélère sans eux"
+			},
+			"reaction": {
+				"FR": "On songe à les abandonner pour fuir plus vite. Cruel dilemme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "garrison_xinye",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xinye_homeless",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21673,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21673,
+		"label": "anacreon_throne_21673",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks presse l'embarquement. « Place limitée, Orateur ! Soldats ou civils d'abord ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Les civils d'abord"
+			},
+			"reaction": {
+				"FR": "On embarque les civils en priorité. Les soldats couvrent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Les soldats d'abord"
+			},
+			"reaction": {
+				"FR": "On embarque la force d'abord. Froide logique de survie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "garrison_xinye",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xinye_homeless",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "battle.cao_cao_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21674,
+		"label": "anacreon_throne_21674",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Smyrno s'effondre dans les flammes. Le dernier transport décolle sous le feu impérial, bondé de réfugiés."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.fire_collapsing_structures",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "garrison_xinye",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On couvre le décollage"
+			},
+			"reaction": {
+				"FR": "On couvre le départ au prix de lourdes pertes. Les réfugiés sont saufs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On monte à bord"
+			},
+			"reaction": {
+				"FR": "On embarque au dernier instant. Smyrno disparaît, embrasée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xinye_homeless",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_xinye_homeless",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -30,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "afraid",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21675,
+		"label": "anacreon_throne_21675",
+		"deck": "anacreon_throne",
+		"weight": 500,
+		"lockturn": 3,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "Sur les routes de l'exode, un agitateur harangue les réfugiés de Smyrno, prêt à les soulever de désespoir."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le calme"
+			},
+			"reaction": {
+				"FR": "On apaise la foule au bord de l'émeute. Coûteux en vivres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse parler"
+			},
+			"reaction": {
+				"FR": "On laisse l'agitateur haranguer. La colère gronde."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 21676,
+		"label": "anacreon_throne_21676",
+		"deck": "anacreon_throne",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:brilliant_advisor",
+		"question": {
+			"FR": "Votre brillant conseiller trace la route de l'exil : Korell, monde neutre, accueillera peut-être vos réfugiés."
+		},
+		"conditions": [
+			{
+				"variable": "seen_21675",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 193
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "protect_refugees",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On met le cap sur Korell"
+			},
+			"reaction": {
+				"FR": "On guide l'exode vers Korell. L'espoir d'un refuge."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche plus près"
+			},
+			"reaction": {
+				"FR": "On cherche un asile plus proche. Le conseiller doute."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21679,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21678,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21677,
+		"label": "anacreon_throne_21677",
+		"deck": "anacreon_throne",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact confirme : seul Korell peut accueillir tant de réfugiés. Mais l'Empire vous talonne."
+		},
+		"conditions": [
+			{
+				"variable": "seen_21675",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "protect_refugees",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On fonce vers Korell"
+			},
+			"reaction": {
+				"FR": "On précipite la fuite vers Korell, l'Empire aux trousses."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On disperse l'exode"
+			},
+			"reaction": {
+				"FR": "On disperse les réfugiés pour brouiller la traque. Risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_chasing",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21678,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21678,
+		"label": "anacreon_throne_21678",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amiral de la flottille d'exode signale le cap libre vers Korell — si l'on tente le grand saut maintenant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On saute vers Korell"
+			},
+			"reaction": {
+				"FR": "On exécute le saut. Korell grise apparaît, refuge incertain."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend les traînards"
+			},
+			"reaction": {
+				"FR": "On attend les retardataires. Chaque seconde rapproche l'Empire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_chasing",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21679,
+		"label": "anacreon_throne_21679",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:brilliant_advisor",
+		"question": {
+			"FR": "Votre brillant conseiller calcule le saut au plus juste pour semer l'Empire en chemin vers Korell."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit ses calculs"
+			},
+			"reaction": {
+				"FR": "On suit le saut calculé. La flottille file vers Korell."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On improvise la route"
+			},
+			"reaction": {
+				"FR": "On improvise. Le conseiller serre les dents."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_chasing",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21680,
+		"label": "anacreon_throne_21680",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amiral repère une escadre impériale en embuscade sur la route de Korell."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 191
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On force le passage"
+			},
+			"reaction": {
+				"FR": "On force le barrage impérial. Le choc est inévitable."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On contourne"
+			},
+			"reaction": {
+				"FR": "On contourne l'embuscade. Détour coûteux, mais on évite le pire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_chasing_encounter",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "protect_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -30,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21681,
+		"label": "anacreon_throne_21681",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:loyal_general",
+		"question": {
+			"FR": "Un général loyaliste rallie l'arrière-garde de l'exode et propose de tenir l'embuscade pendant que les réfugiés fuient."
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "equal",
+				"value": 191
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte son sacrifice"
+			},
+			"reaction": {
+				"FR": "Le général loyal tient l'arrière. Les réfugiés filent vers Korell."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste avec lui"
+			},
+			"reaction": {
+				"FR": "On reste combattre à ses côtés. Le danger est immense."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cao_cao_chasing_encounter",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21682,
+		"label": "anacreon_throne_21682",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_general",
+		"question": {
+			"FR": "Le général impérial vous rattrape en chasse. L'arrière-garde plie sous ses coups."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On contre-attaque"
+			},
+			"reaction": {
+				"FR": "On contre-attaque pour gagner du temps. Sang et fureur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rompt le contact"
+			},
+			"reaction": {
+				"FR": "On rompt le contact et on file. L'Empire poursuit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "planet_smyrno_state",
+				"intValue": -1,
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "cao_cao",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "battle.cao_cao_chase",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 21683,
+		"label": "anacreon_throne_21683",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "L'amiral demande s'il faut sacrifier une partie de la flottille pour sauver le gros des réfugiés."
+		},
+		"conditions": [
+			{
+				"variable": "liu_bei",
+				"op": "below",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On sacrifie l'arrière"
+			},
+			"reaction": {
+				"FR": "On sacrifie quelques nefs. Le gros de l'exode atteint Korell."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tente de tout sauver"
+			},
+			"reaction": {
+				"FR": "On refuse tout sacrifice. Pari fou sur la vitesse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "desperate",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21684,
+		"label": "anacreon_throne_21684",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fleet_admiral",
+		"question": {
+			"FR": "Le prince exilé, fidèle, propose de mener lui-même la manœuvre de dégagement."
+		},
+		"conditions": [
+			{
+				"variable": "liu_bei",
+				"op": "above",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui confie la manœuvre"
+			},
+			"reaction": {
+				"FR": "Le prince mène le dégagement avec brio. La flottille respire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le commandement"
+			},
+			"reaction": {
+				"FR": "On garde la main. Le prince s'incline, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21685,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21685,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21685,
+		"label": "anacreon_throne_21685",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fierce_warrior",
+		"question": {
+			"FR": "Un bretteur colosse de la garde charge l'escadre impériale en couverture de l'exode."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le soutient"
+			},
+			"reaction": {
+				"FR": "On appuie la charge du colosse. L'ennemi recule un instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le rappelle"
+			},
+			"reaction": {
+				"FR": "On le rappelle avant qu'il ne se perde. Il grogne, mais obéit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21686,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21686,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21686,
+		"label": "anacreon_throne_21686",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le prince exilé vous fait face, grave : « Korell est en vue. Mais sans vous, ces gens n'y arriveront pas. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les mène à Korell"
+			},
+			"reaction": {
+				"FR": "On guide l'exode jusqu'à Korell. Le refuge se referme sur eux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On confie la suite au prince"
+			},
+			"reaction": {
+				"FR": "On confie les derniers réfugiés au prince. Confiance ultime."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 21687,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21687,
+		"label": "anacreon_throne_21687",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Les réfugiés de Smyrno touchent enfin Korell, exsangues mais vivants. Le prince exilé vous serre le bras."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure le refuge"
+			},
+			"reaction": {
+				"FR": "On souffle enfin. Korell accueille le remnant de Smyrno."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On pense déjà à demain"
+			},
+			"reaction": {
+				"FR": "On songe déjà à la reconquête. Le prince approuve, l'œil dur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_liu_bei_after_xinye",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21688,
+		"label": "anacreon_throne_21688",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:brilliant_advisor",
+		"question": {
+			"FR": "L'amiral compte les survivants. Faut-il honorer les morts de Smyrno par une cérémonie, ou repartir au plus vite ?"
+		},
+		"conditions": [
+			{
+				"variable": "party",
+				"op": "not",
+				"value": 193
+			},
+			{
+				"variable": "remove",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On honore les morts"
+			},
+			"reaction": {
+				"FR": "On rend hommage aux morts de Smyrno. Les réfugiés pleurent et guérissent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On repart aussitôt"
+			},
+			"reaction": {
+				"FR": "On repart sans cérémonie. Les vivants d'abord."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21689,
+		"label": "anacreon_throne_21689",
+		"deck": "anacreon_throne",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rival_warlord",
+		"question": {
+			"FR": "Le prince exilé, ému, scelle votre alliance sur Korell. « Vous avez sauvé mon peuple. Mon épée vous appartient désormais. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte son serment"
+			},
+			"reaction": {
+				"FR": "Le prince et ses fidèles rejoignent votre cause. Un noyau de loyaux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse libre"
+			},
+			"reaction": {
+				"FR": "On refuse de le lier. Le prince insiste, reconnaissant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 108,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "liu_bei",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 21690,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "liu_bei",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 21690,
+		"label": "anacreon_throne_21690",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sworn_marshal",
+		"question": {
+			"FR": "Le maréchal lige du prince jure à son tour fidélité. « Là où va mon prince, va mon sabre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "Le maréchal rejoint le serment. Une lame d'exception de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le jauge"
+			},
+			"reaction": {
+				"FR": "On l'observe en silence. Le respect, déjà, est mutuel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 109,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "guan_yu",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 21691,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 109,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "guan_yu",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 21691,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 21691,
+		"label": "anacreon_throne_21691",
+		"deck": "anacreon_throne",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fierce_warrior",
+		"question": {
+			"FR": "Le bretteur colosse, dernier des trois, scelle le pacte de Korell. « Trois lames, un serment. Que l'Empire tremble. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle le pacte"
+			},
+			"reaction": {
+				"FR": "Les trois jurés rejoignent l'exil. À Korell, un nouveau combat commence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les remercie"
+			},
+			"reaction": {
+				"FR": "On remercie les trois frères d'armes. Le remnant de Smyrno a une épée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "party",
+				"intValue": 110,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_fei",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "party",
+				"intValue": 110,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "zhang_fei",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "location",
+				"intValue": 0,
+				"stringValue": "korell",
+				"addOperation": false,
+				"toKeep": true
+			},
+			{
+				"variable": "xinye_refugees",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 22000,
 		"label": "mi_22000",
 		"deck": "mentalic_inquiry",

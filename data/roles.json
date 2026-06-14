@@ -232,5 +232,29 @@
 	},
 	"palace_intriguer": {
 		"title": "Intrigante de palais"
+	},
+	"anacreon_king": {
+		"title": "Roi d'Anacréon"
+	},
+	"queen_consort": {
+		"title": "Reine consort"
+	},
+	"queens_brother": {
+		"title": "Régent-général"
+	},
+	"royal_investigator": {
+		"title": "Enquêteur royal"
+	},
+	"court_companion": {
+		"title": "Compagnon de cour"
+	},
+	"banquet_host": {
+		"title": "Hôte du banquet"
+	},
+	"brilliant_advisor": {
+		"title": "Brillant conseiller"
+	},
+	"loyal_general": {
+		"title": "Général loyaliste"
 	}
 }
