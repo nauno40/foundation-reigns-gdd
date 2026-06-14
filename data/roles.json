@@ -361,5 +361,20 @@
 	},
 	"steward": {
 		"title": "Intendant du fief"
+	},
+	"taoist_sage": {
+		"title": "Sage de la Voie"
+	},
+	"village_teacher": {
+		"title": "Maître d'école"
+	},
+	"hermit": {
+		"title": "Ermite"
+	},
+	"monk": {
+		"title": "Moine"
+	},
+	"gambler": {
+		"title": "Joueur"
 	}
 }

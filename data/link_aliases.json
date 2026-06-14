@@ -1143,5 +1143,104 @@
 	},
 	"_monk_fashion": {
 		"node": 20588
+	},
+	"_go_level_1": {
+		"node": 20232
+	},
+	"_go_level_1_happy": {
+		"node": 20232
+	},
+	"_go_level_2": {
+		"node": 20235
+	},
+	"_go_level_2_happy": {
+		"node": 20235
+	},
+	"_go_level_3": {
+		"node": 20238
+	},
+	"_go_level_3_happy": {
+		"node": 20238
+	},
+	"_go_level_4": {
+		"node": 20241
+	},
+	"_go_level_4_happy": {
+		"node": 20241
+	},
+	"_silk_investment": {
+		"node": 20063
+	},
+	"_silk_opportunity": {
+		"node": 20066
+	},
+	"_silk_yizhou": {
+		"node": 20067
+	},
+	"EXTERNE:142": {
+		"action": "enddispatch"
+	},
+	"_rooster_fight": {
+		"node": 20087
+	},
+	"_rooster_boy": {
+		"node": 20088
+	},
+	"_rooster_girl": {
+		"node": 20089
+	},
+	"_spell_patriarchy": {
+		"node": 20089
+	},
+	"_riddle_correct": {
+		"node": 20099
+	},
+	"_book_scold": {
+		"node": 20104
+	},
+	"_convert_to_buddhism": {
+		"node": 20112
+	},
+	"_follow_the_nature": {
+		"node": 20113
+	},
+	"_convert_to_taoism": {
+		"node": 20114
+	},
+	"_schrodingers_cat": {
+		"node": 20112
+	},
+	"_hack_the_game": {
+		"node": 20116
+	},
+	"_i_ching_reading": {
+		"node": 20165
+	},
+	"_bastard_child_son": {
+		"node": 20316
+	},
+	"_bastard_child_daughter": {
+		"node": 20316
+	},
+	"_elixir_why": {
+		"node": 20119
+	},
+	"_hunting_chase": {
+		"node": 20093
+	},
+	"_new_pigs": {
+		"node": 20060
+	},
+	"_oolong": {
+		"node": 20150
+	},
+	"_whitetea": {
+		"node": 20151
+	},
+	"_who_taught_the_dragon_rhyme": {
+		"node": 20143
+	},
+	"_who_taught_the_phoenix_rhyme": {
+		"node": 20144
 	}
 }

@@ -8739,6 +8739,2916 @@
 		}
 	},
 	{
+		"id": 20000,
+		"label": "ambient_20000",
+		"deck": "ambient",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_chancellor",
+		"question": {
+			"FR": "Un chancelier impérial de passage vous observe d'un œil froid. « Étrange, ce magistrat si avisé. Trop, peut-être. »"
+		},
+		"conditions": [
+			{
+				"variable": "sima_yi",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reste affable"
+			},
+			"reaction": {
+				"FR": "On joue l'affabilité. Le chancelier range ses soupçons. Pour l'instant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'esquive"
+			},
+			"reaction": {
+				"FR": "On esquive le chancelier. Son regard vous suit pourtant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20001,
+		"label": "ambient_20001",
+		"deck": "ambient",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_chancellor",
+		"question": {
+			"FR": "Le chancelier impérial laisse tomber, mielleux : « Les esprits trop brillants finissent par éblouir le trône, Orateur. »"
+		},
+		"conditions": [
+			{
+				"variable": "sima_yi",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On feint la modestie"
+			},
+			"reaction": {
+				"FR": "On joue les modestes. Le chancelier sourit, mi-dupe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On soutient son regard"
+			},
+			"reaction": {
+				"FR": "On le fixe sans ciller. Duel silencieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "sima_yi",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20002,
+		"label": "ambient_20002",
+		"deck": "ambient",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:young_strategist",
+		"question": {
+			"FR": "Un jeune stratège de renom, de passage, engage la conversation sur l'art de la guerre."
+		},
+		"conditions": [
+			{
+				"variable": "lu_xun",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On échange longuement"
+			},
+			"reaction": {
+				"FR": "On débat stratégie. Le jeune prodige vous jauge, intéressé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On coupe court"
+			},
+			"reaction": {
+				"FR": "On abrège l'échange. Le stratège hausse un sourcil."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20003,
+		"label": "ambient_20003",
+		"deck": "ambient",
+		"weight": 700,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:wu_commander",
+		"question": {
+			"FR": "Un commandant du Sud, en escale, vante les mérites de la guerre navale sur la guerre de siège."
+		},
+		"conditions": [
+			{
+				"variable": "lv_meng",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On écoute le commandant. Ses idées valent leur pesant d'or."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le contredit"
+			},
+			"reaction": {
+				"FR": "On le contredit poliment. Débat animé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20004,
+		"label": "ambient_20004",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Un quartier-maître raconte une vieille histoire de soldats qui hante encore les casernes. La croire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On boit ses paroles. Une légende de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On en rit"
+			},
+			"reaction": {
+				"FR": "On rit de la légende. Le quartier-maître s'en offusque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20005,
+		"label": "ambient_20005",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Le quartier-maître poursuit son récit : un fantôme de déserteur rôderait la nuit. Frisson, ou foutaise ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On frissonne"
+			},
+			"reaction": {
+				"FR": "On joue le frisson. Le conteur exulte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hausse les épaules"
+			},
+			"reaction": {
+				"FR": "On balaie le conte. Le quartier-maître boude."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20006,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20006,
+		"label": "ambient_20006",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "« Et savez-vous comment finit le déserteur ? » demande le quartier-maître, l'œil brillant."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On veut savoir"
+			},
+			"reaction": {
+				"FR": "On réclame la fin. Le conteur jubile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On devine"
+			},
+			"reaction": {
+				"FR": "On propose une fin. Le conteur sourit, surpris."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20007,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20007,
+		"label": "ambient_20007",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Le récit du quartier-maître s'achève sur une morale militaire. L'approuver, ou la nuancer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'approuve"
+			},
+			"reaction": {
+				"FR": "On salue la morale. Le conteur rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la nuance"
+			},
+			"reaction": {
+				"FR": "On nuance la leçon. Débat de caserne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "essential_art_of_peace",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 20008,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "essential_art_of_peace",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 20008,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20008,
+		"label": "ambient_20008",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Le quartier-maître vous offre une amulette « porte-bonheur » tirée de son conte. L'accepter ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accepte"
+			},
+			"reaction": {
+				"FR": "On accepte l'amulette. Le conteur est ravi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline poliment. Le conteur la range, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "userprofileselect",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20009,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20009,
+		"label": "ambient_20009",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "L'histoire close, le quartier-maître retourne à ses fourneaux, satisfait d'avoir captivé un magistrat."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On le remercie du récit. Un sourire dans la grisaille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'éclipse"
+			},
+			"reaction": {
+				"FR": "On s'éclipse en silence. Le conteur n'en saura rien."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "userprofileselect",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "userprofileselect",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20010,
+		"label": "ambient_20010",
+		"deck": "ambient",
+		"weight": 1200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Un scribe impérial recense les naissances de l'année et s'embrouille dans les registres."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 190
+			},
+			{
+				"variable": "castrated",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'aide"
+			},
+			"reaction": {
+				"FR": "On démêle ses registres. Le scribe vous en sait gré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse"
+			},
+			"reaction": {
+				"FR": "On le laisse à ses colonnes. Le scribe soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20011,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20011,
+		"label": "ambient_20011",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Le scribe impérial vous demande comment orthographier votre nom de couverture dans les annales. Détail piégeux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le guide"
+			},
+			"reaction": {
+				"FR": "On dicte l'orthographe. La couverture reste cohérente."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On élude"
+			},
+			"reaction": {
+				"FR": "On reste vague. Le scribe note quelque chose."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "castrated",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20012,
+		"label": "ambient_20012",
+		"deck": "ambient",
+		"weight": 50,
+		"lockturn": 360,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "Un agitateur de rue déclame contre les impôts devant une petite foule. Le laisser dire, ou intervenir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le laisse dire"
+			},
+			"reaction": {
+				"FR": "On laisse l'agitateur vider son sac. La foule se lasse seule."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On intervient"
+			},
+			"reaction": {
+				"FR": "On disperse l'attroupement. L'agitateur crie à la tyrannie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20013,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20013,
+		"label": "ambient_20013",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur vous reconnaît et vous prend à partie en public. Répliquer, ou s'éclipser ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On réplique"
+			},
+			"reaction": {
+				"FR": "On lui cloue le bec d'une réplique. La foule rit — de lui."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'éclipse"
+			},
+			"reaction": {
+				"FR": "On s'éclipse dignement. L'agitateur triomphe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20014,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20014,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "angry",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20014,
+		"label": "ambient_20014",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur, à court d'arguments, finit par réclamer… une pièce pour boire. Tout ça pour ça."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui donne"
+			},
+			"reaction": {
+				"FR": "On lui jette une pièce. La foule s'esclaffe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse l'aumône. L'agitateur s'en va, bredouille."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20015,
+		"label": "ambient_20015",
+		"deck": "ambient",
+		"weight": 700,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique vous soumet une querelle de voisinage absurde mais tenace."
+		},
+		"conditions": [
+			{
+				"variable": "seen_132",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.simple_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tranche"
+			},
+			"reaction": {
+				"FR": "On tranche la querelle d'un mot. Les voisins se calment."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les renvoie dos à dos"
+			},
+			"reaction": {
+				"FR": "On les renvoie dos à dos. Le juge soupire."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20016,
+		"label": "ambient_20016",
+		"deck": "ambient",
+		"weight": 3000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école vous présente un élève prodige qui résout des énigmes plus vite que ses aînés."
+		},
+		"conditions": [
+			{
+				"variable": "seen_132",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "seen_20019",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "seen_20007",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 186
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.simple_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le teste"
+			},
+			"reaction": {
+				"FR": "On soumet une énigme à l'enfant. Il la résout en souriant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'encourage"
+			},
+			"reaction": {
+				"FR": "On encourage le prodige. Le maître rayonne de fierté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20017,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20017,
+		"label": "ambient_20017",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école suggère de confier l'enfant prodige à un vieil ermite réputé pour sa sagesse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'y emmène"
+			},
+			"reaction": {
+				"FR": "On mène l'enfant chez l'ermite. La rencontre s'annonce étrange."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite à déranger l'ermite. Le maître insiste."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20018,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20018,
+		"label": "ambient_20018",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite vous accueille sans un mot, puis pose une première énigme : « Qu'est-ce qui grandit en se vidant ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.simple_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Un trou »"
+			},
+			"reaction": {
+				"FR": "« Un trou. » L'ermite hoche la tête, à demi satisfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Une dette »"
+			},
+			"reaction": {
+				"FR": "« Une dette. » L'ermite sourit : « Plus malin que je ne croyais. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20019,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20019,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20019,
+		"label": "ambient_20019",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite enchaîne : « Qu'est-ce qui parle toutes les langues sans ouvrir la bouche ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« L'écho »"
+			},
+			"reaction": {
+				"FR": "« L'écho. » L'ermite plisse les yeux. « Intéressant. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« L'argent »"
+			},
+			"reaction": {
+				"FR": "« L'argent. » L'ermite rit doucement. « Cynique, mais juste. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20020,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20020,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20020,
+		"label": "ambient_20020",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qui revient toujours sans jamais partir ? » murmure l'ermite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Le souvenir »"
+			},
+			"reaction": {
+				"FR": "« Le souvenir. » L'ermite vous observe, songeur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Demain »"
+			},
+			"reaction": {
+				"FR": "« Demain. » L'ermite hoche lentement la tête."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20021,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20021,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20021,
+		"label": "ambient_20021",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qu'on perd dès qu'on le partage ? » demande l'ermite, l'œil malicieux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Un secret »"
+			},
+			"reaction": {
+				"FR": "« Un secret. » L'ermite sourit. « Vous en savez quelque chose. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« La solitude »"
+			},
+			"reaction": {
+				"FR": "« La solitude. » L'ermite éclate d'un rire bref."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20022,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20022,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20022,
+		"label": "ambient_20022",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qui est à vous, mais que les autres usent plus que vous ? » poursuit l'ermite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Mon nom »"
+			},
+			"reaction": {
+				"FR": "« Votre nom. » L'ermite vous fixe longuement. Trop, peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Mon temps »"
+			},
+			"reaction": {
+				"FR": "« Votre temps. » L'ermite hoche la tête, approbateur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20023,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20023,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20023,
+		"label": "ambient_20023",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "Dernière énigme de l'ermite : « Qu'est-ce qui est plus fort que la force et plus sûr que le hasard ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Le Plan »"
+			},
+			"reaction": {
+				"FR": "« Le Plan. » L'ermite se fige. « Vous en dites trop, étranger. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« La patience »"
+			},
+			"reaction": {
+				"FR": "« La patience. » L'ermite sourit, rassuré. « Bonne réponse. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20024,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20024,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20024,
+		"label": "ambient_20024",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite vous congédie d'un geste : « L'enfant apprendra. Et vous, magistrat… méfiez-vous de qui répond trop vite. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On note le conseil"
+			},
+			"reaction": {
+				"FR": "On retient l'avertissement de l'ermite. Sagesse troublante."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On en sourit"
+			},
+			"reaction": {
+				"FR": "On sourit de la mise en garde. L'ermite a vu juste, peut-être."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20025,
+		"label": "ambient_20025",
+		"deck": "ambient",
+		"weight": 6000,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Un maître d'école rival conteste la méthode de l'ermite et réclame l'enfant prodige pour sa propre classe."
+		},
+		"conditions": [
+			{
+				"variable": "seen_2168",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 190
+			},
+			{
+				"variable": "seen_20028",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "not",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.simple_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tranche pour l'ermite"
+			},
+			"reaction": {
+				"FR": "On laisse l'enfant à l'ermite. Le maître rival fulmine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rend l'enfant à l'école"
+			},
+			"reaction": {
+				"FR": "On rend l'enfant à l'école classique. L'ermite hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20026,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20026,
+		"label": "ambient_20026",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique doit arbitrer la garde de l'enfant prodige entre l'ermite et l'école. Votre avis pèsera."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Pour l'ermite"
+			},
+			"reaction": {
+				"FR": "On penche pour la sagesse de l'ermite. Choix audacieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Pour l'école"
+			},
+			"reaction": {
+				"FR": "On penche pour l'école. Plus sûr, moins inspiré."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20027,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20027,
+		"label": "ambient_20027",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite, vexé qu'on doute de lui, propose une nouvelle joute d'énigmes pour prouver sa méthode."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On relève la joute"
+			},
+			"reaction": {
+				"FR": "On accepte la joute. L'ermite affûte ses énigmes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline. L'ermite se renfrogne dans sa grotte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20028,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20028,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20028,
+		"label": "ambient_20028",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qui éclaire sans brûler et trompe sans mentir ? » lance l'ermite."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.mobile_buzz",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "userprofileselect",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Le reflet »"
+			},
+			"reaction": {
+				"FR": "« Le reflet. » L'ermite hoche la tête. « Pas mal. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« L'espoir »"
+			},
+			"reaction": {
+				"FR": "« L'espoir. » L'ermite sourit tristement. « Joli. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20029,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20029,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20029,
+		"label": "ambient_20029",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qui pèse plus lourd mort que vivant ? » demande l'ermite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Un roi »"
+			},
+			"reaction": {
+				"FR": "« Un roi. » L'ermite rit. « Dangereuse réponse, magistrat. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Un secret »"
+			},
+			"reaction": {
+				"FR": "« Un secret. » L'ermite vous scrute. « Décidément… »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20030,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20030,
+		"label": "ambient_20030",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qui suit partout sans jamais toucher ? » poursuit l'ermite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« L'ombre »"
+			},
+			"reaction": {
+				"FR": "« L'ombre. » L'ermite acquiesce. « Évident, mais juste. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« La rumeur »"
+			},
+			"reaction": {
+				"FR": "« La rumeur. » L'ermite éclate de rire. « Mieux ! »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20031,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20031,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20031,
+		"label": "ambient_20031",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "« Qu'est-ce qu'on bâtit pour ne jamais y entrer ? » murmure l'ermite."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Une tombe »"
+			},
+			"reaction": {
+				"FR": "« Une tombe. » L'ermite hoche gravement la tête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Un avenir »"
+			},
+			"reaction": {
+				"FR": "« Un avenir. » L'ermite sourit. « Philosophe, en plus. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20032,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20032,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20032,
+		"label": "ambient_20032",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite s'incline enfin : « Vous valez votre réputation, magistrat. L'enfant restera, et apprendra de nous deux. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte l'arrangement"
+			},
+			"reaction": {
+				"FR": "On scelle l'arrangement. L'enfant aura deux maîtres."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse l'ermite décider"
+			},
+			"reaction": {
+				"FR": "On laisse l'ermite trancher. Il en est flatté."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20033,
+		"label": "ambient_20033",
+		"deck": "ambient",
+		"weight": 5000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique revient : d'autres parents veulent confier leurs enfants à l'ermite. Encadrer cet engouement ?"
+		},
+		"conditions": [
+			{
+				"variable": "seen_20028",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 201
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "seen_20036",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.achievement_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'encadre"
+			},
+			"reaction": {
+				"FR": "On organise un vrai préceptorat. L'ermite devient institution."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse l'ermite gérer le flux. Le chaos guette."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20034,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20034,
+		"label": "ambient_20034",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école s'inquiète de perdre tous ses élèves au profit de l'ermite. Le rassurer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On rééquilibre écoliers et disciples. Chacun sa part."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le meilleur gagner"
+			},
+			"reaction": {
+				"FR": "On laisse la concurrence trancher. Darwinien."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20035,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20035,
+		"label": "ambient_20035",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite, lassé de la foule, menace de se retirer plus loin encore. Le retenir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On convainc l'ermite de rester. Le savoir reste au fief."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse partir"
+			},
+			"reaction": {
+				"FR": "On laisse l'ermite à sa solitude. Une source de sagesse s'éloigne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20036,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20036,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20036,
+		"label": "ambient_20036",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "Pour retenir l'ermite, il pose une condition : une dernière énigme, la plus dure. « Qui suis-je, magistrat ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "sleeping_dragon",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "meet_pang_tong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Un sage »"
+			},
+			"reaction": {
+				"FR": "« Un sage. » L'ermite sourit, presque déçu. « Trop facile. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Un miroir »"
+			},
+			"reaction": {
+				"FR": "« Un miroir. » L'ermite se fige. « Vous voyez trop clair. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20037,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20037,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20037,
+		"label": "ambient_20037",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite, troublé par votre perspicacité, vous demande qui vous êtes vraiment. Danger."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On détourne"
+			},
+			"reaction": {
+				"FR": "On détourne la question. L'ermite n'insiste pas — cette fois."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste énigmatique"
+			},
+			"reaction": {
+				"FR": "On reste mystérieux. L'ermite vous trouve fascinant, et inquiétant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20038,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20038,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20038,
+		"label": "ambient_20038",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite conclut : « Gardez vos secrets, magistrat. Moi, je garde les miens. Nous nous ressemblons. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On acquiesce"
+			},
+			"reaction": {
+				"FR": "On acquiesce. Une étrange complicité naît."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rit"
+			},
+			"reaction": {
+				"FR": "On rit de la comparaison. L'ermite rit aussi, sans dupe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20039,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20039,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20039,
+		"label": "ambient_20039",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite restera. Faut-il sceller le pacte d'un présent, ou d'une simple poignée de main ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Un présent"
+			},
+			"reaction": {
+				"FR": "On offre un présent à l'ermite. Il l'accepte, ému."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Une poignée de main"
+			},
+			"reaction": {
+				"FR": "On scelle d'une poignée de main. L'ermite préfère, sobre."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20040,
+		"label": "ambient_20040",
+		"deck": "ambient",
+		"weight": 1000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école évoque un enfant à l'esprit si vif qu'il « devine » les pensées. Don, ou tour ?"
+		},
+		"conditions": [
+			{
+				"variable": "synaptic",
+				"op": "equal",
+				"value": 60
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.achievement_completed",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On observe l'enfant de près. Troublant — presque mentalique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On n'y crois pas"
+			},
+			"reaction": {
+				"FR": "On doute du « don ». L'enfant sourit, énigmatique."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20041,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20041,
+		"label": "ambient_20041",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique craint qu'on accuse l'enfant « devin » de sorcellerie. Le protéger ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le protège"
+			},
+			"reaction": {
+				"FR": "On met l'enfant à l'abri des superstitieux. Geste prudent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse au sort"
+			},
+			"reaction": {
+				"FR": "On laisse l'enfant affronter les rumeurs. Risqué pour lui."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20042,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20042,
+		"label": "ambient_20042",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite examine l'enfant « devin » et murmure : « Ce n'est pas un don. C'est une oreille trop fine. Surveillez-le. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le surveille"
+			},
+			"reaction": {
+				"FR": "On garde l'œil sur l'enfant trop perspicace. Prudence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On rassure l'enfant inquiet. Sa finesse l'effraie lui-même."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20043,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20043,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20043,
+		"label": "ambient_20043",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "Le gardien de la mémoire du fief veut consigner le cas de l'enfant « devin » dans les annales."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "On laisse consigner le cas. La curiosité passe à la postérité."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On préfère l'oubli"
+			},
+			"reaction": {
+				"FR": "On préfère étouffer l'affaire. Mieux vaut l'oubli."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20044,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20044,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20044,
+		"label": "ambient_20044",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite propose d'enseigner à l'enfant à maîtriser son « oreille trop fine » plutôt que de la craindre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On approuve"
+			},
+			"reaction": {
+				"FR": "On confie l'enfant à l'ermite. Il apprendra à se contenir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite. Un tel don, entre de bonnes mains ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20045,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20045,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20045,
+		"label": "ambient_20045",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:memory_keeper",
+		"question": {
+			"FR": "Le gardien de la mémoire vous remercie : ces petites histoires de rue, dit-il, tissent la vraie chronique d'un monde."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'encourage"
+			},
+			"reaction": {
+				"FR": "On encourage le chroniqueur. La mémoire du fief s'enrichit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le modère"
+			},
+			"reaction": {
+				"FR": "On le modère un peu. Trop de chroniques noient l'essentiel."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20046,
+		"label": "ambient_20046",
+		"deck": "ambient",
+		"weight": 1000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école présente deux jumeaux qui se disputent le titre de meilleur élève. Les départager ?"
+		},
+		"conditions": [
+			{
+				"variable": "seen_20045",
+				"op": "not",
+				"value": 1
+			},
+			{
+				"variable": "seen_20040",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "synaptic",
+				"op": "above",
+				"value": 60
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.simple_chime",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On organise un défi"
+			},
+			"reaction": {
+				"FR": "On organise un défi loyal. Les jumeaux s'affrontent, ravis."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les déclare égaux"
+			},
+			"reaction": {
+				"FR": "On les déclare ex æquo. Sagesse, ou esquive ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20047,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20047,
+		"label": "ambient_20047",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique craint que la rivalité des jumeaux ne divise la classe. Intervenir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On apaise"
+			},
+			"reaction": {
+				"FR": "On apaise la rivalité. La classe retrouve son calme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse la rivalité"
+			},
+			"reaction": {
+				"FR": "On laisse les jumeaux rivaliser. L'émulation, ou la fracture."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20048,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20048,
+		"label": "ambient_20048",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite observe les jumeaux et glisse : « L'un suivra son cœur, l'autre sa tête. Lequel formerez-vous ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Celui du cœur"
+			},
+			"reaction": {
+				"FR": "On choisit le cœur. L'ermite hoche la tête, songeur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Celui de la tête"
+			},
+			"reaction": {
+				"FR": "On choisit la tête. L'ermite sourit. « Comme vous. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20049,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20050,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20049,
+		"label": "ambient_20049",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "Le jumeau écarté boude et menace de mal tourner. Le ramener, ou le laisser à sa rancune ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le ramène"
+			},
+			"reaction": {
+				"FR": "On rattrape le jumeau boudeur. Il revient, méfiant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse"
+			},
+			"reaction": {
+				"FR": "On le laisse à sa rancune. Un futur problème, peut-être."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20050,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20050,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20050,
+		"label": "ambient_20050",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "Les jumeaux, réconciliés par l'ermite, proposent de servir le fief ensemble. Les enrôler ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les enrôle"
+			},
+			"reaction": {
+				"FR": "On enrôle les jumeaux. Deux esprits vifs au service du fief."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les laisse étudier"
+			},
+			"reaction": {
+				"FR": "On les laisse achever leurs études. Patience."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20051,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20052,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20051,
+		"label": "ambient_20051",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite vous confie qu'il vieillit et cherche un héritier pour sa sagesse. L'un des jumeaux ferait l'affaire."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui en confie un"
+			},
+			"reaction": {
+				"FR": "On confie un jumeau à l'ermite. La sagesse aura une suite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse choisir"
+			},
+			"reaction": {
+				"FR": "On laisse l'ermite choisir son héritier. Il en est touché."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20052,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20052,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20052,
+		"label": "ambient_20052",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "Le gardien de la mémoire veut écrire la chronique des jumeaux et de l'ermite. Une belle histoire pour le fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'encourage"
+			},
+			"reaction": {
+				"FR": "On encourage la chronique. Une légende locale prend forme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On préfère la discrétion. Les légendes attirent l'attention."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20053,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20053,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20053,
+		"label": "ambient_20053",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite, satisfait, vous salue : « Vous gouvernez un monde, magistrat, mais vous savez écouter. C'est plus rare. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On salue l'ermite. Une amitié improbable, mais réelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste humble"
+			},
+			"reaction": {
+				"FR": "On minimise le compliment. L'ermite apprécie d'autant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20054,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20054,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 20400,
 		"label": "planet_ruler_20400",
 		"deck": "planet_ruler",
