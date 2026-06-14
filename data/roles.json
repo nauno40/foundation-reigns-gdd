@@ -205,5 +205,32 @@
 	},
 	"corrupt_inspector": {
 		"title": "Inspecteur corrompu"
+	},
+	"market_fence": {
+		"title": "Fence du marché"
+	},
+	"horse_trader": {
+		"title": "Maquignon"
+	},
+	"horse_groom": {
+		"title": "Palefrenier"
+	},
+	"pleasure_broker": {
+		"title": "Entremetteuse"
+	},
+	"fabric_merchant": {
+		"title": "Drapier"
+	},
+	"kalgan_steward": {
+		"title": "Intendant de Kalgan"
+	},
+	"warlord_champion": {
+		"title": "Le Champion Invaincu"
+	},
+	"dancer_agent": {
+		"title": "Danseuse-agent"
+	},
+	"palace_intriguer": {
+		"title": "Intrigante de palais"
 	}
 }

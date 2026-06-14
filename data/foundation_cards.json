@@ -25552,6 +25552,4133 @@
 		}
 	},
 	{
+		"id": 22400,
+		"label": "infiltration_22400",
+		"deck": "infiltration",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "Kalgan, monde des seigneurs de guerre et des plaisirs. Votre fence vous glisse à l'oreille : « Le grand marché, d'abord. C'est là qu'on apprend tout. »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "visit_changan",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On va au marché"
+			},
+			"reaction": {
+				"FR": "On plonge dans la cohue bariolée du grand marché de Kalgan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On flâne ailleurs"
+			},
+			"reaction": {
+				"FR": "On traîne en ville. Le fence soupire : « On perd du temps. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22401,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22401,
+		"label": "infiltration_22401",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "Deux allées s'ouvrent : celle des fermiers, criarde et grasse, ou celle des écuries, où l'on vend les plus belles montures de la Périphérie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'allée des fermiers"
+			},
+			"reaction": {
+				"FR": "On s'enfonce parmi les étals de victuailles."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'allée des écuries"
+			},
+			"reaction": {
+				"FR": "On gagne les écuries, parfum de cuir et de bête."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_farmer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_stable",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22402,
+		"label": "infiltration_22402",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "Le fence vous oriente : « Les écuries, ou le quartier des plaisirs ? Selon ce que vous cherchez à apprendre. »"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "market_visited",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Les écuries"
+			},
+			"reaction": {
+				"FR": "On retourne flairer du côté des montures."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le quartier des plaisirs"
+			},
+			"reaction": {
+				"FR": "On dérive vers les lanternes du quartier des plaisirs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_stable",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_entertainment",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22403,
+		"label": "infiltration_22403",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "« Plaisirs ou étoffes ? » murmure le fence. « Les deux délient les langues, à leur façon. »"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "market_visited",
+				"op": "equal",
+				"value": 2
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le quartier des plaisirs"
+			},
+			"reaction": {
+				"FR": "On choisit les lanternes et la musique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le marché aux étoffes"
+			},
+			"reaction": {
+				"FR": "On choisit les soieries et les marchands bavards."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_entertainment",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_fabric",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22404,
+		"label": "infiltration_22404",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "« Les étoffes, ou les fermiers ? » Le fence connaît chaque recoin de Kalgan."
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "market_visited",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le marché aux étoffes"
+			},
+			"reaction": {
+				"FR": "On flâne entre les rouleaux de soie chatoyante."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'allée des fermiers"
+			},
+			"reaction": {
+				"FR": "On revient vers les étals grouillants des fermiers."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_fabric",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_farmer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22405,
+		"label": "infiltration_22405",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "« Fermiers ou écuries ? » Le marché tourne, et vous avec."
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "below",
+				"value": 2
+			},
+			{
+				"variable": "market_visited",
+				"op": "equal",
+				"value": 4
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "L'allée des fermiers"
+			},
+			"reaction": {
+				"FR": "On replonge dans la criée des fermiers."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'allée des écuries"
+			},
+			"reaction": {
+				"FR": "On retourne aux écuries, à l'odeur du cuir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_farmer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_stable",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22406,
+		"label": "infiltration_22406",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": 2,
+		"hidden": false,
+		"bearer": "role:market_fence",
+		"question": {
+			"FR": "Costume de scène sur le dos, vous passez désormais pour une artiste ambulante. « Le quartier des plaisirs vous tend les bras », ricane le fence."
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y va déguisé"
+			},
+			"reaction": {
+				"FR": "Sous le déguisement, on gagne le quartier des plaisirs. Personne ne vous voit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On retourne au marché"
+			},
+			"reaction": {
+				"FR": "On replonge dans le marché, masque en place."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_entertainment",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22401,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22407,
+		"label": "infiltration_22407",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial, en mission lui aussi, vous reconnaît malgré le costume. « Toi, ici ? Sous ce déguisement ridicule ? »"
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue le rôle"
+			},
+			"reaction": {
+				"FR": "On feint l'artiste à la perfection. Il doute de l'avoir reconnu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On file"
+			},
+			"reaction": {
+				"FR": "On s'éclipse avant qu'il n'ameute la foule."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22408,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_stable",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22408,
+		"label": "infiltration_22408",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial baisse la voix : « Si tu cherches ce que je crois, méfie-toi. Les murs de Kalgan ont des oreilles dorées. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.mole_noise",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le sonde"
+			},
+			"reaction": {
+				"FR": "On lui tire quelques renseignements en échange d'un silence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se tait"
+			},
+			"reaction": {
+				"FR": "On garde le silence. Mieux vaut ne rien lui devoir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22409,
+		"label": "infiltration_22409",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "Le déguisement d'artiste vous ouvre des portes closes. L'envoyé impérial s'en amuse : « Tu apprends vite, l'espion. »"
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On en profite"
+			},
+			"reaction": {
+				"FR": "On exploite la couverture pour fureter plus loin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On n'abuse pas du déguisement. La prudence sauve les espions."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22410,
+		"label": "infiltration_22410",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_trader",
+		"question": {
+			"FR": "Aux écuries, le maquignon vante un étalon de guerre. « Une bête digne d'un seigneur. Ou de l'espion qui veut l'approcher. »"
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.honeytrap_horses_neighing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "market_visited",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On marchande le cheval"
+			},
+			"reaction": {
+				"FR": "On entame le marchandage. Un cheval ouvre bien des conversations."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On observe seulement"
+			},
+			"reaction": {
+				"FR": "On observe sans acheter. Le maquignon flaire le curieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22411,
+		"label": "infiltration_22411",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_trader",
+		"question": {
+			"FR": "Le maquignon, voyant votre costume d'artiste, baisse ses prix — et sa garde. « Pour une jolie voix, un rabais. »"
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On en joue"
+			},
+			"reaction": {
+				"FR": "On charme le maquignon. Il devient bavard comme une fontaine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste de marbre"
+			},
+			"reaction": {
+				"FR": "On garde ses distances. Le maquignon se ferme un peu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22412,
+		"label": "infiltration_22412",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_groom",
+		"question": {
+			"FR": "Le palefrenier vous propose le fameux étalon écarlate. « Le plus rapide de Kalgan. Et le plus cher. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.honeytrap_horses_neighing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "animal",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'achète"
+			},
+			"reaction": {
+				"FR": "On rafle l'étalon écarlate. Ruineux — mais quel laissez-passer."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On marchande encore"
+			},
+			"reaction": {
+				"FR": "On continue de marchander. Le palefrenier s'agace."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "horse",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_2",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22413,
+		"label": "infiltration_22413",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_groom",
+		"question": {
+			"FR": "Le palefrenier hésite à conclure. Un geste de bonne volonté le déciderait."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On offre un présent"
+			},
+			"reaction": {
+				"FR": "Un petit cadeau, et l'affaire est faite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tente l'intimidation"
+			},
+			"reaction": {
+				"FR": "On hausse le ton. Risqué dans un monde de spadassins."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22414,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22414,
+		"label": "infiltration_22414",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_trader",
+		"question": {
+			"FR": "Le maquignon propose un second cheval, plus modeste mais sûr."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le prend aussi"
+			},
+			"reaction": {
+				"FR": "On acquiert la monture de réserve. Toujours utile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se contente d'un"
+			},
+			"reaction": {
+				"FR": "On garde l'or. Un seul cheval suffira."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "horse",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_3",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22415,
+		"label": "infiltration_22415",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_groom",
+		"question": {
+			"FR": "Le palefrenier vous montre une bête de bataille hors de prix. « Pour qui veut impressionner un seigneur de guerre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'achète"
+			},
+			"reaction": {
+				"FR": "On s'offre la bête de guerre. La bourse pleure, l'effet sera grand."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline. Trop voyant, trop coûteux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "horse",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_4",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22416,
+		"label": "infiltration_22416",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:horse_trader",
+		"question": {
+			"FR": "Le maquignon, tout sourire, vous raccompagne. « Repassez, l'artiste. Mes chevaux adorent les belles voix. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reviendra"
+			},
+			"reaction": {
+				"FR": "On promet de repasser. Une source au marché, désormais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On coupe court"
+			},
+			"reaction": {
+				"FR": "On écourte les adieux. Le travail attend."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_horse_market_1",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "neutral",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22417,
+		"label": "infiltration_22417",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "Au quartier des plaisirs, une entremetteuse vous jauge. « Du talent ? Montrez-le. Ici, on ne nourrit pas les bouches inutiles. »"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On achète sa faveur"
+			},
+			"reaction": {
+				"FR": "On délie sa bourse. L'entremetteuse devient une alliée précieuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse de payer"
+			},
+			"reaction": {
+				"FR": "On refuse. « Alors ce n'est pas pour le plaisir que vous venez. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -13,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_not_for_fun",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22418,
+		"label": "infiltration_22418",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "L'entremetteuse, déjà à demi gagnée, vous oriente vers le marché aux étoffes pour parfaire votre couverture d'artiste."
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit le conseil"
+			},
+			"reaction": {
+				"FR": "On file aux étoffes compléter le déguisement."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste au quartier"
+			},
+			"reaction": {
+				"FR": "On s'attarde au quartier des plaisirs. Elle hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_market_fabric",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22419,
+		"label": "infiltration_22419",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "L'entremetteuse vous confie un secret de Kalgan en échange d'une discrétion absolue."
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "above",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On jure le silence"
+			},
+			"reaction": {
+				"FR": "On jure. Elle livre un nom — celui qui mène au champion."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite"
+			},
+			"reaction": {
+				"FR": "On hésite à promettre. Elle se referme, méfiante."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22420,
+		"label": "infiltration_22420",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "Le quartier des plaisirs n'est pas qu'un décor : c'est un nid d'oreilles. Faut-il y dépenser pour acheter des langues ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On délie les bourses"
+			},
+			"reaction": {
+				"FR": "On paie, et les langues se délient. Renseignement à foison."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On écoute gratis"
+			},
+			"reaction": {
+				"FR": "On écoute aux portes sans payer. Moins sûr, moins cher."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22421,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22421,
+		"label": "infiltration_22421",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "Une chanteuse éméchée laisse échapper que le seigneur tyran de Kalgan craint une seule personne : son propre champion."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On creuse"
+			},
+			"reaction": {
+				"FR": "On la fait parler davantage. Le fil se dévide."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On note et on s'éloigne"
+			},
+			"reaction": {
+				"FR": "On retient l'info et on s'efface. Discrétion d'abord."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22422,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22422,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22422,
+		"label": "infiltration_22422",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "On murmure que le champion et le tyran se partagent les mêmes plaisirs — et les mêmes jalousies."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exploite la jalousie"
+			},
+			"reaction": {
+				"FR": "On comprend où frapper : entre le maître et son chien de garde."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sceptique"
+			},
+			"reaction": {
+				"FR": "On doute des ragots de taverne. Prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22423,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22423,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22423,
+		"label": "infiltration_22423",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:pleasure_broker",
+		"question": {
+			"FR": "Le tableau se précise : un piège de miel, bien tendu, pourrait dresser le champion contre le tyran. Mais il faut le bon appât."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On prépare le piège"
+			},
+			"reaction": {
+				"FR": "On échafaude l'opération de séduction. Audacieux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche une autre voie"
+			},
+			"reaction": {
+				"FR": "On envisage d'autres leviers. Le miel n'est pas la seule arme."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22424,
+		"label": "infiltration_22424",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fabric_merchant",
+		"question": {
+			"FR": "Au marché aux étoffes, le drapier déploie des soies dignes d'une cour. « Pour une artiste, ou pour appâter un seigneur ? »"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On achète la soie"
+			},
+			"reaction": {
+				"FR": "On acquiert l'étoffe somptueuse. L'appât prend forme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'interroge"
+			},
+			"reaction": {
+				"FR": "On le questionne sur Yangzhou plutôt que d'acheter."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ask_about_yangzhou",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 22425,
+		"label": "infiltration_22425",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fabric_merchant",
+		"question": {
+			"FR": "Le drapier reconnaît le costume d'artiste sous lequel vous vous cachez. « Joli déguisement. Trop joli pour une simple chanteuse. »"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 1
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "market_visited",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On endort sa curiosité d'un sourire et d'une pièce."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On renforce le déguisement"
+			},
+			"reaction": {
+				"FR": "On lui achète de quoi parfaire la couverture. Maligne dépense."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "dancer_costume",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "honey_trap",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22426,
+		"label": "infiltration_22426",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fabric_merchant",
+		"question": {
+			"FR": "Le drapier, en confiance, propose des étoffes assez fines pour séduire un champion."
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les choisit"
+			},
+			"reaction": {
+				"FR": "On sélectionne les soies de séduction. Le piège s'habille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'interroge sur Yangzhou"
+			},
+			"reaction": {
+				"FR": "On détourne la conversation vers Yangzhou et ses secrets."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_ask_about_yangzhou",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "curious"
+		}
+	},
+	{
+		"id": 22427,
+		"label": "infiltration_22427",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fabric_merchant",
+		"question": {
+			"FR": "Le drapier baisse la voix : « Yangzhou ? On y trouve celles qui savent tendre un piège de miel mieux que personne. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "visit_yangzhou",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On note la piste"
+			},
+			"reaction": {
+				"FR": "On grave Yangzhou en mémoire. L'agent idéal s'y cache, peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur Kalgan"
+			},
+			"reaction": {
+				"FR": "On préfère chercher l'appât sur place. Le temps presse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22428,
+		"label": "infiltration_22428",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:kalgan_steward",
+		"question": {
+			"FR": "L'intendant de Kalgan, pompeux, vous accueille comme une artiste de renom. « Le seigneur apprécie le spectacle. Saurez-vous le divertir ? »"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le flatte"
+			},
+			"reaction": {
+				"FR": "On flatte l'intendant. Les portes du palais s'entrouvrent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste digne"
+			},
+			"reaction": {
+				"FR": "On garde sa dignité d'artiste. L'intendant apprécie le mystère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22429,
+		"label": "infiltration_22429",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge de Kalgan vous toise, soupçonneux. « Une artiste qui pose tant de questions, c'est rare. Qui es-tu vraiment ? »"
+		},
+		"conditions": [
+			{
+				"variable": "lv_bu",
+				"op": "equal",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On désamorce"
+			},
+			"reaction": {
+				"FR": "On désamorce le soupçon d'une pirouette. Il relâche sa garde."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le défie"
+			},
+			"reaction": {
+				"FR": "On soutient son regard, glaciale. Il recule, troublé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22430,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22430,
+		"label": "infiltration_22430",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion, déjà sur place, vous reconnaît. « Le champion s'appelle l'Invaincu. Et il mérite son nom. Approche-le avec soin. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "lv_bu",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit son conseil"
+			},
+			"reaction": {
+				"FR": "On note tout. L'Invaincu sera la clé du piège."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On improvise"
+			},
+			"reaction": {
+				"FR": "On préfère improviser. Le maître-espion lève les yeux au ciel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22431,
+		"label": "infiltration_22431",
+		"deck": "infiltration",
+		"weight": 10000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur vous propose de vous présenter au champion sous votre couverture d'artiste."
+		},
+		"conditions": [
+			{
+				"variable": "seen_22429",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte la présentation"
+			},
+			"reaction": {
+				"FR": "On se prépare à rencontrer l'Invaincu en chair et en armure."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On veut l'observer d'abord"
+			},
+			"reaction": {
+				"FR": "On préfère l'observer de loin avant de l'aborder."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_meet_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22432,
+		"label": "infiltration_22432",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:warlord_champion",
+		"question": {
+			"FR": "L'Invaincu surgit, immense, la lance à la main. Sous votre déguisement, il ne voit qu'une artiste tremblante."
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "lv_bu",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue l'artiste"
+			},
+			"reaction": {
+				"FR": "On chante, on s'incline. Le géant baisse sa lance, charmé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le provoque"
+			},
+			"reaction": {
+				"FR": "On le provoque imprudemment. La lance se relève. Mauvais calcul."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "battle.meet_lv_bu",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_lv_bu_the_unrivaled",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22433,
+		"label": "infiltration_22433",
+		"deck": "infiltration",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:warlord_champion",
+		"question": {
+			"FR": "L'Invaincu, intrigué par votre aplomb, engage la conversation. « Tu ne trembles pas devant moi. Curieux, pour une danseuse. »"
+		},
+		"conditions": [
+			{
+				"variable": "dancer_costume",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "lv_bu",
+				"intValue": 3,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'intrigue davantage"
+			},
+			"reaction": {
+				"FR": "On cultive le mystère. Le champion en redemande."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste modeste"
+			},
+			"reaction": {
+				"FR": "On joue la modestie. Il vous trouve rafraîchissante."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_is_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "lv_bu",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_is_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22434,
+		"label": "infiltration_22434",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:warlord_champion",
+		"question": {
+			"FR": "On vous résume la légende de l'Invaincu : trois fois il a changé de maître, trois fois il a tué le précédent. Un homme sans loyauté — donc retournable."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On voit l'opportunité"
+			},
+			"reaction": {
+				"FR": "On comprend : un tel homme se retourne comme un gant. Avec le bon appât."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On voit le danger"
+			},
+			"reaction": {
+				"FR": "On mesure le risque : qui trahit trois maîtres en trahira un quatrième."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22435,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22435,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22435,
+		"label": "infiltration_22435",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le maître-espion conclut : « L'Invaincu est l'épée du tyran. Brisez le lien, et le tyran tombe. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On vise le lien"
+			},
+			"reaction": {
+				"FR": "On décide de frapper le lien maître-champion. Tout l'enjeu est là."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On vise le tyran"
+			},
+			"reaction": {
+				"FR": "On songe à frapper le tyran directement. Plus risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22436,
+		"label": "infiltration_22436",
+		"deck": "infiltration",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "La danseuse-agent que vous avez recrutée vous rejoint enfin. « Le piège de miel ? Je suis votre arme, Orateur. Dites-moi qui séduire. »"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 3
+			},
+			{
+				"variable": "lv_bu",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "kalgan"
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 4,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la briefe"
+			},
+			"reaction": {
+				"FR": "On lui expose le plan : séduire et le tyran, et son champion."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la met à l'épreuve"
+			},
+			"reaction": {
+				"FR": "On la teste d'abord. Elle relève le défi sans ciller."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22437,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22437,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22437,
+		"label": "infiltration_22437",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "L'intrigante de palais évalue la danseuse-agent. « Belle, oui. Mais sait-elle jouer la comédie jusqu'au bout ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la défend"
+			},
+			"reaction": {
+				"FR": "On vante son talent. L'intrigante reste à convaincre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la laisse prouver"
+			},
+			"reaction": {
+				"FR": "On laisse la danseuse faire ses preuves. Elle éblouit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22438,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22438,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22438,
+		"label": "infiltration_22438",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "L'intrigante pose ses conditions pour faciliter l'opération au palais."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte ses termes"
+			},
+			"reaction": {
+				"FR": "On scelle l'accord avec l'intrigante. Une complice au cœur du palais."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On négocie"
+			},
+			"reaction": {
+				"FR": "On marchande ses conditions. Elle plisse les yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22439,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22439,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22439,
+		"label": "infiltration_22439",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "La danseuse-agent répète son numéro de séduction devant vous. La trouvez-vous prête ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la juge prête"
+			},
+			"reaction": {
+				"FR": "On valide sa prestation. Le piège peut se tendre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la corrige"
+			},
+			"reaction": {
+				"FR": "On peaufine son jeu. La moindre fausse note la tuerait."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22440,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bad_dancer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22440,
+		"label": "infiltration_22440",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact s'inquiète : « Si elle flanche au palais, c'est sa tête — et peut-être la vôtre. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la rassure"
+			},
+			"reaction": {
+				"FR": "On rassure la danseuse. Sa confiance se raffermit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la prépare au pire"
+			},
+			"reaction": {
+				"FR": "On lui apprend les issues de secours. Froid, mais prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22441,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bad_dancer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22441,
+		"label": "infiltration_22441",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "L'intrigante teste encore la danseuse-agent par une question piège."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la laisse répondre"
+			},
+			"reaction": {
+				"FR": "La danseuse répond avec aplomb. L'intrigante est conquise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On répond pour elle"
+			},
+			"reaction": {
+				"FR": "On vole à son secours. L'intrigante note la faiblesse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22442,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bad_dancer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22442,
+		"label": "infiltration_22442",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact vous prend à part : « Cette danseuse joue peut-être un jeu plus profond que le nôtre. Méfiance. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui fait confiance"
+			},
+			"reaction": {
+				"FR": "On choisit de croire la danseuse. Pari sur la loyauté."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la surveille"
+			},
+			"reaction": {
+				"FR": "On la fait surveiller discrètement. On n'est jamais trop prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bad_dancer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22443,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22443,
+		"label": "infiltration_22443",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Dernière répétition. L'intrigante donne son verdict sur l'aptitude de l'agent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On force la décision"
+			},
+			"reaction": {
+				"FR": "On presse l'intrigante de conclure. Elle cède : la danseuse est prête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On patiente"
+			},
+			"reaction": {
+				"FR": "On laisse l'intrigante prendre son temps. La perfection se gagne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22444,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bad_dancer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22444,
+		"label": "infiltration_22444",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'intrigante révèle enfin la faille du tyran : « Sa vanité. Flattez-la, et il s'ouvrira comme une huître. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On vise la vanité"
+			},
+			"reaction": {
+				"FR": "On bâtit le piège autour de l'orgueil du tyran. Brillant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche d'autres failles"
+			},
+			"reaction": {
+				"FR": "On creuse encore. Un homme a plus d'une faiblesse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_what_weakness",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22445,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22445,
+		"label": "infiltration_22445",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "L'intrigante précise : la même danseuse devra séduire le maître ET le champion, et les dresser l'un contre l'autre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On valide le double jeu"
+			},
+			"reaction": {
+				"FR": "On approuve le double piège. Audacieux jusqu'à la folie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On juge cela trop risqué"
+			},
+			"reaction": {
+				"FR": "On hésite devant un plan si périlleux. L'intrigante insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_what_weakness",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22446,
+		"label": "infiltration_22446",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "On débat de la faiblesse exacte à exploiter chez le tyran."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Sa jalousie"
+			},
+			"reaction": {
+				"FR": "On choisit d'attiser sa jalousie. Le poison le plus sûr."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Son orgueil"
+			},
+			"reaction": {
+				"FR": "On choisit de flatter son orgueil. Plus lent, plus contrôlable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22447,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_what_weakness",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22447,
+		"label": "infiltration_22447",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "L'intrigante hoche la tête : « La faiblesse est trouvée. Reste à savoir qui osera la danseuse au cœur du palais. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la confirme"
+			},
+			"reaction": {
+				"FR": "On confirme la cible. Le plan se verrouille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On réexamine"
+			},
+			"reaction": {
+				"FR": "On revoit le plan une dernière fois. Rien ne doit clocher."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_what_weakness",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22448,
+		"label": "infiltration_22448",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "On en vient à la convoitise du tyran pour les belles. Faut-il l'appâter par là ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exploite sa convoitise"
+			},
+			"reaction": {
+				"FR": "On bâtit le piège sur sa convoitise. L'appât est parfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On répugne à ce procédé"
+			},
+			"reaction": {
+				"FR": "On rechigne. Le maître-espion vous rappelle l'enjeu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22449,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_dong_zhuo_lust",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22449,
+		"label": "infiltration_22449",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "La danseuse-agent accepte sa mission les yeux ouverts. « Je connais le prix, Orateur. Je le paierai. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la remercie"
+			},
+			"reaction": {
+				"FR": "On salue son courage. Elle sourit, déjà ailleurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On lui offre une porte de sortie"
+			},
+			"reaction": {
+				"FR": "On lui propose de renoncer. Elle refuse, fière."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22450,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22450,
+		"label": "infiltration_22450",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Tout est prêt. La danseuse va entrer au palais du tyran. Un dernier conseil ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Garder la tête froide"
+			},
+			"reaction": {
+				"FR": "« Surtout, ne tombez pas dans votre propre piège. »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Suivre son instinct"
+			},
+			"reaction": {
+				"FR": "« Fiez-vous à votre instinct. Il vous a menée jusqu'ici. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22451,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22451,
+		"label": "infiltration_22451",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "La danseuse-agent franchit les portes du palais. Le piège de miel est lancé. Reste à savoir si elle tiendra son rôle."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On guette de loin"
+			},
+			"reaction": {
+				"FR": "On surveille l'opération depuis l'ombre, le souffle court."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la laisse seule"
+			},
+			"reaction": {
+				"FR": "On la laisse opérer seule. Lui faire confiance, ou la perdre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22452,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_diaochan_volunteer",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22452,
+		"label": "infiltration_22452",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Premiers échos du palais : le tyran est sous le charme. Mais le champion aussi commence à tourner autour de la danseuse."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On attise les deux"
+			},
+			"reaction": {
+				"FR": "On souffle sur les braises des deux côtés. Le jeu se tend."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On freine"
+			},
+			"reaction": {
+				"FR": "On ralentit le double jeu, de peur qu'il ne s'embrase trop vite."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22453,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22453,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22453,
+		"label": "infiltration_22453",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "La danseuse rapporte que le champion, l'Invaincu, est tombé éperdument amoureux d'elle. Le piège mord."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "the_honey_trap",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "dancer_costume",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "honey_trap",
+				"intValue": 5,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On exploite l'amour"
+			},
+			"reaction": {
+				"FR": "On pousse l'Invaincu à se croire trahi par son maître. Diabolique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tempère"
+			},
+			"reaction": {
+				"FR": "On modère le rythme. Un faux pas, et tout s'effondre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_diaochan_met_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_diaochan_met_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22454,
+		"label": "infiltration_22454",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Une rumeur affreuse : la danseuse aurait éveillé les soupçons. Le piège vacille."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la couvre"
+			},
+			"reaction": {
+				"FR": "On envoie une diversion couvrir la danseuse. In extremis."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On se prépare au pire"
+			},
+			"reaction": {
+				"FR": "On prépare l'exfiltration. Le piège pourrait se refermer sur nous."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22455,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "afraid",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 22455,
+		"label": "infiltration_22455",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "La danseuse-agent improvise pour sauver sa couverture au palais."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la soutient"
+			},
+			"reaction": {
+				"FR": "On appuie son improvisation. Elle s'en sort de justesse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la laisse se débrouiller"
+			},
+			"reaction": {
+				"FR": "On la laisse seule face au danger. Cruel, mais nécessaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22456,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "desperate"
+		}
+	},
+	{
+		"id": 22456,
+		"label": "infiltration_22456",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Le moment est venu de décider qui orchestrera la phase finale du piège au cœur du palais."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On confie tout à la danseuse"
+			},
+			"reaction": {
+				"FR": "On laisse la danseuse mener seule l'estocade. Sa loyauté décidera de tout."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On désigne un complice"
+			},
+			"reaction": {
+				"FR": "On lui adjoint un complice du palais. Plus sûr, plus visible."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_can_set_honey_trap",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_diaochan_volunteer",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 22457,
+		"label": "infiltration_22457",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "L'intrigante introduit la danseuse dans les appartements privés du tyran. Le piège entre dans sa phase ultime."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On donne le signal"
+			},
+			"reaction": {
+				"FR": "On lance la phase finale. Tout se jouera cette nuit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend encore"
+			},
+			"reaction": {
+				"FR": "On retient le signal. Un battement de plus, pour être sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_diaochan_into_palace",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_diaochan_into_palace",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22458,
+		"label": "infiltration_22458",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "Le tyran et l'Invaincu se disputent désormais ouvertement les faveurs de la danseuse. La haine couve entre le maître et son champion."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 6,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On envenime"
+			},
+			"reaction": {
+				"FR": "On glisse les mots qu'il faut. La rupture devient inévitable."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse mûrir"
+			},
+			"reaction": {
+				"FR": "On laisse la jalousie faire son œuvre seule. Patience vénéneuse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22459,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22459,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22459,
+		"label": "infiltration_22459",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "Tout est en place pour le choc final entre le tyran et l'Invaincu. La danseuse n'attend plus que votre ordre."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On déclenche le choc"
+			},
+			"reaction": {
+				"FR": "On lâche l'étincelle. Le champion se dresse contre son maître."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le destin agir"
+			},
+			"reaction": {
+				"FR": "On laisse les passions exploser d'elles-mêmes. Le piège est parfait."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_clash_dong_zhuo_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_clash_dong_zhuo_lv_bu",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22460,
+		"label": "infiltration_22460",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Au palais, la tension est à son comble. Un mot de trop, d'un côté ou de l'autre, et le sang coulera."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On souffle le mot fatal"
+			},
+			"reaction": {
+				"FR": "On glisse l'ultime calomnie. La poudrière n'attend qu'une flamme."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On retient son souffle"
+			},
+			"reaction": {
+				"FR": "On se tait et on attend. Le piège a sa propre logique, maintenant."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "angry",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 22461,
+		"label": "infiltration_22461",
+		"deck": "infiltration",
+		"weight": 4000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "L'Invaincu, persuadé d'être trahi, dresse sa lance contre le tyran. Votre contact murmure : « Voilà. Le maître va mourir de la main de son chien. »"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 6,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure le triomphe"
+			},
+			"reaction": {
+				"FR": "On contemple l'œuvre du piège. Le tyran de Kalgan est perdu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On prépare la suite"
+			},
+			"reaction": {
+				"FR": "On songe déjà à l'après. Un tyran tombé laisse un trône vide."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22462,
+		"label": "infiltration_22462",
+		"deck": "infiltration",
+		"weight": 5000,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:dancer_agent",
+		"question": {
+			"FR": "Le champion frappe. Le tyran de Kalgan s'effondre, trahi par sa propre épée. Le piège de miel a parfaitement fonctionné. Que faire de la danseuse qui a tout risqué ?"
+		},
+		"conditions": [
+			{
+				"variable": "honey_trap",
+				"op": "equal",
+				"value": 6
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "honey_trap",
+				"intValue": 9,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "the_honey_trap",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'exfiltre en héroïne"
+			},
+			"reaction": {
+				"FR": "On arrache la danseuse au palais. Elle a sauvé bien des mondes — et survécu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On efface ses traces"
+			},
+			"reaction": {
+				"FR": "On efface toute trace de l'agent. Cruel calcul d'espion."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "deck_infiltration",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22463,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 22463,
+		"label": "infiltration_22463",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:palace_intriguer",
+		"question": {
+			"FR": "L'opération réussie, l'intrigante de palais réclame sa part du marché."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_infiltration",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la paie"
+			},
+			"reaction": {
+				"FR": "On honore l'accord. Une alliée pour les coups futurs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la réduit au silence"
+			},
+			"reaction": {
+				"FR": "On choisit le silence définitif. Sûr — et glaçant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 22464,
+		"label": "infiltration_22464",
+		"deck": "infiltration",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Le piège n'a pas tout à fait abouti, mais le lien entre le tyran et son champion est rompu. Le maître-espion juge l'opération concluante."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			},
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 5
+			},
+			{
+				"variable": "honey_trap",
+				"op": "below",
+				"value": 6
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On clôt l'opération"
+			},
+			"reaction": {
+				"FR": "On replie le dispositif. Kalgan ne sera plus jamais sûr pour le tyran."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On pousse l'avantage"
+			},
+			"reaction": {
+				"FR": "On exploite la brèche jusqu'au bout. Gourmand, mais payant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22465,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 22465,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 22465,
+		"label": "infiltration_22465",
+		"deck": "infiltration",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Quoi qu'il advienne, vous quittez Kalgan en ayant semé la discorde au sommet. Le maître-espion vous salue : « Du beau travail, Orateur. »"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "deck_infiltration",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure"
+			},
+			"reaction": {
+				"FR": "On accepte l'hommage. Un seigneur de guerre de moins, sans une bataille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste humble"
+			},
+			"reaction": {
+				"FR": "On minimise. Un Orateur ne se vante pas de ses ombres."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 22800,
 		"label": "terminus_defense_22800",
 		"deck": "terminus_defense",
