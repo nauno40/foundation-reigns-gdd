@@ -57,7 +57,8 @@ func _build_stats_grid() -> void:
 		_stat_values[label] = v
 		_stats_grid.add_child(box)
 
-func show_death(ctx: Context, death_type: String, cover_name: String) -> void:
+func show_death(ctx: Context, death_type: String, cover_name: String,
+		meta: Dictionary = {}) -> void:
 	var year = ctx.get_var("year", 1)
 	var y_start = ctx.get_var("y_start", 1)
 	var age = ctx.get_var("age", 50)
@@ -65,12 +66,20 @@ func show_death(ctx: Context, death_type: String, cover_name: String) -> void:
 
 	_cause.text = ThemeColors.death_label(death_type).to_upper()
 	_speaker.text = "Orateur — " + str(cover_name)
-	_subtitle.text = "%s · %d ans · Règne couvert An %d → An %d" % [cover_name, age, y_start, year]
+	# Sous-titre : couverture + rang de carrière (méta-progression persistante).
+	var sub = "%s · %d ans · Règne couvert An %d → An %d" % [cover_name, age, y_start, year]
+	if not meta.is_empty():
+		sub += "\nRang : %s — %d pts cumulés" % [meta.get("rank_name", "Initié I"), int(meta.get("total", 0))]
+		if meta.get("ranked_up", false):
+			sub += "  ▲ promotion !"
+	_subtitle.text = sub
 	_seldon_text.text = "« " + ThemeColors.death_message(death_type) + " »"
 
+	# Score du règne : barème GDD (accomplissements, pas la durée).
+	var reign_score = int(meta.get("score", 0))
 	_stat_values["DÉCISIONS PRISES"].text = str(turns)
 	_stat_values["ANNÉES COUVERTES"].text = "%d ans" % max(year - y_start, 0)
-	_stat_values["SCORE DU RÈGNE"].text = "%d pts" % (60 + turns * 8)
+	_stat_values["SCORE DU RÈGNE"].text = "%d pts" % reign_score
 	_stat_values["PLAN DE SELDON"].text = "dévié de %.1f %%" % randf_range(2.0, 8.0)
 
 	_build_snapshot(ctx)

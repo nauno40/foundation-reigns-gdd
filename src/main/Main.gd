@@ -9,6 +9,7 @@ var _ctx: Context
 var _model: NarrativeModel
 var _legitimacy: LegitimacySystem
 var _respawn: RespawnSystem
+var _meta: MetaProgression
 var _save: SaveSystem
 var _seldon: SeldonSystem
 
@@ -31,6 +32,8 @@ func _ready() -> void:
 	_legitimacy = LegitimacySystem.new(_ctx)
 	_respawn = RespawnSystem.new(_ctx)
 	_seldon = SeldonSystem.new(_game_data, _ctx)
+	_meta = MetaProgression.new()
+	_meta.load()
 
 	if _save.has_save():
 		_save.load(_ctx)
@@ -210,7 +213,11 @@ func _should_die_naturally(age: int) -> bool:
 func _show_death_screen(death_type: String) -> void:
 	var cover = _ctx.get_var("cover_name", "Inconnu")
 	_ctx.set_var("last_death_type", death_type, true)
-	_death_screen.show_death(_ctx, death_type, cover)
+	# Méta-progression : on enregistre le règne (score → expérience → rang)
+	# avant le respawn, sur le type de mort canonique.
+	var meta_result = _meta.record_reign(
+		_ctx, RespawnSystem.normalize_death_type(death_type))
+	_death_screen.show_death(_ctx, death_type, cover, meta_result)
 	_death_screen.show()
 	_card_screen.hide()
 
