@@ -202,3 +202,30 @@ func test_mentalic_persists_across_reign():
 	assert_eq(int(ctx.get_var("mentalic", 0)), 5)
 	ctx.initialize_new_reign()  # mort → nouveau règne
 	assert_eq(int(ctx.get_var("mentalic", 0)), 5, "la maîtrise mentalique survit au règne (toKeep)")
+
+# --- Système de menace dérivé (15/06/2026) ---
+
+func test_player_threat_derived_from_power_and_exposure():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("legitimacy", 50)       # exposition : (100-50)/12 = 4
+	ctx.set_var("mentalic", 49, true)   # +1 → 50 ; 50/5 = 10
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("player:threat", 0)), 14,
+		"player:threat = mentalic/5 + (100-legitimacy)/12")
+
+func test_rival_threat_set_when_faction_hostile():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("relation_empire", -30)
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("cao_cao:threat", 0)), 1,
+		"un rival impérial devient menaçant quand l'Empire est hostile")
+
+func test_rival_threat_absent_when_faction_neutral():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("relation_empire", 0)
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("cao_cao:threat", 0)), 0,
+		"pas de menace rivale tant que la faction n'est pas hostile")

@@ -4,6 +4,20 @@ const RESOURCES = ["military", "religion", "commerce", "politics"]
 const RESOURCE_DEFAULT = 50
 const LEGITIMACY_DEFAULT = 100
 
+# Menace perçue par faction (héritage du système de factions du jeu de base) :
+# chaque antagoniste récurrent est rattaché à une faction Fondation ; sa menace
+# s'éveille quand cette faction devient hostile.
+const RIVAL_FACTION = {
+	"cao_cao": "empire", "cao_pi": "empire", "cao_rui": "empire",
+	"sima_yi": "empire", "liu_biao": "military_kingdoms",
+	"yuan_shao": "military_kingdoms", "gongsun_zan": "military_kingdoms",
+	"ma_teng": "military_kingdoms", "lv_bu": "kalgan",
+	"zhang_lu": "church_of_science", "yuan_shu": "oligarchs",
+	"sun_ce": "oligarchs", "sun_quan": "oligarchs",
+	"liu_bei": "autonomous_league", "liu_zhang": "neotrantor",
+	"liu_shan": "neotrantor",
+}
+
 var _vars: Dictionary = {}
 var _keep_flags: Dictionary = {}
 
@@ -58,6 +72,17 @@ func advance_turn() -> void:
 	_vars["synaptic"] = mentalic                  # 0..100 : prouesses rares
 	_vars["strength"] = int(mentalic / 10.0)      # 0..10  : échelle des rangs
 	_vars["mentalic_strength"] = int(mentalic / 10.0)
+
+	# Menace perçue (jauge dérivée, système de factions du jeu de base).
+	# player:threat monte avec la puissance mentalique et l'exposition (faible
+	# légitimité = l'Empire vous remarque) — échelle d'avertissements 0..30.
+	var threat: int = int(mentalic / 5.0) \
+		+ int((100 - int(get_var("legitimacy", 100))) / 12.0)
+	_vars["player:threat"] = clampi(threat, 0, 30)
+	# Chaque rival devient menaçant (=1) quand sa faction passe hostile.
+	for rival in RIVAL_FACTION:
+		if int(get_var("relation_" + RIVAL_FACTION[rival], 0)) <= -25:
+			_vars[rival + ":threat"] = 1
 
 func apply_cover(cover: Dictionary) -> void:
 	var resource: String = cover.get("bonus_resource", "")

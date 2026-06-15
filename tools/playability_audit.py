@@ -52,6 +52,8 @@ for c in cards:
 def is_satisfiable_var(v):
     if v in ENGINE_VARS or v in settable:
         return True
+    if v.endswith(":threat"):  # jauge de menace dérivée (Context.advance_turn)
+        return True
     return any(v.startswith(p) for p in ENGINE_PREFIXES)
 
 
