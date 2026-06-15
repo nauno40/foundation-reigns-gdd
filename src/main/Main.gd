@@ -83,6 +83,14 @@ func _dev_parse_args() -> void:
 					var deck = args[i + 1]
 					_ctx.set_var("dev_deck", deck)
 					print("DEV: deck filtré sur '%s'" % deck)
+			"--difficulty":
+				if i + 1 < args.size():
+					var diff = args[i + 1]
+					if Context.DIFFICULTY_MULT.has(diff):
+						_ctx.set_var("difficulty", diff, true)
+						print("DEV: difficulté '%s' (×%s)" % [diff, Context.DIFFICULTY_MULT[diff]])
+					else:
+						push_warning("Main: difficulté inconnue '%s' (doux|normal|brutal)" % diff)
 
 func _pick_cover(year: int) -> Dictionary:
 	var era_id = EraUtils.get_era_for_year(year)

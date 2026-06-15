@@ -229,3 +229,19 @@ func test_rival_threat_absent_when_faction_neutral():
 	ctx.advance_turn()
 	assert_eq(int(ctx.get_var("cao_cao:threat", 0)), 0,
 		"pas de menace rivale tant que la faction n'est pas hostile")
+
+# --- Multiplicateur de difficulté (15/06/2026) ---
+
+func test_difficulty_multiplier_mapping():
+	var ctx = Context.new()
+	ctx.set_var("difficulty", "doux")
+	assert_almost_eq(ctx.difficulty_multiplier(), 0.7, 0.001)
+	ctx.set_var("difficulty", "normal")
+	assert_almost_eq(ctx.difficulty_multiplier(), 1.0, 0.001)
+	ctx.set_var("difficulty", "brutal")
+	assert_almost_eq(ctx.difficulty_multiplier(), 1.45, 0.001)
+
+func test_difficulty_default_is_normal():
+	var ctx = Context.new()
+	assert_almost_eq(ctx.difficulty_multiplier(), 1.0, 0.001,
+		"difficulté absente → normal (×1.0)")

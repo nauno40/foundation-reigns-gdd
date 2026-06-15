@@ -1,5 +1,8 @@
 class_name NarrativeModel
 
+# Jauges soumises au multiplicateur de difficulté (les 4 ressources + légitimité).
+const DIFFICULTY_SCALED = ["military", "religion", "commerce", "politics", "legitimacy"]
+
 var _data: FoundationGameData
 var _ctx: Context
 var _evaluator: ConditionEvaluator
@@ -241,7 +244,12 @@ func apply_outcomes(outcomes: Array) -> void:
 			continue
 
 		if add_op:
-			_ctx.add_var(variable, int_value)
+			# Difficulté (GDD §2.13) : seuls les deltas de jauges sont mis à
+			# l'échelle ; les compteurs/drapeaux (quêtes, états) restent intacts.
+			var delta: int = int_value
+			if variable in DIFFICULTY_SCALED:
+				delta = int(round(int_value * _ctx.difficulty_multiplier()))
+			_ctx.add_var(variable, delta)
 			if to_keep:
 				_ctx._keep_flags[variable] = true
 		else:

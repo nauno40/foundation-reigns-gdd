@@ -339,3 +339,28 @@ func test_event_card_excludes_special_decks():
 	ctx.set_var("custom_event_flag", 7)
 	assert_ne(int(model.draw_card().get("id", 0)), 999005,
 		"les cartes deaths ne sont pas auto-dispatchées comme événements")
+
+# --- Difficulté appliquée aux deltas de ressources (15/06/2026) ---
+
+func test_difficulty_scales_resource_delta_brutal():
+	ctx.set_var("difficulty", "brutal")
+	ctx.set_var("commerce", 50)
+	model.apply_outcomes([{"variable": "commerce", "intValue": -10, "addOperation": true}])
+	assert_eq(int(ctx.get_var("commerce")), 35, "-10 ×1.45 = -14.5 → -15")
+
+func test_difficulty_scales_resource_delta_doux():
+	ctx.set_var("difficulty", "doux")
+	ctx.set_var("military", 50)
+	model.apply_outcomes([{"variable": "military", "intValue": -10, "addOperation": true}])
+	assert_eq(int(ctx.get_var("military")), 43, "-10 ×0.7 = -7")
+
+func test_difficulty_does_not_scale_custom_vars():
+	ctx.set_var("difficulty", "brutal")
+	ctx.set_var("quest_x", 0)
+	model.apply_outcomes([{"variable": "quest_x", "intValue": 10, "addOperation": true}])
+	assert_eq(int(ctx.get_var("quest_x")), 10, "les variables non-ressources ne sont pas mises à l'échelle")
+
+func test_difficulty_does_not_scale_set_operations():
+	ctx.set_var("difficulty", "brutal")
+	model.apply_outcomes([{"variable": "commerce", "intValue": 30, "addOperation": false}])
+	assert_eq(int(ctx.get_var("commerce")), 30, "une affectation (set) n'est jamais mise à l'échelle")

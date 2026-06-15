@@ -4,6 +4,11 @@ const RESOURCES = ["military", "religion", "commerce", "politics"]
 const RESOURCE_DEFAULT = 50
 const LEGITIMACY_DEFAULT = 100
 
+# Multiplicateur de difficulté appliqué aux deltas de jauges (GDD §2.13) :
+# doux amortit les variations (plus facile de rester au milieu), brutal les
+# amplifie (on atteint 0/100 plus vite). Défaut : normal.
+const DIFFICULTY_MULT = {"doux": 0.7, "normal": 1.0, "brutal": 1.45}
+
 # Menace perçue par faction (héritage du système de factions du jeu de base) :
 # chaque antagoniste récurrent est rattaché à une faction Fondation ; sa menace
 # s'éveille quand cette faction devient hostile.
@@ -23,6 +28,9 @@ var _keep_flags: Dictionary = {}
 
 func get_var(key: String, default = 0) -> Variant:
 	return _vars.get(key, default)
+
+func difficulty_multiplier() -> float:
+	return DIFFICULTY_MULT.get(str(get_var("difficulty", "normal")), 1.0)
 
 func set_var(key: String, value: Variant, to_keep: bool = false) -> void:
 	_vars[key] = value
