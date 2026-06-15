@@ -25035,6 +25035,3216 @@
 		}
 	},
 	{
+		"id": 20270,
+		"label": "ambient_20270",
+		"deck": "ambient",
+		"weight": 250,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial vous remet un message scellé du trône. Bonne nouvelle, ou convocation piégée ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 189
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 183
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 7
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'ouvre aussitôt"
+			},
+			"reaction": {
+				"FR": "On brise le sceau. Le message pèse son poids d'intrigue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le lit en privé"
+			},
+			"reaction": {
+				"FR": "On garde le message pour plus tard. Prudence d'Orateur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20271,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20271,
+		"label": "ambient_20271",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "Le message impérial vous félicite — et vous « invite » à plus de tribut. La flatterie a un prix."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On verse le tribut"
+			},
+			"reaction": {
+				"FR": "On paie le tribut majoré. L'Empire ronronne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On négocie"
+			},
+			"reaction": {
+				"FR": "On négocie le montant. L'envoyé plisse les yeux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20272,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20272,
+		"label": "ambient_20272",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:veiled_prophet",
+		"question": {
+			"FR": "Un prophète errant interrompt l'audience impériale en clamant des présages sur votre destin. Le faire taire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le laisse parler"
+			},
+			"reaction": {
+				"FR": "On laisse le prophète délirer. La foule frissonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le fait taire"
+			},
+			"reaction": {
+				"FR": "On fait évacuer le prophète. L'envoyé approuve."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20273,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20273,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20273,
+		"label": "ambient_20273",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial repart avec son tribut, mi-satisfait. « Le trône vous garde à l'œil, magistrat. » Menace, ou routine ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reste affable"
+			},
+			"reaction": {
+				"FR": "On salue l'envoyé avec courtoisie. Tout sourire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sur ses gardes"
+			},
+			"reaction": {
+				"FR": "On garde la main sur ses arrières. L'œil du trône inquiète."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20274,
+		"label": "ambient_20274",
+		"deck": "ambient",
+		"weight": 50,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho vous transmet une opportunité : un poste d'observateur secret se libère sur un monde clé. Le briguer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le brigue"
+			},
+			"reaction": {
+				"FR": "On postule à l'observation secrète. Une oreille de plus pour le Plan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste au fief"
+			},
+			"reaction": {
+				"FR": "On reste à votre fief. Le poste ira à un autre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20275,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20275,
+		"label": "ambient_20275",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho confirme : le poste serait parfait pour étendre l'influence de la Seconde Fondation. Mais il faut quitter le fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte de partir"
+			},
+			"reaction": {
+				"FR": "On envisage le départ. Le Plan passe avant le confort."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste ancré"
+			},
+			"reaction": {
+				"FR": "On reste ancré au fief. La continuité a du bon."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20276,
+		"label": "ambient_20276",
+		"deck": "ambient",
+		"weight": 5,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison signale qu'un héros local rentre couvert de gloire. L'honorer en grande pompe ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'honore"
+			},
+			"reaction": {
+				"FR": "On célèbre le héros. La fierté du fief rejaillit sur vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On l'honore sobrement. Le héros est un peu déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20277,
+		"label": "ambient_20277",
+		"deck": "ambient",
+		"weight": 300,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho vous prévient qu'un plutocrate ambitieux achète des soutiens dans votre dos. Le contrer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le contre"
+			},
+			"reaction": {
+				"FR": "On déjoue les manœuvres du plutocrate. Sa toile se déchire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse le plutocrate tisser. Risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20278,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20278,
+		"label": "ambient_20278",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Le plutocrate, démasqué, propose une trêve : ses fonds contre votre indulgence. Pacte avec le diable ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte la trêve"
+			},
+			"reaction": {
+				"FR": "On pactise avec le plutocrate. Cynique, fructueux."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le pacte. Intègre, et l'on s'en fait un ennemi riche."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20279,
+		"label": "ambient_20279",
+		"deck": "ambient",
+		"weight": 900,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier propose un grand chantier d'infrastructures financé par l'épargne du fief. Mobiliser le peuple ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 50
+			},
+			{
+				"variable": "rank",
+				"op": "below",
+				"value": 2
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On mobilise l'épargne"
+			},
+			"reaction": {
+				"FR": "On lance le grand chantier participatif. Le fief se modernise."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On finance autrement"
+			},
+			"reaction": {
+				"FR": "On cherche d'autres fonds. Prudent envers l'épargne du peuple."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20280,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20280,
+		"label": "ambient_20280",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rice_almoner",
+		"question": {
+			"FR": "L'almonier du Grain propose de bâtir des entrepôts décentralisés contre les famines locales. Bon plan ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les bâtit"
+			},
+			"reaction": {
+				"FR": "On répartit les greniers sur le fief. Résilience accrue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On centralise"
+			},
+			"reaction": {
+				"FR": "On garde un grenier central. Plus simple, plus fragile."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20281,
+		"label": "ambient_20281",
+		"deck": "ambient",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Le plutocrate organise une fête fastueuse et vous y convie pour asseoir son prestige sur le vôtre. Y paraître ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 30
+			},
+			{
+				"variable": "religion",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y paraît"
+			},
+			"reaction": {
+				"FR": "On honore la fête du plutocrate. Alliance affichée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline. Le plutocrate y voit un camouflet."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20282,
+		"label": "ambient_20282",
+		"deck": "ambient",
+		"weight": 90,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse de bonne aventure prédit une rencontre qui changera votre règne. Y croire, ou en rire ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "below",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y prête attention"
+			},
+			"reaction": {
+				"FR": "On garde l'augure en tête. La rencontre, peut-être."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On en rit"
+			},
+			"reaction": {
+				"FR": "On rit de la prédiction. Le destin, lui, ne rit pas."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20283,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20283,
+		"label": "ambient_20283",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks vous présente une étrangère débarquée d'un vaisseau lointain, au regard perçant. L'accueillir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accueille"
+			},
+			"reaction": {
+				"FR": "On accueille l'étrangère. Son regard semble lire en vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se méfie de l'étrangère. Trop perçante, ce regard."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20284,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20284,
+		"label": "ambient_20284",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "L'étrangère prétend connaître votre vrai visage d'Orateur. Bluff, ou danger réel ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On feint l'ignorance"
+			},
+			"reaction": {
+				"FR": "On feint de ne pas comprendre. L'étrangère sourit, énigmatique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la sonde"
+			},
+			"reaction": {
+				"FR": "On la sonde prudemment. Que sait-elle, au juste ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20285,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20285,
+		"label": "ambient_20285",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "L'étrangère propose un marché : son silence contre une faveur. La croire capable de nuire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On marchande"
+			},
+			"reaction": {
+				"FR": "On entame un marché prudent. Le secret a un prix."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la défie"
+			},
+			"reaction": {
+				"FR": "On défie l'étrangère. Pari risqué sur son bluff."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20286,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20286,
+		"label": "ambient_20286",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia, méfiante, enquête sur l'étrangère et découvre… une simple aventurière en mal d'argent. Soulagement."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la renvoie"
+			},
+			"reaction": {
+				"FR": "On éconduit l'aventurière démasquée. Plus de peur que de mal."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'emploie"
+			},
+			"reaction": {
+				"FR": "On emploie l'aventurière maligne. Un atout retourné."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20287,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20287,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20287,
+		"label": "ambient_20287",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse de bonne aventure conclut : « La rencontre prédite n'était qu'un test, magistrat. Vous l'avez réussi. » Énigmatique."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la remercie"
+			},
+			"reaction": {
+				"FR": "On remercie la diseuse. Ses augures intriguent toujours."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hausse les épaules"
+			},
+			"reaction": {
+				"FR": "On balaie ses énigmes. Elle sourit, imperturbable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20288,
+		"label": "ambient_20288",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Le plutocrate propose de financer une académie privée d'élite. Mécénat utile, ou cheval de Troie ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le mécénat"
+			},
+			"reaction": {
+				"FR": "On accepte l'académie du plutocrate. Savoir financé, influence accrue pour lui."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On finance publiquement"
+			},
+			"reaction": {
+				"FR": "On préfère une académie publique. Plus libre, plus chère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -12,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20289,
+		"label": "ambient_20289",
+		"deck": "ambient",
+		"weight": 180,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Le plutocrate réclame en retour un siège au conseil du fief. Le lui accorder ?"
+		},
+		"conditions": [
+			{
+				"variable": "banditism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le lui accorde"
+			},
+			"reaction": {
+				"FR": "On admet le plutocrate au conseil. Son or pèse, son ambition aussi."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le siège. Le plutocrate boude son mécénat."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "banditism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20290,
+		"label": "ambient_20290",
+		"deck": "ambient",
+		"weight": 60,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village propose un grand recensement des anciens pour honorer leur sagesse. Y consentir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On honore les anciens"
+			},
+			"reaction": {
+				"FR": "On célèbre les anciens du fief. La tradition rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste pragmatique"
+			},
+			"reaction": {
+				"FR": "On juge l'idée sympathique mais secondaire. Le doyen comprend."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20291,
+		"label": "ambient_20291",
+		"deck": "ambient",
+		"weight": 300,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous propose un dernier service avant de disparaître : porter un message au cœur d'un monde hostile."
+		},
+		"conditions": [
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte le service"
+			},
+			"reaction": {
+				"FR": "On confie le message à l'émissaire. Mission périlleuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline, par prudence. L'émissaire s'incline."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20292,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20292,
+		"label": "ambient_20292",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire revient, mission accomplie, mais blessé. Le soigner et le récompenser ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le soigne"
+			},
+			"reaction": {
+				"FR": "On soigne et récompense l'émissaire. Loyauté honorée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le remercie sobrement"
+			},
+			"reaction": {
+				"FR": "On le remercie sans largesses. L'émissaire encaisse, digne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20293,
+		"label": "ambient_20293",
+		"deck": "ambient",
+		"weight": 300,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous propose de former un successeur pour perpétuer son réseau d'informateurs."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 198
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			},
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On forme un successeur"
+			},
+			"reaction": {
+				"FR": "On prépare la relève du réseau. La continuité assurée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse le réseau s'éteindre"
+			},
+			"reaction": {
+				"FR": "On laisse le réseau mourir avec lui. Une perte."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20294,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20294,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20294,
+		"label": "ambient_20294",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant fait ses adieux pour de bon : « Le Plan nous réunira ailleurs, Orateur. Il réunit toujours. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le salue"
+			},
+			"reaction": {
+				"FR": "On salue l'émissaire une dernière fois. Le réseau perd une voix."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On le remercie de tout. Il s'éloigne, serein."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20295,
+		"label": "ambient_20295",
+		"deck": "ambient",
+		"weight": 200,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Un moine propose de transformer un temple désaffecté en hospice pour les anciens du fief. L'autoriser ?"
+		},
+		"conditions": [
+			{
+				"variable": "buddhism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "On crée l'hospice des anciens. Charité saluée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le temple"
+			},
+			"reaction": {
+				"FR": "On garde le temple pour le culte. Le moine cherchera ailleurs."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "buddhism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20296,
+		"label": "ambient_20296",
+		"deck": "ambient",
+		"weight": 300,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Le moine vous demande de méditer une dernière vérité : « Le pouvoir est un prêt, magistrat, jamais un don. »"
+		},
+		"conditions": [
+			{
+				"variable": "buddhism",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "politics",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la médite"
+			},
+			"reaction": {
+				"FR": "On médite la vérité du moine. Sagesse d'un Orateur masqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la note"
+			},
+			"reaction": {
+				"FR": "On consigne la maxime. Le moine s'incline."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "buddhism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20297,
+		"label": "ambient_20297",
+		"deck": "ambient",
+		"weight": 500,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Le moine, avant de reprendre la route, bénit le fief à sa manière discrète. L'en remercier ?"
+		},
+		"conditions": [
+			{
+				"variable": "buddhism",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "taoism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On remercie le moine. Sa sérénité laisse une trace."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On le salue sobrement. Le moine sourit, compris."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "taoism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "buddhism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20298,
+		"label": "ambient_20298",
+		"deck": "ambient",
+		"weight": 200,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le sage de la Voie revient une dernière fois : « Vous gouvernez mieux qu'avant, magistrat. Vous avez appris à attendre. »"
+		},
+		"conditions": [
+			{
+				"variable": "taoism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte l'éloge"
+			},
+			"reaction": {
+				"FR": "On accepte l'éloge du sage. Rare reconnaissance."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste humble"
+			},
+			"reaction": {
+				"FR": "On minimise. Le sage hoche la tête, satisfait."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "taoism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20299,
+		"label": "ambient_20299",
+		"deck": "ambient",
+		"weight": 200,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le sage de la Voie vous confie un dernier koan : « Qui tient le fleuve ne le possède pas. Qui le suit l'épouse. » Le retenir ?"
+		},
+		"conditions": [
+			{
+				"variable": "taoism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On grave le koan en mémoire. Sagesse du Plan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On en sourit"
+			},
+			"reaction": {
+				"FR": "On sourit du koan. Le sage rit avec vous."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "taoism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20300,
+		"label": "ambient_20300",
+		"deck": "ambient",
+		"weight": 200,
+		"lockturn": 120,
+		"hidden": false,
+		"bearer": "role:plutocrat",
+		"question": {
+			"FR": "Le plutocrate propose un ultime grand projet : une cité nouvelle à votre nom. Vanité, ou héritage ?"
+		},
+		"conditions": [
+			{
+				"variable": "banditism",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 198
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On bâtit l'héritage"
+			},
+			"reaction": {
+				"FR": "On lance la cité nouvelle. Un monument au fief — et à vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse la vanité"
+			},
+			"reaction": {
+				"FR": "On refuse la cité-vanité. Modestie d'Orateur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "banditism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20301,
+		"label": "ambient_20301",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde dresse le bilan prospère du fief et propose une grande foire de clôture pour fêter l'année."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On organise la foire"
+			},
+			"reaction": {
+				"FR": "On clôt l'année par une grande foire. Liesse générale."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On thésaurise"
+			},
+			"reaction": {
+				"FR": "On garde les fonds. Le maître de guilde est déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20302,
+		"label": "ambient_20302",
+		"deck": "ambient",
+		"weight": 900,
+		"lockturn": 350,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse revient à la charge sur votre union de couverture : « Cette fois, Orateur, je tiens le parti parfait. »"
+		},
+		"conditions": [
+			{
+				"variable": "rejected_matchmaking",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 206
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "religion",
+				"op": "above",
+				"value": 45
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On écoute la proposition de la marieuse. Curiosité polie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'éconduit"
+			},
+			"reaction": {
+				"FR": "On éconduit la marieuse. Elle reviendra, increvable."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20303,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "rejected_matchmaking",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20303,
+		"label": "ambient_20303",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "Le parti proposé est de bonne maison, discret et sans ambition gênante. Idéal pour une couverture. Le rencontrer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rencontre"
+			},
+			"reaction": {
+				"FR": "On rencontre le parti idéal. La couverture se renforce."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite encore"
+			},
+			"reaction": {
+				"FR": "On hésite. La marieuse trépigne d'impatience."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20304,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20304,
+		"label": "ambient_20304",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La rencontre se passe bien : le prétendant est courtois et incurieux de vos secrets. Pousser plus loin ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pousse plus loin"
+			},
+			"reaction": {
+				"FR": "On poursuit la cour. L'union se dessine, parfaite façade."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On temporise. La marieuse soupire bruyamment."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20305,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20305,
+		"label": "ambient_20305",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse presse de conclure avant que le parti ne s'envole. Sceller l'union de couverture ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On scelle l'union"
+			},
+			"reaction": {
+				"FR": "On accepte l'union de couverture. Le Plan approuverait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse mûrir"
+			},
+			"reaction": {
+				"FR": "On laisse mûrir encore. La marieuse lève les bras au ciel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20306,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20306,
+		"label": "ambient_20306",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "Tout est prêt pour les noces de couverture. La marieuse, rayonnante, n'attend plus que votre mot."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On dit oui"
+			},
+			"reaction": {
+				"FR": "On donne son accord. Les noces de couverture sont lancées."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On recule"
+			},
+			"reaction": {
+				"FR": "On recule au dernier instant. La marieuse en reste sans voix."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 14,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20307,
+		"label": "ambient_20307",
+		"deck": "ambient",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:veteran_marshal",
+		"question": {
+			"FR": "Un vieux maréchal de vos amis vient prendre sa retraite au fief. Lui offrir une charge honorifique ?"
+		},
+		"conditions": [
+			{
+				"variable": "huang_zhong",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			},
+			{
+				"variable": "seen_2986",
+				"op": "not",
+				"value": 1
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui offre une charge"
+			},
+			"reaction": {
+				"FR": "On honore le vieux maréchal d'une charge. Loyauté récompensée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse se reposer"
+			},
+			"reaction": {
+				"FR": "On le laisse à sa retraite paisible. Le maréchal apprécie."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20308,
+		"label": "ambient_20308",
+		"deck": "ambient",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:war_counselor",
+		"question": {
+			"FR": "Un conseiller de campagne de passage vous livre une analyse stratégique brillante sur l'avenir du fief."
+		},
+		"conditions": [
+			{
+				"variable": "zhou_yu",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 210
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On boit son analyse. Précieux conseil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le recrute"
+			},
+			"reaction": {
+				"FR": "On tente de recruter le conseiller. Il y réfléchira."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20309,
+		"label": "ambient_20309",
+		"deck": "ambient",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:sworn_marshal",
+		"question": {
+			"FR": "Un maréchal lige de passage propose de tester la loyauté de votre garde par un exercice surprise. L'autoriser ?"
+		},
+		"conditions": [
+			{
+				"variable": "guan_yu",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 220
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'autorise"
+			},
+			"reaction": {
+				"FR": "On laisse tester la garde. Quelques failles révélées."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le test surprise. Le maréchal hausse les épaules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20310,
+		"label": "ambient_20310",
+		"deck": "ambient",
+		"weight": 160,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:loyal_general",
+		"question": {
+			"FR": "Un général loyaliste vous rend visite et s'inquiète des menaces qui pèsent sur le fief. Le rassurer ?"
+		},
+		"conditions": [
+			{
+				"variable": "zhao_yun",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 229
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le rassure"
+			},
+			"reaction": {
+				"FR": "On rassure le général loyaliste. Son épée reste vôtre."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On partage ses craintes"
+			},
+			"reaction": {
+				"FR": "On partage ses inquiétudes. La vigilance se resserre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20311,
+		"label": "ambient_20311",
+		"deck": "ambient",
+		"weight": 1900,
+		"lockturn": 450,
+		"hidden": false,
+		"bearer": "role:noble_spouse",
+		"question": {
+			"FR": "Un noble allié propose de marier son héritier à un proche de votre maison pour cimenter l'alliance."
+		},
+		"conditions": [
+			{
+				"variable": "spouse",
+				"op": "equal",
+				"value": 14
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte l'alliance"
+			},
+			"reaction": {
+				"FR": "On scelle l'alliance par les noces. Les maisons s'unissent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline l'union. Le noble allié est déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20312,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20312,
+		"label": "ambient_20312",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:noble_spouse",
+		"question": {
+			"FR": "Le noble allié insiste, vantant les avantages politiques de l'alliance. Céder, ou tenir bon ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On cède"
+			},
+			"reaction": {
+				"FR": "On accepte finalement. L'alliance est scellée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On tient bon"
+			},
+			"reaction": {
+				"FR": "On maintient son refus. Le noble s'en va, froissé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20313,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20313,
+		"label": "ambient_20313",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:noble_spouse",
+		"question": {
+			"FR": "L'alliance nobiliaire conclue, faut-il en faire une fête publique, ou la garder discrète ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Une fête publique"
+			},
+			"reaction": {
+				"FR": "On célèbre l'alliance en grande pompe. Le fief jubile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste discret"
+			},
+			"reaction": {
+				"FR": "On scelle l'alliance sans tapage. Sobre, prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20314,
+		"label": "ambient_20314",
+		"deck": "ambient",
+		"weight": 800,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde vous glisse, gêné, qu'un enfant naturel vous est attribué dans le fief. Reconnaître le garçon ?"
+		},
+		"conditions": [
+			{
+				"variable": "heir_daughter",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "heir_son",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "age",
+				"op": "above",
+				"value": 40
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le reconnaît"
+			},
+			"reaction": {
+				"FR": "On reconnaît l'enfant. Scandale étouffé par la dignité."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On dément"
+			},
+			"reaction": {
+				"FR": "On dément la paternité. Plus simple, plus froid."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bastard_child_son",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20315,
+		"label": "ambient_20315",
+		"deck": "ambient",
+		"weight": 800,
+		"lockturn": 500,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde évoque aussi une fillette qu'on dit de votre sang. La prendre sous votre protection ?"
+		},
+		"conditions": [
+			{
+				"variable": "heir_daughter",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "heir_son",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "age",
+				"op": "above",
+				"value": 40
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la protège"
+			},
+			"reaction": {
+				"FR": "On place la fillette sous protection. Geste discret, humain."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste à distance"
+			},
+			"reaction": {
+				"FR": "On garde ses distances. La rumeur enfle pourtant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_bastard_child_daughter",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20316,
+		"label": "ambient_20316",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Le précepteur propose d'éduquer discrètement ces enfants attribués loin des regards. Sage précaution ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "bastard_child",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_child",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_son",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accepte"
+			},
+			"reaction": {
+				"FR": "On confie les enfants au précepteur, dans l'ombre. Discrétion."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse de s'en mêler"
+			},
+			"reaction": {
+				"FR": "On refuse de s'impliquer. Les enfants à leur sort."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20317,
+		"label": "ambient_20317",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:heir_tutor",
+		"question": {
+			"FR": "Le précepteur revient : l'un des enfants montre un esprit remarquable. Lui ouvrir un avenir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "bastard_child",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "heir_child",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "has_daughter",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui ouvre un avenir"
+			},
+			"reaction": {
+				"FR": "On offre un avenir à l'enfant doué. Geste qui rachète."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On reste prudent. L'enfant suivra sa voie, seul."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20318,
+		"label": "ambient_20318",
+		"deck": "ambient",
+		"weight": 2000,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde dresse le bilan de votre règne au fief : prospère, ordonné, aimé. Un héritage solide."
+		},
+		"conditions": [
+			{
+				"variable": "is_child",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "age",
+				"op": "above",
+				"value": 5
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "is_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On savoure"
+			},
+			"reaction": {
+				"FR": "On savoure le bilan. Le fief, et le Plan, tiennent bon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On pense à la suite"
+			},
+			"reaction": {
+				"FR": "On songe déjà aux prochains défis. Un Orateur ne s'arrête pas."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20319,
+		"label": "ambient_20319",
+		"deck": "ambient",
+		"weight": 2000,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde conclut : « Quel que soit votre départ, magistrat, ce monde se souviendra de vous. » Réconfort, ou avertissement ?"
+		},
+		"conditions": [
+			{
+				"variable": "is_child",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "age",
+				"op": "above",
+				"value": 5
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "is_child",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y voit un réconfort"
+			},
+			"reaction": {
+				"FR": "On s'apaise. Le fief gardera trace de votre passage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On y voit un signe"
+			},
+			"reaction": {
+				"FR": "On y lit un signe : il sera bientôt temps de partir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
 		"id": 20400,
 		"label": "planet_ruler_20400",
 		"deck": "planet_ruler",
