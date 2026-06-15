@@ -284,3 +284,58 @@ func test_link_bare_word_alias_resolves():
 	ctx.set_var("link", "refugees")
 	var card = model.draw_card()
 	assert_eq(int(card.get("id", 0)), 1003, "un alias sans underscore se résout aussi")
+
+# --- Dispatcher d'événements w=-1 + gate de lieu corrigé (15/06/2026) ---
+
+func test_planet_ruler_not_location_gated():
+	# "planet_ruler" n'est pas un monde : il doit être tirable partout.
+	data.cards.append({"id": 999001, "deck": "planet_ruler", "weight": 5000,
+		"lockturn": 0, "hidden": false, "conditions": []})
+	ctx.set_var("location", "terminus")
+	var found := false
+	for i in range(80):
+		var c := model.draw_card()
+		if int(c.get("id", 0)) == 999001:
+			found = true
+			break
+		model.mark_card_seen(c)  # simule le jeu réel : consomme la carte tirée
+	assert_true(found, "planet_ruler doit être tirable quel que soit le lieu")
+
+func test_real_planet_deck_still_location_gated():
+	data.cards.append({"id": 999002, "deck": "planet_korell", "weight": 5000,
+		"lockturn": 0, "hidden": false, "conditions": []})
+	ctx.set_var("location", "terminus")  # pas korell
+	for i in range(40):
+		assert_ne(int(model.draw_card().get("id", 0)), 999002,
+			"planet_korell ne doit pas sortir hors de Korell")
+
+func test_event_card_dispatched_when_conditions_met():
+	data.cards.append({"id": 999003, "deck": "ambient", "weight": -1,
+		"lockturn": 0, "hidden": false,
+		"conditions": [{"variable": "year", "op": "equal", "value": 1},
+			{"variable": "custom_event_flag", "op": "equal", "value": 7}]})
+	ctx.set_var("year", 1)
+	ctx.set_var("custom_event_flag", 7)
+	assert_eq(int(model.draw_card().get("id", 0)), 999003,
+		"un événement w=-1 dont les conditions passent doit être dispatché")
+
+func test_event_card_not_redispatched_once_seen():
+	data.cards.append({"id": 999004, "deck": "ambient", "weight": -1,
+		"lockturn": 0, "hidden": false,
+		"conditions": [{"variable": "year", "op": "equal", "value": 1},
+			{"variable": "custom_event_flag", "op": "equal", "value": 7}]})
+	ctx.set_var("year", 1)
+	ctx.set_var("custom_event_flag", 7)
+	ctx.set_var("seen_999004", 1)
+	assert_ne(int(model.draw_card().get("id", 0)), 999004,
+		"un événement déjà vu ne doit pas se redéclencher")
+
+func test_event_card_excludes_special_decks():
+	data.cards.append({"id": 999005, "deck": "deaths", "weight": -1,
+		"lockturn": 0, "hidden": false,
+		"conditions": [{"variable": "year", "op": "equal", "value": 1},
+			{"variable": "custom_event_flag", "op": "equal", "value": 7}]})
+	ctx.set_var("year", 1)
+	ctx.set_var("custom_event_flag", 7)
+	assert_ne(int(model.draw_card().get("id", 0)), 999005,
+		"les cartes deaths ne sont pas auto-dispatchées comme événements")

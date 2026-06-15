@@ -25,12 +25,81 @@ func draw_card() -> Dictionary:
 				return resolved
 			# action ou alias inconnu : retombe sur le tirage aléatoire
 
+	# Événement scripté : carte w=-1 conditionnée dont l'heure est venue
+	# (trame du Plan, déclencheurs de crise). Prioritaire sur le tirage aléatoire.
+	var event = _find_event_card()
+	if not event.is_empty():
+		return event
+
 	var eligible = _get_eligible_cards()
 	if eligible.is_empty():
 		push_warning("NarrativeModel: no eligible cards — returning empty")
 		return {}
 
 	return _weighted_random(eligible)
+
+# "planet_<id>" → "<id>" seulement si <id> est une vraie planète (data/planets).
+# Évite que des decks comme "planet_ruler" soient gâtés sur un lieu inexistant.
+func _location_world(deck: String) -> String:
+	if not deck.begins_with("planet_"):
+		return ""
+	var suffix: String = deck.trim_prefix("planet_")
+	for planet in _data.planets:
+		if str(planet.get("id", "")) == suffix:
+			return suffix
+	return ""
+
+# Événement scripté (jeu de base) : carte w=-1 non-hidden, hors decks à flux
+# dédié (deaths/new_speaker), dont toutes les conditions sont remplies. Tirée
+# une fois par règne (garde-fou `seen_`), la plus spécifique d'abord — réveille
+# la timeline et les déclencheurs sans les noyer.
+func _find_event_card() -> Dictionary:
+	if str(_ctx.get_var("dev_deck", "")) != "":
+		return {}
+	var current_turn: int = _ctx.get_var("turns", 0)
+	var here: String = str(_ctx.get_var("location", "terminus"))
+	var best: Dictionary = {}
+	var best_count := 0
+	for card in _data.cards:
+		var deck: String = card.get("deck", "")
+		if deck == "deaths" or deck == "new_speaker":
+			continue
+		if card.get("hidden", false):
+			continue
+		if int(card.get("weight", 1)) >= 0:
+			continue
+		var conditions: Array = card.get("conditions", [])
+		if conditions.is_empty():
+			continue
+		# Uniquement les événements ANCRÉS dans le temps (year/month) : ils se
+		# déclenchent à leur date prévue. Les triggers purement à drapeau
+		# dépendaient de l'état numérique `deck` du jeu de base (abandonné) et
+		# se déclencheraient à tort dès l'an 1 — on les laisse dormants.
+		var time_anchored := false
+		for co in conditions:
+			var cv: String = co.get("variable", "")
+			if cv == "year" or cv == "month":
+				time_anchored = true
+				break
+		if not time_anchored:
+			continue
+		if _ctx.get_var("deck_" + deck, 1) == 0:
+			continue
+		var world: String = _location_world(deck)
+		if world != "" and world != here:
+			continue
+		var card_id: int = card.get("id", 0)
+		if _ctx.get_var("seen_" + str(card_id), 0) != 0:
+			continue
+		var last_seen: int = _ctx.get_var("lockturn_" + str(card_id), -9999)
+		if current_turn - last_seen < int(card.get("lockturn", 0)):
+			continue
+		if not _evaluator.evaluate_all(conditions, _ctx._vars):
+			continue
+		if conditions.size() > best_count:
+			best = card
+			best_count = conditions.size()
+	return best
 
 # Alias système du jeu de base : {"node": id} force une carte,
 # {"action": ...} déclenche un effet moteur puis rend la main au tirage.
@@ -85,10 +154,9 @@ func _get_eligible_cards() -> Array:
 			if int(card.get("weight", 1)) < 0:
 				continue
 
-			if deck.begins_with("planet_"):
-				var here: String = str(_ctx.get_var("location", "terminus"))
-				if deck.trim_prefix("planet_") != here:
-					continue
+			var world: String = _location_world(deck)
+			if world != "" and world != str(_ctx.get_var("location", "terminus")):
+				continue
 
 			if _ctx.get_var("deck_" + deck, 1) == 0:
 				continue

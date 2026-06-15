@@ -4,8 +4,9 @@
 
 Catégories par carte :
   hidden      — carte de chaîne (atteinte par un `link`, pas tirée au hasard).
-  dispatch    — weight -1 hors `deaths`/`new_speaker` : le moteur ne la dispatche
-                pas → dormante tant que le dispatcher n'est pas étendu.
+  event       — weight -1 ancrée year/month : dispatchée à sa date par le moteur.
+  dormant     — weight -1 sans ancrage temporel : dépend d'un état abandonné
+                (numérique `deck`) → laissée dormante volontairement.
   blocked     — tirable mais une condition porte sur une variable JAMAIS posée
                 (ni gérée par le moteur, ni écrite par un outcome) avec un test
                 qui exige une valeur non nulle → ne peut jamais devenir vraie.
@@ -84,7 +85,13 @@ for c in cards:
     if c.get("hidden"):
         cat = "hidden"
     elif int(c.get("weight", 1)) < 0 and deck not in ("deaths", "new_speaker"):
-        cat = "dispatch"
+        # depuis le dispatcher d'événements : les w-1 ancrés year/month se
+        # déclenchent à leur date (live) ; les autres restent dormants.
+        conds = c.get("conditions", [])
+        if any(co.get("variable") in ("year", "month") for co in conds):
+            cat = "event"
+        else:
+            cat = "dormant"
     else:
         conds = c.get("conditions", [])
         blockers = [co for co in conds if cond_can_block(co)]
@@ -99,15 +106,16 @@ for c in cards:
     d[cat] += 1
     rollup[cat] += 1
 
-order = ["open", "window", "blocked", "dispatch", "hidden"]
-print(f"{'deck':22} {'open':>5} {'wind':>5} {'block':>6} {'disp':>5} {'hid':>5}  total")
-print("-" * 64)
+order = ["open", "window", "event", "blocked", "dormant", "hidden"]
+print(f"{'deck':22} {'open':>5} {'wind':>5} {'event':>6} {'block':>6} "
+      f"{'dorm':>5} {'hid':>5}  total")
+print("-" * 70)
 for deck in sorted(per_deck):
     d = per_deck[deck]
     tot = sum(d.values())
-    flag = "  ⚠" if d["blocked"] or d["dispatch"] > tot * 0.5 else ""
-    print(f"{deck:22} {d['open']:>5} {d['window']:>5} {d['blocked']:>6} "
-          f"{d['dispatch']:>5} {d['hidden']:>5}  {tot:>5}{flag}")
+    flag = "  ⚠" if d["blocked"] else ""
+    print(f"{deck:22} {d['open']:>5} {d['window']:>5} {d['event']:>6} "
+          f"{d['blocked']:>6} {d['dormant']:>5} {d['hidden']:>5}  {tot:>5}{flag}")
 
 print("-" * 64)
 tot = sum(rollup.values())
