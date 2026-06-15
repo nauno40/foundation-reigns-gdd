@@ -27783,12 +27783,12 @@
 		},
 		"conditions": [
 			{
-				"variable": "heir_daughter",
+				"variable": "has_daughter",
 				"op": "not",
 				"value": 0
 			},
 			{
-				"variable": "heir_son",
+				"variable": "has_son",
 				"op": "not",
 				"value": 0
 			},
@@ -27862,12 +27862,12 @@
 		},
 		"conditions": [
 			{
-				"variable": "heir_daughter",
+				"variable": "has_daughter",
 				"op": "not",
 				"value": 0
 			},
 			{
-				"variable": "heir_son",
+				"variable": "has_son",
 				"op": "not",
 				"value": 0
 			},
@@ -115247,7 +115247,7 @@
 		},
 		"conditions": [
 			{
-				"variable": "rencontre_archivistes",
+				"variable": "quest_archivist",
 				"op": "equal",
 				"value": 0
 			},
@@ -122778,7 +122778,7 @@
 				"value": "korell"
 			},
 			{
-				"variable": "terminus_refugees",
+				"variable": "xinye_refugees",
 				"op": "above",
 				"value": 0
 			}
@@ -132532,7 +132532,7 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},
@@ -132610,12 +132610,12 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},
 			{
-				"variable": "crete_de_pierre",
+				"variable": "stone_ridge",
 				"op": "not",
 				"value": 0
 			},
@@ -132702,12 +132702,12 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},
 			{
-				"variable": "crete_de_pierre",
+				"variable": "stone_ridge",
 				"op": "above",
 				"value": 0
 			},
@@ -132775,12 +132775,12 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},
 			{
-				"variable": "crete_de_pierre",
+				"variable": "stone_ridge",
 				"op": "not",
 				"value": 0
 			},
@@ -132861,12 +132861,12 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},
 			{
-				"variable": "crete_de_pierre",
+				"variable": "stone_ridge",
 				"op": "above",
 				"value": 0
 			},
@@ -133001,7 +133001,7 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},
@@ -133080,7 +133080,7 @@
 		},
 		"conditions": [
 			{
-				"variable": "anacreon_magistrate",
+				"variable": "magistrate",
 				"op": "above",
 				"value": 0
 			},

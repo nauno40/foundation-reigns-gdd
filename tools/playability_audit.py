@@ -31,7 +31,10 @@ ENGINE_VARS = {"military", "religion", "commerce", "politics", "legitimacy",
                "turns", "year", "month", "day", "age", "mood", "location",
                "link", "faction", "region", "dev_deck"}
 ENGINE_PREFIXES = ("deck_", "seen_", "lockturn_", "planet_", "relation_",
-                   "region_")
+                   "region_", "seldon_crisis_")
+# Variables posées par les *systèmes* moteur (pas par un outcome de carte).
+ENGINE_VARS |= {"evaluate_seldon_crisis", "dying", "cover_name", "times_died",
+                "second_empire_progress"}
 
 # Toute variable écrite par un outcome (set ou add), n'importe où → "posable".
 settable = set()

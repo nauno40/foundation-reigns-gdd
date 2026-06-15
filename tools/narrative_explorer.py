@@ -766,16 +766,18 @@ button.small { padding: 2px 8px; font-size: 11px; }
 .reader-actions { display: flex; gap: 4px; }
 .reader-actions button { font-size: 10px; padding: 3px 10px; font-family: var(--mono); }
 #reader-card {
-  flex: 1; overflow-y: auto; padding: 16px 20px; max-width: 720px; margin: 0 auto;
+  flex: 1; overflow-y: auto; padding: 8px 20px 40px; max-width: 720px; margin: 0 auto;
 }
+#reader-card .reader-card-box:first-child { margin-top: 4px; }
 .reader-empty {
   display: flex; align-items: center; justify-content: center;
   height: 200px; color: var(--ink-faint); font-family: var(--mono); font-size: 13px;
 }
 .reader-card-box {
   background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
-  padding: 20px 24px; margin-bottom: 12px;
+  padding: 16px 20px; margin: 6px 0;
 }
+.reader-card-box:hover { border-color: var(--accent); }
 .reader-card-box .rc-header {
   display: flex; gap: 8px; align-items: center; margin-bottom: 12px;
   font-family: var(--mono); font-size: 10px; color: var(--ink-faint);
@@ -882,12 +884,7 @@ button.small { padding: 2px 8px; font-size: 11px; }
     <div id="reader-layout" style="display:none">
       <div id="reader-toolbar">
         <span id="reader-progress">—</span>
-        <div class="reader-actions">
-          <button onclick="jumpReaderCard(-5)" title="-5">⏪</button>
-          <button onclick="prevReaderCard()">◀ Précédente</button>
-          <button onclick="nextReaderCard()">Suivante ▶</button>
-          <button onclick="jumpReaderCard(5)" title="+5">⏩</button>
-        </div>
+        <span id="reader-count" style="font-family:var(--mono);font-size:10px;color:var(--ink-faint)"></span>
       </div>
       <div id="reader-card">
         <div class="reader-empty">Sélectionnez un deck pour lire les cartes</div>
@@ -1312,19 +1309,12 @@ async function loadReaderCards() {
     cards.sort((a, b) => a.id - b.id);
   }
   _readerCards = cards;
-  _readerIndex = 0;
-  showReaderCard(0);
-}
-
-function showReaderCard(idx) {
-  if (!_readerCards.length) return;
-  if (idx < 0) idx = 0;
-  if (idx >= _readerCards.length) idx = _readerCards.length - 1;
-  _readerIndex = idx;
-  const card = _readerCards[idx];
-  const total = _readerCards.length;
-  document.getElementById('reader-progress').textContent = deckLabel(selectedDeck) + ' — Carte ' + (idx+1) + '/' + total + ' (#' + card.id + ')';
-  document.getElementById('reader-card').innerHTML = buildReaderCardHTML(card, idx, total);
+  const total = cards.length;
+  document.getElementById('reader-progress').textContent = deckLabel(selectedDeck);
+  document.getElementById('reader-count').textContent = total + ' cartes';
+  // Render all cards in one continuous scroll
+  const html = cards.map((card, i) => buildReaderCardHTML(card, i, total)).join('<hr style="border:none;border-top:1px solid var(--border);margin:4px 0">');
+  document.getElementById('reader-card').innerHTML = html;
 }
 
 function deckLabel(name) {
@@ -1408,10 +1398,6 @@ function buildReaderCardHTML(card, idx, total) {
     + '</div>'
     + '</div>';
 }
-
-function nextReaderCard() { if (_readerIndex < _readerCards.length - 1) showReaderCard(_readerIndex + 1); }
-function prevReaderCard() { if (_readerIndex > 0) showReaderCard(_readerIndex - 1); }
-function jumpReaderCard(delta) { showReaderCard(_readerIndex + delta); }
 
 // === Source switching ===
 let currentSource = 'foundation';
