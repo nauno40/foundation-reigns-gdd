@@ -156,3 +156,49 @@ func test_advance_turn_cycles_month_1_to_12():
 	assert_true(seen.has(1) and seen.has(12), "le mois cycle de 1 à 12")
 	for m in seen:
 		assert_true(m >= 1 and m <= 12, "mois dans 1..12")
+
+# --- Jauge de maîtrise mentalique (15/06/2026) ---
+
+func test_mentalic_grows_each_turn():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("legitimacy", 50)  # pas de bonus de maîtrise
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("mentalic", 0)), 1, "mentalic +1 par tour")
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("mentalic", 0)), 2)
+
+func test_mentalic_bonus_when_legitimacy_high():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("legitimacy", 80)  # couverture maîtrisée → +2
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("mentalic", 0)), 2, "legitimacy haute → +2 par tour")
+
+func test_mentalic_derives_facets():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("legitimacy", 50)
+	ctx.set_var("mentalic", 49, true)
+	ctx.advance_turn()  # → 50
+	assert_eq(int(ctx.get_var("synaptic", 0)), 50, "synaptic = mentalic (0-100)")
+	assert_eq(int(ctx.get_var("strength", 0)), 5, "strength = mentalic/10")
+	assert_eq(int(ctx.get_var("mentalic_strength", 0)), 5)
+
+func test_mentalic_caps_at_100():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("legitimacy", 100)
+	ctx.set_var("mentalic", 100, true)
+	ctx.advance_turn()
+	assert_eq(int(ctx.get_var("mentalic", 0)), 100, "mentalic plafonne à 100")
+
+func test_mentalic_persists_across_reign():
+	var ctx = Context.new()
+	ctx.initialize_new_reign()
+	ctx.set_var("legitimacy", 50)
+	for i in range(5):
+		ctx.advance_turn()
+	assert_eq(int(ctx.get_var("mentalic", 0)), 5)
+	ctx.initialize_new_reign()  # mort → nouveau règne
+	assert_eq(int(ctx.get_var("mentalic", 0)), 5, "la maîtrise mentalique survit au règne (toKeep)")

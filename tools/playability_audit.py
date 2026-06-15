@@ -36,6 +36,8 @@ ENGINE_PREFIXES = ("deck_", "seen_", "lockturn_", "planet_", "relation_",
 # Variables posées par les *systèmes* moteur (pas par un outcome de carte).
 ENGINE_VARS |= {"evaluate_seldon_crisis", "dying", "cover_name", "times_died",
                 "second_empire_progress"}
+# Jauge de maîtrise mentalique + facettes dérivées (Context.advance_turn).
+ENGINE_VARS |= {"mentalic", "strength", "synaptic", "mentalic_strength"}
 
 # Toute variable écrite par un outcome (set ou add), n'importe où → "posable".
 settable = set()

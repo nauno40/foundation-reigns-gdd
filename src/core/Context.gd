@@ -45,6 +45,20 @@ func advance_turn() -> void:
 	# Mois cyclique 1..12 — alimente les cartes saisonnières (jeu de base)
 	_vars["month"] = (int(get_var("turns", 1)) - 1) % 12 + 1
 
+	# Maîtrise mentalique de l'Orateur : jauge cachée qui croît avec
+	# l'expérience (+1/tour) et la maîtrise de la couverture (+1 si la
+	# légitimité reste haute). Persistante entre règnes (toKeep) — la Seconde
+	# Fondation affine son emprise au fil des Orateurs. Plafond 100.
+	var gain: int = 1
+	if int(get_var("legitimacy", 100)) >= 70:
+		gain += 1
+	var mentalic: int = min(int(get_var("mentalic", 0)) + gain, 100)
+	set_var("mentalic", mentalic, true)
+	# Facettes dérivées lues par les cartes (échelles du jeu de base) :
+	_vars["synaptic"] = mentalic                  # 0..100 : prouesses rares
+	_vars["strength"] = int(mentalic / 10.0)      # 0..10  : échelle des rangs
+	_vars["mentalic_strength"] = int(mentalic / 10.0)
+
 func apply_cover(cover: Dictionary) -> void:
 	var resource: String = cover.get("bonus_resource", "")
 	var bonus: int = cover.get("bonus_value", 0)
