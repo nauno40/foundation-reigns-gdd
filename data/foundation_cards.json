@@ -14966,6 +14966,3274 @@
 		}
 	},
 	{
+		"id": 20108,
+		"label": "ambient_20108",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Un moine vous invite à embrasser la voie du détachement. « Lâchez le pouvoir, magistrat, et vous trouverez la paix. »"
+		},
+		"conditions": [
+			{
+				"variable": "buddhism",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On écoute le moine. Sa sérénité intrigue le mentalique en vous."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On poursuit son chemin"
+			},
+			"reaction": {
+				"FR": "On poursuit, poli. Le moine s'incline sans rancune."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_convert_to_buddhism",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20109,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20109,
+		"label": "ambient_20109",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Un sage de la Voie objecte au moine : « La vraie sagesse n'est pas de fuir le monde, mais d'épouser son cours. »"
+		},
+		"conditions": [
+			{
+				"variable": "taoism",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit la Voie"
+			},
+			"reaction": {
+				"FR": "On penche pour le sage. Épouser le cours des choses — comme le Plan ?"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On hésite entre les deux"
+			},
+			"reaction": {
+				"FR": "On reste entre moine et sage. La sagesse a mille visages."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_follow_the_nature",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20110,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20110,
+		"label": "ambient_20110",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le sage de la Voie vous presse : « Cessez de forcer, magistrat. Laissez les choses advenir. » Tentant — et dangereux pour un Orateur."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On adopte la Voie"
+			},
+			"reaction": {
+				"FR": "On goûte au laisser-advenir. Reposant, presque hérétique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde la main"
+			},
+			"reaction": {
+				"FR": "On garde la barre du fief. Le sage sourit. « Vous apprendrez. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_convert_to_taoism",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20111,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20111,
+		"label": "ambient_20111",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Le moine vous soumet une énigme : « Un chat dans une boîte close est-il vivant ou mort, tant qu'on n'ouvre pas ? » Provocation, ou koan ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Les deux à la fois »"
+			},
+			"reaction": {
+				"FR": "« Les deux. » Le moine s'illumine. « Vous comprenez ! »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Ni l'un ni l'autre »"
+			},
+			"reaction": {
+				"FR": "« Ni l'un ni l'autre tant qu'on regarde pas. » Le moine rit, ravi."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_schrodingers_cat",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20112,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20112,
+		"label": "ambient_20112",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Le moine conclut sur le chat : « Tout est possible tant qu'on n'a pas tranché. Gouverner, c'est ouvrir la boîte. » Méditer cela ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On médite"
+			},
+			"reaction": {
+				"FR": "On médite le koan du moine. Étrangement éclairant pour le Plan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On retourne au réel"
+			},
+			"reaction": {
+				"FR": "On retourne aux affaires du fief. La boîte attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "buddhism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20113,
+		"label": "ambient_20113",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:monk",
+		"question": {
+			"FR": "Le sage de la Voie vous offre un dernier conseil : « N'agissez que lorsque l'eau coule déjà dans votre sens. » Sagesse de psychohistorien."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On remercie le sage. Sa Voie ressemble au Plan."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le défie"
+			},
+			"reaction": {
+				"FR": "On objecte qu'on peut creuser le lit. Le sage sourit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "buddhism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 9,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -6,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20114,
+		"label": "ambient_20114",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le sage de la Voie se retire dans ses montagnes. Le laisser partir, ou le retenir comme conseiller ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retient"
+			},
+			"reaction": {
+				"FR": "On retient le sage au fief. Un esprit rare à votre table."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse partir"
+			},
+			"reaction": {
+				"FR": "On laisse le sage à sa retraite. La sagesse erre, libre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "taoism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20115,
+		"label": "ambient_20115",
+		"deck": "ambient",
+		"weight": 500,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le sage propose un jeu de stratégie réputé insoluble. « Trichez si vous l'osez, magistrat. » Provocation ?"
+		},
+		"conditions": [
+			{
+				"variable": "taoism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue loyalement"
+			},
+			"reaction": {
+				"FR": "On joue le jeu loyalement. Long, retors, fascinant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On cherche la faille"
+			},
+			"reaction": {
+				"FR": "On cherche à déjouer les règles. Le sage hausse un sourcil."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20116,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hack_the_game",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20116,
+		"label": "ambient_20116",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le jeu du sage se révèle un piège logique sans solution. Persévérer, ou reconnaître l'impasse ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "taoist_drug",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On persévère"
+			},
+			"reaction": {
+				"FR": "On s'acharne sur le casse-tête. Le sage admire l'obstination."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reconnaît l'impasse"
+			},
+			"reaction": {
+				"FR": "On admet l'impasse. Le sage sourit. « Sagesse, déjà. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20117,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20117,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20117,
+		"label": "ambient_20117",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Le sage révèle que le jeu n'avait pas de but : seul comptait votre manière d'y jouer. Vexant, ou éclairant ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On trouve cela éclairant"
+			},
+			"reaction": {
+				"FR": "On goûte la leçon. Le voyage prime la destination."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On trouve cela vexant"
+			},
+			"reaction": {
+				"FR": "On peste un peu. Le sage rit de bon cœur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20118,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20118,
+		"label": "ambient_20118",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "Un alchimiste de passage vous propose un élixir de longue vie tiré d'une recette ancienne. Charlatan, ou prodige ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'interroge"
+			},
+			"reaction": {
+				"FR": "On questionne l'alchimiste sur sa recette. Méfiance d'Orateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le chasse"
+			},
+			"reaction": {
+				"FR": "On chasse l'alchimiste. Charlatan, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_elixir_why",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20119,
+		"label": "ambient_20119",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "L'alchimiste explique : « L'élixir ne prolonge pas la vie, magistrat. Il la rend plus dense. » Joli sophisme — ou vérité ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On goûte l'élixir"
+			},
+			"reaction": {
+				"FR": "On goûte l'élixir, prudemment. L'effet reste à voir."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse l'élixir douteux. Sage prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20120,
+		"label": "ambient_20120",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "L'alchimiste réclame un laboratoire pour perfectionner son élixir au service du fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le finance"
+			},
+			"reaction": {
+				"FR": "On dote l'alchimiste d'un laboratoire. Pari sur la science — ou l'imposture."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le laboratoire. L'alchimiste s'en va, dépité."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20121,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20121,
+		"label": "ambient_20121",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:taoist_sage",
+		"question": {
+			"FR": "L'élixir, testé, ne tue personne mais ne guérit rien non plus. Garder l'alchimiste, ou le congédier ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le garde"
+			},
+			"reaction": {
+				"FR": "On garde l'alchimiste à l'essai. La science avance lentement."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le congédie"
+			},
+			"reaction": {
+				"FR": "On congédie l'alchimiste. Une bouche de moins à nourrir."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "taoism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20122,
+		"label": "ambient_20122",
+		"deck": "ambient",
+		"weight": 50,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:plan_herald",
+		"question": {
+			"FR": "La Voix du Plan — un vieux camarade du réseau — vous transmet un encouragement crypté. Le déchiffrer en public, ou en secret ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "En secret"
+			},
+			"reaction": {
+				"FR": "On déchiffre le message à l'abri. Prudence d'Orateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le note pour plus tard"
+			},
+			"reaction": {
+				"FR": "On remet le déchiffrage. Le message attendra."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20123,
+		"label": "ambient_20123",
+		"deck": "ambient",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia, espiègle, vous taquine sur votre air trop sérieux de magistrat. « Un sourire ne coûte rien, Orateur. »"
+		},
+		"conditions": [
+			{
+				"variable": "xinye_refugees",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lui sourit"
+			},
+			"reaction": {
+				"FR": "On lui offre un sourire. Callia jubile, satisfaite."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste grave"
+			},
+			"reaction": {
+				"FR": "On reste de marbre. Callia lève les yeux au ciel."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20124,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20124,
+		"label": "ambient_20124",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "lady_callia",
+		"question": {
+			"FR": "Lady Callia insiste pour vous traîner à une fête de village. Céder à sa bonne humeur ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'accompagne"
+			},
+			"reaction": {
+				"FR": "On suit Callia à la fête. Le magistrat s'humanise un peu."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline. Callia part danser sans vous, déçue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20125,
+		"label": "ambient_20125",
+		"deck": "ambient",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village organise la fête des récoltes. Y contribuer généreusement, ou modestement ?"
+		},
+		"conditions": [
+			{
+				"variable": "xinye_refugees",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On contribue généreusement"
+			},
+			"reaction": {
+				"FR": "On finance une belle fête. Le village vous bénit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste modeste"
+			},
+			"reaction": {
+				"FR": "On contribue avec mesure. Le doyen comprend."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20126,
+		"label": "ambient_20126",
+		"deck": "ambient",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école présente une pièce de théâtre jouée par ses élèves. Y assister ?"
+		},
+		"conditions": [
+			{
+				"variable": "xinye_refugees",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y assiste"
+			},
+			"reaction": {
+				"FR": "On honore la pièce des écoliers. Les enfants rayonnent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On envoie un présent"
+			},
+			"reaction": {
+				"FR": "On envoie un présent à défaut d'y aller. Le maître comprend."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20127,
+		"label": "ambient_20127",
+		"deck": "ambient",
+		"weight": 500,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Le scribe impérial vous demande de poser pour un portrait officiel du magistrat. Vanité, ou devoir ?"
+		},
+		"conditions": [
+			{
+				"variable": "xinye_refugees",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On pose"
+			},
+			"reaction": {
+				"FR": "On pose pour le portrait. Le visage du fief s'affiche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse le portrait. Discret — et le scribe insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20128,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20128,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20128,
+		"label": "ambient_20128",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Le portrait achevé vous flatte un peu trop. Le corriger, ou laisser la postérité s'illusionner ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le corrige"
+			},
+			"reaction": {
+				"FR": "On exige un portrait fidèle. Modestie remarquée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse flatteur"
+			},
+			"reaction": {
+				"FR": "On laisse le portrait flatteur. La postérité y croira."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "xinye_refugees",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20129,
+		"label": "ambient_20129",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:sf_contact",
+		"question": {
+			"FR": "Votre contact glisse qu'un portrait trop reconnaissable pourrait nuire à votre couverture. Le retirer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "luoyang_on_fire",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le retire"
+			},
+			"reaction": {
+				"FR": "On fait disparaître le portrait. Prudence d'Orateur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le garde"
+			},
+			"reaction": {
+				"FR": "On garde le portrait affiché. Risqué pour l'anonymat."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20130,
+		"label": "ambient_20130",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous parle d'un conteur ambulant dont les histoires enflamment les foules. Le recevoir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le reçoit"
+			},
+			"reaction": {
+				"FR": "On accueille le conteur. Ses récits charment la cour."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en méfie"
+			},
+			"reaction": {
+				"FR": "On se méfie du conteur. Les mots enflamment les foules."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20131,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20131,
+		"label": "ambient_20131",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "Le conteur ambulant raconte une histoire qui ressemble étrangement à votre propre parcours secret. Coïncidence ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On reste impassible"
+			},
+			"reaction": {
+				"FR": "On garde un visage de marbre. Le conteur ne saura rien."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'interroge"
+			},
+			"reaction": {
+				"FR": "On questionne le conteur. D'où tient-il pareil récit ?"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20132,
+		"label": "ambient_20132",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_envoy",
+		"question": {
+			"FR": "L'envoyé impérial vous transmet une invitation à la cour pour les festivités annuelles. S'y rendre, ou s'excuser ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y rend"
+			},
+			"reaction": {
+				"FR": "On répond à l'invitation de cour. Mondanités obligées."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'excuse"
+			},
+			"reaction": {
+				"FR": "On décline poliment. L'envoyé note l'absence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -8,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20133,
+		"label": "ambient_20133",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:mill_engineer",
+		"question": {
+			"FR": "L'ingénieur des moulins vous montre une invention curieuse : une horloge à eau d'une précision inédite. La financer ?"
+		},
+		"conditions": [
+			{
+				"variable": "legalism",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la finance"
+			},
+			"reaction": {
+				"FR": "On finance l'horloge à eau. Le fief mesure mieux son temps."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sceptique"
+			},
+			"reaction": {
+				"FR": "On doute de l'invention. L'ingénieur insiste, fébrile."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20134,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20134,
+		"label": "ambient_20134",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:mill_engineer",
+		"question": {
+			"FR": "L'horloge à eau, installée sur la place, fascine le peuple. L'inaugurer en grande pompe ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'inaugure"
+			},
+			"reaction": {
+				"FR": "On inaugure l'horloge en fête. Le progrès s'affiche."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On l'installe sans cérémonie. Utile, discret."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20135,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20135,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20135,
+		"label": "ambient_20135",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:mill_engineer",
+		"question": {
+			"FR": "L'ingénieur propose d'équiper tout le fief d'horloges à eau synchronisées. Ambitieux, coûteux."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On déploie le projet"
+			},
+			"reaction": {
+				"FR": "On synchronise le fief. Une modernité rare s'installe."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On en garde une seule"
+			},
+			"reaction": {
+				"FR": "On garde une horloge symbolique. Modeste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20136,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20136,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20136,
+		"label": "ambient_20136",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:mill_engineer",
+		"question": {
+			"FR": "L'horloge se dérègle et sème la confusion dans les rendez-vous du fief. La réparer, ou revenir au soleil ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la répare"
+			},
+			"reaction": {
+				"FR": "On répare l'horloge capricieuse. L'ingénieur s'y attelle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On revient au soleil"
+			},
+			"reaction": {
+				"FR": "On revient au cadran solaire. Fiable, archaïque."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "legalism",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20137,
+		"label": "ambient_20137",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier propose une loterie publique pour renflouer les caisses du fief. Le peuple adore, les dévots grognent."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance la loterie"
+			},
+			"reaction": {
+				"FR": "On instaure la loterie. Les caisses se remplissent de petits espoirs."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse la loterie. Vertueux, et plus pauvre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20138,
+		"label": "ambient_20138",
+		"deck": "ambient",
+		"weight": 180,
+		"lockturn": 250,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école s'inquiète de comptines populaires aux paroles prophétiques. Les enfants chantent l'avenir, dit-on."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 188
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 208
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On écoute les comptines de près. Troublant, presque mentalique."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On n'y prête pas garde"
+			},
+			"reaction": {
+				"FR": "On néglige les chansons d'enfants. Innocentes, sans doute."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_nursery_rhymes",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20139,
+		"label": "ambient_20139",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Une comptine évoque « le dragon qui dort sous les étoiles ». Le maître y voit un présage. Et vous ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 189
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y voit un présage"
+			},
+			"reaction": {
+				"FR": "On prend la comptine au sérieux. Le « dragon » intrigue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On y voit un jeu"
+			},
+			"reaction": {
+				"FR": "On n'y voit qu'un jeu d'enfants. Le maître insiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20140,
+		"label": "ambient_20140",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Une autre comptine parle d'« un phénix qui renaît de la cendre des mondes ». Image de renaissance, ou de chaos ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 191
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "De renaissance"
+			},
+			"reaction": {
+				"FR": "On y lit l'espoir d'une renaissance. Optimiste."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "De chaos"
+			},
+			"reaction": {
+				"FR": "On y lit l'annonce d'un chaos. Inquiétant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20141,
+		"label": "ambient_20141",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école demande qui aurait pu enseigner ces comptines prophétiques aux enfants. Enquêter ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 192
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On remonte la source des comptines. Le fil se tend."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse courir"
+			},
+			"reaction": {
+				"FR": "On laisse les comptines vivre. Mystère préservé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20142,
+		"label": "ambient_20142",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "On cherche qui a appris aux enfants la comptine du dragon. Un vieux barde ? Un Orateur d'autrefois ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 201
+			},
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 206
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit la piste du barde"
+			},
+			"reaction": {
+				"FR": "On remonte vers un barde oublié. Étrange écho du passé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On abandonne"
+			},
+			"reaction": {
+				"FR": "On abandonne l'enquête. Certains échos valent mieux tus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_taught_the_dragon_rhyme",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20143,
+		"label": "ambient_20143",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "La piste de la comptine du phénix mène à une vieille femme du village qui chantonne des airs anciens."
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 207
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'interroge"
+			},
+			"reaction": {
+				"FR": "On questionne la vieille chanteuse. Sa mémoire remonte loin."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la laisse en paix"
+			},
+			"reaction": {
+				"FR": "On laisse la vieille à ses airs. Le passé est à elle."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_who_taught_the_phoenix_rhyme",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20144,
+		"label": "ambient_20144",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "La vieille chanteuse révèle que ces comptines passent de génération en génération depuis « l'Homme du Plan ». Hari Seldon ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On creuse"
+			},
+			"reaction": {
+				"FR": "On creuse cette mémoire vivante. Un fil ténu vers Seldon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde le secret"
+			},
+			"reaction": {
+				"FR": "On enterre la révélation. Trop sensible."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20145,
+		"label": "ambient_20145",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Les comptines, une fois comprises, semblent encoder des dates du Plan. Les consigner, ou les laisser au folklore ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "sleeping_dragon",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les consigne"
+			},
+			"reaction": {
+				"FR": "On archive les comptines codées. Un trésor pour la Seconde Fondation."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les laisse au folklore"
+			},
+			"reaction": {
+				"FR": "On laisse les comptines au peuple. Discrétion d'Orateur."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20146,
+		"label": "ambient_20146",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "La vieille chanteuse vous demande de veiller à ce que ses comptines ne se perdent pas. Promettre ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "meet_pang_tong",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On promet"
+			},
+			"reaction": {
+				"FR": "On jure de préserver les comptines. La mémoire vivra."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste évasif"
+			},
+			"reaction": {
+				"FR": "On reste vague. La vieille s'attriste."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "sad",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20147,
+		"label": "ambient_20147",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "L'agitateur transforme une comptine en chant de révolte. La récupérer, ou la réprimer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la récupère"
+			},
+			"reaction": {
+				"FR": "On retourne le chant en sa faveur. Habile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la réprime"
+			},
+			"reaction": {
+				"FR": "On interdit le chant de révolte. L'agitateur crie à la censure."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20148,
+		"label": "ambient_20148",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village vous convie à une cérémonie du thé, art subtil et codé. Y participer ?"
+		},
+		"conditions": [
+			{
+				"variable": "south",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On participe"
+			},
+			"reaction": {
+				"FR": "On se prête à la cérémonie du thé. Lenteur apaisante."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On décline"
+			},
+			"reaction": {
+				"FR": "On décline, faute de temps. Le doyen comprend, déçu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20149,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20149,
+		"label": "ambient_20149",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen vous propose de choisir le thé : un thé blanc délicat, ou un oolong plus corsé ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le thé blanc"
+			},
+			"reaction": {
+				"FR": "On choisit le thé blanc. Subtil, presque éthéré."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "L'oolong"
+			},
+			"reaction": {
+				"FR": "On choisit l'oolong. Franc et chaleureux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_whitetea",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_oolong",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20150,
+		"label": "ambient_20150",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le thé blanc révèle des arômes d'une finesse rare. Le doyen guette votre verdict de fin palais."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On loue le thé"
+			},
+			"reaction": {
+				"FR": "On loue le thé blanc avec art. Le doyen rayonne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste sobre"
+			},
+			"reaction": {
+				"FR": "On apprécie sans emphase. Le doyen apprécie la retenue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -2,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20151,
+		"label": "ambient_20151",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "L'oolong, robuste, délie les langues. Le doyen en profite pour vous confier les soucis du village."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On écoute les doléances autour du thé. Gouverner par l'oreille."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On savoure en silence"
+			},
+			"reaction": {
+				"FR": "On savoure l'oolong sans se mêler des soucis. Reposant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20152,
+		"label": "ambient_20152",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "Le recruteur de talents vous signale un jeune prodige des chiffres qui pourrait servir la trésorerie."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'engage"
+			},
+			"reaction": {
+				"FR": "On enrôle le prodige des chiffres. La trésorerie y gagne."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'éprouve d'abord"
+			},
+			"reaction": {
+				"FR": "On le met à l'épreuve avant tout poste. Prudent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20153,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20153,
+		"label": "ambient_20153",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:talent_scout",
+		"question": {
+			"FR": "Le jeune prodige des chiffres détecte une fraude que tous avaient manquée. Le récompenser, ou le promouvoir ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le promeut"
+			},
+			"reaction": {
+				"FR": "On promeut le prodige. Une étoile montante de l'administration."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le récompense"
+			},
+			"reaction": {
+				"FR": "On le récompense sans plus. Modeste reconnaissance."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20154,
+		"label": "ambient_20154",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier propose un grand emprunt public pour financer des travaux ambitieux. Le peuple prêterait-il à son fief ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On lance l'emprunt"
+			},
+			"reaction": {
+				"FR": "On émet un emprunt public. Le fief mise sur son peuple."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'en passe"
+			},
+			"reaction": {
+				"FR": "On renonce à l'emprunt. Prudent, peu ambitieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 11,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20155,
+		"label": "ambient_20155",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho rapporte une rumeur de complot, mais la source est douteuse. Y donner suite ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On vérifie"
+			},
+			"reaction": {
+				"FR": "On vérifie la rumeur via l'Écho. Prudence."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'écarte"
+			},
+			"reaction": {
+				"FR": "On écarte la rumeur douteuse. Le doute subsiste."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 6,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -15,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20156,
+		"label": "ambient_20156",
+		"deck": "ambient",
+		"weight": 200,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:rice_almoner",
+		"question": {
+			"FR": "L'almonier du Grain propose une distribution de vivres pour la fête des pauvres. Y consentir ?"
+		},
+		"conditions": [
+			{
+				"variable": "plague",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "plague",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On distribue"
+			},
+			"reaction": {
+				"FR": "On nourrit les pauvres en fête. Charité saluée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On limite"
+			},
+			"reaction": {
+				"FR": "On limite la distribution. Prudent budgétairement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20157,
+		"label": "ambient_20157",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village vous demande d'arbitrer le partage d'un puits entre deux hameaux assoiffés."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "korell"
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On partage équitablement"
+			},
+			"reaction": {
+				"FR": "On répartit l'eau avec justice. Les hameaux s'apaisent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On creuse un second puits"
+			},
+			"reaction": {
+				"FR": "On fait creuser un autre puits. Coûteux, définitif."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20158,
+		"label": "ambient_20158",
+		"deck": "ambient",
+		"weight": 120,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:creditor",
+		"question": {
+			"FR": "Le créancier signale un faux-monnayeur qui inonde le fief de pièces douteuses. Le traquer ?"
+		},
+		"conditions": [
+			{
+				"variable": "military",
+				"op": "below",
+				"value": 30
+			},
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le traque"
+			},
+			"reaction": {
+				"FR": "On pourchasse le faux-monnayeur. La monnaie du fief est protégée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse couler"
+			},
+			"reaction": {
+				"FR": "On néglige l'affaire. La fausse monnaie prolifère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20159,
+		"label": "ambient_20159",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le Grand Prêtre annonce un présage funeste lu dans les astres et veut une cérémonie expiatoire. Y consentir ?"
+		},
+		"conditions": [
+			{
+				"variable": "shell_loser",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On consent"
+			},
+			"reaction": {
+				"FR": "On laisse le Grand Prêtre officier. La foule rassurée, le doute moqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse la cérémonie superstitieuse. Le prêtre se renfrogne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20160,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20160,
+		"label": "ambient_20160",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La diseuse de bonne aventure conteste le présage du Grand Prêtre et en propose un autre, plus clément."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On suit la diseuse"
+			},
+			"reaction": {
+				"FR": "On préfère l'augure clément. Le Grand Prêtre fulmine."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les départage"
+			},
+			"reaction": {
+				"FR": "On arbitre entre prêtre et diseuse. Diplomatie des présages."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20161,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20161,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20161,
+		"label": "ambient_20161",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:fortune_teller",
+		"question": {
+			"FR": "La querelle des présages divise le fief entre dévots et superstitieux. La trancher d'autorité ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "shell_loser",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tranche"
+			},
+			"reaction": {
+				"FR": "On impose un verdict sur les présages. L'ordre, au prix des croyances."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse débattre"
+			},
+			"reaction": {
+				"FR": "On laisse les deux camps s'expliquer. Tolérant, brouillon."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
 		"id": 20400,
 		"label": "planet_ruler_20400",
 		"deck": "planet_ruler",
