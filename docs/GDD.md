@@ -823,7 +823,7 @@ godot --headless -s tests/gut_runner.gd
 
 ## 6.3 Contenu
 
-**131 / ~1 160 cartes** (11/06/2026 : `ambient` 49, `hardin_era` 40, `merchant_era` 20, `crisis_anacreonian_war` 9, `new_speaker` 13). Schéma d'enchaînement actuel : `docs/schema_cartes.md`.
+**Clone structurel 100 % — 67 / 67 decks livrés** (15/06/2026 ; ~2 586 cartes au total). Les 67 decks narratifs du jeu de base sont transposés dans l'univers Fondation, leur topologie de liens préservée à l'identique (`tools/check_structure.py` : `decks livrés 67 · non remplis 0 · structure conforme au jeu de base`). Prose, personnages et thèmes 100 % originaux Fondation, écrits sur la topologie anonyme des squelettes (`data/skeletons/`) ; aucun texte du jeu source n'est repris. Schéma d'enchaînement : `docs/schema_cartes.md`.
 
 Convention moteur (11/06/2026) : les cartes `hidden: true` sont réservées aux enchaînements `link` (séquences de crise/quête) — exclues du tirage aléatoire. Les déclencheurs de séquence sont non-hidden, gardés par conditions.
 
@@ -837,12 +837,20 @@ Convention moteur (11/06/2026) : les cartes `hidden: true` sont réservées aux 
 - 🔲 Deck `new_speaker` : variantes de la carte de mort naturelle
 - 🔲 Cartes variantes de mood (règle §2.6)
 
-### 🆕 Refonte contenu (12/06/2026) — clone structurel 1:1 du jeu de base
+### 🆕 Refonte contenu (12/06/2026) — clone structurel 1:1 du jeu de base — **achevé le 15/06/2026**
 Le plan de contenu ci-dessus est remplacé par le clone structurel des 67 decks du
 jeu de base (voir `docs/superpowers/specs/2026-06-12-clone-structurel-reigns-design.md`).
-Moteur prêt (aliases de link, location/voyage, rôles persistants, weight -1) ; phases
-de contenu 1–5 à venir, deck par deck, avec diff structurel automatique
-(`tools/check_structure.py`).
+Moteur prêt (aliases de link, location/voyage, rôles persistants, weight -1) ;
+**les 67 decks sont désormais remplis** via le pipeline `tools/extract_skeletons.py`
+→ `data/skeletons/<deck>.json` → `tools/deckfill.py::fill_deck()` (prose Fondation
+originale + mappings) → `tools/check_structure.py` (diff structurel 1:1, **67/0,
+conforme**). Les decks géants (`anacreon_throne` 92, `seldon_plan` 172,
+`planet_ruler` 280, `ambient` 320) ont été remplis par lots via le mode
+`_in_progress` de `structure_additions.json`, puis repassés en diff strict.
+Engagements moteur tenus : alias `_cover_union` re-pointé du placeholder
+`enddispatch` vers le nœud de noce (`cover_union`), cible des arcs de cour
+`lady_callia` / `bayta_darell`. Reliquats acceptés : quelques liens `EXTERNE:*`
+inter-decks restent en `enddispatch` (dégradation prévue par le design).
 
 ### Phase 5 — Polish (2–3 j) 🔲
 - Calibrage : seuils de danger, mort naturelle, couloirs Seldon, scores et rangs
