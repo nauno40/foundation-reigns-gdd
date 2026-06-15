@@ -127330,24 +127330,24 @@
 		"hidden": true,
 		"bearer": null,
 		"question": {
-			"FR": "Le savant exilé vous oriente vers d'autres figures de la cour déchue, éparpillées dans la périphérie : un poète frondeur, un eunuque repenti, une dame d'honneur exilée. « Réunissez leurs témoignages, » dit-il, « et vous aurez la carte complète des faiblesses de Trantor. » La cartographie d'un empire par ses transfuges."
+			"FR": "Le savant exilé évoque d'autres figures de la cour déchue, dispersées aux quatre vents de la périphérie : un poète frondeur, un eunuque repenti, une dame d'honneur exilée. « Un jour, leurs témoignages dresseront la carte complète des faiblesses de Trantor. Mais ils sont loin, et le temps presse. »"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "Suivre ses pistes"
+				"FR": "Noter leurs noms"
 			},
 			"reaction": {
-				"FR": ""
+				"FR": "On grave les noms dans un coin de sa mémoire. La cartographie de l'Empire attendra un autre jour — un autre règne, peut-être."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "Se concentrer sur l'essentiel"
+				"FR": "S'en tenir à l'essentiel"
 			},
 			"reaction": {
-				"FR": ""
+				"FR": "On laisse ces pistes lointaines aux vents de la périphérie. Trantor a déjà livré assez de secrets pour aujourd'hui."
 			}
 		},
 		"yesOutcome": [
@@ -137742,7 +137742,7 @@
 				"FR": "Tourner la page Forell"
 			},
 			"reaction": {
-				"FR": ""
+				"FR": "On referme le dossier Forell. Le dédale, le village, l'héritage — rangés au grand livre. Cap ailleurs."
 			}
 		},
 		"rightAnswer": {
@@ -137750,7 +137750,7 @@
 				"FR": "Garder cette leçon"
 			},
 			"reaction": {
-				"FR": ""
+				"FR": "On emporte la leçon plutôt que les comptes : même le commerce peut abriter des cœurs. Puis on reprend la route."
 			}
 		},
 		"yesOutcome": [
