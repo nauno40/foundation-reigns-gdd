@@ -11649,6 +11649,3323 @@
 		}
 	},
 	{
+		"id": 20054,
+		"label": "ambient_20054",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite, prolixe ce jour-là, vous livre un dernier proverbe : « Qui gouverne par la peur récolte le silence, non la paix. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On médite"
+			},
+			"reaction": {
+				"FR": "On médite le proverbe. L'ermite hoche la tête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le note"
+			},
+			"reaction": {
+				"FR": "On consigne la maxime. L'ermite sourit, flatté."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20055,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20055,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20055,
+		"label": "ambient_20055",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite ajoute : « Et qui gouverne par l'amour récolte des dettes qu'on ne rembourse jamais. » Vrai, ou cynique ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "C'est vrai"
+			},
+			"reaction": {
+				"FR": "On acquiesce. L'ermite vous trouve lucide."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "C'est cynique"
+			},
+			"reaction": {
+				"FR": "On objecte. L'ermite rit. « Les deux, magistrat. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20056,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20056,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20056,
+		"label": "ambient_20056",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:hermit",
+		"question": {
+			"FR": "L'ermite vous congédie pour de bon : « Assez de mots. Allez gouverner, et revenez quand le doute vous prendra. »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le remercie"
+			},
+			"reaction": {
+				"FR": "On salue l'ermite. Une source de sagesse à portée."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On promet de revenir"
+			},
+			"reaction": {
+				"FR": "On promet de revenir. L'ermite hoche la tête, serein."
+			}
+		},
+		"yesOutcome": [],
+		"noOutcome": [],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20057,
+		"label": "ambient_20057",
+		"deck": "ambient",
+		"weight": -1,
+		"lockturn": -1,
+		"hidden": false,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Le quartier-maître revient avec une autre légende de caserne, plus sombre encore."
+		},
+		"conditions": [
+			{
+				"variable": "hogwart",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "year",
+				"op": "equal",
+				"value": 184
+			},
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 8
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'écoute"
+			},
+			"reaction": {
+				"FR": "On écoute le nouveau récit. Frissons garantis."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'éconduit"
+			},
+			"reaction": {
+				"FR": "On éconduit le conteur. Il rangera sa légende pour un autre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20058,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20058,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20058,
+		"label": "ambient_20058",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:rebel_quartermaster",
+		"question": {
+			"FR": "Le quartier-maître jure que sa légende est arrivée à un de ses camarades. Le croire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le croit"
+			},
+			"reaction": {
+				"FR": "On feint d'y croire. Le conteur exulte."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On doute"
+			},
+			"reaction": {
+				"FR": "On doute ouvertement. Le conteur insiste, vexé."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20005,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20059,
+		"label": "ambient_20059",
+		"deck": "ambient",
+		"weight": 150,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "Un agitateur signale que des cochons sauvages ravagent les cultures du fief. Organiser une battue ?"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 3
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			},
+			{
+				"variable": "south",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On organise la battue"
+			},
+			"reaction": {
+				"FR": "On lance la battue. Les cochons détalent, les champs respirent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse les paysans gérer"
+			},
+			"reaction": {
+				"FR": "On laisse les paysans se débrouiller. Économique, lent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_new_pigs",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20060,
+		"label": "ambient_20060",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:agitator",
+		"question": {
+			"FR": "La battue rapporte un sanglier monstrueux. En faire un festin public, ou le vendre ?"
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_boar_squealing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "Un festin public"
+			},
+			"reaction": {
+				"FR": "On offre un festin au peuple. Liesse populaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le vend"
+			},
+			"reaction": {
+				"FR": "On vend la bête. Le trésor s'arrondit, le peuple jeûne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20061,
+		"label": "ambient_20061",
+		"deck": "ambient",
+		"weight": 2000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "Le marchand de soie vous propose d'investir dans une cargaison de soie rare avant la flambée des prix."
+		},
+		"conditions": [
+			{
+				"variable": "visit_yizhou_river",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "visit_yizhou_mountain",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 210
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On investit"
+			},
+			"reaction": {
+				"FR": "On mise sur la soie. Pari spéculatif, gains possibles."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On s'abstient. Trop risqué, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_investment",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20062,
+		"label": "ambient_20062",
+		"deck": "ambient",
+		"weight": 2000,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "Le marchand de soie insiste : « Une occasion pareille ne revient pas deux fois, magistrat. »"
+		},
+		"conditions": [
+			{
+				"variable": "visit_yizhou_river",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "visit_yizhou_mountain",
+				"op": "equal",
+				"value": -10
+			},
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "askone"
+			},
+			{
+				"variable": "year",
+				"op": "above",
+				"value": 210
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On saisit l'occasion"
+			},
+			"reaction": {
+				"FR": "On saisit l'occasion. La soie part en réserve."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste prudent"
+			},
+			"reaction": {
+				"FR": "On reste prudent. Le marchand soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_investment",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20063,
+		"label": "ambient_20063",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "Le marchand de soie hésite sur la route à prendre : le marché proche et sûr, ou le lointain et lucratif ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "Le marché lointain"
+			},
+			"reaction": {
+				"FR": "On vise le marché lointain. Gros gains, gros risques."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "Le marché proche"
+			},
+			"reaction": {
+				"FR": "On choisit le marché proche. Modeste, sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_opportunity",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_yizhou",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20064,
+		"label": "ambient_20064",
+		"deck": "ambient",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "La cargaison de soie atteint un marché en effervescence. Vendre tout, ou attendre une meilleure cote ?"
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On vend tout"
+			},
+			"reaction": {
+				"FR": "On écoule toute la soie. Beau bénéfice, immédiat."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On attend"
+			},
+			"reaction": {
+				"FR": "On attend la flambée. Pari sur la patience."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_opportunity",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_opportunity",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20065,
+		"label": "ambient_20065",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "Les prix de la soie grimpent encore. La tentation d'en racheter pour revendre est forte."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On rachète"
+			},
+			"reaction": {
+				"FR": "On rachète pour spéculer. Gourmand, risqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On encaisse"
+			},
+			"reaction": {
+				"FR": "On encaisse les gains. Sage prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_opportunity",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_silk_opportunity",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20066,
+		"label": "ambient_20066",
+		"deck": "ambient",
+		"weight": -1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "L'affaire de soie conclue, le marchand vous propose de poursuivre le négoce jusqu'à Askone."
+		},
+		"conditions": [
+			{
+				"variable": "location",
+				"op": "equal",
+				"value": "terminus"
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On part pour Askone"
+			},
+			"reaction": {
+				"FR": "On suit la route de la soie jusqu'à Askone."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rentre"
+			},
+			"reaction": {
+				"FR": "On rentre au fief, l'affaire bouclée."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20067,
+		"label": "ambient_20067",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:silk_merchant",
+		"question": {
+			"FR": "La soie n'a pas trouvé preneur ici ; le marchand suggère un détour par Askone."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On gagne Askone"
+			},
+			"reaction": {
+				"FR": "On met le cap sur Askone écouler la soie."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On brade sur place"
+			},
+			"reaction": {
+				"FR": "On brade la soie sur place. Pertes minimes, affaire close."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_jump_askone",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20068,
+		"label": "ambient_20068",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse vous présente une jeune veuve à remarier, fort bon parti pour la noblesse du fief."
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "is_child",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On arrange le mariage"
+			},
+			"reaction": {
+				"FR": "On arrange l'union. La marieuse jubile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse la veuve choisir"
+			},
+			"reaction": {
+				"FR": "On laisse la veuve décider. La marieuse trouve cela bien moderne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "matchmaker",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "rejected_matchmaking",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20069,
+		"label": "ambient_20069",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 300,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse se plaint que les jeunes du fief refusent les unions arrangées. Imposer la tradition, ou la laisser mourir ?"
+		},
+		"conditions": [
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			},
+			{
+				"variable": "is_woman",
+				"op": "above",
+				"value": 0
+			},
+			{
+				"variable": "is_child",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On laisse l'amour décider"
+			},
+			"reaction": {
+				"FR": "On laisse les cœurs choisir. La marieuse soupire, vaincue."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On soutient la tradition"
+			},
+			"reaction": {
+				"FR": "On soutient les unions arrangées. L'ordre ancien tient."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "matchmaker",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "rejected_matchmaking",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20070,
+		"label": "ambient_20070",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:imperial_scribe",
+		"question": {
+			"FR": "Le scribe impérial recense les mariages et s'étonne du nombre d'unions « de couverture » dans le fief. Détourner son attention ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On détourne"
+			},
+			"reaction": {
+				"FR": "On noie le scribe sous d'autres chiffres. Habile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse compter"
+			},
+			"reaction": {
+				"FR": "On le laisse compter. Risqué pour bien des secrets."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20071,
+		"label": "ambient_20071",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:high_priest",
+		"question": {
+			"FR": "Le Grand Prêtre veut bénir tous les mariages du fief — moyennant offrande, bien sûr."
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 70
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte les bénédictions"
+			},
+			"reaction": {
+				"FR": "On laisse bénir les noces. Le culte engrange, les couples rayonnent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On refuse"
+			},
+			"reaction": {
+				"FR": "On refuse la mainmise du culte sur les mariages. Le prêtre se renfrogne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20072,
+		"label": "ambient_20072",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Votre contact note qu'un mariage de notables cache une alliance politique hostile. Le déjouer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le déjoue"
+			},
+			"reaction": {
+				"FR": "On fait échouer l'alliance par le mariage. Subtil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On laisse l'union se nouer. Une menace se forme."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 12,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -1,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20073,
+		"label": "ambient_20073",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:spy_handler",
+		"question": {
+			"FR": "Votre contact propose d'utiliser un mariage pour glisser un agent dans une maison rivale."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On glisse l'agent"
+			},
+			"reaction": {
+				"FR": "On infiltre la maison rivale par les noces. Espionnage de salon."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On renonce à ce stratagème. Trop tordu, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20074,
+		"label": "ambient_20074",
+		"deck": "ambient",
+		"weight": 300,
+		"lockturn": 400,
+		"hidden": false,
+		"bearer": "role:gambler",
+		"question": {
+			"FR": "Un joueur invétéré vous défie à un jeu de hasard sur la place. Relever le défi, ou passer ?"
+		},
+		"conditions": [
+			{
+				"variable": "year",
+				"op": "below",
+				"value": 232
+			},
+			{
+				"variable": "seen_69",
+				"op": "equal",
+				"value": 1
+			},
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 66
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On joue"
+			},
+			"reaction": {
+				"FR": "On s'assoit à la table de jeu. La foule fait cercle."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On passe"
+			},
+			"reaction": {
+				"FR": "On passe son chemin. Le joueur raille votre prudence."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "EXTERNE:142",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20075,
+		"label": "ambient_20075",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse, décidément partout, suggère que votre propre couverture gagnerait à une union officielle."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 7
+			},
+			{
+				"variable": "married",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y réfléchit"
+			},
+			"reaction": {
+				"FR": "On envisage l'union de couverture. La marieuse jubile déjà."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On élude"
+			},
+			"reaction": {
+				"FR": "On élude la proposition. La marieuse n'abandonne pas pour autant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20076,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20076,
+		"label": "ambient_20076",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:cover_spouse",
+		"question": {
+			"FR": "Un conjoint potentiel, présenté par la marieuse, vous jauge avec autant de calcul que vous l'examinez."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On charme"
+			},
+			"reaction": {
+				"FR": "On déploie le charme. Le prétendant se laisse séduire — en façade."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste de marbre"
+			},
+			"reaction": {
+				"FR": "On reste froid. Le prétendant hésite."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20077,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20077,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "flattered",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20077,
+		"label": "ambient_20077",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:matchmaker",
+		"question": {
+			"FR": "La marieuse presse de conclure : « Une union pareille consolide votre couverture, magistrat. Dites oui ! »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On envisage l'union"
+			},
+			"reaction": {
+				"FR": "On laisse la marieuse arranger les noces de couverture."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On temporise"
+			},
+			"reaction": {
+				"FR": "On temporise encore. La marieuse trépigne."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "matchmaker",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "marriage",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_cover_union",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "spouse",
+				"intValue": 2,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20078,
+		"label": "ambient_20078",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde organise un combat de coqs très couru. Y assister en magistrat, ou l'interdire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y assiste"
+			},
+			"reaction": {
+				"FR": "On honore le combat de coqs de votre présence. Le peuple jubile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'interdit"
+			},
+			"reaction": {
+				"FR": "On interdit le jeu cruel. Vertueux, impopulaire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20079,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20079,
+		"label": "ambient_20079",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école, présent au combat, parie gros sur un coq favori. Le mettre en garde, ou laisser faire ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le met en garde"
+			},
+			"reaction": {
+				"FR": "On modère l'ardeur du maître d'école. Sage conseil."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse faire"
+			},
+			"reaction": {
+				"FR": "On le laisse parier. Le coq décidera de sa bourse."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20080,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20080,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20080,
+		"label": "ambient_20080",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Au combat de coqs, le juge civique vous demande d'arbitrer un litige sur un pari contesté."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On tranche pour le parieur"
+			},
+			"reaction": {
+				"FR": "On donne raison au parieur. La foule gronde, à moitié."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On annule le pari"
+			},
+			"reaction": {
+				"FR": "On annule le pari litigieux. Personne n'est content."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_girl",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20081,
+		"label": "ambient_20081",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école jure que son coq a été drogué par un rival. Enquêter ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On enquête"
+			},
+			"reaction": {
+				"FR": "On vérifie l'accusation de tricherie. Le combat de coqs vire à l'affaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On classe"
+			},
+			"reaction": {
+				"FR": "On classe la plainte. Le maître d'école fulmine."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_boy",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20082,
+		"label": "ambient_20082",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le rival accusé de tricherie nie tout et menace de porter plainte à son tour. Démêler l'écheveau ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On démêle"
+			},
+			"reaction": {
+				"FR": "On démêle l'affaire de coqs. Cocasse et chronophage."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les renvoie dos à dos"
+			},
+			"reaction": {
+				"FR": "On renvoie les coqueleurs dos à dos. Le juge soupire."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_boy",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20083,
+		"label": "ambient_20083",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "La querelle des coqs enflamme les parieurs. Calmer la foule, ou laisser le jeu suivre son cours ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On calme la foule"
+			},
+			"reaction": {
+				"FR": "On apaise les parieurs échauffés. L'ordre revient."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse jouer"
+			},
+			"reaction": {
+				"FR": "On laisse le jeu reprendre. Risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_boy",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20084,
+		"label": "ambient_20084",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le juge civique propose d'encadrer les paris par une taxe et un règlement officiel."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On encadre les paris"
+			},
+			"reaction": {
+				"FR": "On taxe et règlemente les paris. Ordre et recettes."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse libre"
+			},
+			"reaction": {
+				"FR": "On laisse les paris libres. Joyeux désordre."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_girl",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20085,
+		"label": "ambient_20085",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Le combat de coqs dégénère en rixe entre parieurs. Faire intervenir la garde ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On envoie la garde"
+			},
+			"reaction": {
+				"FR": "On fait disperser la rixe. L'ordre, à coups de matraque."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse se calmer"
+			},
+			"reaction": {
+				"FR": "On laisse la bagarre s'éteindre seule. Risqué."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_girl",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20086,
+		"label": "ambient_20086",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:civic_judge",
+		"question": {
+			"FR": "Après la rixe, faut-il interdire définitivement les combats de coqs, ou les réformer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On les réforme"
+			},
+			"reaction": {
+				"FR": "On réforme le jeu plutôt que de l'interdire. Compromis."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On les interdit"
+			},
+			"reaction": {
+				"FR": "On bannit les combats de coqs. Vertueux, mal vu."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_fight",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_rooster_girl",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20087,
+		"label": "ambient_20087",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde, beau joueur, vous remercie d'avoir géré l'affaire des coqs sans tout gâcher."
+		},
+		"conditions": [],
+		"loadOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On accepte ses remerciements"
+			},
+			"reaction": {
+				"FR": "On accepte ses bonnes grâces. Un allié de plus."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On reste neutre"
+			},
+			"reaction": {
+				"FR": "On reste neutre. Le maître apprécie la retenue."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 0,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20088,
+		"label": "ambient_20088",
+		"deck": "ambient",
+		"weight": 70,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école dénonce une comptine de rue jugée irrespectueuse de l'autorité. La faire taire ?"
+		},
+		"conditions": [
+			{
+				"variable": "commerce",
+				"op": "above",
+				"value": 50
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la laisse courir"
+			},
+			"reaction": {
+				"FR": "On laisse courir la comptine. Un magistrat sûr de lui en rit."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la fait taire"
+			},
+			"reaction": {
+				"FR": "On interdit la comptine. Susceptible, et un brin ridicule."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_spell_patriarchy",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20089,
+		"label": "ambient_20089",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho rapporte que la comptine moqueuse cache un message codé entre conspirateurs. Décrypter ?"
+		},
+		"conditions": [
+			{
+				"variable": "deck",
+				"op": "not",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On décrypte"
+			},
+			"reaction": {
+				"FR": "On perce le code de la comptine. Un complot se dévoile."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On n'y crois pas"
+			},
+			"reaction": {
+				"FR": "On balaie l'hypothèse. Le code, lui, opère."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20090,
+		"label": "ambient_20090",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "the_echo",
+		"question": {
+			"FR": "L'Écho confirme : la comptine était bien un signal. Remonter la filière, ou frapper aussitôt ?"
+		},
+		"conditions": [
+			{
+				"variable": "deck",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On remonte la filière"
+			},
+			"reaction": {
+				"FR": "On suit le fil jusqu'aux meneurs. Patience d'espion."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On frappe aussitôt"
+			},
+			"reaction": {
+				"FR": "On frappe sans attendre. Net, mais on rate les têtes."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "religion",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "flattered",
+			"no": "afraid"
+		}
+	},
+	{
+		"id": 20091,
+		"label": "ambient_20091",
+		"deck": "ambient",
+		"weight": 60,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Le maître de guilde organise une grande chasse au gibier pour divertir les notables. Y participer ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On chasse"
+			},
+			"reaction": {
+				"FR": "On mène la chasse. Les notables vous suivent, ravis."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On préside seulement"
+			},
+			"reaction": {
+				"FR": "On préside sans chasser. Distingué, distant."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20092,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20092,
+		"label": "ambient_20092",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Pendant la chasse, une bête magnifique surgit. La poursuivre seul, ou rabattre en groupe ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On la poursuit seul"
+			},
+			"reaction": {
+				"FR": "On s'élance seul. Panache, et danger."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rabat en groupe"
+			},
+			"reaction": {
+				"FR": "On organise le rabattage. Méthodique, moins glorieux."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hunting_chase",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_hunting_chase",
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20093,
+		"label": "ambient_20093",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La poursuite mène loin dans les bois. La bête se retourne, acculée. L'achever, ou l'épargner ?"
+		},
+		"conditions": [
+			{
+				"variable": "no_boar",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_boar_squealing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'épargne"
+			},
+			"reaction": {
+				"FR": "On épargne la bête superbe. Geste rare, remarqué."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On l'achève"
+			},
+			"reaction": {
+				"FR": "On achève la bête. Trophée pour les notables."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20096,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "afraid",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20094,
+		"label": "ambient_20094",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La chasse rapporte un gibier abondant. Le partager avec le peuple, ou le réserver aux notables ?"
+		},
+		"conditions": [
+			{
+				"variable": "no_boar",
+				"op": "above",
+				"value": 0
+			}
+		],
+		"loadOutcome": [
+			{
+				"variable": "jukebox.findthecamp_boar_squealing",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"leftAnswer": {
+			"title": {
+				"FR": "On partage"
+			},
+			"reaction": {
+				"FR": "On distribue le gibier au peuple. Liesse populaire."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le réserve"
+			},
+			"reaction": {
+				"FR": "On le réserve aux notables. Les puissants flattés."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "no_boar",
+				"intValue": 0,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20095,
+		"label": "ambient_20095",
+		"deck": "ambient",
+		"weight": 10,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "Un notable s'est blessé à la chasse et accuse votre organisation. L'apaiser ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'apaise"
+			},
+			"reaction": {
+				"FR": "On apaise le notable blessé. Tensions désamorcées."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On rejette la faute"
+			},
+			"reaction": {
+				"FR": "On rejette la faute sur lui. Un ennemi de plus."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20096,
+		"label": "ambient_20096",
+		"deck": "ambient",
+		"weight": 200,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:guild_master",
+		"question": {
+			"FR": "La chasse close, le maître de guilde propose d'en faire une tradition annuelle du fief."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On instaure la tradition"
+			},
+			"reaction": {
+				"FR": "On crée la grande chasse annuelle. Le fief a sa fête."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On s'abstient"
+			},
+			"reaction": {
+				"FR": "On renonce à la tradition. Une fois suffit, juge-t-on."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "no_boar",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "commerce",
+				"intValue": 20,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20097,
+		"label": "ambient_20097",
+		"deck": "ambient",
+		"weight": 70,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école vous soumet une devinette qui circule parmi les enfants : « Plus on m'enlève, plus je grandis. Que suis-je ? »"
+		},
+		"conditions": [
+			{
+				"variable": "no_riddles",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Un trou »"
+			},
+			"reaction": {
+				"FR": "« Un trou. » Le maître hoche la tête, satisfait."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Le savoir »"
+			},
+			"reaction": {
+				"FR": "« Le savoir. » Le maître sourit. « Joliment dit, magistrat. »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20098,
+				"addOperation": false,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20098,
+		"label": "ambient_20098",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école enchaîne : « Je voyage sans bouger, je parle sans voix. Que suis-je ? »"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "« Une lettre »"
+			},
+			"reaction": {
+				"FR": "« Une lettre. » Le maître applaudit. « Exact ! »"
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "« Le Plan »"
+			},
+			"reaction": {
+				"FR": "« Le Plan. » Le maître fronce les sourcils. « Étrange réponse… »"
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "link",
+				"intValue": 20099,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_riddle_correct",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
+		"id": 20099,
+		"label": "ambient_20099",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Le maître d'école, ravi de votre esprit, vous propose d'animer un concours de devinettes pour les enfants."
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'anime"
+			},
+			"reaction": {
+				"FR": "On anime le concours. Les enfants vous adorent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le délègue"
+			},
+			"reaction": {
+				"FR": "On délègue au maître. Lui aussi sait charmer une classe."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "no_riddles",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20100,
+		"label": "ambient_20100",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:village_teacher",
+		"question": {
+			"FR": "Un enfant timide refuse de participer au concours de devinettes. L'encourager, ou le laisser tranquille ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'encourage"
+			},
+			"reaction": {
+				"FR": "On encourage le timide. Il finit par briller."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse"
+			},
+			"reaction": {
+				"FR": "On le laisse en paix. Le respect a aussi sa leçon."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "no_riddles",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "sad"
+		}
+	},
+	{
+		"id": 20101,
+		"label": "ambient_20101",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks signale un arrivage de marchandises exotiques très convoitées. Les taxer fort, ou attirer le négoce ?"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "above",
+				"value": 5
+			},
+			{
+				"variable": "month",
+				"op": "below",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On taxe fort"
+			},
+			"reaction": {
+				"FR": "On taxe lourdement l'exotique. Le trésor gonfle, les marchands râlent."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On allège"
+			},
+			"reaction": {
+				"FR": "On allège les taxes. Le négoce afflue, les recettes maigrissent."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "military",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": 7,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20102,
+		"label": "ambient_20102",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant vous met en garde contre une mode étrangère qui gagne le fief et bouscule les mœurs."
+		},
+		"conditions": [
+			{
+				"variable": "confucianism",
+				"op": "not",
+				"value": 0
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On l'encadre"
+			},
+			"reaction": {
+				"FR": "On encadre la mode étrangère. Ordre préservé."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On la laisse"
+			},
+			"reaction": {
+				"FR": "On laisse la mode se répandre. Le fief change, doucement."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "confucianism",
+				"intValue": 1,
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20103,
+		"label": "ambient_20103",
+		"deck": "ambient",
+		"weight": 80,
+		"lockturn": 212,
+		"hidden": false,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le capitaine de garnison surprend un soldat à lire un livre interdit. Le sanctionner, ou s'y intéresser ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On s'y intéresse"
+			},
+			"reaction": {
+				"FR": "On lit le livre interdit. Curiosité dangereuse, instructive."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On sanctionne"
+			},
+			"reaction": {
+				"FR": "On punit le soldat lecteur. L'ordre, au prix de l'esprit."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "link",
+				"intValue": 0,
+				"stringValue": "_book_scold",
+				"addOperation": false,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "curious",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20104,
+		"label": "ambient_20104",
+		"deck": "ambient",
+		"weight": 1,
+		"lockturn": 0,
+		"hidden": true,
+		"bearer": "role:garrison_captain",
+		"question": {
+			"FR": "Le livre interdit s'avère subversif mais brillant. L'interdire pour de bon, ou le diffuser sous le manteau ?"
+		},
+		"conditions": [],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On le bannit"
+			},
+			"reaction": {
+				"FR": "On bannit le livre. Sûr, étouffant."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On le laisse circuler"
+			},
+			"reaction": {
+				"FR": "On laisse le livre circuler discrètement. Risqué, fécond."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "politics",
+				"intValue": -5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "suspicious",
+			"yes": "curious",
+			"no": "angry"
+		}
+	},
+	{
+		"id": 20105,
+		"label": "ambient_20105",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:village_elder",
+		"question": {
+			"FR": "Le doyen du village se plaint que la jeunesse délaisse les vieux métiers. Les soutenir ?"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 5
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On soutient les métiers"
+			},
+			"reaction": {
+				"FR": "On subventionne les vieux métiers. Tradition sauvée, coûteuse."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On laisse évoluer"
+			},
+			"reaction": {
+				"FR": "On laisse les métiers évoluer. Le progrès, sans filet."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "commerce",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20106,
+		"label": "ambient_20106",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:dock_foreman",
+		"question": {
+			"FR": "Le maître des docks propose d'agrandir le port pour accueillir de plus gros vaisseaux marchands."
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 9
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On agrandit le port"
+			},
+			"reaction": {
+				"FR": "On agrandit le port. Le grand négoce afflue, le trésor trinque."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On garde l'échelle"
+			},
+			"reaction": {
+				"FR": "On garde le port à taille humaine. Modeste, sûr."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 5,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "politics",
+				"intValue": -3,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "neutral"
+		}
+	},
+	{
+		"id": 20107,
+		"label": "ambient_20107",
+		"deck": "ambient",
+		"weight": 100,
+		"lockturn": 50,
+		"hidden": false,
+		"bearer": "role:wandering_envoy",
+		"question": {
+			"FR": "L'émissaire errant rapporte qu'un monde voisin envie la prospérité du fief. Flatteur, ou inquiétant ?"
+		},
+		"conditions": [
+			{
+				"variable": "month",
+				"op": "equal",
+				"value": 3
+			}
+		],
+		"loadOutcome": [],
+		"leftAnswer": {
+			"title": {
+				"FR": "On y voit un honneur"
+			},
+			"reaction": {
+				"FR": "On savoure l'envie des voisins. Flatteur."
+			}
+		},
+		"rightAnswer": {
+			"title": {
+				"FR": "On y voit un danger"
+			},
+			"reaction": {
+				"FR": "On y voit une menace. La prospérité attire les convoitises."
+			}
+		},
+		"yesOutcome": [
+			{
+				"variable": "politics",
+				"intValue": 4,
+				"addOperation": true,
+				"toKeep": false
+			},
+			{
+				"variable": "religion",
+				"intValue": 8,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"noOutcome": [
+			{
+				"variable": "military",
+				"intValue": 10,
+				"addOperation": true,
+				"toKeep": false
+			}
+		],
+		"moods": {
+			"default": "neutral",
+			"yes": "flattered",
+			"no": "suspicious"
+		}
+	},
+	{
 		"id": 20400,
 		"label": "planet_ruler_20400",
 		"deck": "planet_ruler",
