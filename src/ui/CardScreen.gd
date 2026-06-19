@@ -20,6 +20,19 @@ const PREVIEW_THRESHOLD := 24.0
 const CARD_MAX_W := 360.0
 const MIN_REACTION_MS := 400       # anti-balayage accidentel de la réaction
 
+# Modèle d'animation amorti, porté de Reigns 3K (CardAnimator / CardAnimationSettings,
+# voir reference/design-docs/card-animation-model.md). Le drag horizontal suit le doigt
+# 1:1 ; le tilt et l'arc vertical sont amortis vers leur cible chaque frame (DoUpdate),
+# et un tilt supplémentaire dépend de la vélocité du flick (HandleVelocityBasedRotation).
+# Valeurs calées au ressenti (phase 2) en attendant l'extraction AssetRipper (phase 3).
+const Y_OFFSET_FACTOR := -0.05     # arc vertical : la carte se soulève avec le drag (y vers le haut = négatif)
+const Y_OFFSET_SPEED := 12.0       # vitesse d'amortissement de l'arc vertical
+const ROT_OFFSET_FACTOR := 0.045   # tilt ∝ position du drag (deg/px) — = ancien tilt linéaire
+const ROT_OFFSET_SPEED := 14.0     # vitesse d'amortissement du tilt-position
+const ROT_Y_FACTOR := 0.0035       # tilt ∝ vélocité du flick (deg par px/s)
+const ROT_Y_SPEED := 10.0          # vitesse d'amortissement du tilt-vélocité (traîne un peu)
+const MAX_ROT_VELOCITY := 8.0      # borne du tilt-vélocité (deg)
+
 @onready var _era_label: Label = %EraLabel
 @onready var _seal: Button = %Seal
 @onready var _year_age: Label = %YearAge
@@ -56,6 +69,10 @@ var _ctx_ref: Context
 var _current_card: Dictionary = {}
 var _can_swipe: bool = true
 var _current_drag: float = 0.0
+var _drag_velocity: float = 0.0     # vélocité horizontale du doigt (px/s)
+var _y_offset: float = 0.0          # offsets amortis (état du modèle CardAnimator)
+var _rot_offset: float = 0.0        # tilt amorti basé sur la position (deg)
+var _rot_offset_y: float = 0.0      # tilt amorti basé sur la vélocité (deg)
 var _reaction_visible: bool = false
 var _card_base_pos: Vector2 = Vector2.ZERO
 var _flicker_timer: Timer
@@ -100,13 +117,13 @@ func _accepts_input() -> bool:
 
 func _setup_bars() -> void:
 	var config = [
-		["military", "▲", "Militaire"],
-		["religion", "✦", "Religion"],
-		["commerce", "●", "Commerce"],
-		["politics", "■", "Politique"],
+		["military", "Militaire"],
+		["religion", "Religion"],
+		["commerce", "Commerce"],
+		["politics", "Politique"],
 	]
 	for c in config:
-		_bars[c[0]].setup(c[0], c[1], c[2])
+		_bars[c[0]].setup(c[0], c[1])
 
 func _setup_flicker() -> void:
 	_flicker_timer = Timer.new()
@@ -132,6 +149,7 @@ func show_card(card: Dictionary, ctx: Context) -> void:
 	_can_swipe = true
 	_current_drag = 0.0
 	_reaction_visible = false
+	_reset_anim_state()
 
 	var question = card.get("question", {})
 	_question.text = question.get("FR", question.get("EN", "???"))
@@ -204,7 +222,24 @@ func _update_mood(ctx: Context) -> void:
 
 func _update_whisper(ctx: Context) -> void:
 	var legitimacy = ctx.get_var("legitimacy", 100)
-	_whisper.visible = legitimacy <= LegitimacySystem.THRESHOLD_SUSPICIOUS
+	var should_show: bool = legitimacy <= LegitimacySystem.THRESHOLD_SUSPICIOUS
+	if should_show:
+		if _whisper.modulate.a >= 1.0:
+			return
+		_whisper.visible = true
+		_whisper.modulate.a = 0.0
+		var tw = create_tween()
+		tw.tween_property(_whisper, "modulate:a", 1.0, 0.35) \
+			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	else:
+		if not _whisper.visible or _whisper.modulate.a <= 0.0:
+			return
+		var tw = create_tween()
+		tw.tween_property(_whisper, "modulate:a", 0.0, 0.25)
+		tw.finished.connect(func():
+			if is_instance_valid(_whisper):
+				_whisper.visible = false
+		, CONNECT_ONE_SHOT)
 
 # ── Layout de la carte (largeur min(360, 86 %), centrée) ─────────────
 
@@ -245,23 +280,54 @@ func _layout_card() -> void:
 		entry.tween_property(_card_panel, "modulate:a", 1.0, 0.18)
 		entry.tween_property(_card_panel, "scale", Vector2.ONE, 0.22) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		if _reaction_visible:
+			_card_panel.position.y = _card_base_pos.y + 10.0
+			entry.tween_property(_card_panel, "position:y", _card_base_pos.y, 0.28) \
+				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
 	for edge in [_edge_left, _edge_right]:
 		edge.size = Vector2(area.x * 0.42, 0)
 	_edge_left.position = Vector2(8, (area.y - _edge_left.size.y) / 2.0)
 	_edge_right.position = Vector2(area.x - _edge_right.size.x - 8, (area.y - _edge_right.size.y) / 2.0)
 
+# Amortissement par frame des offsets vers leur cible (CardAnimator.DoUpdate).
+# Ne tourne qu'en phase de suivi du doigt : pendant le fly-out (_can_swipe = false)
+# ou la réaction, ce sont des tweens dédiés qui pilotent la carte.
+func _process(delta: float) -> void:
+	if not _can_swipe or _reaction_visible or not is_instance_valid(_card_panel):
+		return
+	var target_y := _current_drag * Y_OFFSET_FACTOR
+	var target_rot := _current_drag * ROT_OFFSET_FACTOR
+	var target_rot_y := clampf(_drag_velocity * ROT_Y_FACTOR, -MAX_ROT_VELOCITY, MAX_ROT_VELOCITY)
+	_y_offset = _smooth(_y_offset, target_y, Y_OFFSET_SPEED, delta)
+	_rot_offset = _smooth(_rot_offset, target_rot, ROT_OFFSET_SPEED, delta)
+	_rot_offset_y = _smooth(_rot_offset_y, target_rot_y, ROT_Y_SPEED, delta)
+	_apply_drag()
+
+# Exp-smoothing indépendant du framerate.
+func _smooth(current: float, target: float, speed: float, delta: float) -> float:
+	return lerpf(current, target, 1.0 - exp(-speed * delta))
+
+# Remet à plat l'état amorti (nouvelle carte / réaction) pour éviter de reporter
+# un tilt ou un arc résiduel sur la carte suivante.
+func _reset_anim_state() -> void:
+	_drag_velocity = 0.0
+	_y_offset = 0.0
+	_rot_offset = 0.0
+	_rot_offset_y = 0.0
+
 func _apply_drag() -> void:
-	_card_panel.position = _card_base_pos + Vector2(_current_drag, 0)
-	_card_panel.rotation = deg_to_rad(_current_drag * 0.045)
+	_card_panel.position = _card_base_pos + Vector2(_current_drag, _y_offset)
+	_card_panel.rotation = deg_to_rad(_rot_offset + _rot_offset_y)
 
 # ── Swipe ────────────────────────────────────────────────────────────
 
-func _on_swipe_progress(drag_px: float) -> void:
+func _on_swipe_progress(drag_px: float, velocity_px_s: float) -> void:
 	if not _can_swipe or _reaction_visible or not _accepts_input():
 		return
 	if _snap_tween and _snap_tween.is_valid():
 		_snap_tween.kill()
+	_drag_velocity = velocity_px_s
 	_set_drag(drag_px)
 
 # Relâchement sous le seuil : la carte revient au centre (snap-back Reigns)
@@ -270,6 +336,9 @@ func _on_drag_released() -> void:
 		return
 	if _snap_tween and _snap_tween.is_valid():
 		_snap_tween.kill()
+	# Snap-back (BlendCardToCentre) : la cible de drag retombe à 0, la vélocité
+	# s'annule → tilt-position et tilt-vélocité reviennent au centre via _process.
+	_drag_velocity = 0.0
 	_snap_tween = create_tween()
 	_snap_tween.tween_method(_set_drag, _current_drag, 0.0, 0.18) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
@@ -279,8 +348,10 @@ func _on_tapped() -> void:
 		_dismiss_reaction()
 
 func _set_drag(drag_px: float) -> void:
+	# Met à jour la cible de drag et les affordances (bords, chips, barres).
+	# La transform est appliquée par _process (modèle amorti) ; le tween de
+	# snap-back pilote ce setter, _process suit la valeur.
 	_current_drag = drag_px
-	_apply_drag()
 
 	var lean: float = min(1.0, abs(_current_drag) / SWIPE_THRESHOLD)
 	_edge_left.modulate.a = lean if _current_drag < -10.0 else 0.0
@@ -379,6 +450,7 @@ func show_reaction(card: Dictionary, is_left: bool, ctx: Context) -> bool:
 	_question.text = text
 	_question.add_theme_font_override("font", FONT_SPECTRAL_ITALIC)
 	_current_drag = 0.0
+	_reset_anim_state()
 	_card_panel.rotation = 0.0
 	_choices.visible = false
 	_entry_pending = true

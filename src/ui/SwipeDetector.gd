@@ -8,7 +8,9 @@ extends Node
 
 signal swiped_left
 signal swiped_right
-signal swipe_progress(drag_px: float)
+# velocity_px_s : vitesse horizontale instantanée du doigt (px/s), signée.
+# Sert au tilt basé sur la vélocité (CardAnimator.HandleVelocityBasedRotation).
+signal swipe_progress(drag_px: float, velocity_px_s: float)
 signal drag_released
 signal tapped
 
@@ -18,6 +20,8 @@ const MAX_SWIPE_ANGLE = 45.0
 
 var _drag_start: Vector2 = Vector2.ZERO
 var _is_dragging: bool = false
+var _last_x: float = 0.0
+var _last_time_us: int = 0
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
@@ -44,9 +48,18 @@ func _input(event: InputEvent) -> void:
 func _start_drag(pos: Vector2) -> void:
 	_drag_start = pos
 	_is_dragging = true
+	_last_x = pos.x
+	_last_time_us = Time.get_ticks_usec()
 
 func _update_progress(pos: Vector2) -> void:
-	swipe_progress.emit(pos.x - _drag_start.x)
+	var now_us := Time.get_ticks_usec()
+	var dt := float(now_us - _last_time_us) / 1_000_000.0
+	var velocity := 0.0
+	if dt > 0.0:
+		velocity = (pos.x - _last_x) / dt
+	_last_x = pos.x
+	_last_time_us = now_us
+	swipe_progress.emit(pos.x - _drag_start.x, velocity)
 
 func _end_drag(pos: Vector2) -> void:
 	if not _is_dragging:
