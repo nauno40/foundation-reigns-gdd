@@ -97,16 +97,16 @@ func show_death(ctx: Context, death_type: String, cover_name: String,
 	# Entrée animée : background fade + stats count-up
 	var tw = create_tween()
 	tw.set_parallel()
-	tw.tween_property(_bg, "modulate:a", 1.0, 0.35) \
+	tw.tween_property(_bg, "modulate:a", 1.0, s.death_bg_fade) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	tw.tween_method(_animate_stat_turns.bind(turns, _stat_values["DÉCISIONS PRISES"]),
-		0.0, float(turns), 0.7).set_delay(0.15) \
+		0.0, float(turns), s.death_stat_dur).set_delay(s.death_stat_delay) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	tw.tween_method(_animate_stat_years.bind(years, _stat_values["ANNÉES COUVERTES"]),
-		0.0, float(years), 0.7).set_delay(0.25) \
+		0.0, float(years), s.death_stat_dur).set_delay(s.death_stat_delay + s.death_stat_step) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	tw.tween_method(_animate_stat_score.bind(reign_score, _stat_values["SCORE DU RÈGNE"]),
-		0.0, float(reign_score), 0.7).set_delay(0.35) \
+		0.0, float(reign_score), s.death_stat_dur).set_delay(s.death_stat_delay + 2 * s.death_stat_step) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
 	# Révélation séquencée : cause+titre → sous-titre → snapshot → message Seldon.

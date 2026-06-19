@@ -32,6 +32,9 @@ extends Resource
 @export var death_text_in := 0.4
 @export var death_list_stagger := 0.08
 @export var death_item_in := 0.3
+@export var death_stat_dur := 0.7
+@export var death_stat_delay := 0.15
+@export var death_stat_step := 0.1
 
 @export_group("Map")
 @export var map_tint_dur := 0.45
