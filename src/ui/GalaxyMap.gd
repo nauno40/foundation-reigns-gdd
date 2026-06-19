@@ -42,6 +42,7 @@ const PLANET_POS = {
 var _game_data: FoundationGameData
 var _ctx_ref: Context
 var _buttons: Dictionary = {}
+var _planet_color: Dictionary = {}  # planet_id -> Color courante
 var _travel_btn: Button
 var _popup_planet: String = ""
 
@@ -115,22 +116,31 @@ func _position_planets() -> void:
 		var pos: Vector2 = PLANET_POS[planet_id]
 		holder.position = Vector2(pos.x * area.x - 24, pos.y * area.y - 8)
 
+func state_color(state: int) -> Color:
+	match state:
+		1: return COLOR_ALLIED
+		-1: return COLOR_HOSTILE
+		_: return COLOR_NEUTRAL
+
 func update(ctx: Context) -> void:
 	_ctx_ref = ctx
 	for planet_id in _buttons:
 		var state: int = ctx.get_var("planet_%s_state" % planet_id, 0)
-		_style_planet(_buttons[planet_id], state)
+		var to_c := state_color(state)
+		var from_c: Color = _planet_color.get(planet_id, to_c)
+		if from_c == to_c:
+			_style_planet(_buttons[planet_id], to_c)
+		else:
+			Anim.color_to(func(c: Color): _style_planet(_buttons[planet_id], c),
+				from_c, to_c, Anim.settings.map_tint_dur)
+		_planet_color[planet_id] = to_c
 
 func _on_travel_pressed() -> void:
 	_popup.hide()
 	jump_requested.emit(_popup_planet)
 	hide()
 
-func _style_planet(btn: Button, state: int) -> void:
-	var color := COLOR_NEUTRAL
-	match state:
-		1: color = COLOR_ALLIED
-		-1: color = COLOR_HOSTILE
+func _style_planet(btn: Button, color: Color) -> void:
 	for style_name in ["normal", "hover", "pressed"]:
 		var sb := StyleBoxFlat.new()
 		sb.bg_color = color
@@ -148,12 +158,12 @@ func _on_planet_pressed(planet_id: String) -> void:
 
 	var state: int = _ctx_ref.get_var("planet_%s_state" % planet_id, 0)
 	var state_text := {1: "Alignée", 0: "Neutre", -1: "Hostile"}
-	var state_color := {1: COLOR_ALLIED, 0: COLOR_NEUTRAL, -1: COLOR_HOSTILE}
+	var state_colors := {1: COLOR_ALLIED, 0: COLOR_NEUTRAL, -1: COLOR_HOSTILE}
 
 	_popup_name.text = planet.get("name", planet_id.capitalize())
 	_popup_faction.text = "Faction : " + str(planet.get("faction", "—"))
 	_popup_state.text = "État : " + state_text.get(state, "?")
-	_popup_state.add_theme_color_override("font_color", state_color.get(state, ThemeColors.INK_DIM))
+	_popup_state.add_theme_color_override("font_color", state_colors.get(state, ThemeColors.INK_DIM))
 	_popup.show()
 
 	# Mémoriser la planète et afficher le bouton VOYAGER si ce n'est pas
