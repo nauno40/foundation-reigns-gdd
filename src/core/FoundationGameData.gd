@@ -12,6 +12,7 @@ var moods: Dictionary = {}
 var seldon_crises: Dictionary = {}
 var link_aliases: Dictionary = {}
 var roles: Dictionary = {}
+var deck_unlocks: Dictionary = {}   # id -> {id, name, subtitle}
 
 var is_loaded: bool = false
 
@@ -28,6 +29,11 @@ func load_all() -> bool:
 	ok = ok and _load_dict("res://data/seldon_crises.json", seldon_crises)
 	ok = ok and _load_dict("res://data/link_aliases.json", link_aliases)
 	ok = ok and _load_dict("res://data/roles.json", roles)
+	var _du: Array = []
+	if _load_array("res://data/deck_unlocks.json", _du):
+		for e in _du:
+			if e is Dictionary and e.has("id"):
+				deck_unlocks[str(e["id"])] = e
 	if ok:
 		_index_by_deck()
 		is_loaded = true
