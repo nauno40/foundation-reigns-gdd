@@ -19,6 +19,7 @@ const SWIPE_THRESHOLD := 92.0      # = SwipeDetector.COMMIT_THRESHOLD
 const PREVIEW_THRESHOLD := 24.0
 const CARD_MAX_W := 360.0
 const MIN_REACTION_MS := 400       # anti-balayage accidentel de la réaction
+const HOLO_GRID_CELL := 22.0      # = taille de cellule de la grille dans portrait_holo.gdshader (garder synchronisé)
 
 # Modèle d'animation amorti, porté de Reigns 3K (CardAnimator / CardAnimationSettings,
 # voir reference/design-docs/card-animation-model.md). Le drag horizontal suit le doigt
@@ -283,8 +284,14 @@ func _layout_card() -> void:
 		_card_panel.position.y = _card_base_pos.y + s.card_offscreen_height
 		var entry = create_tween().set_parallel()
 		entry.tween_property(_card_panel, "modulate:a", 1.0, 0.18)
-		entry.tween_property(_card_panel, "scale", Vector2.ONE, s.card_entry_dur) \
-			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		# Quand le flip est actif, _play_flip_in() pilote scale:x (0→1) ;
+		# l'entrée n'anime que scale:y pour éviter le conflit entre les deux tweens.
+		if _flip_pending:
+			entry.tween_property(_card_panel, "scale:y", 1.0, s.card_entry_dur) \
+				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		else:
+			entry.tween_property(_card_panel, "scale", Vector2.ONE, s.card_entry_dur) \
+				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 		entry.tween_property(_card_panel, "position:y", _card_base_pos.y, s.card_entry_dur) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 		if _flip_pending:
@@ -317,7 +324,7 @@ func _process(delta: float) -> void:
 	if holo_mat:
 		var t := float(Time.get_ticks_msec()) / 1000.0
 		holo_mat.set_shader_parameter("grid_offset",
-			Vector2(t * s.parallax_drift_speed * 22.0 + _current_drag * s.parallax_swipe_factor, 0.0))
+			Vector2(t * s.parallax_drift_speed * HOLO_GRID_CELL + _current_drag * s.parallax_swipe_factor, 0.0))
 
 # Remet à plat l'état amorti (nouvelle carte / réaction) pour éviter de reporter
 # un tilt ou un arc résiduel sur la carte suivante.
