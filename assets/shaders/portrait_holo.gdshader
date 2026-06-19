@@ -4,6 +4,7 @@ shader_type canvas_item;
 // masquée radialement + scanlines sombres 2px/4px. Une seule passe.
 
 uniform vec2 rect_size = vec2(324.0, 190.0);
+uniform vec2 grid_offset = vec2(0.0);
 
 void fragment() {
 	vec2 uv = UV;
@@ -17,7 +18,7 @@ void fragment() {
 
 	// grille 22px masquée radialement (70% à 50%,40%)
 	vec2 px = uv * rect_size;
-	vec2 cell = mod(px, 22.0);
+	vec2 cell = mod(px + grid_offset, 22.0);
 	float line = clamp(step(cell.x, 1.0) + step(cell.y, 1.0), 0.0, 1.0);
 	float mask = 1.0 - smoothstep(0.22, 0.58, distance(uv, vec2(0.5, 0.40)));
 	col += cyan * 0.08 * line * mask;

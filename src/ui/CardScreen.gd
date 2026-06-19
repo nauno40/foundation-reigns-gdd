@@ -312,6 +312,13 @@ func _process(delta: float) -> void:
 	_rot_offset_y = Anim.smooth(_rot_offset_y, target_rot_y, s.card_rot_y_speed, delta)
 	_apply_drag()
 
+	# Dérive lente de la grille holo (parallaxe Reigns) + léger décalage au swipe
+	var holo_mat := _holo.material as ShaderMaterial
+	if holo_mat:
+		var t := float(Time.get_ticks_msec()) / 1000.0
+		holo_mat.set_shader_parameter("grid_offset",
+			Vector2(t * s.parallax_drift_speed * 22.0 + _current_drag * s.parallax_swipe_factor, 0.0))
+
 # Remet à plat l'état amorti (nouvelle carte / réaction) pour éviter de reporter
 # un tilt ou un arc résiduel sur la carte suivante.
 func _reset_anim_state() -> void:
