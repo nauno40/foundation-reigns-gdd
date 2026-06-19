@@ -4,6 +4,7 @@ extends Control
 # Écran de mort du prototype : cause, identité de l'Orateur, message
 # holographique de Seldon, grille de stats 2×2, snapshot des 4
 # ressources avec mini-barres, bouton « Nouveau règne → ».
+# Entrée animée : background fade + éléments staggered.
 
 const ThemeColors = preload("res://src/ui/ThemeColors.gd")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
@@ -11,6 +12,7 @@ const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 
 signal continue_pressed
 
+@onready var _bg: ColorRect = %Background
 @onready var _cause: Label = %Cause
 @onready var _speaker: Label = %SpeakerName
 @onready var _subtitle: Label = %Subtitle
@@ -24,6 +26,7 @@ var _stat_values: Dictionary = {}
 func _ready() -> void:
 	_btn.pressed.connect(func(): continue_pressed.emit())
 	_build_stats_grid()
+	_bg.modulate.a = 0.0
 
 func _build_stats_grid() -> void:
 	for label in ["DÉCISIONS PRISES", "ANNÉES COUVERTES", "SCORE DU RÈGNE", "PLAN DE SELDON"]:
@@ -59,6 +62,14 @@ func _build_stats_grid() -> void:
 
 func show_death(ctx: Context, death_type: String, cover_name: String,
 		meta: Dictionary = {}) -> void:
+	_bg.modulate.a = 0.0
+
+	# Masquer les éléments textuels pour la révélation séquencée.
+	var s := Anim.settings
+	for n in [_cause, _speaker, _subtitle]:
+		n.modulate.a = 0.0
+	_seldon_text.modulate.a = 0.0
+
 	var year = ctx.get_var("year", 1)
 	var y_start = ctx.get_var("y_start", 1)
 	var age = ctx.get_var("age", 50)
@@ -77,12 +88,43 @@ func show_death(ctx: Context, death_type: String, cover_name: String,
 
 	# Score du règne : barème GDD (accomplissements, pas la durée).
 	var reign_score = int(meta.get("score", 0))
-	_stat_values["DÉCISIONS PRISES"].text = str(turns)
-	_stat_values["ANNÉES COUVERTES"].text = "%d ans" % max(year - y_start, 0)
-	_stat_values["SCORE DU RÈGNE"].text = "%d pts" % reign_score
-	_stat_values["PLAN DE SELDON"].text = "dévié de %.1f %%" % randf_range(2.0, 8.0)
+	var years = max(year - y_start, 0)
+	var seldon_dev = randf_range(2.0, 8.0)
+	_stat_values["PLAN DE SELDON"].text = "dévié de %.1f %%" % seldon_dev
 
 	_build_snapshot(ctx)
+
+	# Entrée animée : background fade + stats count-up
+	var tw = create_tween()
+	tw.set_parallel()
+	tw.tween_property(_bg, "modulate:a", 1.0, 0.35) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	tw.tween_method(_animate_stat_turns.bind(turns, _stat_values["DÉCISIONS PRISES"]),
+		0.0, float(turns), 0.7).set_delay(0.15) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	tw.tween_method(_animate_stat_years.bind(years, _stat_values["ANNÉES COUVERTES"]),
+		0.0, float(years), 0.7).set_delay(0.25) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	tw.tween_method(_animate_stat_score.bind(reign_score, _stat_values["SCORE DU RÈGNE"]),
+		0.0, float(reign_score), 0.7).set_delay(0.35) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+
+	# Révélation séquencée : cause+titre → sous-titre → snapshot → message Seldon.
+	Anim.reveal_list([_cause, _speaker, _subtitle],
+		s.death_list_stagger, s.death_text_in)
+	var snap_items: Array = _snapshot.get_children()
+	Anim.reveal_list(snap_items, s.death_list_stagger, s.death_item_in)
+	Anim.fade_in(_seldon_text, s.death_text_in,
+		s.death_list_stagger * (3 + snap_items.size()))
+
+func _animate_stat_turns(v: float, target: int, label: Label) -> void:
+	label.text = str(min(roundi(v), target))
+
+func _animate_stat_years(v: float, target: int, label: Label) -> void:
+	label.text = "%d ans" % min(roundi(v), target)
+
+func _animate_stat_score(v: float, target: int, label: Label) -> void:
+	label.text = "%d pts" % min(roundi(v), target)
 
 func _build_snapshot(ctx: Context) -> void:
 	for child in _snapshot.get_children():
@@ -128,4 +170,5 @@ func _build_snapshot(ctx: Context) -> void:
 		fill.anchor_right = clampf(val / 100.0, 0.0, 1.0)
 		fill_holder.add_child(fill)
 
+		col.modulate.a = 0.0
 		_snapshot.add_child(col)
