@@ -16,9 +16,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Foundation Reigns"
 config/description="Foundation x Reigns: A narrative card game in Asimov's Foundation universe"
-run/main_scene="res://scenes/Main.tscn"
-config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+run/main_scene="res://scenes/MainMenu.tscn"
+config/features=PackedStringArray("4.7", "Mobile")
+config/icon="uid://drrcc1sdeon6k"
+
+[autoload]
+
+Globals="*res://src/ui/Globals.gd"
+Anim="*res://src/ui/Anim.gd"
 
 [display]
 
@@ -36,3 +41,4 @@ enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
