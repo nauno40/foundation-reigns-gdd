@@ -1,6 +1,7 @@
 extends Node
 
 const EraUtils = preload("res://src/ui/EraUtils.gd")
+const DECK_UNLOCK_SCENE = preload("res://scenes/DeckUnlockScreen.tscn")
 
 const NATURAL_DEATH_CARD_ID = 9001
 
@@ -123,8 +124,25 @@ func _next_card() -> void:
 	var bias = _legitimacy.get_mood_bias()
 	_ctx.set_var("mood", bias if bias != "" else moods.get("default", "neutral"))
 
+	# Notification de déblocage de deck (jalon, première apparition).
+	var unlock := DeckUnlock.pending_unlock(_current_card, _ctx, _game_data.deck_unlocks)
+	if not unlock.is_empty():
+		_ctx.set_var("deck_unlocked_" + str(unlock["id"]), 1, true)
+		_show_deck_unlock(unlock)
+		_awaiting_reaction = false
+		return
 	_card_screen.show_card(_current_card, _ctx)
 	_awaiting_reaction = false
+
+# Affiche l'overlay de déblocage ; à la fermeture, montre la carte en attente.
+func _show_deck_unlock(entry: Dictionary) -> void:
+	var screen = DECK_UNLOCK_SCENE.instantiate()
+	add_child(screen)
+	screen.continue_pressed.connect(func():
+		screen.queue_free()
+		_card_screen.show_card(_current_card, _ctx)
+	, CONNECT_ONE_SHOT)
+	screen.show_unlock(entry)
 
 func _on_choice_made(is_left: bool) -> void:
 	if _awaiting_reaction:
