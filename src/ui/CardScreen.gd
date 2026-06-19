@@ -24,14 +24,7 @@ const MIN_REACTION_MS := 400       # anti-balayage accidentel de la réaction
 # voir reference/design-docs/card-animation-model.md). Le drag horizontal suit le doigt
 # 1:1 ; le tilt et l'arc vertical sont amortis vers leur cible chaque frame (DoUpdate),
 # et un tilt supplémentaire dépend de la vélocité du flick (HandleVelocityBasedRotation).
-# Valeurs calées au ressenti (phase 2) en attendant l'extraction AssetRipper (phase 3).
-const Y_OFFSET_FACTOR := -0.05     # arc vertical : la carte se soulève avec le drag (y vers le haut = négatif)
-const Y_OFFSET_SPEED := 12.0       # vitesse d'amortissement de l'arc vertical
-const ROT_OFFSET_FACTOR := 0.045   # tilt ∝ position du drag (deg/px) — = ancien tilt linéaire
-const ROT_OFFSET_SPEED := 14.0     # vitesse d'amortissement du tilt-position
-const ROT_Y_FACTOR := 0.0035       # tilt ∝ vélocité du flick (deg par px/s)
-const ROT_Y_SPEED := 10.0          # vitesse d'amortissement du tilt-vélocité (traîne un peu)
-const MAX_ROT_VELOCITY := 8.0      # borne du tilt-vélocité (deg)
+# Les tunables vivent dans Anim.settings (AnimSettings resource) — voir anim_settings.tres.
 
 @onready var _era_label: Label = %EraLabel
 @onready var _seal: Button = %Seal
@@ -79,6 +72,7 @@ var _flicker_timer: Timer
 var _chip_base_style: StyleBoxFlat
 var _snap_tween: Tween
 var _entry_pending: bool = false
+var _flip_pending: bool = false
 var _reaction_shown_ms: int = 0
 var _question_font_regular: Font
 
@@ -145,6 +139,8 @@ func _do_flicker() -> void:
 
 func show_card(card: Dictionary, ctx: Context) -> void:
 	_current_card = card
+	_flip_pending = bool(card.get("flip_intro", false)) \
+		or card.get("deck", "") == "seldon_vault"
 	_ctx_ref = ctx
 	_can_swipe = true
 	_current_drag = 0.0
@@ -275,15 +271,18 @@ func _layout_card() -> void:
 
 	if _entry_pending:
 		_entry_pending = false
+		var s := Anim.settings
 		_card_panel.scale = Vector2(0.95, 0.95)
+		_card_panel.position.y = _card_base_pos.y + s.card_offscreen_height
 		var entry = create_tween().set_parallel()
 		entry.tween_property(_card_panel, "modulate:a", 1.0, 0.18)
-		entry.tween_property(_card_panel, "scale", Vector2.ONE, 0.22) \
+		entry.tween_property(_card_panel, "scale", Vector2.ONE, s.card_entry_dur) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-		if _reaction_visible:
-			_card_panel.position.y = _card_base_pos.y + 10.0
-			entry.tween_property(_card_panel, "position:y", _card_base_pos.y, 0.28) \
-				.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		entry.tween_property(_card_panel, "position:y", _card_base_pos.y, s.card_entry_dur) \
+			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+		if _flip_pending:
+			_flip_pending = false
+			_play_flip_in()
 
 	for edge in [_edge_left, _edge_right]:
 		edge.size = Vector2(area.x * 0.42, 0)
@@ -296,17 +295,15 @@ func _layout_card() -> void:
 func _process(delta: float) -> void:
 	if not _can_swipe or _reaction_visible or not is_instance_valid(_card_panel):
 		return
-	var target_y := _current_drag * Y_OFFSET_FACTOR
-	var target_rot := _current_drag * ROT_OFFSET_FACTOR
-	var target_rot_y := clampf(_drag_velocity * ROT_Y_FACTOR, -MAX_ROT_VELOCITY, MAX_ROT_VELOCITY)
-	_y_offset = _smooth(_y_offset, target_y, Y_OFFSET_SPEED, delta)
-	_rot_offset = _smooth(_rot_offset, target_rot, ROT_OFFSET_SPEED, delta)
-	_rot_offset_y = _smooth(_rot_offset_y, target_rot_y, ROT_Y_SPEED, delta)
+	var s := Anim.settings
+	var target_y := _current_drag * s.card_y_offset_factor
+	var target_rot := _current_drag * s.card_rot_offset_factor
+	var target_rot_y := clampf(_drag_velocity * s.card_rot_y_factor,
+		-s.card_max_rot_velocity, s.card_max_rot_velocity)
+	_y_offset = Anim.smooth(_y_offset, target_y, s.card_y_offset_speed, delta)
+	_rot_offset = Anim.smooth(_rot_offset, target_rot, s.card_rot_offset_speed, delta)
+	_rot_offset_y = Anim.smooth(_rot_offset_y, target_rot_y, s.card_rot_y_speed, delta)
 	_apply_drag()
-
-# Exp-smoothing indépendant du framerate.
-func _smooth(current: float, target: float, speed: float, delta: float) -> float:
-	return lerpf(current, target, 1.0 - exp(-speed * delta))
 
 # Remet à plat l'état amorti (nouvelle carte / réaction) pour éviter de reporter
 # un tilt ou un arc résiduel sur la carte suivante.
@@ -467,3 +464,28 @@ func _dismiss_reaction() -> void:
 		return
 	_reaction_visible = false
 	reaction_dismissed.emit()
+
+# Flip-in 2D : la carte démarre « sur la tranche » (scale X 0) et s'ouvre.
+func _play_flip_in() -> void:
+	var dur := Anim.settings.card_flip_dur
+	_card_panel.scale.x = 0.0
+	var tw := create_tween()
+	tw.tween_property(_card_panel, "scale:x", 1.0, dur) \
+		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+
+# Wobble + chute de la carte (CardAnimator.TriggerDefeat), avant l'écran de mort.
+func play_defeat() -> void:
+	_can_swipe = false
+	var s := Anim.settings
+	var tw := create_tween()
+	tw.tween_interval(s.card_defeat_delay)
+	# tremblement
+	tw.tween_property(_card_panel, "rotation", deg_to_rad(s.card_defeat_rot * 0.3), 0.06)
+	tw.tween_property(_card_panel, "rotation", deg_to_rad(-s.card_defeat_rot * 0.3), 0.06)
+	# chute
+	tw.set_parallel()
+	tw.tween_property(_card_panel, "position",
+		_card_panel.position + Vector2(s.card_defeat_move.x, s.card_defeat_move.y), 0.5) \
+		.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
+	tw.tween_property(_card_panel, "rotation", deg_to_rad(s.card_defeat_rot), 0.5)
+	tw.tween_property(_card_panel, "modulate:a", 0.0, 0.4).set_delay(0.1)
