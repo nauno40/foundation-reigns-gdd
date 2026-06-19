@@ -14,6 +14,7 @@ const DEATH_SCREEN = preload("res://scenes/DeathScreen.tscn")
 const GALAXY_MAP   = preload("res://scenes/GalaxyMap.tscn")
 const OPTIONS      = preload("res://scenes/OptionsScreen.tscn")
 const MAIN_MENU    = preload("res://scenes/MainMenu.tscn")
+const DECK_UNLOCK  = preload("res://scenes/DeckUnlockScreen.tscn")
 
 var _stage: Control
 var _status: Label
@@ -108,6 +109,7 @@ func _build_ui() -> void:
 	_btn(list, "Menu : splash", _open_menu)
 	_btn(list, "Options : entrée", _open_options)
 	_btn(list, "Options : sortie", _close_options_animated)
+	_btn(list, "Deck débloqué", _open_unlock)
 	_btn(list, "← Retour carte", _close_overlay)
 
 	# Zone de scène (droite)
@@ -221,3 +223,10 @@ func _close_options_animated() -> void:
 		_say("Options : sortie en fondu")
 	else:
 		_say("Ouvre d'abord « Options : entrée ».")
+
+func _open_unlock() -> void:
+	var u := DECK_UNLOCK.instantiate()
+	_open_overlay(u)
+	await get_tree().process_frame
+	u.show_unlock({"name": "Réseau d'espions", "subtitle": "Vos agents dans l'ombre"})
+	_say("Deck débloqué : empilement de cartes + nom (modal, tap pour fermer)")
