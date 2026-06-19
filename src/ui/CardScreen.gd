@@ -67,6 +67,7 @@ var _y_offset: float = 0.0          # offsets amortis (état du modèle CardAnim
 var _rot_offset: float = 0.0        # tilt amorti basé sur la position (deg)
 var _rot_offset_y: float = 0.0      # tilt amorti basé sur la vélocité (deg)
 var _reaction_visible: bool = false
+var _shown_year: int = -1              # dernière année affichée (−1 = jamais)
 var _card_base_pos: Vector2 = Vector2.ZERO
 var _flicker_timer: Timer
 var _chip_base_style: StyleBoxFlat
@@ -203,7 +204,13 @@ func _update_info(ctx: Context) -> void:
 	var cover = ctx.get_var("cover_name", "Inconnu")
 	var era_info = EraUtils.get_era_info(year)
 	_era_label.text = (era_info.get("label", "") + " · " + era_info.get("sub", "")).to_upper()
-	_year_age.text = "An %d · %d ans" % [year, age]
+	# Défilement animé du numéro d'année (TweenYearRoutine)
+	if _shown_year < 0 or _shown_year == year:
+		_year_age.text = "An %d · %d ans" % [year, age]
+	else:
+		Anim.count_to(_year_age, _shown_year, year,
+			func(v: float, _t: int): return "An %s · %d ans" % [Anim.format_count(v, year), age])
+	_shown_year = year
 	_cover_text.text = "Couverture : " + str(cover)
 
 func _update_bars(ctx: Context) -> void:
