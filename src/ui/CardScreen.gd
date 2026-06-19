@@ -503,3 +503,4 @@ func play_defeat() -> void:
 		.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
 	tw.tween_property(_card_panel, "rotation", deg_to_rad(s.card_defeat_rot), 0.5)
 	tw.tween_property(_card_panel, "modulate:a", 0.0, 0.4).set_delay(0.1)
+	await tw.finished

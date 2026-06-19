@@ -16,15 +16,21 @@ var _seldon: SeldonSystem
 @onready var _card_screen = %CardScreen
 @onready var _death_screen = %DeathScreen
 @onready var _galaxy_map = %GalaxyMap
+@onready var _briefing_screen = %BriefingScreen
 
 var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
 var _pending_death: String = ""
 
 func _ready() -> void:
+	%LoadingOverlay.show()
+	%LoadingMessage.text = "CHARGEMENT"
+	await get_tree().process_frame
+
 	_game_data = FoundationGameData.new()
 	if not _game_data.load_all():
 		push_error("Main: failed to load game data")
+		%LoadingMessage.text = "ÉCHEC DE CHARGEMENT"
 		return
 
 	_ctx = Context.new()
@@ -35,15 +41,25 @@ func _ready() -> void:
 	_meta = MetaProgression.new()
 	_meta.load()
 
-	if _save.has_save():
-		_save.load(_ctx)
-	else:
-		_initialize_new_reign(100)
-		_game_data.seed_planet_states(_ctx)
-		_game_data.seed_faction_relations(_ctx)
-		_ctx.set_var("location", "terminus", true)
+	var mode = Globals.start_mode
+	if mode == Globals.StartMode.NONE:
+		mode = Globals.StartMode.CONTINUE if _save.has_save() else Globals.StartMode.NEW_GAME
 
-	_dev_parse_args()
+	match mode:
+		Globals.StartMode.CONTINUE:
+			_save.load(_ctx)
+		Globals.StartMode.NEW_GAME:
+			_initialize_new_reign(100)
+			_game_data.seed_planet_states(_ctx)
+			_game_data.seed_faction_relations(_ctx)
+			_ctx.set_var("location", "terminus", true)
+
+	if Globals.dev_deck:
+		_ctx.set_var("dev_deck", Globals.dev_deck)
+		print("DEV: deck filtré sur '%s'" % Globals.dev_deck)
+	if Globals.difficulty != "normal":
+		_ctx.set_var("difficulty", Globals.difficulty, true)
+		print("DEV: difficulté '%s'" % Globals.difficulty)
 
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_card_screen.setup(_game_data)
@@ -55,9 +71,15 @@ func _ready() -> void:
 	_death_screen.continue_pressed.connect(_on_new_reign)
 	_galaxy_map.visibility_changed.connect(_on_map_visibility_changed)
 	_galaxy_map.jump_requested.connect(_on_jump_requested)
+	_briefing_screen.dismissed.connect(_on_briefing_dismissed)
 
+	%LoadingOverlay.hide()
 	_generate_equ_watermark()
-	_next_card()
+	if mode == Globals.StartMode.NEW_GAME:
+		_briefing_screen.show_briefing()
+		_card_screen.hide()
+	else:
+		_next_card()
 
 func _generate_equ_watermark() -> void:
 	var syms = "∫ ∂ Ψ Σ ∇ λ Φ ε δ → ∞ ± ∮ ≈ √ μ Δ ⟨ ⟩ π τ ω".split(" ")
@@ -76,24 +98,6 @@ func _initialize_new_reign(legitimacy_start: int) -> void:
 	var cover = _pick_cover(1)
 	_ctx.set_var("cover_name", cover.get("name", "Inconnu"))
 	_ctx.apply_cover(cover)
-
-func _dev_parse_args() -> void:
-	var args = OS.get_cmdline_args()
-	for i in range(args.size()):
-		match args[i]:
-			"--deck":
-				if i + 1 < args.size():
-					var deck = args[i + 1]
-					_ctx.set_var("dev_deck", deck)
-					print("DEV: deck filtré sur '%s'" % deck)
-			"--difficulty":
-				if i + 1 < args.size():
-					var diff = args[i + 1]
-					if Context.DIFFICULTY_MULT.has(diff):
-						_ctx.set_var("difficulty", diff, true)
-						print("DEV: difficulté '%s' (×%s)" % [diff, Context.DIFFICULTY_MULT[diff]])
-					else:
-						push_warning("Main: difficulté inconnue '%s' (doux|normal|brutal)" % diff)
 
 func _pick_cover(year: int) -> Dictionary:
 	var era_id = EraUtils.get_era_for_year(year)
@@ -152,12 +156,13 @@ func _on_choice_made(is_left: bool) -> void:
 	# La suite (mort ou carte suivante) attend que le joueur balaie la
 	# réaction — rythme du joueur, comme dans Reigns.
 	_pending_death = ""
+	var current_link = str(_ctx.get_var("link", ""))
 	if _ctx.is_game_over():
 		if _ctx.get_var("dying", 0) == 1:
 			_pending_death = _parse_death_type()
+		elif current_link != "" and current_link != "0":
+			pass
 		else:
-			# Mort par ressource : la scène narrative du deck deaths joue
-			# d'abord (jeu de base) ; son épilogue posera dying = 1.
 			var death_card = _model.find_death_card()
 			if death_card.is_empty():
 				_pending_death = _parse_death_type()
@@ -217,6 +222,8 @@ func _show_death_screen(death_type: String) -> void:
 	# avant le respawn, sur le type de mort canonique.
 	var meta_result = _meta.record_reign(
 		_ctx, RespawnSystem.normalize_death_type(death_type))
+	# Wobble + chute de la carte (CardAnimator.TriggerDefeat) avant l'écran de mort.
+	await _card_screen.play_defeat()
 	_death_screen.show_death(_ctx, death_type, cover, meta_result)
 	_death_screen.show()
 	_card_screen.hide()
@@ -259,3 +266,8 @@ func _on_jump_requested(planet_id: String) -> void:
 func _on_map_visibility_changed() -> void:
 	if not _galaxy_map.visible and not _death_screen.visible:
 		_card_screen.show()
+
+func _on_briefing_dismissed() -> void:
+	_briefing_screen.hide()
+	_card_screen.show()
+	_next_card()
