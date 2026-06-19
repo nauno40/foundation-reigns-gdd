@@ -17,6 +17,7 @@ var _name_label: Label
 var _sub_label: Label
 var _hint: Label
 var _cards: Array = []
+var _stack_tween: Tween
 var _can_continue: bool = false
 
 func _ready() -> void:
@@ -86,7 +87,10 @@ func show_unlock(entry: Dictionary) -> void:
 	await get_tree().process_frame   # _stack a sa taille
 	var s := Anim.settings
 	var base := (_stack.size - CARD_SIZE) * 0.5
+	if _stack_tween and _stack_tween.is_valid():
+		_stack_tween.kill()
 	var tw := create_tween().set_parallel()
+	_stack_tween = tw
 	for i in range(CARD_COUNT):
 		var card := _mk_card()
 		_stack.add_child(card)
@@ -101,7 +105,7 @@ func show_unlock(entry: Dictionary) -> void:
 		tw.tween_property(card, "rotation", final_rot, s.unlock_card_fly) \
 			.set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 		_cards.append(card)
-	await get_tree().create_timer(CARD_COUNT * s.unlock_stagger + s.unlock_card_fly).timeout
+	await get_tree().create_timer((CARD_COUNT - 1) * s.unlock_stagger + s.unlock_card_fly).timeout
 	Anim.reveal_list([_name_label, _sub_label, _hint], s.unlock_stagger, s.unlock_text_in)
 	_can_continue = true
 
@@ -113,3 +117,4 @@ func _unhandled_input(event: InputEvent) -> void:
 			or event.is_action_pressed("ui_accept") \
 			or event.is_action_pressed("ui_left") or event.is_action_pressed("ui_right"):
 		continue_pressed.emit()
+		get_viewport().set_input_as_handled()
