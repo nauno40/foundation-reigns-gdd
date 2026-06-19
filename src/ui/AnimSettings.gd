@@ -51,3 +51,10 @@ extends Resource
 @export var options_in := 0.3
 @export var options_out := 0.2
 @export var options_tab_stagger := 0.06
+
+@export_group("Unlock")
+@export var unlock_card_fly := 0.4
+@export var unlock_stagger := 0.09
+@export var unlock_card_offset := 14.0
+@export var unlock_card_tilt := 5.0
+@export var unlock_text_in := 0.35
