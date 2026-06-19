@@ -128,6 +128,7 @@ func _next_card() -> void:
 	var unlock := DeckUnlock.pending_unlock(_current_card, _ctx, _game_data.deck_unlocks)
 	if not unlock.is_empty():
 		_ctx.set_var("deck_unlocked_" + str(unlock["id"]), 1, true)
+		_save.save(_ctx)  # persiste le déblocage tout de suite (survie crash pendant l'overlay)
 		_show_deck_unlock(unlock)
 		_awaiting_reaction = false
 		return
