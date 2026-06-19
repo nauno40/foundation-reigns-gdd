@@ -110,6 +110,7 @@ func _on_options() -> void:
 		add_child(_options)
 		_options.back_pressed.connect(_on_options_back)
 	_options.show()
+	_options.animate_in()
 
 func _on_options_back() -> void:
 	if _options:
