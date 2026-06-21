@@ -22,15 +22,23 @@ var _seldon: SeldonSystem
 var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
 var _pending_death: String = ""
+var _loading_tween: Tween
 
 func _ready() -> void:
 	%LoadingOverlay.show()
-	%LoadingMessage.text = "CHARGEMENT"
+	_start_loading_visuals()
 	await get_tree().process_frame
 
-	_game_data = FoundationGameData.new()
-	if not _game_data.load_all():
+	# Parse des données (2586 cartes, ~3 Mo) sur un thread : le thread principal
+	# continue de pomper les frames → l'overlay s'anime au lieu de geler.
+	var thread := Thread.new()
+	thread.start(_load_data_threaded)
+	while thread.is_alive():
+		await get_tree().process_frame
+	var loaded: bool = thread.wait_to_finish()
+	if not loaded:
 		push_error("Main: failed to load game data")
+		_stop_loading_visuals()
 		%LoadingMessage.text = "ÉCHEC DE CHARGEMENT"
 		return
 
@@ -74,6 +82,7 @@ func _ready() -> void:
 	_galaxy_map.jump_requested.connect(_on_jump_requested)
 	_briefing_screen.dismissed.connect(_on_briefing_dismissed)
 
+	_stop_loading_visuals()
 	%LoadingOverlay.hide()
 	_generate_equ_watermark()
 	if mode == Globals.StartMode.NEW_GAME:
@@ -81,6 +90,42 @@ func _ready() -> void:
 		_card_screen.hide()
 	else:
 		_next_card()
+
+# Charge les données hors du thread principal : ne touche QUE _game_data
+# (FileAccess + JSON), aucun accès à l'arbre de scène → thread-safe.
+func _load_data_threaded() -> bool:
+	_game_data = FoundationGameData.new()
+	return _game_data.load_all()
+
+# Habille l'overlay pendant le chargement : grille holographique de fond +
+# points animés « CHARGEMENT… » (tourne sur le thread principal pendant le parse).
+func _start_loading_visuals() -> void:
+	if not %LoadingOverlay.has_node("HoloGrid"):
+		var grid := ColorRect.new()
+		grid.name = "HoloGrid"
+		grid.set_anchors_preset(Control.PRESET_FULL_RECT)
+		grid.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var mat := ShaderMaterial.new()
+		mat.shader = load("res://assets/shaders/holo_grid.gdshader")
+		mat.set_shader_parameter("rect_size", get_viewport().get_visible_rect().size)
+		grid.material = mat
+		%LoadingOverlay.add_child(grid)
+		%LoadingOverlay.move_child(grid, 1)  # au-dessus de Bg, sous le texte
+	if _loading_tween and _loading_tween.is_valid():
+		_loading_tween.kill()
+	_loading_tween = create_tween().set_loops()
+	for d in range(4):
+		var dots := ".".repeat(d)
+		_loading_tween.tween_callback(func(): %LoadingMessage.text = "CHARGEMENT" + dots)
+		_loading_tween.tween_interval(0.35)
+
+func _stop_loading_visuals() -> void:
+	if _loading_tween and _loading_tween.is_valid():
+		_loading_tween.kill()
+	_loading_tween = null
+	var grid = %LoadingOverlay.get_node_or_null("HoloGrid")
+	if grid:
+		grid.queue_free()
 
 func _generate_equ_watermark() -> void:
 	var syms = "∫ ∂ Ψ Σ ∇ λ Φ ε δ → ∞ ± ∮ ≈ √ μ Δ ⟨ ⟩ π τ ω".split(" ")
