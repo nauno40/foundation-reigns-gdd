@@ -23,24 +23,30 @@ var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
 var _pending_death: String = ""
 var _loading_tween: Tween
+var _loading_pulse: Tween
+# Données pré-chargées par LoadingScreen (injection avant add_child) ; si non
+# nul, Main saute son propre chargement (sinon fallback auto-chargement).
+var preloaded_data: FoundationGameData = null
 
 func _ready() -> void:
-	%LoadingOverlay.show()
-	_start_loading_visuals()
-	await get_tree().process_frame
-
-	# Parse des données (2586 cartes, ~3 Mo) sur un thread : le thread principal
-	# continue de pomper les frames → l'overlay s'anime au lieu de geler.
-	var thread := Thread.new()
-	thread.start(_load_data_threaded)
-	while thread.is_alive():
+	if preloaded_data != null:
+		# Données déjà parsées par LoadingScreen → démarrage immédiat.
+		_game_data = preloaded_data
+	else:
+		# Lancement direct de Main : auto-chargement (parse sur un thread pour
+		# que l'overlay s'anime au lieu de geler).
+		%LoadingOverlay.show()
+		_start_loading_visuals()
 		await get_tree().process_frame
-	var loaded: bool = thread.wait_to_finish()
-	if not loaded:
-		push_error("Main: failed to load game data")
-		_stop_loading_visuals()
-		%LoadingMessage.text = "ÉCHEC DE CHARGEMENT"
-		return
+		var thread := Thread.new()
+		thread.start(_load_data_threaded)
+		while thread.is_alive():
+			await get_tree().process_frame
+		if not thread.wait_to_finish():
+			push_error("Main: failed to load game data")
+			_stop_loading_visuals()
+			%LoadingMessage.text = "ÉCHEC DE CHARGEMENT"
+			return
 
 	_ctx = Context.new()
 	_save = SaveSystem.new()
@@ -118,11 +124,23 @@ func _start_loading_visuals() -> void:
 		var dots := ".".repeat(d)
 		_loading_tween.tween_callback(func(): %LoadingMessage.text = "CHARGEMENT" + dots)
 		_loading_tween.tween_interval(0.35)
+	# Pulsation du message → mouvement clairement visible.
+	if _loading_pulse and _loading_pulse.is_valid():
+		_loading_pulse.kill()
+	%LoadingMessage.modulate.a = 1.0
+	_loading_pulse = create_tween().set_loops()
+	_loading_pulse.tween_property(%LoadingMessage, "modulate:a", 0.35, 0.6).set_trans(Tween.TRANS_SINE)
+	_loading_pulse.tween_property(%LoadingMessage, "modulate:a", 1.0, 0.6).set_trans(Tween.TRANS_SINE)
 
 func _stop_loading_visuals() -> void:
 	if _loading_tween and _loading_tween.is_valid():
 		_loading_tween.kill()
 	_loading_tween = null
+	if _loading_pulse and _loading_pulse.is_valid():
+		_loading_pulse.kill()
+	_loading_pulse = null
+	if is_instance_valid(%LoadingMessage):
+		%LoadingMessage.modulate.a = 1.0
 	var grid = %LoadingOverlay.get_node_or_null("HoloGrid")
 	if grid:
 		grid.queue_free()

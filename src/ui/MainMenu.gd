@@ -128,4 +128,5 @@ func _start_game() -> void:
 	var tw = create_tween()
 	tw.tween_property(self, "modulate:a", 0.0, 0.3)
 	await tw.finished
-	get_tree().change_scene_to_file("res://scenes/Main.tscn")
+	# Écran de chargement léger : charge Main.tscn en arrière-plan (pas de gel).
+	get_tree().change_scene_to_file("res://scenes/LoadingScreen.tscn")
