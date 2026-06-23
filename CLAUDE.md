@@ -10,7 +10,7 @@ The `reference/` directory is a separate reverse-engineering workspace (Unity IL
 
 ## Running the Project
 
-Open in Godot 4.6. The main scene is `scenes/Main.tscn`. Tests run via the GUT plugin (enabled in `project.godot`).
+Open in Godot 4.6. The entry scene is `scenes/MainMenu.tscn`. Tests run via the GUT plugin (enabled in `project.godot`).
 
 **Run all tests** from the Godot editor: enable the GUT panel and click Run, or run headless:
 ```bash
@@ -24,9 +24,12 @@ godot --headless -s addons/gut/gut_cmdln.gd -gdir=res://tests/ -gprefix=test_ -g
 
 ## Architecture
 
-The game follows a strict separation between data, core logic, and UI. All core classes are plain GDScript (no `extends Node`) — they are instantiated by `Main.gd` and passed by reference.
+The game follows a strict separation between data, core logic, and UI. All core classes are plain GDScript (no `extends Node`) — they are instantiated by `Main.gd` and passed by reference. The game entry point is `MainMenu.tscn`; `Globals.gd` is an autoload that parses CLI args (`--deck`, `--difficulty`) and controls `start_mode` (NEW_GAME / CONTINUE) for the transition to `Main.tscn`.
 
 ```
+Globals.gd (autoload)   — CLI args, start_mode, difficulty
+MainMenu.tscn (entry)   — main menu with Nouvelle Partie / Continuer / Options / Quitter
+  └── OptionsScreen.tscn — difficulty selector overlay
 Main.gd (scene root)
   ├── FoundationGameData   — loads all JSON from data/ into typed arrays/dicts
   ├── Context              — mutable game state (_vars dict + _keep_flags)
@@ -377,7 +380,7 @@ godot --deck hardin_era
 godot --deck crisis_anacreonian_war
 ```
 
-Implementé dans `Main.gd:77` (parse les arguments CLI, stocke `dev_deck` dans Context) et `NarrativeModel.gd:63` (filtre les cartes éligibles si `dev_deck` est défini).
+Implementé dans `Globals.gd` (autoload, parse les arguments CLI) et `Main.gd:51` (applique `dev_deck` dans Context) et `NarrativeModel.gd:63` (filtre les cartes éligibles si `dev_deck` est défini). `--deck` bypasses le menu principal (saute directement vers `Main.tscn`).
 
 ### Narrative Explorer (`tools/narrative_explorer.py`)
 

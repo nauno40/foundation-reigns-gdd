@@ -13135,24 +13135,24 @@
 		"hidden": false,
 		"bearer": "role:guild_master",
 		"question": {
-			"FR": "Le maître de guilde organise un combat de coqs très couru. Y assister en magistrat, ou l'interdire ?"
+			"FR": "« Magistrat ! Je lance ce soir le grand combat de coqs de la saison. Les paris sont déjà en marche. Vous nous honorez de votre présence ? » — Le maître de guilde"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On y assiste"
+				"FR": "Avec plaisir, c’est un spectacle à ne pas manquer."
 			},
 			"reaction": {
-				"FR": "On honore le combat de coqs de votre présence. Le peuple jubile."
+				"FR": "Le maître s'illumine : « Le peuple est ravi de vous compter parmi nous ! »"
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On l'interdit"
+				"FR": "Non, je ne cautionne pas ce genre de jeu."
 			},
 			"reaction": {
-				"FR": "On interdit le jeu cruel. Vertueux, impopulaire."
+				"FR": "Le maître s’incline, déçu : « Comme il vous plaît, mais les coqs adjoindront quand même. »"
 			}
 		},
 		"yesOutcome": [
@@ -13192,24 +13192,24 @@
 		"hidden": true,
 		"bearer": "role:village_teacher",
 		"question": {
-			"FR": "Le maître d'école, présent au combat, parie gros sur un coq favori. Le mettre en garde, ou laisser faire ?"
+			"FR": "« J’ai misé une fortune sur mon favori, magistrat. Ce coq est imbattable ! » — Le maître d’école"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On le met en garde"
+				"FR": "Faites preuve de prudence."
 			},
 			"reaction": {
-				"FR": "On modère l'ardeur du maître d'école. Sage conseil."
+				"FR": "Il se rembrunit : « Vous avez raison… Je vais modérer mes paris. »"
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On laisse faire"
+				"FR": "Laissez-le jouer, chance et passion."
 			},
 			"reaction": {
-				"FR": "On le laisse parier. Le coq décidera de sa bourse."
+				"FR": "Il se détend : « Merci, magistrat. La chance sourit aux audacieux. »"
 			}
 		},
 		"yesOutcome": [
@@ -13243,24 +13243,24 @@
 		"hidden": true,
 		"bearer": "role:civic_judge",
 		"question": {
-			"FR": "Au combat de coqs, le juge civique vous demande d'arbitrer un litige sur un pari contesté."
+			"FR": "« Un rival m’accuse d’avoir dopé mon coq, magistrat. Que faire ? » — Le maître d’école"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On tranche pour le parieur"
+				"FR": "Je vais enquêter."
 			},
 			"reaction": {
-				"FR": "On donne raison au parieur. La foule gronde, à moitié."
+				"FR": "Vous vérifiez l’accusation. Le combat de coqs bascule en affaire. Il fulmine."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On annule le pari"
+				"FR": "Classez-le. Personne n’est content."
 			},
 			"reaction": {
-				"FR": "On annule le pari litigieux. Personne n'est content."
+				"FR": "Il classe — le maître fulmine."
 			}
 		},
 		"yesOutcome": [
@@ -13302,24 +13302,24 @@
 		"hidden": true,
 		"bearer": "role:village_teacher",
 		"question": {
-			"FR": "Le maître d'école jure que son coq a été drogué par un rival. Enquêter ?"
+			"FR": "« Mon coq a été dopé par un rival ! Que faire ? » — Le maître d’école, les poings serrés"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On enquête"
+				"FR": "Je vais enquêter."
 			},
 			"reaction": {
-				"FR": "On vérifie l'accusation de tricherie. Le combat de coqs vire à l'affaire."
+				"FR": "Vous vérifiez l’accusation. Le combat de coqs bascule en affaire. Il vous remercie."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On classe"
+				"FR": "Classez-le. Laissez-le en paix."
 			},
 			"reaction": {
-				"FR": "On classe la plainte. Le maître d'école fulmine."
+				"FR": "Il se tait, humilié. L’affaire reste ouverte."
 			}
 		},
 		"yesOutcome": [
@@ -13361,24 +13361,24 @@
 		"hidden": true,
 		"bearer": "role:village_teacher",
 		"question": {
-			"FR": "Le rival accusé de tricherie nie tout et menace de porter plainte à son tour. Démêler l'écheveau ?"
+			"FR": "« Le rival nie tout et menace de porter plainte à son tour. Démêlez l’écheveau ? » — Le maître d'école, rouge de colère"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On démêle"
+				"FR": "Démêlez l’enl’enquête."
 			},
 			"reaction": {
-				"FR": "On démêle l'affaire de coqs. Cocasse et chronophage."
+				"FR": "Vous débrouillez l’histoire de coqs. Cocasse et chronophage."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On les renvoie dos à dos"
+				"FR": "Renvoyez-les dos à dos."
 			},
 			"reaction": {
-				"FR": "On renvoie les coqueleurs dos à dos. Le juge soupire."
+				"FR": "Vous les renvoie dos à dos. Le juge soupire."
 			}
 		},
 		"yesOutcome": [
@@ -13420,24 +13420,24 @@
 		"hidden": true,
 		"bearer": "role:village_teacher",
 		"question": {
-			"FR": "La querelle des coqs enflamme les parieurs. Calmer la foule, ou laisser le jeu suivre son cours ?"
+			"FR": "« La querelle des coqs enflamme les parieurs. Calmer la foule, ou les laisser jouer ? » — Des voix dans la foule"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On calme la foule"
+				"FR": "Je calme la foule."
 			},
 			"reaction": {
-				"FR": "On apaise les parieurs échauffés. L'ordre revient."
+				"FR": "Vous apaisez les esprits. L’ordre revient. La paix est restaurée."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On laisse jouer"
+				"FR": "Laissez-les jouer."
 			},
 			"reaction": {
-				"FR": "On laisse le jeu reprendre. Risqué."
+				"FR": "Vous laissez le jeu suivre son cours. Risqué."
 			}
 		},
 		"yesOutcome": [
@@ -13479,24 +13479,24 @@
 		"hidden": true,
 		"bearer": "role:civic_judge",
 		"question": {
-			"FR": "Le juge civique propose d'encadrer les paris par une taxe et un règlement officiel."
+			"FR": "« Je propose d’encadrer les paris avec une taxe et un règlement officiel. » — Le juge civique"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On encadre les paris"
+				"FR": "Je réglemente les paris."
 			},
 			"reaction": {
-				"FR": "On taxe et règlemente les paris. Ordre et recettes."
+				"FR": "Vous réglementez les paris. Ordre et recettes."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On laisse libre"
+				"FR": "Laissez les paris libres."
 			},
 			"reaction": {
-				"FR": "On laisse les paris libres. Joyeux désordre."
+				"FR": "Vous laissez les paris en libre. Joyeux désordre. La caisse souffre."
 			}
 		},
 		"yesOutcome": [
@@ -13538,24 +13538,24 @@
 		"hidden": true,
 		"bearer": "role:civic_judge",
 		"question": {
-			"FR": "Le combat de coqs dégénère en rixe entre parieurs. Faire intervenir la garde ?"
+			"FR": "« La bagarre dégénère en rixe entre parieurs. Faire intervenir la garde ? » — Des cris dans la foule"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On envoie la garde"
+				"FR": "J’envoie la garde."
 			},
 			"reaction": {
-				"FR": "On fait disperser la rixe. L'ordre, à coups de matraque."
+				"FR": "Vous dispersez la rixe. L’ordre, à coups de matraque."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On laisse se calmer"
+				"FR": "Laissez-les s’en calmer."
 			},
 			"reaction": {
-				"FR": "On laisse la bagarre s'éteindre seule. Risqué."
+				"FR": "Vous les laissez se calmer seul. Risqué."
 			}
 		},
 		"yesOutcome": [
@@ -13597,24 +13597,24 @@
 		"hidden": true,
 		"bearer": "role:civic_judge",
 		"question": {
-			"FR": "Après la rixe, faut-il interdire définitivement les combats de coqs, ou les réformer ?"
+			"FR": "« Après la rixe, faut-il interdire les combats de coqs, ou les réformer ? » — Le juge civique"
 		},
 		"conditions": [],
 		"loadOutcome": [],
 		"leftAnswer": {
 			"title": {
-				"FR": "On les réforme"
+				"FR": "Réformez le jeu."
 			},
 			"reaction": {
-				"FR": "On réforme le jeu plutôt que de l'interdire. Compromis."
+				"FR": "Vous réformez le jeu plutôt que de l’interdire. Un compromis raisonnable."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On les interdit"
+				"FR": "Interdisez-les définitivement."
 			},
 			"reaction": {
-				"FR": "On bannit les combats de coqs. Vertueux, mal vu."
+				"FR": "Vous interdisez les combats de coqs. Vertueux, mal vu."
 			}
 		},
 		"yesOutcome": [
@@ -13656,7 +13656,7 @@
 		"hidden": true,
 		"bearer": "role:guild_master",
 		"question": {
-			"FR": "Le maître de guilde, beau joueur, vous remercie d'avoir géré l'affaire des coqs sans tout gâcher."
+			"FR": "« Merci d’avoir géré cette affaire, magistrat. Vos décisions ont été… utiles. » — Le maître de guilde, un sourire énigmatique"
 		},
 		"conditions": [],
 		"loadOutcome": [
@@ -13669,18 +13669,18 @@
 		],
 		"leftAnswer": {
 			"title": {
-				"FR": "On accepte ses remerciements"
+				"FR": "J’accepte ses remerciements."
 			},
 			"reaction": {
-				"FR": "On accepte ses bonnes grâces. Un allié de plus."
+				"FR": "Vous acceptez ses bonnes graces. Un allié de plus. Il vous regarde avec attention."
 			}
 		},
 		"rightAnswer": {
 			"title": {
-				"FR": "On reste neutre"
+				"FR": "Restez neutre."
 			},
 			"reaction": {
-				"FR": "On reste neutre. Le maître apprécie la retenue."
+				"FR": "Il hoche la tête : « Compris, la retenue a son charme. »"
 			}
 		},
 		"yesOutcome": [

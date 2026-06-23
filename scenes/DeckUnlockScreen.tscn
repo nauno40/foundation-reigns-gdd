@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdeckunlock01"]
+[gd_scene format=3 uid="uid://bdeckunlock01"]
 
 [ext_resource type="Script" path="res://src/ui/DeckUnlockScreen.gd" id="1_unlock"]
 
