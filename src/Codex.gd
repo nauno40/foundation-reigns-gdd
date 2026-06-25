@@ -53,7 +53,7 @@ func _build() -> void:
 		b.focus_mode = Control.FOCUS_NONE
 		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		b.custom_minimum_size = Vector2(0, 40)
-		b.add_theme_font_override("font", FONT_MONO)
+		b.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 2))
 		b.add_theme_font_size_override("font_size", 9)
 		_flat(b)
 		var key: String = entry[0]
@@ -195,7 +195,7 @@ func _char(c: Dictionary) -> Control:
 	vb.add_child(nm)
 	var tg := Label.new()
 	tg.text = str(c["tag"]).to_upper()
-	tg.add_theme_font_override("font", FONT_MONO)
+	tg.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 1))
 	tg.add_theme_font_size_override("font_size", 8)
 	tg.add_theme_color_override("font_color", Pal.ACCENT if c["met"] else Color("#4d586e"))
 	tg.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -296,13 +296,25 @@ func _chip(d: Dictionary, locked: bool) -> Control:
 
 # ── Galaxie ──
 func _render_gal() -> void:
+	# boîte galactique bordée arrondie (template .galaxy)
+	var box := PanelContainer.new()
+	var bsb := StyleBoxFlat.new()
+	bsb.bg_color = Color("#0a1422")
+	bsb.set_corner_radius_all(14)
+	bsb.set_border_width_all(1)
+	bsb.border_color = Pal.LINE
+	box.add_theme_stylebox_override("panel", bsb)
+	box.clip_contents = true
+	_body.add_child(box)
 	_galaxy = Control.new()
-	_galaxy.custom_minimum_size = Vector2(0, 300)
 	_galaxy.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_galaxy.draw.connect(_draw_galaxy)
 	_galaxy.gui_input.connect(_galaxy_input)
-	_galaxy.resized.connect(func(): _galaxy.queue_redraw())
-	_body.add_child(_galaxy)
+	_galaxy.resized.connect(func():
+		if not is_equal_approx(_galaxy.custom_minimum_size.y, _galaxy.size.x):
+			_galaxy.custom_minimum_size.y = _galaxy.size.x
+		_galaxy.queue_redraw())
+	box.add_child(_galaxy)
 	var legend := HBoxContainer.new()
 	legend.alignment = BoxContainer.ALIGNMENT_CENTER
 	legend.add_theme_constant_override("separation", 16)
@@ -314,23 +326,42 @@ func _render_gal() -> void:
 		l.add_theme_color_override("font_color", Data.state_color(pair[0]))
 		legend.add_child(l)
 	_body.add_child(legend)
+	# boîte d'info bordée (template .pl-info)
+	var ibox := PanelContainer.new()
+	ibox.custom_minimum_size = Vector2(0, 84)
+	var isb := StyleBoxFlat.new()
+	isb.bg_color = Color(1, 1, 1, 0.02)
+	isb.set_corner_radius_all(11)
+	isb.set_border_width_all(1)
+	isb.border_color = Pal.LINE
+	isb.content_margin_left = 15; isb.content_margin_right = 15
+	isb.content_margin_top = 13; isb.content_margin_bottom = 13
+	ibox.add_theme_stylebox_override("panel", isb)
+	_body.add_child(ibox)
 	_info = VBoxContainer.new()
 	_info.add_theme_constant_override("separation", 4)
-	_body.add_child(_info)
+	ibox.add_child(_info)
 	_render_info()
 
 func _draw_galaxy() -> void:
-	var sz: Vector2 = _galaxy.size
-	var side: float = min(sz.x, sz.y)
-	if side <= 0.0: return
-	var o := Vector2((sz.x - side) / 2.0, 0.0)
-	_galaxy.draw_rect(Rect2(o, Vector2(side, side)), Color("#080d16"))
-	var c := o + Vector2(side, side) * 0.5
+	var w: float = _galaxy.size.x
+	var h: float = _galaxy.size.y
+	if w <= 0.0 or h <= 0.0: return
+	# champ d'étoiles (template .stars2)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 7
+	for i in range(70):
+		var sp := Vector2(rng.randf() * w, rng.randf() * h)
+		_galaxy.draw_circle(sp, rng.randf_range(0.5, 1.4), Color(0.82, 0.92, 1.0, rng.randf_range(0.12, 0.5)))
+	# bras concentriques
+	var c := Vector2(w, h) * 0.5
+	var rad: float = min(w, h)
 	for f in [0.42, 0.28, 0.14]:
-		_galaxy.draw_arc(c, side * f, 0.0, TAU, 64, Color(0.31, 0.839, 0.91, 0.06), 1.0, true)
+		_galaxy.draw_arc(c, rad * f, 0.0, TAU, 64, Color(0.31, 0.839, 0.91, 0.06), 1.0, true)
+	# planètes
 	_planet_rects.clear()
 	for p in Data.PLANETS:
-		var pos := o + Vector2(p["x"] / 100.0 * side, p["y"] / 100.0 * side)
+		var pos := Vector2(p["x"] / 100.0 * w, p["y"] / 100.0 * h)
 		var col := Data.state_color(p["state"])
 		var r := 7.0 if p["base"] else 5.5
 		if _selected == p["id"]:
@@ -394,7 +425,7 @@ func _render_info() -> void:
 func _section(text: String) -> Label:
 	var l := Label.new()
 	l.text = text
-	l.add_theme_font_override("font", FONT_MONO)
+	l.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 2))
 	l.add_theme_font_size_override("font_size", 9)
 	l.add_theme_color_override("font_color", Color("#6b768c"))
 	return l

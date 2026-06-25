@@ -21,6 +21,12 @@ const RELIGION  = Color("#9281e1")  # oklch(.66 .14 290)
 const COMMERCE  = Color("#4cb587")  # oklch(.70 .12 162)
 const POLITICS  = Color("#d3a23b")  # oklch(.74 .13 82)
 
+static func mono_spaced(base: Font, spacing: int) -> FontVariation:
+	var f := FontVariation.new()
+	f.base_font = base
+	f.spacing_glyph = spacing
+	return f
+
 static func res_color(key: String) -> Color:
 	match key:
 		"military": return MILITARY

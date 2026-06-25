@@ -38,7 +38,7 @@ func show_death(info: Dictionary) -> void:
 	vb.add_theme_constant_override("separation", 0)
 	m.add_child(vb)
 
-	var cause := _lbl(info["causeLabel"].to_upper(), FONT_MONO, 9, Pal.DANGER)
+	var cause := _lbl(info["causeLabel"].to_upper(), Pal.mono_spaced(FONT_MONO, 3), 9, Pal.DANGER)
 	cause.add_theme_constant_override("line_spacing", 0)
 	vb.add_child(cause)
 	vb.add_child(_spacer(7))
@@ -61,7 +61,7 @@ func show_death(info: Dictionary) -> void:
 	var hv := VBoxContainer.new()
 	hv.add_theme_constant_override("separation", 6)
 	holo.add_child(hv)
-	hv.add_child(_lbl("☼ TRANSMISSION — HARI SELDON", FONT_MONO, 8, Pal.AMBER))
+	hv.add_child(_lbl("☼ TRANSMISSION — HARI SELDON", Pal.mono_spaced(FONT_MONO, 2), 8, Pal.AMBER))
 	var msg := _lbl(info["message"], FONT_SPECTRAL_IT, 16, Color("#f2e4c4"))
 	msg.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	hv.add_child(msg)
@@ -97,7 +97,7 @@ func show_death(info: Dictionary) -> void:
 		ic.modulate = Pal.res_color(r["key"])
 		ic_holder.add_child(ic)
 		col.add_child(ic_holder)
-		col.add_child(_lbl_c(r["label"].to_upper(), FONT_MONO, 8, Pal.INK_FAINT))
+		col.add_child(_lbl_c(r["label"].to_upper(), Pal.mono_spaced(FONT_MONO, 1), 8, Pal.INK_FAINT))
 		var track := PanelContainer.new()
 		track.custom_minimum_size = Vector2(0, 4)
 		var tsb := StyleBoxFlat.new()
@@ -174,7 +174,7 @@ func _stat(label: String, value: String) -> Control:
 	var vb := VBoxContainer.new()
 	vb.add_theme_constant_override("separation", 3)
 	box.add_child(vb)
-	vb.add_child(_lbl(label, FONT_MONO, 9, Pal.INK_FAINT))
+	vb.add_child(_lbl(label, Pal.mono_spaced(FONT_MONO, 2), 9, Pal.INK_FAINT))
 	vb.add_child(_lbl(value, FONT_SPECTRAL, 15, Pal.INK))
 	return box
 
