@@ -10,8 +10,9 @@ var _hd: Color = Color(0.6, 0.65, 0.7)
 var _ini: String = ""
 
 func set_tone(tone: Color) -> void:
-	_sh = Data.lighten(tone, 0.42)
-	_hd = Data.lighten(tone, 0.5)
+	# éclaircissement renforcé pour que le buste reste visible même sur teintes sombres
+	_sh = Data.lighten(tone, 0.5)
+	_hd = Data.lighten(tone, 0.6)
 	queue_redraw()
 
 func set_initials(t: String) -> void:

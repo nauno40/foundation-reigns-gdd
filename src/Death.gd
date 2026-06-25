@@ -122,13 +122,13 @@ func show_death(info: Dictionary) -> void:
 	btn.custom_minimum_size = Vector2(0, 46)
 	btn.add_theme_font_override("font", FONT_MONO)
 	btn.add_theme_font_size_override("font_size", 12)
-	btn.add_theme_color_override("font_color", Pal.ACCENT)
-	btn.add_theme_color_override("font_hover_color", Pal.ACCENT)
+	btn.add_theme_color_override("font_color", Cfg.accent)
+	btn.add_theme_color_override("font_hover_color", Cfg.accent)
 	var bsb := StyleBoxFlat.new()
-	bsb.bg_color = Color(0.31, 0.839, 0.91, 0.08)
+	bsb.bg_color = Color(Cfg.accent.r, Cfg.accent.g, Cfg.accent.b, 0.08)
 	bsb.set_corner_radius_all(10)
 	bsb.set_border_width_all(1)
-	bsb.border_color = Pal.ACCENT
+	bsb.border_color = Cfg.accent
 	btn.add_theme_stylebox_override("normal", bsb)
 	var bsbh := bsb.duplicate()
 	bsbh.bg_color = Color(0.31, 0.839, 0.91, 0.16)

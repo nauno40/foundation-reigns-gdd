@@ -188,7 +188,7 @@ func _build() -> void:
 	_bearer_role = Label.new()
 	_bearer_role.add_theme_font_override("font", FONT_MONO)
 	_bearer_role.add_theme_font_size_override("font_size", 8)
-	_bearer_role.add_theme_color_override("font_color", Pal.ACCENT)
+	_bearer_role.add_theme_color_override("font_color", Cfg.accent)
 	_bearer_role.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	speaker.add_child(_bearer_role)
 
@@ -307,6 +307,7 @@ func _on_cfg_changed() -> void:
 	# accent + taille de texte appliqués en direct
 	_era.text = _era_text()
 	_handle_chev.text = _handle_text()
+	_bearer_role.add_theme_color_override("font_color", Cfg.accent)
 	_question.add_theme_font_size_override("font_size", Cfg.prose)
 	for k in _gauges:
 		_gauges[k].refresh()
@@ -575,7 +576,7 @@ func _unlock_banner(parent: Control, deck_name: String, count: int) -> void:
 	tag.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	tag.add_theme_font_override("font", FONT_MONO)
 	tag.add_theme_font_size_override("font_size", 8)
-	tag.add_theme_color_override("font_color", Pal.ACCENT)
+	tag.add_theme_color_override("font_color", Cfg.accent)
 	vb.add_child(tag)
 	var nm := Label.new()
 	nm.text = deck_name

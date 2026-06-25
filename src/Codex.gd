@@ -128,7 +128,7 @@ func _flat(b: Button) -> void:
 	h.bg_color = Color(0.31, 0.839, 0.91, 0.06)
 	b.add_theme_stylebox_override("hover", h)
 	b.add_theme_stylebox_override("pressed", h)
-	b.add_theme_color_override("font_hover_color", Pal.ACCENT)
+	b.add_theme_color_override("font_hover_color", Cfg.accent)
 	b.add_theme_color_override("font_color", Pal.INK_DIM)
 
 const TABS := ["chars", "ach", "gal"]
@@ -319,7 +319,7 @@ func _char(c: Dictionary) -> Control:
 	tg.text = str(c["tag"]).to_upper()
 	tg.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 1))
 	tg.add_theme_font_size_override("font_size", 8)
-	tg.add_theme_color_override("font_color", Pal.ACCENT if c["met"] else Color("#4d586e"))
+	tg.add_theme_color_override("font_color", Cfg.accent if c["met"] else Color("#4d586e"))
 	tg.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	tg.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	vb.add_child(tg)
@@ -356,7 +356,7 @@ func _ach(a: Dictionary) -> Control:
 	cs.set_corner_radius_all(11)
 	cs.set_border_width_all(1)
 	if a["done"]:
-		cs.bg_color = Pal.ACCENT; cs.border_color = Pal.ACCENT
+		cs.bg_color = Cfg.accent; cs.border_color = Cfg.accent
 	else:
 		cs.bg_color = Color(0, 0, 0, 0); cs.border_color = Pal.LINE
 	chk.add_theme_stylebox_override("panel", cs)
@@ -549,7 +549,7 @@ func _render_info() -> void:
 	fc.text = str(p["faction"]).to_upper() + (" · CACHÉE" if p["hidden"] else "")
 	fc.add_theme_font_override("font", FONT_MONO)
 	fc.add_theme_font_size_override("font_size", 9)
-	fc.add_theme_color_override("font_color", Pal.ACCENT)
+	fc.add_theme_color_override("font_color", Cfg.accent)
 	_info.add_child(fc)
 	var nt := Label.new()
 	nt.text = p["note"]
