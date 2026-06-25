@@ -13,10 +13,16 @@ var _panel: PanelContainer
 var _tab_buttons := {}
 var _tab_underlines := {}
 var _body: VBoxContainer
+var _holder: Control
+var _scroll: ScrollContainer
 var _galaxy: Control
 var _planet_rects := []
 var _selected := ""
 var _info: VBoxContainer
+# carrousel d'onglets (suivi du doigt)
+var _gp_start := Vector2.ZERO
+var _gp_mode := ""        # "" / "h" / "v"
+var _sliding := false
 
 func _ready() -> void:
 	visible = false
@@ -70,17 +76,22 @@ func _build() -> void:
 		b.add_child(ul)
 		_tab_underlines[key] = ul
 
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	root.add_child(scroll)
+	# Conteneur translatable (pour le carrousel d'onglets qui suit le doigt)
+	_holder = Control.new()
+	_holder.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_holder.clip_contents = true
+	root.add_child(_holder)
+	_holder.resized.connect(func(): _scroll.size = _holder.size)
+	_scroll = ScrollContainer.new()
+	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_holder.add_child(_scroll)
 	var m := MarginContainer.new()
 	m.add_theme_constant_override("margin_left", 18)
 	m.add_theme_constant_override("margin_top", 16)
 	m.add_theme_constant_override("margin_right", 18)
 	m.add_theme_constant_override("margin_bottom", 22)
 	m.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.add_child(m)
+	_scroll.add_child(m)
 	_body = VBoxContainer.new()
 	_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_body.add_theme_constant_override("separation", 9)
@@ -134,30 +145,66 @@ func drag_end(up: float) -> void:
 		_open = false
 		_animate_to(size.y, true)
 
-# ── Swipe horizontal pour changer d'onglet ──
+# ── Carrousel d'onglets : le contenu suit le doigt, ressort si pas assez glissé ──
+var _gp_down := false
+
 func _input(event: InputEvent) -> void:
-	if not _open:
+	if not _open or _sliding:
 		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			_swipe_start = event.position
-			_swiping = true
-		elif _swiping:
-			_swiping = false
-			var d: Vector2 = event.position - _swipe_start
-			if absf(d.x) > 60.0 and absf(d.x) > absf(d.y) * 1.4:
-				_cycle(-1 if d.x < 0.0 else 1)
+			_gp_down = true
+			_gp_start = event.position
+			_gp_mode = ""
+		else:
+			if _gp_mode == "h":
+				_end_carousel(event.position.x - _gp_start.x)
+			_gp_down = false
+			_gp_mode = ""
+	elif event is InputEventMouseMotion and _gp_down:
+		if _gp_mode == "":
+			var d: Vector2 = event.position - _gp_start
+			if absf(d.x) > 12.0 and absf(d.x) > absf(d.y):
+				_gp_mode = "h"
+			elif absf(d.y) > 12.0:
+				_gp_mode = "v"   # laisse le scroll vertical faire son travail
+		if _gp_mode == "h":
+			_scroll.position.x = _resist(event.position.x - _gp_start.x)
+			get_viewport().set_input_as_handled()
 
-var _swipe_start := Vector2.ZERO
-var _swiping := false
-
-func _cycle(dir: int) -> void:
+func _resist(dx: float) -> float:
 	var i: int = TABS.find(_tab)
-	if i < 0: i = 0
-	# dir -1 (swipe gauche) → onglet suivant ; dir +1 (swipe droite) → précédent
-	var ni: int = clampi(i - dir, 0, TABS.size() - 1)
-	if ni != i:
-		_select(TABS[ni])
+	if (dx > 0.0 and i <= 0) or (dx < 0.0 and i >= TABS.size() - 1):
+		return dx * 0.3   # bord : résistance élastique
+	return dx
+
+func _end_carousel(dx: float) -> void:
+	var w: float = _holder.size.x
+	var i: int = TABS.find(_tab)
+	if dx < -w * 0.28 and i < TABS.size() - 1:
+		_slide(1)
+	elif dx > w * 0.28 and i > 0:
+		_slide(-1)
+	else:
+		_spring_back()
+
+func _spring_back() -> void:
+	var t := create_tween()
+	t.tween_property(_scroll, "position:x", 0.0, 0.32).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _slide(dir: int) -> void:
+	_sliding = true
+	var w: float = _holder.size.x
+	var i: int = TABS.find(_tab)
+	var t := create_tween()
+	t.tween_property(_scroll, "position:x", -dir * w, 0.16).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
+	await t.finished
+	_select(TABS[i + dir])
+	_scroll.position.x = dir * w
+	var t2 := create_tween()
+	t2.tween_property(_scroll, "position:x", 0.0, 0.22).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	await t2.finished
+	_sliding = false
 
 func _select(tab: String) -> void:
 	_tab = tab
