@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://statbox_scene"]
+
+[ext_resource type="Script" path="res://src/StatBox.gd" id="1_stat"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="3_spectral"]
+
+[sub_resource type="StyleBoxFlat" id="SB_stat"]
+bg_color = Color(0, 0, 0, 0)
+border_width_top = 1
+border_color = Color(1, 1, 1, 0.07)
+content_margin_top = 8.0
+
+[sub_resource type="FontVariation" id="FV_title"]
+base_font = ExtResource("2_mono")
+spacing_glyph = 2
+
+[node name="StatBox" type="PanelContainer"]
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("SB_stat")
+script = ExtResource("1_stat")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="StatTitle" type="Label" parent="VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+theme_override_fonts/font = SubResource("FV_title")
+theme_override_font_sizes/font_size = 9
+text = "TITRE"
+
+[node name="StatValue" type="Label" parent="VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+theme_override_fonts/font = ExtResource("3_spectral")
+theme_override_font_sizes/font_size = 15
+text = "Valeur"

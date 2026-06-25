@@ -1,6 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://death_scene"]
+[gd_scene load_steps=13 format=3 uid="uid://death_scene"]
 
 [ext_resource type="Script" path="res://src/Death.gd" id="1_death"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Medium.ttf" id="3_specmed"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Italic.ttf" id="4_specit"]
+[ext_resource type="PackedScene" uid="uid://statbox_scene" path="res://scenes/StatBox.tscn" id="5_stat"]
+[ext_resource type="PackedScene" uid="uid://ressnapshot_scene" path="res://scenes/ResSnapshot.tscn" id="6_snap"]
+
+[sub_resource type="FontVariation" id="FV_cause"]
+base_font = ExtResource("2_mono")
+spacing_glyph = 3
+
+[sub_resource type="FontVariation" id="FV_holohdr"]
+base_font = ExtResource("2_mono")
+spacing_glyph = 2
+
+[sub_resource type="StyleBoxFlat" id="SB_holo"]
+bg_color = Color(0.91, 0.714, 0.353, 0.06)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.91, 0.714, 0.353, 0.32)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+content_margin_left = 18.0
+content_margin_top = 17.0
+content_margin_right = 18.0
+content_margin_bottom = 17.0
+
+[sub_resource type="StyleBoxFlat" id="SB_btn"]
+bg_color = Color(0.31, 0.839, 0.91, 0.08)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.31, 0.839, 0.91, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_btnhover"]
+bg_color = Color(0.31, 0.839, 0.91, 0.16)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.31, 0.839, 0.91, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Death" type="Control"]
 visible = false
@@ -39,3 +92,133 @@ unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 0
+
+[node name="Cause" type="Label" parent="Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.851, 0.416, 0.353, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource("FV_cause")
+theme_override_font_sizes/font_size = 9
+text = "CAUSE"
+
+[node name="Sp1" type="Control" parent="Margin/Content"]
+custom_minimum_size = Vector2(0, 7)
+layout_mode = 2
+
+[node name="DeathName" type="Label" parent="Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+theme_override_fonts/font = ExtResource("3_specmed")
+theme_override_font_sizes/font_size = 28
+text = "Orateur"
+
+[node name="Sp2" type="Control" parent="Margin/Content"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="Sub" type="Label" parent="Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 10
+text = "sous-titre"
+
+[node name="Sp3" type="Control" parent="Margin/Content"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+
+[node name="Holo" type="PanelContainer" parent="Margin/Content"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_holo")
+
+[node name="HoloV" type="VBoxContainer" parent="Margin/Content/Holo"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HoloHeader" type="Label" parent="Margin/Content/Holo/HoloV"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
+theme_override_fonts/font = SubResource("FV_holohdr")
+theme_override_font_sizes/font_size = 8
+text = "☼ TRANSMISSION — HARI SELDON"
+
+[node name="Message" type="Label" parent="Margin/Content/Holo/HoloV"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.949, 0.894, 0.769, 1)
+theme_override_fonts/font = ExtResource("4_specit")
+theme_override_font_sizes/font_size = 16
+text = "message"
+autowrap_mode = 3
+
+[node name="Sp4" type="Control" parent="Margin/Content"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+
+[node name="StatsGrid" type="GridContainer" parent="Margin/Content"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 11
+columns = 2
+
+[node name="Stat0" parent="Margin/Content/StatsGrid" instance=ExtResource("5_stat")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Stat1" parent="Margin/Content/StatsGrid" instance=ExtResource("5_stat")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Stat2" parent="Margin/Content/StatsGrid" instance=ExtResource("5_stat")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Stat3" parent="Margin/Content/StatsGrid" instance=ExtResource("5_stat")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Sp5" type="Control" parent="Margin/Content"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+
+[node name="Snapshot" type="HBoxContainer" parent="Margin/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="SnapMilitary" parent="Margin/Content/Snapshot" instance=ExtResource("6_snap")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SnapReligion" parent="Margin/Content/Snapshot" instance=ExtResource("6_snap")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SnapCommerce" parent="Margin/Content/Snapshot" instance=ExtResource("6_snap")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SnapPolitics" parent="Margin/Content/Snapshot" instance=ExtResource("6_snap")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Sp6" type="Control" parent="Margin/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NewReignBtn" type="Button" parent="Margin/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_colors/font_hover_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("SB_btn")
+theme_override_styles/hover = SubResource("SB_btnhover")
+theme_override_styles/pressed = SubResource("SB_btnhover")
+text = "NOUVEAU RÈGNE →"
