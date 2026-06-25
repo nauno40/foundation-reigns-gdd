@@ -45,9 +45,9 @@ var _hmoved := false
 @onready var _reign_lbl: RichTextLabel = %Reign
 @onready var _handle: PanelContainer = %Handle
 @onready var _handle_chev: RichTextLabel = %Chev
+@onready var _codex: Codex = %Codex
+@onready var _death: Death = %Death
 var _gauges := {}
-var _codex: Codex
-var _death: Death
 var _deathfx: ColorRect
 var _tweaks: TweaksPanel
 
@@ -81,14 +81,8 @@ func _on_handle_input(e: InputEvent) -> void:
 		_codex.drag_start()
 
 func _make_overlays() -> void:
-	# overlays
-	_codex = Codex.new()
-	_codex.set_anchors_preset(Control.PRESET_FULL_RECT)
-	add_child(_codex)
-	_death = Death.new()
-	_death.set_anchors_preset(Control.PRESET_FULL_RECT)
+	# Codex + Death sont instanciés dans Game.tscn ; on branche juste le signal.
 	_death.respawn_pressed.connect(_respawn)
-	add_child(_death)
 	_deathfx = ColorRect.new()
 	_deathfx.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_deathfx.mouse_filter = Control.MOUSE_FILTER_IGNORE

@@ -20,23 +20,8 @@ func _ready() -> void:
 	visible = false
 
 func show_death(info: Dictionary) -> void:
-	for c in get_children(): c.queue_free()
-
-	var bg := ColorRect.new()
-	bg.color = Color(0.027, 0.035, 0.055, 0.97)
-	bg.set_anchors_preset(Control.PRESET_FULL_RECT)
-	add_child(bg)
-
-	var m := MarginContainer.new()
-	m.set_anchors_preset(Control.PRESET_FULL_RECT)
-	m.add_theme_constant_override("margin_left", 26)
-	m.add_theme_constant_override("margin_right", 26)
-	m.add_theme_constant_override("margin_top", 28)
-	m.add_theme_constant_override("margin_bottom", 28)
-	add_child(m)
-	var vb := VBoxContainer.new()
-	vb.add_theme_constant_override("separation", 0)
-	m.add_child(vb)
+	var vb: VBoxContainer = %Content
+	for c in vb.get_children(): c.queue_free()
 
 	var cause := _lbl(info["causeLabel"].to_upper(), Pal.mono_spaced(FONT_MONO, 3), 9, Pal.DANGER)
 	cause.add_theme_constant_override("line_spacing", 0)

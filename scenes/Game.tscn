@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://game_scene"]
+[gd_scene load_steps=18 format=3 uid="uid://game_scene"]
 
 [ext_resource type="Script" path="res://src/Game.gd" id="1_game"]
 [ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
@@ -6,6 +6,8 @@
 [ext_resource type="Shader" path="res://assets/shaders/panel_bg.gdshader" id="4_panelbg"]
 [ext_resource type="PackedScene" uid="uid://gauge_scene" path="res://scenes/Gauge.tscn" id="5_gauge"]
 [ext_resource type="PackedScene" uid="uid://cardview_scene" path="res://scenes/CardView.tscn" id="6_card"]
+[ext_resource type="PackedScene" uid="uid://codex_scene" path="res://scenes/Codex.tscn" id="7_codex"]
+[ext_resource type="PackedScene" uid="uid://death_scene" path="res://scenes/Death.tscn" id="8_death"]
 
 [sub_resource type="ShaderMaterial" id="SM_panel"]
 shader = ExtResource("4_panelbg")
@@ -292,3 +294,9 @@ theme_override_fonts/normal_font = SubResource("FV_era")
 theme_override_font_sizes/normal_font_size = 9
 text = "[center]▲  TABLEAU DE BORD[/center]"
 mouse_filter = 2
+
+[node name="Codex" parent="." instance=ExtResource("7_codex")]
+unique_name_in_owner = true
+
+[node name="Death" parent="." instance=ExtResource("8_death")]
+unique_name_in_owner = true
