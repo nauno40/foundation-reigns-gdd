@@ -480,10 +480,12 @@ func _init_reign(legit_start: int) -> void:
 
 # ── bannière de déblocage de deck (port .deck-add + .deck-banner) ──
 func _play_deck_unlock(u: Dictionary) -> void:
+	# Cartes qui glissent : SOUS la carte actuelle (template .deck-add z-index 1 < .card z-index 3).
 	var fx := Control.new()
 	fx.set_anchors_preset(Control.PRESET_FULL_RECT)
 	fx.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_stage.add_child(fx)
+	_stage.move_child(fx, _cardview.get_index())   # passe sous la carte courante
 	var side: float = _cardview.size.x
 	var target := _cardview.position + Vector2(10, 10)
 	var n: int = clampi(u["cards"], 3, 6)
@@ -512,9 +514,15 @@ func _play_deck_unlock(u: Dictionary) -> void:
 		t.tween_property(ac, "position", target, 0.5).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 		t.tween_property(ac, "rotation", deg_to_rad(2.5), 0.5).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 		t.tween_property(ac, "scale", Vector2.ONE, 0.5).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	_unlock_banner(fx, u["name"], n)
+	# Bandeau : AU-DESSUS de la carte (template .deck-banner z-index 12).
+	var banfx := Control.new()
+	banfx.set_anchors_preset(Control.PRESET_FULL_RECT)
+	banfx.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_stage.add_child(banfx)   # ajouté après la carte → rendu par-dessus
+	_unlock_banner(banfx, u["name"], n)
 	get_tree().create_timer(2.4).timeout.connect(func():
 		if is_instance_valid(fx): fx.queue_free()
+		if is_instance_valid(banfx): banfx.queue_free()
 	, CONNECT_ONE_SHOT)
 
 func _unlock_banner(parent: Control, deck_name: String, count: int) -> void:

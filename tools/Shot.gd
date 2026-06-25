@@ -24,6 +24,9 @@ func _ready() -> void:
 			await _wait(10)
 			game._on_committed(true)
 			await _wait(90)
+		"unlock":
+			game._play_deck_unlock(Data.DECK_UNLOCKS[0])
+			await _wait(22)   # cartes en train de glisser sous la carte + bandeau
 		"gauges":
 			# niveaux contrastés pour vérifier le remplissage
 			game.res = {"military": 8, "religion": 50, "commerce": 92, "politics": 34}
