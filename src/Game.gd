@@ -12,6 +12,7 @@ const FONT_CAVEAT = preload("res://assets/fonts/Caveat.ttf")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const PANEL_SHADER = preload("res://assets/shaders/panel_bg.gdshader")
 const DEATHFX_SHADER = preload("res://assets/shaders/death_fx.gdshader")
+const GAUGE_SCENE = preload("res://scenes/Gauge.tscn")
 const QUESTION_MAX_H := 150.0
 
 # état (port de App)
@@ -102,7 +103,7 @@ func _build() -> void:
 	resrow.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	tv.add_child(resrow)
 	for r in Data.RESOURCES:
-		var g := Gauge.new()
+		var g: Gauge = GAUGE_SCENE.instantiate()
 		g.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		resrow.add_child(g)
 		g.setup(r["key"], r["label"])

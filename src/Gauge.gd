@@ -1,118 +1,47 @@
 class_name Gauge
 extends Control
 
-# Jauge icône-masque (port de ResIcon / .ricon dans app.jsx).
+# Jauge icône-masque. Structure dans Gauge.tscn ; ce script ne gère que la logique
+# (valeur, états warn/crit/affected, flash ▲/▼). setup() fixe l'icône + la couleur.
 
-const GAUGE_SHADER = preload("res://assets/shaders/gauge_fill.gdshader")
-const GLOW_SHADER = preload("res://assets/shaders/glow.gdshader")
-const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const ICONS := {
 	"military": preload("res://assets/icons/military.svg"),
 	"religion": preload("res://assets/icons/religion.svg"),
 	"commerce": preload("res://assets/icons/commerce.svg"),
 	"politics": preload("res://assets/icons/politics.svg"),
 }
-const GLYPH := 46.0
 const BASE_NORMAL := Color(0.235, 0.282, 0.376)   # #3c4860
 const BASE_AFF := Color(0.490, 0.565, 0.659)      # #7d90a8
 const UP := Color("#5fcf8f")
 const DOWN := Color("#d96a5a")
 
+@onready var _delta: Label = %Delta
+@onready var _glow: TextureRect = %Glow
+@onready var _flash: TextureRect = %Flash
+@onready var _icon: TextureRect = %Icon
+@onready var _lab: Label = %Label
+
 var _key := ""
 var _value := 50
 var _display := 50.0
 var _affected := false
-var _delta: Label
-var _glow: TextureRect
-var _flash: TextureRect
-var _icon: TextureRect
-var _lab: Label
 var _mat: ShaderMaterial
 var _vt: Tween
 var _gt: Tween
 
-func _ready() -> void:
-	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	custom_minimum_size = Vector2(0, 64)
-
 func setup(key: String, label: String) -> void:
 	_key = key
-	if get_child_count() == 0:
-		_build()
-	_lab.text = label.to_upper()
+	if not is_node_ready():
+		await ready
 	var tex: Texture2D = ICONS.get(key)
 	_icon.texture = tex
 	_glow.texture = tex
 	_flash.texture = tex
+	_mat = _icon.material
 	_mat.set_shader_parameter("res_color", Pal.res_color(key))
-	_refresh()
-
-func _build() -> void:
-	var vb := VBoxContainer.new()
-	vb.set_anchors_preset(Control.PRESET_FULL_RECT)
-	vb.alignment = BoxContainer.ALIGNMENT_CENTER
-	vb.add_theme_constant_override("separation", 6)
-	vb.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(vb)
-
-	var center := CenterContainer.new()
-	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vb.add_child(center)
-	var glyph := Control.new()
-	glyph.custom_minimum_size = Vector2(GLYPH, GLYPH)
-	glyph.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	center.add_child(glyph)
-
-	var gmat := ShaderMaterial.new()
-	gmat.shader = GLOW_SHADER
-	_glow = _layer(glyph, gmat)
-	_glow.modulate.a = 0.0
-	_flash = _layer(glyph, gmat)
-	_flash.modulate.a = 0.0
-	_icon = TextureRect.new()
-	_icon.set_anchors_preset(Control.PRESET_FULL_RECT)
-	_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_mat = ShaderMaterial.new()
-	_mat.shader = GAUGE_SHADER
-	_mat.set_shader_parameter("fill", 0.5)
 	_mat.set_shader_parameter("base_color", BASE_NORMAL)
-	_icon.material = _mat
-	glyph.add_child(_icon)
-
-	_lab = Label.new()
-	var labf := FontVariation.new()
-	labf.base_font = FONT_MONO
-	labf.spacing_glyph = 1
-	_lab.add_theme_font_override("font", labf)
-	_lab.add_theme_font_size_override("font_size", 8)
-	_lab.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_lab.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vb.add_child(_lab)
-
-	# delta ▲/▼ : overlay HORS FLUX (template top:-13px), au-dessus de l'icône
-	_delta = Label.new()
-	_delta.set_anchors_preset(Control.PRESET_TOP_WIDE)
-	_delta.anchor_right = 1.0
-	_delta.offset_top = -3.0
-	_delta.offset_bottom = 13.0
-	_delta.add_theme_font_override("font", FONT_MONO)
-	_delta.add_theme_font_size_override("font_size", 11)
-	_delta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_delta.modulate.a = 0.0
-	_delta.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(_delta)
-
-func _layer(glyph: Control, mat: Material) -> TextureRect:
-	var tr := TextureRect.new()
-	tr.set_anchors_preset(Control.PRESET_FULL_RECT)
-	tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	tr.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	tr.material = mat
-	glyph.add_child(tr)
-	return tr
+	_lab.text = label.to_upper()
+	_refresh()
 
 func set_value(v: int) -> void:
 	var target := clampi(v, 0, 100)
