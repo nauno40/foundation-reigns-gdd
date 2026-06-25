@@ -23,6 +23,7 @@ var _drag := 0.0
 var _drag_y := 0.0
 var _grabbing := false
 var _releasing := false
+var _entering := false
 var _vx := 0.0
 var _vy := 0.0
 var _start := Vector2.ZERO
@@ -135,15 +136,19 @@ func show_card(card: Dictionary) -> void:
 	_mat.set_shader_parameter("tone_hi", Data.lighten(tone, 0.12))
 
 func play_entry() -> void:
+	_entering = true
+	var off := Vector2(8, 12)
 	modulate.a = 0.0
-	position = _base + Vector2(8, 12)
+	position = _base + off
 	rotation = deg_to_rad(2.2)
 	scale = Vector2(0.965, 0.965)
 	var t := create_tween().set_parallel()
 	t.tween_property(self, "modulate:a", 1.0, 0.16)
-	t.tween_property(self, "position", _base, 0.36).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	# position : lit _base EN DIRECT (résiste aux changements de layout pendant l'entrée)
+	t.tween_method(func(p): position = _base + off * (1.0 - p), 0.0, 1.0, 0.36).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	t.tween_property(self, "rotation", 0.0, 0.36).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	t.tween_property(self, "scale", Vector2.ONE, 0.36).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	get_tree().create_timer(0.38).timeout.connect(func(): _entering = false, CONNECT_ONE_SHOT)
 
 func _gui_input(e: InputEvent) -> void:
 	if _flying: return
@@ -178,7 +183,7 @@ func _process(_dt: float) -> void:
 		_update_choice()
 
 func _apply() -> void:
-	if _flying: return
+	if _flying or _entering: return
 	position = _base + Vector2(_drag, _drag_y)
 	rotation = deg_to_rad(_drag * ROT)
 	var s := GRAB_SCALE if _grabbing else 1.0

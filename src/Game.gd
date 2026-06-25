@@ -48,13 +48,22 @@ func _ready() -> void:
 	_new_cover()
 	_init_reign(100)
 	card = Data.pick_card([])
+	# attendre que les conteneurs se dimensionnent avant de placer/animer la carte
+	await get_tree().process_frame
+	await get_tree().process_frame
+	_layout_stage()
 	_cardview.show_card(card)
 	_refresh_all()
-	_cardview.play_entry.call_deferred()
+	_cardview.play_entry()
 
 # ── construction de l'UI ──
+var _caveat_bold: FontVariation
+
 func _build() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
+	_caveat_bold = FontVariation.new()
+	_caveat_bold.base_font = FONT_CAVEAT
+	_caveat_bold.variation_opentype = {"wght": 700}
 	var vb := VBoxContainer.new()
 	vb.set_anchors_preset(Control.PRESET_FULL_RECT)
 	vb.add_theme_constant_override("separation", 0)
@@ -183,7 +192,7 @@ func _build() -> void:
 	bv.add_theme_constant_override("separation", 2)
 	bm.add_child(bv)
 	_year_lbl = Label.new()
-	_year_lbl.add_theme_font_override("font", FONT_CAVEAT)
+	_year_lbl.add_theme_font_override("font", _caveat_bold)
 	_year_lbl.add_theme_font_size_override("font_size", 30)
 	_year_lbl.add_theme_color_override("font_color", Color("#eef1f6"))
 	_year_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -307,6 +316,8 @@ func _on_committed(is_left: bool) -> void:
 	card = Data.pick_card(recent)
 	_cardview.show_card(card)
 	_refresh_card()
+	await get_tree().process_frame
+	_layout_stage()
 	_cardview.play_entry()
 	# déblocage de deck (jalon)
 	for u in Data.DECK_UNLOCKS:
@@ -331,7 +342,6 @@ func _refresh_card() -> void:
 	_fit_question()
 
 func _fit_question() -> void:
-	await get_tree().process_frame
 	var h := _question.get_minimum_size().y
 	_q_scroll.custom_minimum_size.y = clampf(h, 0.0, QUESTION_MAX_H)
 	_q_scroll.scroll_vertical = 0
@@ -382,6 +392,8 @@ func _respawn() -> void:
 	_death.visible = false
 	_cardview.show_card(card)
 	_refresh_all()
+	await get_tree().process_frame
+	_layout_stage()
 	_cardview.play_entry()
 	busy = false
 
