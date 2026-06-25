@@ -11,7 +11,7 @@ const ICONS := {
 	"commerce": preload("res://assets/icons/commerce.svg"),
 	"politics": preload("res://assets/icons/politics.svg"),
 }
-const GLYPH := 40.0
+const GLYPH := 46.0
 const BASE_NORMAL := Color(0.235, 0.282, 0.376)   # #3c4860
 const BASE_AFF := Color(0.490, 0.565, 0.659)      # #7d90a8
 const UP := Color("#5fcf8f")
@@ -89,7 +89,10 @@ func _build() -> void:
 	glyph.add_child(_icon)
 
 	_lab = Label.new()
-	_lab.add_theme_font_override("font", FONT_MONO)
+	var labf := FontVariation.new()
+	labf.base_font = FONT_MONO
+	labf.spacing_glyph = 1
+	_lab.add_theme_font_override("font", labf)
 	_lab.add_theme_font_size_override("font_size", 8)
 	_lab.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_lab.mouse_filter = Control.MOUSE_FILTER_IGNORE

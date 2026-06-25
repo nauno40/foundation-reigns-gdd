@@ -5,7 +5,7 @@ extends Node
 #   godot --display-driver x11 --rendering-driver opengl3 res://tools/Shot.tscn -- card
 
 func _ready() -> void:
-	get_window().size = Vector2i(1000, 980)
+	get_window().size = Vector2i(460, 920)
 	var main = load("res://scenes/Main.tscn").instantiate()
 	add_child(main)
 	var args := OS.get_cmdline_user_args()

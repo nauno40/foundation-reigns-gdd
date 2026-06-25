@@ -38,7 +38,8 @@ var _cardview: CardView
 var _bearer_name: Label
 var _bearer_role: Label
 var _year_lbl: Label
-var _reign_lbl: Label
+var _reign_lbl: RichTextLabel
+var _handle_chev: RichTextLabel
 var _codex: Codex
 var _death: Death
 var _deathfx: ColorRect
@@ -59,12 +60,16 @@ func _ready() -> void:
 
 # ── construction de l'UI ──
 var _caveat_bold: FontVariation
+var _mono_wide: FontVariation     # inter-lettre large (ère, poignée)
 
 func _build() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
 	_caveat_bold = FontVariation.new()
 	_caveat_bold.base_font = FONT_CAVEAT
 	_caveat_bold.variation_opentype = {"wght": 700}
+	_mono_wide = FontVariation.new()
+	_mono_wide.base_font = FONT_MONO
+	_mono_wide.spacing_glyph = 3
 	var vb := VBoxContainer.new()
 	vb.set_anchors_preset(Control.PRESET_FULL_RECT)
 	vb.add_theme_constant_override("separation", 0)
@@ -77,14 +82,14 @@ func _build() -> void:
 	var tm := _margin(18, 12, 18, 11)
 	topbar.add_child(tm)
 	var tv := VBoxContainer.new()
-	tv.add_theme_constant_override("separation", 9)
+	tv.add_theme_constant_override("separation", 7)
 	tv.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	tm.add_child(tv)
 	_era = RichTextLabel.new()
 	_era.bbcode_enabled = true
 	_era.fit_content = true
 	_era.scroll_active = false
-	_era.add_theme_font_override("normal_font", FONT_MONO)
+	_era.add_theme_font_override("normal_font", _mono_wide)
 	_era.add_theme_font_size_override("normal_font_size", 9)
 	_era.add_theme_color_override("default_color", Color("#9aa7bd"))
 	_era.text = _era_text()
@@ -198,34 +203,51 @@ func _build() -> void:
 	_year_lbl.add_theme_color_override("font_color", Color("#eef1f6"))
 	_year_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	bv.add_child(_year_lbl)
-	_reign_lbl = Label.new()
-	_reign_lbl.add_theme_font_override("font", FONT_MONO)
-	_reign_lbl.add_theme_font_size_override("font_size", 10)
-	_reign_lbl.add_theme_color_override("font_color", Pal.INK_DIM)
-	_reign_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_reign_lbl = RichTextLabel.new()
+	_reign_lbl.bbcode_enabled = true
+	_reign_lbl.fit_content = true
+	_reign_lbl.scroll_active = false
+	_reign_lbl.add_theme_font_override("normal_font", FONT_MONO)
+	_reign_lbl.add_theme_font_override("bold_font", FONT_MONO_BOLD)
+	_reign_lbl.add_theme_font_size_override("normal_font_size", 10)
+	_reign_lbl.add_theme_font_size_override("bold_font_size", 10)
+	_reign_lbl.add_theme_color_override("default_color", Pal.INK_DIM)
 	bv.add_child(_reign_lbl)
 
-	# HANDLE
-	var handle := Button.new()
-	handle.text = "▲  TABLEAU DE BORD"
-	handle.focus_mode = Control.FOCUS_NONE
-	handle.custom_minimum_size = Vector2(0, 30)
-	handle.add_theme_font_override("font", FONT_MONO)
-	handle.add_theme_font_size_override("font_size", 9)
-	handle.add_theme_color_override("font_color", Color("#7d8aa0"))
-	handle.add_theme_color_override("font_hover_color", Pal.ACCENT)
+	# HANDLE (poignée codex) : barre grise + « ▲ TABLEAU DE BORD » (chevron gris + accent)
+	var handle := PanelContainer.new()
+	handle.custom_minimum_size = Vector2(0, 34)
 	var hsb := StyleBoxFlat.new()
 	hsb.bg_color = Color("#0b0e15")
 	hsb.border_width_top = 1
 	hsb.border_color = Color(0.471, 0.588, 0.745, 0.1)
 	hsb.corner_radius_bottom_left = 18
 	hsb.corner_radius_bottom_right = 18
-	handle.add_theme_stylebox_override("normal", hsb)
-	var hsbh := hsb.duplicate()
-	hsbh.bg_color = Color(0.31, 0.839, 0.91, 0.05)
-	handle.add_theme_stylebox_override("hover", hsbh)
-	handle.add_theme_stylebox_override("pressed", hsbh)
-	handle.pressed.connect(func(): _codex.open("chars"))
+	hsb.content_margin_top = 7
+	hsb.content_margin_bottom = 9
+	handle.add_theme_stylebox_override("panel", hsb)
+	var hv := VBoxContainer.new()
+	hv.alignment = BoxContainer.ALIGNMENT_CENTER
+	hv.add_theme_constant_override("separation", 4)
+	handle.add_child(hv)
+	var barc := CenterContainer.new()
+	hv.add_child(barc)
+	var bar := ColorRect.new()
+	bar.color = Color("#39435a")
+	bar.custom_minimum_size = Vector2(38, 3)
+	barc.add_child(bar)
+	_handle_chev = RichTextLabel.new()
+	_handle_chev.bbcode_enabled = true
+	_handle_chev.fit_content = true
+	_handle_chev.scroll_active = false
+	_handle_chev.add_theme_font_override("normal_font", _mono_wide)
+	_handle_chev.add_theme_font_size_override("normal_font_size", 9)
+	_handle_chev.text = _handle_text()
+	_handle_chev.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hv.add_child(_handle_chev)
+	handle.gui_input.connect(func(e):
+		if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
+			_codex.open("chars"))
 	vb.add_child(handle)
 
 	# overlays
@@ -272,9 +294,13 @@ func _build() -> void:
 func _era_text() -> String:
 	return "[center]SECONDE FONDATION · [color=#%s]ÈRE HARDIN[/color] · ANS 1–80[/center]" % Cfg.accent.to_html(false)
 
+func _handle_text() -> String:
+	return "[center][color=#7d8aa0]▲[/color]  [color=#%s]TABLEAU DE BORD[/color][/center]" % Cfg.accent.to_html(false)
+
 func _on_cfg_changed() -> void:
 	# accent + taille de texte appliqués en direct
 	_era.text = _era_text()
+	_handle_chev.text = _handle_text()
 	_question.add_theme_font_size_override("font_size", Cfg.prose)
 	for k in _gauges:
 		_gauges[k].refresh()
@@ -372,7 +398,7 @@ func _refresh_all() -> void:
 	for r in Data.RESOURCES:
 		_gauges[r["key"]].set_value(res[r["key"]])
 	_year_lbl.text = "An %d" % year
-	_reign_lbl.text = "%d ans · %s" % [age, str(cover.get("name", "Inconnu"))]
+	_reign_lbl.text = "[center][b][color=#e7edf6]%d ans[/color][/b] · %s[/center]" % [age, str(cover.get("name", "Inconnu"))]
 	_whisper.visible = legit < 35
 	if _whisper.visible:
 		_whisper.text = "vous semblez toujours avoir la bonne réponse…"
