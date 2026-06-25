@@ -31,73 +31,15 @@ var _flying := false
 var _left_title := ""
 var _right_title := ""
 
-var _face: ColorRect
-var _bust: CardBust
-var _rim: Panel
-var _keytag: Label
-var _choice: Label
+@onready var _face: ColorRect = %FaceBg
+@onready var _bust: CardBust = %Bust
+@onready var _keytag: Label = %KeyTag
+@onready var _choice: Label = %CardChoice
 var _mat: ShaderMaterial
 
 func _ready() -> void:
-	mouse_filter = Control.MOUSE_FILTER_STOP
-	_build()
+	_mat = _face.material
 	set_process(true)
-
-func _build() -> void:
-	_face = ColorRect.new()
-	_face.set_anchors_preset(Control.PRESET_FULL_RECT)
-	_face.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_mat = ShaderMaterial.new()
-	_mat.shader = FACE_SHADER
-	_face.material = _mat
-	add_child(_face)
-
-	_bust = CardBust.new()
-	_bust.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(_bust)
-
-	_rim = Panel.new()
-	_rim.set_anchors_preset(Control.PRESET_FULL_RECT)
-	_rim.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color(0, 0, 0, 0)
-	sb.set_corner_radius_all(16)
-	sb.set_border_width_all(1)
-	sb.border_color = Color(0.471, 0.784, 0.863, 0.14)
-	sb.shadow_color = Color(0, 0, 0, 0.6)
-	sb.shadow_size = 22
-	sb.shadow_offset = Vector2(0, 14)
-	_rim.add_theme_stylebox_override("panel", sb)
-	add_child(_rim)
-
-	_keytag = Label.new()
-	_keytag.text = "FIGURE DU PLAN"
-	_keytag.add_theme_font_override("font", FONT_MONO)
-	_keytag.add_theme_font_size_override("font_size", 8)
-	_keytag.add_theme_color_override("font_color", Pal.AMBER)
-	var kb := StyleBoxFlat.new()
-	kb.bg_color = Color(0.02, 0.027, 0.051, 0.5)
-	kb.set_corner_radius_all(99)
-	kb.set_border_width_all(1)
-	kb.border_color = Color(0.91, 0.714, 0.353, 0.5)
-	kb.content_margin_left = 7; kb.content_margin_right = 7
-	kb.content_margin_top = 3; kb.content_margin_bottom = 3
-	_keytag.add_theme_stylebox_override("normal", kb)
-	_keytag.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_keytag.visible = false
-	add_child(_keytag)
-
-	_choice = Label.new()
-	_choice.add_theme_font_override("font", FONT_MONO_BOLD)
-	_choice.add_theme_font_size_override("font_size", 15)
-	_choice.add_theme_color_override("font_color", Color(0.949, 0.969, 0.984))
-	_choice.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.85))
-	_choice.add_theme_constant_override("shadow_outline_size", 6)
-	_choice.add_theme_constant_override("shadow_offset_y", 1)
-	_choice.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_choice.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_choice.modulate.a = 0.0
-	add_child(_choice)
 
 func layout(base: Vector2, side: float) -> void:
 	_base = base

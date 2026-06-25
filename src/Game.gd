@@ -13,6 +13,7 @@ const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const PANEL_SHADER = preload("res://assets/shaders/panel_bg.gdshader")
 const DEATHFX_SHADER = preload("res://assets/shaders/death_fx.gdshader")
 const GAUGE_SCENE = preload("res://scenes/Gauge.tscn")
+const CARDVIEW_SCENE = preload("res://scenes/CardView.tscn")
 const QUESTION_MAX_H := 150.0
 
 # état (port de App)
@@ -169,7 +170,7 @@ func _build() -> void:
 	dsb.shadow_offset = Vector2(0, 10)
 	_deck_card.add_theme_stylebox_override("panel", dsb)
 	_stage.add_child(_deck_card)
-	_cardview = CardView.new()
+	_cardview = CARDVIEW_SCENE.instantiate()
 	_stage.add_child(_cardview)
 	_cardview.committed.connect(_on_committed)
 	_cardview.preview.connect(_on_preview)
