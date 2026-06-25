@@ -61,7 +61,7 @@ func _build() -> void:
 		tabs.add_child(b)
 		_tab_buttons[key] = b
 		var ul := ColorRect.new()
-		ul.color = Pal.ACCENT
+		ul.color = Cfg.accent
 		ul.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
 		ul.anchor_left = 0.18; ul.anchor_right = 0.82
 		ul.offset_top = -2.0; ul.offset_bottom = 0.0
@@ -113,8 +113,9 @@ func close() -> void:
 func _select(tab: String) -> void:
 	_tab = tab
 	for k in _tab_buttons:
-		_tab_buttons[k].add_theme_color_override("font_color", Pal.ACCENT if k == tab else Pal.INK_DIM)
+		_tab_buttons[k].add_theme_color_override("font_color", Cfg.accent if k == tab else Pal.INK_DIM)
 		_tab_underlines[k].visible = (k == tab)
+		_tab_underlines[k].color = Cfg.accent
 	for c in _body.get_children(): c.queue_free()
 	match tab:
 		"chars": _render_chars()

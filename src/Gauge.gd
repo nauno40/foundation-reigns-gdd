@@ -129,6 +129,9 @@ func _zone() -> String:
 	if _value < 25 or _value > 75: return "warn"
 	return ""
 
+func refresh() -> void:
+	_refresh()
+
 func _refresh() -> void:
 	if not _glow: return
 	var zone := _zone()
@@ -136,7 +139,7 @@ func _refresh() -> void:
 	var gc := Color.TRANSPARENT
 	var pulse := false
 	if _affected:
-		gc = Pal.ACCENT; lc = Pal.ACCENT
+		gc = Cfg.accent; lc = Cfg.accent
 	elif zone == "crit":
 		gc = Pal.DANGER; lc = Pal.DANGER; pulse = true
 	elif zone == "warn":

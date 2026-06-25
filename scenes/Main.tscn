@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://foundation_main"]
+[gd_scene load_steps=8 format=3 uid="uid://foundation_main"]
 
 [ext_resource type="Shader" path="res://assets/shaders/space_bg.gdshader" id="1_space"]
 [ext_resource type="Shader" path="res://assets/shaders/frame_veil.gdshader" id="2_veil"]
 [ext_resource type="Script" path="res://src/Game.gd" id="3_game"]
+[ext_resource type="Script" path="res://src/Root.gd" id="4_root"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="5_mono"]
 
 [sub_resource type="ShaderMaterial" id="SM_space"]
 shader = ExtResource("1_space")
@@ -12,6 +14,15 @@ shader_parameter/rect_size = Vector2(460, 920)
 shader = ExtResource("2_veil")
 shader_parameter/strength = 1.0
 
+[sub_resource type="StyleBoxFlat" id="SB_shadow"]
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.85)
+shadow_size = 44
+
 [node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -19,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_root")
 
 [node name="SpaceBg" type="ColorRect" parent="."]
 material = SubResource("SM_space")
@@ -26,25 +38,66 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 2
 
-[node name="Game" type="Control" parent="."]
+[node name="Equ" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 18.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = -18.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.471, 0.627, 0.784, 0.05)
+theme_override_fonts/font = ExtResource("5_mono")
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 3
+clip_text = true
+
+[node name="Row" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="SpacerL" type="Control" parent="Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Frame" type="Control" parent="Row"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="FrameShadow" type="Panel" parent="Row/Frame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_shadow")
+
+[node name="Game" type="Control" parent="Row/Frame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource("3_game")
 
-[node name="Veil" type="ColorRect" parent="."]
+[node name="Veil" type="ColorRect" parent="Row/Frame"]
 material = SubResource("SM_veil")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+mouse_filter = 2
+
+[node name="SpacerR" type="Control" parent="Row"]
+layout_mode = 2
+size_flags_horizontal = 3
 mouse_filter = 2

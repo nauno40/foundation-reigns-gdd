@@ -42,6 +42,7 @@ var _reign_lbl: Label
 var _codex: Codex
 var _death: Death
 var _deathfx: ColorRect
+var _tweaks: TweaksPanel
 
 func _ready() -> void:
 	_build()
@@ -71,7 +72,7 @@ func _build() -> void:
 	add_child(vb)
 
 	# TOPBAR
-	var topbar := _bar(Color("#0b0e15"))
+	var topbar := _bar(Color("#0b0e15"), 18, 0)
 	vb.add_child(topbar)
 	var tm := _margin(18, 12, 18, 11)
 	topbar.add_child(tm)
@@ -86,7 +87,7 @@ func _build() -> void:
 	_era.add_theme_font_override("normal_font", FONT_MONO)
 	_era.add_theme_font_size_override("normal_font_size", 9)
 	_era.add_theme_color_override("default_color", Color("#9aa7bd"))
-	_era.text = "[center]SECONDE FONDATION · [color=#4fd6e8]ÈRE HARDIN[/color] · ANS 1–80[/center]"
+	_era.text = _era_text()
 	tv.add_child(_era)
 	var resrow := HBoxContainer.new()
 	resrow.add_theme_constant_override("separation", 10)
@@ -128,7 +129,7 @@ func _build() -> void:
 	_question = Label.new()
 	_question.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_question.add_theme_font_override("font", FONT_MONO)
-	_question.add_theme_font_size_override("font_size", 17)
+	_question.add_theme_font_size_override("font_size", Cfg.prose)
 	_question.add_theme_constant_override("line_spacing", 5)
 	_question.add_theme_color_override("font_color", Color("#dde6f2"))
 	_question.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -217,6 +218,8 @@ func _build() -> void:
 	hsb.bg_color = Color("#0b0e15")
 	hsb.border_width_top = 1
 	hsb.border_color = Color(0.471, 0.588, 0.745, 0.1)
+	hsb.corner_radius_bottom_left = 18
+	hsb.corner_radius_bottom_right = 18
 	handle.add_theme_stylebox_override("normal", hsb)
 	var hsbh := hsb.duplicate()
 	hsbh.bg_color = Color(0.31, 0.839, 0.91, 0.05)
@@ -242,11 +245,50 @@ func _build() -> void:
 	_deathfx.visible = false
 	add_child(_deathfx)
 
-func _bar(c: Color) -> PanelContainer:
+	# panneau Tweaks (dev) + bouton ⚙
+	_tweaks = TweaksPanel.new()
+	_tweaks.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(_tweaks)
+	var gear := Button.new()
+	gear.text = "⚙"
+	gear.focus_mode = Control.FOCUS_NONE
+	gear.custom_minimum_size = Vector2(28, 28)
+	gear.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+	gear.anchor_left = 1.0
+	gear.offset_left = -34.0
+	gear.offset_top = 6.0
+	gear.offset_right = -6.0
+	gear.offset_bottom = 34.0
+	gear.add_theme_font_size_override("font_size", 14)
+	gear.add_theme_color_override("font_color", Color("#5b6680"))
+	gear.add_theme_color_override("font_hover_color", Cfg.accent)
+	gear.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+	gear.add_theme_stylebox_override("hover", StyleBoxEmpty.new())
+	gear.pressed.connect(func(): _tweaks.open())
+	add_child(gear)
+
+	Cfg.changed.connect(_on_cfg_changed)
+
+func _era_text() -> String:
+	return "[center]SECONDE FONDATION · [color=#%s]ÈRE HARDIN[/color] · ANS 1–80[/center]" % Cfg.accent.to_html(false)
+
+func _on_cfg_changed() -> void:
+	# accent + taille de texte appliqués en direct
+	_era.text = _era_text()
+	_question.add_theme_font_size_override("font_size", Cfg.prose)
+	for k in _gauges:
+		_gauges[k].refresh()
+	_fit_question()
+
+func _bar(c: Color, top := 0, bottom := 0) -> PanelContainer:
 	var p := PanelContainer.new()
 	p.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var sb := StyleBoxFlat.new()
 	sb.bg_color = c
+	sb.corner_radius_top_left = top
+	sb.corner_radius_top_right = top
+	sb.corner_radius_bottom_left = bottom
+	sb.corner_radius_bottom_right = bottom
 	p.add_theme_stylebox_override("panel", sb)
 	return p
 
@@ -290,9 +332,10 @@ func _on_committed(is_left: bool) -> void:
 	for k in _gauges: _gauges[k].set_affected(false)
 	var ans: Dictionary = card["left" if is_left else "right"]
 	var fx: Dictionary = ans["fx"]
+	var mult: float = Data.DIFF.get(Cfg.difficulty, 1.0)
 	for k in res:
-		if fx.has(k): res[k] = clampi(res[k] + int(fx[k]), 0, 100)
-	if fx.has("legit"): legit = clampi(legit + int(fx["legit"]), 0, 100)
+		if fx.has(k): res[k] = clampi(res[k] + int(round(float(fx[k]) * mult)), 0, 100)
+	if fx.has("legit"): legit = clampi(legit + int(round(float(fx["legit"]) * mult)), 0, 100)
 	year += 1
 	if randf() < 0.4: age += 1
 	turns += 1

@@ -5,13 +5,13 @@ extends Node
 #   godot --display-driver x11 --rendering-driver opengl3 res://tools/Shot.tscn -- card
 
 func _ready() -> void:
-	get_window().size = Vector2i(460, 920)
+	get_window().size = Vector2i(1000, 980)
 	var main = load("res://scenes/Main.tscn").instantiate()
 	add_child(main)
 	var args := OS.get_cmdline_user_args()
 	var mode: String = args[0] if args.size() > 0 else "card"
 	await _wait(70)
-	var game = main.get_node("Game")
+	var game = main.get_node("Row/Frame/Game")
 	match mode:
 		"codex": game._codex.open("chars"); await _wait(40)
 		"codexach": game._codex.open("ach"); await _wait(40)

@@ -5,6 +5,7 @@ extends Control
 
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
+const FONT_SPECTRAL_MED = preload("res://assets/fonts/Spectral-Medium.ttf")
 const FONT_SPECTRAL_IT = preload("res://assets/fonts/Spectral-Italic.ttf")
 const ICONS := {
 	"military": preload("res://assets/icons/military.svg"),
@@ -41,7 +42,7 @@ func show_death(info: Dictionary) -> void:
 	cause.add_theme_constant_override("line_spacing", 0)
 	vb.add_child(cause)
 	vb.add_child(_spacer(7))
-	vb.add_child(_lbl(info["bearerName"], FONT_SPECTRAL, 28, Pal.INK))
+	vb.add_child(_lbl(info["bearerName"], FONT_SPECTRAL_MED, 28, Pal.INK))
 	vb.add_child(_spacer(3))
 	vb.add_child(_lbl(info["sub"], FONT_MONO, 10, Pal.INK_DIM))
 	vb.add_child(_spacer(22))
