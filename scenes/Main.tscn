@@ -1,178 +1,50 @@
-[gd_scene load_steps=13 format=3 uid="uid://main"]
+[gd_scene load_steps=5 format=3 uid="uid://foundation_main"]
 
-[ext_resource type="Script" uid="uid://b77voxileqxhp" path="res://src/main/Main.gd" id="1_main"]
-[ext_resource type="PackedScene" uid="uid://cardscreen1" path="res://scenes/CardScreen.tscn" id="2_cscr"]
-[ext_resource type="PackedScene" uid="uid://deathscreen1" path="res://scenes/DeathScreen.tscn" id="3_dscr"]
-[ext_resource type="PackedScene" uid="uid://codex_panel" path="res://scenes/Codex.tscn" id="4_codex"]
-[ext_resource type="PackedScene" path="res://scenes/BriefingScreen.tscn" id="5_brf"]
-[ext_resource type="Theme" uid="uid://cbbdtswl7xv50" path="res://theme/foundation_theme.tres" id="5_theme"]
-[ext_resource type="Script" path="res://src/ui/FrameFit.gd" id="6_frame"]
-[ext_resource type="Shader" path="res://assets/shaders/space_bg.gdshader" id="7_space"]
-[ext_resource type="Shader" path="res://assets/shaders/scanline_veil.gdshader" id="8_veil"]
-[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="9_mono"]
+[ext_resource type="Shader" path="res://assets/shaders/space_bg.gdshader" id="1_space"]
+[ext_resource type="Shader" path="res://assets/shaders/frame_veil.gdshader" id="2_veil"]
+[ext_resource type="Script" path="res://src/Game.gd" id="3_game"]
 
 [sub_resource type="ShaderMaterial" id="SM_space"]
-shader = ExtResource("7_space")
+shader = ExtResource("1_space")
+shader_parameter/rect_size = Vector2(460, 920)
 
 [sub_resource type="ShaderMaterial" id="SM_veil"]
-shader = ExtResource("8_veil")
+shader = ExtResource("2_veil")
+shader_parameter/strength = 1.0
 
-[sub_resource type="StyleBoxFlat" id="SB_frame"]
-bg_color = Color(0.0392, 0.0588, 0.102, 0.86)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.471, 0.588, 0.745, 0.14)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[node name="Main" type="Node"]
-script = ExtResource("1_main")
-
-[node name="UIRoot" type="Control" parent="."]
+[node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("5_theme")
-mouse_filter = 2
 
-[node name="SpaceBg" type="ColorRect" parent="UIRoot"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="SpaceBg" type="ColorRect" parent="."]
 material = SubResource("SM_space")
-mouse_filter = 2
-
-[node name="Equ" type="Label" parent="UIRoot"]
-unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.471, 0.627, 0.784, 0.05)
-theme_override_constants/line_spacing = 16
-theme_override_fonts/font = ExtResource("9_mono")
-theme_override_font_sizes/font_size = 12
-autowrap_mode = 3
-clip_text = true
 
-[node name="Frame" type="PanelContainer" parent="UIRoot"]
-unique_name_in_owner = true
-layout_mode = 1
-theme_override_styles/panel = SubResource("SB_frame")
-script = ExtResource("6_frame")
-
-[node name="Content" type="Control" parent="UIRoot/Frame"]
-layout_mode = 2
-clip_contents = true
-
-[node name="CardScreen" parent="UIRoot/Frame/Content" instance=ExtResource("2_cscr")]
-unique_name_in_owner = true
+[node name="Game" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_game")
 
-[node name="DeathScreen" parent="UIRoot/Frame/Content" instance=ExtResource("3_dscr")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Codex" parent="UIRoot/Frame/Content" instance=ExtResource("4_codex")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BriefingScreen" parent="UIRoot/Frame/Content" instance=ExtResource("5_brf")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Veil" type="ColorRect" parent="UIRoot/Frame/Content"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Veil" type="ColorRect" parent="."]
 material = SubResource("SM_veil")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-
-[node name="LoadingOverlay" type="Control" parent="UIRoot"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-
-[node name="Bg" type="ColorRect" parent="UIRoot/LoadingOverlay"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0.02, 0.027, 0.051, 0.85)
-
-[node name="Center" type="CenterContainer" parent="UIRoot/LoadingOverlay"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="VBox" type="VBoxContainer" parent="UIRoot/LoadingOverlay/Center"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 16
-
-[node name="Title" type="Label" parent="UIRoot/LoadingOverlay/Center/VBox"]
-layout_mode = 2
-text = "FOUNDATION REIGNS"
-horizontal_alignment = 1
-theme_override_fonts/font = ExtResource("9_mono")
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 0.6)
-
-[node name="LoadingMessage" type="Label" parent="UIRoot/LoadingOverlay/Center/VBox"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "CHARGEMENT"
-horizontal_alignment = 1
-theme_override_fonts/font = ExtResource("9_mono")
-theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.576, 0.631, 0.714, 1)

@@ -9,16 +9,13 @@ void fragment() {
 	vec2 uv = UV;
 	vec3 cyan = vec3(0.310, 0.839, 0.910);
 
-	// dégradé vertical de base
 	vec3 top = vec3(0.059, 0.094, 0.153);  // #0f1827
 	vec3 bot = vec3(0.039, 0.075, 0.125);  // #0a1320
 	vec3 col = mix(top, bot, uv.y);
 
-	// halo cyan radial en haut au centre
 	vec2 d = (uv - vec2(0.5, 0.0)) / vec2(1.2, 0.55);
 	col += cyan * 0.09 * (1.0 - smoothstep(0.0, 1.0, length(d)));
 
-	// grille 30px (en px écran) masquée vers le bas
 	vec2 cell = mod(FRAGCOORD.xy, 30.0);
 	float line = clamp(step(cell.x, 1.0) + step(cell.y, 1.0), 0.0, 1.0);
 	float mask = 1.0 - smoothstep(0.0, 0.65, uv.y);
