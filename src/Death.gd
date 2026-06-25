@@ -1,3 +1,4 @@
+@tool
 class_name Death
 extends Control
 
@@ -17,6 +18,15 @@ const ICONS := {
 signal respawn_pressed
 
 func _ready() -> void:
+	if Engine.is_editor_hint() and get_tree().edited_scene_root == self:
+		show_death({
+			"causeLabel": "Militaire — effondrement", "bearerName": "Orateur — Prêtre scientifique",
+			"sub": "38 ans · Règne couvert : An 1 → An 2",
+			"message": "Une Fondation qui ne sait pas se défendre n'est qu'une bibliothèque attendant l'incendie.",
+			"turns": 1, "years": 1, "score": 108, "deviation": "dévié de 6.3 %",
+			"res": {"military": 4, "religion": 52, "commerce": 60, "politics": 48},
+		})
+		return
 	visible = false
 
 func show_death(info: Dictionary) -> void:
@@ -123,6 +133,8 @@ func show_death(info: Dictionary) -> void:
 	vb.add_child(btn)
 
 	visible = true
+	if Engine.is_editor_hint():
+		return   # pas d'animation dans l'aperçu éditeur
 	# deathIn : flash + léger zoom
 	pivot_offset = size * 0.5
 	scale = Vector2(1.035, 1.035)

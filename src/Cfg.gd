@@ -1,6 +1,8 @@
+@tool
 extends Node
 
 # Réglages live (port du panneau Tweaks de app.jsx). Autoload « Cfg ».
+# @tool : pour que les scènes @tool (Codex/Death…) lisent Cfg.accent dans l'éditeur.
 
 signal changed
 

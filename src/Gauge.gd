@@ -1,3 +1,4 @@
+@tool
 class_name Gauge
 extends Control
 
@@ -28,6 +29,19 @@ var _affected := false
 var _mat: ShaderMaterial
 var _vt: Tween
 var _gt: Tween
+
+func _ready() -> void:
+	# Aperçu éditeur : icône + remplissage d'exemple (sinon glyphe vide).
+	if Engine.is_editor_hint():
+		var tex: Texture2D = ICONS["military"]
+		_icon.texture = tex
+		_glow.texture = tex
+		_flash.texture = tex
+		_icon.material.set_shader_parameter("res_color", Pal.res_color("military"))
+		_icon.material.set_shader_parameter("base_color", BASE_NORMAL)
+		_icon.material.set_shader_parameter("fill", 0.5)
+		_lab.text = "MILITAIRE"
+		_lab.add_theme_color_override("font_color", Color("#aab5c8"))
 
 func setup(key: String, label: String) -> void:
 	_key = key

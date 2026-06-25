@@ -25,7 +25,6 @@ window/size/viewport_width=460
 window/size/viewport_height=920
 window/size/window_width_override=414
 window/size/window_height_override=828
-window/size/resizable=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1

@@ -1,3 +1,4 @@
+@tool
 class_name CardView
 extends Control
 
@@ -39,7 +40,23 @@ var _mat: ShaderMaterial
 
 func _ready() -> void:
 	_mat = _face.material
+	if Engine.is_editor_hint():
+		_editor_preview()
+		return
 	set_process(true)
+
+func _editor_preview() -> void:
+	# Aperçu éditeur : carte teintée + buste + badge (sinon carte « nue »).
+	var s := minf(size.x, size.y)
+	if s <= 0.0:
+		s = 300.0
+	var tone := Data.tone_for("hari")
+	_mat.set_shader_parameter("tone_lo", tone)
+	_mat.set_shader_parameter("tone_hi", Data.lighten(tone, 0.18))
+	layout(Vector2.ZERO, s)
+	_bust.set_tone(tone)
+	_bust.set_initials("HS")
+	_keytag.visible = true
 
 func layout(base: Vector2, side: float) -> void:
 	_base = base

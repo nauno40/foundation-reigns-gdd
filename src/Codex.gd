@@ -1,3 +1,4 @@
+@tool
 class_name Codex
 extends Control
 
@@ -32,8 +33,14 @@ var _ring_phase := 0.0    # pulse de l'anneau planète sélectionnée
 var _ring_tween: Tween
 
 func _ready() -> void:
-	visible = false
 	_build()
+	if Engine.is_editor_hint():
+		# aperçu seulement quand on édite Codex.tscn seul (sinon il recouvrirait Game)
+		visible = get_tree().edited_scene_root == self
+		if visible:
+			_select("chars")
+	else:
+		visible = false
 
 func _build() -> void:
 	_panel = PanelContainer.new()
