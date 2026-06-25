@@ -12,10 +12,6 @@ const OPTIONS_SCENE = preload("res://scenes/OptionsScreen.tscn")
 var _options: Control
 
 func _ready() -> void:
-	if Globals.anim_gallery:
-		# Différé : l'arbre est encore en train d'ajouter MainMenu au _ready.
-		get_tree().change_scene_to_file.call_deferred("res://scenes/AnimGallery.tscn")
-		return
 	if Globals.start_mode != Globals.StartMode.NONE:
 		_start_game()
 		return

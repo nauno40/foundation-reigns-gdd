@@ -100,7 +100,10 @@ func _prewarm() -> void:
 			"res://assets/shaders/portrait_holo.gdshader",
 			"res://assets/shaders/holo_grid.gdshader",
 			"res://assets/shaders/space_bg.gdshader",
-			"res://assets/shaders/scanline_veil.gdshader"]:
+			"res://assets/shaders/scanline_veil.gdshader",
+			"res://assets/shaders/gauge_fill.gdshader",
+			"res://assets/shaders/card_face.gdshader",
+			"res://assets/shaders/death_fx.gdshader"]:
 		if _swapping:
 			return
 		var shader := load(path)
@@ -118,7 +121,9 @@ func _prewarm() -> void:
 			"res://assets/fonts/Spectral-Regular.ttf",
 			"res://assets/fonts/Spectral-Italic.ttf",
 			"res://assets/fonts/Spectral-Bold.ttf",
-			"res://assets/fonts/SpaceMono-Regular.ttf"]:
+			"res://assets/fonts/SpaceMono-Regular.ttf",
+			"res://assets/fonts/SpaceMono-Bold.ttf",
+			"res://assets/fonts/Caveat-Variable.ttf"]:
 		var f := load(font_path)
 		if f == null:
 			continue

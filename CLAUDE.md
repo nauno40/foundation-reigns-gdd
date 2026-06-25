@@ -68,7 +68,7 @@ Each card is a Dictionary with these keys:
 - `turns`, `year`, `age`, `mood`, `link` (forced next card ID)
 - `deck_<name>` — set to 0 to disable a deck
 - `seen_<card_id>` — set after card is seen
-- `planet_<id>_state` — -1/0/1 (hostile/neutral/allied) for GalaxyMap
+- `planet_<id>_state` — -1/0/1 (hostile/neutral/allied) for the codex galaxy tab
 - `seldon_crisis_<1-6>` — 1=passed, -1=failed (shown on DeathScreen timeline)
 - `toKeep` variables survive death/respawn via `Context._keep_flags`
 
@@ -83,10 +83,10 @@ Three death types with different legitimacy penalties on respawn:
 
 ## UI Scenes
 
-- `CardScreen.tscn` / `CardScreen.gd` — swipe animation via `SwipeDetector`, emits `choice_made(is_left)`
-- `DeathScreen.tscn` / `DeathScreen.gd` — timeline of Seldon crises, resource snapshot, Seldon message; emits `continue_pressed`
-- `GalaxyMap.tscn` / `GalaxyMap.gd` — planet buttons colored by `planet_<id>_state`; popup on click
-- `ResourceBars.tscn` / `ResourceBars.gd` — HUD bars updated via `update(ctx)`
+- `CardScreen.tscn` / `CardScreen.gd` — swipe via `SwipeDetector`, square card + icon-mask gauges, inline deck-unlock banner (`play_deck_unlock`); emits `choice_made(is_left)`, `dashboard_requested`
+- `DeathScreen.tscn` / `DeathScreen.gd` — cause, Seldon transmission, 2×2 stats, resource snapshot (icons); emits `continue_pressed`
+- `Codex.tscn` / `Codex.gd` — sliding « Tableau de bord » panel, 3 tabs (Personnages, Succès/Decks, Galaxie). Replaces the former standalone `GalaxyMap`.
+- `ResourceBar.tscn` / `ResourceBar.gd` — single icon-mask gauge (fill bottom-up, ▲/▼ delta flash); 4 instances in `CardScreen`
 
 ## Tests
 
@@ -94,7 +94,34 @@ Test files in `tests/` follow GUT conventions (`extends GutTest`, `before_each`,
 
 ## UI Design Reference
 
-The target interface is defined in `reference/ui-prototype/` — a working React/JSX HTML prototype. When implementing or modifying UI, match this prototype exactly. Open `Foundation Reigns Prototype.html` in a browser to see it live.
+The **current** target interface is the redesign in `reference/UI Nouvelle version/`
+(`app.jsx`, `codex.jsx`, `data.jsx`, `Foundation Reigns Prototype.html`). The older
+`reference/ui-prototype/` is superseded. When implementing or modifying UI, match the
+new template. Key differences from the old prototype, **already ported to Godot**:
+
+- **Resource gauges** are icon-shaped masks that fill bottom-up (sword/atom/coins/columns),
+  with engraved graduations (25/50/75), a bright waterline, and a ▲/▼ green/red delta flash
+  on change. Implemented in `src/ui/ResourceBar.gd` + `assets/shaders/gauge_fill.gdshader`
+  (icons `assets/icons/*.svg`). No numbers shown.
+- **Card is square** (1:1) with a deck-pile card behind it, a per-bearer tinted background
+  (`CardUtils.tone_for`, `assets/shaders/card_face.gdshader`), a faceless flat bust
+  (`src/ui/CardBust.gd`), the chosen answer's title written **on the card** during the swipe,
+  and the bearer name **below** the card. Release uses a sub-damped **spring** (bounce).
+- **Layout**: dark top bar (era + 4 gauges only — the mood indicator is removed), light
+  central panel (question in Space Mono, low-legitimacy whisper in **Caveat** cursive), dark
+  bottom bar (year in large Caveat + age·cover). See `scenes/CardScreen.tscn` /
+  `src/ui/CardScreen.gd`.
+- **Dashboard codex** (`scenes/Codex.tscn` / `src/ui/Codex.gd`): a panel sliding up from the
+  bottom bar handle, 3 tabs — Personnages, Succès/Decks, Galaxie. The standalone
+  `GalaxyMap.tscn` is no longer in the flow (the galaxy is now the codex's 3rd tab). Codex
+  data is currently a **static placeholder** (real wiring to `seen_*`/`deck_*`/MetaSystem
+  is deferred).
+- **Death**: a holographic glitch/collapse (`assets/shaders/death_fx.gdshader`, played by
+  `Main._play_death_fx`) precedes the death overlay; the Seldon box header reads
+  `☼ TRANSMISSION — HARI SELDON`.
+- **Caveat** font added at `assets/fonts/Caveat-Variable.ttf` (reactions, whisper, year).
+- **Difficulty multiplier** (doux ×0.7 / normal ×1.0 / brutal ×1.45) is applied to additive
+  resource/legitimacy outcome deltas in `Main._scaled_outcomes`.
 
 ### Visual Identity
 
@@ -368,6 +395,19 @@ Deck `new_speaker` bridges reigns: activated at reign start, reads `toKeep` to i
 15 meta-ranks (5 Initié → 5 Speaker → 5 Psychohistorien), persistent across all runs. Score per reign: crisis traversed in corridor (+200), no resource death (+100), reign quest (+150), arc quest advance (+100), natural death → ×1.5 multiplier. Reign duration alone scores nothing.
 
 ## Dev Tools
+
+### Capture d'écran UI (`tools/Shot.tscn`)
+
+Rend une scène UI isolée (avec autoloads + données chargées) et sauvegarde un PNG
+dans `/tmp/shot_<mode>.png`, pour comparer le rendu Godot au template de référence
+(`reference/UI Nouvelle version/`). Nécessite un affichage (`DISPLAY`).
+
+```bash
+godot --display-driver x11 --rendering-driver opengl3 res://tools/Shot.tscn -- card      # écran de jeu
+godot --display-driver x11 --rendering-driver opengl3 res://tools/Shot.tscn -- death     # écran de mort
+godot --display-driver x11 --rendering-driver opengl3 res://tools/Shot.tscn -- codex     # tableau de bord (Personnages)
+godot --display-driver x11 --rendering-driver opengl3 res://tools/Shot.tscn -- codexgal  # tableau de bord (Galaxie)
+```
 
 ### Mode `--deck` (filtrage CLI)
 

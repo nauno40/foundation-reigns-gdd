@@ -18,7 +18,7 @@ func test_flash_direction_down_is_red():
 
 func test_no_flash_when_value_unchanged():
 	bar.update_value(50)
-	bar._flash_color = Color(1, 1, 1, 0.0)
+	bar._delta.modulate.a = 0.0
 	bar.update_value(50)
-	assert_almost_eq(bar._flash_color.a, 0.0, 0.001,
-		"valeur inchangée : pas de flash")
+	assert_almost_eq(bar._delta.modulate.a, 0.0, 0.001,
+		"valeur inchangée : pas de flash directionnel")

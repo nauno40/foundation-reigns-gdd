@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b77voxileqxhp" path="res://src/main/Main.gd" id="1_main"]
 [ext_resource type="PackedScene" uid="uid://cardscreen1" path="res://scenes/CardScreen.tscn" id="2_cscr"]
 [ext_resource type="PackedScene" uid="uid://deathscreen1" path="res://scenes/DeathScreen.tscn" id="3_dscr"]
-[ext_resource type="PackedScene" uid="uid://galaxymap1" path="res://scenes/GalaxyMap.tscn" id="4_gmap"]
+[ext_resource type="PackedScene" uid="uid://codex_panel" path="res://scenes/Codex.tscn" id="4_codex"]
 [ext_resource type="PackedScene" path="res://scenes/BriefingScreen.tscn" id="5_brf"]
 [ext_resource type="Theme" uid="uid://cbbdtswl7xv50" path="res://theme/foundation_theme.tres" id="5_theme"]
 [ext_resource type="Script" path="res://src/ui/FrameFit.gd" id="6_frame"]
@@ -102,7 +102,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GalaxyMap" parent="UIRoot/Frame/Content" instance=ExtResource("4_gmap")]
+[node name="Codex" parent="UIRoot/Frame/Content" instance=ExtResource("4_codex")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1

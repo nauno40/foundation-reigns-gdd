@@ -150,7 +150,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
 theme_override_fonts/font = SubResource("FV_upper")
 theme_override_font_sizes/font_size = 8
-text = "☼ MESSAGE — HARI SELDON"
+text = "☼ TRANSMISSION — HARI SELDON"
 
 [node name="SeldonText" type="Label" parent="Scroll/Padding/InnerVBox/SeldonPanel/SeldonVBox"]
 unique_name_in_owner = true

@@ -9,6 +9,12 @@ extends Control
 const ThemeColors = preload("res://src/ui/ThemeColors.gd")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
+const RES_ICONS := {
+	"military": preload("res://assets/icons/military.svg"),
+	"religion": preload("res://assets/icons/religion.svg"),
+	"commerce": preload("res://assets/icons/commerce.svg"),
+	"politics": preload("res://assets/icons/politics.svg"),
+}
 
 signal continue_pressed
 
@@ -62,14 +68,6 @@ func _build_stats_grid() -> void:
 
 func show_death(ctx: Context, death_type: String, cover_name: String,
 		meta: Dictionary = {}) -> void:
-	_bg.modulate.a = 0.0
-
-	# Masquer les éléments textuels pour la révélation séquencée.
-	var s := Anim.settings
-	for n in [_cause, _speaker, _subtitle]:
-		n.modulate.a = 0.0
-	_seldon_text.modulate.a = 0.0
-
 	var year = ctx.get_var("year", 1)
 	var y_start = ctx.get_var("y_start", 1)
 	var age = ctx.get_var("age", 50)
@@ -77,54 +75,35 @@ func show_death(ctx: Context, death_type: String, cover_name: String,
 
 	_cause.text = ThemeColors.death_label(death_type).to_upper()
 	_speaker.text = "Orateur — " + str(cover_name)
-	# Sous-titre : couverture + rang de carrière (méta-progression persistante).
-	var sub = "%s · %d ans · Règne couvert An %d → An %d" % [cover_name, age, y_start, year]
-	if not meta.is_empty():
-		sub += "\nRang : %s — %d pts cumulés" % [meta.get("rank_name", "Initié I"), int(meta.get("total", 0))]
-		if meta.get("ranked_up", false):
-			sub += "  ▲ promotion !"
-	_subtitle.text = sub
+	# Sous-titre iso au template : « {âge} ans · Règne couvert : An X → An Y ».
+	_subtitle.text = "%d ans · Règne couvert : An %d → An %d" % [age, y_start, year]
 	_seldon_text.text = "« " + ThemeColors.death_message(death_type) + " »"
 
-	# Score du règne : barème GDD (accomplissements, pas la durée).
+	# Stats affichées directement (le template n'anime pas de compteur).
 	var reign_score = int(meta.get("score", 0))
 	var years = max(year - y_start, 0)
-	var seldon_dev = randf_range(2.0, 8.0)
-	_stat_values["PLAN DE SELDON"].text = "dévié de %.1f %%" % seldon_dev
+	_stat_values["DÉCISIONS PRISES"].text = str(turns)
+	_stat_values["ANNÉES COUVERTES"].text = "%d ans" % years
+	_stat_values["SCORE DU RÈGNE"].text = "%d pts" % reign_score
+	_stat_values["PLAN DE SELDON"].text = "dévié de %.1f %%" % randf_range(2.0, 8.0)
 
+	for n in [_cause, _speaker, _subtitle, _seldon_text]:
+		n.modulate.a = 1.0
+	_bg.modulate.a = 1.0
 	_build_snapshot(ctx)
 
-	# Entrée animée : background fade + stats count-up
-	var tw = create_tween()
-	tw.set_parallel()
-	tw.tween_property(_bg, "modulate:a", 1.0, s.death_bg_fade) \
-		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	tw.tween_method(_animate_stat_turns.bind(turns, _stat_values["DÉCISIONS PRISES"]),
-		0.0, float(turns), s.death_stat_dur).set_delay(s.death_stat_delay) \
-		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	tw.tween_method(_animate_stat_years.bind(years, _stat_values["ANNÉES COUVERTES"]),
-		0.0, float(years), s.death_stat_dur).set_delay(s.death_stat_delay + s.death_stat_step) \
-		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	tw.tween_method(_animate_stat_score.bind(reign_score, _stat_values["SCORE DU RÈGNE"]),
-		0.0, float(reign_score), s.death_stat_dur).set_delay(s.death_stat_delay + 2 * s.death_stat_step) \
-		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	# deathIn (app.jsx) : flash lumineux + léger zoom de tout l'écran.
+	pivot_offset = size * 0.5
+	scale = Vector2(1.035, 1.035)
+	modulate = Color(1.7, 1.7, 1.7)
+	var tw = create_tween().set_parallel()
+	tw.tween_property(self, "scale", Vector2.ONE, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	tw.tween_property(self, "modulate", Color.WHITE, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
-	# Révélation séquencée : cause+titre → sous-titre → snapshot → message Seldon.
-	Anim.reveal_list([_cause, _speaker, _subtitle],
-		s.death_list_stagger, s.death_text_in)
-	var snap_items: Array = _snapshot.get_children()
-	Anim.reveal_list(snap_items, s.death_list_stagger, s.death_item_in)
-	Anim.fade_in(_seldon_text, s.death_text_in,
-		s.death_list_stagger * (3 + snap_items.size()))
-
-func _animate_stat_turns(v: float, target: int, label: Label) -> void:
-	label.text = str(min(roundi(v), target))
-
-func _animate_stat_years(v: float, target: int, label: Label) -> void:
-	label.text = "%d ans" % min(roundi(v), target)
-
-func _animate_stat_score(v: float, target: int, label: Label) -> void:
-	label.text = "%d pts" % min(roundi(v), target)
+	# cause : scintillement (dthFlick)
+	var fk = create_tween()
+	for a in [0.3, 1.0, 0.5, 1.0]:
+		fk.tween_property(_cause, "modulate:a", a, 0.09)
 
 func _build_snapshot(ctx: Context) -> void:
 	for child in _snapshot.get_children():
@@ -136,21 +115,25 @@ func _build_snapshot(ctx: Context) -> void:
 		col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		col.add_theme_constant_override("separation", 4)
 
+		# icône de ressource (template Death .snap .g), teintée à la couleur ressource
+		var icon_holder := CenterContainer.new()
+		icon_holder.custom_minimum_size = Vector2(0, 22)
+		var icon := TextureRect.new()
+		icon.texture = RES_ICONS.get(r)
+		icon.custom_minimum_size = Vector2(21, 21)
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		icon.modulate = ThemeColors.resource_color(r)
+		icon_holder.add_child(icon)
+		col.add_child(icon_holder)
+
 		var lab := Label.new()
 		lab.text = ThemeColors.resource_label(r).to_upper()
 		lab.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		lab.add_theme_font_override("font", FONT_MONO)
-		lab.add_theme_font_size_override("font_size", 9)
+		lab.add_theme_font_size_override("font_size", 8)
 		lab.add_theme_color_override("font_color", ThemeColors.INK_FAINT)
 		col.add_child(lab)
-
-		var value := Label.new()
-		value.text = str(val)
-		value.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		value.add_theme_font_override("font", FONT_MONO)
-		value.add_theme_font_size_override("font_size", 13)
-		value.add_theme_color_override("font_color", ThemeColors.INK)
-		col.add_child(value)
 
 		var track := PanelContainer.new()
 		track.custom_minimum_size = Vector2(0, 4)
@@ -170,5 +153,4 @@ func _build_snapshot(ctx: Context) -> void:
 		fill.anchor_right = clampf(val / 100.0, 0.0, 1.0)
 		fill_holder.add_child(fill)
 
-		col.modulate.a = 0.0
 		_snapshot.add_child(col)

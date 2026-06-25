@@ -1,18 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://galaxymap1"]
+[gd_scene format=3 uid="uid://j3fieuno4ejg"]
 
-[ext_resource type="Script" uid="uid://ct5n51v0j3l4t" path="res://src/ui/GalaxyMap.gd" id="1_gmap"]
-[ext_resource type="Shader" path="res://assets/shaders/space_bg.gdshader" id="2_space"]
-[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="3_mono"]
-[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="4_spec"]
+[ext_resource type="Script" path="res://src/ui/GalaxyMap.gd" id="1_gmap"]
+[ext_resource type="Shader" uid="uid://dg57dnjcboc4x" path="res://assets/shaders/space_bg.gdshader" id="2_space"]
+[ext_resource type="FontFile" uid="uid://cu8vl8px6o5hh" path="res://assets/fonts/SpaceMono-Regular.ttf" id="3_mono"]
+[ext_resource type="FontFile" uid="uid://q5wvt7s8y0b4" path="res://assets/fonts/Spectral-Regular.ttf" id="4_spec"]
 
 [sub_resource type="ShaderMaterial" id="SM_space"]
 shader = ExtResource("2_space")
+shader_parameter/star_density = 0.12
 
 [sub_resource type="FontVariation" id="FV_upper"]
 base_font = ExtResource("3_mono")
 spacing_glyph = 2
 
 [sub_resource type="StyleBoxFlat" id="SB_popup"]
+content_margin_left = 16.0
+content_margin_top = 12.0
+content_margin_right = 16.0
+content_margin_bottom = 14.0
 bg_color = Color(0.047, 0.075, 0.133, 0.97)
 border_width_left = 1
 border_width_top = 1
@@ -23,12 +28,8 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
-content_margin_left = 16.0
-content_margin_top = 12.0
-content_margin_right = 16.0
-content_margin_bottom = 14.0
 
-[node name="GalaxyMap" type="Control"]
+[node name="GalaxyMap" type="Control" unique_id=1816109404]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gmap")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=630162053]
 material = SubResource("SM_space")
 layout_mode = 1
 anchors_preset = 15
@@ -46,7 +47,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Header" type="MarginContainer" parent="."]
+[node name="Header" type="MarginContainer" parent="." unique_id=1179094375]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -55,10 +56,10 @@ theme_override_constants/margin_left = 18
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 18
 
-[node name="HeaderRow" type="HBoxContainer" parent="Header"]
+[node name="HeaderRow" type="HBoxContainer" parent="Header" unique_id=1908001675]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="Header/HeaderRow"]
+[node name="Title" type="Label" parent="Header/HeaderRow" unique_id=2096689879]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
@@ -66,18 +67,18 @@ theme_override_fonts/font = SubResource("FV_upper")
 theme_override_font_sizes/font_size = 11
 text = "CARTE GALACTIQUE"
 
-[node name="CloseButton" type="Button" parent="Header/HeaderRow"]
+[node name="CloseButton" type="Button" parent="Header/HeaderRow" unique_id=1503991140]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(28, 22)
 layout_mode = 2
 focus_mode = 0
-flat = true
 theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
 theme_override_fonts/font = ExtResource("3_mono")
 theme_override_font_sizes/font_size = 13
 text = "✕"
+flat = true
 
-[node name="Legend" type="Label" parent="."]
+[node name="Legend" type="Label" parent="." unique_id=574868454]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -90,7 +91,7 @@ theme_override_font_sizes/font_size = 9
 text = "alignée · neutre · hostile"
 horizontal_alignment = 1
 
-[node name="MapArea" type="Control" parent="."]
+[node name="MapArea" type="Control" parent="." unique_id=1683884749]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -101,7 +102,7 @@ offset_bottom = -130.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlanetPopup" type="PanelContainer" parent="."]
+[node name="PlanetPopup" type="PanelContainer" parent="." unique_id=939174154]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -117,14 +118,14 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("SB_popup")
 
-[node name="PopupVBox" type="VBoxContainer" parent="PlanetPopup"]
+[node name="PopupVBox" type="VBoxContainer" parent="PlanetPopup" unique_id=1095275088]
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="PopupHeader" type="HBoxContainer" parent="PlanetPopup/PopupVBox"]
+[node name="PopupHeader" type="HBoxContainer" parent="PlanetPopup/PopupVBox" unique_id=80734537]
 layout_mode = 2
 
-[node name="PopupName" type="Label" parent="PlanetPopup/PopupVBox/PopupHeader"]
+[node name="PopupName" type="Label" parent="PlanetPopup/PopupVBox/PopupHeader" unique_id=401236647]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -133,18 +134,18 @@ theme_override_fonts/font = ExtResource("4_spec")
 theme_override_font_sizes/font_size = 18
 text = "Planète"
 
-[node name="PopupClose" type="Button" parent="PlanetPopup/PopupVBox/PopupHeader"]
+[node name="PopupClose" type="Button" parent="PlanetPopup/PopupVBox/PopupHeader" unique_id=1099942593]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(24, 20)
 layout_mode = 2
 focus_mode = 0
-flat = true
 theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
 theme_override_fonts/font = ExtResource("3_mono")
 theme_override_font_sizes/font_size = 11
 text = "✕"
+flat = true
 
-[node name="PopupFaction" type="Label" parent="PlanetPopup/PopupVBox"]
+[node name="PopupFaction" type="Label" parent="PlanetPopup/PopupVBox" unique_id=723845402]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
@@ -152,7 +153,7 @@ theme_override_fonts/font = ExtResource("3_mono")
 theme_override_font_sizes/font_size = 10
 text = "Faction : —"
 
-[node name="PopupState" type="Label" parent="PlanetPopup/PopupVBox"]
+[node name="PopupState" type="Label" parent="PlanetPopup/PopupVBox" unique_id=2101848551]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)

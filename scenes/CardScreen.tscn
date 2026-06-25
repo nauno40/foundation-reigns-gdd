@@ -1,104 +1,76 @@
-[gd_scene load_steps=22 format=3 uid="uid://cardscreen1"]
+[gd_scene load_steps=20 format=3 uid="uid://cardscreen1"]
 
 [ext_resource type="Script" uid="uid://df3xrmu0wbtnw" path="res://src/ui/CardScreen.gd" id="1_cscr"]
 [ext_resource type="Script" uid="uid://dgw2lxxfrp2w0" path="res://src/ui/SwipeDetector.gd" id="2_swipe"]
 [ext_resource type="PackedScene" uid="uid://resource_bar" path="res://scenes/ResourceBar.tscn" id="3_rbar"]
-[ext_resource type="PackedScene" uid="uid://mood_indicator" path="res://scenes/MoodIndicator.tscn" id="4_mood"]
-[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="5_spec_r"]
-[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Italic.ttf" id="6_spec_i"]
-[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="7_mono_r"]
-[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Bold.ttf" id="8_mono_b"]
-[ext_resource type="Shader" path="res://assets/shaders/portrait_holo.gdshader" id="9_holo"]
-[ext_resource type="Script" path="res://src/ui/PortraitBust.gd" id="10_bust"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="4_mono_r"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Bold.ttf" id="5_mono_b"]
+[ext_resource type="FontFile" path="res://assets/fonts/Caveat-Variable.ttf" id="6_caveat"]
+[ext_resource type="Shader" path="res://assets/shaders/card_face.gdshader" id="7_face"]
+[ext_resource type="Script" path="res://src/ui/CardBust.gd" id="8_bust"]
+[ext_resource type="Shader" path="res://assets/shaders/panel_bg.gdshader" id="9_panel"]
 
-[sub_resource type="ShaderMaterial" id="SM_holo"]
-shader = ExtResource("9_holo")
-shader_parameter/rect_size = Vector2(324, 190)
+[sub_resource type="ShaderMaterial" id="SM_panel"]
+shader = ExtResource("9_panel")
 
-[sub_resource type="FontVariation" id="FV_era"]
-base_font = ExtResource("7_mono_r")
-spacing_glyph = 2
+[sub_resource type="FontVariation" id="FV_year"]
+base_font = ExtResource("6_caveat")
+variation_opentype = {
+"wght": 700
+}
 
-[sub_resource type="FontVariation" id="FV_upper"]
-base_font = ExtResource("7_mono_r")
-spacing_glyph = 1
+[sub_resource type="ShaderMaterial" id="SM_face"]
+shader = ExtResource("7_face")
+shader_parameter/rect_size = Vector2(300, 300)
+shader_parameter/grid_offset = Vector2(0, 0)
+shader_parameter/tone_lo = Color(0.11, 0.227, 0.231, 1)
+shader_parameter/tone_hi = Color(0.22, 0.337, 0.341, 1)
+shader_parameter/scan_strength = 0.7
+shader_parameter/corner_radius = 16.0
 
-[sub_resource type="StyleBoxFlat" id="SB_card"]
-bg_color = Color(0.055, 0.086, 0.149, 1)
-border_width_left = 1
+[sub_resource type="StyleBoxFlat" id="SB_topbar"]
+bg_color = Color(0.043, 0.055, 0.082, 1)
+
+[sub_resource type="StyleBoxFlat" id="SB_panel"]
+bg_color = Color(0.059, 0.094, 0.153, 1)
+
+[sub_resource type="StyleBoxFlat" id="SB_bottombar"]
+bg_color = Color(0.043, 0.055, 0.082, 1)
+
+[sub_resource type="StyleBoxFlat" id="SB_handle"]
+bg_color = Color(0.043, 0.055, 0.082, 1)
 border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.471, 0.588, 0.745, 0.14)
-corner_radius_top_left = 14
-corner_radius_top_right = 14
-corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
-shadow_color = Color(0, 0, 0, 0.55)
-shadow_size = 24
-shadow_offset = Vector2(0, 12)
+border_color = Color(0.471, 0.588, 0.745, 0.1)
 
-[sub_resource type="StyleBoxFlat" id="SB_chip"]
+[sub_resource type="StyleBoxFlat" id="SB_handle_hover"]
+bg_color = Color(0.31, 0.839, 0.91, 0.05)
+border_width_top = 1
+border_color = Color(0.31, 0.839, 0.91, 0.3)
+
+[sub_resource type="StyleBoxFlat" id="SB_deck"]
+bg_color = Color(0.102, 0.122, 0.161, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 18
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="SB_rim"]
 bg_color = Color(0, 0, 0, 0)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.471, 0.588, 0.745, 0.14)
-corner_radius_top_left = 9
-corner_radius_top_right = 9
-corner_radius_bottom_right = 9
-corner_radius_bottom_left = 9
-content_margin_left = 11.0
-content_margin_top = 9.0
-content_margin_right = 11.0
-content_margin_bottom = 9.0
-
-[sub_resource type="StyleBoxFlat" id="SB_edge_l"]
-bg_color = Color(0.027, 0.043, 0.078, 0.6)
-border_width_left = 2
-border_color = Color(0.31, 0.839, 0.91, 1)
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-content_margin_left = 14.0
-content_margin_top = 10.0
-content_margin_right = 14.0
-content_margin_bottom = 10.0
-
-[sub_resource type="StyleBoxFlat" id="SB_edge_r"]
-bg_color = Color(0.027, 0.043, 0.078, 0.6)
-border_width_right = 2
-border_color = Color(0.31, 0.839, 0.91, 1)
-corner_radius_top_left = 10
-corner_radius_bottom_left = 10
-content_margin_left = 14.0
-content_margin_top = 10.0
-content_margin_right = 14.0
-content_margin_bottom = 10.0
-
-[sub_resource type="StyleBoxFlat" id="SB_seal"]
-bg_color = Color(0, 0, 0, 0)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.471, 0.588, 0.745, 0.14)
-corner_radius_top_left = 11
-corner_radius_top_right = 11
-corner_radius_bottom_right = 11
-corner_radius_bottom_left = 11
-
-[sub_resource type="StyleBoxFlat" id="SB_seal_hover"]
-bg_color = Color(0.31, 0.839, 0.91, 0.08)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.31, 0.839, 0.91, 0.5)
-corner_radius_top_left = 11
-corner_radius_top_right = 11
-corner_radius_bottom_right = 11
-corner_radius_bottom_left = 11
+border_color = Color(0.471, 0.784, 0.863, 0.14)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 22
+shadow_offset = Vector2(0, 14)
 
 [sub_resource type="StyleBoxFlat" id="SB_keytag"]
 bg_color = Color(0.02, 0.027, 0.051, 0.5)
@@ -106,31 +78,19 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.91, 0.714, 0.353, 0.4)
+border_color = Color(0.91, 0.714, 0.353, 0.5)
 corner_radius_top_left = 99
 corner_radius_top_right = 99
 corner_radius_bottom_right = 99
 corner_radius_bottom_left = 99
-content_margin_left = 8.0
+content_margin_left = 7.0
 content_margin_top = 3.0
-content_margin_right = 8.0
+content_margin_right = 7.0
 content_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id="SB_kbd"]
-bg_color = Color(0, 0, 0, 0)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.471, 0.588, 0.745, 0.14)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-content_margin_left = 6.0
-content_margin_top = 1.0
-content_margin_right = 6.0
-content_margin_bottom = 1.0
+[sub_resource type="FontVariation" id="FV_era"]
+base_font = ExtResource("4_mono_r")
+spacing_glyph = 3
 
 [node name="CardScreen" type="Control"]
 layout_mode = 3
@@ -154,138 +114,132 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="TopBar" type="MarginContainer" parent="MainVBox"]
+[node name="TopBar" type="PanelContainer" parent="MainVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_topbar")
+
+[node name="TopMargin" type="MarginContainer" parent="MainVBox/TopBar"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 18
-theme_override_constants/margin_top = 16
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 18
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_bottom = 11
 
-[node name="TopVBox" type="VBoxContainer" parent="MainVBox/TopBar"]
+[node name="TopVBox" type="VBoxContainer" parent="MainVBox/TopBar/TopMargin"]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 9
 
-[node name="MetaRow" type="HBoxContainer" parent="MainVBox/TopBar/TopVBox"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="EraLabel" type="Label" parent="MainVBox/TopBar/TopVBox/MetaRow"]
+[node name="EraLabel" type="RichTextLabel" parent="MainVBox/TopBar/TopMargin/TopVBox"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
-theme_override_fonts/font = SubResource("FV_era")
-theme_override_font_sizes/font_size = 11
-text = "ÈRE HARDIN · ANS 1–80"
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_colors/default_color = Color(0.604, 0.655, 0.741, 1)
+theme_override_fonts/normal_font = SubResource("FV_era")
+theme_override_font_sizes/normal_font_size = 9
+text = "[center]SECONDE FONDATION · [color=#4fd6e8]ÈRE HARDIN[/color] · ANS 1–80[/center]"
 
-[node name="Seal" type="Button" parent="MainVBox/TopBar/TopVBox/MetaRow"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(22, 22)
-layout_mode = 2
-size_flags_vertical = 4
-focus_mode = 0
-theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
-theme_override_colors/font_hover_color = Color(0.91, 0.714, 0.353, 1)
-theme_override_colors/font_pressed_color = Color(0.91, 0.714, 0.353, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
-theme_override_font_sizes/font_size = 11
-theme_override_styles/normal = SubResource("SB_seal")
-theme_override_styles/hover = SubResource("SB_seal_hover")
-theme_override_styles/pressed = SubResource("SB_seal_hover")
-theme_override_styles/focus = SubResource("SB_seal")
-text = "☼"
-
-[node name="CoverRow" type="HBoxContainer" parent="MainVBox/TopBar/TopVBox"]
+[node name="ResRow" type="HBoxContainer" parent="MainVBox/TopBar/TopMargin/TopVBox"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 10
 
-[node name="YearAge" type="Label" parent="MainVBox/TopBar/TopVBox/CoverRow"]
+[node name="BarMilitary" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("3_rbar")]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
-theme_override_font_sizes/font_size = 13
-text = "An 1 · 36 ans"
 
-[node name="CoverText" type="Label" parent="MainVBox/TopBar/TopVBox/CoverRow"]
+[node name="BarReligion" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("3_rbar")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BarCommerce" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("3_rbar")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BarPolitics" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("3_rbar")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_panel")
+
+[node name="PanelBg" type="ColorRect" parent="MainVBox/Panel"]
+material = SubResource("SM_panel")
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PanelMargin" type="MarginContainer" parent="MainVBox/Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 14
+
+[node name="PanelVBox" type="VBoxContainer" parent="MainVBox/Panel/PanelMargin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="QuestionScroll" type="ScrollContainer" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 66)
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="QuestionLabel" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/QuestionScroll"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
-theme_override_font_sizes/font_size = 11
-text = "Couverture : Prêtre scientifique"
-text_overrun_behavior = 3
-
-[node name="ResRow" type="HBoxContainer" parent="MainVBox/TopBar/TopVBox"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 10
-
-[node name="BarMilitary" parent="MainVBox/TopBar/TopVBox/ResRow" instance=ExtResource("3_rbar")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="BarReligion" parent="MainVBox/TopBar/TopVBox/ResRow" instance=ExtResource("3_rbar")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="BarCommerce" parent="MainVBox/TopBar/TopVBox/ResRow" instance=ExtResource("3_rbar")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="BarPolitics" parent="MainVBox/TopBar/TopVBox/ResRow" instance=ExtResource("3_rbar")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="MoodIndicator" parent="MainVBox/TopBar/TopVBox" instance=ExtResource("4_mood")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="Whisper" type="Label" parent="MainVBox/TopBar/TopVBox"]
-unique_name_in_owner = true
-visible = false
-modulate = Color(1, 1, 1, 0.85)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
-theme_override_fonts/font = ExtResource("6_spec_i")
-theme_override_font_sizes/font_size = 11
-text = "« Vous semblez toujours avoir la bonne réponse, Orateur… »"
+theme_override_colors/font_color = Color(0.867, 0.902, 0.949, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("4_mono_r")
+theme_override_font_sizes/font_size = 17
+text = "Question de la carte…"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="CardArea" type="Control" parent="MainVBox"]
+[node name="Whisper" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
+theme_override_fonts/font = ExtResource("6_caveat")
+theme_override_font_sizes/font_size = 17
+text = "vous semblez toujours avoir la bonne réponse…"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CardArea" type="Control" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="CardPanel" type="PanelContainer" parent="MainVBox/CardArea"]
+[node name="DeckCard" type="Panel" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea"]
 unique_name_in_owner = true
 layout_mode = 0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("SB_card")
+theme_override_styles/panel = SubResource("SB_deck")
 
-[node name="CardVBox" type="VBoxContainer" parent="MainVBox/CardArea/CardPanel"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 0
-
-[node name="Portrait" type="Control" parent="MainVBox/CardArea/CardPanel/CardVBox"]
+[node name="Card" type="Control" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 190)
-layout_mode = 2
-mouse_filter = 2
 clip_contents = true
+layout_mode = 0
+mouse_filter = 2
 
-[node name="Holo" type="ColorRect" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait"]
+[node name="FaceBg" type="ColorRect" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea/Card"]
 unique_name_in_owner = true
-material = SubResource("SM_holo")
+material = SubResource("SM_face")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -294,40 +248,20 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Bust" type="Control" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait"]
+[node name="Bust" type="Control" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea/Card"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.2
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -59.0
-offset_top = -144.0
-offset_right = 59.0
-offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
-script = ExtResource("10_bust")
+script = ExtResource("8_bust")
 
-[node name="Initials" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait/Bust"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 40.0
-offset_bottom = 76.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.749, 0.941, 0.973, 1)
-theme_override_fonts/font = ExtResource("8_mono_b")
-theme_override_font_sizes/font_size = 20
-text = "??"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Flicker" type="ColorRect" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait"]
-unique_name_in_owner = true
-modulate = Color(0.31, 0.839, 0.91, 0)
+[node name="Rim" type="Panel" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea/Card"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -335,218 +269,118 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_rim")
 
-[node name="KeyTag" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait"]
+[node name="KeyTag" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea/Card"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -130.0
-offset_top = 12.0
-offset_right = -12.0
-offset_bottom = 32.0
+offset_left = -120.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = 31.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
-theme_override_fonts/font = SubResource("FV_upper")
-theme_override_font_sizes/font_size = 9
+theme_override_fonts/font = ExtResource("4_mono_r")
+theme_override_font_sizes/font_size = 8
 theme_override_styles/normal = SubResource("SB_keytag")
 text = "FIGURE DU PLAN"
 horizontal_alignment = 1
 
-[node name="Who" type="VBoxContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait"]
+[node name="CardChoice" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardArea/Card"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = -58.0
-offset_right = -14.0
-offset_bottom = -12.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 70.0
 grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-theme_override_constants/separation = 2
-alignment = 2
+theme_override_colors/font_color = Color(0.949, 0.969, 0.984, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("5_mono_b")
+theme_override_font_sizes/font_size = 15
+text = "Choix"
+autowrap_mode = 3
 
-[node name="BearerName" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait/Who"]
+[node name="Speaker" type="VBoxContainer" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="BearerName" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/Speaker"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
-theme_override_fonts/font = ExtResource("5_spec_r")
-theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("4_mono_r")
+theme_override_font_sizes/font_size = 17
 text = "Nom Porteur"
-text_overrun_behavior = 3
+horizontal_alignment = 1
 
-[node name="BearerRole" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/Portrait/Who"]
+[node name="BearerRole" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/Speaker"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
-theme_override_fonts/font = SubResource("FV_upper")
-theme_override_font_sizes/font_size = 10
+theme_override_fonts/font = SubResource("FV_era")
+theme_override_font_sizes/font_size = 8
 text = "RÔLE"
-text_overrun_behavior = 3
-
-[node name="QBody" type="MarginContainer" parent="MainVBox/CardArea/CardPanel/CardVBox"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 18
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="QVBox" type="VBoxContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 16
-
-[node name="QuestionLabel" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(0.918, 0.941, 0.973, 1)
-theme_override_constants/line_spacing = 6
-theme_override_fonts/font = ExtResource("5_spec_r")
-theme_override_font_sizes/font_size = 19
-text = "Question de la carte…"
-autowrap_mode = 3
-
-[node name="Choices" type="HBoxContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox"]
-unique_name_in_owner = true
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 10
-
-[node name="LeftChoice" type="PanelContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-theme_override_styles/panel = SubResource("SB_chip")
-
-[node name="LeftVBox" type="VBoxContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices/LeftChoice"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 4
-
-[node name="LeftKey" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices/LeftChoice/LeftVBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
-theme_override_fonts/font = SubResource("FV_upper")
-theme_override_font_sizes/font_size = 8
-text = "◄ GAUCHE"
-
-[node name="LeftTitle" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices/LeftChoice/LeftVBox"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
-theme_override_font_sizes/font_size = 11
-text = "Choix gauche"
-autowrap_mode = 3
-
-[node name="RightChoice" type="PanelContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-theme_override_styles/panel = SubResource("SB_chip")
-
-[node name="RightVBox" type="VBoxContainer" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices/RightChoice"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 4
-
-[node name="RightKey" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices/RightChoice/RightVBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
-theme_override_fonts/font = SubResource("FV_upper")
-theme_override_font_sizes/font_size = 8
-text = "DROITE ►"
-horizontal_alignment = 2
-
-[node name="RightTitle" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox/Choices/RightChoice/RightVBox"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
-theme_override_font_sizes/font_size = 11
-text = "Choix droite"
-horizontal_alignment = 2
-autowrap_mode = 3
-
-[node name="ReactionToast" type="Label" parent="MainVBox/CardArea/CardPanel/CardVBox/QBody/QVBox"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
-theme_override_fonts/font = ExtResource("6_spec_i")
-theme_override_font_sizes/font_size = 15
-text = "Réaction…"
 horizontal_alignment = 1
-autowrap_mode = 3
 
-[node name="EdgeLeft" type="Label" parent="MainVBox/CardArea"]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-theme_override_colors/font_color = Color(0.875, 0.965, 0.98, 1)
-theme_override_constants/line_spacing = 3
-theme_override_fonts/font = ExtResource("5_spec_r")
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("SB_edge_l")
-text = "Réponse gauche"
-autowrap_mode = 3
+[node name="BottomBar" type="PanelContainer" parent="MainVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_bottombar")
 
-[node name="EdgeRight" type="Label" parent="MainVBox/CardArea"]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-theme_override_colors/font_color = Color(0.875, 0.965, 0.98, 1)
-theme_override_constants/line_spacing = 3
-theme_override_fonts/font = ExtResource("5_spec_r")
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("SB_edge_r")
-text = "Réponse droite"
-horizontal_alignment = 2
-autowrap_mode = 3
-
-[node name="Footer" type="MarginContainer" parent="MainVBox"]
+[node name="BottomMargin" type="MarginContainer" parent="MainVBox/BottomBar"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 18
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 13
 theme_override_constants/margin_right = 18
 theme_override_constants/margin_bottom = 16
 
-[node name="FootRow" type="HBoxContainer" parent="MainVBox/Footer"]
+[node name="BottomVBox" type="VBoxContainer" parent="MainVBox/BottomBar/BottomMargin"]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 6
+theme_override_constants/separation = 2
 
-[node name="FootHint" type="Label" parent="MainVBox/Footer/FootRow"]
+[node name="Year" type="Label" parent="MainVBox/BottomBar/BottomMargin/BottomVBox"]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
-theme_override_fonts/font = SubResource("FV_upper")
-theme_override_font_sizes/font_size = 9
-text = "GLISSEZ LA CARTE ◄ ►"
+theme_override_colors/font_color = Color(0.933, 0.945, 0.965, 1)
+theme_override_fonts/font = SubResource("FV_year")
+theme_override_font_sizes/font_size = 30
+text = "An 1"
+horizontal_alignment = 1
 
-[node name="KbdLeft" type="Label" parent="MainVBox/Footer/FootRow"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
-theme_override_font_sizes/font_size = 9
-theme_override_styles/normal = SubResource("SB_kbd")
-text = "←"
-
-[node name="KbdRight" type="Label" parent="MainVBox/Footer/FootRow"]
+[node name="Reign" type="Label" parent="MainVBox/BottomBar/BottomMargin/BottomVBox"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
-theme_override_fonts/font = ExtResource("7_mono_r")
+theme_override_fonts/font = ExtResource("4_mono_r")
+theme_override_font_sizes/font_size = 10
+text = "36 ans · Prêtre scientifique"
+horizontal_alignment = 1
+
+[node name="Handle" type="Button" parent="MainVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.49, 0.541, 0.627, 1)
+theme_override_colors/font_hover_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_fonts/font = SubResource("FV_era")
 theme_override_font_sizes/font_size = 9
-theme_override_styles/normal = SubResource("SB_kbd")
-text = "→"
+theme_override_styles/normal = SubResource("SB_handle")
+theme_override_styles/hover = SubResource("SB_handle_hover")
+theme_override_styles/pressed = SubResource("SB_handle_hover")
+text = "▲  TABLEAU DE BORD"

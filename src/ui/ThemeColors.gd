@@ -13,10 +13,12 @@ const ACCENT    = Color("#4fd6e8")
 const ACCENT_DEEP = Color("#2aa7c4")
 const AMBER     = Color("#e8b65a")
 const DANGER    = Color("#d96a5a")
-const MILITARY  = Color("#d97a4a")
-const RELIGION  = Color("#b98ad6")
-const COMMERCE  = Color("#5fcf8f")
-const POLITICS  = Color("#8fbf5a")
+# Couleurs de ressources : conversion exacte des oklch du template app.jsx
+# (--military oklch(.66 .15 25) etc.) en sRGB.
+const MILITARY  = Color("#df6862")
+const RELIGION  = Color("#9281e1")
+const COMMERCE  = Color("#4cb587")
+const POLITICS  = Color("#d3a23b")
 
 static func resource_color(key: String) -> Color:
 	match key:
@@ -83,14 +85,14 @@ static func death_message(death_type: String) -> String:
 
 static func death_label(death_type: String) -> String:
 	match death_type:
-		"military":    return "Militaire — effondrement (0)"
-		"military_hi": return "Militaire — excès fatal (100)"
-		"religion":    return "Religion — effondrement (0)"
-		"religion_hi": return "Religion — excès fatal (100)"
-		"commerce":    return "Commerce — effondrement (0)"
-		"commerce_hi": return "Commerce — excès fatal (100)"
-		"politics":    return "Politique — effondrement (0)"
-		"politics_hi": return "Politique — excès fatal (100)"
+		"military":    return "Militaire — effondrement"
+		"military_hi": return "Militaire — excès fatal"
+		"religion":    return "Religion — effondrement"
+		"religion_hi": return "Religion — excès fatal"
+		"commerce":    return "Commerce — effondrement"
+		"commerce_hi": return "Commerce — excès fatal"
+		"politics":    return "Politique — effondrement"
+		"politics_hi": return "Politique — excès fatal"
 		"legitimacy":  return "Orateur démasqué"
 		"terminus":    return "Terminus perdue"
 		"natural":     return "Mort naturelle"

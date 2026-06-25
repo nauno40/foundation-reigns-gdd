@@ -1,7 +1,6 @@
 extends Node
 
 const EraUtils = preload("res://src/ui/EraUtils.gd")
-const DECK_UNLOCK_SCENE = preload("res://scenes/DeckUnlockScreen.tscn")
 
 const NATURAL_DEATH_CARD_ID = 9001
 
@@ -16,8 +15,13 @@ var _seldon: SeldonSystem
 
 @onready var _card_screen = %CardScreen
 @onready var _death_screen = %DeathScreen
-@onready var _galaxy_map = %GalaxyMap
+@onready var _codex = %Codex
 @onready var _briefing_screen = %BriefingScreen
+
+# Multiplicateur de difficulté appliqué aux deltas de ressources/légitimité
+# des choix (nouveau template : doux ×0.7 / normal ×1.0 / brutal ×1.45).
+const DIFFICULTY_MULT := {"doux": 0.7, "normal": 1.0, "brutal": 1.45}
+var _death_fx: ColorRect = null
 
 var _current_card: Dictionary = {}
 var _awaiting_reaction: bool = false
@@ -78,14 +82,11 @@ func _ready() -> void:
 
 	_model = NarrativeModel.new(_game_data, _ctx)
 	_card_screen.setup(_game_data)
-	_galaxy_map.setup(_game_data)
 
 	_card_screen.choice_made.connect(_on_choice_made)
 	_card_screen.reaction_dismissed.connect(_on_reaction_dismissed)
-	_card_screen.map_requested.connect(_on_map_pressed)
+	_card_screen.dashboard_requested.connect(_on_dashboard_pressed)
 	_death_screen.continue_pressed.connect(_on_new_reign)
-	_galaxy_map.visibility_changed.connect(_on_map_visibility_changed)
-	_galaxy_map.jump_requested.connect(_on_jump_requested)
 	_briefing_screen.dismissed.connect(_on_briefing_dismissed)
 
 	_stop_loading_visuals()
@@ -187,26 +188,31 @@ func _next_card() -> void:
 	var bias = _legitimacy.get_mood_bias()
 	_ctx.set_var("mood", bias if bias != "" else moods.get("default", "neutral"))
 
-	# Notification de déblocage de deck (jalon, première apparition).
+	_card_screen.show_card(_current_card, _ctx)
+
+	# Déblocage de deck (jalon) : bannière inline non bloquante (app.jsx deck-add).
 	var unlock := DeckUnlock.pending_unlock(_current_card, _ctx, _game_data.deck_unlocks)
 	if not unlock.is_empty():
 		_ctx.set_var("deck_unlocked_" + str(unlock["id"]), 1, true)
-		_save.save(_ctx)  # persiste le déblocage tout de suite (survie crash pendant l'overlay)
-		_show_deck_unlock(unlock)
-		_awaiting_reaction = false
-		return
-	_card_screen.show_card(_current_card, _ctx)
+		_save.save(_ctx)  # persiste le déblocage tout de suite (survie crash)
+		_card_screen.play_deck_unlock(unlock)
 	_awaiting_reaction = false
 
-# Affiche l'overlay de déblocage ; à la fermeture, montre la carte en attente.
-func _show_deck_unlock(entry: Dictionary) -> void:
-	var screen = DECK_UNLOCK_SCENE.instantiate()
-	add_child(screen)
-	screen.continue_pressed.connect(func():
-		screen.queue_free()
-		_card_screen.show_card(_current_card, _ctx)
-	, CONNECT_ONE_SHOT)
-	screen.show_unlock(entry)
+# Applique le multiplicateur de difficulté aux deltas de ressources/légitimité
+# (opérations additives) ; les autres outcomes (set, link, deck…) sont intacts.
+func _scaled_outcomes(outcomes: Array) -> Array:
+	var mult: float = DIFFICULTY_MULT.get(Globals.difficulty, 1.0)
+	if is_equal_approx(mult, 1.0):
+		return outcomes
+	var scaled: Array = []
+	for outcome in outcomes:
+		var o: Dictionary = outcome.duplicate()
+		var variable: String = o.get("variable", "")
+		var op: String = o.get("addOperation", "+=")
+		if op == "+=" and (variable in Context.RESOURCES or variable == "legitimacy"):
+			o["intValue"] = int(round(float(o.get("intValue", 0)) * mult))
+		scaled.append(o)
+	return scaled
 
 func _on_choice_made(is_left: bool) -> void:
 	if _awaiting_reaction:
@@ -215,7 +221,7 @@ func _on_choice_made(is_left: bool) -> void:
 
 	var outcome_key = "yesOutcome" if is_left else "noOutcome"
 	var outcomes = _current_card.get(outcome_key, [])
-	_model.apply_outcomes(outcomes)
+	_model.apply_outcomes(_scaled_outcomes(outcomes))
 
 	# Réaction émotionnelle de l'interlocuteur au choix (visage Reigns)
 	var moods = _current_card.get("moods", {})
@@ -306,9 +312,30 @@ func _show_death_screen(death_type: String) -> void:
 		_ctx, RespawnSystem.normalize_death_type(death_type))
 	# Wobble + chute de la carte (CardAnimator.TriggerDefeat) avant l'écran de mort.
 	await _card_screen.play_defeat()
+	# Effondrement holographique (glitch) avant l'overlay de mort.
+	await _play_death_fx()
 	_death_screen.show_death(_ctx, death_type, cover, meta_result)
 	_death_screen.show()
 	_card_screen.hide()
+
+# Glitch/collapse holographique (~0.76 s) joué par-dessus le cadre.
+func _play_death_fx() -> void:
+	if _death_fx == null:
+		_death_fx = ColorRect.new()
+		_death_fx.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_death_fx.set_anchors_preset(Control.PRESET_FULL_RECT)
+		var mat := ShaderMaterial.new()
+		mat.shader = load("res://assets/shaders/death_fx.gdshader")
+		_death_fx.material = mat
+		_card_screen.get_parent().add_child(_death_fx)
+	var mat := _death_fx.material as ShaderMaterial
+	mat.set_shader_parameter("rect_size", _death_fx.size)
+	mat.set_shader_parameter("progress", 0.0)
+	_death_fx.visible = true
+	var tw := create_tween()
+	tw.tween_method(func(v): mat.set_shader_parameter("progress", v), 0.0, 1.0, 0.76)
+	await tw.finished
+	_death_fx.visible = false
 
 func _on_new_reign() -> void:
 	var death_type = _ctx.get_var("last_death_type", "resource")
@@ -335,19 +362,10 @@ func _on_new_reign() -> void:
 	_card_screen.show()
 	_next_card()
 
-func _on_map_pressed() -> void:
-	_galaxy_map.update(_ctx)
-	_galaxy_map.show()
-	_card_screen.hide()
-
-func _on_jump_requested(planet_id: String) -> void:
-	_ctx.set_var("link", "_jump_" + planet_id)
-	_save.save(_ctx)
-	_next_card()
-
-func _on_map_visibility_changed() -> void:
-	if not _galaxy_map.visible and not _death_screen.visible:
-		_card_screen.show()
+func _on_dashboard_pressed() -> void:
+	# Le « Tableau de bord » est un panneau coulissant en surimpression :
+	# la carte reste derrière (le panneau la recouvre).
+	_codex.open("chars")
 
 func _on_briefing_dismissed() -> void:
 	_briefing_screen.hide()

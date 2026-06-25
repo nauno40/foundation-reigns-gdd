@@ -5,7 +5,6 @@ enum StartMode { NONE, NEW_GAME, CONTINUE }
 var start_mode = StartMode.NONE
 var dev_deck = ""
 var difficulty = "normal"
-var anim_gallery = false  # --anim : ouvre la galerie d'animations (outil de dev)
 var music_vol: float = 0.7
 var sfx_vol: float = 0.7
 
@@ -28,8 +27,6 @@ func _ready() -> void:
 					if d in ["doux", "normal", "brutal"]:
 						difficulty = d
 					i += 1
-			"--anim":
-				anim_gallery = true
 		i += 1
 
 func _load_config() -> void:
