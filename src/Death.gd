@@ -148,6 +148,31 @@ func show_death(info: Dictionary) -> void:
 	var fk := create_tween()
 	for a in [0.3, 1.0, 0.5, 1.0]:
 		fk.tween_property(cause, "modulate:a", a, 0.09)
+	_play_sweep()
+
+# deathSweep : bande lumineuse cyan qui balaie l'écran de haut en bas (.death::after)
+func _play_sweep() -> void:
+	var band_h := size.y * 0.34
+	var grad := Gradient.new()
+	grad.set_color(0, Color(0.47, 0.9, 0.96, 0.16))
+	grad.set_color(1, Color(0.47, 0.9, 0.96, 0.0))
+	var gt := GradientTexture2D.new()
+	gt.gradient = grad
+	gt.fill_from = Vector2(0, 0)
+	gt.fill_to = Vector2(0, 1)
+	gt.width = 4
+	gt.height = 64
+	var sweep := TextureRect.new()
+	sweep.texture = gt
+	sweep.stretch_mode = TextureRect.STRETCH_SCALE
+	sweep.size = Vector2(size.x, band_h)
+	sweep.position = Vector2(0, -band_h * 0.4)
+	sweep.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(sweep)
+	var t := create_tween().set_parallel()
+	t.tween_property(sweep, "position:y", size.y * 1.2, 0.7).set_ease(Tween.EASE_OUT)
+	t.tween_property(sweep, "modulate:a", 0.0, 0.7)
+	t.chain().tween_callback(sweep.queue_free)
 
 func _lbl(t: String, f: Font, s: int, c: Color) -> Label:
 	var l := Label.new()

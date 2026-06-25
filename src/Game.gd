@@ -430,6 +430,9 @@ func _refresh_card() -> void:
 	_bearer_name.text = card.get("bearer", "")
 	_bearer_role.text = str(card.get("role", "")).to_upper()
 	_fit_question()
+	# qrise : la question apparaît en fondu à chaque nouvelle carte (template .question.k)
+	_question.modulate.a = 0.0
+	create_tween().tween_property(_question, "modulate:a", 1.0, 0.35).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
 func _fit_question() -> void:
 	var h := _question.get_minimum_size().y

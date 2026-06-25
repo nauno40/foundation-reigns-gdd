@@ -6,6 +6,11 @@ extends Control
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const HOLO_GRID = preload("res://assets/shaders/holo_grid.gdshader")
+const TAB_ICONS := {
+	"chars": preload("res://assets/icons/tab_chars.svg"),
+	"ach": preload("res://assets/icons/tab_ach.svg"),
+	"gal": preload("res://assets/icons/tab_gal.svg"),
+}
 
 var _open := false
 var _tab := "chars"
@@ -23,6 +28,8 @@ var _info: VBoxContainer
 var _gp_start := Vector2.ZERO
 var _gp_mode := ""        # "" / "h" / "v"
 var _sliding := false
+var _ring_phase := 0.0    # pulse de l'anneau planète sélectionnée
+var _ring_tween: Tween
 
 func _ready() -> void:
 	visible = false
@@ -54,18 +61,35 @@ func _build() -> void:
 	tabs.add_theme_constant_override("separation", 0)
 	root.add_child(tabs)
 	for entry in [["chars", "PERSONNAGES"], ["ach", "SUCCÈS / DECKS"], ["gal", "GALAXIE"]]:
-		var b := Button.new()
-		b.text = entry[1]
-		b.focus_mode = Control.FOCUS_NONE
-		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.custom_minimum_size = Vector2(0, 40)
-		b.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 2))
-		b.add_theme_font_size_override("font_size", 9)
-		_flat(b)
 		var key: String = entry[0]
-		b.pressed.connect(func(): _select(key))
-		tabs.add_child(b)
-		_tab_buttons[key] = b
+		# onglet = icône au-dessus + label (template .tab .ic + texte)
+		var tab := VBoxContainer.new()
+		tab.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		tab.custom_minimum_size = Vector2(0, 44)
+		tab.alignment = BoxContainer.ALIGNMENT_CENTER
+		tab.add_theme_constant_override("separation", 5)
+		tabs.add_child(tab)
+		var icc := CenterContainer.new()
+		icc.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		tab.add_child(icc)
+		var ic := TextureRect.new()
+		ic.texture = TAB_ICONS[key]
+		ic.custom_minimum_size = Vector2(19, 19)
+		ic.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		ic.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		ic.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		icc.add_child(ic)
+		var lbl := Label.new()
+		lbl.text = entry[1]
+		lbl.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 2))
+		lbl.add_theme_font_size_override("font_size", 9)
+		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		tab.add_child(lbl)
+		tab.gui_input.connect(func(e):
+			if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
+				_select(key))
+		_tab_buttons[key] = {"ic": ic, "lbl": lbl}
 		var ul := ColorRect.new()
 		ul.color = Cfg.accent
 		ul.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
@@ -73,7 +97,7 @@ func _build() -> void:
 		ul.offset_top = -2.0; ul.offset_bottom = 0.0
 		ul.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		ul.visible = false
-		b.add_child(ul)
+		tab.add_child(ul)
 		_tab_underlines[key] = ul
 
 	# Conteneur translatable (pour le carrousel d'onglets qui suit le doigt)
@@ -209,7 +233,9 @@ func _slide(dir: int) -> void:
 func _select(tab: String) -> void:
 	_tab = tab
 	for k in _tab_buttons:
-		_tab_buttons[k].add_theme_color_override("font_color", Cfg.accent if k == tab else Pal.INK_DIM)
+		var col: Color = Cfg.accent if k == tab else Pal.INK_DIM
+		_tab_buttons[k]["lbl"].add_theme_color_override("font_color", col)
+		_tab_buttons[k]["ic"].modulate = col
 		_tab_underlines[k].visible = (k == tab)
 		_tab_underlines[k].color = Cfg.accent
 	for c in _body.get_children(): c.queue_free()
@@ -461,7 +487,10 @@ func _draw_galaxy() -> void:
 		var col := Data.state_color(p["state"])
 		var r := 7.0 if p["base"] else 5.5
 		if _selected == p["id"]:
-			_galaxy.draw_arc(pos, r + 5.0, 0.0, TAU, 32, col, 1.5, true)
+			# plring : anneau pulsant (scale 1→1.35, alpha 1→.4)
+			var tri := sin(_ring_phase * PI)
+			var rr := (r + 5.0) * (1.0 + 0.35 * tri)
+			_galaxy.draw_arc(pos, rr, 0.0, TAU, 32, Color(col.r, col.g, col.b, 1.0 - 0.6 * tri), 1.5, true)
 		_galaxy.draw_circle(pos, r + 3.0, Color(col.r, col.g, col.b, 0.25))
 		_galaxy.draw_circle(pos, r, col)
 		_planet_rects.append({"id": p["id"], "pos": pos, "r": r + 6.0})
@@ -473,7 +502,19 @@ func _galaxy_input(e: InputEvent) -> void:
 				_selected = pr["id"]
 				_galaxy.queue_redraw()
 				_render_info()
+				_start_ring_pulse()
 				return
+
+func _start_ring_pulse() -> void:
+	if _ring_tween and _ring_tween.is_valid():
+		return
+	_ring_tween = create_tween().set_loops()
+	_ring_tween.tween_method(_ring_step, 0.0, 1.0, 1.1)
+
+func _ring_step(v: float) -> void:
+	_ring_phase = v
+	if is_instance_valid(_galaxy):
+		_galaxy.queue_redraw()
 
 func _render_info() -> void:
 	for c in _info.get_children(): c.queue_free()
