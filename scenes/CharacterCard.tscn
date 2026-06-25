@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://charactercard_scene"]
+
+[ext_resource type="Script" path="res://src/CharacterCard.gd" id="1_cc"]
+[ext_resource type="Shader" path="res://assets/shaders/holo_grid.gdshader" id="2_holo"]
+[ext_resource type="Script" path="res://src/CardBust.gd" id="3_bust"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="4_spectral"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="5_mono"]
+
+[sub_resource type="StyleBoxFlat" id="SB_card"]
+resource_local_to_scene = true
+bg_color = Color(0.16, 0.2, 0.28, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="ShaderMaterial" id="SM_holo"]
+resource_local_to_scene = true
+shader = ExtResource("2_holo")
+
+[sub_resource type="FontVariation" id="FV_tag"]
+base_font = ExtResource("5_mono")
+spacing_glyph = 1
+
+[node name="CharacterCard" type="VBoxContainer"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+script = ExtResource("1_cc")
+
+[node name="Card" type="Panel" parent="."]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("SB_card")
+
+[node name="Grid" type="ColorRect" parent="Card"]
+unique_name_in_owner = true
+material = SubResource("SM_holo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Bust" type="Control" parent="Card"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.18
+anchor_top = 0.2
+anchor_right = 0.82
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_bust")
+
+[node name="Unknown" type="CenterContainer" parent="Card"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Q" type="Label" parent="Card/Unknown"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.227, 0.267, 0.345, 1)
+theme_override_fonts/font = ExtResource("5_mono")
+theme_override_font_sizes/font_size = 22
+text = "? ? ?"
+
+[node name="Star" type="Label" parent="Card"]
+unique_name_in_owner = true
+visible = false
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 28.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
+text = "★"
+
+[node name="CharName" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+theme_override_fonts/font = ExtResource("4_spectral")
+theme_override_font_sizes/font_size = 14
+text = "Nom"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CharTag" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_fonts/font = SubResource("FV_tag")
+theme_override_font_sizes/font_size = 8
+text = "TAG"
+horizontal_alignment = 1
+autowrap_mode = 3

@@ -7,6 +7,7 @@ extends Control
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const HOLO_GRID = preload("res://assets/shaders/holo_grid.gdshader")
+const CHAR_CARD_SCENE = preload("res://scenes/CharacterCard.tscn")
 const TAB_ICONS := {
 	"chars": preload("res://assets/icons/tab_chars.svg"),
 	"ach": preload("res://assets/icons/tab_ach.svg"),
@@ -15,12 +16,11 @@ const TAB_ICONS := {
 
 var _open := false
 var _tab := "chars"
-var _panel: PanelContainer
-var _tab_buttons := {}
-var _tab_underlines := {}
-var _body: VBoxContainer
-var _holder: Control
-var _scroll: ScrollContainer
+@onready var _panel: PanelContainer = %Panel
+@onready var _body: VBoxContainer = %Body
+@onready var _holder: Control = %Holder
+@onready var _scroll: ScrollContainer = %Scroll
+@onready var _tabs := {"chars": %TabChars, "ach": %TabAch, "gal": %TabGal}
 var _galaxy: Control
 var _planet_rects := []
 var _selected := ""
@@ -33,110 +33,21 @@ var _ring_phase := 0.0    # pulse de l'anneau planète sélectionnée
 var _ring_tween: Tween
 
 func _ready() -> void:
-	_build()
+	(%TabChars as CodexTab).setup(TAB_ICONS["chars"], "PERSONNAGES")
+	(%TabAch as CodexTab).setup(TAB_ICONS["ach"], "SUCCÈS / DECKS")
+	(%TabGal as CodexTab).setup(TAB_ICONS["gal"], "GALAXIE")
+	(%TabChars as CodexTab).tab_pressed.connect(func(): _select("chars"))
+	(%TabAch as CodexTab).tab_pressed.connect(func(): _select("ach"))
+	(%TabGal as CodexTab).tab_pressed.connect(func(): _select("gal"))
+	%Grab.pressed.connect(close)
+	_holder.resized.connect(func(): _scroll.size = _holder.size)
 	if Engine.is_editor_hint():
-		# aperçu seulement quand on édite Codex.tscn seul (sinon il recouvrirait Game)
 		visible = get_tree().edited_scene_root == self
 		if visible:
 			_select("chars")
 	else:
 		visible = false
-
-func _build() -> void:
-	_panel = PanelContainer.new()
-	_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color("#070b13")
-	_panel.add_theme_stylebox_override("panel", sb)
-	add_child(_panel)
-
-	var root := VBoxContainer.new()
-	root.add_theme_constant_override("separation", 0)
-	_panel.add_child(root)
-
-	var grab := Button.new()
-	grab.text = "FERMER ▼"
-	grab.focus_mode = Control.FOCUS_NONE
-	grab.add_theme_font_override("font", FONT_MONO)
-	grab.add_theme_font_size_override("font_size", 8)
-	grab.custom_minimum_size = Vector2(0, 34)
-	grab.pressed.connect(close)
-	_flat(grab)
-	root.add_child(grab)
-
-	var tabs := HBoxContainer.new()
-	tabs.add_theme_constant_override("separation", 0)
-	root.add_child(tabs)
-	for entry in [["chars", "PERSONNAGES"], ["ach", "SUCCÈS / DECKS"], ["gal", "GALAXIE"]]:
-		var key: String = entry[0]
-		# onglet = icône au-dessus + label (template .tab .ic + texte)
-		var tab := VBoxContainer.new()
-		tab.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		tab.custom_minimum_size = Vector2(0, 44)
-		tab.alignment = BoxContainer.ALIGNMENT_CENTER
-		tab.add_theme_constant_override("separation", 5)
-		tabs.add_child(tab)
-		var icc := CenterContainer.new()
-		icc.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		tab.add_child(icc)
-		var ic := TextureRect.new()
-		ic.texture = TAB_ICONS[key]
-		ic.custom_minimum_size = Vector2(19, 19)
-		ic.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		ic.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		ic.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		icc.add_child(ic)
-		var lbl := Label.new()
-		lbl.text = entry[1]
-		lbl.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 2))
-		lbl.add_theme_font_size_override("font_size", 9)
-		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		tab.add_child(lbl)
-		tab.gui_input.connect(func(e):
-			if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
-				_select(key))
-		_tab_buttons[key] = {"ic": ic, "lbl": lbl}
-		var ul := ColorRect.new()
-		ul.color = Cfg.accent
-		ul.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
-		ul.anchor_left = 0.18; ul.anchor_right = 0.82
-		ul.offset_top = -2.0; ul.offset_bottom = 0.0
-		ul.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		ul.visible = false
-		tab.add_child(ul)
-		_tab_underlines[key] = ul
-
-	# Conteneur translatable (pour le carrousel d'onglets qui suit le doigt)
-	_holder = Control.new()
-	_holder.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_holder.clip_contents = true
-	root.add_child(_holder)
-	_holder.resized.connect(func(): _scroll.size = _holder.size)
-	_scroll = ScrollContainer.new()
-	_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	_holder.add_child(_scroll)
-	var m := MarginContainer.new()
-	m.add_theme_constant_override("margin_left", 18)
-	m.add_theme_constant_override("margin_top", 16)
-	m.add_theme_constant_override("margin_right", 18)
-	m.add_theme_constant_override("margin_bottom", 22)
-	m.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_scroll.add_child(m)
-	_body = VBoxContainer.new()
-	_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_body.add_theme_constant_override("separation", 9)
-	m.add_child(_body)
-	_select("chars")
-
-func _flat(b: Button) -> void:
-	b.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
-	var h := StyleBoxFlat.new()
-	h.bg_color = Color(0.31, 0.839, 0.91, 0.06)
-	b.add_theme_stylebox_override("hover", h)
-	b.add_theme_stylebox_override("pressed", h)
-	b.add_theme_color_override("font_hover_color", Cfg.accent)
-	b.add_theme_color_override("font_color", Pal.INK_DIM)
+		_select("chars")
 
 const TABS := ["chars", "ach", "gal"]
 
@@ -239,12 +150,8 @@ func _slide(dir: int) -> void:
 
 func _select(tab: String) -> void:
 	_tab = tab
-	for k in _tab_buttons:
-		var col: Color = Cfg.accent if k == tab else Pal.INK_DIM
-		_tab_buttons[k]["lbl"].add_theme_color_override("font_color", col)
-		_tab_buttons[k]["ic"].modulate = col
-		_tab_underlines[k].visible = (k == tab)
-		_tab_underlines[k].color = Cfg.accent
+	for k in _tabs:
+		(_tabs[k] as CodexTab).set_active(k == tab)
 	for c in _body.get_children(): c.queue_free()
 	match tab:
 		"chars": _render_chars()
@@ -270,67 +177,9 @@ func _grid(list: Array) -> GridContainer:
 	return g
 
 func _char(c: Dictionary) -> Control:
-	var vb := VBoxContainer.new()
-	vb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	vb.add_theme_constant_override("separation", 7)
-	var card := Panel.new()
-	card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	card.clip_contents = true
-	card.resized.connect(func(): if not is_equal_approx(card.custom_minimum_size.y, card.size.x): card.custom_minimum_size.y = card.size.x)
-	var sb := StyleBoxFlat.new()
-	sb.set_corner_radius_all(13)
-	sb.bg_color = Data.tone_for(c["id"]) if c["met"] else Color("#10151f")
-	card.add_theme_stylebox_override("panel", sb)
-	vb.add_child(card)
-	if c["met"]:
-		var grid := ColorRect.new()
-		grid.set_anchors_preset(Control.PRESET_FULL_RECT)
-		grid.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		var gm := ShaderMaterial.new()
-		gm.shader = HOLO_GRID
-		grid.material = gm
-		card.add_child(grid)
-		grid.resized.connect(func(): gm.set_shader_parameter("rect_size", grid.size))
-		var bust := CardBust.new()
-		bust.set_anchors_preset(Control.PRESET_FULL_RECT)
-		bust.anchor_left = 0.18; bust.anchor_right = 0.82; bust.anchor_top = 0.20
-		bust.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		card.add_child(bust)
-		bust.set_tone(Data.tone_for(c["id"]))
-		bust.set_initials(Data.initials(c["name"]))
-	else:
-		var cc := CenterContainer.new()
-		cc.set_anchors_preset(Control.PRESET_FULL_RECT)
-		card.add_child(cc)
-		var q := Label.new()
-		q.text = "? ? ?"
-		q.add_theme_font_override("font", FONT_MONO)
-		q.add_theme_font_size_override("font_size", 22)
-		q.add_theme_color_override("font_color", Color("#3a4458"))
-		cc.add_child(q)
-	if c["key"]:
-		var star := Label.new()
-		star.text = "★"
-		star.add_theme_color_override("font_color", Pal.AMBER)
-		star.position = Vector2(8, 6)
-		card.add_child(star)
-	var nm := Label.new()
-	nm.text = c["name"] if c["met"] or c["key"] else "Inconnu"
-	nm.add_theme_font_override("font", FONT_SPECTRAL)
-	nm.add_theme_font_size_override("font_size", 14)
-	nm.add_theme_color_override("font_color", Pal.INK if c["met"] else Color("#5d6b82"))
-	nm.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	nm.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	vb.add_child(nm)
-	var tg := Label.new()
-	tg.text = str(c["tag"]).to_upper()
-	tg.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 1))
-	tg.add_theme_font_size_override("font_size", 8)
-	tg.add_theme_color_override("font_color", Cfg.accent if c["met"] else Color("#4d586e"))
-	tg.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	tg.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	vb.add_child(tg)
-	return vb
+	var cc: CharacterCard = CHAR_CARD_SCENE.instantiate()
+	cc.setup(c)
+	return cc
 
 # ── Succès / Decks ──
 func _render_ach() -> void:
