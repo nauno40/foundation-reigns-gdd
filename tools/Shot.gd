@@ -24,6 +24,21 @@ func _ready() -> void:
 			await _wait(10)
 			game._on_committed(true)
 			await _wait(90)
+		"gauges":
+			# niveaux contrastés pour vérifier le remplissage
+			game.res = {"military": 8, "religion": 50, "commerce": 92, "politics": 34}
+			game._refresh_all()
+			await _wait(50)
+		"flash":
+			# capture en cours d'animation (flash ▲/▼ + remplissage)
+			game.res = {"military": 60, "religion": 40, "commerce": 55, "politics": 50}
+			game._refresh_all()
+			await _wait(40)
+			game.card = Data.DECK[2]  # sermak : right mil+12 com-10 rel-4
+			game._cardview.show_card(game.card)
+			await _wait(5)
+			game._on_committed(false)
+			await _wait(14)   # ~0.23s : ▲/▼ visibles + remplissage en cours
 		_:
 			pass
 	var img := get_viewport().get_texture().get_image()

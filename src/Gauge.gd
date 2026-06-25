@@ -4,6 +4,7 @@ extends Control
 # Jauge icône-masque (port de ResIcon / .ricon dans app.jsx).
 
 const GAUGE_SHADER = preload("res://assets/shaders/gauge_fill.gdshader")
+const GLOW_SHADER = preload("res://assets/shaders/glow.gdshader")
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const ICONS := {
 	"military": preload("res://assets/icons/military.svg"),
@@ -70,11 +71,11 @@ func _build() -> void:
 	glyph.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	center.add_child(glyph)
 
-	var add_mat := CanvasItemMaterial.new()
-	add_mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
-	_glow = _layer(glyph, add_mat)
+	var gmat := ShaderMaterial.new()
+	gmat.shader = GLOW_SHADER
+	_glow = _layer(glyph, gmat)
 	_glow.modulate.a = 0.0
-	_flash = _layer(glyph, add_mat)
+	_flash = _layer(glyph, gmat)
 	_flash.modulate.a = 0.0
 	_icon = TextureRect.new()
 	_icon.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -98,14 +99,12 @@ func _build() -> void:
 	_lab.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	vb.add_child(_lab)
 
-func _layer(glyph: Control, mat: CanvasItemMaterial) -> TextureRect:
+func _layer(glyph: Control, mat: Material) -> TextureRect:
 	var tr := TextureRect.new()
 	tr.set_anchors_preset(Control.PRESET_FULL_RECT)
 	tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	tr.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	tr.pivot_offset = Vector2(GLYPH, GLYPH) * 0.5
-	tr.scale = Vector2(1.32, 1.32)
 	tr.material = mat
 	glyph.add_child(tr)
 	return tr
