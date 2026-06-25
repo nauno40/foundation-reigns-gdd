@@ -33,7 +33,7 @@ var _gt: Tween
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	custom_minimum_size = Vector2(0, 72)
+	custom_minimum_size = Vector2(0, 64)
 
 func setup(key: String, label: String) -> void:
 	_key = key
@@ -54,14 +54,6 @@ func _build() -> void:
 	vb.add_theme_constant_override("separation", 6)
 	vb.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(vb)
-
-	_delta = Label.new()
-	_delta.add_theme_font_override("font", FONT_MONO)
-	_delta.add_theme_font_size_override("font_size", 11)
-	_delta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_delta.custom_minimum_size = Vector2(0, 13)
-	_delta.modulate.a = 0.0
-	vb.add_child(_delta)
 
 	var center := CenterContainer.new()
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -98,6 +90,19 @@ func _build() -> void:
 	_lab.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_lab.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	vb.add_child(_lab)
+
+	# delta ▲/▼ : overlay HORS FLUX (template top:-13px), au-dessus de l'icône
+	_delta = Label.new()
+	_delta.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	_delta.anchor_right = 1.0
+	_delta.offset_top = -3.0
+	_delta.offset_bottom = 13.0
+	_delta.add_theme_font_override("font", FONT_MONO)
+	_delta.add_theme_font_size_override("font_size", 11)
+	_delta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_delta.modulate.a = 0.0
+	_delta.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_delta)
 
 func _layer(glyph: Control, mat: Material) -> TextureRect:
 	var tr := TextureRect.new()
@@ -163,14 +168,14 @@ func _flash_delta(sign: int) -> void:
 	_delta.text = "▲" if up else "▼"
 	_delta.add_theme_color_override("font_color", c)
 	_delta.modulate.a = 0.0
-	_delta.position.y = 4.0
+	_delta.offset_top = 1.0
 	var t := create_tween()
 	t.set_parallel()
 	t.tween_property(_delta, "modulate:a", 1.0, 0.2)
-	t.tween_property(_delta, "position:y", 0.0, 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(_delta, "offset_top", -3.0, 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	t.chain().tween_interval(0.4)
 	t.chain().tween_property(_delta, "modulate:a", 0.0, 0.3)
 	_flash.modulate = Color(c.r, c.g, c.b, 0.0)
 	var f := create_tween()
-	f.tween_property(_flash, "modulate:a", 0.85, 0.18)
+	f.tween_property(_flash, "modulate:a", 0.7, 0.18)
 	f.tween_property(_flash, "modulate:a", 0.0, 0.55)
