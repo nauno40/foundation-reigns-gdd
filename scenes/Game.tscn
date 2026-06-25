@@ -1,0 +1,294 @@
+[gd_scene load_steps=16 format=3 uid="uid://game_scene"]
+
+[ext_resource type="Script" path="res://src/Game.gd" id="1_game"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
+[ext_resource type="FontFile" path="res://assets/fonts/Caveat.ttf" id="3_caveat"]
+[ext_resource type="Shader" path="res://assets/shaders/panel_bg.gdshader" id="4_panelbg"]
+[ext_resource type="PackedScene" uid="uid://gauge_scene" path="res://scenes/Gauge.tscn" id="5_gauge"]
+[ext_resource type="PackedScene" uid="uid://cardview_scene" path="res://scenes/CardView.tscn" id="6_card"]
+
+[sub_resource type="ShaderMaterial" id="SM_panel"]
+shader = ExtResource("4_panelbg")
+
+[sub_resource type="FontVariation" id="FV_era"]
+base_font = ExtResource("2_mono")
+spacing_glyph = 3
+
+[sub_resource type="FontVariation" id="FV_year"]
+base_font = ExtResource("3_caveat")
+variation_opentype = {
+"wght": 700
+}
+
+[sub_resource type="StyleBoxFlat" id="SB_topbar"]
+bg_color = Color(0.043, 0.055, 0.082, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+
+[sub_resource type="StyleBoxFlat" id="SB_bottombar"]
+bg_color = Color(0.043, 0.055, 0.082, 1)
+
+[sub_resource type="StyleBoxFlat" id="SB_handle"]
+bg_color = Color(0.043, 0.055, 0.082, 1)
+border_width_top = 1
+border_color = Color(0.471, 0.588, 0.745, 0.1)
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="SB_deck"]
+bg_color = Color(0.102, 0.122, 0.161, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 18
+shadow_offset = Vector2(0, 10)
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_game")
+
+[node name="MainVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TopBar" type="PanelContainer" parent="MainVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_topbar")
+
+[node name="TopMargin" type="MarginContainer" parent="MainVBox/TopBar"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 11
+
+[node name="TopVBox" type="VBoxContainer" parent="MainVBox/TopBar/TopMargin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 7
+
+[node name="EraLabel" type="RichTextLabel" parent="MainVBox/TopBar/TopMargin/TopVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_colors/default_color = Color(0.604, 0.655, 0.741, 1)
+theme_override_fonts/normal_font = SubResource("FV_era")
+theme_override_font_sizes/normal_font_size = 9
+text = "[center]SECONDE FONDATION · [color=#4fd6e8]ÈRE HARDIN[/color] · ANS 1–80[/center]"
+
+[node name="ResRow" type="HBoxContainer" parent="MainVBox/TopBar/TopMargin/TopVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="BarMilitary" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("5_gauge")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BarReligion" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("5_gauge")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BarCommerce" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("5_gauge")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BarPolitics" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" instance=ExtResource("5_gauge")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Control" parent="MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="PanelBg" type="ColorRect" parent="MainVBox/Panel"]
+material = SubResource("SM_panel")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelMargin" type="MarginContainer" parent="MainVBox/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 14
+
+[node name="PanelVBox" type="VBoxContainer" parent="MainVBox/Panel/PanelMargin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="QuestionScroll" type="ScrollContainer" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 66)
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="QuestionLabel" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/QuestionScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.867, 0.902, 0.949, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 17
+text = "Question…"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Whisper" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.714, 0.353, 1)
+theme_override_fonts/font = ExtResource("3_caveat")
+theme_override_font_sizes/font_size = 17
+text = "vous semblez toujours avoir la bonne réponse…"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CardStage" type="Control" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="DeckCard" type="Panel" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardStage"]
+unique_name_in_owner = true
+layout_mode = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_deck")
+
+[node name="CardView" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardStage" instance=ExtResource("6_card")]
+unique_name_in_owner = true
+
+[node name="Speaker" type="VBoxContainer" parent="MainVBox/Panel/PanelMargin/PanelVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="BearerName" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/Speaker"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 17
+text = "Nom"
+horizontal_alignment = 1
+
+[node name="BearerRole" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/Speaker"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_fonts/font = ExtResource("2_mono")
+theme_override_font_sizes/font_size = 8
+text = "RÔLE"
+horizontal_alignment = 1
+
+[node name="BottomBar" type="PanelContainer" parent="MainVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_bottombar")
+
+[node name="BottomMargin" type="MarginContainer" parent="MainVBox/BottomBar"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 16
+
+[node name="BottomVBox" type="VBoxContainer" parent="MainVBox/BottomBar/BottomMargin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+
+[node name="Year" type="Label" parent="MainVBox/BottomBar/BottomMargin/BottomVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933, 0.945, 0.965, 1)
+theme_override_fonts/font = SubResource("FV_year")
+theme_override_font_sizes/font_size = 30
+text = "An 1"
+horizontal_alignment = 1
+
+[node name="Reign" type="RichTextLabel" parent="MainVBox/BottomBar/BottomMargin/BottomVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_colors/default_color = Color(0.576, 0.627, 0.714, 1)
+theme_override_fonts/normal_font = ExtResource("2_mono")
+theme_override_fonts/bold_font = ExtResource("2_mono")
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+text = "[center]36 ans · Couverture[/center]"
+
+[node name="Handle" type="PanelContainer" parent="MainVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_handle")
+
+[node name="HV" type="VBoxContainer" parent="MainVBox/Handle"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BarC" type="CenterContainer" parent="MainVBox/Handle/HV"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Bar" type="ColorRect" parent="MainVBox/Handle/HV/BarC"]
+custom_minimum_size = Vector2(38, 3)
+layout_mode = 2
+color = Color(0.224, 0.263, 0.353, 1)
+
+[node name="Chev" type="RichTextLabel" parent="MainVBox/Handle/HV"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_fonts/normal_font = SubResource("FV_era")
+theme_override_font_sizes/normal_font_size = 9
+text = "[center]▲  TABLEAU DE BORD[/center]"
+mouse_filter = 2

@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://assets/shaders/space_bg.gdshader" id="1_space"]
 [ext_resource type="Shader" path="res://assets/shaders/frame_veil.gdshader" id="2_veil"]
-[ext_resource type="Script" path="res://src/Game.gd" id="3_game"]
+[ext_resource type="PackedScene" uid="uid://game_scene" path="res://scenes/Game.tscn" id="3_game"]
 [ext_resource type="Script" path="res://src/Root.gd" id="4_root"]
 [ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="5_mono"]
 
@@ -82,12 +82,11 @@ anchor_bottom = 1.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("SB_shadow")
 
-[node name="Game" type="Control" parent="Row/Frame"]
+[node name="Game" parent="Row/Frame" instance=ExtResource("3_game")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource("3_game")
 
 [node name="Veil" type="ColorRect" parent="Row/Frame"]
 material = SubResource("SM_veil")

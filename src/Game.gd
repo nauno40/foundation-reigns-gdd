@@ -32,30 +32,40 @@ var _hstart_y := 0.0
 var _hmoved := false
 
 # noeuds
-var _era: RichTextLabel
+@onready var _era: RichTextLabel = %EraLabel
+@onready var _question: Label = %QuestionLabel
+@onready var _q_scroll: ScrollContainer = %QuestionScroll
+@onready var _whisper: Label = %Whisper
+@onready var _stage: Control = %CardStage
+@onready var _deck_card: Panel = %DeckCard
+@onready var _cardview: CardView = %CardView
+@onready var _bearer_name: Label = %BearerName
+@onready var _bearer_role: Label = %BearerRole
+@onready var _year_lbl: Label = %Year
+@onready var _reign_lbl: RichTextLabel = %Reign
+@onready var _handle: PanelContainer = %Handle
+@onready var _handle_chev: RichTextLabel = %Chev
 var _gauges := {}
-var _question: Label
-var _q_scroll: ScrollContainer
-var _whisper: Label
-var _stage: Control
-var _deck_card: Panel
-var _cardview: CardView
-var _bearer_name: Label
-var _bearer_role: Label
-var _year_lbl: Label
-var _reign_lbl: RichTextLabel
-var _handle_chev: RichTextLabel
 var _codex: Codex
 var _death: Death
 var _deathfx: ColorRect
 var _tweaks: TweaksPanel
 
 func _ready() -> void:
-	_build()
+	_gauges = {"military": %BarMilitary, "religion": %BarReligion, "commerce": %BarCommerce, "politics": %BarPolitics}
+	for r in Data.RESOURCES:
+		_gauges[r["key"]].setup(r["key"], r["label"])
+	_era.text = _era_text()
+	_handle_chev.text = _handle_text()
+	_question.add_theme_font_size_override("font_size", Cfg.prose)
+	_cardview.committed.connect(_on_committed)
+	_cardview.preview.connect(_on_preview)
+	_stage.resized.connect(_layout_stage)
+	_handle.gui_input.connect(_on_handle_input)
+	_make_overlays()
 	_new_cover()
 	_init_reign(100)
 	card = Data.pick_card([])
-	# attendre que les conteneurs se dimensionnent avant de placer/animer la carte
 	await get_tree().process_frame
 	await get_tree().process_frame
 	_layout_stage()
@@ -63,201 +73,14 @@ func _ready() -> void:
 	_refresh_all()
 	_cardview.play_entry()
 
-# ── construction de l'UI ──
-var _caveat_bold: FontVariation
-var _mono_wide: FontVariation     # inter-lettre large (ère, poignée)
+func _on_handle_input(e: InputEvent) -> void:
+	if e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and e.pressed:
+		_hdrag = true
+		_hstart_y = get_global_mouse_position().y
+		_hmoved = false
+		_codex.drag_start()
 
-func _build() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
-	_caveat_bold = FontVariation.new()
-	_caveat_bold.base_font = FONT_CAVEAT
-	_caveat_bold.variation_opentype = {"wght": 700}
-	_mono_wide = FontVariation.new()
-	_mono_wide.base_font = FONT_MONO
-	_mono_wide.spacing_glyph = 3
-	var vb := VBoxContainer.new()
-	vb.set_anchors_preset(Control.PRESET_FULL_RECT)
-	vb.add_theme_constant_override("separation", 0)
-	vb.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(vb)
-
-	# TOPBAR
-	var topbar := _bar(Color("#0b0e15"), 18, 0)
-	vb.add_child(topbar)
-	var tm := _margin(18, 12, 18, 11)
-	topbar.add_child(tm)
-	var tv := VBoxContainer.new()
-	tv.add_theme_constant_override("separation", 7)
-	tv.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	tm.add_child(tv)
-	_era = RichTextLabel.new()
-	_era.bbcode_enabled = true
-	_era.fit_content = true
-	_era.scroll_active = false
-	_era.add_theme_font_override("normal_font", _mono_wide)
-	_era.add_theme_font_size_override("normal_font_size", 9)
-	_era.add_theme_color_override("default_color", Color("#9aa7bd"))
-	_era.text = _era_text()
-	tv.add_child(_era)
-	var resrow := HBoxContainer.new()
-	resrow.add_theme_constant_override("separation", 10)
-	resrow.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	tv.add_child(resrow)
-	for r in Data.RESOURCES:
-		var g: Gauge = GAUGE_SCENE.instantiate()
-		g.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		resrow.add_child(g)
-		g.setup(r["key"], r["label"])
-		_gauges[r["key"]] = g
-
-	# PANEL
-	var panel := Control.new()
-	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vb.add_child(panel)
-	var pbg := ColorRect.new()
-	pbg.set_anchors_preset(Control.PRESET_FULL_RECT)
-	pbg.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var pmat := ShaderMaterial.new()
-	pmat.shader = PANEL_SHADER
-	pbg.material = pmat
-	panel.add_child(pbg)
-	var pm := _margin(22, 20, 22, 14)
-	pm.set_anchors_preset(Control.PRESET_FULL_RECT)
-	panel.add_child(pm)
-	var pv := VBoxContainer.new()
-	pv.add_theme_constant_override("separation", 6)
-	pv.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	pm.add_child(pv)
-
-	_q_scroll = ScrollContainer.new()
-	_q_scroll.custom_minimum_size = Vector2(300, 66)
-	_q_scroll.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	_q_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	_q_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
-	pv.add_child(_q_scroll)
-	_question = Label.new()
-	_question.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_question.add_theme_font_override("font", FONT_MONO)
-	_question.add_theme_font_size_override("font_size", Cfg.prose)
-	_question.add_theme_constant_override("line_spacing", 5)
-	_question.add_theme_color_override("font_color", Color("#dde6f2"))
-	_question.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_question.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_q_scroll.add_child(_question)
-
-	_whisper = Label.new()
-	_whisper.add_theme_font_override("font", FONT_CAVEAT)
-	_whisper.add_theme_font_size_override("font_size", 17)
-	_whisper.add_theme_color_override("font_color", Pal.AMBER)
-	_whisper.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_whisper.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_whisper.visible = false
-	pv.add_child(_whisper)
-
-	_stage = Control.new()
-	_stage.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	_stage.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_stage.clip_contents = false
-	pv.add_child(_stage)
-	_deck_card = Panel.new()
-	_deck_card.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var dsb := StyleBoxFlat.new()
-	dsb.bg_color = Color("#1a1f29")
-	dsb.set_corner_radius_all(16)
-	dsb.shadow_color = Color(0, 0, 0, 0.5)
-	dsb.shadow_size = 18
-	dsb.shadow_offset = Vector2(0, 10)
-	_deck_card.add_theme_stylebox_override("panel", dsb)
-	_stage.add_child(_deck_card)
-	_cardview = CARDVIEW_SCENE.instantiate()
-	_stage.add_child(_cardview)
-	_cardview.committed.connect(_on_committed)
-	_cardview.preview.connect(_on_preview)
-	_stage.resized.connect(_layout_stage)
-
-	var speaker := VBoxContainer.new()
-	speaker.add_theme_constant_override("separation", 3)
-	speaker.alignment = BoxContainer.ALIGNMENT_CENTER
-	speaker.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	pv.add_child(speaker)
-	_bearer_name = Label.new()
-	_bearer_name.add_theme_font_override("font", FONT_MONO)
-	_bearer_name.add_theme_font_size_override("font_size", 17)
-	_bearer_name.add_theme_color_override("font_color", Pal.INK)
-	_bearer_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	speaker.add_child(_bearer_name)
-	_bearer_role = Label.new()
-	_bearer_role.add_theme_font_override("font", FONT_MONO)
-	_bearer_role.add_theme_font_size_override("font_size", 8)
-	_bearer_role.add_theme_color_override("font_color", Cfg.accent)
-	_bearer_role.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	speaker.add_child(_bearer_role)
-
-	# BOTTOMBAR
-	var bottombar := _bar(Color("#0b0e15"))
-	vb.add_child(bottombar)
-	var bm := _margin(18, 13, 18, 16)
-	bottombar.add_child(bm)
-	var bv := VBoxContainer.new()
-	bv.add_theme_constant_override("separation", 2)
-	bm.add_child(bv)
-	_year_lbl = Label.new()
-	_year_lbl.add_theme_font_override("font", _caveat_bold)
-	_year_lbl.add_theme_font_size_override("font_size", 30)
-	_year_lbl.add_theme_color_override("font_color", Color("#eef1f6"))
-	_year_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	bv.add_child(_year_lbl)
-	_reign_lbl = RichTextLabel.new()
-	_reign_lbl.bbcode_enabled = true
-	_reign_lbl.fit_content = true
-	_reign_lbl.scroll_active = false
-	_reign_lbl.add_theme_font_override("normal_font", FONT_MONO)
-	_reign_lbl.add_theme_font_override("bold_font", FONT_MONO_BOLD)
-	_reign_lbl.add_theme_font_size_override("normal_font_size", 10)
-	_reign_lbl.add_theme_font_size_override("bold_font_size", 10)
-	_reign_lbl.add_theme_color_override("default_color", Pal.INK_DIM)
-	bv.add_child(_reign_lbl)
-
-	# HANDLE (poignée codex) : barre grise + « ▲ TABLEAU DE BORD » (chevron gris + accent)
-	var handle := PanelContainer.new()
-	handle.custom_minimum_size = Vector2(0, 34)
-	var hsb := StyleBoxFlat.new()
-	hsb.bg_color = Color("#0b0e15")
-	hsb.border_width_top = 1
-	hsb.border_color = Color(0.471, 0.588, 0.745, 0.1)
-	hsb.corner_radius_bottom_left = 18
-	hsb.corner_radius_bottom_right = 18
-	hsb.content_margin_top = 7
-	hsb.content_margin_bottom = 9
-	handle.add_theme_stylebox_override("panel", hsb)
-	var hv := VBoxContainer.new()
-	hv.alignment = BoxContainer.ALIGNMENT_CENTER
-	hv.add_theme_constant_override("separation", 4)
-	handle.add_child(hv)
-	var barc := CenterContainer.new()
-	hv.add_child(barc)
-	var bar := ColorRect.new()
-	bar.color = Color("#39435a")
-	bar.custom_minimum_size = Vector2(38, 3)
-	barc.add_child(bar)
-	_handle_chev = RichTextLabel.new()
-	_handle_chev.bbcode_enabled = true
-	_handle_chev.fit_content = true
-	_handle_chev.scroll_active = false
-	_handle_chev.add_theme_font_override("normal_font", _mono_wide)
-	_handle_chev.add_theme_font_size_override("normal_font_size", 9)
-	_handle_chev.text = _handle_text()
-	_handle_chev.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	hv.add_child(_handle_chev)
-	handle.gui_input.connect(func(e):
-		if e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and e.pressed:
-			_hdrag = true
-			_hstart_y = get_global_mouse_position().y
-			_hmoved = false
-			_codex.drag_start())
-	vb.add_child(handle)
-
+func _make_overlays() -> void:
 	# overlays
 	_codex = Codex.new()
 	_codex.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -314,27 +137,6 @@ func _on_cfg_changed() -> void:
 	for k in _gauges:
 		_gauges[k].refresh()
 	_fit_question()
-
-func _bar(c: Color, top := 0, bottom := 0) -> PanelContainer:
-	var p := PanelContainer.new()
-	p.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = c
-	sb.corner_radius_top_left = top
-	sb.corner_radius_top_right = top
-	sb.corner_radius_bottom_left = bottom
-	sb.corner_radius_bottom_right = bottom
-	p.add_theme_stylebox_override("panel", sb)
-	return p
-
-func _margin(l: int, t: int, r: int, b: int) -> MarginContainer:
-	var m := MarginContainer.new()
-	m.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	m.add_theme_constant_override("margin_left", l)
-	m.add_theme_constant_override("margin_top", t)
-	m.add_theme_constant_override("margin_right", r)
-	m.add_theme_constant_override("margin_bottom", b)
-	return m
 
 func _layout_stage() -> void:
 	var a := _stage.size
