@@ -25,6 +25,9 @@ var y_start := 1
 var recent: Array = []
 var card := {}
 var busy := false
+var _hdrag := false       # drag de la poignée du tableau de bord
+var _hstart_y := 0.0
+var _hmoved := false
 
 # noeuds
 var _era: RichTextLabel
@@ -246,8 +249,11 @@ func _build() -> void:
 	_handle_chev.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	hv.add_child(_handle_chev)
 	handle.gui_input.connect(func(e):
-		if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
-			_codex.open("chars"))
+		if e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and e.pressed:
+			_hdrag = true
+			_hstart_y = get_global_mouse_position().y
+			_hmoved = false
+			_codex.drag_start())
 	vb.add_child(handle)
 
 	# overlays
@@ -343,6 +349,21 @@ func _unhandled_input(e: InputEvent) -> void:
 	if busy or _death.visible or _codex.visible: return
 	if e.is_action_pressed("ui_left"): _cardview.swipe(true)
 	elif e.is_action_pressed("ui_right"): _cardview.swipe(false)
+
+# Suivi global du drag de la poignée du tableau de bord.
+func _input(e: InputEvent) -> void:
+	if not _hdrag: return
+	if e is InputEventMouseMotion:
+		var up := _hstart_y - get_global_mouse_position().y
+		if up > 6.0: _hmoved = true
+		_codex.drag_move(maxf(0.0, up))
+	elif e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and not e.pressed:
+		_hdrag = false
+		var up := _hstart_y - get_global_mouse_position().y
+		if not _hmoved:
+			_codex.open("chars")      # simple clic → ouvre
+		else:
+			_codex.drag_end(maxf(0.0, up))
 
 func _on_preview(side: String) -> void:
 	if side == "":

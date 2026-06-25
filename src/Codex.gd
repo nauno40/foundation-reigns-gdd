@@ -96,19 +96,68 @@ func _flat(b: Button) -> void:
 	b.add_theme_color_override("font_hover_color", Pal.ACCENT)
 	b.add_theme_color_override("font_color", Pal.INK_DIM)
 
+const TABS := ["chars", "ach", "gal"]
+
 func open(tab := "chars") -> void:
 	_select(tab)
 	visible = true
 	_open = true
 	_panel.position.y = size.y
-	create_tween().tween_property(_panel, "position:y", 0.0, 0.42).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	_animate_to(0.0, false)
 
 func close() -> void:
 	if not _open: return
 	_open = false
+	_animate_to(size.y, true)
+
+func _animate_to(y: float, hide_after: bool) -> void:
 	var t := create_tween()
-	t.tween_property(_panel, "position:y", size.y, 0.32).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
-	t.finished.connect(func(): visible = false, CONNECT_ONE_SHOT)
+	t.tween_property(_panel, "position:y", y, 0.32).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	if hide_after:
+		t.finished.connect(func(): visible = false, CONNECT_ONE_SHOT)
+
+# ── Tirer la poignée (drag) ──
+func drag_start() -> void:
+	visible = true
+	_open = true
+	if _tab == "" or _body.get_child_count() == 0:
+		_select("chars")
+	_panel.position.y = size.y
+
+func drag_move(up: float) -> void:
+	_panel.position.y = clampf(size.y - up, 0.0, size.y)
+
+func drag_end(up: float) -> void:
+	if up > size.y * 0.22:
+		_animate_to(0.0, false)
+	else:
+		_open = false
+		_animate_to(size.y, true)
+
+# ── Swipe horizontal pour changer d'onglet ──
+func _input(event: InputEvent) -> void:
+	if not _open:
+		return
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			_swipe_start = event.position
+			_swiping = true
+		elif _swiping:
+			_swiping = false
+			var d: Vector2 = event.position - _swipe_start
+			if absf(d.x) > 60.0 and absf(d.x) > absf(d.y) * 1.4:
+				_cycle(-1 if d.x < 0.0 else 1)
+
+var _swipe_start := Vector2.ZERO
+var _swiping := false
+
+func _cycle(dir: int) -> void:
+	var i: int = TABS.find(_tab)
+	if i < 0: i = 0
+	# dir -1 (swipe gauche) → onglet suivant ; dir +1 (swipe droite) → précédent
+	var ni: int = clampi(i - dir, 0, TABS.size() - 1)
+	if ni != i:
+		_select(TABS[ni])
 
 func _select(tab: String) -> void:
 	_tab = tab
