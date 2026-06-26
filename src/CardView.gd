@@ -5,6 +5,7 @@ extends Control
 # Carte (port de app.jsx Card) : suivi direct du doigt, rot=drag*0.055°, scale 1.025
 # en saisie, ressort sous-amorti au relâchement, fly-out 150%/18° au commit (seuil 92).
 
+const SfxBank = preload("res://src/SfxBank.gd")
 const FACE_SHADER = preload("res://assets/shaders/card_face.gdshader")
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const FONT_MONO_BOLD = preload("res://assets/fonts/SpaceMono-Bold.ttf")

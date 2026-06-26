@@ -1,6 +1,6 @@
-class_name SfxBank
 extends RefCounted
 
+# Banque de SFX (chargée via preload là où elle sert ; pas de class_name global).
 # Génère des SFX simples par code (sinus + bruit + enveloppe exponentielle).
 # Pas d'asset externe, libre de droits. Les sons sont mis en cache (générés une fois).
 

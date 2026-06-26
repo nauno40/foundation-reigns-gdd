@@ -6,6 +6,7 @@ extends Control
 # Boucle : swipe → fly-out → applique fx → mort ou carte suivante. Pas de réaction
 # (le prototype n'affiche pas le texte de réaction).
 
+const SfxBank = preload("res://src/SfxBank.gd")
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const FONT_CAVEAT = preload("res://assets/fonts/Caveat.ttf")
 const QUESTION_MAX_H := 150.0
