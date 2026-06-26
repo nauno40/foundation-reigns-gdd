@@ -151,9 +151,13 @@ func _layout_stage() -> void:
 
 # ── boucle ──
 func _unhandled_input(e: InputEvent) -> void:
+	if e.is_action_pressed("codex_toggle"):
+		if _codex.visible: _codex.close()
+		elif not busy and not _death.visible: _codex.open("chars")
+		return
 	if busy or _death.visible or _codex.visible: return
-	if e.is_action_pressed("ui_left"): _cardview.swipe(true)
-	elif e.is_action_pressed("ui_right"): _cardview.swipe(false)
+	if e.is_action_pressed("swipe_left"): _cardview.swipe(true)
+	elif e.is_action_pressed("swipe_right"): _cardview.swipe(false)
 
 # Suivi global du drag de la poignée du tableau de bord.
 func _input(e: InputEvent) -> void:
