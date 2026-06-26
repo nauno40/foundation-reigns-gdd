@@ -30,7 +30,7 @@ script = ExtResource("1_cc")
 [node name="Card" type="Panel" parent="."]
 unique_name_in_owner = true
 clip_contents = true
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("SB_card")

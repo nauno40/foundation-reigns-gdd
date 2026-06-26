@@ -13,6 +13,21 @@ func _ready() -> void:
 	await _wait(70)
 	var game = main.get_node("Row/Frame/Game")
 	match mode:
+		"charcard":
+			# CharacterCard.tscn ouverte seule (fond neutre), largeur réaliste
+			main.queue_free()
+			var bg := ColorRect.new()
+			bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+			bg.color = Color("#0a0e16")
+			add_child(bg)
+			var cc = load("res://scenes/CharacterCard.tscn").instantiate()
+			add_child(cc)
+			cc.setup({"id": "hari", "name": "Hari Seldon", "tag": "Fondateur du Plan", "met": true, "key": true})
+			cc.set_anchors_preset(Control.PRESET_TOP_LEFT)
+			cc.position = Vector2(40, 40)
+			await _wait(4)
+			cc.size = Vector2(190, cc.get_combined_minimum_size().y)
+			await _wait(12)
 		"codexscene":
 			# Codex.tscn ouvert seul (comme dans l'éditeur)
 			var cx = load("res://scenes/Codex.tscn").instantiate()
