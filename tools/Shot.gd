@@ -13,6 +13,12 @@ func _ready() -> void:
 	await _wait(70)
 	var game = main.get_node("Row/Frame/Game")
 	match mode:
+		"editorsim":
+			# reproduit le rendu éditeur : seuls les @tool enfants s'affichent (via _editor_preview)
+			var resrow = game.get_node("MainVBox/TopBar/TopMargin/TopVBox/ResRow")
+			for g in resrow.get_children(): g._editor_preview()
+			game.get_node("MainVBox/Panel/PanelMargin/PanelVBox/CardStage/CardView")._editor_preview()
+			await _wait(12)
 		"codex": game._codex.open("chars"); await _wait(40)
 		"codexach": game._codex.open("ach"); await _wait(40)
 		"codexgal": game._codex.open("gal"); await _wait(40)
