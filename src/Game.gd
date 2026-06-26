@@ -318,13 +318,13 @@ func _play_deck_unlock(u: Dictionary) -> void:
 		ac.pivot_offset = Vector2(side, side) * 0.5
 		ac.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		var sb := StyleBoxFlat.new()
-		sb.bg_color = Color("#1b2433")
+		sb.bg_color = Color(0.102, 0.122, 0.161)   # #1a1f29 : identique à la carte de pile
 		sb.set_corner_radius_all(16)
 		sb.set_border_width_all(1)
 		sb.border_color = Color(0.471, 0.784, 0.863, 0.16)
-		sb.shadow_color = Color(0, 0, 0, 0.5)
+		sb.shadow_color = Color(0, 0, 0, 0.42)
 		sb.shadow_size = 16
-		sb.shadow_offset = Vector2(0, 10)
+		sb.shadow_offset = Vector2(0, 16)
 		ac.add_theme_stylebox_override("panel", sb)
 		ac.position = _cardview.position + Vector2(140, 150)
 		ac.rotation = deg_to_rad(16)
