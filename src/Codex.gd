@@ -39,11 +39,11 @@ func _ready() -> void:
 	(%TabChars as CodexTab).setup(TAB_ICONS["chars"], "PERSONNAGES")
 	(%TabAch as CodexTab).setup(TAB_ICONS["ach"], "SUCCÈS / DECKS")
 	(%TabGal as CodexTab).setup(TAB_ICONS["gal"], "GALAXIE")
-	(%TabChars as CodexTab).tab_pressed.connect(func(): _select("chars"))
-	(%TabAch as CodexTab).tab_pressed.connect(func(): _select("ach"))
-	(%TabGal as CodexTab).tab_pressed.connect(func(): _select("gal"))
+	(%TabChars as CodexTab).tab_pressed.connect(_on_tab_chars)
+	(%TabAch as CodexTab).tab_pressed.connect(_on_tab_ach)
+	(%TabGal as CodexTab).tab_pressed.connect(_on_tab_gal)
 	%Grab.pressed.connect(close)
-	_holder.resized.connect(func(): _scroll.size = _holder.size)
+	_holder.resized.connect(_on_holder_resized)
 	if Engine.is_editor_hint():
 		visible = get_tree().edited_scene_root == self
 		if visible:
@@ -53,6 +53,12 @@ func _ready() -> void:
 		_select("chars")
 
 const TABS := ["chars", "ach", "gal"]
+
+func _on_tab_chars() -> void: _select("chars")
+func _on_tab_ach() -> void: _select("ach")
+func _on_tab_gal() -> void: _select("gal")
+func _on_holder_resized() -> void: _scroll.size = _holder.size
+func _on_slide_hidden() -> void: visible = false
 
 func open(tab := "chars") -> void:
 	_select(tab)
@@ -70,7 +76,7 @@ func _animate_to(y: float, hide_after: bool) -> void:
 	var t := create_tween()
 	t.tween_property(_panel, "position:y", y, 0.32).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	if hide_after:
-		t.finished.connect(func(): visible = false, CONNECT_ONE_SHOT)
+		t.finished.connect(_on_slide_hidden, CONNECT_ONE_SHOT)
 
 # ── Tirer la poignée (drag) ──
 func drag_start() -> void:
@@ -221,10 +227,7 @@ func _render_gal() -> void:
 	_galaxy.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_galaxy.draw.connect(_draw_galaxy)
 	_galaxy.gui_input.connect(_galaxy_input)
-	_galaxy.resized.connect(func():
-		if not is_equal_approx(_galaxy.custom_minimum_size.y, _galaxy.size.x):
-			_galaxy.custom_minimum_size.y = _galaxy.size.x
-		_galaxy.queue_redraw())
+	_galaxy.resized.connect(_on_galaxy_resized)
 	box.add_child(_galaxy)
 	var legend := HBoxContainer.new()
 	legend.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -241,6 +244,11 @@ func _render_gal() -> void:
 	_info = PLANET_INFO_SCENE.instantiate()
 	_body.add_child(_info)
 	_render_info()
+
+func _on_galaxy_resized() -> void:
+	if not is_equal_approx(_galaxy.custom_minimum_size.y, _galaxy.size.x):
+		_galaxy.custom_minimum_size.y = _galaxy.size.x
+	_galaxy.queue_redraw()
 
 func _draw_galaxy() -> void:
 	var w: float = _galaxy.size.x
