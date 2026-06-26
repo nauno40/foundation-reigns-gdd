@@ -13,6 +13,25 @@ func _ready() -> void:
 	await _wait(70)
 	var game = main.get_node("Row/Frame/Game")
 	match mode:
+		"shadowtest":
+			# carte seule sur fond clair pour juger l'ombre
+			main.queue_free()
+			var bg := ColorRect.new()
+			bg.set_anchors_preset(Control.PRESET_FULL_RECT)
+			bg.color = Color("#05070d")
+			add_child(bg)
+			var cv = load("res://scenes/CardView.tscn").instantiate()
+			add_child(cv)
+			await _wait(4)
+			cv.layout(Vector2(90, 250), 230.0)
+			cv._editor_preview()
+			await _wait(10)
+		"drag":
+			# carte en cours de slide (déplacée + inclinée) pour voir l'ombre
+			game._cardview._drag = 110.0
+			game._cardview._grabbing = true
+			game._cardview._apply()
+			await _wait(8)
 		"charcard":
 			# CharacterCard.tscn ouverte seule (fond neutre), largeur réaliste
 			main.queue_free()
