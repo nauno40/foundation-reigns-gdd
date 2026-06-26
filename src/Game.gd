@@ -11,7 +11,6 @@ const FONT_MONO_BOLD = preload("res://assets/fonts/SpaceMono-Bold.ttf")
 const FONT_CAVEAT = preload("res://assets/fonts/Caveat.ttf")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const PANEL_SHADER = preload("res://assets/shaders/panel_bg.gdshader")
-const DEATHFX_SHADER = preload("res://assets/shaders/death_fx.gdshader")
 const GAUGE_SCENE = preload("res://scenes/Gauge.tscn")
 const CARDVIEW_SCENE = preload("res://scenes/CardView.tscn")
 const QUESTION_MAX_H := 150.0
@@ -58,7 +57,8 @@ var _hmoved := false
 @onready var _handle_chev: RichTextLabel = %Chev
 @onready var _codex: Codex = %Codex
 @onready var _death: Death = %Death
-var _deathfx: ColorRect
+@onready var _deathfx: ColorRect = %DeathFx
+@onready var _gear: Button = %Gear
 var _tweaks: TweaksPanel
 
 func _ready() -> void:
@@ -87,6 +87,7 @@ func _connect_signals() -> void:
 	_handle.gui_input.connect(_on_handle_input)
 	_death.respawn_pressed.connect(_respawn)
 	_codex.visibility_changed.connect(_on_codex_visibility_changed)
+	_gear.pressed.connect(_on_gear_pressed)
 	Cfg.changed.connect(_on_cfg_changed)
 
 # Les jauges vivent dans le groupe "gauges" ; on les indexe par resource_key.
@@ -118,37 +119,12 @@ func _on_handle_input(e: InputEvent) -> void:
 		_codex.drag_start()
 
 func _make_overlays() -> void:
-	# Codex + Death sont instanciés dans Game.tscn (signaux branchés dans _connect_signals).
-	_deathfx = ColorRect.new()
-	_deathfx.set_anchors_preset(Control.PRESET_FULL_RECT)
-	_deathfx.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var dfm := ShaderMaterial.new()
-	dfm.shader = DEATHFX_SHADER
-	_deathfx.material = dfm
-	_deathfx.visible = false
-	add_child(_deathfx)
-
-	# panneau Tweaks (dev) + bouton ⚙
+	# DeathFx, Gear, Codex et Death sont dans Game.tscn (signaux dans _connect_signals).
+	# Seul le panneau Tweaks reste construit en code pour l'instant (déplacé en scène plus tard).
 	_tweaks = TweaksPanel.new()
 	_tweaks.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(_tweaks)
-	var gear := Button.new()
-	gear.text = "⚙"
-	gear.focus_mode = Control.FOCUS_NONE
-	gear.custom_minimum_size = Vector2(28, 28)
-	gear.set_anchors_preset(Control.PRESET_TOP_RIGHT)
-	gear.anchor_left = 1.0
-	gear.offset_left = -34.0
-	gear.offset_top = 6.0
-	gear.offset_right = -6.0
-	gear.offset_bottom = 34.0
-	gear.add_theme_font_size_override("font_size", 14)
-	gear.add_theme_color_override("font_color", Color("#5b6680"))
-	gear.add_theme_color_override("font_hover_color", Cfg.accent)
-	gear.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
-	gear.add_theme_stylebox_override("hover", StyleBoxEmpty.new())
-	gear.pressed.connect(_on_gear_pressed)
-	add_child(gear)
+	move_child(_tweaks, _gear.get_index())   # garde le bouton ⚙ au-dessus du panneau
 
 func _on_gear_pressed() -> void:
 	_tweaks.open()

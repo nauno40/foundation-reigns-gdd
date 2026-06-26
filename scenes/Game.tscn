@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" path="res://scenes/CardView.tscn" id="6_card"]
 [ext_resource type="PackedScene" uid="uid://dw30444hv8wwd" path="res://scenes/Codex.tscn" id="7_codex"]
 [ext_resource type="PackedScene" uid="uid://cfraa3sx1ucnn" path="res://scenes/Death.tscn" id="8_death"]
+[ext_resource type="Shader" uid="uid://bayl0h5oammjj" path="res://assets/shaders/death_fx.gdshader" id="9_g4kob"]
 
 [sub_resource type="StyleBoxFlat" id="SB_topbar"]
 bg_color = Color(0.043, 0.055, 0.082, 1)
@@ -46,6 +47,15 @@ border_width_top = 1
 border_color = Color(0.471, 0.588, 0.745, 0.1)
 corner_radius_bottom_right = 18
 corner_radius_bottom_left = 18
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qy1jj"]
+shader = ExtResource("9_g4kob")
+shader_parameter/progress = 0.0
+shader_parameter/rect_size = Vector2(460, 920)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xj3m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcffj"]
 
 [node name="Game" type="Control" unique_id=208066693]
 layout_mode = 3
@@ -333,3 +343,30 @@ layout_mode = 1
 [node name="Death" parent="." unique_id=1886273378 instance=ExtResource("8_death")]
 unique_name_in_owner = true
 layout_mode = 1
+
+[node name="DeathFx" type="ColorRect" parent="." unique_id=2038676706]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_qy1jj")
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Gear" type="Button" parent="." unique_id=1419389939]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -34.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 34.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.35686275, 0.4, 0.5019608, 1)
+theme_override_colors/font_hover_color = Color(0.30980393, 0.8392157, 0.9098039, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3xj3m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mcffj")
+text = "⚙"
