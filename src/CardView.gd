@@ -12,12 +12,15 @@ const FONT_MONO_BOLD = preload("res://assets/fonts/SpaceMono-Bold.ttf")
 signal committed(is_left: bool)
 signal preview(side: String)   # "left" / "right" / ""
 
-const THRESHOLD := 92.0
-const REVEAL := 12.0
-const ROT := 0.055
-const GRAB_SCALE := 1.025
-const STIFF := 0.16
-const DAMP := 0.74
+# Réglages de la carte (mêmes valeurs que les const d'origine), exposés à l'inspecteur.
+@export var threshold: float = 92.0
+@export var reveal_threshold: float = 12.0
+@export var rotation_per_drag: float = 0.055
+@export var grab_scale: float = 1.025
+@export var stiffness: float = 0.16
+@export var damping: float = 0.74
+@export var flyout_distance: float = 700.0
+@export var flyout_duration: float = 0.42
 
 var _base := Vector2.ZERO
 var _drag := 0.0
@@ -122,7 +125,7 @@ func _gui_input(e: InputEvent) -> void:
 			_start = e.position
 		else:
 			_grabbing = false
-			if absf(_drag) >= THRESHOLD:
+			if absf(_drag) >= threshold:
 				_fly_out(-1.0 if _drag < 0 else 1.0)
 			else:
 				_releasing = true
@@ -136,9 +139,9 @@ func _gui_input(e: InputEvent) -> void:
 
 func _process(_dt: float) -> void:
 	if _releasing and not _flying:
-		_vx = (_vx + (-_drag) * STIFF) * DAMP
+		_vx = (_vx + (-_drag) * stiffness) * damping
 		_drag += _vx
-		_vy = (_vy + (-_drag_y) * STIFF) * DAMP
+		_vy = (_vy + (-_drag_y) * stiffness) * damping
 		_drag_y += _vy
 		if absf(_drag) < 0.3 and absf(_vx) < 0.3 and absf(_drag_y) < 0.3:
 			_drag = 0.0; _drag_y = 0.0; _releasing = false
@@ -148,12 +151,12 @@ func _process(_dt: float) -> void:
 func _apply() -> void:
 	if _flying or _entering: return
 	position = _base + Vector2(_drag, _drag_y)
-	rotation = deg_to_rad(_drag * ROT)
-	var s := GRAB_SCALE if _grabbing else 1.0
+	rotation = deg_to_rad(_drag * rotation_per_drag)
+	var s := grab_scale if _grabbing else 1.0
 	scale = Vector2(s, s)
 
 func _update_choice() -> void:
-	if absf(_drag) > REVEAL:
+	if absf(_drag) > reveal_threshold:
 		var right := _drag > 0.0
 		_choice.text = _right_title if right else _left_title
 		_choice.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT if right else HORIZONTAL_ALIGNMENT_LEFT
@@ -169,10 +172,10 @@ func _fly_out(dir: float) -> void:
 	_grabbing = false
 	scale = Vector2.ONE
 	preview.emit("")
-	var target_x := _base.x + dir * 700.0
+	var target_x := _base.x + dir * flyout_distance
 	var t := create_tween().set_parallel()
-	t.tween_property(self, "position:x", target_x, 0.42).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	t.tween_property(self, "rotation", deg_to_rad(dir * 18.0), 0.42).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	t.tween_property(self, "position:x", target_x, flyout_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	t.tween_property(self, "rotation", deg_to_rad(dir * 18.0), flyout_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	t.tween_property(self, "modulate:a", 0.0, 0.36).set_delay(0.06)
 	await t.finished
 	committed.emit(dir < 0)

@@ -17,6 +17,10 @@ const UP := Color("#5fcf8f")
 const DOWN := Color("#d96a5a")
 const PREVIEW_LABELS := {"military": "MILITAIRE", "religion": "RELIGION", "commerce": "COMMERCE", "politics": "POLITIQUE"}
 
+# Durées d'animation réglables (mêmes valeurs que les littéraux d'origine).
+@export var tween_duration: float = 0.55
+@export var flash_duration: float = 0.2
+
 # Clé de ressource — sert à l'aperçu éditeur (chaque instance affiche SON icône).
 @export_enum("military", "religion", "commerce", "politics") var resource_key := "military":
 	set(v):
@@ -75,7 +79,7 @@ func set_value(v: int) -> void:
 	if _vt and _vt.is_valid(): _vt.kill()
 	_vt = create_tween()
 	_vt.tween_method(func(x): _display = x; _mat.set_shader_parameter("fill", x / 100.0),
-		_display, float(target), 0.55).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+		_display, float(target), tween_duration).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 	_value = target
 	_refresh()
 
@@ -116,8 +120,8 @@ func _refresh() -> void:
 		_gt.tween_method(func(al): _glow.modulate = Color(gc.r, gc.g, gc.b, al), 0.32, 0.7, 0.525)
 		_gt.tween_method(func(al): _glow.modulate = Color(gc.r, gc.g, gc.b, al), 0.7, 0.32, 0.525)
 
-func _flash_delta(sign: int) -> void:
-	var up := sign >= 0
+func _flash_delta(delta_sign: int) -> void:
+	var up := delta_sign >= 0
 	var c := UP if up else DOWN
 	_delta.text = "▲" if up else "▼"
 	_delta.add_theme_color_override("font_color", c)
@@ -125,8 +129,8 @@ func _flash_delta(sign: int) -> void:
 	_delta.offset_top = 1.0
 	var t := create_tween()
 	t.set_parallel()
-	t.tween_property(_delta, "modulate:a", 1.0, 0.2)
-	t.tween_property(_delta, "offset_top", -3.0, 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	t.tween_property(_delta, "modulate:a", 1.0, flash_duration)
+	t.tween_property(_delta, "offset_top", -3.0, flash_duration).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	t.chain().tween_interval(0.4)
 	t.chain().tween_property(_delta, "modulate:a", 0.0, 0.3)
 	_flash.modulate = Color(c.r, c.g, c.b, 0.0)

@@ -16,6 +16,11 @@ const GAUGE_SCENE = preload("res://scenes/Gauge.tscn")
 const CARDVIEW_SCENE = preload("res://scenes/CardView.tscn")
 const QUESTION_MAX_H := 150.0
 
+# Durées réglables dans l'inspecteur (mêmes valeurs que les littéraux d'origine).
+@export var question_fade_duration: float = 0.35
+@export var death_fx_duration: float = 0.76
+@export var deck_unlock_lifetime: float = 2.4
+
 # état (port de App)
 var cover := {}
 var res := {"military": 50, "religion": 50, "commerce": 50, "politics": 50}
@@ -241,7 +246,7 @@ func _refresh_card() -> void:
 	_fit_question()
 	# qrise : la question apparaît en fondu à chaque nouvelle carte (template .question.k)
 	_question.modulate.a = 0.0
-	create_tween().tween_property(_question, "modulate:a", 1.0, 0.35).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	create_tween().tween_property(_question, "modulate:a", 1.0, question_fade_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
 func _fit_question() -> void:
 	var h := _question.get_minimum_size().y
@@ -255,7 +260,7 @@ func _play_death(key: String, hi: bool) -> void:
 	mat.set_shader_parameter("progress", 0.0)
 	_deathfx.visible = true
 	var t := create_tween()
-	t.tween_method(func(v): mat.set_shader_parameter("progress", v), 0.0, 1.0, 0.76)
+	t.tween_method(func(v): mat.set_shader_parameter("progress", v), 0.0, 1.0, death_fx_duration)
 	await t.finished
 	_deathfx.visible = false
 
@@ -353,7 +358,7 @@ func _play_deck_unlock(u: Dictionary) -> void:
 	banfx.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_stage.add_child(banfx)   # ajouté après la carte → rendu par-dessus
 	_unlock_banner(banfx, u["name"], n)
-	get_tree().create_timer(2.4).timeout.connect(
+	get_tree().create_timer(deck_unlock_lifetime).timeout.connect(
 		_on_deck_unlock_cleanup.bind(fx, banfx), CONNECT_ONE_SHOT)
 
 # Nettoie les nœuds temporaires de la bannière de déblocage de deck.

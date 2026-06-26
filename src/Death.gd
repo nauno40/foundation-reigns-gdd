@@ -7,6 +7,11 @@ extends Control
 
 signal respawn_pressed
 
+# Réglages d'animation (mêmes valeurs que les littéraux d'origine).
+@export var sweep_duration: float = 0.7
+@export var entry_scale: float = 1.035
+@export var entry_duration: float = 0.5
+
 @onready var _cause: Label = %Cause
 @onready var _name: Label = %DeathName
 @onready var _sub: Label = %Sub
@@ -51,11 +56,11 @@ func show_death(info: Dictionary) -> void:
 		return   # pas d'animation dans l'aperçu éditeur
 	# deathIn : flash + léger zoom
 	pivot_offset = size * 0.5
-	scale = Vector2(1.035, 1.035)
+	scale = Vector2(entry_scale, entry_scale)
 	modulate = Color(1.7, 1.7, 1.7)
 	var t := create_tween().set_parallel()
-	t.tween_property(self, "scale", Vector2.ONE, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-	t.tween_property(self, "modulate", Color.WHITE, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	t.tween_property(self, "scale", Vector2.ONE, entry_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	t.tween_property(self, "modulate", Color.WHITE, entry_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	var fk := create_tween()
 	for a in [0.3, 1.0, 0.5, 1.0]:
 		fk.tween_property(_cause, "modulate:a", a, 0.09)
@@ -81,6 +86,6 @@ func _play_sweep() -> void:
 	sweep.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(sweep)
 	var t := create_tween().set_parallel()
-	t.tween_property(sweep, "position:y", size.y * 1.2, 0.7).set_ease(Tween.EASE_OUT)
-	t.tween_property(sweep, "modulate:a", 0.0, 0.7)
+	t.tween_property(sweep, "position:y", size.y * 1.2, sweep_duration).set_ease(Tween.EASE_OUT)
+	t.tween_property(sweep, "modulate:a", 0.0, sweep_duration)
 	t.chain().tween_callback(sweep.queue_free)
