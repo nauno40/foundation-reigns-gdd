@@ -90,7 +90,6 @@ text = "★"
 [node name="CharName" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
 theme_override_fonts/font = ExtResource("4_spectral")
 theme_override_font_sizes/font_size = 14
 text = "Nom"
