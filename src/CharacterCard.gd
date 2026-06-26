@@ -14,9 +14,12 @@ extends VBoxContainer
 
 func _ready() -> void:
 	_card.resized.connect(_square)
-	_grid.resized.connect(func(): (_grid.material as ShaderMaterial).set_shader_parameter("rect_size", _grid.size))
+	_grid.resized.connect(_on_grid_resized)
 	if Engine.is_editor_hint():
 		setup({"id": "hari", "name": "Hari Seldon", "tag": "Fondateur du Plan", "met": true, "key": true})
+
+func _on_grid_resized() -> void:
+	(_grid.material as ShaderMaterial).set_shader_parameter("rect_size", _grid.size)
 
 func _square() -> void:
 	if not is_equal_approx(_card.custom_minimum_size.y, _card.size.x):

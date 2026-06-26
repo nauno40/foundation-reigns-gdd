@@ -112,7 +112,9 @@ func close() -> void:
 	_open = false
 	var t := create_tween()
 	t.tween_property(_panel, "position:x", 230.0, 0.22).set_ease(Tween.EASE_IN)
-	t.finished.connect(func(): visible = false, CONNECT_ONE_SHOT)
+	t.finished.connect(_on_close_hidden, CONNECT_ONE_SHOT)
+
+func _on_close_hidden() -> void: visible = false
 
 func _rebuild() -> void:
 	_panel.queue_free()

@@ -18,7 +18,7 @@ signal respawn_pressed
 }
 
 func _ready() -> void:
-	%NewReignBtn.pressed.connect(func(): respawn_pressed.emit())
+	%NewReignBtn.pressed.connect(_on_new_reign_pressed)
 	if Engine.is_editor_hint():
 		if get_tree().edited_scene_root == self:
 			show_death({
@@ -30,6 +30,9 @@ func _ready() -> void:
 			})
 		return
 	visible = false
+
+func _on_new_reign_pressed() -> void:
+	respawn_pressed.emit()
 
 func show_death(info: Dictionary) -> void:
 	_cause.text = str(info["causeLabel"]).to_upper()
