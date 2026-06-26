@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cardview_scene"]
+[gd_scene load_steps=9 format=3 uid="uid://cardview_scene"]
 
 [ext_resource type="Script" path="res://src/CardView.gd" id="1_card"]
 [ext_resource type="Shader" path="res://assets/shaders/card_face.gdshader" id="2_face"]
@@ -13,7 +13,17 @@ shader_parameter/tone_lo = Color(0.11, 0.227, 0.231, 1)
 shader_parameter/tone_hi = Color(0.22, 0.337, 0.341, 1)
 shader_parameter/corner_radius = 16.0
 
-[sub_resource type="StyleBoxFlat" id="SB_rim"]
+[sub_resource type="StyleBoxFlat" id="SB_shadow"]
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 22
+shadow_offset = Vector2(0, 14)
+
+[sub_resource type="StyleBoxFlat" id="SB_border"]
 bg_color = Color(0, 0, 0, 0)
 border_width_left = 1
 border_width_top = 1
@@ -24,9 +34,6 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.6)
-shadow_size = 22
-shadow_offset = Vector2(0, 14)
 
 [sub_resource type="StyleBoxFlat" id="SB_keytag"]
 bg_color = Color(0.02, 0.027, 0.051, 0.5)
@@ -45,11 +52,31 @@ content_margin_right = 7.0
 content_margin_bottom = 3.0
 
 [node name="CardView" type="Control"]
-clip_contents = true
+clip_contents = false
 mouse_filter = 0
 script = ExtResource("1_card")
 
-[node name="FaceBg" type="ColorRect" parent="."]
+[node name="Shadow" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("SB_shadow")
+
+[node name="Clip" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FaceBg" type="ColorRect" parent="Clip"]
 unique_name_in_owner = true
 material = SubResource("SM_face")
 layout_mode = 1
@@ -60,7 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Bust" type="Control" parent="."]
+[node name="Bust" type="Control" parent="Clip"]
 unique_name_in_owner = true
 mouse_filter = 2
 script = ExtResource("3_bust")
@@ -73,7 +100,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("SB_rim")
+theme_override_styles/panel = SubResource("SB_border")
 
 [node name="KeyTag" type="Label" parent="."]
 unique_name_in_owner = true
