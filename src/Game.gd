@@ -24,7 +24,7 @@ var age := 36
 var turns := 0
 var y_start := 1
 var recent: Array = []
-var card := {}
+var card: CardData
 
 # Machine à états de la boucle (remplace l'ancien flag booléen `busy`).
 # DRAGGING/RELEASING/FLYING_OUT décrivent l'espace d'états complet de la carte ;
@@ -172,7 +172,7 @@ func _on_preview(side: String) -> void:
 	if side == "":
 		for g in _get_gauges(): (g as Gauge).set_affected(false)
 		return
-	var fx: Dictionary = card[side]["fx"]
+	var fx: Dictionary = (card.left_answer if side == "left" else card.right_answer).fx
 	for g in _get_gauges():
 		var key: String = (g as Gauge).resource_key
 		(g as Gauge).set_affected(fx.has(key) and int(fx[key]) != 0)
@@ -181,8 +181,8 @@ func _on_committed(is_left: bool) -> void:
 	if _state != State.IDLE: return
 	_set_state(State.TRANSITIONING)
 	for g in _get_gauges(): (g as Gauge).set_affected(false)
-	var ans: Dictionary = card["left" if is_left else "right"]
-	var fx: Dictionary = ans["fx"]
+	var ans: AnswerData = card.left_answer if is_left else card.right_answer
+	var fx: Dictionary = ans.fx
 	var mult: float = Data.DIFF.get(Cfg.difficulty, 1.0)
 	for k in res:
 		if fx.has(k): res[k] = clampi(res[k] + int(round(float(fx[k]) * mult)), 0, 100)
@@ -205,7 +205,7 @@ func _on_committed(is_left: bool) -> void:
 		return   # reste en DEATH jusqu'au respawn
 
 	# carte suivante
-	recent = ([card["id"]] + recent).slice(0, 4)
+	recent = ([card.id] + recent).slice(0, 4)
 	card = Data.pick_card(recent)
 	_cardview.show_card(card)
 	_refresh_card()
@@ -231,9 +231,9 @@ func _refresh_all() -> void:
 	_refresh_card()
 
 func _refresh_card() -> void:
-	_question.text = card.get("question", "")
-	_bearer_name.text = card.get("bearer", "")
-	_bearer_role.text = str(card.get("role", "")).to_upper()
+	_question.text = card.question
+	_bearer_name.text = card.bearer
+	_bearer_role.text = card.role.to_upper()
 	_fit_question()
 	# qrise : la question apparaît en fondu à chaque nouvelle carte (template .question.k)
 	_question.modulate.a = 0.0

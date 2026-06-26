@@ -169,8 +169,8 @@ func _select(tab: String) -> void:
 
 # ── Personnages ──
 func _render_chars() -> void:
-	var met := Data.CHARACTERS.filter(func(c): return c["met"])
-	var soon := Data.CHARACTERS.filter(func(c): return not c["met"])
+	var met := Data.all_characters().filter(func(c): return c.met)
+	var soon := Data.all_characters().filter(func(c): return not c.met)
 	_body.add_child(_section("RENCONTRÉS · %d" % met.size()))
 	_body.add_child(_grid(met))
 	_body.add_child(_section("À VENIR · %d" % soon.size()))
@@ -185,7 +185,7 @@ func _grid(list: Array) -> GridContainer:
 	for c in list: g.add_child(_char(c))
 	return g
 
-func _char(c: Dictionary) -> Control:
+func _char(c: CharacterData) -> Control:
 	var cc: CharacterCard = CHAR_CARD_SCENE.instantiate()
 	cc.setup(c)
 	return cc
@@ -267,18 +267,18 @@ func _draw_galaxy() -> void:
 		_galaxy.draw_arc(c, rad * f, 0.0, TAU, 64, Color(0.31, 0.839, 0.91, 0.06), 1.0, true)
 	# planètes
 	_planet_rects.clear()
-	for p in Data.PLANETS:
-		var pos := Vector2(p["x"] / 100.0 * w, p["y"] / 100.0 * h)
-		var col := Data.state_color(p["state"])
-		var r := 7.0 if p["base"] else 5.5
-		if _selected == p["id"]:
+	for p in Data.all_planets():
+		var pos := Vector2(p.x / 100.0 * w, p.y / 100.0 * h)
+		var col := Data.state_color(p.state)
+		var r := 7.0 if p.base else 5.5
+		if _selected == p.id:
 			# plring : anneau pulsant (scale 1→1.35, alpha 1→.4)
 			var tri := sin(_ring_phase * PI)
 			var rr := (r + 5.0) * (1.0 + 0.35 * tri)
 			_galaxy.draw_arc(pos, rr, 0.0, TAU, 32, Color(col.r, col.g, col.b, 1.0 - 0.6 * tri), 1.5, true)
 		_galaxy.draw_circle(pos, r + 3.0, Color(col.r, col.g, col.b, 0.25))
 		_galaxy.draw_circle(pos, r, col)
-		_planet_rects.append({"id": p["id"], "pos": pos, "r": r + 6.0})
+		_planet_rects.append({"id": p.id, "pos": pos, "r": r + 6.0})
 
 func _galaxy_input(e: InputEvent) -> void:
 	if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
@@ -302,9 +302,11 @@ func _ring_step(v: float) -> void:
 		_galaxy.queue_redraw()
 
 func _render_info() -> void:
-	var p := {}
-	for x in Data.PLANETS:
-		if x["id"] == _selected: p = x; break
+	var p: PlanetData = null
+	for x in Data.all_planets():
+		if x.id == _selected:
+			p = x
+			break
 	(_info as PlanetInfo).setup(p)
 
 func _section(text: String) -> Label:

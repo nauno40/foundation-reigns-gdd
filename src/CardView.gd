@@ -84,7 +84,7 @@ func _place_children(side: float) -> void:
 	_choice.size = Vector2(side - 30, 56)
 	_mat.set_shader_parameter("rect_size", Vector2(side, side))
 
-func show_card(card: Dictionary) -> void:
+func show_card(card: CardData) -> void:
 	_flying = false
 	_releasing = false
 	_grabbing = false
@@ -93,14 +93,14 @@ func show_card(card: Dictionary) -> void:
 	_drag_y = 0.0
 	_vx = 0.0
 	_vy = 0.0
-	_left_title = card["left"]["title"]
-	_right_title = card["right"]["title"]
+	_left_title = card.left_answer.title
+	_right_title = card.right_answer.title
 	_choice.modulate.a = 0.0
-	_keytag.visible = bool(card.get("key", false))
+	_keytag.visible = card.key
 	_keytag.modulate.a = 1.0
-	var tone := Data.tone_for(card["id"])
+	var tone := Data.tone_for(card.id)
 	_bust.set_tone(tone)
-	_bust.set_initials(Data.initials(card["bearer"]))
+	_bust.set_initials(Data.initials(card.bearer))
 	_mat.set_shader_parameter("tone_lo", tone)
 	_mat.set_shader_parameter("tone_hi", Data.lighten(tone, 0.12))
 

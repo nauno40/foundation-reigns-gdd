@@ -11,23 +11,26 @@ extends PanelContainer
 @onready var _faction: Label = %PFaction
 @onready var _note: Label = %PNote
 
-func setup(p: Dictionary) -> void:
+func setup(p: PlanetData) -> void:
 	if not is_node_ready():
 		await ready
-	if p.is_empty():
+	if p == null:
 		_empty.visible = true
 		_filled.visible = false
 		return
 	_empty.visible = false
 	_filled.visible = true
-	_name.text = p["name"] + (" ◆" if p["base"] else "")
-	_state.text = Data.state_label(p["state"]).to_upper()
-	_state.add_theme_color_override("font_color", Data.state_color(p["state"]))
-	_faction.text = str(p["faction"]).to_upper() + (" · CACHÉE" if p["hidden"] else "")
+	_name.text = p.name + (" ◆" if p.base else "")
+	_state.text = Data.state_label(p.state).to_upper()
+	_state.add_theme_color_override("font_color", Data.state_color(p.state))
+	_faction.text = p.faction.to_upper() + (" · CACHÉE" if p.hidden else "")
 	_faction.add_theme_color_override("font_color", Cfg.accent)
-	_note.text = p["note"]
+	_note.text = p.note
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		setup({"name": "Terminus", "base": true, "state": 1, "faction": "Fondation", "hidden": false,
-			"note": "Le cœur du Plan, à la périphérie de la Galaxie."})
+		var demo := PlanetData.new()
+		demo.name = "Terminus"; demo.base = true; demo.state = 1
+		demo.faction = "Fondation"; demo.hidden = false
+		demo.note = "Le cœur du Plan, à la périphérie de la Galaxie."
+		setup(demo)

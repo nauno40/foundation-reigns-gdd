@@ -21,8 +21,9 @@ const MOODS := {
 	"desperate":  {"label": "Désespéré",  "dot": "#c8505a"},
 }
 
+# Source brute des cartes (dicts). Exposée comme objets typés via all_cards().
 # Chaque carte : bearer, role, mood, question, left/right {title, reaction, fx}.
-const DECK := [
+const _DECK_RAW := [
 	{"id": "pirenne_base", "bearer": "Lewis Pirenne", "role": "Président du Conseil", "mood": "neutral", "key": false,
 		"question": "« Anacréon réclame une base militaire sur Terminus. Le Conseil n'ose ni refuser, ni céder. Que dois-je leur dire, Orateur ? »",
 		"left":  {"title": "« Refusez. Fermement. »", "reaction": "Pirenne pâlit. « Et s'ils nous écrasent ? »", "fx": {"military": -8, "politics": 6, "legit": -4}},
@@ -98,7 +99,7 @@ const TONES := [
 	Color("#33291f"), Color("#2a2740"), Color("#203636"), Color("#352230"),
 ]
 
-const CHARACTERS := [
+const _CHARACTERS_RAW := [
 	{"id": "seldon",  "name": "Hari Seldon",   "tag": "Fondateur du Plan",       "met": true,  "key": true},
 	{"id": "hardin",  "name": "Salvor Hardin", "tag": "Maire de Terminus",       "met": true,  "key": true},
 	{"id": "pirenne", "name": "Lewis Pirenne", "tag": "Président du Conseil",     "met": true,  "key": false},
@@ -133,7 +134,7 @@ const DECKS_META := [
 	{"name": "Second Empire",        "era": "Ans 600+",   "unlocked": false},
 ]
 
-const PLANETS := [
+const _PLANETS_RAW := [
 	{"id": "terminus", "name": "Terminus", "faction": "Première Fondation", "state": 1, "x": 18, "y": 64, "note": "Base permanente. La perdre = fin du Plan.", "base": true, "hidden": false},
 	{"id": "trantor", "name": "Trantor", "faction": "Empire → Seconde Fondation", "state": 1, "x": 52, "y": 48, "note": "Capitale impériale déclinante. Bascule après le sac (~an 300).", "base": false, "hidden": false},
 	{"id": "anacreon", "name": "Anacréon", "faction": "Royaumes militaristes", "state": -1, "x": 30, "y": 30, "note": "Première grande menace. Le royaume voisin le plus agressif.", "base": false, "hidden": false},
@@ -160,10 +161,53 @@ static func state_label(s: int) -> String:
 		-1: return "Hostile"
 	return "Neutre"
 
+# ── Builders : construisent (une fois, en cache) les objets typés depuis les dicts. ──
+static var _cards: Array[CardData] = []
+static var _characters: Array[CharacterData] = []
+static var _planets: Array[PlanetData] = []
+
+static func all_cards() -> Array[CardData]:
+	if _cards.is_empty():
+		for d in _DECK_RAW:
+			var c := CardData.new()
+			c.id = d["id"]; c.bearer = d["bearer"]; c.role = d["role"]
+			c.mood = d["mood"]; c.key = d.get("key", false); c.question = d["question"]
+			c.left_answer = _answer(d["left"])
+			c.right_answer = _answer(d["right"])
+			_cards.append(c)
+	return _cards
+
+static func _answer(a: Dictionary) -> AnswerData:
+	var r := AnswerData.new()
+	r.title = a["title"]
+	r.reaction = a.get("reaction", "")
+	r.fx = a.get("fx", {})
+	return r
+
+static func all_characters() -> Array[CharacterData]:
+	if _characters.is_empty():
+		for d in _CHARACTERS_RAW:
+			var c := CharacterData.new()
+			c.id = d["id"]; c.name = d["name"]; c.tag = d["tag"]
+			c.met = d["met"]; c.key = d.get("key", false)
+			_characters.append(c)
+	return _characters
+
+static func all_planets() -> Array[PlanetData]:
+	if _planets.is_empty():
+		for d in _PLANETS_RAW:
+			var p := PlanetData.new()
+			p.id = d["id"]; p.name = d["name"]; p.faction = d["faction"]
+			p.state = d["state"]; p.x = d["x"]; p.y = d["y"]
+			p.note = d["note"]; p.base = d["base"]; p.hidden = d["hidden"]
+			_planets.append(p)
+	return _planets
+
 # Tirage : évite la répétition immédiate (port de pickCard).
-static func pick_card(recent_ids: Array) -> Dictionary:
-	var pool := DECK.filter(func(c): return not (c["id"] in recent_ids))
-	var src: Array = pool if pool.size() > 0 else DECK
+static func pick_card(recent_ids: Array) -> CardData:
+	var cards := all_cards()
+	var pool := cards.filter(func(c): return not (c.id in recent_ids))
+	var src: Array[CardData] = pool if pool.size() > 0 else cards
 	return src[randi() % src.size()]
 
 # Teinte stable par interlocuteur (port de toneFor).
