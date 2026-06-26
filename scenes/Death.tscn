@@ -55,6 +55,14 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="Gradient" id="Gradient_yltwy"]
+colors = PackedColorArray(0.47, 0.9, 0.96, 0.16, 0.47, 0.9, 0.96, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1e641"]
+gradient = SubResource("Gradient_yltwy")
+width = 4
+fill_to = Vector2(0, 1)
+
 [node name="Death" type="Control" unique_id=1250857448]
 layout_mode = 3
 anchors_preset = 15
@@ -221,3 +229,10 @@ theme_override_styles/normal = SubResource("SB_btn")
 theme_override_styles/pressed = SubResource("SB_btnhover")
 theme_override_styles/hover = SubResource("SB_btnhover")
 text = "NOUVEAU RÈGNE →"
+
+[node name="Sweep" type="TextureRect" parent="." unique_id=675808766]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_1e641")

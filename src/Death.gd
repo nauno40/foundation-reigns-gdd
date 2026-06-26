@@ -66,26 +66,16 @@ func show_death(info: Dictionary) -> void:
 		fk.tween_property(_cause, "modulate:a", a, 0.09)
 	_play_sweep()
 
-# deathSweep : bande lumineuse cyan qui balaie l'écran de haut en bas (.death::after)
+# deathSweep : bande lumineuse cyan qui balaie l'écran de haut en bas (.death::after).
+# La bande %Sweep (texture dégradée) vit dans Death.tscn ; on la repositionne et on
+# l'anime au runtime (bornes calculées → tween, pas AnimationPlayer).
 func _play_sweep() -> void:
 	var band_h := size.y * 0.34
-	var grad := Gradient.new()
-	grad.set_color(0, Color(0.47, 0.9, 0.96, 0.16))
-	grad.set_color(1, Color(0.47, 0.9, 0.96, 0.0))
-	var gt := GradientTexture2D.new()
-	gt.gradient = grad
-	gt.fill_from = Vector2(0, 0)
-	gt.fill_to = Vector2(0, 1)
-	gt.width = 4
-	gt.height = 64
-	var sweep := TextureRect.new()
-	sweep.texture = gt
-	sweep.stretch_mode = TextureRect.STRETCH_SCALE
-	sweep.size = Vector2(size.x, band_h)
-	sweep.position = Vector2(0, -band_h * 0.4)
-	sweep.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(sweep)
+	%Sweep.size = Vector2(size.x, band_h)
+	%Sweep.position = Vector2(0, -band_h * 0.4)
+	%Sweep.modulate.a = 1.0
+	%Sweep.visible = true
 	var t := create_tween().set_parallel()
-	t.tween_property(sweep, "position:y", size.y * 1.2, sweep_duration).set_ease(Tween.EASE_OUT)
-	t.tween_property(sweep, "modulate:a", 0.0, sweep_duration)
-	t.chain().tween_callback(sweep.queue_free)
+	t.tween_property(%Sweep, "position:y", size.y * 1.2, sweep_duration).set_ease(Tween.EASE_OUT)
+	t.tween_property(%Sweep, "modulate:a", 0.0, sweep_duration)
+	t.chain().tween_callback(func(): %Sweep.visible = false)
