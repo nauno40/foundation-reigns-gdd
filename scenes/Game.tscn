@@ -58,6 +58,42 @@ shader_parameter/rect_size = Vector2(460, 920)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcffj"]
 
+[sub_resource type="Animation" id="Animation_qy1jj"]
+length = 0.76
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DeathFx:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.76),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_3xj3m"]
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainVBox/Panel/PanelMargin/PanelVBox/QuestionScroll/QuestionLabel:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mcffj"]
+_data = {
+&"death_fx": SubResource("Animation_qy1jj"),
+&"question_fade": SubResource("Animation_3xj3m")
+}
+
 [node name="Game" type="Control" unique_id=208066693]
 layout_mode = 3
 anchors_preset = 15
@@ -376,3 +412,7 @@ theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3xj3m")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_mcffj")
 text = "⚙"
+
+[node name="Animations" type="AnimationPlayer" parent="." unique_id=933098552]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_mcffj")

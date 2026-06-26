@@ -15,9 +15,8 @@ const GAUGE_SCENE = preload("res://scenes/Gauge.tscn")
 const CARDVIEW_SCENE = preload("res://scenes/CardView.tscn")
 const QUESTION_MAX_H := 150.0
 
-# Durées réglables dans l'inspecteur (mêmes valeurs que les littéraux d'origine).
-@export var question_fade_duration: float = 0.35
-@export var death_fx_duration: float = 0.76
+# Durée de vie de la bannière de déblocage de deck (réglable dans l'inspecteur).
+# question_fade / death_fx ont leur durée dans les clips de l'AnimationPlayer.
 @export var deck_unlock_lifetime: float = 2.4
 
 # état (port de App)
@@ -60,6 +59,7 @@ var _hmoved := false
 @onready var _deathfx: ColorRect = %DeathFx
 @onready var _gear: Button = %Gear
 @onready var _tweaks: TweaksPanel = %Tweaks
+@onready var _anims: AnimationPlayer = %Animations
 
 func _ready() -> void:
 	for r in Data.RESOURCES:
@@ -241,7 +241,7 @@ func _refresh_card() -> void:
 	_fit_question()
 	# qrise : la question apparaît en fondu à chaque nouvelle carte (template .question.k)
 	_question.modulate.a = 0.0
-	create_tween().tween_property(_question, "modulate:a", 1.0, question_fade_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	_anims.play("question_fade")
 
 func _fit_question() -> void:
 	var h := _question.get_minimum_size().y
@@ -255,9 +255,9 @@ func _play_death(key: String, hi: bool) -> void:
 	mat.set_shader_parameter("rect_size", _deathfx.size)
 	mat.set_shader_parameter("progress", 0.0)
 	_deathfx.visible = true
-	var t := create_tween()
-	t.tween_method(func(v): mat.set_shader_parameter("progress", v), 0.0, 1.0, death_fx_duration)
-	await t.finished
+	# death_fx (AnimationPlayer) anime le paramètre "progress" du shader de 0 à 1.
+	_anims.play("death_fx")
+	await _anims.animation_finished
 	_deathfx.visible = false
 
 	var mk := "legitimacy" if key == "legitimacy" else key + ("_hi" if hi else "")
@@ -313,6 +313,8 @@ func _init_reign(legit_start: int) -> void:
 	turns = 0
 
 # ── bannière de déblocage de deck (port .deck-add + .deck-banner) ──
+# Reste en create_tween() : positions/cibles calculées au runtime (taille de carte,
+# position courante) — un AnimationPlayer à valeurs figées ne conviendrait pas.
 func _play_deck_unlock(u: Dictionary) -> void:
 	# Cartes qui glissent : SOUS la carte actuelle (template .deck-add z-index 1 < .card z-index 3).
 	var fx := Control.new()
