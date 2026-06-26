@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Cfg="*res://src/Cfg.gd"
 _mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+AudioManager="*res://src/AudioManager.gd"
 
 [display]
 
