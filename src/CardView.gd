@@ -46,14 +46,15 @@ func _ready() -> void:
 	set_process(true)
 
 func _editor_preview() -> void:
-	# Aperçu éditeur : carte teintée + buste + badge (sinon carte « nue »).
+	# Aperçu éditeur : carte teintée + buste + badge, SANS repositionner la carte
+	# (on respecte le placement défini dans la scène).
 	var s := minf(size.x, size.y)
 	if s <= 0.0:
 		s = 300.0
 	var tone := Data.tone_for("hari")
 	_mat.set_shader_parameter("tone_lo", tone)
 	_mat.set_shader_parameter("tone_hi", Data.lighten(tone, 0.18))
-	layout(Vector2.ZERO, s)
+	_place_children(s)
 	_bust.set_tone(tone)
 	_bust.set_initials("HS")
 	_keytag.visible = true
@@ -62,6 +63,10 @@ func layout(base: Vector2, side: float) -> void:
 	_base = base
 	size = Vector2(side, side)
 	pivot_offset = Vector2(side, side) * 0.5
+	_place_children(side)
+	_apply()
+
+func _place_children(side: float) -> void:
 	_bust.set_anchors_preset(Control.PRESET_TOP_LEFT)
 	var bw := side * 0.64
 	var bh := side * 0.80
@@ -73,7 +78,6 @@ func layout(base: Vector2, side: float) -> void:
 	_choice.position = Vector2(15, 15)
 	_choice.size = Vector2(side - 30, 56)
 	_mat.set_shader_parameter("rect_size", Vector2(side, side))
-	_apply()
 
 func show_card(card: Dictionary) -> void:
 	_flying = false

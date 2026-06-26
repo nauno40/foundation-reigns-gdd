@@ -15,6 +15,14 @@ const BASE_NORMAL := Color(0.235, 0.282, 0.376)   # #3c4860
 const BASE_AFF := Color(0.490, 0.565, 0.659)      # #7d90a8
 const UP := Color("#5fcf8f")
 const DOWN := Color("#d96a5a")
+const PREVIEW_LABELS := {"military": "MILITAIRE", "religion": "RELIGION", "commerce": "COMMERCE", "politics": "POLITIQUE"}
+
+# Clé de ressource — sert à l'aperçu éditeur (chaque instance affiche SON icône).
+@export_enum("military", "religion", "commerce", "politics") var resource_key := "military":
+	set(v):
+		resource_key = v
+		if Engine.is_editor_hint() and is_node_ready():
+			_editor_preview()
 
 @onready var _delta: Label = %Delta
 @onready var _glow: TextureRect = %Glow
@@ -31,17 +39,20 @@ var _vt: Tween
 var _gt: Tween
 
 func _ready() -> void:
-	# Aperçu éditeur : icône + remplissage d'exemple (sinon glyphe vide).
 	if Engine.is_editor_hint():
-		var tex: Texture2D = ICONS["military"]
-		_icon.texture = tex
-		_glow.texture = tex
-		_flash.texture = tex
-		_icon.material.set_shader_parameter("res_color", Pal.res_color("military"))
-		_icon.material.set_shader_parameter("base_color", BASE_NORMAL)
-		_icon.material.set_shader_parameter("fill", 0.5)
-		_lab.text = "MILITAIRE"
-		_lab.add_theme_color_override("font_color", Color("#aab5c8"))
+		_editor_preview()
+
+# Aperçu éditeur : chaque jauge affiche SON icône + un remplissage d'exemple.
+func _editor_preview() -> void:
+	var tex: Texture2D = ICONS.get(resource_key, ICONS["military"])
+	_icon.texture = tex
+	_glow.texture = tex
+	_flash.texture = tex
+	_icon.material.set_shader_parameter("res_color", Pal.res_color(resource_key))
+	_icon.material.set_shader_parameter("base_color", BASE_NORMAL)
+	_icon.material.set_shader_parameter("fill", 0.5)
+	_lab.text = PREVIEW_LABELS.get(resource_key, resource_key.to_upper())
+	_lab.add_theme_color_override("font_color", Color("#aab5c8"))
 
 func setup(key: String, label: String) -> void:
 	_key = key

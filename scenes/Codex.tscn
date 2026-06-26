@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://codex_scene"]
+[gd_scene format=3 uid="uid://dw30444hv8wwd"]
 
-[ext_resource type="Script" path="res://src/Codex.gd" id="1_codex"]
-[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
-[ext_resource type="PackedScene" uid="uid://codextab_scene" path="res://scenes/CodexTab.tscn" id="3_tab"]
+[ext_resource type="Script" uid="uid://d4mr7awobpywu" path="res://src/Codex.gd" id="1_codex"]
+[ext_resource type="FontFile" uid="uid://cu8vl8px6o5hh" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
+[ext_resource type="PackedScene" path="res://scenes/CodexTab.tscn" id="3_tab"]
 
 [sub_resource type="StyleBoxFlat" id="SB_panel"]
 bg_color = Color(0.027, 0.043, 0.075, 1)
@@ -12,8 +12,7 @@ bg_color = Color(0.027, 0.043, 0.075, 1)
 [sub_resource type="StyleBoxFlat" id="SB_grabhover"]
 bg_color = Color(0.31, 0.839, 0.91, 0.06)
 
-[node name="Codex" type="Control"]
-visible = false
+[node name="Codex" type="Control" unique_id=583740252]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_codex")
 
-[node name="Panel" type="PanelContainer" parent="."]
+[node name="Panel" type="PanelContainer" parent="." unique_id=2035718837]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -32,11 +31,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("SB_panel")
 
-[node name="Root" type="VBoxContainer" parent="Panel"]
+[node name="Root" type="VBoxContainer" parent="Panel" unique_id=1917824641]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Grab" type="Button" parent="Panel/Root"]
+[node name="Grab" type="Button" parent="Panel/Root" unique_id=1206162428]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 34)
 layout_mode = 2
@@ -46,35 +45,35 @@ theme_override_colors/font_hover_color = Color(0.31, 0.839, 0.91, 1)
 theme_override_fonts/font = ExtResource("2_mono")
 theme_override_font_sizes/font_size = 8
 theme_override_styles/normal = SubResource("SB_empty")
-theme_override_styles/hover = SubResource("SB_grabhover")
 theme_override_styles/pressed = SubResource("SB_grabhover")
+theme_override_styles/hover = SubResource("SB_grabhover")
 text = "FERMER ▼"
 
-[node name="Tabs" type="HBoxContainer" parent="Panel/Root"]
+[node name="Tabs" type="HBoxContainer" parent="Panel/Root" unique_id=250511744]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="TabChars" parent="Panel/Root/Tabs" instance=ExtResource("3_tab")]
+[node name="TabChars" parent="Panel/Root/Tabs" unique_id=421711535 instance=ExtResource("3_tab")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TabAch" parent="Panel/Root/Tabs" instance=ExtResource("3_tab")]
+[node name="TabAch" parent="Panel/Root/Tabs" unique_id=203481642 instance=ExtResource("3_tab")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TabGal" parent="Panel/Root/Tabs" instance=ExtResource("3_tab")]
+[node name="TabGal" parent="Panel/Root/Tabs" unique_id=440516757 instance=ExtResource("3_tab")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Holder" type="Control" parent="Panel/Root"]
+[node name="Holder" type="Control" parent="Panel/Root" unique_id=1871659856]
 unique_name_in_owner = true
+clip_contents = true
 layout_mode = 2
 size_flags_vertical = 3
-clip_contents = true
 mouse_filter = 2
 
-[node name="Scroll" type="ScrollContainer" parent="Panel/Root/Holder"]
+[node name="Scroll" type="ScrollContainer" parent="Panel/Root/Holder" unique_id=568858763]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -84,7 +83,7 @@ grow_horizontal = 2
 grow_vertical = 2
 horizontal_scroll_mode = 0
 
-[node name="Margin" type="MarginContainer" parent="Panel/Root/Holder/Scroll"]
+[node name="Margin" type="MarginContainer" parent="Panel/Root/Holder/Scroll" unique_id=1830871898]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 18
@@ -92,7 +91,7 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 18
 theme_override_constants/margin_bottom = 22
 
-[node name="Body" type="VBoxContainer" parent="Panel/Root/Holder/Scroll/Margin"]
+[node name="Body" type="VBoxContainer" parent="Panel/Root/Holder/Scroll/Margin" unique_id=301861238]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
