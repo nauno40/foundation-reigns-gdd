@@ -8,6 +8,9 @@ const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
 const HOLO_GRID = preload("res://assets/shaders/holo_grid.gdshader")
 const CHAR_CARD_SCENE = preload("res://scenes/CharacterCard.tscn")
+const ACH_ROW_SCENE = preload("res://scenes/AchievementRow.tscn")
+const DECK_CHIP_SCENE = preload("res://scenes/DeckChip.tscn")
+const PLANET_INFO_SCENE = preload("res://scenes/PlanetInfo.tscn")
 const TAB_ICONS := {
 	"chars": preload("res://assets/icons/tab_chars.svg"),
 	"ach": preload("res://assets/icons/tab_ach.svg"),
@@ -24,7 +27,7 @@ var _tab := "chars"
 var _galaxy: Control
 var _planet_rects := []
 var _selected := ""
-var _info: VBoxContainer
+var _info: PlanetInfo
 # carrousel d'onglets (suivi du doigt)
 var _gp_start := Vector2.ZERO
 var _gp_mode := ""        # "" / "h" / "v"
@@ -193,84 +196,14 @@ func _render_ach() -> void:
 	for d in l: _body.add_child(_chip(d, true))
 
 func _ach(a: Dictionary) -> Control:
-	var box := PanelContainer.new()
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color(1, 1, 1, 0.018)
-	sb.set_corner_radius_all(11)
-	sb.set_border_width_all(1)
-	sb.border_color = Pal.LINE
-	sb.content_margin_left = 13; sb.content_margin_right = 13
-	sb.content_margin_top = 11; sb.content_margin_bottom = 11
-	box.add_theme_stylebox_override("panel", sb)
-	var hb := HBoxContainer.new()
-	hb.add_theme_constant_override("separation", 11)
-	box.add_child(hb)
-	var chk := Panel.new()
-	chk.custom_minimum_size = Vector2(22, 22)
-	chk.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	var cs := StyleBoxFlat.new()
-	cs.set_corner_radius_all(11)
-	cs.set_border_width_all(1)
-	if a["done"]:
-		cs.bg_color = Cfg.accent; cs.border_color = Cfg.accent
-	else:
-		cs.bg_color = Color(0, 0, 0, 0); cs.border_color = Pal.LINE
-	chk.add_theme_stylebox_override("panel", cs)
-	if a["done"]:
-		var ck := Label.new()
-		ck.text = "✓"
-		ck.set_anchors_preset(Control.PRESET_FULL_RECT)
-		ck.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		ck.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-		ck.add_theme_font_size_override("font_size", 12)
-		ck.add_theme_color_override("font_color", Color("#04121a"))
-		chk.add_child(ck)
-	hb.add_child(chk)
-	var vb := VBoxContainer.new()
-	vb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	vb.add_theme_constant_override("separation", 2)
-	var nm := Label.new()
-	nm.text = a["name"]
-	nm.add_theme_font_override("font", FONT_SPECTRAL)
-	nm.add_theme_font_size_override("font_size", 14)
-	nm.add_theme_color_override("font_color", Pal.INK if a["done"] else Pal.INK_DIM)
-	vb.add_child(nm)
-	var ds := Label.new()
-	ds.text = a["desc"]
-	ds.add_theme_font_size_override("font_size", 11)
-	ds.add_theme_color_override("font_color", Pal.INK_FAINT)
-	ds.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	vb.add_child(ds)
-	hb.add_child(vb)
-	return box
+	var row: AchievementRow = ACH_ROW_SCENE.instantiate()
+	row.setup(a)
+	return row
 
 func _chip(d: Dictionary, locked: bool) -> Control:
-	var box := PanelContainer.new()
-	box.modulate.a = 0.4 if locked else 1.0
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color(1, 1, 1, 0.012)
-	sb.set_corner_radius_all(9)
-	sb.set_border_width_all(1)
-	sb.border_color = Pal.LINE
-	sb.content_margin_left = 12; sb.content_margin_right = 12
-	sb.content_margin_top = 9; sb.content_margin_bottom = 9
-	box.add_theme_stylebox_override("panel", sb)
-	var hb := HBoxContainer.new()
-	box.add_child(hb)
-	var nm := Label.new()
-	nm.text = d["name"]
-	nm.add_theme_font_override("font", FONT_SPECTRAL)
-	nm.add_theme_font_size_override("font_size", 13)
-	nm.add_theme_color_override("font_color", Pal.INK)
-	nm.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	hb.add_child(nm)
-	var er := Label.new()
-	er.text = d["era"] + (" 🔒" if locked else "")
-	er.add_theme_font_override("font", FONT_MONO)
-	er.add_theme_font_size_override("font_size", 9)
-	er.add_theme_color_override("font_color", Pal.INK_FAINT)
-	hb.add_child(er)
-	return box
+	var chip: DeckChip = DECK_CHIP_SCENE.instantiate()
+	chip.setup(d, locked)
+	return chip
 
 # ── Galaxie ──
 func _render_gal() -> void:
@@ -304,21 +237,9 @@ func _render_gal() -> void:
 		l.add_theme_color_override("font_color", Data.state_color(pair[0]))
 		legend.add_child(l)
 	_body.add_child(legend)
-	# boîte d'info bordée (template .pl-info)
-	var ibox := PanelContainer.new()
-	ibox.custom_minimum_size = Vector2(0, 84)
-	var isb := StyleBoxFlat.new()
-	isb.bg_color = Color(1, 1, 1, 0.02)
-	isb.set_corner_radius_all(11)
-	isb.set_border_width_all(1)
-	isb.border_color = Pal.LINE
-	isb.content_margin_left = 15; isb.content_margin_right = 15
-	isb.content_margin_top = 13; isb.content_margin_bottom = 13
-	ibox.add_theme_stylebox_override("panel", isb)
-	_body.add_child(ibox)
-	_info = VBoxContainer.new()
-	_info.add_theme_constant_override("separation", 4)
-	ibox.add_child(_info)
+	# panneau d'info planète (composant PlanetInfo)
+	_info = PLANET_INFO_SCENE.instantiate()
+	_body.add_child(_info)
 	_render_info()
 
 func _draw_galaxy() -> void:
@@ -373,47 +294,10 @@ func _ring_step(v: float) -> void:
 		_galaxy.queue_redraw()
 
 func _render_info() -> void:
-	for c in _info.get_children(): c.queue_free()
 	var p := {}
 	for x in Data.PLANETS:
 		if x["id"] == _selected: p = x; break
-	if p.is_empty():
-		var e := Label.new()
-		e.text = "Touchez une planète pour observer son état et sa faction."
-		e.add_theme_font_override("font", FONT_SPECTRAL)
-		e.add_theme_font_size_override("font_size", 12)
-		e.add_theme_color_override("font_color", Pal.INK_FAINT)
-		e.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		_info.add_child(e)
-		return
-	var head := HBoxContainer.new()
-	var nm := Label.new()
-	nm.text = p["name"] + (" ◆" if p["base"] else "")
-	nm.add_theme_font_override("font", FONT_SPECTRAL)
-	nm.add_theme_font_size_override("font_size", 18)
-	nm.add_theme_color_override("font_color", Pal.INK)
-	nm.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	head.add_child(nm)
-	var st := Label.new()
-	st.text = Data.state_label(p["state"]).to_upper()
-	st.add_theme_font_override("font", FONT_MONO)
-	st.add_theme_font_size_override("font_size", 9)
-	st.add_theme_color_override("font_color", Data.state_color(p["state"]))
-	head.add_child(st)
-	_info.add_child(head)
-	var fc := Label.new()
-	fc.text = str(p["faction"]).to_upper() + (" · CACHÉE" if p["hidden"] else "")
-	fc.add_theme_font_override("font", FONT_MONO)
-	fc.add_theme_font_size_override("font_size", 9)
-	fc.add_theme_color_override("font_color", Cfg.accent)
-	_info.add_child(fc)
-	var nt := Label.new()
-	nt.text = p["note"]
-	nt.add_theme_font_override("font", FONT_SPECTRAL)
-	nt.add_theme_font_size_override("font_size", 13)
-	nt.add_theme_color_override("font_color", Pal.INK_DIM)
-	nt.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_info.add_child(nt)
+	(_info as PlanetInfo).setup(p)
 
 func _section(text: String) -> Label:
 	var l := Label.new()

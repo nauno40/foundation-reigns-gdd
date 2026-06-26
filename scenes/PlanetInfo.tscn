@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://planetinfo_scene"]
+
+[ext_resource type="Script" path="res://src/PlanetInfo.gd" id="1_pi"]
+[ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="2_spectral"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="3_mono"]
+
+[sub_resource type="StyleBoxFlat" id="SB_info"]
+bg_color = Color(1, 1, 1, 0.02)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.471, 0.588, 0.745, 0.14)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+content_margin_left = 15.0
+content_margin_top = 13.0
+content_margin_right = 15.0
+content_margin_bottom = 13.0
+
+[node name="PlanetInfo" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 84)
+theme_override_styles/panel = SubResource("SB_info")
+script = ExtResource("1_pi")
+
+[node name="Root" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Empty" type="Label" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+theme_override_fonts/font = ExtResource("2_spectral")
+theme_override_font_sizes/font_size = 12
+text = "Touchez une planète pour observer son état et sa faction."
+autowrap_mode = 3
+
+[node name="Filled" type="VBoxContainer" parent="Root"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Head" type="HBoxContainer" parent="Root/Filled"]
+layout_mode = 2
+
+[node name="PName" type="Label" parent="Root/Filled/Head"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
+theme_override_fonts/font = ExtResource("2_spectral")
+theme_override_font_sizes/font_size = 18
+text = "Planète"
+
+[node name="PState" type="Label" parent="Root/Filled/Head"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mono")
+theme_override_font_sizes/font_size = 9
+text = "ÉTAT"
+
+[node name="PFaction" type="Label" parent="Root/Filled"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31, 0.839, 0.91, 1)
+theme_override_fonts/font = ExtResource("3_mono")
+theme_override_font_sizes/font_size = 9
+text = "FACTION"
+
+[node name="PNote" type="Label" parent="Root/Filled"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.576, 0.627, 0.714, 1)
+theme_override_fonts/font = ExtResource("2_spectral")
+theme_override_font_sizes/font_size = 13
+text = "note"
+autowrap_mode = 3
