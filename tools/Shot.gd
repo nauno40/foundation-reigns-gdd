@@ -13,6 +13,26 @@ func _ready() -> void:
 	await _wait(70)
 	var game = main.get_node("Row/Frame/Game")
 	match mode:
+		"codexscene":
+			# Codex.tscn ouvert seul (comme dans l'éditeur)
+			var cx = load("res://scenes/Codex.tscn").instantiate()
+			add_child(cx)
+			cx.set_anchors_preset(Control.PRESET_FULL_RECT)
+			cx.visible = true
+			await _wait(20)
+		"deathscene":
+			# Death.tscn ouvert seul (comme dans l'éditeur)
+			var d = load("res://scenes/Death.tscn").instantiate()
+			add_child(d)
+			d.set_anchors_preset(Control.PRESET_FULL_RECT)
+			d.show_death({
+				"causeLabel": "Militaire — effondrement", "bearerName": "Orateur — Conseiller impérial",
+				"sub": "38 ans · Règne couvert : An 1 → An 2",
+				"message": "Une Fondation qui ne sait pas se défendre n'est qu'une bibliothèque attendant l'incendie.",
+				"turns": 1, "years": 1, "score": 108, "deviation": "dévié de 2.4 %",
+				"res": {"military": 4, "religion": 52, "commerce": 60, "politics": 48},
+			})
+			await _wait(20)
 		"editorsim":
 			# reproduit le rendu éditeur : seuls les @tool enfants s'affichent (via _editor_preview)
 			var resrow = game.get_node("MainVBox/TopBar/TopMargin/TopVBox/ResRow")
