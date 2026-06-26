@@ -58,10 +58,7 @@ func _ready() -> void:
 	_era.text = _era_text()
 	_handle_chev.text = _handle_text()
 	_question.add_theme_font_size_override("font_size", Cfg.prose)
-	_cardview.committed.connect(_on_committed)
-	_cardview.preview.connect(_on_preview)
-	_stage.resized.connect(_layout_stage)
-	_handle.gui_input.connect(_on_handle_input)
+	_connect_signals()
 	_make_overlays()
 	_new_cover()
 	_init_reign(100)
@@ -73,6 +70,15 @@ func _ready() -> void:
 	_refresh_all()
 	_cardview.play_entry()
 
+# Branche tous les signaux de la scène en un seul endroit (lisibilité).
+func _connect_signals() -> void:
+	_cardview.committed.connect(_on_committed)
+	_cardview.preview.connect(_on_preview)
+	_stage.resized.connect(_layout_stage)
+	_handle.gui_input.connect(_on_handle_input)
+	_death.respawn_pressed.connect(_respawn)
+	Cfg.changed.connect(_on_cfg_changed)
+
 func _on_handle_input(e: InputEvent) -> void:
 	if e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and e.pressed:
 		_hdrag = true
@@ -81,8 +87,7 @@ func _on_handle_input(e: InputEvent) -> void:
 		_codex.drag_start()
 
 func _make_overlays() -> void:
-	# Codex + Death sont instanciés dans Game.tscn ; on branche juste le signal.
-	_death.respawn_pressed.connect(_respawn)
+	# Codex + Death sont instanciés dans Game.tscn (signaux branchés dans _connect_signals).
 	_deathfx = ColorRect.new()
 	_deathfx.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_deathfx.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -111,10 +116,11 @@ func _make_overlays() -> void:
 	gear.add_theme_color_override("font_hover_color", Cfg.accent)
 	gear.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
 	gear.add_theme_stylebox_override("hover", StyleBoxEmpty.new())
-	gear.pressed.connect(func(): _tweaks.open())
+	gear.pressed.connect(_on_gear_pressed)
 	add_child(gear)
 
-	Cfg.changed.connect(_on_cfg_changed)
+func _on_gear_pressed() -> void:
+	_tweaks.open()
 
 func _era_text() -> String:
 	return "[center]SECONDE FONDATION · [color=#%s]ÈRE HARDIN[/color] · ANS 1–80[/center]" % Cfg.accent.to_html(false)
@@ -343,10 +349,13 @@ func _play_deck_unlock(u: Dictionary) -> void:
 	banfx.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_stage.add_child(banfx)   # ajouté après la carte → rendu par-dessus
 	_unlock_banner(banfx, u["name"], n)
-	get_tree().create_timer(2.4).timeout.connect(func():
-		if is_instance_valid(fx): fx.queue_free()
-		if is_instance_valid(banfx): banfx.queue_free()
-	, CONNECT_ONE_SHOT)
+	get_tree().create_timer(2.4).timeout.connect(
+		_on_deck_unlock_cleanup.bind(fx, banfx), CONNECT_ONE_SHOT)
+
+# Nettoie les nœuds temporaires de la bannière de déblocage de deck.
+func _on_deck_unlock_cleanup(fx: Control, banfx: Control) -> void:
+	if is_instance_valid(fx): fx.queue_free()
+	if is_instance_valid(banfx): banfx.queue_free()
 
 func _unlock_banner(parent: Control, deck_name: String, count: int) -> void:
 	var center := CenterContainer.new()
