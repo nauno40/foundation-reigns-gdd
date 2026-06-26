@@ -6,8 +6,8 @@
 [ext_resource type="Shader" uid="uid://mry4bdo61byw" path="res://assets/shaders/panel_bg.gdshader" id="4_panelbg"]
 [ext_resource type="PackedScene" path="res://scenes/Gauge.tscn" id="5_gauge"]
 [ext_resource type="PackedScene" path="res://scenes/CardView.tscn" id="6_card"]
-[ext_resource type="PackedScene" path="res://scenes/Codex.tscn" id="7_codex"]
-[ext_resource type="PackedScene" path="res://scenes/Death.tscn" id="8_death"]
+[ext_resource type="PackedScene" uid="uid://dw30444hv8wwd" path="res://scenes/Codex.tscn" id="7_codex"]
+[ext_resource type="PackedScene" uid="uid://cfraa3sx1ucnn" path="res://scenes/Death.tscn" id="8_death"]
 
 [sub_resource type="StyleBoxFlat" id="SB_topbar"]
 bg_color = Color(0.043, 0.055, 0.082, 1)
@@ -100,28 +100,35 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 10
 
-[node name="BarMilitary" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=1780004620 instance=ExtResource("5_gauge")]
+[node name="BarMilitary" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=1780004620 groups=["gauges"] instance=ExtResource("5_gauge")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-resource_key = "military"
+tween_duration = null
+flash_duration = null
 
-[node name="BarReligion" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=1540122223 instance=ExtResource("5_gauge")]
+[node name="BarReligion" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=1540122223 groups=["gauges"] instance=ExtResource("5_gauge")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+tween_duration = null
+flash_duration = null
 resource_key = "religion"
 
-[node name="BarCommerce" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=1587466318 instance=ExtResource("5_gauge")]
+[node name="BarCommerce" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=1587466318 groups=["gauges"] instance=ExtResource("5_gauge")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+tween_duration = null
+flash_duration = null
 resource_key = "commerce"
 
-[node name="BarPolitics" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=2146218075 instance=ExtResource("5_gauge")]
+[node name="BarPolitics" parent="MainVBox/TopBar/TopMargin/TopVBox/ResRow" unique_id=2146218075 groups=["gauges"] instance=ExtResource("5_gauge")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+tween_duration = null
+flash_duration = null
 resource_key = "politics"
 
 [node name="Panel" type="Control" parent="MainVBox" unique_id=359093849]
@@ -197,7 +204,6 @@ mouse_filter = 2
 [node name="DeckCard" type="Panel" parent="MainVBox/Panel/PanelMargin/PanelVBox/CardStage" unique_id=732043953]
 unique_name_in_owner = true
 layout_mode = 0
-anchors_preset = 0
 offset_left = 71.0
 offset_top = 147.0
 offset_right = 371.0
@@ -215,6 +221,14 @@ offset_top = 138.0
 offset_right = 362.0
 offset_bottom = 438.0
 pivot_offset = Vector2(150, 150)
+threshold = null
+reveal_threshold = null
+rotation_per_drag = null
+grab_scale = null
+stiffness = null
+damping = null
+flyout_distance = null
+flyout_duration = null
 
 [node name="Speaker" type="VBoxContainer" parent="MainVBox/Panel/PanelMargin/PanelVBox" unique_id=2007663856]
 layout_mode = 2

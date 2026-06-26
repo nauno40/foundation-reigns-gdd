@@ -52,14 +52,12 @@ var _hmoved := false
 @onready var _handle_chev: RichTextLabel = %Chev
 @onready var _codex: Codex = %Codex
 @onready var _death: Death = %Death
-var _gauges := {}
 var _deathfx: ColorRect
 var _tweaks: TweaksPanel
 
 func _ready() -> void:
-	_gauges = {"military": %BarMilitary, "religion": %BarReligion, "commerce": %BarCommerce, "politics": %BarPolitics}
 	for r in Data.RESOURCES:
-		_gauges[r["key"]].setup(r["key"], r["label"])
+		_gauge(r["key"]).setup(r["key"], r["label"])
 	_era.text = _era_text()
 	_handle_chev.text = _handle_text()
 	_question.add_theme_font_size_override("font_size", Cfg.prose)
@@ -83,6 +81,16 @@ func _connect_signals() -> void:
 	_handle.gui_input.connect(_on_handle_input)
 	_death.respawn_pressed.connect(_respawn)
 	Cfg.changed.connect(_on_cfg_changed)
+
+# Les jauges vivent dans le groupe "gauges" ; on les indexe par resource_key.
+func _get_gauges() -> Array:
+	return get_tree().get_nodes_in_group("gauges")
+
+func _gauge(key: String) -> Gauge:
+	for g in _get_gauges():
+		if (g as Gauge).resource_key == key:
+			return g
+	return null
 
 func _on_handle_input(e: InputEvent) -> void:
 	if e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and e.pressed:
@@ -139,8 +147,8 @@ func _on_cfg_changed() -> void:
 	_handle_chev.text = _handle_text()
 	_bearer_role.add_theme_color_override("font_color", Cfg.accent)
 	_question.add_theme_font_size_override("font_size", Cfg.prose)
-	for k in _gauges:
-		_gauges[k].refresh()
+	for g in _get_gauges():
+		(g as Gauge).refresh()
 	_fit_question()
 
 func _layout_stage() -> void:
@@ -181,16 +189,17 @@ func _input(e: InputEvent) -> void:
 
 func _on_preview(side: String) -> void:
 	if side == "":
-		for k in _gauges: _gauges[k].set_affected(false)
+		for g in _get_gauges(): (g as Gauge).set_affected(false)
 		return
 	var fx: Dictionary = card[side]["fx"]
-	for k in _gauges:
-		_gauges[k].set_affected(fx.has(k) and int(fx[k]) != 0)
+	for g in _get_gauges():
+		var key: String = (g as Gauge).resource_key
+		(g as Gauge).set_affected(fx.has(key) and int(fx[key]) != 0)
 
 func _on_committed(is_left: bool) -> void:
 	if busy: return
 	busy = true
-	for k in _gauges: _gauges[k].set_affected(false)
+	for g in _get_gauges(): (g as Gauge).set_affected(false)
 	var ans: Dictionary = card["left" if is_left else "right"]
 	var fx: Dictionary = ans["fx"]
 	var mult: float = Data.DIFF.get(Cfg.difficulty, 1.0)
@@ -231,7 +240,7 @@ func _on_committed(is_left: bool) -> void:
 
 func _refresh_all() -> void:
 	for r in Data.RESOURCES:
-		_gauges[r["key"]].set_value(res[r["key"]])
+		_gauge(r["key"]).set_value(res[r["key"]])
 	_year_lbl.text = "An %d" % year
 	_reign_lbl.text = "[center][b][color=#e7edf6]%d ans[/color][/b] · %s[/center]" % [age, str(cover.get("name", "Inconnu"))]
 	_whisper.visible = legit < 35
