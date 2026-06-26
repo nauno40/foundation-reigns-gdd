@@ -7,12 +7,7 @@ extends Control
 # (le prototype n'affiche pas le texte de réaction).
 
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
-const FONT_MONO_BOLD = preload("res://assets/fonts/SpaceMono-Bold.ttf")
 const FONT_CAVEAT = preload("res://assets/fonts/Caveat.ttf")
-const FONT_SPECTRAL = preload("res://assets/fonts/Spectral-Regular.ttf")
-const PANEL_SHADER = preload("res://assets/shaders/panel_bg.gdshader")
-const GAUGE_SCENE = preload("res://scenes/Gauge.tscn")
-const CARDVIEW_SCENE = preload("res://scenes/CardView.tscn")
 const QUESTION_MAX_H := 150.0
 
 # Durée de vie de la bannière de déblocage de deck (réglable dans l'inspecteur).
