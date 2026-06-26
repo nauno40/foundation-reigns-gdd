@@ -31,8 +31,14 @@ var turns := 0
 var y_start := 1
 var recent: Array = []
 var card := {}
-var busy := false
-var _hdrag := false       # drag de la poignée du tableau de bord
+
+# Machine à états de la boucle (remplace l'ancien flag booléen `busy`).
+# DRAGGING/RELEASING/FLYING_OUT décrivent l'espace d'états complet de la carte ;
+# ils sont gérés en interne par CardView. Game pilote IDLE/TRANSITIONING/DEATH/CODEX.
+enum State { IDLE, DRAGGING, RELEASING, FLYING_OUT, TRANSITIONING, DEATH, CODEX }
+var _state := State.IDLE
+
+var _hdrag := false       # drag de la poignée du tableau de bord (geste local au handle)
 var _hstart_y := 0.0
 var _hmoved := false
 
@@ -80,6 +86,7 @@ func _connect_signals() -> void:
 	_stage.resized.connect(_layout_stage)
 	_handle.gui_input.connect(_on_handle_input)
 	_death.respawn_pressed.connect(_respawn)
+	_codex.visibility_changed.connect(_on_codex_visibility_changed)
 	Cfg.changed.connect(_on_cfg_changed)
 
 # Les jauges vivent dans le groupe "gauges" ; on les indexe par resource_key.
@@ -91,6 +98,17 @@ func _gauge(key: String) -> Gauge:
 		if (g as Gauge).resource_key == key:
 			return g
 	return null
+
+# Transition d'état centralisée (un seul point de mutation).
+func _set_state(new_state: State) -> void:
+	_state = new_state
+
+# Le codex pilote l'état : ouvert → CODEX, fermé → retour à IDLE.
+func _on_codex_visibility_changed() -> void:
+	if _codex.visible:
+		_set_state(State.CODEX)
+	elif _state == State.CODEX:
+		_set_state(State.IDLE)
 
 func _on_handle_input(e: InputEvent) -> void:
 	if e is InputEventMouseButton and e.button_index == MOUSE_BUTTON_LEFT and e.pressed:
@@ -165,10 +183,10 @@ func _layout_stage() -> void:
 # ── boucle ──
 func _unhandled_input(e: InputEvent) -> void:
 	if e.is_action_pressed("codex_toggle"):
-		if _codex.visible: _codex.close()
-		elif not busy and not _death.visible: _codex.open("chars")
+		if _state == State.CODEX: _codex.close()
+		elif _state == State.IDLE: _codex.open("chars")
 		return
-	if busy or _death.visible or _codex.visible: return
+	if _state != State.IDLE: return
 	if e.is_action_pressed("swipe_left"): _cardview.swipe(true)
 	elif e.is_action_pressed("swipe_right"): _cardview.swipe(false)
 
@@ -197,8 +215,8 @@ func _on_preview(side: String) -> void:
 		(g as Gauge).set_affected(fx.has(key) and int(fx[key]) != 0)
 
 func _on_committed(is_left: bool) -> void:
-	if busy: return
-	busy = true
+	if _state != State.IDLE: return
+	_set_state(State.TRANSITIONING)
 	for g in _get_gauges(): (g as Gauge).set_affected(false)
 	var ans: Dictionary = card["left" if is_left else "right"]
 	var fx: Dictionary = ans["fx"]
@@ -221,8 +239,7 @@ func _on_committed(is_left: bool) -> void:
 	if cause == "" and legit <= 0: cause = "legitimacy"; key = "legitimacy"
 	if cause != "":
 		await _play_death(key, hi)
-		busy = false
-		return
+		return   # reste en DEATH jusqu'au respawn
 
 	# carte suivante
 	recent = ([card["id"]] + recent).slice(0, 4)
@@ -236,7 +253,9 @@ func _on_committed(is_left: bool) -> void:
 	for u in Data.DECK_UNLOCKS:
 		if u["at"] == turns:
 			_play_deck_unlock(u)
-	busy = false
+	# Ne repasse à IDLE que si on est toujours en transition (le codex a pu prendre la main).
+	if _state == State.TRANSITIONING:
+		_set_state(State.IDLE)
 
 func _refresh_all() -> void:
 	for r in Data.RESOURCES:
@@ -264,6 +283,7 @@ func _fit_question() -> void:
 
 # ── mort / respawn ──
 func _play_death(key: String, hi: bool) -> void:
+	_set_state(State.DEATH)
 	var mat := _deathfx.material as ShaderMaterial
 	mat.set_shader_parameter("rect_size", _deathfx.size)
 	mat.set_shader_parameter("progress", 0.0)
@@ -311,7 +331,7 @@ func _respawn() -> void:
 	await get_tree().process_frame
 	_layout_stage()
 	_cardview.play_entry()
-	busy = false
+	_set_state(State.IDLE)
 
 func _new_cover() -> void:
 	cover = Data.COVERS[randi() % Data.COVERS.size()]
