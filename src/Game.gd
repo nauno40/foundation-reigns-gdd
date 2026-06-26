@@ -246,6 +246,7 @@ func _fit_question() -> void:
 # ── mort / respawn ──
 func _play_death(key: String, hi: bool) -> void:
 	_set_state(State.DEATH)
+	AudioManager.play_sfx(SfxBank.death())   # son dramatique de mort
 	var mat := _deathfx.material as ShaderMaterial
 	mat.set_shader_parameter("rect_size", _deathfx.size)
 	mat.set_shader_parameter("progress", 0.0)
@@ -282,6 +283,7 @@ func cause_label_res(key: String) -> String:
 	return key
 
 func _respawn() -> void:
+	AudioManager.play_sfx(SfxBank.respawn())   # son de nouveau règne
 	legit = 50 if _last_death_key == "legitimacy" else 80
 	_new_cover()
 	_init_reign(legit)
@@ -311,6 +313,7 @@ func _init_reign(legit_start: int) -> void:
 # Reste en create_tween() : positions/cibles calculées au runtime (taille de carte,
 # position courante) — un AnimationPlayer à valeurs figées ne conviendrait pas.
 func _play_deck_unlock(u: Dictionary) -> void:
+	AudioManager.play_sfx(SfxBank.unlock())   # son de déblocage de deck
 	# Cartes qui glissent : SOUS la carte actuelle (template .deck-add z-index 1 < .card z-index 3).
 	var fx := Control.new()
 	fx.set_anchors_preset(Control.PRESET_FULL_RECT)

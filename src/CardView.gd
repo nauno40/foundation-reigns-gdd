@@ -32,6 +32,7 @@ var _vx := 0.0
 var _vy := 0.0
 var _start := Vector2.ZERO
 var _flying := false
+var _revealed := false   # le choix est-il révélé ? (déclenche le son de swipe une fois)
 var _left_title := ""
 var _right_title := ""
 
@@ -86,6 +87,7 @@ func show_card(card: Dictionary) -> void:
 	_flying = false
 	_releasing = false
 	_grabbing = false
+	_revealed = false
 	_drag = 0.0
 	_drag_y = 0.0
 	_vx = 0.0
@@ -157,12 +159,16 @@ func _apply() -> void:
 
 func _update_choice() -> void:
 	if absf(_drag) > reveal_threshold:
+		if not _revealed:
+			_revealed = true
+			AudioManager.play_sfx(SfxBank.swipe())   # son de swipe au franchissement du seuil
 		var right := _drag > 0.0
 		_choice.text = _right_title if right else _left_title
 		_choice.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT if right else HORIZONTAL_ALIGNMENT_LEFT
 		_choice.modulate.a = clampf(absf(_drag) / 40.0, 0.0, 1.0)
 		_keytag.modulate.a = 0.0
 	else:
+		_revealed = false
 		_choice.modulate.a = 0.0
 		_keytag.modulate.a = 1.0
 
@@ -172,6 +178,7 @@ func _fly_out(dir: float) -> void:
 	_grabbing = false
 	scale = Vector2.ONE
 	preview.emit("")
+	AudioManager.play_sfx(SfxBank.commit())   # « floup » au commit (carte qui part)
 	var target_x := _base.x + dir * flyout_distance
 	var t := create_tween().set_parallel()
 	t.tween_property(self, "position:x", target_x, flyout_duration).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
