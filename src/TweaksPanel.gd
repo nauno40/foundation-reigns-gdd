@@ -2,54 +2,27 @@ class_name TweaksPanel
 extends Control
 
 # Panneau de réglages (port du Tweaks de app.jsx) : accent, grain, taille texte,
-# difficulté. Écrit dans Cfg et émet Cfg.changed.
+# difficulté. Structure statique dans TweaksPanel.tscn ; ce script ne construit que
+# le contenu dynamique (swatches, sliders, boutons). Écrit dans Cfg et émet Cfg.changed.
 
 const FONT_MONO = preload("res://assets/fonts/SpaceMono-Regular.ttf")
 const ACCENTS := ["#4fd6e8", "#e8b65a", "#b98ad6", "#5fcf8f"]
 
 var _open := false
-var _panel: PanelContainer
+@onready var _panel: PanelContainer = %Panel
+@onready var _dynamic: VBoxContainer = %Dynamic
 
 func _ready() -> void:
 	visible = false
-	_build()
+	%CloseBtn.pressed.connect(close)
+	_build_dynamic()
 
-func _build() -> void:
-	_panel = PanelContainer.new()
-	_panel.set_anchors_preset(Control.PRESET_RIGHT_WIDE)
-	_panel.anchor_left = 1.0
-	_panel.offset_left = -230.0
-	_panel.offset_right = 0.0
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color(0.043, 0.063, 0.098, 0.97)
-	sb.border_width_left = 1
-	sb.border_color = Pal.LINE
-	sb.content_margin_left = 16; sb.content_margin_right = 16
-	sb.content_margin_top = 16; sb.content_margin_bottom = 16
-	_panel.add_theme_stylebox_override("panel", sb)
-	add_child(_panel)
-
-	var vb := VBoxContainer.new()
-	vb.add_theme_constant_override("separation", 14)
-	_panel.add_child(vb)
-
-	var head := HBoxContainer.new()
-	vb.add_child(head)
-	var title := _lbl("RÉGLAGES", 10, Pal.ACCENT)
-	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	head.add_child(title)
-	var x := Button.new()
-	x.text = "✕"
-	x.focus_mode = Control.FOCUS_NONE
-	x.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
-	x.add_theme_color_override("font_color", Pal.INK_DIM)
-	x.pressed.connect(close)
-	head.add_child(x)
-
-	vb.add_child(_section("ACCENT HOLO"))
+# Construit les réglages dynamiques dans le conteneur %Dynamic.
+func _build_dynamic() -> void:
+	_dynamic.add_child(_section("ACCENT HOLO"))
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 8)
-	vb.add_child(row)
+	_dynamic.add_child(row)
 	for hexc in ACCENTS:
 		var sw := Button.new()
 		sw.custom_minimum_size = Vector2(34, 26)
@@ -63,26 +36,26 @@ func _build() -> void:
 		sw.pressed.connect(func(): Cfg.accent = Color(hexc); Cfg.emit_changed())
 		row.add_child(sw)
 
-	vb.add_child(_section("GRAIN / SCANLINES"))
+	_dynamic.add_child(_section("GRAIN / SCANLINES"))
 	var grain := HSlider.new()
 	grain.min_value = 0.0; grain.max_value = 1.0; grain.step = 0.1
 	grain.value = Cfg.motion
 	grain.custom_minimum_size = Vector2(0, 18)
 	grain.value_changed.connect(func(v): Cfg.motion = v; Cfg.emit_changed())
-	vb.add_child(grain)
+	_dynamic.add_child(grain)
 
-	vb.add_child(_section("TAILLE DU TEXTE"))
+	_dynamic.add_child(_section("TAILLE DU TEXTE"))
 	var prose := HSlider.new()
 	prose.min_value = 14; prose.max_value = 22; prose.step = 1
 	prose.value = Cfg.prose
 	prose.custom_minimum_size = Vector2(0, 18)
 	prose.value_changed.connect(func(v): Cfg.prose = int(v); Cfg.emit_changed())
-	vb.add_child(prose)
+	_dynamic.add_child(prose)
 
-	vb.add_child(_section("DIFFICULTÉ"))
+	_dynamic.add_child(_section("DIFFICULTÉ"))
 	var diffs := HBoxContainer.new()
 	diffs.add_theme_constant_override("separation", 6)
-	vb.add_child(diffs)
+	_dynamic.add_child(diffs)
 	for d in ["doux", "normal", "brutal"]:
 		var b := Button.new()
 		b.text = d.to_upper()
@@ -116,17 +89,15 @@ func close() -> void:
 
 func _on_close_hidden() -> void: visible = false
 
+# Reconstruit uniquement le contenu dynamique (la structure statique reste intacte).
 func _rebuild() -> void:
-	_panel.queue_free()
-	_build()
+	for c in _dynamic.get_children(): c.queue_free()
+	_build_dynamic()
 
-func _lbl(t: String, s: int, c: Color) -> Label:
+func _section(t: String) -> Label:
 	var l := Label.new()
 	l.text = t
 	l.add_theme_font_override("font", FONT_MONO)
-	l.add_theme_font_size_override("font_size", s)
-	l.add_theme_color_override("font_color", c)
+	l.add_theme_font_size_override("font_size", 8)
+	l.add_theme_color_override("font_color", Color("#6b768c"))
 	return l
-
-func _section(t: String) -> Label:
-	return _lbl(t, 8, Color("#6b768c"))

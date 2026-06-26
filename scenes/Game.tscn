@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dw30444hv8wwd" path="res://scenes/Codex.tscn" id="7_codex"]
 [ext_resource type="PackedScene" uid="uid://cfraa3sx1ucnn" path="res://scenes/Death.tscn" id="8_death"]
 [ext_resource type="Shader" uid="uid://bayl0h5oammjj" path="res://assets/shaders/death_fx.gdshader" id="9_g4kob"]
+[ext_resource type="PackedScene" path="res://scenes/TweaksPanel.tscn" id="10_qy1jj"]
 
 [sub_resource type="StyleBoxFlat" id="SB_topbar"]
 bg_color = Color(0.043, 0.055, 0.082, 1)
@@ -352,6 +353,11 @@ layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+
+[node name="Tweaks" parent="." unique_id=1613212804 instance=ExtResource("10_qy1jj")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
 
 [node name="Gear" type="Button" parent="." unique_id=1419389939]
 unique_name_in_owner = true

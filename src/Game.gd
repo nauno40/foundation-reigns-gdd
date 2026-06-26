@@ -59,7 +59,7 @@ var _hmoved := false
 @onready var _death: Death = %Death
 @onready var _deathfx: ColorRect = %DeathFx
 @onready var _gear: Button = %Gear
-var _tweaks: TweaksPanel
+@onready var _tweaks: TweaksPanel = %Tweaks
 
 func _ready() -> void:
 	for r in Data.RESOURCES:
@@ -68,7 +68,6 @@ func _ready() -> void:
 	_handle_chev.text = _handle_text()
 	_question.add_theme_font_size_override("font_size", Cfg.prose)
 	_connect_signals()
-	_make_overlays()
 	_new_cover()
 	_init_reign(100)
 	card = Data.pick_card([])
@@ -117,14 +116,6 @@ func _on_handle_input(e: InputEvent) -> void:
 		_hstart_y = get_global_mouse_position().y
 		_hmoved = false
 		_codex.drag_start()
-
-func _make_overlays() -> void:
-	# DeathFx, Gear, Codex et Death sont dans Game.tscn (signaux dans _connect_signals).
-	# Seul le panneau Tweaks reste construit en code pour l'instant (déplacé en scène plus tard).
-	_tweaks = TweaksPanel.new()
-	_tweaks.set_anchors_preset(Control.PRESET_FULL_RECT)
-	add_child(_tweaks)
-	move_child(_tweaks, _gear.get_index())   # garde le bouton ⚙ au-dessus du panneau
 
 func _on_gear_pressed() -> void:
 	_tweaks.open()
