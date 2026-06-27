@@ -17,6 +17,12 @@ const TAB_ICONS := {
 	"gal": preload("res://assets/icons/tab_gal.svg"),
 }
 
+# Apparence éditable dans l'inspecteur.
+@export var galaxy_box_style: StyleBox = preload("res://styles/galaxy_box_style.tres")
+@export var section_font: Font = preload("res://assets/fonts/SpaceMono-Regular.ttf")
+@export var section_font_size: int = 9
+@export var section_color: Color = Color("#6b768c")
+
 var _open := false
 var _tab := "chars"
 @onready var _panel: PanelContainer = %Panel
@@ -215,12 +221,7 @@ func _chip(d: Dictionary, locked: bool) -> Control:
 func _render_gal() -> void:
 	# boîte galactique bordée arrondie (template .galaxy)
 	var box := PanelContainer.new()
-	var bsb := StyleBoxFlat.new()
-	bsb.bg_color = Color("#0a1422")
-	bsb.set_corner_radius_all(14)
-	bsb.set_border_width_all(1)
-	bsb.border_color = Pal.LINE
-	box.add_theme_stylebox_override("panel", bsb)
+	box.add_theme_stylebox_override("panel", galaxy_box_style)
 	box.clip_contents = true
 	_body.add_child(box)
 	_galaxy = Control.new()
@@ -312,7 +313,7 @@ func _render_info() -> void:
 func _section(text: String) -> Label:
 	var l := Label.new()
 	l.text = text
-	l.add_theme_font_override("font", Pal.mono_spaced(FONT_MONO, 2))
-	l.add_theme_font_size_override("font_size", 9)
-	l.add_theme_color_override("font_color", Color("#6b768c"))
+	l.add_theme_font_override("font", Pal.mono_spaced(section_font, 2))
+	l.add_theme_font_size_override("font_size", section_font_size)
+	l.add_theme_color_override("font_color", section_color)
 	return l
