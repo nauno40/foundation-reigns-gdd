@@ -79,7 +79,7 @@ func _ready() -> void:
 		"death":
 			# force une mort ressource
 			game.res["military"] = 4
-			game.card = Data.DECK[2]  # sermak : left mil-6
+			game.card = Data.all_cards()[2]  # sermak : left mil-6
 			game._cardview.show_card(game.card)
 			await _wait(10)
 			game._on_committed(true)
@@ -97,7 +97,7 @@ func _ready() -> void:
 			game.res = {"military": 60, "religion": 40, "commerce": 55, "politics": 50}
 			game._refresh_all()
 			await _wait(40)
-			game.card = Data.DECK[2]  # sermak : right mil+12 com-10 rel-4
+			game.card = Data.all_cards()[2]  # sermak : right mil+12 com-10 rel-4
 			game._cardview.show_card(game.card)
 			await _wait(5)
 			game._on_committed(false)
