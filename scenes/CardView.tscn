@@ -1,4 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://cardview_scene"]
+[gd_scene load_steps=10 format=3 uid="uid://cardview_scene"]
+[ext_resource type="Theme" uid="uid://qxqq70yjqdc4" path="res://themes/main.tres" id="theme_main_x9"]
 
 [ext_resource type="Script" path="res://src/CardView.gd" id="1_card"]
 [ext_resource type="Shader" path="res://assets/shaders/card_face.gdshader" id="2_face"]
@@ -52,6 +53,7 @@ content_margin_right = 7.0
 content_margin_bottom = 3.0
 
 [node name="CardView" type="Control"]
+theme = ExtResource("theme_main_x9")
 clip_contents = false
 mouse_filter = 0
 script = ExtResource("1_card")

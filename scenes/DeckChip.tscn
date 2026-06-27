@@ -1,4 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://deckchip_scene"]
+[gd_scene load_steps=6 format=3 uid="uid://deckchip_scene"]
+[ext_resource type="Theme" uid="uid://qxqq70yjqdc4" path="res://themes/main.tres" id="theme_main_x9"]
 
 [ext_resource type="Script" path="res://src/DeckChip.gd" id="1_chip"]
 [ext_resource type="FontFile" path="res://assets/fonts/Spectral-Regular.ttf" id="2_spectral"]
@@ -21,6 +22,7 @@ content_margin_right = 12.0
 content_margin_bottom = 9.0
 
 [node name="DeckChip" type="PanelContainer"]
+theme = ExtResource("theme_main_x9")
 theme_override_styles/panel = SubResource("SB_chip")
 script = ExtResource("1_chip")
 

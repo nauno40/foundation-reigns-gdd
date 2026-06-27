@@ -1,4 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://statbox_scene"]
+[gd_scene load_steps=6 format=3 uid="uid://statbox_scene"]
+[ext_resource type="Theme" uid="uid://qxqq70yjqdc4" path="res://themes/main.tres" id="theme_main_x9"]
 
 [ext_resource type="Script" path="res://src/StatBox.gd" id="1_stat"]
 [ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
@@ -15,6 +16,7 @@ base_font = ExtResource("2_mono")
 spacing_glyph = 2
 
 [node name="StatBox" type="PanelContainer"]
+theme = ExtResource("theme_main_x9")
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("SB_stat")
 script = ExtResource("1_stat")
