@@ -15,6 +15,16 @@ const QUESTION_MAX_H := 150.0
 # question_fade / death_fx ont leur durée dans les clips de l'AnimationPlayer.
 @export var deck_unlock_lifetime: float = 2.4
 
+# Apparence du déblocage de deck (éditable dans l'inspecteur).
+@export var deck_card_style: StyleBox = preload("res://styles/deck_card_style.tres")
+@export var banner_style: StyleBox = preload("res://styles/deck_banner_style.tres")
+@export var unlock_tag_font: Font = FONT_MONO
+@export var unlock_name_font: Font = FONT_CAVEAT
+@export var unlock_count_font: Font = FONT_MONO
+@export var unlock_tag_color: Color = Color("#4fd6e8")
+@export var unlock_name_color: Color = Color(0.933, 0.973, 0.984)
+@export var unlock_count_color: Color = Color(0.624, 0.706, 0.769)
+
 # état (port de App)
 var cover := {}
 var res := {"military": 50, "religion": 50, "commerce": 50, "politics": 50}
@@ -329,15 +339,7 @@ func _play_deck_unlock(u: Dictionary) -> void:
 		ac.size = Vector2(side, side)
 		ac.pivot_offset = Vector2(side, side) * 0.5
 		ac.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		var sb := StyleBoxFlat.new()
-		sb.bg_color = Color(0.102, 0.122, 0.161)   # #1a1f29 : identique à la carte de pile
-		sb.set_corner_radius_all(16)
-		sb.set_border_width_all(1)
-		sb.border_color = Color(0.471, 0.784, 0.863, 0.16)
-		sb.shadow_color = Color(0, 0, 0, 0.42)
-		sb.shadow_size = 16
-		sb.shadow_offset = Vector2(0, 16)
-		ac.add_theme_stylebox_override("panel", sb)
+		ac.add_theme_stylebox_override("panel", deck_card_style)
 		ac.position = _cardview.position + Vector2(140, 150)
 		ac.rotation = deg_to_rad(16)
 		ac.scale = Vector2(0.9, 0.9)
@@ -369,16 +371,7 @@ func _unlock_banner(parent: Control, deck_name: String, count: int) -> void:
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	parent.add_child(center)
 	var banner := PanelContainer.new()
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color(0.055, 0.094, 0.149, 0.94)
-	sb.set_corner_radius_all(14)
-	sb.set_border_width_all(1)
-	sb.border_color = Color(0.31, 0.839, 0.91, 0.55)
-	sb.shadow_color = Color(0.31, 0.839, 0.91, 0.35)
-	sb.shadow_size = 22
-	sb.content_margin_left = 30; sb.content_margin_right = 30
-	sb.content_margin_top = 18; sb.content_margin_bottom = 18
-	banner.add_theme_stylebox_override("panel", sb)
+	banner.add_theme_stylebox_override("panel", banner_style)
 	center.add_child(banner)
 	var vb := VBoxContainer.new()
 	vb.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -387,23 +380,23 @@ func _unlock_banner(parent: Control, deck_name: String, count: int) -> void:
 	var tag := Label.new()
 	tag.text = "N O U V E A U   D E C K"
 	tag.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	tag.add_theme_font_override("font", FONT_MONO)
+	tag.add_theme_font_override("font", unlock_tag_font)
 	tag.add_theme_font_size_override("font_size", 8)
-	tag.add_theme_color_override("font_color", Cfg.accent)
+	tag.add_theme_color_override("font_color", unlock_tag_color)
 	vb.add_child(tag)
 	var nm := Label.new()
 	nm.text = deck_name
 	nm.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	nm.add_theme_font_override("font", FONT_CAVEAT)
+	nm.add_theme_font_override("font", unlock_name_font)
 	nm.add_theme_font_size_override("font_size", 28)
-	nm.add_theme_color_override("font_color", Color(0.933, 0.973, 0.984))
+	nm.add_theme_color_override("font_color", unlock_name_color)
 	vb.add_child(nm)
 	var cnt := Label.new()
 	cnt.text = "+%d cartes" % count
 	cnt.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	cnt.add_theme_font_override("font", FONT_MONO)
+	cnt.add_theme_font_override("font", unlock_count_font)
 	cnt.add_theme_font_size_override("font_size", 9)
-	cnt.add_theme_color_override("font_color", Color(0.624, 0.706, 0.769))
+	cnt.add_theme_color_override("font_color", unlock_count_color)
 	vb.add_child(cnt)
 	banner.modulate.a = 0.0
 	banner.scale = Vector2(0.9, 0.9)
