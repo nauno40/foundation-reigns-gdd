@@ -1,0 +1,22 @@
+[
+	{
+		"at": 3,
+		"cards": 4,
+		"name": "Église de la Science"
+	},
+	{
+		"at": 8,
+		"cards": 5,
+		"name": "Menace anacréonienne"
+	},
+	{
+		"at": 14,
+		"cards": 4,
+		"name": "Réseau marchand"
+	},
+	{
+		"at": 21,
+		"cards": 5,
+		"name": "Cour impériale"
+	}
+]

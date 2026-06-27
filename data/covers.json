@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Conseiller impérial",
+		"res": "politics"
+	},
+	{
+		"name": "Prêtre scientifique",
+		"res": "religion"
+	},
+	{
+		"name": "Marchand local",
+		"res": "commerce"
+	}
+]

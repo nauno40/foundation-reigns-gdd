@@ -1,0 +1,79 @@
+[
+	{
+		"id": "seldon",
+		"key": true,
+		"met": true,
+		"name": "Hari Seldon",
+		"tag": "Fondateur du Plan"
+	},
+	{
+		"id": "hardin",
+		"key": true,
+		"met": true,
+		"name": "Salvor Hardin",
+		"tag": "Maire de Terminus"
+	},
+	{
+		"id": "pirenne",
+		"key": false,
+		"met": true,
+		"name": "Lewis Pirenne",
+		"tag": "Président du Conseil"
+	},
+	{
+		"id": "sermak",
+		"key": false,
+		"met": true,
+		"name": "Sef Sermak",
+		"tag": "Chef des Actionnistes"
+	},
+	{
+		"id": "anselm",
+		"key": false,
+		"met": true,
+		"name": "Frère Anselm",
+		"tag": "Église de la Science"
+	},
+	{
+		"id": "verisof",
+		"key": false,
+		"met": true,
+		"name": "Poly Verisof",
+		"tag": "Grand Prêtre & Ambassadeur"
+	},
+	{
+		"id": "lefkin",
+		"key": false,
+		"met": true,
+		"name": "Prince Lefkin",
+		"tag": "Régent d'Anacréon"
+	},
+	{
+		"id": "mallow",
+		"key": true,
+		"met": false,
+		"name": "Hober Mallow",
+		"tag": "Prince Marchand"
+	},
+	{
+		"id": "barr",
+		"key": false,
+		"met": false,
+		"name": "Ducem Barr",
+		"tag": "Patricien de Siwenna"
+	},
+	{
+		"id": "bayta",
+		"key": true,
+		"met": false,
+		"name": "Bayta Darell",
+		"tag": "Résistante"
+	},
+	{
+		"id": "mis",
+		"key": false,
+		"met": false,
+		"name": "Ebling Mis",
+		"tag": "Psychologue"
+	}
+]
