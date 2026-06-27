@@ -33,6 +33,7 @@ func setup(c: CharacterData) -> void:
 		await ready
 	var met := c.met
 	var key := c.key
+	# Teinte dynamique par personnage (tone_for) — calculée au runtime, pas un .tres.
 	(_card.get_theme_stylebox("panel") as StyleBoxFlat).bg_color = Data.tone_for(c.id) if met else Color("#10151f")
 	_grid.visible = met
 	_bust.visible = met

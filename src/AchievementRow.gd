@@ -13,6 +13,7 @@ func setup(a: Dictionary) -> void:
 	if not is_node_ready():
 		await ready
 	var done: bool = a["done"]
+	# Couleur de la case dépend de l'état done + Cfg.accent — dynamique, reste en code.
 	var cs := _check.get_theme_stylebox("panel") as StyleBoxFlat
 	if done:
 		cs.bg_color = Cfg.accent

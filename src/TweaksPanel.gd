@@ -27,6 +27,8 @@ func _build_dynamic() -> void:
 		var sw := Button.new()
 		sw.custom_minimum_size = Vector2(34, 26)
 		sw.focus_mode = Control.FOCUS_NONE
+		# StyleBox dynamique : une couleur par accent (ACCENTS) — non extractible en
+		# un seul .tres, reste construit en code.
 		var ssb := StyleBoxFlat.new()
 		ssb.bg_color = Color(hexc)
 		ssb.set_corner_radius_all(6)
@@ -63,6 +65,8 @@ func _build_dynamic() -> void:
 		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		b.add_theme_font_override("font", FONT_MONO)
 		b.add_theme_font_size_override("font_size", 8)
+		# StyleBox semi-dynamique : la bordure/couleur dépend de la difficulté
+		# sélectionnée (Cfg.difficulty) — reste en code.
 		var bsb := StyleBoxFlat.new()
 		bsb.bg_color = Color(1, 1, 1, 0.03)
 		bsb.set_corner_radius_all(6)
