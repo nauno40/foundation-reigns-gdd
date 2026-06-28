@@ -35,6 +35,13 @@ window/handheld/orientation=1
 
 enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
 
+[foundation]
+
+difficulty="normal"
+prose=17
+motion=1.0
+accent=Color(0.30980393, 0.8392157, 0.9098039, 1)
+
 [input]
 
 swipe_left={
