@@ -25,6 +25,14 @@ const QUESTION_MAX_H := 150.0
 @export var unlock_name_color: Color = Color(0.933, 0.973, 0.984)
 @export var unlock_count_color: Color = Color(0.624, 0.706, 0.769)
 
+# Animation des cartes qui glissent au déblocage de deck (éditable dans l'inspecteur).
+@export var unlock_card_count_min: int = 3
+@export var unlock_card_count_max: int = 6
+@export var unlock_card_start_pos: Vector2 = Vector2(140, 150)
+@export var unlock_card_start_rotation: float = 16.0
+@export var unlock_card_rotation: float = 2.5
+@export var unlock_fly_duration: float = 0.5
+
 # état (port de App)
 var cover := {}
 var res := {"military": 50, "religion": 50, "commerce": 50, "politics": 50}
@@ -333,24 +341,24 @@ func _play_deck_unlock(u: Dictionary) -> void:
 	_stage.move_child(fx, _cardview.get_index())   # passe sous la carte courante
 	var side: float = _cardview.size.x
 	var target := _cardview.position + Vector2(10, 10)
-	var n: int = clampi(u["cards"], 3, 6)
+	var n: int = clampi(u["cards"], unlock_card_count_min, unlock_card_count_max)
 	for i in range(n):
 		var ac := Panel.new()
 		ac.size = Vector2(side, side)
 		ac.pivot_offset = Vector2(side, side) * 0.5
 		ac.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		ac.add_theme_stylebox_override("panel", deck_card_style)
-		ac.position = _cardview.position + Vector2(140, 150)
-		ac.rotation = deg_to_rad(16)
+		ac.position = _cardview.position + unlock_card_start_pos
+		ac.rotation = deg_to_rad(unlock_card_start_rotation)
 		ac.scale = Vector2(0.9, 0.9)
 		ac.modulate.a = 0.0
 		fx.add_child(ac)
 		var delay := i * 0.09
 		var t := ac.create_tween().set_parallel()
 		t.tween_property(ac, "modulate:a", 1.0, 0.2).set_delay(delay)
-		t.tween_property(ac, "position", target, 0.5).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-		t.tween_property(ac, "rotation", deg_to_rad(2.5), 0.5).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-		t.tween_property(ac, "scale", Vector2.ONE, 0.5).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		t.tween_property(ac, "position", target, unlock_fly_duration).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		t.tween_property(ac, "rotation", deg_to_rad(unlock_card_rotation), unlock_fly_duration).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		t.tween_property(ac, "scale", Vector2.ONE, unlock_fly_duration).set_delay(delay).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 	# Bandeau : AU-DESSUS de la carte (template .deck-banner z-index 12).
 	var banfx := Control.new()
 	banfx.set_anchors_preset(Control.PRESET_FULL_RECT)
