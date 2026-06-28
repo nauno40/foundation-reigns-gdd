@@ -54,8 +54,6 @@ shader = ExtResource("9_g4kob")
 shader_parameter/progress = 0.0
 shader_parameter/rect_size = Vector2(460, 920)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xj3m"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcffj"]
 
 [sub_resource type="Animation" id="Animation_qy1jj"]
@@ -286,7 +284,6 @@ alignment = 1
 [node name="BearerName" type="Label" parent="MainVBox/Panel/PanelMargin/PanelVBox/Speaker" unique_id=1516858423]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.906, 0.929, 0.965, 1)
 theme_override_fonts/font = ExtResource("2_mono")
 theme_override_font_sizes/font_size = 17
 text = "Nom"
@@ -331,7 +328,6 @@ horizontal_alignment = 1
 [node name="Reign" type="RichTextLabel" parent="MainVBox/BottomBar/BottomMargin/BottomVBox" unique_id=1397419795]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/default_color = Color(0.576, 0.627, 0.714, 1)
 theme_override_fonts/normal_font = ExtResource("2_mono")
 theme_override_fonts/bold_font = ExtResource("2_mono")
 theme_override_font_sizes/normal_font_size = 10
@@ -409,7 +405,6 @@ focus_mode = 0
 theme_override_colors/font_color = Color(0.35686275, 0.4, 0.5019608, 1)
 theme_override_colors/font_hover_color = Color(0.30980393, 0.8392157, 0.9098039, 1)
 theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxEmpty_3xj3m")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_mcffj")
 text = "⚙"
 
