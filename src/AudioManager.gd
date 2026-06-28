@@ -1,25 +1,27 @@
 extends Node
 
-# Autoload « AudioManager » : gère la musique d'ambiance et les SFX.
-# Bus : Master → Music, SFX, UI. Les lecteurs sont créés en code (autoload sans scène).
+# Autoload « AudioManager » (scène scenes/AudioManager.tscn) : gère la musique
+# d'ambiance et les SFX. Bus : Master → Music, SFX, UI. Les lecteurs sont des
+# nœuds de la scène (Music/SFX/UI).
 
 signal music_finished
 
-var _music: AudioStreamPlayer
-var _sfx: AudioStreamPlayer
-var _ui: AudioStreamPlayer
+# Streams optionnels, réglables dans l'inspecteur (nœud racine de AudioManager.tscn).
+# Non assignés → les sites d'appel passent un fallback synthétique (SfxBank).
+# Aucun asset par défaut → silence comme avant.
+@export var swipe_sfx: AudioStream
+@export var commit_sfx: AudioStream
+@export var death_sfx: AudioStream
+@export var unlock_sfx: AudioStream
+@export var respawn_sfx: AudioStream
+@export var music_ambient: AudioStream
+
+@onready var _music: AudioStreamPlayer = $Music
+@onready var _sfx: AudioStreamPlayer = $SFX
+@onready var _ui: AudioStreamPlayer = $UI
 
 func _ready() -> void:
-	_music = _make_player("Music")
-	_sfx = _make_player("SFX")
-	_ui = _make_player("UI")
 	_music.finished.connect(_on_music_finished)
-
-func _make_player(bus: String) -> AudioStreamPlayer:
-	var p := AudioStreamPlayer.new()
-	p.bus = bus
-	add_child(p)
-	return p
 
 func _on_music_finished() -> void:
 	music_finished.emit()
@@ -34,10 +36,11 @@ func play_music(stream: AudioStream, fade_in: float = 0.0) -> void:
 	if fade_in > 0.0:
 		create_tween().tween_property(_music, "volume_db", 0.0, fade_in)
 
-func play_sfx(stream: AudioStream) -> void:
-	if stream == null:
+func play_sfx(stream: AudioStream, fallback: AudioStream = null) -> void:
+	var s: AudioStream = stream if stream != null else fallback
+	if s == null:
 		return
-	_sfx.stream = stream
+	_sfx.stream = s
 	_sfx.play()
 
 func play_ui(stream: AudioStream) -> void:
