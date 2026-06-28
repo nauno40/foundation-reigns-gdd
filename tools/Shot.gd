@@ -41,7 +41,10 @@ func _ready() -> void:
 			add_child(bg)
 			var cc = load("res://scenes/CharacterCard.tscn").instantiate()
 			add_child(cc)
-			cc.setup({"id": "hari", "name": "Hari Seldon", "tag": "Fondateur du Plan", "met": true, "key": true})
+			var hari := CharacterData.new()
+			hari.id = "hari"; hari.name = "Hari Seldon"; hari.tag = "Fondateur du Plan"
+			hari.met = true; hari.key = true
+			cc.setup(hari)
 			cc.set_anchors_preset(Control.PRESET_TOP_LEFT)
 			cc.position = Vector2(40, 40)
 			await _wait(4)
