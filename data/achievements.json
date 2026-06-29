@@ -1,0 +1,27 @@
+[
+	{
+		"desc": "Prendre une première couverture.",
+		"done": true,
+		"name": "Premier Orateur"
+	},
+	{
+		"desc": "Lire 5 humeurs différentes.",
+		"done": true,
+		"name": "Lecteur d'esprits"
+	},
+	{
+		"desc": "Terminer un règne sans être démasqué.",
+		"done": false,
+		"name": "Main invisible"
+	},
+	{
+		"desc": "Franchir la 1re Crise de Seldon (ans 50–80).",
+		"done": false,
+		"name": "Crise d'Anacréon"
+	},
+	{
+		"desc": "Mourir de vieillesse (×1.5 score).",
+		"done": false,
+		"name": "Vieil Orateur"
+	}
+]

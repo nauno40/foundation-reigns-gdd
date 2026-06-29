@@ -1,95 +1,79 @@
-{
-	"hari_seldon": {
+[
+	{
+		"id": "seldon",
+		"key": true,
+		"met": true,
 		"name": "Hari Seldon",
-		"deck": "seldon_vault",
-		"sprite": "hari_seldon",
-		"fixed": true,
-		"era_start": 1,
-		"era_end": 1000,
-		"description": "Le fondateur. Apparaît uniquement via les messages enregistrés dans la Crypte.",
-		"role": "Fondateur — La Crypte"
+		"tag": "Fondateur du Plan"
 	},
-	"salvor_hardin": {
+	{
+		"id": "hardin",
+		"key": true,
+		"met": true,
 		"name": "Salvor Hardin",
-		"deck": "hardin_legacy",
-		"sprite": "salvor_hardin",
-		"fixed": true,
-		"era_start": 1,
-		"era_end": 80,
-		"description": "Premier maire de Terminus. Maîtrise la politique et la religion comme outils.",
-		"role": "Maire de Terminus"
+		"tag": "Maire de Terminus"
 	},
-	"hober_mallow": {
+	{
+		"id": "pirenne",
+		"key": false,
+		"met": true,
+		"name": "Lewis Pirenne",
+		"tag": "Président du Conseil"
+	},
+	{
+		"id": "sermak",
+		"key": false,
+		"met": true,
+		"name": "Sef Sermak",
+		"tag": "Chef des Actionnistes"
+	},
+	{
+		"id": "anselm",
+		"key": false,
+		"met": true,
+		"name": "Frère Anselm",
+		"tag": "Église de la Science"
+	},
+	{
+		"id": "verisof",
+		"key": false,
+		"met": true,
+		"name": "Poly Verisof",
+		"tag": "Grand Prêtre & Ambassadeur"
+	},
+	{
+		"id": "lefkin",
+		"key": false,
+		"met": true,
+		"name": "Prince Lefkin",
+		"tag": "Régent d'Anacréon"
+	},
+	{
+		"id": "mallow",
+		"key": true,
+		"met": false,
 		"name": "Hober Mallow",
-		"deck": "mallow_legacy",
-		"sprite": "hober_mallow",
-		"fixed": true,
-		"era_start": 200,
-		"era_end": 350,
-		"description": "Premier Prince Marchand. Commerce comme arme diplomatique.",
-		"role": "Prince Marchand"
+		"tag": "Prince Marchand"
 	},
-	"bayta_darell": {
-		"name": "Bayta Darell",
-		"deck": "bayta_darell",
-		"sprite": "bayta_darell",
-		"fixed": true,
-		"era_start": 290,
-		"era_end": 380,
-		"description": "Héroïne de l'ère du Mulet. La seule à avoir reconnu le Mulet.",
-		"role": "Héroïne de la Fondation"
-	},
-	"ducem_barr": {
+	{
+		"id": "barr",
+		"key": false,
+		"met": false,
 		"name": "Ducem Barr",
-		"deck": "ducem_barr",
-		"sprite": "ducem_barr",
-		"fixed": true,
-		"era_start": 200,
-		"era_end": 300,
-		"description": "Érudit siwennien. Témoin de la chute de l'Empire.",
-		"role": "Patricien de Siwenna"
+		"tag": "Patricien de Siwenna"
 	},
-	"ebling_mis": {
+	{
+		"id": "bayta",
+		"key": true,
+		"met": false,
+		"name": "Bayta Darell",
+		"tag": "Résistante"
+	},
+	{
+		"id": "mis",
+		"key": false,
+		"met": false,
 		"name": "Ebling Mis",
-		"deck": "ebling_mis",
-		"sprite": "ebling_mis",
-		"fixed": true,
-		"era_start": 290,
-		"era_end": 340,
-		"description": "Psychohistorien. A failli localiser la Seconde Fondation.",
-		"role": "Psychologue"
-	},
-	"lady_callia": {
-		"name": "Dame Callia",
-		"deck": "lady_callia",
-		"fixed": true,
-		"role": "Favorite de Kalgan",
-		"key": true
-	},
-	"onum_barr": {
-		"name": "Onum Barr",
-		"deck": "siwenna_affair",
-		"fixed": true,
-		"role": "Patricien de Siwenna",
-		"key": true
-	},
-	"lewin_barr": {
-		"name": "Lewin Barr",
-		"deck": "siwenna_affair",
-		"fixed": true,
-		"role": "Cadet de la famille Barr"
-	},
-	"the_widow_velm": {
-		"name": "Veuve Velm",
-		"deck": "mentalic_inquiry",
-		"fixed": true,
-		"role": "Veuve de Sayshell"
-	},
-	"the_echo": {
-		"name": "L'Écho",
-		"deck": "mentalic_inquiry",
-		"fixed": true,
-		"role": "Voyageur égaré",
-		"key": true
+		"tag": "Psychologue"
 	}
-}
+]

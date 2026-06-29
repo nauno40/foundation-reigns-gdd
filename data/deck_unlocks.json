@@ -1,14 +1,22 @@
 [
-  { "id": "hardin_era",       "name": "Ère Hardin",            "subtitle": "La religion comme outil" },
-  { "id": "merchant_era",     "name": "Ère des Marchands",     "subtitle": "L'expansion commerciale" },
-  { "id": "encyclopaedia",    "name": "Projet Encyclopédie",   "subtitle": "Le savoir contre l'oubli" },
-  { "id": "mentalic_inquiry", "name": "Enquête mentalique",    "subtitle": "Les pouvoirs de l'esprit" },
-  { "id": "anacreon_throne",  "name": "Le Trône d'Anacréon",   "subtitle": "Le royaume militariste" },
-  { "id": "church_schism",    "name": "Schisme de l'Église",   "subtitle": "La foi se fracture" },
-  { "id": "fall_of_terminus", "name": "La Chute de Terminus",  "subtitle": "Le cœur menacé" },
-  { "id": "riose_campaign",   "name": "Campagne de Bel Riose", "subtitle": "Le dernier grand général" },
-  { "id": "kalgan_campaign",  "name": "Campagne de Kalgan",    "subtitle": "Le seigneur de guerre" },
-  { "id": "bayta_darell",     "name": "Bayta Darell",          "subtitle": "L'intuition qui sauve" },
-  { "id": "ebling_mis",       "name": "Ebling Mis",            "subtitle": "Le savant obsédé" },
-  { "id": "hidden_speaker",   "name": "L'Orateur caché",       "subtitle": "La Seconde Fondation veille" }
+	{
+		"at": 3,
+		"cards": 4,
+		"name": "Église de la Science"
+	},
+	{
+		"at": 8,
+		"cards": 5,
+		"name": "Menace anacréonienne"
+	},
+	{
+		"at": 14,
+		"cards": 4,
+		"name": "Réseau marchand"
+	},
+	{
+		"at": 21,
+		"cards": 5,
+		"name": "Cour impériale"
+	}
 ]

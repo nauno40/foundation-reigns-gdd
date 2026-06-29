@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="Theme" uid="uid://qxqq70yjqdc4" path="res://themes/main.tres" id="theme_main_x9"]
+
+[ext_resource type="Script" path="res://src/TweaksPanel.gd" id="1_script"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
+
+[sub_resource type="StyleBoxFlat" id="panel_sb"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.043, 0.063, 0.098, 0.97)
+border_width_left = 1
+border_color = Color(0.471, 0.588, 0.745, 0.14)
+
+[node name="TweaksPanel" type="Control"]
+theme = ExtResource("theme_main_x9")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_script")
+
+[node name="Panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -230.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("panel_sb")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Header" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/VBox/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.30980393, 0.8392157, 0.9098039, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_fonts/font = ExtResource("2_mono")
+text = "RÉGLAGES"
+
+[node name="CloseBtn" type="Button" parent="Panel/VBox/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "✕"
+
+[node name="Dynamic" type="VBoxContainer" parent="Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 14

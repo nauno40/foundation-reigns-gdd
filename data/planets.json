@@ -1,98 +1,134 @@
 [
-  {
-	"id": "terminus",
-	"name": "Terminus",
-	"faction": "first_foundation",
-	"initial_state": 1,
-	"game_over_if_lost": true,
-	"narrative_role": "Base permanente de la Fondation"
-  },
-  {
-	"id": "trantor",
-	"name": "Trantor",
-	"faction": "empire",
-	"initial_state": 1,
-	"game_over_if_lost": false,
-	"narrative_role": "Capitale impériale, décline après le sac (an ~300)"
-  },
-  {
-	"id": "anacreon",
-	"name": "Anacréon",
-	"faction": "military_kingdoms",
-	"initial_state": -1,
-	"game_over_if_lost": false,
-	"narrative_role": "Première grande menace militaire"
-  },
-  {
-	"id": "santanni",
-	"name": "Santanni",
-	"faction": "military_kingdoms",
-	"initial_state": -1,
-	"game_over_if_lost": false,
-	"narrative_role": "Royaume des Quatre Provinces"
-  },
-  {
-	"id": "smyrno",
-	"name": "Smyrno",
-	"faction": "military_kingdoms",
-	"initial_state": -1,
-	"game_over_if_lost": false,
-	"narrative_role": "Royaume des Quatre Provinces"
-  },
-  {
-	"id": "askone",
-	"name": "Askone",
-	"faction": "merchants",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Cible commerciale ère Mallow"
-  },
-  {
-	"id": "korell",
-	"name": "Korell",
-	"faction": "oligarchs",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Antagoniste ère Mallow"
-  },
-  {
-	"id": "siwenna",
-	"name": "Siwenna",
-	"faction": "empire",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Illustre la chute de l'Empire"
-  },
-  {
-	"id": "kalgan",
-	"name": "Kalgan",
-	"faction": "kalgan",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Base du Mulet, seigneurie après sa mort"
-  },
-  {
-	"id": "neotrantor",
-	"name": "Neotrantor",
-	"faction": "neotrantor",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Vestige impérial post-sac de Trantor"
-  },
-  {
-	"id": "rossem",
-	"name": "Rossem",
-	"faction": "second_foundation",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Planète cachée, late game"
-  },
-  {
-	"id": "sayshell",
-	"name": "Sayshell",
-	"faction": "church_of_science",
-	"initial_state": 0,
-	"game_over_if_lost": false,
-	"narrative_role": "Culte de la Fondation"
-  }
+	{
+		"base": true,
+		"faction": "Première Fondation",
+		"hidden": false,
+		"id": "terminus",
+		"name": "Terminus",
+		"note": "Base permanente. La perdre = fin du Plan.",
+		"state": 1,
+		"x": 18,
+		"y": 64
+	},
+	{
+		"base": false,
+		"faction": "Empire → Seconde Fondation",
+		"hidden": false,
+		"id": "trantor",
+		"name": "Trantor",
+		"note": "Capitale impériale déclinante. Bascule après le sac (~an 300).",
+		"state": 1,
+		"x": 52,
+		"y": 48
+	},
+	{
+		"base": false,
+		"faction": "Royaumes militaristes",
+		"hidden": false,
+		"id": "anacreon",
+		"name": "Anacréon",
+		"note": "Première grande menace. Le royaume voisin le plus agressif.",
+		"state": -1,
+		"x": 30,
+		"y": 30
+	},
+	{
+		"base": false,
+		"faction": "Royaumes militaristes",
+		"hidden": false,
+		"id": "santanni",
+		"name": "Santanni",
+		"note": "Royaume des Quatre Provinces.",
+		"state": -1,
+		"x": 40,
+		"y": 18
+	},
+	{
+		"base": false,
+		"faction": "Royaumes militaristes",
+		"hidden": false,
+		"id": "smyrno",
+		"name": "Smyrno",
+		"note": "Royaume des Quatre Provinces.",
+		"state": -1,
+		"x": 22,
+		"y": 44
+	},
+	{
+		"base": false,
+		"faction": "Marchands",
+		"hidden": false,
+		"id": "askone",
+		"name": "Askone",
+		"note": "Cible commerciale de l'ère Mallow.",
+		"state": 0,
+		"x": 64,
+		"y": 30
+	},
+	{
+		"base": false,
+		"faction": "Oligarques",
+		"hidden": false,
+		"id": "korell",
+		"name": "Korell",
+		"note": "République des Princes Marchands. Antagoniste de Mallow.",
+		"state": 0,
+		"x": 76,
+		"y": 42
+	},
+	{
+		"base": false,
+		"faction": "Empire → Neotrantor",
+		"hidden": false,
+		"id": "siwenna",
+		"name": "Siwenna",
+		"note": "Province impériale. Chute de l'Empire.",
+		"state": 0,
+		"x": 60,
+		"y": 64
+	},
+	{
+		"base": false,
+		"faction": "Mulet → Kalgan",
+		"hidden": false,
+		"id": "kalgan",
+		"name": "Kalgan",
+		"note": "Base du Mulet, puis seigneurie de guerre.",
+		"state": 0,
+		"x": 82,
+		"y": 72
+	},
+	{
+		"base": false,
+		"faction": "Neotrantor",
+		"hidden": false,
+		"id": "neotrantor",
+		"name": "Neotrantor",
+		"note": "Vestige impérial après le sac de Trantor.",
+		"state": 0,
+		"x": 46,
+		"y": 74
+	},
+	{
+		"base": false,
+		"faction": "Seconde Fondation",
+		"hidden": true,
+		"id": "rossem",
+		"name": "Rossem",
+		"note": "Planète glaciale. Couverture de la Seconde Fondation.",
+		"state": 0,
+		"x": 88,
+		"y": 24
+	},
+	{
+		"base": false,
+		"faction": "Église de la Science",
+		"hidden": false,
+		"id": "sayshell",
+		"name": "Sayshell",
+		"note": "Culte de la Fondation, fin de partie.",
+		"state": 0,
+		"x": 34,
+		"y": 82
+	}
 ]

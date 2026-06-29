@@ -1,0 +1,264 @@
+[
+	{
+		"bearer": "Lewis Pirenne",
+		"id": "pirenne_base",
+		"key": false,
+		"left": {
+			"fx": {
+				"legit": -4,
+				"military": -8,
+				"politics": 6
+			},
+			"reaction": "Pirenne pâlit. « Et s'ils nous écrasent ? »",
+			"title": "« Refusez. Fermement. »"
+		},
+		"mood": "neutral",
+		"question": "« Anacréon réclame une base militaire sur Terminus. Le Conseil n'ose ni refuser, ni céder. Que dois-je leur dire, Orateur ? »",
+		"right": {
+			"fx": {
+				"commerce": -5,
+				"politics": 5
+			},
+			"reaction": "« Toujours temporiser… jusqu'à quand ? »",
+			"title": "« Gagnons du temps. »"
+		},
+		"role": "Président du Conseil"
+	},
+	{
+		"bearer": "Frère Anselm",
+		"id": "anselm_culte",
+		"key": false,
+		"left": {
+			"fx": {
+				"legit": -3,
+				"military": 3,
+				"politics": -4,
+				"religion": 12
+			},
+			"reaction": "« La Galaxie s'illuminera de notre science. »",
+			"title": "« Répandez la foi. »"
+		},
+		"mood": "flattered",
+		"question": "« Les peuples d'Anacréon s'agenouillent déjà devant nos réacteurs comme devant des autels. Étendons-nous le culte, Orateur ? »",
+		"right": {
+			"fx": {
+				"commerce": 5,
+				"legit": 3,
+				"religion": -6
+			},
+			"reaction": "Anselm s'incline, visiblement déçu.",
+			"title": "« Restez discrets. »"
+		},
+		"role": "Prêtre de l'Église de la Science"
+	},
+	{
+		"bearer": "Sef Sermak",
+		"id": "sermak_armer",
+		"key": false,
+		"left": {
+			"fx": {
+				"military": -6,
+				"politics": 7
+			},
+			"reaction": "Sermak crache à vos pieds. « Lâche. »",
+			"title": "« Calmez vos partisans. »"
+		},
+		"mood": "angry",
+		"question": "« Hardin nous endort avec ses prêtres et ses sermons ! Il faut armer Terminus, maintenant — ou périr ! »",
+		"right": {
+			"fx": {
+				"commerce": -10,
+				"legit": -2,
+				"military": 12,
+				"religion": -4
+			},
+			"reaction": "« Enfin. Un dirigeant qui agit. »",
+			"title": "« Construisez la flotte. »"
+		},
+		"role": "Chef des Actionnistes"
+	},
+	{
+		"bearer": "Ponyets de Smyrno",
+		"id": "marchand_amulettes",
+		"key": false,
+		"left": {
+			"fx": {
+				"commerce": 12,
+				"military": -4,
+				"religion": 4
+			},
+			"reaction": "Il se frotte les mains, ravi.",
+			"title": "« Doublez tout. »"
+		},
+		"mood": "curious",
+		"question": "« Vos amulettes nucléaires se vendent à prix d'or dans les Quatre Royaumes. On double la production, Orateur ? »",
+		"right": {
+			"fx": {
+				"commerce": -4,
+				"legit": 2,
+				"politics": 3,
+				"religion": 6
+			},
+			"reaction": "« Prudent. Très prudent. »",
+			"title": "« Gardez le secret de la technologie. »"
+		},
+		"role": "Négociant en technologie"
+	},
+	{
+		"bearer": "Salvor Hardin",
+		"id": "hardin_wienis",
+		"key": true,
+		"left": {
+			"fx": {
+				"legit": 4,
+				"military": 4,
+				"politics": 10
+			},
+			"reaction": "Hardin sourit. « Vous comprenez le Plan. »",
+			"title": "« Laissez-le se pendre seul. »"
+		},
+		"mood": "neutral",
+		"question": "« La violence est le dernier refuge de l'incompétent. Mais le régent Wienis prépare un coup contre nous. Votre conseil ? »",
+		"right": {
+			"fx": {
+				"legit": -6,
+				"military": 8,
+				"politics": -8,
+				"religion": -4
+			},
+			"reaction": "« …Vous me décevez, Orateur. »",
+			"title": "« Frappons les premiers. »"
+		},
+		"role": "Maire de Terminus"
+	},
+	{
+		"bearer": "Prince Lefkin",
+		"id": "lefkin_energie",
+		"key": false,
+		"left": {
+			"fx": {
+				"legit": -4,
+				"military": 5,
+				"politics": 5,
+				"religion": 10
+			},
+			"reaction": "Lefkin tremble, puis s'agenouille.",
+			"title": "« Soumettez-vous d'abord. »"
+		},
+		"mood": "afraid",
+		"question": "« Vos prêtres ont coupé l'énergie de tout mon palais ! La foule gronde aux portes ! Rendez-moi la lumière, je vous en supplie ! »",
+		"right": {
+			"fx": {
+				"commerce": 6,
+				"legit": 3,
+				"politics": 2,
+				"religion": -4
+			},
+			"reaction": "« Vous… vous êtes clément. »",
+			"title": "« Rétablissons le courant. »"
+		},
+		"role": "Régent d'Anacréon"
+	},
+	{
+		"bearer": "Yohan Lee",
+		"id": "lee_dons",
+		"key": false,
+		"left": {
+			"fx": {
+				"legit": 5,
+				"politics": 4
+			},
+			"reaction": "Lee hoche lentement la tête.",
+			"title": "« Pure logique politique. »"
+		},
+		"mood": "suspicious",
+		"question": "« Comment savez-vous toujours, à l'avance, ce que l'ennemi va faire ? On jurerait que vous lisez dans les esprits… »",
+		"right": {
+			"fx": {
+				"legit": -12,
+				"politics": 2
+			},
+			"reaction": "Le regard de Lee se durcit.",
+			"title": "« Disons que j'ai certains dons. »"
+		},
+		"role": "Garde du corps du Maire"
+	},
+	{
+		"bearer": "Conseillère Bort",
+		"id": "bort_encyclopedie",
+		"key": false,
+		"left": {
+			"fx": {
+				"commerce": 4,
+				"military": -8,
+				"religion": 4
+			},
+			"reaction": "« Espérons que les barbares sachent lire. »",
+			"title": "« La connaissance d'abord. »"
+		},
+		"mood": "neutral",
+		"question": "« Les Encyclopédistes veulent encore reporter la défense pour financer l'Encyclopédie. Tranchez, Orateur. »",
+		"right": {
+			"fx": {
+				"military": 10,
+				"religion": -4
+			},
+			"reaction": "Bort approuve d'un signe sec.",
+			"title": "« La survie d'abord. »"
+		},
+		"role": "Actionniste modérée"
+	},
+	{
+		"bearer": "Poly Verisof",
+		"id": "verisof_ambassadeur",
+		"key": false,
+		"left": {
+			"fx": {
+				"military": -3,
+				"politics": 5,
+				"religion": 8
+			},
+			"reaction": "« Le troupeau suivra le berger. »",
+			"title": "« Prêchez l'obéissance. »"
+		},
+		"mood": "flattered",
+		"question": "« Je sers à la fois d'ambassadeur et de grand prêtre à Anacréon. Dois-je leur prêcher l'obéissance… ou la révolte contre Wienis ? »",
+		"right": {
+			"fx": {
+				"legit": -3,
+				"military": 4,
+				"politics": 6,
+				"religion": -2
+			},
+			"reaction": "« Risqué. Mais habile, Orateur. »",
+			"title": "« Préparez les esprits à la révolte. »"
+		},
+		"role": "Grand Prêtre & Ambassadeur"
+	},
+	{
+		"bearer": "Haut Prêtre Mallow",
+		"id": "haut_pretre_dime",
+		"key": false,
+		"left": {
+			"fx": {
+				"commerce": -6,
+				"politics": -3,
+				"religion": 8
+			},
+			"reaction": "« Bénie soit votre sagesse. »",
+			"title": "« Levez la dîme. »"
+		},
+		"mood": "desperate",
+		"question": "« Les caisses du Temple sont vides ! Sans une nouvelle dîme, l'Église de la Science ne tiendra pas l'hiver, Orateur ! »",
+		"right": {
+			"fx": {
+				"commerce": 5,
+				"legit": 2,
+				"religion": -8
+			},
+			"reaction": "Il blêmit. « Vous nous condamnez… »",
+			"title": "« Que le Temple se serre la ceinture. »"
+		},
+		"role": "Trésorier du Temple"
+	}
+]

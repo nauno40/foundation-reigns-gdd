@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://ressnapshot_scene"]
+[ext_resource type="Theme" uid="uid://qxqq70yjqdc4" path="res://themes/main.tres" id="theme_main_x9"]
+
+[ext_resource type="Script" path="res://src/ResSnapshot.gd" id="1_snap"]
+[ext_resource type="FontFile" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_mono"]
+
+[sub_resource type="FontVariation" id="FV_snap"]
+base_font = ExtResource("2_mono")
+spacing_glyph = 1
+
+[sub_resource type="StyleBoxFlat" id="SB_track"]
+bg_color = Color(1, 1, 1, 0.08)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="ResSnapshot" type="VBoxContainer"]
+theme = ExtResource("theme_main_x9")
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+script = ExtResource("1_snap")
+
+[node name="IconHolder" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+
+[node name="SnapIcon" type="TextureRect" parent="IconHolder"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(21, 21)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SnapLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.329, 0.376, 0.478, 1)
+theme_override_fonts/font = SubResource("FV_snap")
+theme_override_font_sizes/font_size = 8
+text = "RES"
+horizontal_alignment = 1
+
+[node name="Track" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_track")
+
+[node name="Holder" type="Control" parent="Track"]
+layout_mode = 2
+
+[node name="SnapFill" type="ColorRect" parent="Track/Holder"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_top = 0.0
+anchor_right = 0.6
+anchor_bottom = 1.0
+grow_vertical = 2
+color = Color(0.31, 0.839, 0.91, 1)
