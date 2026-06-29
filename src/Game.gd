@@ -21,7 +21,8 @@ const QUESTION_MAX_H := 150.0
 @export var unlock_tag_font: Font = FONT_MONO
 @export var unlock_name_font: Font = FONT_CAVEAT
 @export var unlock_count_font: Font = FONT_MONO
-@export var unlock_tag_color: Color = Color("#4fd6e8")
+# Note : le tag « NOUVEAU DECK » suit l'accent live (Cfg.accent), pas un @export —
+# il doit rester cohérent avec le reste de l'UI quand l'utilisateur change d'accent.
 @export var unlock_name_color: Color = Color(0.933, 0.973, 0.984)
 @export var unlock_count_color: Color = Color(0.624, 0.706, 0.769)
 
@@ -392,7 +393,7 @@ func _unlock_banner(parent: Control, deck_name: String, count: int) -> void:
 	tag.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	tag.add_theme_font_override("font", unlock_tag_font)
 	tag.add_theme_font_size_override("font_size", 8)
-	tag.add_theme_color_override("font_color", unlock_tag_color)
+	tag.add_theme_color_override("font_color", Cfg.accent)
 	vb.add_child(tag)
 	var nm := Label.new()
 	nm.text = deck_name
